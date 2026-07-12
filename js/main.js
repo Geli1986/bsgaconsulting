@@ -29,3 +29,20 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(el=>observer.observe(el));
 
 });
+window.addEventListener("scroll",()=>{
+
+    const header=document.querySelector("header");
+
+    if(window.scrollY>80){
+
+        header.classList.add("scrolled");
+
+    }
+
+    else{
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
