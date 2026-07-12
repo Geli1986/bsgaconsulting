@@ -694,7 +694,35 @@ position:relative;
 overflow:hidden;
 
 }
+.about::before{
 
+content:"";
+
+position:absolute;
+
+top:-250px;
+
+left:-200px;
+
+width:600px;
+
+height:600px;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(63,169,245,.12),
+
+transparent 70%
+
+);
+
+pointer-events:none;
+
+}
 .about-grid{
 
 display:grid;
