@@ -718,7 +718,43 @@ position:relative;
 overflow:hidden;
 
 }
+.about-card::before{
 
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:linear-gradient(
+
+90deg,
+
+#3FA9F5,
+
+#7BC7FF
+
+);
+
+transform:scaleX(0);
+
+transform-origin:left;
+
+transition:.45s;
+
+}
+
+.about-card:hover::before{
+
+transform:scaleX(1);
+
+}
 .about-card:hover{
 
 transform:translateY(-10px);
