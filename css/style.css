@@ -757,12 +757,13 @@ transform:scaleX(1);
 }
 .about-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-14px);
 
-background:rgba(255,255,255,.08);
+background:rgba(255,255,255,.09);
+
+box-shadow:0 30px 70px rgba(0,0,0,.18);
 
 }
-
 .about-card i{
 
 font-size:34px;
