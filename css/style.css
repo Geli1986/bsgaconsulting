@@ -1,734 +1,415 @@
-/* ==========================================
+/* ===================================================
    BSGA CONSULTING
-   Premium Website
-========================================== */
+   PREMIUM WEBSITE
+   STYLE.CSS
+=================================================== */
 
-/* RESET */
+/* ==========================
+VARIABLES
+========================== */
+
+:root{
+
+--primary:#071321;
+
+--secondary:#0F4C81;
+
+--accent:#1E88E5;
+
+--light:#F8FAFC;
+
+--white:#FFFFFF;
+
+--text:#2D3748;
+
+--text-light:#64748B;
+
+--border:#E5EAF1;
+
+--shadow:0 20px 60px rgba(0,0,0,.08);
+
+--radius:18px;
+
+--transition:.35s ease;
+
+}
+
+/* ==========================
+RESET
+========================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
 
 html{
-    scroll-behavior:smooth;
+
+scroll-behavior:smooth;
+
 }
 
 body{
 
-    font-family:'Inter',sans-serif;
+font-family:'Inter',sans-serif;
 
-    background:#071321;
+background:var(--white);
 
-    color:white;
+color:var(--text);
 
-    overflow-x:hidden;
+line-height:1.7;
+
+overflow-x:hidden;
 
 }
 
-/* CONTAINER */
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+/* ==========================
+CONTAINER
+========================== */
 
 .container{
 
-    width:90%;
+width:min(1180px,90%);
 
-    max-width:1280px;
-
-    margin:auto;
+margin:auto;
 
 }
 
-/* ===========================
-NAVIGATION
-=========================== */
+/* ==========================
+NAVBAR
+========================== */
 
 header{
 
-    position:fixed;
+position:fixed;
 
-    width:100%;
+top:0;
 
-    top:0;
+left:0;
 
-    left:0;
+width:100%;
 
-    z-index:1000;
+z-index:1000;
 
-    backdrop-filter:blur(18px);
+background:rgba(7,19,33,.78);
 
-    background:rgba(7,19,33,.72);
+backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+transition:all .35s ease;
 
 }
 
-.navbar{
+.nav-container{
 
-    display:flex;
+height:90px;
 
-    justify-content:space-between;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    height:90px;
+justify-content:space-between;
 
 }
 
 .logo img{
 
-    height:58px;
+height:56px;
 
 }
 
-/* MENU */
+.nav-menu{
 
-.nav-links{
+display:flex;
 
-    display:flex;
+gap:40px;
 
-    list-style:none;
-
-    gap:40px;
+align-items:center;
 
 }
 
-.nav-links a{
+.nav-menu a{
 
-    text-decoration:none;
+color:white;
 
-    color:white;
+font-weight:500;
 
-    font-size:16px;
+font-size:15px;
 
-    font-weight:500;
-
-    transition:.3s;
+transition:var(--transition);
 
 }
 
-.nav-links a:hover{
+.nav-menu a:hover{
 
-    color:#61B8FF;
+color:#8EC5FF;
 
 }
-
-/* BUTTON */
 
 .btn-nav{
 
-    text-decoration:none;
+padding:14px 28px;
 
-    color:#071321;
+border-radius:999px;
 
-    background:white;
+background:white;
 
-    padding:14px 26px;
+color:var(--primary);
 
-    border-radius:999px;
+font-weight:600;
 
-    font-weight:600;
-
-    transition:.3s;
+transition:var(--transition);
 
 }
 
 .btn-nav:hover{
 
-    transform:translateY(-2px);
+transform:translateY(-2px);
 
-    box-shadow:0 10px 25px rgba(255,255,255,.20);
+box-shadow:0 15px 35px rgba(255,255,255,.20);
 
 }
 
-/* ===========================
+/* ==========================
 HERO
-=========================== */
+========================== */
 
 .hero{
 
-    height:100vh;
+height:100vh;
 
-    display:flex;
+background:
 
-    align-items:center;
+linear-gradient(
 
-    background-image:
+rgba(7,19,33,.68),
 
-    linear-gradient(rgba(7,19,33,.55),rgba(7,19,33,.72)),
+rgba(7,19,33,.72)
 
-    url("../images/hero.jpg");
+),
 
-    background-size:cover;
+url("../images/hero.jpg");
 
-    background-position:center;
+background-size:cover;
 
-    background-repeat:no-repeat;
-   position:relative;
-overflow:hidden;
+background-position:center;
+
+display:flex;
+
+align-items:center;
 
 }
 
-.hero-content{
+.hero-overlay{
 
-    width:90%;
+width:100%;
 
-    max-width:1280px;
+}
 
-    margin:auto;
+.hero-container{
+
+display:flex;
+
+align-items:center;
+
+min-height:100vh;
+
+}
+
+.hero-left{
+
+max-width:760px;
+
+}
+
+.hero-tag{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:999px;
+
+color:#C7DCF8;
+
+letter-spacing:2px;
+
+font-size:13px;
+
+margin-bottom:28px;
 
 }
 
 .hero h1{
 
-    font-family:'Manrope',sans-serif;
+font-family:'Manrope',sans-serif;
 
-    font-size:78px;
+font-size:72px;
 
-    line-height:1.05;
+line-height:1.08;
 
-    max-width:700px;
+color:white;
+
+margin-bottom:30px;
+
+font-weight:800;
 
 }
 
 .hero p{
 
-    margin-top:30px;
+font-size:22px;
 
-    font-size:22px;
+color:#E2E8F0;
 
-    color:#DDE7F3;
+max-width:700px;
 
-    max-width:650px;
+margin-bottom:45px;
 
-    line-height:1.8;
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:20px;
+
+flex-wrap:wrap;
 
 }
 
 .btn-primary{
 
-    display:inline-block;
+padding:18px 34px;
 
-    margin-top:45px;
+background:white;
 
-    background:white;
+border-radius:999px;
 
-    color:#071321;
+font-weight:700;
 
-    text-decoration:none;
+color:var(--primary);
 
-    padding:18px 36px;
-
-    border-radius:999px;
-
-    font-weight:700;
-
-    transition:.35s;
+transition:var(--transition);
 
 }
 
 .btn-primary:hover{
 
-    transform:translateY(-3px);
+transform:translateY(-4px);
 
-    box-shadow:0 15px 35px rgba(255,255,255,.25);
-
-}
-
-/* ===========================
-SERVICES
-=========================== */
-
-.services{
-
-    padding:120px 0;
-
-    background:#ffffff;
+box-shadow:0 20px 45px rgba(255,255,255,.25);
 
 }
 
-.services h2{
+.btn-secondary{
 
-    color:#071321;
+padding:18px 34px;
 
-    text-align:center;
+border-radius:999px;
 
-    font-size:48px;
-
-    font-family:'Manrope',sans-serif;
-
-}
-
-.section-intro{
-
-    text-align:center;
-
-    margin-top:20px;
-
-    color:#6B7280;
-
-    max-width:720px;
-
-    margin-left:auto;
-
-    margin-right:auto;
-
-    font-size:20px;
-
-}
-
-.services-grid{
-
-    margin-top:70px;
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
-}
-
-.service-card{
-
-    background:#F7F9FC;
-
-    border-radius:18px;
-
-    padding:40px;
-
-    transition:.35s;
-
-    border:1px solid #E5EAF1;
-
-}
-
-.service-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#2A72FF;
-
-    box-shadow:0 20px 45px rgba(0,0,0,.08);
-
-}
-
-.service-card h3{
-
-    color:#071321;
-
-    font-size:28px;
-
-    margin-bottom:18px;
-
-    font-family:'Manrope',sans-serif;
-
-}
-
-.service-card p{
-
-    color:#555F6D;
-
-    line-height:1.8;
-
-    font-size:18px;
-
-}
-
-/* ===========================
-ABOUT
-=========================== */
-
-.about{
-
-    background:#071321;
-
-    padding:120px 0;
-
-}
-
-.about h2{
-
-    text-align:center;
-
-    font-size:46px;
-
-    font-family:'Manrope',sans-serif;
-
-}
-
-.about p{
-
-    margin:40px auto 0;
-
-    max-width:900px;
-
-    text-align:center;
-
-    color:#D7E2EE;
-
-    font-size:22px;
-
-    line-height:1.8;
-
-}
-
-/* ===========================
-CONTACT
-=========================== */
-
-.contact{
-
-    background:white;
-
-    padding:120px 0;
-
-    text-align:center;
-
-}
-
-.contact h2{
-
-    color:#071321;
-
-    font-size:48px;
-
-    font-family:'Manrope',sans-serif;
-
-}
-
-.contact p{
-
-    color:#6B7280;
-
-    margin-top:25px;
-
-    font-size:22px;
-
-}
-
-/* ===========================
-FOOTER
-=========================== */
-
-footer{
-
-    background:#05101C;
-
-    padding:35px;
-
-    text-align:center;
-
-}
-
-footer p{
-
-    color:#94A3B8;
-
-}
-
-/* ===========================
-RESPONSIVE
-=========================== */
-
-@media(max-width:900px){
-
-.navbar{
-
-flex-direction:column;
-
-height:auto;
-
-padding:25px 0;
-
-}
-
-.nav-links{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-margin:20px 0;
-
-gap:20px;
-
-}
-
-.hero h1{
-
-font-size:48px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.services-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-/* =====================================
-   Premium Icons
-===================================== */
-
-.service-icon{
-
-    width:72px;
-
-    height:72px;
-
-    border-radius:18px;
-
-    background:#EEF5FF;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:#0F4C81;
-
-    margin-bottom:28px;
-
-    transition:.35s;
-
-}
-
-.service-icon svg{
-
-    width:34px;
-
-    height:34px;
-
-    stroke-width:1.8;
-
-}
-
-.service-card:hover .service-icon{
-
-    background:#0F4C81;
-
-    color:white;
-
-    transform:rotate(-6deg) scale(1.08);
-
-}
-/* ======================================
-HOW WE WORK
-====================================== */
-
-.process{
-
-    padding:140px 0;
-
-    background:#071321;
-
-}
-
-.timeline{
-
-    display:grid;
-
-    grid-template-columns:repeat(5,1fr);
-
-    gap:35px;
-
-    margin-top:80px;
-
-}
-
-.timeline-item{
-
-    text-align:center;
-
-}
-
-.timeline-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:auto;
-
-    border-radius:50%;
-
-    background:#0F4C81;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:white;
-
-    margin-bottom:30px;
-
-    transition:.35s;
-
-}
-
-.timeline-icon svg{
-
-    width:38px;
-
-    height:38px;
-
-}
-
-.timeline-item:hover .timeline-icon{
-
-    transform:translateY(-8px);
-
-    background:#1E88E5;
-
-}
-
-.timeline-item h3{
-
-    margin-bottom:20px;
-
-    font-family:'Manrope';
-
-    font-size:24px;
-
-}
-
-.timeline-item p{
-
-    color:#CBD5E1;
-
-    line-height:1.8;
-
-}
-.industries{
-
-background:white;
-
-padding:120px 0;
-
-}
-
-.industry-grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:25px;
-
-margin-top:60px;
-
-}
-
-.industry-grid div{
-
-padding:45px;
-
-background:#F8FAFC;
-
-border-radius:16px;
-
-font-size:22px;
-
-font-weight:600;
-
-text-align:center;
-
-transition:.3s;
-
-}
-
-.industry-grid div:hover{
-
-background:#0F4C81;
+border:2px solid rgba(255,255,255,.30);
 
 color:white;
 
-transform:translateY(-5px);
-
-}
-/* ======================================
-SCROLL ANIMATIONS
-====================================== */
-
-.service-card,
-.about-box,
-.timeline-item,
-.industry-grid div,
-.stat{
-
-    opacity:0;
-
-    transform:translateY(60px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
+transition:var(--transition);
 
 }
 
-.show{
+.btn-secondary:hover{
 
-    opacity:1;
+background:white;
 
-    transform:translateY(0);
-
-}
-/* ======================================
-HERO ANIMATION
-====================================== */
-
-.hero-content{
-
-    animation:heroFade 1.3s ease;
+color:var(--primary);
 
 }
 
-@keyframes heroFade{
+/* ==========================
+SECTION TITLES
+========================== */
 
-    from{
+.section-header{
 
-        opacity:0;
+text-align:center;
 
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-/* ======================================
-SMART NAVBAR
-====================================== */
-
-header{
-
-    transition:.35s;
+margin-bottom:80px;
 
 }
 
-header.scrolled{
+.section-header span{
 
-    background:rgba(7,19,33,.92);
+color:var(--accent);
 
-    backdrop-filter:blur(18px);
+font-weight:700;
 
-    box-shadow:0 12px 35px rgba(0,0,0,.25);
+letter-spacing:2px;
+
+font-size:13px;
+
+}
+
+.section-header h2{
+
+font-family:'Manrope',sans-serif;
+
+font-size:52px;
+
+margin:18px 0 25px;
+
+color:var(--primary);
+
+}
+
+.section-header p{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:20px;
+
+color:var(--text-light);
+
+line-height:1.8;
+
+}
+
+.section-header.light h2{
+
+color:white;
+
+}
+
+.section-header.light p{
+
+color:#D9E4F1;
 
 }
