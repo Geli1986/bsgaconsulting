@@ -1,1 +1,474 @@
+/* ==========================================
+   BSGA CONSULTING
+   Premium Website
+========================================== */
 
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#071321;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* CONTAINER */
+
+.container{
+
+    width:90%;
+
+    max-width:1280px;
+
+    margin:auto;
+
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(7,19,33,.72);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:90px;
+
+}
+
+.logo img{
+
+    height:58px;
+
+}
+
+/* MENU */
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:40px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#61B8FF;
+
+}
+
+/* BUTTON */
+
+.btn-nav{
+
+    text-decoration:none;
+
+    color:#071321;
+
+    background:white;
+
+    padding:14px 26px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-nav:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(255,255,255,.20);
+
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+
+    height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background-image:
+
+    linear-gradient(rgba(7,19,33,.55),rgba(7,19,33,.72)),
+
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero-content{
+
+    width:90%;
+
+    max-width:1280px;
+
+    margin:auto;
+
+}
+
+.hero h1{
+
+    font-family:'Manrope',sans-serif;
+
+    font-size:78px;
+
+    line-height:1.05;
+
+    max-width:700px;
+
+}
+
+.hero p{
+
+    margin-top:30px;
+
+    font-size:22px;
+
+    color:#DDE7F3;
+
+    max-width:650px;
+
+    line-height:1.8;
+
+}
+
+.btn-primary{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    background:white;
+
+    color:#071321;
+
+    text-decoration:none;
+
+    padding:18px 36px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 35px rgba(255,255,255,.25);
+
+}
+
+/* ===========================
+SERVICES
+=========================== */
+
+.services{
+
+    padding:120px 0;
+
+    background:#ffffff;
+
+}
+
+.services h2{
+
+    color:#071321;
+
+    text-align:center;
+
+    font-size:48px;
+
+    font-family:'Manrope',sans-serif;
+
+}
+
+.section-intro{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#6B7280;
+
+    max-width:720px;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    font-size:20px;
+
+}
+
+.services-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.service-card{
+
+    background:#F7F9FC;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    transition:.35s;
+
+    border:1px solid #E5EAF1;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#2A72FF;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.service-card h3{
+
+    color:#071321;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+    font-family:'Manrope',sans-serif;
+
+}
+
+.service-card p{
+
+    color:#555F6D;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+ABOUT
+=========================== */
+
+.about{
+
+    background:#071321;
+
+    padding:120px 0;
+
+}
+
+.about h2{
+
+    text-align:center;
+
+    font-size:46px;
+
+    font-family:'Manrope',sans-serif;
+
+}
+
+.about p{
+
+    margin:40px auto 0;
+
+    max-width:900px;
+
+    text-align:center;
+
+    color:#D7E2EE;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+CONTACT
+=========================== */
+
+.contact{
+
+    background:white;
+
+    padding:120px 0;
+
+    text-align:center;
+
+}
+
+.contact h2{
+
+    color:#071321;
+
+    font-size:48px;
+
+    font-family:'Manrope',sans-serif;
+
+}
+
+.contact p{
+
+    color:#6B7280;
+
+    margin-top:25px;
+
+    font-size:22px;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+    background:#05101C;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:#94A3B8;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+flex-direction:column;
+
+height:auto;
+
+padding:25px 0;
+
+}
+
+.nav-links{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+margin:20px 0;
+
+gap:20px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
