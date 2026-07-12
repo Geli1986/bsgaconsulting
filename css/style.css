@@ -679,11 +679,19 @@ line-height:1.8;
 ABOUT
 =================================================== */
 
+/* ===========================================
+ABOUT
+===========================================*/
+
 .about{
 
-padding:150px 0;
+padding:160px 0;
 
-background:var(--primary);
+background:#081726;
+
+position:relative;
+
+overflow:hidden;
 
 }
 
