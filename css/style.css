@@ -1431,3 +1431,436 @@ color:#3FA9F5;
 transform:translateX(6px);
 
 }
+/* ===================================================
+WHY BSGA
+=================================================== */
+
+.why-bsga{
+
+padding:160px 0;
+
+background:#F7FAFD;
+
+}
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.why-item{
+
+background:white;
+
+padding:45px;
+
+border-radius:22px;
+
+border:1px solid var(--border);
+
+transition:.35s;
+
+box-shadow:0 10px 30px rgba(0,0,0,.04);
+
+}
+
+.why-item:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 55px rgba(0,0,0,.08);
+
+}
+
+.why-item h3{
+
+font-family:'Manrope';
+
+font-size:28px;
+
+color:var(--primary);
+
+margin-bottom:18px;
+
+}
+
+.why-item p{
+
+color:var(--text-light);
+
+line-height:1.9;
+
+}
+/* ===================================================
+CTA
+=================================================== */
+
+.executive-cta{
+
+position:relative;
+
+padding:180px 0;
+
+background:url("../images/banner.jpg") center center/cover;
+
+}
+
+.cta-overlay{
+
+background:rgba(8,23,38,.82);
+
+padding:120px 0;
+
+text-align:center;
+
+}
+
+.executive-cta span{
+
+display:inline-block;
+
+margin-bottom:20px;
+
+letter-spacing:2px;
+
+font-weight:700;
+
+font-size:13px;
+
+color:#61B8FF;
+
+}
+
+.executive-cta h2{
+
+font-family:'Manrope';
+
+font-size:56px;
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.executive-cta p{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:21px;
+
+line-height:1.9;
+
+color:#D9E7F5;
+
+margin-bottom:45px;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+/* ===================================================
+CONTACT
+=================================================== */
+
+.contact{
+
+padding:160px 0;
+
+background:white;
+
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:70px;
+
+}
+
+.contact-card{
+
+background:#F8FAFD;
+
+padding:45px;
+
+border-radius:22px;
+
+text-align:center;
+
+transition:.35s;
+
+border:1px solid var(--border);
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+
+background:white;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.contact-card i{
+
+font-size:42px;
+
+color:var(--secondary);
+
+margin-bottom:25px;
+
+}
+
+.contact-card h3{
+
+font-family:'Manrope';
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.contact-card p{
+
+color:var(--text-light);
+
+}
+/* ===================================================
+FOOTER
+=================================================== */
+
+footer{
+
+background:#081726;
+
+padding:90px 0 40px;
+
+}
+
+.footer-top{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:60px;
+
+}
+
+.footer-logo{
+
+height:65px;
+
+margin-bottom:25px;
+
+}
+
+.footer-brand p{
+
+color:#BFD0E3;
+
+line-height:1.9;
+
+max-width:360px;
+
+}
+
+.footer-links h4{
+
+color:white;
+
+margin-bottom:22px;
+
+font-family:'Manrope';
+
+}
+
+.footer-links a{
+
+display:block;
+
+margin-bottom:14px;
+
+color:#C8D6E8;
+
+transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+color:#61B8FF;
+
+padding-left:6px;
+
+}
+
+footer hr{
+
+margin:55px 0 30px;
+
+border:none;
+
+height:1px;
+
+background:rgba(255,255,255,.08);
+
+}
+
+.footer-bottom{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+color:#AEBFD3;
+
+font-size:15px;
+
+}
+/* ===================================================
+FLOATING BUTTON
+=================================================== */
+
+.floating-calendar{
+
+position:fixed;
+
+bottom:28px;
+
+right:28px;
+
+width:68px;
+
+height:68px;
+
+background:#0F4C81;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+font-size:28px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.30);
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+.floating-calendar:hover{
+
+transform:translateY(-8px) scale(1.08);
+
+background:#3FA9F5;
+
+}
+/* ===================================================
+BACK TO TOP
+=================================================== */
+
+#backToTop{
+
+position:fixed;
+
+right:30px;
+
+bottom:115px;
+
+width:58px;
+
+height:58px;
+
+border:none;
+
+border-radius:50%;
+
+background:#081726;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:998;
+
+}
+
+#backToTop.show{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+#backToTop:hover{
+
+background:#3FA9F5;
+
+}
+/* ===================================================
+SCROLL PROGRESS
+=================================================== */
+
+#scroll-progress{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+height:4px;
+
+background:#3FA9F5;
+
+width:0;
+
+z-index:99999;
+
+}
