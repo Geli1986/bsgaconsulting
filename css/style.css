@@ -787,3 +787,80 @@ color:var(--text-light);
 padding:0 12px;
 
 }
+/* ===================================================
+   INDUSTRIES
+=================================================== */
+
+.industries{
+
+padding:150px 0;
+
+background:white;
+
+}
+
+.industries-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:80px;
+
+}
+
+.industry-card{
+
+padding:50px;
+
+border-radius:22px;
+
+background:#F8FAFC;
+
+text-align:center;
+
+transition:.35s;
+
+border:1px solid var(--border);
+
+}
+
+.industry-card:hover{
+
+transform:translateY(-10px);
+
+background:#0F4C81;
+
+color:white;
+
+box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+.industry-card i{
+
+font-size:42px;
+
+margin-bottom:25px;
+
+color:#0F4C81;
+
+transition:.35s;
+
+}
+
+.industry-card:hover i{
+
+color:white;
+
+}
+
+.industry-card h3{
+
+font-family:'Manrope',sans-serif;
+
+font-size:24px;
+
+}
