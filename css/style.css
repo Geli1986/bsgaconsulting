@@ -287,67 +287,7 @@ animation:heroFade 1.2s ease forwards;
 opacity:0;
 
 }
-<div class="hero-right">
 
-    <div class="executive-card">
-
-        <span class="executive-label">
-
-            EXECUTIVE INSIGHT
-
-        </span>
-
-        <h3>
-
-            Helping organisations achieve sustainable growth through strategy, execution and innovation.
-
-        </h3>
-
-        <div class="metric">
-
-            <div>
-
-                <strong>Operational Excellence</strong>
-
-                <span>Business optimisation & process improvement</span>
-
-            </div>
-
-            <i class="fa-solid fa-gears"></i>
-
-        </div>
-
-        <div class="metric">
-
-            <div>
-
-                <strong>Project Delivery</strong>
-
-                <span>Complex initiatives delivered with confidence</span>
-
-            </div>
-
-            <i class="fa-solid fa-diagram-project"></i>
-
-        </div>
-
-        <div class="metric">
-
-            <div>
-
-                <strong>Artificial Intelligence</strong>
-
-                <span>Practical AI adoption for measurable impact</span>
-
-            </div>
-
-            <i class="fa-solid fa-brain"></i>
-
-        </div>
-
-    </div>
-
-</div>
 .hero-tag{
 
 display:inline-block;
@@ -1075,5 +1015,132 @@ opacity:1;
 transform:translateY(0);
 
 }
+
+}
+/* ===================================
+HERO RIGHT
+=================================== */
+
+.hero-container{
+
+display:grid;
+
+grid-template-columns:1.2fr .8fr;
+
+align-items:center;
+
+gap:70px;
+
+}
+
+.hero-right{
+
+display:flex;
+
+justify-content:flex-end;
+
+}
+
+.executive-card{
+
+width:100%;
+
+max-width:420px;
+
+padding:42px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:0 35px 80px rgba(0,0,0,.25);
+
+animation:heroFade 1.5s ease;
+
+}
+
+.executive-label{
+
+font-size:12px;
+
+letter-spacing:2px;
+
+font-weight:700;
+
+color:#8EC5FF;
+
+display:block;
+
+margin-bottom:18px;
+
+}
+
+.executive-card h3{
+
+font-family:'Manrope';
+
+font-size:28px;
+
+line-height:1.4;
+
+color:white;
+
+margin-bottom:40px;
+
+}
+
+.metric{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 0;
+
+border-top:1px solid rgba(255,255,255,.10);
+
+}
+
+.metric:first-of-type{
+
+border-top:none;
+
+}
+
+.metric strong{
+
+display:block;
+
+color:white;
+
+font-size:18px;
+
+margin-bottom:6px;
+
+}
+
+.metric span{
+
+color:#C9D5E6;
+
+font-size:15px;
+
+line-height:1.5;
+
+}
+
+.metric i{
+
+font-size:28px;
+
+color:#7FB8FF;
+
+margin-left:20px;
 
 }
