@@ -540,7 +540,9 @@ display:grid;
 
 grid-template-columns:repeat(2,1fr);
 
-gap:35px;
+gap:42px;
+
+margin-top:70px;
 
 }
 
