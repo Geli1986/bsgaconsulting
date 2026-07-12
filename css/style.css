@@ -562,11 +562,13 @@ transition:all .35s ease;
 
 .service-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-14px);
 
-box-shadow:0 25px 60px rgba(0,0,0,.10);
+border-color:#7FB8FF;
 
-border-color:#C7D9F4;
+box-shadow:
+
+0 25px 70px rgba(15,76,129,.12);
 
 }
 
