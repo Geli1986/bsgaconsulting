@@ -683,6 +683,10 @@ ABOUT
 ABOUT
 ===========================================*/
 
+/* ===========================================
+ABOUT
+===========================================*/
+
 .about{
 
 padding:160px 0;
@@ -694,52 +698,25 @@ position:relative;
 overflow:hidden;
 
 }
+
 .about::before{
 
 content:"";
 
 position:absolute;
 
+width:700px;
+
+height:700px;
+
+left:-250px;
+
 top:-250px;
 
-left:-200px;
-
-width:600px;
-
-height:600px;
-
-background:
-
-radial-gradient(
-
-circle,
-
-rgba(63,169,245,.12),
-
-transparent 70%
-
-);
-
-pointer-events:none;
-
-}
-.about .section-header span{
-
-color:#61B8FF;
+background:radial-gradient(circle,rgba(63,169,245,.15),transparent 70%);
 
 }
 
-.about .section-header h2{
-
-color:white;
-
-}
-
-.about .section-header p{
-
-color:#D5E2F2;
-
-}
 .about-grid{
 
 display:grid;
@@ -748,7 +725,7 @@ grid-template-columns:repeat(3,1fr);
 
 gap:35px;
 
-margin-top:70px;
+margin-top:80px;
 
 }
 
@@ -758,17 +735,20 @@ background:rgba(255,255,255,.05);
 
 border:1px solid rgba(255,255,255,.10);
 
-border-radius:24px;
+border-radius:22px;
 
 padding:50px;
 
-backdrop-filter:blur(14px);
+backdrop-filter:blur(12px);
 
 transition:.4s;
 
-height:100%;
+position:relative;
+
+overflow:hidden;
 
 }
+
 .about-card::before{
 
 content:"";
@@ -783,21 +763,13 @@ width:100%;
 
 height:4px;
 
-background:linear-gradient(
-
-90deg,
-
-#3FA9F5,
-
-#7BC7FF
-
-);
+background:linear-gradient(90deg,#3FA9F5,#7EC9FF);
 
 transform:scaleX(0);
 
 transform-origin:left;
 
-transition:.45s;
+transition:.4s;
 
 }
 
@@ -806,15 +778,17 @@ transition:.45s;
 transform:scaleX(1);
 
 }
+
 .about-card:hover{
 
 transform:translateY(-12px);
 
 background:rgba(255,255,255,.08);
 
-box-shadow:0 25px 60px rgba(0,0,0,.20);
+box-shadow:0 25px 60px rgba(0,0,0,.25);
 
 }
+
 .about-card i{
 
 font-size:42px;
@@ -822,16 +796,6 @@ font-size:42px;
 color:#66BBFF;
 
 margin-bottom:30px;
-
-transition:.35s;
-
-}
-
-.about-card:hover i{
-
-transform:scale(1.12);
-
-color:white;
 
 }
 
@@ -843,15 +807,35 @@ font-size:28px;
 
 color:white;
 
-margin-bottom:18px;
+margin-bottom:20px;
 
 }
 
 .about-card p{
 
-color:#D7E3F3;
+color:#D7E5F5;
 
-line-height:1.8;
+line-height:1.9;
+
+}
+
+.about .section-header span{
+
+color:#61B8FF;
+
+}
+
+.about .section-header h2{
+
+color:white;
+
+}
+
+.about .section-header p{
+
+color:#D8E6F5;
+
+max-width:760px;
 
 }
 
