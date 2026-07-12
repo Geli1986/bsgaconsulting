@@ -1,48 +1,49 @@
-/* ======================================
-   BSGA CONSULTING
-====================================== */
-
 document.addEventListener("DOMContentLoaded", () => {
 
-    const elements = document.querySelectorAll(
-        ".service-card, .about-box, .timeline-item, .industry-grid div, .stat"
-    );
+const items=document.querySelectorAll(
 
-    const observer = new IntersectionObserver((entries)=>{
+".service-card,.about-card,.timeline-step,.industry-card"
 
-        entries.forEach(entry=>{
+);
 
-            if(entry.isIntersecting){
+const observer=new IntersectionObserver((entries)=>{
 
-                entry.target.classList.add("show");
+entries.forEach(entry=>{
 
-            }
+if(entry.isIntersecting){
 
-        });
+entry.target.classList.add("show");
 
-    },{
-
-        threshold:0.15
-
-    });
-
-    elements.forEach(el=>observer.observe(el));
+}
 
 });
+
+},
+
+{
+
+threshold:.15
+
+});
+
+items.forEach(item=>observer.observe(item));
+
 window.addEventListener("scroll",()=>{
 
-    const header=document.querySelector("header");
+const header=document.querySelector("header");
 
-    if(window.scrollY>80){
+if(window.scrollY>60){
 
-        header.classList.add("scrolled");
+header.classList.add("scrolled");
 
-    }
+}
 
-    else{
+else{
 
-        header.classList.remove("scrolled");
+header.classList.remove("scrolled");
 
-    }
+}
+
+});
 
 });
