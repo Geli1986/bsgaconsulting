@@ -766,11 +766,21 @@ box-shadow:0 30px 70px rgba(0,0,0,.18);
 }
 .about-card i{
 
-font-size:34px;
+font-size:42px;
 
-color:#8EC5FF;
+color:#66BBFF;
 
-margin-bottom:25px;
+margin-bottom:30px;
+
+transition:.35s;
+
+}
+
+.about-card:hover i{
+
+transform:scale(1.12);
+
+color:white;
 
 }
 
