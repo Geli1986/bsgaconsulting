@@ -1217,3 +1217,96 @@ font-size:17px;
 }
 
 }
+/*==================================================
+WHY BSGA
+==================================================*/
+
+.why-bsga{
+
+padding:180px 0;
+
+background:white;
+
+}
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+margin-top:90px;
+
+}
+
+.why-item{
+
+padding:55px;
+
+border-radius:24px;
+
+background:#fff;
+
+border:1px solid #E8EEF5;
+
+transition:.35s;
+
+}
+
+.why-item:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+
+}
+
+.why-item i{
+
+font-size:38px;
+
+color:#081726;
+
+margin-bottom:30px;
+
+}
+
+.why-item h3{
+
+font-family:Manrope;
+
+font-size:30px;
+
+margin-bottom:20px;
+
+color:#081726;
+
+}
+
+.why-item p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#67788E;
+
+}
+
+@media(max-width:992px){
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.why-item{
+
+padding:35px;
+
+}
+
+}
