@@ -2074,3 +2074,90 @@ padding:30px;
 }
 
 }
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="container footer-container">
+
+        <div class="footer-brand">
+
+            <img src="images/logo-white.png"
+                 alt="BSGA Consulting"
+                 class="footer-logo">
+
+            <p>
+
+                Helping organisations improve operational performance,
+                successfully deliver projects and adopt Artificial
+                Intelligence with confidence.
+
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Navigation</h4>
+
+            <a href="#services">Services</a>
+
+            <a href="#about">About</a>
+
+            <a href="#process">How We Work</a>
+
+            <a href="#industries">Industries</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h4>Contact</h4>
+
+            <a href="mailto:info@bsgaconsulting.es">
+
+                info@bsgaconsulting.es
+
+            </a>
+
+            <a href="#"
+onclick="Calendly.initPopupWidget({url:'https://calendly.com/angel-bajo-sanchez/discovery-call'});return false;">
+
+                Book Discovery Call
+
+            </a>
+
+            <a href="https://www.linkedin.com/company/bsgaconsulting/"
+               target="_blank">
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="container footer-bottom">
+
+        <p>
+
+            © 2026 BSGA Consulting. All Rights Reserved.
+
+        </p>
+
+        <p>
+
+            Strategic Clarity. Measurable Results.
+
+        </p>
+
+    </div>
+
+</footer>
