@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
        SCROLL ANIMATIONS
     =============================== */
 
-    const animatedElements = document.querySelectorAll(
+    const animatedElements=document.querySelectorAll(
 
-        ".service-card, .about-card, .timeline-step, .industry-card, .why-item, .contact-card"
+".fade-up,.fade-left,.fade-right,.zoom"
 
-    );
+);
 
     const observer = new IntersectionObserver(
 
