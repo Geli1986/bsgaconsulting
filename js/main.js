@@ -146,38 +146,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-/*======================================
-APPLE MOBILE MENU
-======================================*/
+/*=====================================
+APPLE MENU
+=====================================*/
 
-const menuToggle=document.querySelector(".menu-toggle");
+const menu=document.querySelector(".nav-menu");
 
-const navMenu=document.querySelector(".nav-menu");
+const toggle=document.querySelector(".menu-toggle");
 
-menuToggle.addEventListener("click",()=>{
+const overlay=document.querySelector(".menu-overlay");
 
-navMenu.classList.toggle("active");
+function closeMenu(){
 
-if(navMenu.classList.contains("active")){
+menu.classList.remove("active");
 
-menuToggle.innerHTML='<i class="fa-solid fa-xmark"></i>';
+overlay.classList.remove("active");
+
+document.body.classList.remove("menu-open");
+
+toggle.innerHTML='<i class="fa-solid fa-bars"></i>';
+
+}
+
+toggle.addEventListener("click",()=>{
+
+menu.classList.toggle("active");
+
+overlay.classList.toggle("active");
+
+document.body.classList.toggle("menu-open");
+
+if(menu.classList.contains("active")){
+
+toggle.innerHTML='<i class="fa-solid fa-xmark"></i>';
 
 }else{
 
-menuToggle.innerHTML='<i class="fa-solid fa-bars"></i>';
+toggle.innerHTML='<i class="fa-solid fa-bars"></i>';
 
 }
 
 });
 
+overlay.addEventListener("click",closeMenu);
+
 document.querySelectorAll(".nav-menu a").forEach(link=>{
 
-link.addEventListener("click",()=>{
-
-navMenu.classList.remove("active");
-
-menuToggle.innerHTML='<i class="fa-solid fa-bars"></i>';
-
-});
+link.addEventListener("click",closeMenu);
 
 });
