@@ -2161,3 +2161,82 @@ onclick="Calendly.initPopupWidget({url:'https://calendly.com/angel-bajo-sanchez/
     </div>
 
 </footer>
+/*==================================================
+PREMIUM ANIMATIONS
+==================================================*/
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:
+
+opacity .9s ease,
+
+transform .9s ease;
+
+}
+
+.fade-up.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.fade-left{
+
+opacity:0;
+
+transform:translateX(-70px);
+
+transition:.9s ease;
+
+}
+
+.fade-left.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.fade-right{
+
+opacity:0;
+
+transform:translateX(70px);
+
+transition:.9s ease;
+
+}
+
+.fade-right.show{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+.zoom{
+
+opacity:0;
+
+transform:scale(.94);
+
+transition:.8s ease;
+
+}
+
+.zoom.show{
+
+opacity:1;
+
+transform:scale(1);
+
+}
