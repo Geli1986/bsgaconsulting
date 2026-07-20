@@ -2282,3 +2282,76 @@ opacity:1;
 transform:scale(1);
 
 }
+/*==================================================
+APPLE HERO
+==================================================*/
+
+.hero{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.hero-glow{
+
+position:absolute;
+
+width:900px;
+
+height:900px;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+background:
+
+radial-gradient(circle,
+
+rgba(63,169,245,.22),
+
+transparent 70%);
+
+filter:blur(40px);
+
+animation:glowMove 10s ease-in-out infinite;
+
+pointer-events:none;
+
+z-index:0;
+
+}
+
+.hero-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+
+linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+background-size:70px 70px;
+
+mask-image:linear-gradient(to bottom, black, transparent);
+
+opacity:.4;
+
+pointer-events:none;
+
+}
+
+.hero-overlay{
+
+position:relative;
+
+z-index:2;
+
+}
