@@ -172,7 +172,7 @@ toggle.innerHTML='<i class="fa-solid fa-bars"></i>';
 }
 
 toggle.addEventListener("click",()=>{
-
+console.log("CLICK MENU");
 menu.classList.toggle("active");
 
 overlay.classList.toggle("active");
