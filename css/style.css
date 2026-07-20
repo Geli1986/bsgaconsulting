@@ -534,7 +534,7 @@ OVERLAY
 
     background:rgba(0,0,0,.45);
 
-    backdrop-filter:blur(8px);
+    backdrop-filter:none;
 
     opacity:0;
 
