@@ -1,3 +1,4 @@
+alert("MAIN.JS CARGADO");
 /* ===========================================
 BSGA CONSULTING
 MAIN.JS
