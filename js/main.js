@@ -199,3 +199,62 @@ link.addEventListener("click",closeMenu);
 
 });
 });
+/*=====================================
+MOBILE MENU
+=====================================*/
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menu = document.querySelector(".nav-menu");
+    const toggle = document.querySelector(".menu-toggle");
+    const overlay = document.querySelector(".menu-overlay");
+
+    if (!menu || !toggle || !overlay) return;
+
+    toggle.addEventListener("click", function () {
+
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
+
+        const icon = toggle.querySelector("i");
+
+        if (menu.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-xmark");
+        } else {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
+
+    });
+
+    overlay.addEventListener("click", function () {
+
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
+
+        const icon = toggle.querySelector("i");
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+    });
+
+    document.querySelectorAll(".nav-menu a").forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            menu.classList.remove("active");
+            overlay.classList.remove("active");
+            document.body.classList.remove("menu-open");
+
+            const icon = toggle.querySelector("i");
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+
+        });
+
+    });
+
+});
