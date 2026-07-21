@@ -3,47 +3,46 @@ BSGA CONSULTING
 MAIN.JS
 ==================================================*/
 
-document.addEventListener("DOMContentLoaded", function () {
-
-    /*==============================================
-    HEADER SCROLL
-    ==============================================*/
+document.addEventListener("DOMContentLoaded", () => {
 
     const header = document.querySelector("header");
+    const progressBar = document.getElementById("scroll-progress");
+    const backToTop = document.getElementById("backToTop");
 
-    window.addEventListener("scroll", function () {
-
-        if (window.scrollY > 40) {
-
-            header.classList.add("scrolled");
-
-        } else {
-
-            header.classList.remove("scrolled");
-
-        }
-
-    });
+    const menu = document.querySelector(".nav-menu");
+    const toggle = document.querySelector(".menu-toggle");
+    const overlay = document.querySelector(".menu-overlay");
 
     /*==============================================
-    SCROLL PROGRESS BAR
+    HEADER + PROGRESS + BACK TO TOP
     ==============================================*/
 
-    const progressBar = document.getElementById("scroll-progress");
+    window.addEventListener("scroll", () => {
 
-    window.addEventListener("scroll", function () {
+        const scrollY = window.scrollY;
 
-        if (!progressBar) return;
+        // Header
+        if (header) {
+            header.classList.toggle("scrolled", scrollY > 40);
+        }
 
-        const scrollTop = window.scrollY;
+        // Progress
+        if (progressBar) {
 
-        const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight;
+            const height =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
 
-        const progress = (scrollTop / height) * 100;
+            progressBar.style.width =
+                ((scrollY / height) * 100) + "%";
+        }
 
-        progressBar.style.width = progress + "%";
+        // Back To Top
+        if (backToTop) {
+
+            backToTop.classList.toggle("show", scrollY > 500);
+
+        }
 
     });
 
@@ -51,27 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
     BACK TO TOP
     ==============================================*/
 
-    const backToTop = document.getElementById("backToTop");
-
-    window.addEventListener("scroll", function () {
-
-        if (!backToTop) return;
-
-        if (window.scrollY > 500) {
-
-            backToTop.classList.add("show");
-
-        } else {
-
-            backToTop.classList.remove("show");
-
-        }
-
-    });
-
     if (backToTop) {
 
-        backToTop.addEventListener("click", function () {
+        backToTop.addEventListener("click", () => {
 
             window.scrollTo({
 
@@ -86,37 +67,96 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /*==============================================
-SMOOTH SCROLL
-==============================================*/
+    MOBILE MENU
+    ==============================================*/
 
-document.querySelectorAll('a[href^="#"]').forEach(function(link){
+    function closeMenu() {
 
-    link.addEventListener("click", function(e){
+        if (!menu || !overlay || !toggle) return;
 
-        const target = document.querySelector(this.getAttribute("href"));
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+        document.body.classList.remove("menu-open");
 
-        if(!target) return;
+        toggle.setAttribute("aria-expanded", "false");
 
-        e.preventDefault();
+        const icon = toggle.querySelector("i");
 
-        const headerHeight = document.querySelector("header").offsetHeight;
+        if (icon) {
 
-        const targetPosition =
-            target.getBoundingClientRect().top +
-            window.pageYOffset -
-            headerHeight;
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
 
-        window.scrollTo({
+        }
 
-            top: targetPosition,
+    }
 
-            behavior:"smooth"
+    if (menu && toggle && overlay) {
+
+        toggle.addEventListener("click", () => {
+
+            menu.classList.toggle("active");
+            overlay.classList.toggle("active");
+            document.body.classList.toggle("menu-open");
+
+            const opened = menu.classList.contains("active");
+
+            toggle.setAttribute("aria-expanded", opened);
+
+            const icon = toggle.querySelector("i");
+
+            if (icon) {
+
+                icon.classList.toggle("fa-bars", !opened);
+                icon.classList.toggle("fa-xmark", opened);
+
+            }
+
+        });
+
+        overlay.addEventListener("click", closeMenu);
+
+    }
+
+    /*==============================================
+    SMOOTH SCROLL
+    ==============================================*/
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+            const href = this.getAttribute("href");
+
+            if (href === "#") return;
+
+            const target = document.querySelector(href);
+
+            if (!target) return;
+
+            e.preventDefault();
+
+            closeMenu();
+
+            const headerHeight = header ? header.offsetHeight : 0;
+
+            const offset =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight;
+
+            window.scrollTo({
+
+                top: offset,
+
+                behavior: "smooth"
+
+            });
 
         });
 
     });
 
-});
     /*==============================================
     SCROLL ANIMATIONS
     ==============================================*/
@@ -127,11 +167,11 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
     );
 
-    const observer = new IntersectionObserver(
+    if (animated.length) {
 
-        function (entries) {
+        const observer = new IntersectionObserver(entries => {
 
-            entries.forEach(function (entry) {
+            entries.forEach(entry => {
 
                 if (entry.isIntersecting) {
 
@@ -141,83 +181,13 @@ document.querySelectorAll('a[href^="#"]').forEach(function(link){
 
             });
 
-        },
-
-        {
+        }, {
 
             threshold: 0.15
 
-        }
-
-    );
-
-    animated.forEach(function (element) {
-
-        observer.observe(element);
-
-    });
-
-    /*==============================================
-    MOBILE MENU
-    ==============================================*/
-
-    const menu = document.querySelector(".nav-menu");
-
-    const toggle = document.querySelector(".menu-toggle");
-
-    const overlay = document.querySelector(".menu-overlay");
-
-    if (menu && toggle && overlay) {
-
-        toggle.addEventListener("click", function () {
-
-            menu.classList.toggle("active");
-
-            overlay.classList.toggle("active");
-
-            document.body.classList.toggle("menu-open");
-
-            const icon = toggle.querySelector("i");
-
-            if (menu.classList.contains("active")) {
-
-                icon.classList.remove("fa-bars");
-
-                icon.classList.add("fa-xmark");
-
-            } else {
-
-                icon.classList.remove("fa-xmark");
-
-                icon.classList.add("fa-bars");
-
-            }
-
         });
 
-        overlay.addEventListener("click", closeMenu);
-
-        document.querySelectorAll(".nav-menu a").forEach(function (link) {
-
-            link.addEventListener("click", closeMenu);
-
-        });
-
-        function closeMenu() {
-
-            menu.classList.remove("active");
-
-            overlay.classList.remove("active");
-
-            document.body.classList.remove("menu-open");
-
-            const icon = toggle.querySelector("i");
-
-            icon.classList.remove("fa-xmark");
-
-            icon.classList.add("fa-bars");
-
-        }
+        animated.forEach(el => observer.observe(el));
 
     }
 
