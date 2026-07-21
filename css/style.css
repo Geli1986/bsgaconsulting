@@ -61,6 +61,8 @@ html{
 
     scroll-behavior:smooth;
 
+    scroll-padding-top:95px;
+
 }
 
 body{
@@ -86,6 +88,8 @@ img{
     display:block;
 
     max-width:100%;
+
+    height:auto;
 
 }
 
@@ -120,6 +124,10 @@ textarea,
 select{
 
     font:inherit;
+
+    appearance:none;
+
+    -webkit-appearance:none;
 
 }
 
@@ -277,7 +285,9 @@ BUTTONS
     font-weight:600;
 
     transition:var(--transition);
-
+    
+white-space:nowrap;
+    
 }
 
 .btn-primary{
@@ -390,7 +400,7 @@ header .container{
 
 .logo img{
 
-    height:44px;
+    max-height:44px;
 
     width:auto;
 
@@ -571,7 +581,7 @@ HERO
 
 .hero{
 
-    min-height:100vh;
+    min-height:100svh;
 
     display:flex;
 
