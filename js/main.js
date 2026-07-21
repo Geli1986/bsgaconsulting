@@ -5,50 +5,212 @@ MAIN.JS
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const header = document.querySelector("header");
-    const progressBar = document.getElementById("scroll-progress");
-    const backToTop = document.getElementById("backToTop");
+    /*==================================================
+    ELEMENTS
+    ==================================================*/
 
-    const menu = document.querySelector(".nav-menu");
+    const header = document.querySelector("header");
+
+    const menu = document.getElementById("primary-menu");
+
     const toggle = document.querySelector(".menu-toggle");
+
     const overlay = document.querySelector(".menu-overlay");
 
-    /*==============================================
-    HEADER + PROGRESS + BACK TO TOP
-    ==============================================*/
+    const backToTop = document.getElementById("backToTop");
 
-    window.addEventListener("scroll", () => {
+    const progress = document.getElementById("scroll-progress");
 
-        const scrollY = window.scrollY;
 
-        // Header
-        if (header) {
-            header.classList.toggle("scrolled", scrollY > 40);
+    /*==================================================
+    MOBILE MENU
+    ==================================================*/
+
+    function openMenu() {
+
+        if (!menu || !toggle || !overlay) return;
+
+        menu.classList.add("active");
+
+        overlay.classList.add("active");
+
+        document.body.classList.add("menu-open");
+
+        toggle.setAttribute("aria-expanded", "true");
+
+        const icon = toggle.querySelector("i");
+
+        if (icon) {
+
+            icon.classList.remove("fa-bars");
+
+            icon.classList.add("fa-xmark");
+
         }
 
-        // Progress
-        if (progressBar) {
+    }
 
-            const height =
+
+    function closeMenu() {
+
+        if (!menu || !toggle || !overlay) return;
+
+        menu.classList.remove("active");
+
+        overlay.classList.remove("active");
+
+        document.body.classList.remove("menu-open");
+
+        toggle.setAttribute("aria-expanded", "false");
+
+        const icon = toggle.querySelector("i");
+
+        if (icon) {
+
+            icon.classList.remove("fa-xmark");
+
+            icon.classList.add("fa-bars");
+
+        }
+
+    }
+
+
+    if (toggle) {
+
+        toggle.addEventListener("click", () => {
+
+            if (menu.classList.contains("active")) {
+
+                closeMenu();
+
+            } else {
+
+                openMenu();
+
+            }
+
+        });
+
+    }
+
+
+    if (overlay) {
+
+        overlay.addEventListener("click", closeMenu);
+
+    }
+
+
+    /*==================================================
+    SMOOTH SCROLL
+    ==================================================*/
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+            const href = this.getAttribute("href");
+
+            if (href === "#") return;
+
+            const target = document.querySelector(href);
+
+            if (!target) return;
+
+            e.preventDefault();
+
+            const headerHeight = header
+                ? header.offsetHeight
+                : 0;
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.pageYOffset -
+                headerHeight;
+
+            window.scrollTo({
+
+                top: targetPosition,
+
+                behavior: "smooth"
+
+            });
+
+            if (menu.classList.contains("active")) {
+
+                setTimeout(closeMenu, 250);
+
+            }
+
+        });
+
+    });
+    /*==================================================
+    SCROLL EVENTS
+    ==================================================*/
+
+    function updateScrollUI() {
+
+        const scrollTop = window.pageYOffset;
+
+        /* Header */
+
+        if (header) {
+
+            if (scrollTop > 40) {
+
+                header.classList.add("scrolled");
+
+            } else {
+
+                header.classList.remove("scrolled");
+
+            }
+
+        }
+
+        /* Progress Bar */
+
+        if (progress) {
+
+            const documentHeight =
                 document.documentElement.scrollHeight -
                 document.documentElement.clientHeight;
 
-            progressBar.style.width =
-                ((scrollY / height) * 100) + "%";
+            const progressValue =
+                (scrollTop / documentHeight) * 100;
+
+            progress.style.width = progressValue + "%";
+
         }
 
-        // Back To Top
+        /* Back To Top */
+
         if (backToTop) {
 
-            backToTop.classList.toggle("show", scrollY > 500);
+            if (scrollTop > 500) {
+
+                backToTop.classList.add("show");
+
+            } else {
+
+                backToTop.classList.remove("show");
+
+            }
 
         }
 
-    });
+    }
 
-    /*==============================================
+    window.addEventListener("scroll", updateScrollUI);
+
+    updateScrollUI();
+
+
+    /*==================================================
     BACK TO TOP
-    ==============================================*/
+    ==================================================*/
 
     if (backToTop) {
 
@@ -66,133 +228,99 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    /*==============================================
-    MOBILE MENU
-    ==============================================*/
 
-    function closeMenu() {
-
-        if (!menu || !overlay || !toggle) return;
-
-        menu.classList.remove("active");
-        overlay.classList.remove("active");
-        document.body.classList.remove("menu-open");
-
-        toggle.setAttribute("aria-expanded", "false");
-
-        const icon = toggle.querySelector("i");
-
-        if (icon) {
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
-    }
-
-    if (menu && toggle && overlay) {
-
-        toggle.addEventListener("click", () => {
-
-            menu.classList.toggle("active");
-            overlay.classList.toggle("active");
-            document.body.classList.toggle("menu-open");
-
-            const opened = menu.classList.contains("active");
-
-            toggle.setAttribute("aria-expanded", opened);
-
-            const icon = toggle.querySelector("i");
-
-            if (icon) {
-
-                icon.classList.toggle("fa-bars", !opened);
-                icon.classList.toggle("fa-xmark", opened);
-
-            }
-
-        });
-
-        overlay.addEventListener("click", closeMenu);
-
-    }
-
-    /*==============================================
-    SMOOTH SCROLL
-    ==============================================*/
-
- document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-
-    link.addEventListener("click", function (e) {
-
-        console.log("CLICK:", this.getAttribute("href"));
-
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (!target) {
-
-            console.log("NO ENCUENTRO LA SECCIÓN");
-
-            return;
-
-        }
-
-        e.preventDefault();
-
-        target.scrollIntoView({
-
-            behavior: "smooth"
-
-        });
-
-    });
-
-});
-
-// Esperar a que empiece el scroll antes de cerrar el menú
-setTimeout(() => {
-
-    closeMenu();
-
-}, 250);
-
-        });
-
-    });
-
-    /*==============================================
+    /*==================================================
     SCROLL ANIMATIONS
-    ==============================================*/
+    ==================================================*/
 
-    const animated = document.querySelectorAll(
+    const animatedElements = document.querySelectorAll(
 
-        ".fade-up,.fade-left,.fade-right,.zoom"
+        ".fade-up, .fade-left, .fade-right, .zoom"
 
     );
 
-    if (animated.length) {
+    if (animatedElements.length) {
 
-        const observer = new IntersectionObserver(entries => {
+        const observer = new IntersectionObserver(
 
-            entries.forEach(entry => {
+            entries => {
 
-                if (entry.isIntersecting) {
+                entries.forEach(entry => {
 
-                    entry.target.classList.add("show");
+                    if (entry.isIntersecting) {
 
-                }
+                        entry.target.classList.add("show");
 
-            });
+                        observer.unobserve(entry.target);
 
-        }, {
+                    }
 
-            threshold: 0.15
+                });
+
+            },
+
+            {
+
+                threshold: 0.15,
+
+                rootMargin: "0px 0px -50px 0px"
+
+            }
+
+        );
+
+        animatedElements.forEach(element => {
+
+            observer.observe(element);
 
         });
 
-        animated.forEach(el => observer.observe(el));
-
     }
+
+
+    /*==================================================
+    ESC CLOSES MENU
+    ==================================================*/
+
+    document.addEventListener("keydown", event => {
+
+        if (
+
+            event.key === "Escape" &&
+
+            menu &&
+
+            menu.classList.contains("active")
+
+        ) {
+
+            closeMenu();
+
+        }
+
+    });
+
+
+    /*==================================================
+    WINDOW RESIZE
+    ==================================================*/
+
+    window.addEventListener("resize", () => {
+
+        if (
+
+            window.innerWidth > 992 &&
+
+            menu &&
+
+            menu.classList.contains("active")
+
+        ) {
+
+            closeMenu();
+
+        }
+
+    });
 
 });
