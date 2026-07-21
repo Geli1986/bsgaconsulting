@@ -38,7 +38,7 @@ CSS VARIABLES
     --shadow-hover:
         0 18px 50px rgba(0,0,0,.12);
 
-    --transition:.35s ease;
+    --transition:all .35s cubic-bezier(.4,0,.2,1);
 
 }
 
