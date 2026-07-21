@@ -349,7 +349,9 @@ header{
     left:0;
 
     width:100%;
-
+    
+background:transparent;
+    
     z-index:1000;
 
     transition:var(--transition);
@@ -605,10 +607,13 @@ HERO
 
 .hero-content{
 
+    position:relative;
+
+    z-index:2;
+
     max-width:680px;
 
 }
-
 .hero-tag{
 
     display:inline-flex;
