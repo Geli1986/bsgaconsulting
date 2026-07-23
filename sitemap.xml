@@ -1,9 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 <url>
-
-<loc>
-
-https://bsgaconsulting.es/ai-implementation-consulting
-
-</loc>
-
+<loc>https://bsgaconsulting.es/</loc>
 </url>
+
+<url>
+<loc>https://bsgaconsulting.es/about.html</loc>
+</url>
+
+<url>
+<loc>https://bsgaconsulting.es/services.html</loc>
+</url>
+
+<url>
+<loc>https://bsgaconsulting.es/contact.html</loc>
+</url>
+
+<url>
+<loc>https://bsgaconsulting.es/ai-implementation-consulting.html</loc>
+</url>
+
+</urlset>
