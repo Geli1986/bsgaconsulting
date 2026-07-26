@@ -303,7 +303,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
+/*==================================================
+ACTIVE MENU ITEM
+==================================================*/
 
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll(".nav-menu a").forEach(link => {
+
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+
+        link.classList.add("active");
+
+    }
+
+});
 
     /*==================================================
     WINDOW RESIZE
@@ -324,6 +340,44 @@ document.addEventListener("DOMContentLoaded", () => {
             closeMenu();
 
         }
+
+    });
+
+});
+/*==================================================
+STAGGER CARDS
+==================================================*/
+
+document.querySelectorAll(".service-card, .industry-card, .why-card").forEach((card, index) => {
+
+    card.style.transitionDelay = `${index * 60}ms`;
+
+});
+/*==================================================
+CARD HOVER
+==================================================*/
+
+document.querySelectorAll(".service-card").forEach(card => {
+
+    card.addEventListener("mousemove", e => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+        card.style.transform =
+            `perspective(800px)
+             rotateX(${-(y-rect.height/2)/35}deg)
+             rotateY(${(x-rect.width/2)/35}deg)
+             translateY(-8px)`;
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "";
 
     });
 
