@@ -2916,3 +2916,300 @@ h2{
 }
 
 }
+/*==================================================
+INTERIOR PAGES
+==================================================*/
+
+.hero-small{
+
+    padding:180px 0 90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8,23,38,.94),
+            rgba(15,76,129,.90)
+        );
+
+    text-align:center;
+
+    color:#fff;
+
+}
+
+.hero-small h1{
+
+    color:#fff;
+
+    max-width:900px;
+
+    margin:0 auto 24px;
+
+}
+
+.hero-small p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+}
+
+.bg-light{
+
+    background:#F8FAFC;
+
+}
+
+.section h2{
+
+    margin-bottom:26px;
+
+}
+
+.section h3{
+
+    margin-top:45px;
+
+    margin-bottom:18px;
+
+    color:var(--secondary);
+
+}
+
+.section p{
+
+    margin-bottom:22px;
+
+    max-width:850px;
+
+}
+
+.section ul{
+
+    margin:28px 0;
+
+    padding-left:0;
+
+}
+
+.section li{
+
+    position:relative;
+
+    padding-left:34px;
+
+    margin-bottom:16px;
+
+    color:var(--text);
+
+}
+
+.section li::before{
+
+    content:"✓";
+
+    position:absolute;
+
+    left:0;
+
+    color:var(--accent);
+
+    font-weight:700;
+
+}
+/*==================================================
+INTERIOR PAGE IMPROVEMENTS
+==================================================*/
+
+/* Tarjetas de páginas interiores */
+
+.section .services-grid{
+
+    margin-top:50px;
+
+}
+
+.section .service-card{
+
+    min-height:280px;
+
+    justify-content:flex-start;
+
+}
+
+.section .service-card h3{
+
+    margin-top:0;
+
+}
+
+.section .service-card a{
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+.section .service-card:hover a{
+
+    color:var(--secondary);
+
+}
+
+
+/* FAQs */
+
+.section h2 + h3{
+
+    margin-top:40px;
+
+}
+
+.section h3{
+
+    padding:18px 24px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    transition:var(--transition);
+
+}
+
+.section h3:hover{
+
+    border-color:var(--accent);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+    transform:translateY(-2px);
+
+}
+
+.section h3 + p{
+
+    padding:24px 28px;
+
+    margin-top:-8px;
+
+    margin-bottom:28px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-top:none;
+
+    border-radius:0 0 16px 16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.03);
+
+}
+
+
+/* CTA */
+
+.cta{
+
+    padding:110px 0;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.cta h2{
+
+    color:white;
+
+    max-width:900px;
+
+    margin:0 auto 24px;
+
+}
+
+.cta p{
+
+    color:rgba(255,255,255,.85);
+
+    max-width:760px;
+
+    margin:0 auto 40px;
+
+    font-size:1.08rem;
+
+}
+
+.cta .btn-primary{
+
+    display:inline-flex;
+
+    min-width:260px;
+
+    justify-content:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+.cta .btn-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+
+/* Mejoras visuales */
+
+.section{
+
+    overflow:hidden;
+
+}
+
+.section .container{
+
+    position:relative;
+
+}
+
+.section .container::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-180px;
+
+    width:320px;
+
+    height:320px;
+
+    background:radial-gradient(
+        rgba(63,169,245,.08),
+        transparent 70%
+    );
+
+    pointer-events:none;
+
+}
