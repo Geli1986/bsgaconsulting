@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const backToTop = document.getElementById("backToTop");
 
     const progress = document.getElementById("scroll-progress");
+/*==================================================
+SCROLL VARIABLES
+==================================================*/
+
+let lastScroll = 0;
 
 
     /*==================================================
@@ -157,7 +162,23 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateScrollUI() {
 
         const scrollTop = window.pageYOffset;
+/* Hide / Show Header */
 
+if (header) {
+
+    if (scrollTop > lastScroll && scrollTop > 180) {
+
+        header.classList.add("hide");
+
+    } else {
+
+        header.classList.remove("hide");
+
+    }
+
+}
+
+lastScroll = scrollTop;
         /* Header */
 
         if (header) {
