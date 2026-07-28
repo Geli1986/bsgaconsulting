@@ -1590,3 +1590,104 @@ transition:.6s;
 left:120%;
 
 }
+/*=========================================================
+SERVICE DETAIL
+=========================================================*/
+
+.service-detail{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+.service-image{
+
+overflow:hidden;
+
+border-radius:30px;
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.service-image img{
+
+width:100%;
+
+display:block;
+
+height:100%;
+
+object-fit:cover;
+
+transition:transform .6s;
+
+}
+
+.service-image:hover img{
+
+transform:scale(1.04);
+
+}
+
+.service-benefits{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px;
+
+margin:40px 0;
+
+}
+
+.benefit{
+
+padding:18px 22px;
+
+background:#fff;
+
+border-radius:16px;
+
+border:1px solid var(--border);
+
+font-weight:600;
+
+box-shadow:var(--shadow-sm);
+
+transition:.3s;
+
+}
+
+.benefit:hover{
+
+transform:translateY(-5px);
+
+box-shadow:var(--shadow);
+
+border-color:var(--secondary);
+
+}
+
+@media(max-width:900px){
+
+.service-detail{
+
+grid-template-columns:1fr;
+
+}
+
+.service-benefits{
+
+grid-template-columns:1fr;
+
+}
+
+}
