@@ -281,14 +281,14 @@ background:#f4f8fc;
 
 }
 /*=========================================================
-  6. HEADER
+HEADER
 =========================================================*/
 
 .site-header{
 
 position:fixed;
 
-top:0;
+top:20px;
 
 left:0;
 
@@ -296,13 +296,39 @@ width:100%;
 
 z-index:1000;
 
+transition:.35s;
+
+}
+
+.site-header .container{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:18px 32px;
+
 background:rgba(255,255,255,.82);
 
 backdrop-filter:blur(18px);
 
-border-bottom:1px solid rgba(0,0,0,.05);
+-webkit-backdrop-filter:blur(18px);
 
-transition:var(--transition);
+border:1px solid rgba(255,255,255,.4);
+
+border-radius:22px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.site-header.scrolled .container{
+
+padding:14px 30px;
+
+background:rgba(255,255,255,.95);
 
 }
 
@@ -330,7 +356,15 @@ align-items:center;
 
 height:42px;
 
-width:auto;
+display:block;
+
+transition:.3s;
+
+}
+
+.logo:hover img{
+
+transform:scale(1.04);
 
 }
 
