@@ -1,29 +1,78 @@
-// ======================================================
-// BSGA CONSULTING
-// Main JavaScript
-// ======================================================
+/*=========================================================
+BSGA CONSULTING
+MAIN.JS
+=========================================================*/
 
-// Header al hacer scroll
+/*=========================================================
+HEADER SCROLL
+=========================================================*/
 
 const header = document.querySelector(".site-header");
 
 window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 60) {
-
+    if (window.scrollY > 50) {
         header.classList.add("scrolled");
-
     } else {
-
         header.classList.remove("scrolled");
-
     }
 
 });
 
-// Animaciones al hacer scroll
+/*=========================================================
+BACK TO TOP
+=========================================================*/
 
-const observer = new IntersectionObserver(entries => {
+const backToTop = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", () => {
+
+    if (!backToTop) return;
+
+    if (window.scrollY > 500) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+});
+
+backToTop?.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+/*=========================================================
+SMOOTH SCROLL
+=========================================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (!target) return;
+
+        e.preventDefault();
+
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+});
+
+/*=========================================================
+FADE-UP ANIMATION
+=========================================================*/
+
+const observer = new IntersectionObserver((entries) => {
 
     entries.forEach(entry => {
 
@@ -31,59 +80,166 @@ const observer = new IntersectionObserver(entries => {
 
             entry.target.classList.add("visible");
 
+            observer.unobserve(entry.target);
+
         }
 
     });
 
 }, {
+    threshold: 0.15
+});
 
-    threshold: .15
+document.querySelectorAll(".fade-up").forEach(element => {
+
+    observer.observe(element);
 
 });
 
-document.querySelectorAll(".fade-up").forEach(el => {
+/*=========================================================
+FAQ
+=========================================================*/
 
-    observer.observe(el);
+const faqItems = document.querySelectorAll(".faq-item");
 
-});
+faqItems.forEach(item => {
 
-// Back To Top
+    const button = item.querySelector(".faq-question");
 
-const backToTop = document.querySelector(".back-to-top");
+    if (!button) return;
 
-if(backToTop){
+    button.addEventListener("click", () => {
 
-window.addEventListener("scroll",()=>{
+        faqItems.forEach(faq => {
 
-backToTop.classList.toggle("show",window.scrollY>600);
+            if (faq !== item) {
+                faq.classList.remove("active");
+            }
 
-});
+        });
 
-backToTop.addEventListener("click",()=>{
+        item.classList.toggle("active");
 
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
+    });
 
 });
+
+/*=========================================================
+MOBILE MENU
+=========================================================*/
+
+const menuButton = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
+const overlay = document.querySelector(".mobile-overlay");
+
+if (menuButton && mobileMenu && overlay) {
+
+    menuButton.addEventListener("click", () => {
+
+        mobileMenu.classList.add("active");
+        overlay.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+    overlay.addEventListener("click", closeMenu);
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", closeMenu);
+
+    });
 
 }
-document.querySelectorAll("a[href^='#']").forEach(anchor=>{
 
-anchor.addEventListener("click",function(e){
+function closeMenu() {
 
-e.preventDefault();
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
 
-document.querySelector(this.getAttribute("href")).scrollIntoView({
+    document.body.style.overflow = "";
 
-behavior:"smooth"
+}
+
+/*=========================================================
+ACTIVE MENU LINK
+=========================================================*/
+
+const currentPage = window.location.pathname.split("/").pop() || "index.html";
+
+document.querySelectorAll(".desktop-nav a, .mobile-menu a").forEach(link => {
+
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+
+        link.classList.add("active");
+
+    }
 
 });
 
+/*=========================================================
+IMAGE HOVER EFFECT
+=========================================================*/
+
+document.querySelectorAll(".hero-image img, .service-image img").forEach(img => {
+
+    img.addEventListener("mouseenter", () => {
+
+        img.style.transform = "scale(1.04)";
+
+    });
+
+    img.addEventListener("mouseleave", () => {
+
+        img.style.transform = "";
+
+    });
+
 });
+
+/*=========================================================
+BUTTON RIPPLE EFFECT
+=========================================================*/
+
+document.querySelectorAll(".btn").forEach(button => {
+
+    button.addEventListener("click", function (e) {
+
+        const ripple = document.createElement("span");
+
+        const rect = this.getBoundingClientRect();
+
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = size + "px";
+        ripple.style.height = size + "px";
+
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+
+        ripple.classList.add("ripple");
+
+        this.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
+
+    });
+
+});
+
+/*=========================================================
+PAGE LOADED
+=========================================================*/
+
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
 
 });
