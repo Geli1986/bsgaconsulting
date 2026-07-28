@@ -1166,3 +1166,86 @@ font-size:2.3rem;
 }
 
 }
+/*=========================================================
+INDUSTRIES
+=========================================================*/
+
+.industries-layout{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+.industries-image{
+
+overflow:hidden;
+
+border-radius:32px;
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.industries-image img{
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+object-fit:cover;
+
+transition:transform .6s ease;
+
+}
+
+.industries-image:hover img{
+
+transform:scale(1.04);
+
+}
+
+.industry-list{
+
+margin-top:40px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+.industry-list li{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+font-size:1.08rem;
+
+font-weight:600;
+
+color:var(--primary);
+
+}
+
+.industry-list img{
+
+width:34px;
+
+height:34px;
+
+color:var(--secondary);
+
+}
