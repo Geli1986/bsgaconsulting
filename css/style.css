@@ -1722,3 +1722,94 @@ margin-bottom:10px;
 font-size:1.2rem;
 
 }
+/*=========================================================
+ALTERNATING LAYOUT
+=========================================================*/
+
+.service-detail.reverse{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.service-detail.reverse .service-image{
+
+order:2;
+
+}
+
+.service-detail.reverse .service-text{
+
+order:1;
+
+}
+
+@media(max-width:900px){
+
+.service-detail.reverse .service-image,
+.service-detail.reverse .service-text{
+
+order:unset;
+
+}
+
+}
+/*=========================================================
+FAQ
+=========================================================*/
+
+.faq{
+
+max-width:900px;
+
+margin:0 auto;
+
+}
+
+.faq-item{
+
+background:#fff;
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+margin-bottom:20px;
+
+overflow:hidden;
+
+}
+
+.faq-question{
+
+width:100%;
+
+padding:24px 30px;
+
+background:none;
+
+border:none;
+
+text-align:left;
+
+font-size:1.05rem;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.faq-answer{
+
+display:none;
+
+padding:0 30px 25px;
+
+}
+
+.faq-item.active .faq-answer{
+
+display:block;
+
+}
