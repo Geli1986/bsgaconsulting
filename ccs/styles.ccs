@@ -76,3 +76,86 @@ a{
     margin:auto;
 
 }
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#fff;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.header-container{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    min-height:84px;
+
+}
+
+.logo img{
+
+    height:42px;
+    width:auto;
+
+}
+
+.main-nav{
+
+    display:flex;
+    gap:2rem;
+
+}
+
+.main-nav a{
+
+    font-size:.95rem;
+    font-weight:500;
+
+    color:var(--text);
+
+    transition:.25s;
+
+}
+
+.main-nav a:hover{
+
+    color:var(--secondary);
+
+}
+
+.btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:.9rem 1.4rem;
+
+    border-radius:999px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--secondary);
+
+}
