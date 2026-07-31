@@ -1,35 +1,16 @@
-/* =====================================================
-   BSGA CONSULTING
-   GLOBAL STYLES
-===================================================== */
+/*==================================================
+BSGA CONSULTING
+Version 1.0
+==================================================*/
 
-/* ---------- Variables ---------- */
 
-:root{
+/*==================================================
+RESET
+==================================================*/
 
-    --primary:#0B1F3A;
-    --secondary:#1E5AA8;
-    --accent:#2F80ED;
-
-    --text:#1C2430;
-    --text-light:#5F6B7A;
-
-    --background:#FFFFFF;
-    --background-light:#F7F9FC;
-
-    --border:#E4EAF2;
-
-    --shadow:0 10px 30px rgba(0,0,0,.08);
-
-    --radius:16px;
-
-    --container:1200px;
-
-}
-
-/* ---------- Reset ---------- */
-
-*{
+*,
+*::before,
+*::after{
 
     margin:0;
     padding:0;
@@ -45,19 +26,22 @@ html{
 
 body{
 
-    font-family:Inter,Arial,sans-serif;
+    font-family:"Inter",sans-serif;
 
-    color:var(--text);
+    color:#1C2430;
 
-    background:var(--background);
+    background:#FFFFFF;
 
     line-height:1.6;
+
+    -webkit-font-smoothing:antialiased;
 
 }
 
 img{
 
     display:block;
+
     max-width:100%;
 
 }
@@ -65,20 +49,66 @@ img{
 a{
 
     color:inherit;
+
     text-decoration:none;
 
 }
 
-.container{
+button{
 
-    width:min(92%,var(--container));
-
-    margin:auto;
+    font:inherit;
 
 }
-/* =====================================================
-   HEADER
-===================================================== */
+
+
+/*==================================================
+VARIABLES
+==================================================*/
+
+:root{
+
+    --navy:#0B1F3A;
+    --blue:#1E5AA8;
+
+    --text:#1C2430;
+    --muted:#667085;
+
+    --white:#FFFFFF;
+
+    --light:#F6F8FB;
+
+    --border:#E5EAF2;
+
+    --shadow:0 20px 50px rgba(0,0,0,.08);
+
+    --radius:22px;
+
+    --container:1240px;
+
+}
+
+
+/*==================================================
+LAYOUT
+==================================================*/
+
+.container{
+
+    width:min(92%,1240px);
+
+    margin-inline:auto;
+
+}
+
+section{
+
+    padding:100px 0;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
 
 .site-header{
 
@@ -86,7 +116,10 @@ a{
     top:0;
     z-index:1000;
 
-    background:#fff;
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
 
     border-bottom:1px solid var(--border);
 
@@ -98,40 +131,106 @@ a{
     align-items:center;
     justify-content:space-between;
 
-    min-height:84px;
+    height:88px;
 
 }
 
-.logo img{
+/*==================================================
+LOGO
+==================================================*/
 
-    height:42px;
+.logo{
+
+    display:flex;
+    align-items:center;
+
+}
+
+.logo-image{
+
+    height:52px;
     width:auto;
 
+    transition:transform .3s ease;
+
 }
+
+.logo:hover .logo-image{
+
+    transform:scale(1.03);
+
+}
+
+/*==================================================
+NAVIGATION
+==================================================*/
 
 .main-nav{
 
     display:flex;
-    gap:2rem;
+    align-items:center;
+    gap:40px;
 
 }
 
 .main-nav a{
+
+    position:relative;
 
     font-size:.95rem;
     font-weight:500;
 
     color:var(--text);
 
-    transition:.25s;
+    transition:.3s;
 
 }
 
 .main-nav a:hover{
 
-    color:var(--secondary);
+    color:var(--blue);
 
 }
+
+.main-nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    background:var(--blue);
+
+    transition:.3s;
+
+}
+
+.main-nav a:hover::after{
+
+    width:100%;
+
+}
+.main-nav a.active{
+
+    color:var(--navy);
+
+    font-weight:700;
+
+}
+
+.main-nav a.active::after{
+
+    width:100%;
+
+}
+/*==================================================
+BUTTONS
+==================================================*/
 
 .btn-primary{
 
@@ -140,62 +239,13 @@ a{
     align-items:center;
     justify-content:center;
 
-    padding:.9rem 1.4rem;
+    padding:15px 28px;
 
     border-radius:999px;
 
-    background:var(--primary);
+    background:var(--navy);
 
     color:#fff;
-
-    font-weight:600;
-
-    transition:.25s;
-
-}
-
-.btn-primary:hover{
-
-    background:var(--secondary);
-
-}
-.logo-text{
-
-    font-size:1.5rem;
-
-    font-weight:700;
-
-    color:var(--primary);
-
-    letter-spacing:-0.03em;
-
-}
-/*=========================================================
-LOGO
-=========================================================*/
-
-.logo-image{
-
-    height:52px;
-    width:auto;
-    display:block;
-
-}
-
-/*=========================================================
-BUTTONS
-=========================================================*/
-
-.btn-primary,
-.btn-secondary{
-
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:16px 28px;
-
-    border-radius:999px;
 
     font-weight:600;
 
@@ -203,118 +253,41 @@ BUTTONS
 
 }
 
-.btn-primary{
-
-    background:var(--primary);
-
-    color:#fff;
-
-}
-
 .btn-primary:hover{
 
-    background:var(--secondary);
+    transform:translateY(-2px);
+
+    background:var(--blue);
+
+    box-shadow:var(--shadow);
 
 }
 
 .btn-secondary{
 
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:15px 28px;
+
+    border-radius:999px;
+
     border:1px solid var(--border);
 
     background:#fff;
 
-    color:var(--primary);
+    color:var(--navy);
 
-    margin-left:16px;
+    font-weight:600;
+
+    transition:.3s;
 
 }
 
 .btn-secondary:hover{
 
-    background:#F4F7FB;
+    background:var(--light);
 
 }
-
-/*=========================================================
-HERO
-=========================================================*/
-
-.hero{
-
-    padding:80px 0 100px;
-
-}
-
-.hero-container{
-
-    display:grid;
-
-    grid-template-columns:1.1fr .9fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-.hero-tag{
-
-    display:inline-block;
-
-    color:var(--secondary);
-
-    font-size:.85rem;
-
-    font-weight:700;
-
-    letter-spacing:.12em;
-
-    margin-bottom:20px;
-
-}
-
-.hero h1{
-
-    font-size:clamp(3.4rem,6vw,5.6rem);
-
-    line-height:.95;
-
-    letter-spacing:-0.05em;
-
-    font-weight:800;
-
-    color:var(--primary);
-
-    margin-bottom:32px;
-
-    max-width:700px;
-
-}
-
-.hero p{
-
-    font-size:1.18rem;
-
-    line-height:1.8;
-
-    color:var(--text-light);
-
-    max-width:600px;
-
-    margin-bottom:48px;
-
-}
-.hero-image img{
-
-    width:100%;
-
-    aspect-ratio:4/5;
-
-    object-fit:cover;
-
-    border-radius:28px;
-
-    box-shadow:0 35px 80px rgba(11,31,58,.18);
-
-}
-
