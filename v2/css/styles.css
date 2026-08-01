@@ -856,3 +856,82 @@ WHY BSGA
     }
 
 }
+/*==========================================================
+FEATURED CASE STUDY
+==========================================================*/
+
+.case-study{
+
+    background:var(--surface);
+
+}
+
+.case-study-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.case-image img{
+
+    width:100%;
+
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
+    border-radius:32px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.case-content h2{
+
+    margin:24px 0;
+
+}
+
+.case-content p{
+
+    margin-bottom:32px;
+
+    max-width:520px;
+
+}
+
+.case-results{
+
+    list-style:none;
+
+    margin-bottom:40px;
+
+}
+
+.case-results li{
+
+    margin-bottom:14px;
+
+    color:var(--text);
+
+    font-weight:500;
+
+}
+
+@media(max-width:960px){
+
+    .case-study-grid{
+
+        grid-template-columns:1fr;
+
+        gap:48px;
+
+    }
+
+}
