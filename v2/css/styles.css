@@ -773,3 +773,86 @@ SERVICES V2
     }
 
 }
+/*==========================================================
+WHY BSGA
+==========================================================*/
+
+.why{
+
+    background:#fff;
+
+}
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:5fr 6fr;
+
+    gap:80px;
+
+    align-items:start;
+
+}
+
+.section-kicker{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:var(--blue);
+
+    font-size:.82rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:.18em;
+
+    font-weight:700;
+
+}
+
+.why-left h2{
+
+    max-width:420px;
+
+}
+
+.why-item{
+
+    padding:32px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.why-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.why-item h3{
+
+    margin-bottom:14px;
+
+}
+
+.why-item p{
+
+    max-width:520px;
+
+}
+
+@media(max-width:960px){
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+        gap:48px;
+
+    }
+
+}
