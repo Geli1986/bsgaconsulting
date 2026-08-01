@@ -928,3 +928,24 @@ NAVIGATION
     }
 
 }
+/*=========================================================
+15. INSIGHTS
+=========================================================*/
+
+.service-card img{
+
+    transition:transform .6s ease;
+
+}
+
+.service-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.service-card{
+
+    overflow:hidden;
+
+}
