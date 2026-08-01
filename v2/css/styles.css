@@ -935,3 +935,102 @@ FEATURED CASE STUDY
     }
 
 }
+/*==========================================================
+CTA
+==========================================================*/
+
+.cta{
+
+    padding:140px 0;
+
+}
+
+.cta-box{
+
+    background:var(--navy);
+
+    color:#fff;
+
+    border-radius:36px;
+
+    padding:80px;
+
+    text-align:center;
+
+}
+
+.cta-box .section-kicker{
+
+    color:#8FB8FF;
+
+}
+
+.cta-box h2{
+
+    color:#fff;
+
+    margin:24px auto;
+
+    max-width:700px;
+
+}
+
+.cta-box p{
+
+    color:rgba(255,255,255,.82);
+
+    max-width:700px;
+
+    margin:0 auto 48px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.cta .button-secondary{
+
+    background:white;
+
+    color:var(--navy);
+
+    border:none;
+
+}
+
+.cta .button-secondary:hover{
+
+    background:#F3F4F6;
+
+}
+
+@media(max-width:768px){
+
+    .cta-box{
+
+        padding:48px 28px;
+
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .cta-buttons a{
+
+        width:100%;
+
+    }
+
+}
