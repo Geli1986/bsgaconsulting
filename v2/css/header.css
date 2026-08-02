@@ -1,1 +1,242 @@
+/*==========================================================
+HEADER
+==========================================================*/
 
+.header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:transparent;
+
+    transition:
+        background .35s ease,
+        backdrop-filter .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.header.scrolled{
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+.header .container{
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+/*==========================================================
+LOGO
+==========================================================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    height:54px;
+
+    transition:.35s;
+
+}
+
+.header.scrolled .logo img{
+
+    height:48px;
+
+}
+
+
+
+/*==========================================================
+NAVIGATION
+==========================================================*/
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:42px;
+
+}
+
+nav a{
+
+    position:relative;
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    color:var(--navy);
+
+    transition:.3s;
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--blue);
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--blue);
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+/*==========================================================
+HEADER CTA
+==========================================================*/
+
+.header .button{
+
+    padding:15px 28px;
+
+}
+
+
+
+/*==========================================================
+MOBILE MENU
+==========================================================*/
+
+.menu-toggle{
+
+    display:none;
+
+    width:42px;
+
+    height:42px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    display:block;
+
+    width:24px;
+
+    height:2px;
+
+    background:var(--navy);
+
+    position:relative;
+
+}
+
+.menu-toggle span::before,
+.menu-toggle span::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    width:24px;
+
+    height:2px;
+
+    background:var(--navy);
+
+}
+
+.menu-toggle span::before{
+
+    top:-7px;
+
+}
+
+.menu-toggle span::after{
+
+    top:7px;
+
+}
+
+
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media(max-width:960px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    .header .button{
+
+        display:none;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+}
