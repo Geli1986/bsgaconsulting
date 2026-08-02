@@ -113,3 +113,24 @@ WHY BSGA
     line-height:1.85;
 
 }
+/*==========================================================
+WHY RESPONSIVE
+==========================================================*/
+
+@media(max-width:992px){
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+        gap:56px;
+
+    }
+
+    .why-left{
+
+        position:static;
+
+    }
+
+}
