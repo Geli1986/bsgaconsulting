@@ -268,16 +268,11 @@ HELPERS
 
 .fade{
 
-    opacity:0;
+    opacity:1;
 
-    transform:translateY(40px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
+    transform:none;
 
 }
-
 .fade.show{
 
     opacity:1;
