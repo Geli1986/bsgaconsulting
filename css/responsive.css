@@ -4,88 +4,146 @@ RESPONSIVE
 
 @media(max-width:1200px){
 
-    .container{
+.container{
 
-        width:min(94%,1240px);
+width:min(94%,1240px);
 
-    }
+}
+
+.hero-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-left{
+
+max-width:100%;
+
+}
+
+.executive-card{
+
+width:100%;
+
+max-width:520px;
+
+}
 
 }
 
 @media(max-width:992px){
 
-    section{
+.header nav{
 
-        padding:90px 0;
+display:none;
 
-    }
+}
 
-    h1{
+.header .button{
 
-        font-size:3.4rem;
+display:none;
 
-    }
+}
 
-    h2{
+section{
 
-        font-size:2.5rem;
+padding:100px 0;
 
-    }
+}
+
+.hero{
+
+min-height:auto;
+
+padding:150px 0 100px;
+
+}
+
+.hero-left h1{
+
+font-size:3.7rem;
+
+}
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.approach-layout{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+}
 
 }
 
 @media(max-width:768px){
 
-    .hero-buttons{
+.hero-buttons{
 
-        flex-direction:column;
+flex-direction:column;
 
-    }
+}
 
-    .hero-buttons a{
+.hero-buttons a{
 
-        width:100%;
+width:100%;
 
-    }
+}
 
-    .cta-buttons{
+.hero-left h1{
 
-        flex-direction:column;
+font-size:3rem;
 
-    }
+}
 
-    .cta-buttons a{
+.executive-card{
 
-        width:100%;
+padding:28px;
 
-    }
+}
 
-    h1{
+.section-title{
 
-        font-size:2.8rem;
+margin-bottom:50px;
 
-    }
-
-    h2{
-
-        font-size:2rem;
-
-    }
+}
 
 }
 
 @media(max-width:576px){
 
-    section{
+.hero-left h1{
 
-        padding:72px 0;
+font-size:2.5rem;
 
-    }
+}
 
-    p{
+.hero-left p{
 
-        font-size:1.05rem;
+font-size:1.05rem;
 
-    }
+}
+
+section{
+
+padding:80px 0;
+
+}
 
 }
