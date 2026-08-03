@@ -1,137 +1,113 @@
-/*==========================================================
-OUR APPROACH
-==========================================================*/
-
 .approach{
 
-    background:var(--surface);
+background:#F7F9FC;
+
+padding:150px 0;
 
 }
 
-.approach-grid{
+.approach-layout{
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:1.1fr .9fr;
+grid-template-columns:1fr 520px;
 
-    gap:100px;
+gap:90px;
 
-    align-items:center;
-
-}
-
-.approach-image{
-
-    overflow:hidden;
-
-    border-radius:36px;
+align-items:center;
 
 }
 
 .approach-image img{
 
-    width:100%;
+width:100%;
 
-    aspect-ratio:4/5;
+border-radius:32px;
 
-    object-fit:cover;
+display:block;
 
-    transition:.6s;
+box-shadow:
 
-    box-shadow:
-        0 35px 80px rgba(0,0,0,.12);
-
-}
-
-.approach:hover .approach-image img{
-
-    transform:scale(1.03);
-
-}
-
-.approach-content{
-
-    max-width:560px;
+0 40px 90px rgba(0,0,0,.12);
 
 }
 
 .approach-content h2{
 
-    margin:24px 0;
+margin:24px 0;
 
 }
 
 .approach-content>p{
 
-    margin-bottom:42px;
+margin-bottom:50px;
 
 }
 
-.approach-list{
+.timeline{
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    gap:26px;
-
-}
-
-.approach-item{
-
-    display:flex;
-
-    gap:18px;
-
-    align-items:flex-start;
+gap:30px;
 
 }
 
-.approach-number{
+.timeline-item{
 
-    width:44px;
+display:flex;
 
-    height:44px;
-
-    border-radius:50%;
-
-    background:var(--navy);
-
-    color:#fff;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-weight:700;
-
-    flex-shrink:0;
+gap:28px;
 
 }
 
-.approach-item h3{
+.number{
 
-    margin-bottom:8px;
+width:58px;
 
-    font-size:1.2rem;
+height:58px;
+
+border-radius:50%;
+
+background:#2563EB;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:700;
+
+font-size:1.1rem;
+
+flex-shrink:0;
 
 }
 
-.approach-item p{
+.timeline-item h3{
 
-    font-size:1rem;
+margin-bottom:10px;
+
+font-size:1.45rem;
 
 }
-@media(max-width:992px){
 
-    .approach-grid{
+.timeline-item p{
 
-        grid-template-columns:1fr;
+line-height:1.8;
 
-        gap:56px;
+}
 
-    }
+@media(max-width:1100px){
+
+.approach-layout{
+
+grid-template-columns:1fr;
+
+}
 
 }
