@@ -224,3 +224,100 @@ HERO STATS
     line-height:1.6;
 
 }
+/*==========================================================
+EXECUTIVE CARD
+==========================================================*/
+
+.executive-card{
+
+    margin-top:70px;
+
+    width:420px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:28px;
+
+    padding:34px;
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.25);
+
+}
+
+.executive-label{
+
+    color:#58A6FF;
+
+    font-size:.8rem;
+
+    letter-spacing:.18em;
+
+    font-weight:700;
+
+}
+
+.priority{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:30px;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.progress{
+
+    margin-top:12px;
+
+    height:8px;
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.progress-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #2F80ED,
+        #5DAEFF
+    );
+
+}
+
+.one{
+
+    width:92%;
+
+}
+
+.two{
+
+    width:95%;
+
+}
+
+.three{
+
+    width:81%;
+
+}
