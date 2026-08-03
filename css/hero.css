@@ -1,44 +1,28 @@
 /*==========================================================
-HERO V3
+HERO V4
 ==========================================================*/
 
 .hero{
 
-    position:relative;
+    display:grid;
+
+    grid-template-columns:52% 48%;
 
     height:100vh;
 
-    min-height:920px;
-
-    overflow:hidden;
+    min-height:900px;
 
     background:#07182E;
 
-}
-
-/*=============================
-BACKGROUND
-=============================*/
-
-.hero-background{
-
-    position:absolute;
-
-    inset:0;
-
-    background-image:url("../images/hero/hero-consulting.webp");
-
-    background-size:cover;
-
-    background-position:right center;
+    overflow:hidden;
 
 }
 
-.hero-overlay{
+/*========================
+LEFT
+========================*/
 
-    position:absolute;
-
-    inset:0;
+.hero-left{
 
     background:
 
@@ -46,119 +30,91 @@ BACKGROUND
 
             90deg,
 
-            rgba(7,24,46,.97) 0%,
+            #07182E 0%,
 
-            rgba(7,24,46,.94) 26%,
+            #07182E 78%,
 
-            rgba(7,24,46,.82) 45%,
+            rgba(7,24,46,.92) 90%,
 
-            rgba(7,24,46,.45) 62%,
-
-            rgba(7,24,46,.10) 80%,
-
-            rgba(7,24,46,0) 100%
+            rgba(7,24,46,.75) 100%
 
         );
 
-}
+    display:flex;
 
-/*=============================
-CONTENT
-=============================*/
-
-.hero-content{
+    justify-content:flex-end;
 
     position:relative;
 
-    z-index:5;
-
-    height:100%;
-
-    display:flex;
-
-    align-items:center;
-
-    max-width:1400px;
+    z-index:2;
 
 }
 
-.hero-left{
+.hero-inner{
 
-    width:690px;
+    width:680px;
 
-    padding-top:90px;
+    padding-top:170px;
+
+    padding-right:70px;
 
 }
-
-/*=============================
-KICKER
-=============================*/
 
 .hero-kicker{
 
     display:block;
 
-    margin-bottom:36px;
-
     color:#3F8CFF;
 
-    font-size:.95rem;
+    font-size:.9rem;
 
     letter-spacing:.22em;
 
     font-weight:700;
 
-}
+    margin-bottom:38px;
 
-/*=============================
-TITLE
-=============================*/
+}
 
 .hero h1{
 
     color:white;
 
-    font-size:clamp(5.2rem,7vw,7rem);
+    font-size:6.4rem;
 
-    line-height:.93;
+    line-height:.92;
 
-    letter-spacing:-.055em;
-
-    font-weight:800;
+    letter-spacing:-.06em;
 
     margin-bottom:42px;
+
+    font-weight:800;
 
 }
 
 .hero h1 span{
 
-    display:block;
-
     color:#2F80ED;
 
 }
-
-/*=============================
-TEXT
-=============================*/
 
 .hero p{
 
     color:rgba(255,255,255,.80);
 
-    font-size:1.38rem;
+    font-size:1.32rem;
 
-    line-height:1.8;
+    line-height:1.75;
 
-    max-width:620px;
+    margin-bottom:50px;
 
-    margin-bottom:52px;
+    max-width:560px;
 
 }
 
-/*=============================
+/*========================
 BUTTONS
-=============================*/
+========================*/
 
 .hero-buttons{
 
@@ -166,35 +122,27 @@ BUTTONS
 
     gap:24px;
 
-    margin-bottom:60px;
+    margin-bottom:58px;
 
 }
 
 .hero .button{
 
-    min-width:260px;
+    width:250px;
 
-    height:66px;
+    height:64px;
 
     border-radius:999px;
 
     background:#2F80ED;
 
-    font-size:1.08rem;
-
-}
-
-.hero .button:hover{
-
-    transform:translateY(-3px);
-
 }
 
 .hero .button-secondary{
 
-    min-width:330px;
+    width:330px;
 
-    height:66px;
+    height:64px;
 
     border-radius:999px;
 
@@ -206,49 +154,39 @@ BUTTONS
 
 }
 
-.hero .button-secondary:hover{
-
-    background:white;
-
-    color:#07182E;
-
-}
-
-/*=============================
+/*========================
 CARD
-=============================*/
+========================*/
 
 .executive-card{
 
-    width:640px;
-
-    border-radius:26px;
+    width:560px;
 
     padding:34px;
 
+    border-radius:24px;
+
     background:rgba(255,255,255,.08);
 
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(18px);
 
     border:1px solid rgba(255,255,255,.10);
 
-    box-shadow:
-
-        0 35px 90px rgba(0,0,0,.30);
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
 
 }
 
 .card-title{
 
-    color:#4A97FF;
+    color:#4EA1FF;
 
-    font-size:.90rem;
-
-    font-weight:700;
+    font-size:.85rem;
 
     letter-spacing:.22em;
 
     margin-bottom:30px;
+
+    font-weight:700;
 
 }
 
@@ -260,11 +198,9 @@ CARD
 
     color:white;
 
-    margin-top:20px;
+    margin-top:18px;
 
     margin-bottom:12px;
-
-    font-size:1.08rem;
 
 }
 
@@ -272,9 +208,9 @@ CARD
 
     height:7px;
 
-    border-radius:999px;
-
     background:rgba(255,255,255,.12);
+
+    border-radius:999px;
 
     overflow:hidden;
 
@@ -298,20 +234,32 @@ CARD
 
 }
 
-.fill-92{
+.fill-92{width:92%;}
+.fill-95{width:95%;}
+.fill-81{width:81%;}
 
-    width:92%;
+/*========================
+RIGHT
+========================*/
+
+.hero-right{
+
+    position:relative;
+
+    overflow:hidden;
 
 }
 
-.fill-95{
+.hero-right img{
 
-    width:95%;
+    width:100%;
 
-}
+    height:100%;
 
-.fill-81{
+    object-fit:cover;
 
-    width:81%;
+    object-position:center center;
+
+    display:block;
 
 }
