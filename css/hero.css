@@ -52,11 +52,13 @@ LEFT
 
 .hero-inner{
 
-    width:680px;
+    width:100%;
 
-    padding-top:170px;
+    max-width:620px;
 
-    padding-right:70px;
+    margin-left:auto;
+
+    padding:170px 50px 0 40px;
 
 }
 
@@ -80,7 +82,7 @@ LEFT
 
     color:white;
 
-    font-size:6.4rem;
+    font-size:5.3rem;
 
     line-height:.92;
 
@@ -160,7 +162,7 @@ CARD
 
 .executive-card{
 
-    width:560px;
+    width:520px;
 
     padding:34px;
 
@@ -258,7 +260,7 @@ RIGHT
 
     object-fit:cover;
 
-    object-position:center center;
+    object-position:60% center;
 
     display:block;
 
