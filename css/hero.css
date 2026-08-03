@@ -6,7 +6,7 @@ HERO V4
 
     display:grid;
 
-    grid-template-columns:45% 55%;
+    grid-template-columns:42% 58%;
 
     height:100vh;
 
@@ -82,7 +82,7 @@ LEFT
 
     color:white;
 
-    font-size:5.3rem;
+    font-size:4.8rem;
 
     line-height:.92;
 
@@ -260,7 +260,7 @@ RIGHT
 
     object-fit:cover;
 
-    object-position:60% center;
+    object-position:48% center;
 
     display:block;
 
