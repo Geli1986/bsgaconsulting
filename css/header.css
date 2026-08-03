@@ -4,8 +4,8 @@ HEADER V4
 
 .header{
 
-    position:absolute;
-
+position:fixed;
+    
     top:0;
 
     left:0;
