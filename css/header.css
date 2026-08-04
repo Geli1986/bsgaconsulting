@@ -17,10 +17,9 @@ HEADER
     transition:
 
         background .35s ease,
-
-        box-shadow .35s ease,
-
-        backdrop-filter .35s ease;
+box-shadow .35s ease,
+backdrop-filter .35s ease,
+height .35s ease;
 
 }
     left:0;
@@ -453,5 +452,10 @@ ACTIVE MENU
 .header nav a.active::after{
 
     width:100%;
+
+}
+.header.scrolled .container{
+
+    height:74px;
 
 }
