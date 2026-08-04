@@ -259,48 +259,109 @@ TABLET
 
 @media(max-width:1100px){
 
-.header .container{
+    .header .container{
 
-grid-template-columns:120px 1fr 180px;
+        width:min(96%,1380px);
 
-padding:0 20px;
+        grid-template-columns:110px 1fr 170px;
+
+        height:78px;
+
+        gap:20px;
+
+    }
+
+    .logo{
+
+        width:96px;
+
+        height:30px;
+
+    }
+
+    .logo img{
+
+        width:96px;
+
+    }
+
+    .header nav{
+
+        display:flex;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+    .header nav a{
+
+        font-size:.90rem;
+
+    }
+
+    .header .button{
+
+        width:170px;
+
+        height:46px;
+
+        font-size:.85rem;
+
+    }
 
 }
 
-.logo img{
+/*==========================================================
+IPAD PORTRAIT
+==========================================================*/
 
-width:95px;
+@media(max-width:900px){
+
+    .header .container{
+
+        grid-template-columns:90px 1fr 145px;
+
+        gap:12px;
+
+    }
+
+    .logo{
+
+        width:82px;
+
+    }
+
+    .logo img{
+
+        width:82px;
+
+    }
+
+    .header nav{
+
+        gap:14px;
+
+    }
+
+    .header nav a{
+
+        font-size:.82rem;
+
+    }
+
+    .header .button{
+
+        width:145px;
+
+        height:42px;
+
+        font-size:.78rem;
+
+    }
 
 }
-
-.header nav{
-
-display:flex;
-
-gap:24px;
-
-}
-
-.header nav a{
-
-font-size:.92rem;
-
-}
-
-.header .button{
-
-display:flex;
-
-width:170px;
-
-height:46px;
-
-font-size:.85rem;
-
-}
-
-}
-
 /*==========================================================
 MOBILE
 ==========================================================*/
@@ -309,15 +370,27 @@ MOBILE
 
 .header .container{
 
+grid-template-columns:1fr auto;
+
 height:72px;
 
-width:min(92%,1380px);
+}
+
+.header nav{
+
+display:none;
+
+}
+
+.header .button{
+
+display:none;
 
 }
 
 .logo img{
 
-width:96px;
+width:92px;
 
 }
 
@@ -365,5 +438,20 @@ HEADER STATES
     background:#2563EB;
 
     color:#FFFFFF;
+
+}
+/*==========================================================
+ACTIVE MENU
+==========================================================*/
+
+.header nav a.active{
+
+    color:#2563EB;
+
+}
+
+.header nav a.active::after{
+
+    width:100%;
 
 }
