@@ -41,6 +41,15 @@ HEADER
 
 }
 
+.header.scrolled{
+
+    background:#FFFFFF;
+
+    box-shadow:
+
+        0 10px 35px rgba(0,0,0,.08);
+
+}
 .header .container{
 
     position:relative;
@@ -102,7 +111,17 @@ NAVIGATION
     position:relative;
 
     color:#FFFFFF;
+.header.scrolled nav a{
 
+    color:#07182E;
+
+}
+
+.header.scrolled nav a:hover{
+
+    color:#2563EB;
+
+}
     font-size:1rem;
 
     font-weight:500;
@@ -170,7 +189,13 @@ CTA
     font-weight:600;
 
 }
+.header.scrolled .button{
 
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+}
 .header .button:hover{
 
     background:#3D7EF5;
