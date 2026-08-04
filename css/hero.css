@@ -1,8 +1,11 @@
 /*==========================================================
-HERO V4
+HERO
+BSGA CONSULTING V4
 ==========================================================*/
 
 .hero{
+
+    position:relative;
 
     display:grid;
 
@@ -10,39 +13,41 @@ HERO V4
 
     min-height:100vh;
 
+    background:#07182E;
+
     overflow:hidden;
 
 }
 
-/*========================
-LEFT
-========================*/
+/*==========================================================
+LEFT PANEL
+==========================================================*/
 
 .hero-left{
 
-    background:
-
-        linear-gradient(
-
-            90deg,
-
-            #07182E 0%,
-
-            #07182E 78%,
-
-            rgba(7,24,46,.92) 90%,
-
-            rgba(7,24,46,.75) 100%
-
-        );
+    position:relative;
 
     display:flex;
 
     justify-content:flex-end;
 
-    position:relative;
+    background:
 
-    z-index:2;
+    linear-gradient(
+
+        90deg,
+
+        #07182E 0%,
+
+        #07182E 72%,
+
+        rgba(7,24,46,.92) 88%,
+
+        rgba(7,24,46,.75) 100%
+
+    );
+
+    z-index:5;
 
 }
 
@@ -50,140 +55,195 @@ LEFT
 
     width:100%;
 
-    max-width:560px;
+    max-width:620px;
 
-    margin:0 auto;
+    padding:
 
-    padding:150px 40px 40px;
+        170px
+
+        60px
+
+        70px
+
+        60px;
 
 }
+
+/*==========================================================
+KICKER
+==========================================================*/
+
 .hero-kicker{
 
-    display:block;
+    display:inline-block;
 
-    color:#3F8CFF;
+    margin-bottom:34px;
 
-    font-size:.9rem;
+    color:#57A7FF;
 
-    letter-spacing:.22em;
+    font-size:.85rem;
+
+    letter-spacing:.25em;
 
     font-weight:700;
 
-    margin-bottom:38px;
+    text-transform:uppercase;
 
 }
 
+/*==========================================================
+TITLE
+==========================================================*/
+
 .hero h1{
 
-    color:white;
+    color:#FFFFFF;
 
-    font-size:clamp(3.5rem,5vw,4.8rem);
+    font-size:clamp(3.8rem,5vw,5.3rem);
 
     line-height:.92;
 
-    letter-spacing:-.06em;
-
-    margin-bottom:42px;
+    letter-spacing:-.055em;
 
     font-weight:800;
+
+    margin-bottom:34px;
 
 }
 
 .hero h1 span{
 
+    display:block;
+
     color:#2F80ED;
 
 }
 
+/*==========================================================
+TEXT
+==========================================================*/
+
 .hero p{
-
-    color:rgba(255,255,255,.80);
-
-    font-size:1.32rem;
-
-    line-height:1.75;
-
-    margin-bottom:50px;
 
     max-width:500px;
 
+    color:rgba(255,255,255,.78);
+
+    font-size:1.15rem;
+
+    line-height:1.9;
+
+    margin-bottom:46px;
+
 }
 
-/*========================
+/*==========================================================
 BUTTONS
-========================*/
+==========================================================*/
 
 .hero-buttons{
 
     display:flex;
 
-    gap:24px;
+    gap:20px;
 
-    margin-bottom:58px;
+    flex-wrap:wrap;
+
+    margin-bottom:55px;
 
 }
 
 .hero .button{
 
-    width:250px;
+    min-width:220px;
 
-    height:64px;
+    height:58px;
+
+    padding:0;
+
+    background:#2563EB;
 
     border-radius:999px;
 
-    background:#2F80ED;
+    box-shadow:
+
+        0 18px 40px rgba(37,99,235,.35);
+
+}
+
+.hero .button:hover{
+
+    background:#3A86FF;
 
 }
 
 .hero .button-secondary{
 
-    width:330px;
+    min-width:280px;
 
-    height:64px;
+    height:58px;
+
+    padding:0;
 
     border-radius:999px;
 
-    background:transparent;
+    border:1px solid rgba(255,255,255,.20);
 
-    border:1px solid rgba(255,255,255,.28);
+    background:transparent;
 
     color:white;
 
 }
 
-/*========================
-CARD
-========================*/
+.hero .button-secondary:hover{
+
+    background:white;
+
+    color:#07182E;
+
+}
+
+/*==========================================================
+EXECUTIVE CARD
+==========================================================*/
 
 .executive-card{
 
     width:520px;
 
-    padding:34px;
+    padding:30px;
 
     border-radius:24px;
 
-    background:rgba(255,255,255,.08);
+    background:
 
-    backdrop-filter:blur(18px);
+        rgba(255,255,255,.08);
 
-    border:1px solid rgba(255,255,255,.10);
+    backdrop-filter:
 
-    box-shadow:0 30px 80px rgba(0,0,0,.25);
+        blur(18px);
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 30px 70px rgba(0,0,0,.25);
 
 }
 
 .card-title{
 
-    color:#4EA1FF;
+    color:#57A7FF;
 
-    font-size:.85rem;
+    font-size:.82rem;
 
     letter-spacing:.22em;
 
-    margin-bottom:30px;
-
     font-weight:700;
+
+    margin-bottom:24px;
 
 }
 
@@ -193,19 +253,27 @@ CARD
 
     justify-content:space-between;
 
+    align-items:center;
+
+    margin-top:16px;
+
+    margin-bottom:10px;
+
     color:white;
 
-    margin-top:18px;
-
-    margin-bottom:12px;
+    font-size:.96rem;
 
 }
 
 .bar{
 
+    width:100%;
+
     height:7px;
 
-    background:rgba(255,255,255,.12);
+    background:
+
+        rgba(255,255,255,.10);
 
     border-radius:999px;
 
@@ -219,31 +287,73 @@ CARD
 
     border-radius:999px;
 
-    background:linear-gradient(
+    background:
 
-        90deg,
+        linear-gradient(
 
-        #2F80ED,
+            90deg,
 
-        #5EA8FF
+            #2F80ED,
 
-    );
+            #6AB4FF
+
+        );
 
 }
 
-.fill-92{width:92%;}
-.fill-95{width:95%;}
-.fill-81{width:81%;}
+.fill-92{
 
-/*========================
-RIGHT
-========================*/
+    width:92%;
+
+}
+
+.fill-95{
+
+    width:95%;
+
+}
+
+.fill-81{
+
+    width:81%;
+
+}
+
+/*==========================================================
+RIGHT PANEL
+==========================================================*/
 
 .hero-right{
 
     position:relative;
 
     overflow:hidden;
+
+    min-height:100vh;
+
+}
+
+.hero-right::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        rgba(7,24,46,.12) 0%,
+
+        rgba(7,24,46,0) 18%
+
+    );
+
+    z-index:2;
 
 }
 
@@ -259,35 +369,274 @@ RIGHT
 
     display:block;
 
+    transform:scale(1.02);
+
+    transition:
+
+        transform .8s ease;
+
 }
-@media (max-width:1100px){
 
-    .hero{
+.hero:hover .hero-right img{
 
-        grid-template-columns:1fr;
+    transform:scale(1.05);
 
-        min-height:auto;
+}
 
-    }
+/*==========================================================
+DESKTOP LARGE
+==========================================================*/
 
-    .hero-right{
+@media(min-width:1700px){
 
-        display:none;
+.hero{
 
-    }
+grid-template-columns:40% 60%;
 
-    .hero-inner{
+}
 
-        max-width:700px;
+.hero-inner{
 
-        padding:140px 40px 80px;
+max-width:660px;
 
-    }
+padding-top:190px;
 
-    .executive-card{
+}
 
-        width:100%;
+.hero h1{
 
-    }
+font-size:5.8rem;
+
+}
+
+}
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media(max-width:1400px){
+
+.hero{
+
+grid-template-columns:46% 54%;
+
+}
+
+.hero-inner{
+
+padding:
+
+150px
+
+45px
+
+60px
+
+45px;
+
+}
+
+.hero h1{
+
+font-size:4.5rem;
+
+}
+
+.executive-card{
+
+width:100%;
+
+}
+
+}
+
+/*==========================================================
+TABLET LANDSCAPE
+==========================================================*/
+
+@media(max-width:1100px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-right{
+
+position:absolute;
+
+inset:0;
+
+z-index:0;
+
+}
+
+.hero-right::before{
+
+background:
+
+rgba(7,24,46,.62);
+
+}
+
+.hero-left{
+
+background:none;
+
+}
+
+.hero-inner{
+
+position:relative;
+
+z-index:10;
+
+max-width:760px;
+
+margin:auto;
+
+padding:
+
+150px
+
+40px
+
+90px;
+
+}
+
+.hero h1{
+
+font-size:4rem;
+
+}
+
+.hero p{
+
+max-width:620px;
+
+}
+
+.executive-card{
+
+width:100%;
+
+max-width:620px;
+
+}
+
+}
+
+/*==========================================================
+TABLET PORTRAIT
+==========================================================*/
+
+@media(max-width:900px){
+
+.hero{
+
+min-height:auto;
+
+}
+
+.hero-inner{
+
+padding-top:140px;
+
+}
+
+.hero h1{
+
+font-size:3.5rem;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.hero .button,
+
+.hero .button-secondary{
+
+width:100%;
+
+max-width:360px;
+
+}
+
+}
+
+/*==========================================================
+MOBILE
+==========================================================*/
+
+@media(max-width:600px){
+
+.hero-inner{
+
+padding:
+
+120px
+
+24px
+
+70px;
+
+}
+
+.hero h1{
+
+font-size:2.7rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.executive-card{
+
+padding:24px;
+
+}
+
+.metric{
+
+font-size:.9rem;
+
+}
+
+.card-title{
+
+font-size:.75rem;
+
+}
+
+.hero-buttons{
+
+gap:16px;
+
+}
+
+.hero .button,
+
+.hero .button-secondary{
+
+max-width:none;
+
+width:100%;
+
+height:56px;
+
+}
 
 }
