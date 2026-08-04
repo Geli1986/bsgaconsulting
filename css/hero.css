@@ -1,77 +1,37 @@
 /*==========================================================
 HERO
-BSGA CONSULTING V4
 ==========================================================*/
 
 .hero{
 
-    position:relative;
-
     display:grid;
-
-    grid-template-columns:minmax(520px,42%) 1fr;
+    grid-template-columns:42% 58%;
 
     min-height:100vh;
 
     background:#07182E;
 
-    overflow:hidden;
-
 }
-
-/*==========================================================
-LEFT PANEL
-==========================================================*/
 
 .hero-left{
 
-    position:relative;
-
     display:flex;
+
+    align-items:center;
 
     justify-content:flex-end;
 
-    background:
+    padding:0 70px;
 
-    linear-gradient(
-
-        90deg,
-
-        #07182E 0%,
-
-        #07182E 72%,
-
-        rgba(7,24,46,.92) 88%,
-
-        rgba(7,24,46,.75) 100%
-
-    );
-
-    z-index:5;
+    background:#07182E;
 
 }
 
-.hero-inner{
+.hero-content{
 
-    width:100%;
-
-    max-width:620px;
-
-    padding:
-
-        170px
-
-        60px
-
-        70px
-
-        60px;
+    max-width:560px;
 
 }
-
-/*==========================================================
-KICKER
-==========================================================*/
 
 .hero-kicker{
 
@@ -79,67 +39,41 @@ KICKER
 
     margin-bottom:34px;
 
-    color:#57A7FF;
+    color:#4F9DFF;
 
-    font-size:.85rem;
-
-    letter-spacing:.25em;
+    font-size:.9rem;
 
     font-weight:700;
 
-    text-transform:uppercase;
+    letter-spacing:.24em;
 
 }
 
-/*==========================================================
-TITLE
-==========================================================*/
-
 .hero h1{
 
-    color:#FFFFFF;
+    color:white;
 
-    font-size:clamp(3.8rem,5vw,5.3rem);
+    font-size:clamp(4rem,5vw,5.8rem);
 
-    line-height:.92;
+    line-height:.93;
 
-    letter-spacing:-.055em;
-
-    font-weight:800;
+    letter-spacing:-.05em;
 
     margin-bottom:34px;
 
 }
 
-.hero h1 span{
-
-    display:block;
-
-    color:#2F80ED;
-
-}
-
-/*==========================================================
-TEXT
-==========================================================*/
-
 .hero p{
-
-    max-width:500px;
 
     color:rgba(255,255,255,.78);
 
-    font-size:1.15rem;
+    font-size:1.18rem;
 
     line-height:1.9;
 
-    margin-bottom:46px;
+    margin-bottom:48px;
 
 }
-
-/*==========================================================
-BUTTONS
-==========================================================*/
 
 .hero-buttons{
 
@@ -149,8 +83,6 @@ BUTTONS
 
     flex-wrap:wrap;
 
-    margin-bottom:55px;
-
 }
 
 .hero .button{
@@ -159,201 +91,19 @@ BUTTONS
 
     height:58px;
 
-    padding:0;
-
-    background:#2563EB;
-
-    border-radius:999px;
-
-    box-shadow:
-
-        0 18px 40px rgba(37,99,235,.35);
-
-}
-
-.hero .button:hover{
-
-    background:#3A86FF;
-
 }
 
 .hero .button-secondary{
 
-    min-width:280px;
+    min-width:270px;
 
     height:58px;
 
-    padding:0;
-
-    border-radius:999px;
-
-    border:1px solid rgba(255,255,255,.20);
-
-    background:transparent;
-
-    color:white;
-
 }
-
-.hero .button-secondary:hover{
-
-    background:white;
-
-    color:#07182E;
-
-}
-
-/*==========================================================
-EXECUTIVE CARD
-==========================================================*/
-
-.executive-card{
-
-    width:520px;
-
-    padding:30px;
-
-    border-radius:24px;
-
-    background:
-
-        rgba(255,255,255,.08);
-
-    backdrop-filter:
-
-        blur(18px);
-
-    border:
-
-        1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-
-        0 30px 70px rgba(0,0,0,.25);
-
-}
-
-.card-title{
-
-    color:#57A7FF;
-
-    font-size:.82rem;
-
-    letter-spacing:.22em;
-
-    font-weight:700;
-
-    margin-bottom:24px;
-
-}
-
-.metric{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-top:16px;
-
-    margin-bottom:10px;
-
-    color:white;
-
-    font-size:.96rem;
-
-}
-
-.bar{
-
-    width:100%;
-
-    height:7px;
-
-    background:
-
-        rgba(255,255,255,.10);
-
-    border-radius:999px;
-
-    overflow:hidden;
-
-}
-
-.fill{
-
-    height:100%;
-
-    border-radius:999px;
-
-    background:
-
-        linear-gradient(
-
-            90deg,
-
-            #2F80ED,
-
-            #6AB4FF
-
-        );
-
-}
-
-.fill-92{
-
-    width:92%;
-
-}
-
-.fill-95{
-
-    width:95%;
-
-}
-
-.fill-81{
-
-    width:81%;
-
-}
-
-/*==========================================================
-RIGHT PANEL
-==========================================================*/
 
 .hero-right{
 
-    position:relative;
-
     overflow:hidden;
-
-    min-height:100vh;
-
-}
-
-.hero-right::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-    linear-gradient(
-
-        90deg,
-
-        rgba(7,24,46,.12) 0%,
-
-        rgba(7,24,46,0) 18%
-
-    );
-
-    z-index:2;
 
 }
 
@@ -365,49 +115,7 @@ RIGHT PANEL
 
     object-fit:cover;
 
-    object-position:35% center;
-
-    display:block;
-
-    transform:scale(1.02);
-
-    transition:
-
-        transform .8s ease;
-
-}
-
-.hero:hover .hero-right img{
-
-    transform:scale(1.05);
-
-}
-
-/*==========================================================
-DESKTOP LARGE
-==========================================================*/
-
-@media(min-width:1700px){
-
-.hero{
-
-grid-template-columns:40% 60%;
-
-}
-
-.hero-inner{
-
-max-width:660px;
-
-padding-top:190px;
-
-}
-
-.hero h1{
-
-font-size:5.8rem;
-
-}
+    object-position:center;
 
 }
 
@@ -415,47 +123,33 @@ font-size:5.8rem;
 LAPTOP
 ==========================================================*/
 
-@media(max-width:1400px){
+@media(max-width:1300px){
 
 .hero{
 
-grid-template-columns:46% 54%;
+grid-template-columns:45% 55%;
 
 }
 
-.hero-inner{
+.hero-left{
 
-padding:
-
-150px
-
-45px
-
-60px
-
-45px;
+padding:0 45px;
 
 }
 
 .hero h1{
 
-font-size:4.5rem;
-
-}
-
-.executive-card{
-
-width:100%;
+font-size:4.7rem;
 
 }
 
 }
 
 /*==========================================================
-TABLET LANDSCAPE
+TABLET
 ==========================================================*/
 
-@media(max-width:1100px){
+@media(max-width:992px){
 
 .hero{
 
@@ -465,109 +159,23 @@ grid-template-columns:1fr;
 
 .hero-right{
 
-position:absolute;
+height:500px;
 
-inset:0;
-
-z-index:0;
-
-}
-
-.hero-right::before{
-
-background:
-
-rgba(7,24,46,.62);
+order:-1;
 
 }
 
 .hero-left{
 
-background:none;
+padding:70px 35px;
+
+justify-content:center;
 
 }
 
-.hero-inner{
+.hero-content{
 
-position:relative;
-
-z-index:10;
-
-max-width:760px;
-
-margin:auto;
-
-padding:
-
-150px
-
-40px
-
-90px;
-
-}
-
-.hero h1{
-
-font-size:4rem;
-
-}
-
-.hero p{
-
-max-width:620px;
-
-}
-
-.executive-card{
-
-width:100%;
-
-max-width:620px;
-
-}
-
-}
-
-/*==========================================================
-TABLET PORTRAIT
-==========================================================*/
-
-@media(max-width:900px){
-
-.hero{
-
-min-height:auto;
-
-}
-
-.hero-inner{
-
-padding-top:140px;
-
-}
-
-.hero h1{
-
-font-size:3.5rem;
-
-}
-
-.hero-buttons{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-}
-
-.hero .button,
-
-.hero .button-secondary{
-
-width:100%;
-
-max-width:360px;
+max-width:700px;
 
 }
 
@@ -577,53 +185,29 @@ max-width:360px;
 MOBILE
 ==========================================================*/
 
-@media(max-width:600px){
+@media(max-width:768px){
 
-.hero-inner{
+.hero-left{
 
-padding:
+padding:55px 24px;
 
-120px
+}
 
-24px
+.hero-right{
 
-70px;
+height:320px;
 
 }
 
 .hero h1{
 
-font-size:2.7rem;
-
-}
-
-.hero p{
-
-font-size:1rem;
-
-}
-
-.executive-card{
-
-padding:24px;
-
-}
-
-.metric{
-
-font-size:.9rem;
-
-}
-
-.card-title{
-
-font-size:.75rem;
+font-size:3rem;
 
 }
 
 .hero-buttons{
 
-gap:16px;
+flex-direction:column;
 
 }
 
@@ -631,11 +215,7 @@ gap:16px;
 
 .hero .button-secondary{
 
-max-width:none;
-
 width:100%;
-
-height:56px;
 
 }
 
