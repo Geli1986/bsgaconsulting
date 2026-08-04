@@ -7,6 +7,22 @@ HEADER
     position:fixed;
 
     top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    transition:
+
+        background .35s ease,
+
+        box-shadow .35s ease,
+
+        backdrop-filter .35s ease;
+
+}
     left:0;
 
     width:100%;
@@ -17,21 +33,9 @@ HEADER
 
 }
 
-.header::before{
+.header.scrolled::before{
 
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(7,24,46,.15);
-
-    backdrop-filter:blur(18px);
-
-    opacity:0;
-
-    transition:.35s;
+    opacity:1;
 
 }
 
@@ -82,13 +86,58 @@ LOGO
 
 }
 
-.logo img{
+.logo{
+
+    position:relative;
 
     width:118px;
 
-    height:auto;
+    height:34px;
 
-    display:block;
+}
+
+.logo img{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:118px;
+
+    transition:
+
+        opacity .30s ease,
+
+        transform .30s ease;
+
+}
+
+.logo-white{
+
+    opacity:1;
+
+}
+
+.logo-dark{
+
+    opacity:0;
+
+}
+
+.header.scrolled .logo-white{
+
+    opacity:0;
+
+    transform:translateY(-3px);
+
+}
+
+.header.scrolled .logo-dark{
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }
 
@@ -249,5 +298,50 @@ width:min(92%,1380px);
 width:96px;
 
 }
+
+}
+/*==========================================================
+HEADER STATES
+==========================================================*/
+
+.header{
+
+    background:transparent;
+
+}
+
+.header.scrolled{
+
+    background:
+
+        rgba(255,255,255,.96);
+
+    backdrop-filter:
+
+        blur(18px);
+
+    box-shadow:
+
+        0 10px 35px rgba(0,0,0,.08);
+
+}
+
+.header.scrolled nav a{
+
+    color:#07182E;
+
+}
+
+.header.scrolled nav a:hover{
+
+    color:#2563EB;
+
+}
+
+.header.scrolled .button{
+
+    background:#2563EB;
+
+    color:#FFFFFF;
 
 }
