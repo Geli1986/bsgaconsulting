@@ -11,26 +11,29 @@ HEADER
 
     width:100%;
 
-    z-index:9999;
+    z-index:1000;
+
+    background:transparent;
 
     transition:
         background .35s ease,
         backdrop-filter .35s ease,
-        box-shadow .35s ease;
+        box-shadow .35s ease,
+        height .35s ease;
 
 }
 
 .header .container{
 
-    width:min(94%,1380px);
+    width:min(96%,1500px);
 
     margin:auto;
 
-    height:92px;
+    height:96px;
 
     display:grid;
 
-    grid-template-columns:220px 1fr 260px;
+    grid-template-columns:260px 1fr 280px;
 
     align-items:center;
 
@@ -50,7 +53,7 @@ LOGO
 
 .logo img{
 
-    width:185px;
+    width:210px;
 
     height:auto;
 
@@ -68,7 +71,9 @@ MENU
 
     justify-content:center;
 
-    gap:46px;
+    align-items:center;
+
+    gap:52px;
 
 }
 
@@ -83,12 +88,6 @@ MENU
     font-weight:500;
 
     transition:.3s;
-
-}
-
-.header nav a:hover{
-
-    color:#5DAEFF;
 
 }
 
@@ -113,47 +112,52 @@ MENU
 }
 
 .header nav a:hover::after,
-
 .header nav a.active::after{
 
     width:100%;
 
 }
 
+.header nav a:hover{
+
+    color:#5DAEFF;
+
+}
+
 /*==========================================================
-BUTTON
+CTA
 ==========================================================*/
 
 .header .button{
 
     justify-self:end;
 
-    width:225px;
+    width:250px;
 
-    height:52px;
-
-    padding:0;
-
-    background:#2563EB;
+    height:58px;
 
     border-radius:999px;
 
-    color:white;
+    background:#2563EB;
+
+    color:#FFF;
 
     font-size:.95rem;
 
     font-weight:600;
 
+    padding:0;
+
 }
 
 .header .button:hover{
 
-    background:#3A86FF;
+    background:#3478F6;
 
 }
 
 /*==========================================================
-SCROLLED
+SCROLL
 ==========================================================*/
 
 .header.scrolled{
@@ -162,7 +166,7 @@ SCROLLED
 
     backdrop-filter:blur(18px);
 
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
 
 }
 
@@ -178,15 +182,9 @@ SCROLLED
 
 }
 
-.header.scrolled .button{
-
-    background:#2563EB;
-
-}
-
 .header.scrolled .container{
 
-    height:76px;
+    height:82px;
 
 }
 
@@ -198,37 +196,37 @@ TABLET
 
 .header .container{
 
-grid-template-columns:150px 1fr 170px;
+grid-template-columns:180px 1fr 200px;
 
-height:82px;
+height:84px;
 
 }
 
 .logo img{
 
-width:135px;
+width:165px;
 
 }
 
 .header nav{
 
-gap:22px;
+gap:26px;
 
 }
 
 .header nav a{
 
-font-size:.9rem;
+font-size:.92rem;
 
 }
 
 .header .button{
 
-width:165px;
+width:190px;
 
-height:44px;
+height:48px;
 
-font-size:.82rem;
+font-size:.85rem;
 
 }
 
@@ -242,9 +240,17 @@ MOBILE
 
 .header .container{
 
-grid-template-columns:1fr;
+display:flex;
 
-height:76px;
+justify-content:space-between;
+
+height:74px;
+
+}
+
+.logo img{
+
+width:170px;
 
 }
 
@@ -257,12 +263,6 @@ display:none;
 .header .button{
 
 display:none;
-
-}
-
-.logo img{
-
-width:145px;
 
 }
 
