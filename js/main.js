@@ -1,12 +1,12 @@
 /*==========================================================
-HEADER SCROLL
+HEADER
 ==========================================================*/
 
 const header = document.querySelector(".header");
 
-window.addEventListener("scroll", () => {
+function updateHeader() {
 
-    if (window.scrollY > 80) {
+    if (window.scrollY > 40) {
 
         header.classList.add("scrolled");
 
@@ -16,7 +16,12 @@ window.addEventListener("scroll", () => {
 
     }
 
-});
+}
+
+updateHeader();
+
+window.addEventListener("scroll", updateHeader);
+
 
 /*==========================================================
 FADE ANIMATION
@@ -41,5 +46,24 @@ const observer = new IntersectionObserver((entries)=>{
 document.querySelectorAll(".fade").forEach(item=>{
 
     observer.observe(item);
+
+});
+
+
+/*==========================================================
+ACTIVE MENU
+==========================================================*/
+
+const links = document.querySelectorAll("nav a");
+
+links.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        links.forEach(item=>item.classList.remove("active"));
+
+        link.classList.add("active");
+
+    });
 
 });
