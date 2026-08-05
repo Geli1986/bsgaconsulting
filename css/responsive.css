@@ -1,148 +1,310 @@
 /*==========================================================
 RESPONSIVE
+BSGA CONSULTING
 ==========================================================*/
 
-@media(max-width:1200px){
+
+/*==========================================================
+LARGE DESKTOP
+==========================================================*/
+
+@media (max-width:1400px){
 
 .container{
 
-width:min(94%,1240px);
+    width:min(95%,1400px);
 
 }
 
-.hero-grid{
+.hero-wrapper{
 
-grid-template-columns:1fr;
-
-}
-
-.hero-left{
-
-max-width:100%;
+    grid-template-columns:48% 52%;
 
 }
 
-.executive-card{
+.hero h1{
 
-width:100%;
-
-max-width:520px;
+    font-size:5.4rem;
 
 }
 
 }
 
-@media(max-width:992px){
+
+/*==========================================================
+LAPTOP
+==========================================================*/
+
+@media (max-width:1200px){
+
+.container{
+
+    width:min(94%,1200px);
+
+}
+
+.header .container{
+
+    grid-template-columns:190px 1fr 210px;
+
+}
+
+.logo img{
+
+    width:170px;
+
+}
 
 .header nav{
 
-display:none;
+    gap:30px;
 
 }
 
 .header .button{
 
-display:none;
+    width:190px;
+
+    height:50px;
+
+    font-size:.90rem;
 
 }
 
-section{
+.hero-wrapper{
 
-padding:100px 0;
+    grid-template-columns:1fr;
 
-}
-
-.hero{
-
-min-height:auto;
-
-padding:150px 0 100px;
+    gap:60px;
 
 }
 
-.hero-left h1{
+.hero-copy{
 
-font-size:3.7rem;
+    max-width:720px;
+
+    margin:auto;
+
+}
+
+.hero-image{
+
+    height:600px;
 
 }
 
 .services-grid{
 
-grid-template-columns:1fr;
-
-}
-
-.why-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.approach-layout{
-
-grid-template-columns:1fr;
-
-}
-
-.footer-grid{
-
-grid-template-columns:1fr;
+    grid-template-columns:repeat(2,1fr);
 
 }
 
 }
 
-@media(max-width:768px){
+
+/*==========================================================
+TABLET
+==========================================================*/
+
+@media (max-width:992px){
+
+section{
+
+    padding:90px 0;
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.header nav{
+
+    display:none;
+
+}
+
+.header .button{
+
+    display:none;
+
+}
+
+.logo img{
+
+    width:175px;
+
+}
+
+.hero{
+
+    min-height:auto;
+
+    padding-top:110px;
+
+}
+
+.hero-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.hero-copy{
+
+    text-align:center;
+
+    max-width:720px;
+
+    margin:auto;
+
+}
+
+.hero p{
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
 
 .hero-buttons{
 
-flex-direction:column;
+    justify-content:center;
 
 }
 
-.hero-buttons a{
+.hero-image{
 
-width:100%;
-
-}
-
-.hero-left h1{
-
-font-size:3rem;
+    height:500px;
 
 }
 
-.executive-card{
+.services-grid,
 
-padding:28px;
+.why-grid,
+
+.approach-layout,
+
+.footer-grid{
+
+    grid-template-columns:1fr;
 
 }
 
 .section-title{
 
-margin-bottom:50px;
+    margin-bottom:60px;
 
 }
 
 }
 
-@media(max-width:576px){
 
-.hero-left h1{
+/*==========================================================
+MOBILE
+==========================================================*/
 
-font-size:2.5rem;
+@media (max-width:768px){
+
+.hero{
+
+    padding-top:90px;
 
 }
 
-.hero-left p{
+.hero-copy{
 
-font-size:1.05rem;
+    text-align:left;
+
+}
+
+.hero h1{
+
+    font-size:3.3rem;
+
+}
+
+.hero p{
+
+    font-size:1rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-buttons .button,
+
+.hero-buttons .button-secondary{
+
+    width:100%;
+
+}
+
+.hero-image{
+
+    height:360px;
+
+}
+
+.section-title h2{
+
+    font-size:2.4rem;
+
+}
+
+}
+
+
+/*==========================================================
+SMALL MOBILE
+==========================================================*/
+
+@media (max-width:480px){
+
+.container{
+
+    width:92%;
 
 }
 
 section{
 
-padding:80px 0;
+    padding:70px 0;
+
+}
+
+.hero h1{
+
+    font-size:2.7rem;
+
+}
+
+.hero-kicker{
+
+    font-size:.72rem;
+
+}
+
+.hero-image{
+
+    height:280px;
+
+}
+
+.logo img{
+
+    width:150px;
 
 }
 
