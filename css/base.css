@@ -149,15 +149,15 @@ TYPOGRAPHY
 
 h1{
 
-    font-family:"Cormorant Garamond",serif;
+    font-family:"Inter",sans-serif;
 
-    font-size:clamp(4.2rem,6vw,6.4rem);
+    font-size:clamp(4.6rem,6vw,6.2rem);
 
-    line-height:.92;
+    line-height:.90;
 
-    font-weight:600;
+    font-weight:800;
 
-    letter-spacing:-.04em;
+    letter-spacing:-0.06em;
 
 }
 
