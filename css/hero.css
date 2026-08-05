@@ -4,32 +4,45 @@ HERO
 
 .hero{
 
-    display:grid;
-    grid-template-columns:42% 58%;
-
-    min-height:100vh;
+    position:relative;
 
     background:#07182E;
 
-}
-
-.hero-left{
+    min-height:100vh;
 
     display:flex;
 
     align-items:center;
 
-    justify-content:flex-end;
-
-    padding:0 70px;
-
-    background:#07182E;
+    overflow:hidden;
 
 }
 
-.hero-content{
+.hero-wrapper{
+
+    width:min(94%,1380px);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:46% 54%;
+
+    align-items:center;
+
+    gap:0;
+
+}
+
+/*==========================================================
+LEFT
+==========================================================*/
+
+.hero-copy{
 
     max-width:560px;
+
+    padding-top:70px;
 
 }
 
@@ -37,15 +50,17 @@ HERO
 
     display:inline-block;
 
-    margin-bottom:34px;
+    margin-bottom:28px;
 
-    color:#4F9DFF;
+    color:#5DAEFF;
 
-    font-size:.9rem;
+    font-size:.84rem;
 
     font-weight:700;
 
-    letter-spacing:.24em;
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
 
 }
 
@@ -53,25 +68,35 @@ HERO
 
     color:white;
 
-    font-size:clamp(4rem,5vw,5.8rem);
+    font-size:clamp(4.4rem,5vw,5.9rem);
 
     line-height:.93;
 
-    letter-spacing:-.05em;
+    letter-spacing:-.055em;
+
+    font-weight:800;
 
     margin-bottom:34px;
 
 }
 
+.hero h1 span{
+
+    display:block;
+
+}
+
 .hero p{
 
-    color:rgba(255,255,255,.78);
+    max-width:500px;
 
-    font-size:1.18rem;
+    color:rgba(255,255,255,.80);
+
+    font-size:1.15rem;
 
     line-height:1.9;
 
-    margin-bottom:48px;
+    margin-bottom:46px;
 
 }
 
@@ -79,35 +104,30 @@ HERO
 
     display:flex;
 
-    gap:20px;
+    gap:18px;
 
     flex-wrap:wrap;
 
 }
+/*==========================================================
+RIGHT
+==========================================================*/
 
-.hero .button{
+.hero-image{
 
-    min-width:220px;
+    position:relative;
 
-    height:58px;
+    height:100vh;
 
-}
+    display:flex;
 
-.hero .button-secondary{
+    justify-content:flex-end;
 
-    min-width:270px;
-
-    height:58px;
-
-}
-
-.hero-right{
-
-    overflow:hidden;
+    align-items:stretch;
 
 }
 
-.hero-right img{
+.hero-image img{
 
     width:100%;
 
@@ -115,31 +135,83 @@ HERO
 
     object-fit:cover;
 
-    object-position:center;
+    object-position:center center;
+
+    display:block;
 
 }
 
 /*==========================================================
-LAPTOP
+BUTTONS
 ==========================================================*/
 
-@media(max-width:1300px){
+.hero .button{
 
-.hero{
+    min-width:210px;
 
-grid-template-columns:45% 55%;
+    height:56px;
+
+    padding:0 34px;
+
+    border-radius:999px;
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.30);
 
 }
 
-.hero-left{
+.hero .button:hover{
 
-padding:0 45px;
+    transform:translateY(-2px);
+
+}
+
+.hero .button-secondary{
+
+    min-width:250px;
+
+    height:56px;
+
+    padding:0 34px;
+
+    border:1px solid rgba(255,255,255,.22);
+
+    border-radius:999px;
+
+    background:transparent;
+
+    color:#FFFFFF;
+
+    font-weight:600;
+
+}
+
+.hero .button-secondary:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+/*==========================================================
+DESKTOP
+==========================================================*/
+
+@media(max-width:1400px){
+
+.hero-wrapper{
+
+grid-template-columns:48% 52%;
 
 }
 
 .hero h1{
 
-font-size:4.7rem;
+font-size:5rem;
 
 }
 
@@ -149,33 +221,35 @@ font-size:4.7rem;
 TABLET
 ==========================================================*/
 
-@media(max-width:992px){
+@media(max-width:1024px){
 
 .hero{
+
+min-height:auto;
+
+padding:120px 0 0;
+
+}
+
+.hero-wrapper{
 
 grid-template-columns:1fr;
 
 }
 
-.hero-right{
-
-height:500px;
-
-order:-1;
-
-}
-
-.hero-left{
-
-padding:70px 35px;
-
-justify-content:center;
-
-}
-
-.hero-content{
+.hero-copy{
 
 max-width:700px;
+
+margin:auto;
+
+padding:0 20px 70px;
+
+}
+
+.hero-image{
+
+height:520px;
 
 }
 
@@ -187,21 +261,27 @@ MOBILE
 
 @media(max-width:768px){
 
-.hero-left{
+.hero{
 
-padding:55px 24px;
+padding-top:100px;
 
 }
 
-.hero-right{
+.hero-copy{
 
-height:320px;
+padding:0 20px 50px;
 
 }
 
 .hero h1{
 
-font-size:3rem;
+font-size:3.2rem;
+
+}
+
+.hero p{
+
+font-size:1.02rem;
 
 }
 
@@ -216,6 +296,14 @@ flex-direction:column;
 .hero .button-secondary{
 
 width:100%;
+
+min-width:unset;
+
+}
+
+.hero-image{
+
+height:340px;
 
 }
 
