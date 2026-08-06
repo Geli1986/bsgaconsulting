@@ -6,11 +6,11 @@ HERO
 
     position:relative;
 
-    height:calc(100vh - 92px);
+    height:100vh;
 
     min-height:860px;
 
-    margin-top:92px;
+    margin-top:0;
 
     overflow:hidden;
 
@@ -40,7 +40,7 @@ HERO
 
     background-size:cover;
 
-    background-position:right center;
+    background-position:82% center;
 
     background-repeat:no-repeat;
 
@@ -58,7 +58,7 @@ HERO
 
     max-width:650px;
 
-    margin-top:-30px;
+    margin-top:-90px;
 
 }
 
