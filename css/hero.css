@@ -1,77 +1,54 @@
 /*==========================================================
 HERO
-BSGA CONSULTING
 ==========================================================*/
 
 .hero{
 
     position:relative;
 
-    height:100vh;
+    height:calc(100vh - 92px);
 
-    min-height:900px;
+    min-height:860px;
+
+    margin-top:92px;
+
+    overflow:hidden;
 
     display:flex;
 
     align-items:center;
 
-    overflow:hidden;
-
-    background-image:
+    background:
 
     linear-gradient(
 
         90deg,
 
-        rgba(7,24,46,.98) 0%,
+        rgba(0,0,0,.88) 0%,
 
-        rgba(7,24,46,.96) 22%,
+        rgba(6,18,38,.82) 26%,
 
-        rgba(7,24,46,.86) 38%,
+        rgba(8,24,46,.58) 46%,
 
-        rgba(7,24,46,.48) 58%,
+        rgba(8,24,46,.18) 64%,
 
-        rgba(7,24,46,.10) 76%,
-
-        rgba(7,24,46,0) 100%
+        rgba(8,24,46,0) 100%
 
     ),
 
-    url("../images/hero/hero-consulting.webp");
+    url("../images/hero-consulting.webp");
 
     background-size:cover;
 
-    background-position:72% center;
+    background-position:right center;
 
     background-repeat:no-repeat;
 
 }
 
-.hero-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:linear-gradient(
-
-        to bottom,
-
-        rgba(7,24,46,.10),
-
-        rgba(7,24,46,.18)
-
-    );
-
-}
-
 .hero-container{
 
-    position:relative;
-
-    z-index:2;
-
-    width:min(95%,1600px);
+    width:min(94%,1600px);
 
     margin:auto;
 
@@ -79,9 +56,9 @@ BSGA CONSULTING
 
 .hero-content{
 
-    width:640px;
+    max-width:650px;
 
-    margin-top:-40px;
+    margin-top:-30px;
 
 }
 
@@ -89,15 +66,15 @@ BSGA CONSULTING
 
     display:block;
 
-    margin-bottom:24px;
+    margin-bottom:28px;
 
-    color:#61AEFF;
+    color:#6EB5FF;
 
-    font-size:.82rem;
+    font-size:.80rem;
 
     font-weight:700;
 
-    letter-spacing:.28em;
+    letter-spacing:.30em;
 
     text-transform:uppercase;
 
@@ -105,33 +82,33 @@ BSGA CONSULTING
 
 .hero h1{
 
-    color:white;
+    color:#FFFFFF;
 
     font-family:"Inter",sans-serif;
 
-    font-size:clamp(5rem,7vw,7rem);
+    font-size:clamp(5.2rem,7vw,7rem);
 
     font-weight:800;
 
-    line-height:.90;
+    line-height:.88;
 
     letter-spacing:-.07em;
 
-    margin-bottom:34px;
+    margin-bottom:32px;
 
 }
 
 .hero p{
 
-    width:560px;
+    max-width:540px;
 
-    color:rgba(255,255,255,.84);
+    color:rgba(255,255,255,.82);
 
     font-size:1.08rem;
 
-    line-height:1.95;
+    line-height:1.9;
 
-    margin-bottom:46px;
+    margin-bottom:44px;
 
 }
 
@@ -145,7 +122,7 @@ BSGA CONSULTING
 
 .hero .button{
 
-    width:210px;
+    width:215px;
 
     height:58px;
 
@@ -153,7 +130,7 @@ BSGA CONSULTING
 
 .hero .button-secondary{
 
-    width:260px;
+    width:255px;
 
     height:58px;
 
@@ -162,26 +139,20 @@ BSGA CONSULTING
 }
 
 /*==========================================================
-DESKTOP
+LAPTOP
 ==========================================================*/
 
 @media(max-width:1400px){
 
 .hero{
 
-background-position:68% center;
-
-}
-
-.hero-content{
-
-width:560px;
+background-position:70% center;
 
 }
 
 .hero h1{
 
-font-size:5.8rem;
+font-size:6rem;
 
 }
 
@@ -199,33 +170,31 @@ height:auto;
 
 min-height:760px;
 
-background-position:76% center;
+margin-top:82px;
 
-padding-top:120px;
+padding:90px 0;
 
-padding-bottom:120px;
+background-position:75% center;
 
 }
 
 .hero-content{
 
-width:100%;
+margin-top:0;
 
 max-width:620px;
-
-margin-top:0;
 
 }
 
 .hero h1{
 
-font-size:4.3rem;
+font-size:4.4rem;
 
 }
 
 .hero p{
 
-width:100%;
+max-width:100%;
 
 }
 
@@ -239,7 +208,11 @@ MOBILE
 
 .hero{
 
+margin-top:74px;
+
 min-height:680px;
+
+padding:80px 0;
 
 background-position:78% center;
 
@@ -253,7 +226,7 @@ max-width:100%;
 
 .hero h1{
 
-font-size:3.3rem;
+font-size:3.2rem;
 
 }
 
