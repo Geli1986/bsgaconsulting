@@ -29,7 +29,7 @@ HEADER
 
     margin:auto;
 
-    height:96px;
+    height:88px;
 
     display:grid;
 
@@ -53,11 +53,11 @@ LOGO
 
 .logo img{
 
-    width:210px;
+width:295px;
 
-    height:auto;
+height:auto;
 
-    display:block;
+object-fit:contain;
 
 }
 
@@ -184,7 +184,7 @@ SCROLL
 
 .header.scrolled .container{
 
-    height:82px;
+height:76px;
 
 }
 
@@ -196,7 +196,7 @@ TABLET
 
 .header .container{
 
-grid-template-columns:180px 1fr 200px;
+grid-template-columns:320px 1fr 280px;
 
 height:84px;
 
