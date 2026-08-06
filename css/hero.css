@@ -1,5 +1,6 @@
 /*==========================================================
 HERO
+BSGA CONSULTING
 ==========================================================*/
 
 .hero{
@@ -18,27 +19,29 @@ HERO
 
     background-image:
 
-linear-gradient(
-90deg,
+    linear-gradient(
 
-rgba(7,24,46,.98) 0%,
+        90deg,
 
-rgba(7,24,46,.95) 26%,
+        rgba(7,24,46,.98) 0%,
 
-rgba(7,24,46,.80) 46%,
+        rgba(7,24,46,.96) 22%,
 
-rgba(7,24,46,.38) 63%,
+        rgba(7,24,46,.86) 38%,
 
-rgba(7,24,46,.08) 78%,
+        rgba(7,24,46,.48) 58%,
 
-rgba(7,24,46,0) 100%
-),
+        rgba(7,24,46,.10) 76%,
 
-url("../images/hero/hero-consulting.webp");
+        rgba(7,24,46,0) 100%
+
+    ),
+
+    url("../images/hero-consulting.webp");
 
     background-size:cover;
 
-    background-position:center center;
+    background-position:72% center;
 
     background-repeat:no-repeat;
 
@@ -54,23 +57,21 @@ url("../images/hero/hero-consulting.webp");
 
         to bottom,
 
-        rgba(7,24,46,.15),
+        rgba(7,24,46,.10),
 
-        rgba(7,24,46,.15)
+        rgba(7,24,46,.18)
 
     );
 
-    z-index:1;
-
 }
 
-..hero-container{
+.hero-container{
 
     position:relative;
 
     z-index:2;
 
-    width:min(96%,1640px);
+    width:min(95%,1600px);
 
     margin:auto;
 
@@ -78,9 +79,9 @@ url("../images/hero/hero-consulting.webp");
 
 .hero-content{
 
-    max-width:620px;
-margin-top:-50px;
-    color:white;
+    width:640px;
+
+    margin-top:-40px;
 
 }
 
@@ -90,15 +91,15 @@ margin-top:-50px;
 
     margin-bottom:24px;
 
+    color:#61AEFF;
+
     font-size:.82rem;
 
     font-weight:700;
 
-    letter-spacing:.30em;
+    letter-spacing:.28em;
 
     text-transform:uppercase;
-
-    color:#4D9CFF;
 
 }
 
@@ -106,25 +107,29 @@ margin-top:-50px;
 
     color:white;
 
-    margin-bottom:30px;
+    font-family:"Inter",sans-serif;
 
-    font-size:clamp(5.4rem,8vw,7.4rem);
+    font-size:clamp(5rem,7vw,7rem);
 
-line-height:.88;
+    font-weight:800;
 
-letter-spacing:-0.07em;
+    line-height:.90;
 
-max-width:760px;
+    letter-spacing:-.07em;
+
+    margin-bottom:34px;
+
+}
 
 .hero p{
 
-    max-width:560px;
+    width:560px;
 
-    font-size:1.15rem;
+    color:rgba(255,255,255,.84);
 
-    line-height:1.9;
+    font-size:1.08rem;
 
-    color:rgba(255,255,255,.82);
+    line-height:1.95;
 
     margin-bottom:46px;
 
@@ -134,79 +139,135 @@ max-width:760px;
 
     display:flex;
 
-    gap:22px;
-
-    flex-wrap:wrap;
+    gap:20px;
 
 }
 
+.hero .button{
+
+    width:210px;
+
+    height:58px;
+
+}
+
+.hero .button-secondary{
+
+    width:260px;
+
+    height:58px;
+
+    border:1px solid rgba(255,255,255,.22);
+
+}
+
+/*==========================================================
+DESKTOP
+==========================================================*/
+
+@media(max-width:1400px){
+
+.hero{
+
+background-position:68% center;
+
+}
+
+.hero-content{
+
+width:560px;
+
+}
+
+.hero h1{
+
+font-size:5.8rem;
+
+}
+
+}
 
 /*==========================================================
 TABLET
 ==========================================================*/
 
-@media (max-width:992px){
+@media(max-width:992px){
 
 .hero{
 
-    min-height:760px;
+height:auto;
 
-    background-position:68% center;
+min-height:760px;
+
+background-position:76% center;
+
+padding-top:120px;
+
+padding-bottom:120px;
 
 }
 
 .hero-content{
 
-    max-width:620px;
+width:100%;
+
+max-width:620px;
+
+margin-top:0;
 
 }
 
 .hero h1{
 
-    font-size:4.2rem;
+font-size:4.3rem;
+
+}
+
+.hero p{
+
+width:100%;
 
 }
 
 }
-
 
 /*==========================================================
 MOBILE
 ==========================================================*/
 
-@media (max-width:768px){
+@media(max-width:768px){
 
 .hero{
 
-    min-height:680px;
+min-height:680px;
 
-    background-position:72% center;
+background-position:78% center;
 
 }
 
 .hero-content{
 
-    max-width:100%;
+max-width:100%;
 
 }
 
 .hero h1{
 
-    font-size:3.2rem;
+font-size:3.3rem;
 
 }
 
 .hero-buttons{
 
-    flex-direction:column;
+flex-direction:column;
 
 }
 
-.hero-buttons .button,
+.hero .button,
 
-.hero-buttons .button-secondary{
+.hero .button-secondary{
 
-    width:100%;
+width:100%;
 
 }
 
