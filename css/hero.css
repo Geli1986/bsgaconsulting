@@ -64,13 +64,13 @@ url("../images/hero/hero-consulting.webp");
 
 }
 
-.hero-container{
+..hero-container{
 
     position:relative;
 
     z-index:2;
 
-    width:min(92%,1500px);
+    width:min(96%,1640px);
 
     margin:auto;
 
