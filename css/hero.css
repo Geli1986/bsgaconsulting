@@ -6,7 +6,9 @@ HERO
 
     position:relative;
 
-    min-height:100vh;
+    height:100vh;
+
+    min-height:900px;
 
     display:flex;
 
@@ -16,16 +18,23 @@ HERO
 
     background-image:
 
-        linear-gradient(
-            90deg,
-            rgba(7,24,46,.95) 0%,
-            rgba(7,24,46,.88) 28%,
-            rgba(7,24,46,.55) 48%,
-            rgba(7,24,46,.15) 68%,
-            rgba(7,24,46,.00) 100%
-        ),
+linear-gradient(
+90deg,
 
-        url("../images/hero/hero-consulting.webp");
+rgba(7,24,46,.98) 0%,
+
+rgba(7,24,46,.95) 26%,
+
+rgba(7,24,46,.80) 46%,
+
+rgba(7,24,46,.38) 63%,
+
+rgba(7,24,46,.08) 78%,
+
+rgba(7,24,46,0) 100%
+),
+
+url("../images/hero/hero-consulting.webp");
 
     background-size:cover;
 
@@ -70,7 +79,7 @@ HERO
 .hero-content{
 
     max-width:620px;
-
+margin-top:-50px;
     color:white;
 
 }
@@ -99,15 +108,13 @@ HERO
 
     margin-bottom:30px;
 
-    font-size:clamp(4.5rem,7vw,6.6rem);
+    font-size:clamp(5.4rem,8vw,7.4rem);
 
-    line-height:.90;
+line-height:.88;
 
-    letter-spacing:-.06em;
+letter-spacing:-0.07em;
 
-    font-weight:800;
-
-}
+max-width:760px;
 
 .hero p{
 
