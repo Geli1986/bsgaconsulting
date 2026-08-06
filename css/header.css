@@ -55,15 +55,18 @@ LOGO
 
     align-items:center;
 
+    height:92px;
+
+    padding:0;
+
 }
+logo img{
 
-.logo img{
-
-    display:block;
-
-    width:320px;
+    width:340px;
 
     height:auto;
+
+    display:block;
 
 }
 
