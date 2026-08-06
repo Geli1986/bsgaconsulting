@@ -1,6 +1,5 @@
 /*==========================================================
 HEADER
-BSGA CONSULTING
 ==========================================================*/
 
 .header{
@@ -12,38 +11,35 @@ BSGA CONSULTING
 
     width:100%;
 
-    z-index:1000;
+    height:92px;
 
-    background:transparent;
+    background:#000000;
 
-    transition:
-        background .35s ease,
-        backdrop-filter .35s ease,
-        box-shadow .35s ease;
+    z-index:9999;
+
+    transition:.35s ease;
 
 }
 
 .header.scrolled{
 
-    background:rgba(255,255,255,.96);
+    background:#000000;
 
-    backdrop-filter:blur(18px);
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
 
 }
 
 .header .container{
 
-    width:min(95%,1600px);
-
-    margin:auto;
+    width:min(96%,1600px);
 
     height:92px;
 
+    margin:auto;
+
     display:grid;
 
-    grid-template-columns:300px 1fr 260px;
+    grid-template-columns:340px 1fr 260px;
 
     align-items:center;
 
@@ -59,24 +55,20 @@ LOGO
 
     align-items:center;
 
-    justify-content:flex-start;
-
 }
 
 .logo img{
 
-    width:255px;
-
-    height:auto;
-
     display:block;
 
-    object-fit:contain;
+    width:320px;
+
+    height:auto;
 
 }
 
 /*==========================================================
-MENU
+NAVIGATION
 ==========================================================*/
 
 .header nav{
@@ -93,21 +85,29 @@ MENU
 
 .header nav a{
 
-    position:relative;
+    color:#FFFFFF;
 
-    font-size:1rem;
+    font-size:15px;
 
     font-weight:500;
 
-    color:white;
+    letter-spacing:.01em;
 
     transition:.25s;
 
+    position:relative;
+
 }
 
-.header.scrolled nav a{
+.header nav a:hover{
 
-    color:#07182E;
+    color:#6EB5FF;
+
+}
+
+.header nav a.active{
+
+    color:#FFFFFF;
 
 }
 
@@ -125,33 +125,22 @@ MENU
 
     height:2px;
 
-    background:#2563EB;
+    background:#2F80ED;
 
     transition:.25s;
 
 }
 
 .header nav a:hover::after,
+
 .header nav a.active::after{
 
     width:100%;
 
 }
 
-.header nav a:hover{
-
-    color:#5DAEFF;
-
-}
-
-.header.scrolled nav a:hover{
-
-    color:#2563EB;
-
-}
-
 /*==========================================================
-BUTTON
+CTA
 ==========================================================*/
 
 .header .button{
@@ -166,11 +155,11 @@ BUTTON
 
     border-radius:999px;
 
-    background:#2563EB;
+    background:#2F80ED;
 
-    color:white;
+    color:#FFFFFF;
 
-    font-size:.95rem;
+    font-size:15px;
 
     font-weight:600;
 
@@ -178,15 +167,7 @@ BUTTON
 
 .header .button:hover{
 
-    transform:translateY(-2px);
-
-    background:#2F6EF5;
-
-}
-
-.header.scrolled .button{
-
-    background:#2563EB;
+    background:#3A8DFF;
 
 }
 
@@ -198,19 +179,19 @@ LAPTOP
 
 .header .container{
 
-grid-template-columns:240px 1fr 220px;
+grid-template-columns:250px 1fr 220px;
 
 }
 
 .logo img{
 
-width:205px;
+width:230px;
 
 }
 
 .header nav{
 
-gap:30px;
+gap:28px;
 
 }
 
@@ -220,7 +201,7 @@ width:205px;
 
 height:52px;
 
-font-size:.9rem;
+font-size:14px;
 
 }
 
@@ -231,6 +212,12 @@ TABLET
 ==========================================================*/
 
 @media(max-width:992px){
+
+.header{
+
+height:82px;
+
+}
 
 .header .container{
 
@@ -244,7 +231,7 @@ height:82px;
 
 .logo img{
 
-width:190px;
+width:220px;
 
 }
 
@@ -268,6 +255,12 @@ MOBILE
 
 @media(max-width:768px){
 
+.header{
+
+height:74px;
+
+}
+
 .header .container{
 
 height:74px;
@@ -276,7 +269,7 @@ height:74px;
 
 .logo img{
 
-width:165px;
+width:180px;
 
 }
 
