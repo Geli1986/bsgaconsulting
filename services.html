@@ -104,7 +104,113 @@ Explore our expertise
 </div>
 
 </section>
+/*==========================================================
+EXPERTISE
+==========================================================*/
 
+.expertise{
+
+padding:140px 0;
+
+background:#F7F9FC;
+
+}
+
+.expertise-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:36px;
+
+margin-top:80px;
+
+}
+
+.expertise-card{
+
+background:white;
+
+padding:50px;
+
+border-radius:28px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.06);
+
+transition:.35s;
+
+}
+
+.expertise-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 40px 80px rgba(0,0,0,.12);
+
+}
+
+.expertise-number{
+
+font-size:4rem;
+
+font-weight:800;
+
+color:#E9EEF6;
+
+margin-bottom:20px;
+
+line-height:1;
+
+}
+
+.expertise-card h3{
+
+font-size:2rem;
+
+margin-bottom:20px;
+
+}
+
+.expertise-card p{
+
+margin-bottom:28px;
+
+}
+
+.expertise-card ul{
+
+margin-bottom:32px;
+
+padding-left:18px;
+
+}
+
+.expertise-card li{
+
+margin-bottom:12px;
+
+color:#556070;
+
+}
+
+.expertise-card a{
+
+font-weight:700;
+
+color:#2563EB;
+
+}
+
+@media(max-width:992px){
+
+.expertise-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
 </main>
 
 <script src="js/main.js"></script>
