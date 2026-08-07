@@ -221,3 +221,194 @@ HOW WE WORK — TABLET
     }
 
 }
+/*==========================================================
+INDUSTRIES
+==========================================================*/
+
+.industries{
+
+    padding:140px 0;
+
+    background:#07182E;
+
+    color:#FFFFFF;
+
+}
+
+.industries-intro{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:100px;
+
+    align-items:end;
+
+    margin-bottom:80px;
+
+}
+
+.industries-intro .section-kicker{
+
+    color:#66AFFF;
+
+}
+
+.industries-intro h2{
+
+    max-width:650px;
+
+    color:#FFFFFF;
+
+}
+
+.industries-intro > p{
+
+    max-width:560px;
+
+    color:rgba(255,255,255,.68);
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+.industries-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    border-top:1px solid rgba(255,255,255,.16);
+
+    border-left:1px solid rgba(255,255,255,.16);
+
+}
+
+.industry-item{
+
+    min-height:260px;
+
+    padding:42px;
+
+    border-right:1px solid rgba(255,255,255,.16);
+
+    border-bottom:1px solid rgba(255,255,255,.16);
+
+    transition:
+
+        background .3s ease,
+
+        transform .3s ease;
+
+}
+
+.industry-item:hover{
+
+    background:rgba(255,255,255,.04);
+
+}
+
+.industry-number{
+
+    display:block;
+
+    margin-bottom:55px;
+
+    color:#66AFFF;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    letter-spacing:.18em;
+
+}
+
+.industry-item h3{
+
+    margin-bottom:14px;
+
+    color:#FFFFFF;
+
+    font-size:1.45rem;
+
+}
+
+.industry-item p{
+
+    max-width:340px;
+
+    color:rgba(255,255,255,.62);
+
+    font-size:.98rem;
+
+    line-height:1.75;
+
+}
+
+
+/*==========================================================
+INDUSTRIES — TABLET
+==========================================================*/
+
+@media(max-width:992px){
+
+    .industries-intro{
+
+        grid-template-columns:1fr;
+
+        gap:30px;
+
+    }
+
+    .industries-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/*==========================================================
+INDUSTRIES — MOBILE
+==========================================================*/
+
+@media(max-width:600px){
+
+    .industries{
+
+        padding:100px 0;
+
+    }
+
+    .industries-intro{
+
+        margin-bottom:60px;
+
+    }
+
+    .industries-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .industry-item{
+
+        min-height:auto;
+
+        padding:32px;
+
+    }
+
+    .industry-number{
+
+        margin-bottom:35px;
+
+    }
+
+}
