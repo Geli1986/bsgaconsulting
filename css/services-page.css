@@ -412,3 +412,170 @@ INDUSTRIES — MOBILE
     }
 
 }
+/*==========================================================
+WHY BSGA
+==========================================================*/
+
+.why-bsga{
+
+    padding:150px 0;
+
+    background:#FFFFFF;
+
+}
+
+.why-bsga-grid{
+
+    display:grid;
+
+    grid-template-columns:0.9fr 1.1fr;
+
+    gap:120px;
+
+    align-items:start;
+
+}
+
+.why-bsga-intro{
+
+    position:sticky;
+
+    top:140px;
+
+}
+
+.why-bsga-intro h2{
+
+    max-width:570px;
+
+    margin-bottom:28px;
+
+}
+
+.why-bsga-intro p{
+
+    max-width:520px;
+
+    margin-bottom:36px;
+
+    font-size:1.08rem;
+
+    line-height:1.9;
+
+}
+
+.why-bsga-intro .button{
+
+    min-width:220px;
+
+}
+
+.why-bsga-points{
+
+    border-top:1px solid #E5EAF1;
+
+}
+
+.why-point{
+
+    display:grid;
+
+    grid-template-columns:70px 1fr;
+
+    gap:30px;
+
+    padding:42px 0;
+
+    border-bottom:1px solid #E5EAF1;
+
+}
+
+.why-point-number{
+
+    color:#2563EB;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:.16em;
+
+}
+
+.why-point h3{
+
+    margin-bottom:12px;
+
+    font-size:1.55rem;
+
+}
+
+.why-point p{
+
+    max-width:580px;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+
+/*==========================================================
+WHY BSGA — TABLET
+==========================================================*/
+
+@media(max-width:992px){
+
+    .why-bsga{
+
+        padding:110px 0;
+
+    }
+
+    .why-bsga-grid{
+
+        grid-template-columns:1fr;
+
+        gap:70px;
+
+    }
+
+    .why-bsga-intro{
+
+        position:static;
+
+    }
+
+}
+
+
+/*==========================================================
+WHY BSGA — MOBILE
+==========================================================*/
+
+@media(max-width:600px){
+
+    .why-bsga{
+
+        padding:90px 0;
+
+    }
+
+    .why-point{
+
+        grid-template-columns:45px 1fr;
+
+        gap:15px;
+
+        padding:32px 0;
+
+    }
+
+    .why-point h3{
+
+        font-size:1.35rem;
+
+    }
+
+}
