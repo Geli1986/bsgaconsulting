@@ -9,16 +9,14 @@
       content="width=device-width, initial-scale=1.0">
 
 <title>
-
 Services | BSGA Consulting
-
 </title>
 
 <meta name="description"
       content="Strategic consulting services in Project Management, Business Transformation and Artificial Intelligence.">
 
-<link rel="stylesheet"
-      href="css/styles.css">
+<meta name="theme-color"
+      content="#07182E">
 
 <link rel="preconnect"
       href="https://fonts.googleapis.com">
@@ -30,444 +28,321 @@ Services | BSGA Consulting
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet">
 
+<link rel="stylesheet"
+      href="css/styles.css">
+
+<link rel="icon"
+      href="images/logos/favicon.png">
+
 </head>
 
 <body>
 
+<!--==========================================================
+HEADER
+===========================================================-->
+
 <header class="header">
 
-<div class="container">
+    <div class="container">
 
-<a href="index.html" class="logo">
+        <a href="index.html" class="logo">
 
-<img src="images/logos/logo-white.png"
-     alt="BSGA Consulting">
+            <img src="images/logos/logo-white.png"
+                 alt="BSGA Consulting">
 
-</a>
+        </a>
 
-<nav>
+        <nav>
 
-<a href="index.html">Home</a>
+            <a href="index.html">
+                Home
+            </a>
 
-<a href="services.html" class="active">Services</a>
+            <a href="services.html" class="active">
+                Services
+            </a>
 
-<a href="about.html">About</a>
+            <a href="about.html">
+                About
+            </a>
 
-<a href="insights.html">Insights</a>
+            <a href="insights.html">
+                Insights
+            </a>
 
-<a href="contact.html">Contact</a>
+            <a href="contact.html">
+                Contact
+            </a>
 
-</nav>
+        </nav>
 
-<a href="contact.html" class="button">
+        <a href="contact.html"
+           class="button">
 
-Schedule a Consultation
+            Schedule a Consultation
 
-</a>
+        </a>
 
-</div>
+    </div>
 
 </header>
 
 <main>
 
-<section class="services-hero">
-
-<div class="services-overlay"></div>
-
-<div class="container services-content">
-
-<span>
-
-OUR SERVICES
-
-</span>
-
-<h1>
-
-Helping organisations execute strategy with confidence.
-
-</h1>
-
-<p>
-
-From strategic planning to successful project delivery and Artificial Intelligence adoption, BSGA Consulting helps organisations achieve measurable business outcomes.
-
-</p>
-
-<a href="#services-list" class="button">
-
-Explore our expertise
-
-</a>
-
-</div>
-
-</section>
-/*==========================================================
-EXPERTISE
-==========================================================*/
-
-.expertise{
-
-padding:140px 0;
-
-background:#F7F9FC;
-
-}
-
-.expertise-grid{
-
-display:grid;
-
-grid-template-columns:repeat(2,1fr);
-
-gap:36px;
-
-margin-top:80px;
-
-}
-
-.expertise-card{
-
-background:white;
-
-padding:50px;
-
-border-radius:28px;
-
-box-shadow:0 25px 60px rgba(0,0,0,.06);
-
-transition:.35s;
-
-}
-
-.expertise-card:hover{
-
-transform:translateY(-10px);
-
-box-shadow:0 40px 80px rgba(0,0,0,.12);
-
-}
-
-.expertise-number{
-
-font-size:4rem;
-
-font-weight:800;
-
-color:#E9EEF6;
-
-margin-bottom:20px;
-
-line-height:1;
-
-}
-
-.expertise-card h3{
-
-font-size:2rem;
-
-margin-bottom:20px;
-
-}
-
-.expertise-card p{
-
-margin-bottom:28px;
-
-}
-
-.expertise-card ul{
-
-margin-bottom:32px;
-
-padding-left:18px;
-
-}
-
-.expertise-card li{
-
-margin-bottom:12px;
-
-color:#556070;
-
-}
-
-.expertise-card a{
-
-font-weight:700;
-
-color:#2563EB;
-
-}
-
-@media(max-width:992px){
-
-.expertise-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
- <!--==========================================================
-HOW WE WORK
+<!--==========================================================
+SERVICES HERO
 ===========================================================-->
 
-<section class="how-we-work">
+<section class="services-hero">
+
+    <div class="services-overlay"></div>
+
+    <div class="container">
+
+        <div class="services-hero-content fade">
+
+            <span class="section-kicker">
+
+                OUR SERVICES
+
+            </span>
+
+            <h1>
+
+                Helping organisations execute strategy with confidence.
+
+            </h1>
+
+            <p>
+
+                From strategic planning and project delivery to Business
+                Transformation and Artificial Intelligence adoption,
+                BSGA Consulting helps organisations improve performance,
+                accelerate execution and achieve measurable business outcomes.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#services-list"
+                   class="button">
+
+                    Explore Our Expertise
+
+                </a>
+
+                <a href="contact.html"
+                   class="button-secondary">
+
+                    Schedule a Consultation
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--==========================================================
+OUR EXPERTISE
+===========================================================-->
+
+<section id="services-list"
+         class="expertise">
 
     <div class="container">
 
         <div class="section-title">
 
             <span class="section-kicker">
-                HOW WE WORK
+
+                OUR EXPERTISE
+
             </span>
 
             <h2>
-                A structured approach designed to deliver results.
+
+                Consulting services designed to deliver measurable business value.
+
             </h2>
 
             <p>
-                Every engagement is built around a clear methodology,
-                transparent communication and measurable outcomes.
+
+                We combine strategic thinking, project delivery,
+                operational excellence and Artificial Intelligence
+                to help organisations achieve sustainable results.
+
             </p>
 
         </div>
 
+        <div class="expertise-grid">
 
-        <div class="process">
+            <article class="expertise-card fade">
 
-            <div class="process-item">
+                <div class="expertise-number">
 
-                <div class="process-number">
                     01
-                </div>
-
-                <div class="process-content">
-
-                    <h3>
-                        Understand
-                    </h3>
-
-                    <p>
-                        We start by understanding your organisation,
-                        objectives, challenges and priorities.
-                    </p>
 
                 </div>
 
-            </div>
+                <h3>
 
+                    Project Management
 
-            <div class="process-item">
+                </h3>
 
-                <div class="process-number">
+                <p>
+
+                    Governance, PMO leadership, programme delivery,
+                    stakeholder engagement and execution excellence.
+
+                </p>
+
+                <ul>
+
+                    <li>Programme Management</li>
+
+                    <li>PMO</li>
+
+                    <li>Governance</li>
+
+                    <li>Risk Management</li>
+
+                </ul>
+
+                <a href="project-management.html">
+
+                    Learn More →
+
+                </a>
+
+            </article>
+
+            <article class="expertise-card fade">
+
+                <div class="expertise-number">
+
                     02
-                </div>
-
-                <div class="process-content">
-
-                    <h3>
-                        Define
-                    </h3>
-
-                    <p>
-                        We translate business priorities into a clear,
-                        practical strategy and delivery roadmap.
-                    </p>
 
                 </div>
 
-            </div>
+                <h3>
 
+                    Business Transformation
 
-            <div class="process-item">
+                </h3>
 
-                <div class="process-number">
+                <p>
+
+                    Supporting organisations through strategic change,
+                    operational redesign and business improvement.
+
+                </p>
+
+                <ul>
+
+                    <li>Transformation</li>
+
+                    <li>Change Management</li>
+
+                    <li>Process Improvement</li>
+
+                    <li>Operating Models</li>
+
+                </ul>
+
+                <a href="#">
+
+                    Learn More →
+
+                </a>
+
+            </article>
+
+            <article class="expertise-card fade">
+
+                <div class="expertise-number">
+
                     03
-                </div>
-
-                <div class="process-content">
-
-                    <h3>
-                        Deliver
-                    </h3>
-
-                    <p>
-                        We work alongside your teams to execute with
-                        discipline, governance and transparency.
-                    </p>
 
                 </div>
 
-            </div>
+                <h3>
 
+                    Artificial Intelligence
 
-            <div class="process-item">
+                </h3>
 
-                <div class="process-number">
+                <p>
+
+                    Practical Artificial Intelligence focused on
+                    productivity, automation and measurable value.
+
+                </p>
+
+                <ul>
+
+                    <li>AI Strategy</li>
+
+                    <li>Microsoft Copilot</li>
+
+                    <li>Automation</li>
+
+                    <li>Training</li>
+
+                </ul>
+
+                <a href="#">
+
+                    Learn More →
+
+                </a>
+
+            </article>
+
+            <article class="expertise-card fade">
+
+                <div class="expertise-number">
+
                     04
-                </div>
-
-                <div class="process-content">
-
-                    <h3>
-                        Improve
-                    </h3>
-
-                    <p>
-                        We measure outcomes, identify opportunities and
-                        support continuous improvement.
-                    </p>
 
                 </div>
 
-            </div>
-
-        </div>
-
-    </div>
-
-</section>  
-<!--==========================================================
-INDUSTRIES WE SERVE
-===========================================================-->
-
-<section class="industries">
-
-    <div class="container">
-
-        <div class="industries-intro">
-
-            <div>
-
-                <span class="section-kicker">
-                    INDUSTRIES WE SERVE
-                </span>
-
-                <h2>
-                    Expertise that adapts to your business context.
-                </h2>
-
-            </div>
-
-            <p>
-                We bring a practical, outcome-focused approach to
-                organisations facing complex operational, strategic
-                and technological challenges.
-            </p>
-
-        </div>
-
-
-        <div class="industries-grid">
-
-            <article class="industry-item">
-
-                <span class="industry-number">
-                    01
-                </span>
-
                 <h3>
-                    Professional Services
+
+                    Operational Excellence
+
                 </h3>
 
                 <p>
-                    Improving delivery models, operational performance
-                    and strategic execution.
+
+                    Helping organisations improve performance,
+                    efficiency and operational maturity.
+
                 </p>
 
-            </article>
+                <ul>
 
+                    <li>Lean</li>
 
-            <article class="industry-item">
+                    <li>KPIs</li>
 
-                <span class="industry-number">
-                    02
-                </span>
+                    <li>Continuous Improvement</li>
 
-                <h3>
-                    Manufacturing
-                </h3>
+                    <li>Performance Management</li>
 
-                <p>
-                    Supporting operational improvement, transformation
-                    and technology adoption.
-                </p>
+                </ul>
 
-            </article>
+                <a href="#">
 
+                    Learn More →
 
-            <article class="industry-item">
-
-                <span class="industry-number">
-                    03
-                </span>
-
-                <h3>
-                    Technology
-                </h3>
-
-                <p>
-                    Helping technology organisations scale operations,
-                    projects and business capabilities.
-                </p>
-
-            </article>
-
-
-            <article class="industry-item">
-
-                <span class="industry-number">
-                    04
-                </span>
-
-                <h3>
-                    Financial Services
-                </h3>
-
-                <p>
-                    Strengthening governance, delivery and transformation
-                    across complex environments.
-                </p>
-
-            </article>
-
-
-            <article class="industry-item">
-
-                <span class="industry-number">
-                    05
-                </span>
-
-                <h3>
-                    Public Sector
-                </h3>
-
-                <p>
-                    Supporting strategic programmes, operational
-                    improvement and organisational change.
-                </p>
-
-            </article>
-
-
-            <article class="industry-item">
-
-                <span class="industry-number">
-                    06
-                </span>
-
-                <h3>
-                    Other Sectors
-                </h3>
-
-                <p>
-                    Applying our methodology to organisations with
-                    ambitious transformation and growth objectives.
-                </p>
+                </a>
 
             </article>
 
@@ -476,186 +351,3 @@ INDUSTRIES WE SERVE
     </div>
 
 </section>
-    <!--==========================================================
-WHY BSGA
-===========================================================-->
-
-<section class="why-bsga">
-
-    <div class="container">
-
-        <div class="why-bsga-grid">
-
-            <div class="why-bsga-intro">
-
-                <span class="section-kicker">
-                    WHY BSGA
-                </span>
-
-                <h2>
-                    Strategy is only valuable when it leads to action.
-                </h2>
-
-                <p>
-                    We combine strategic thinking with hands-on delivery
-                    to help organisations move from ambition to measurable
-                    business outcomes.
-                </p>
-
-                <a href="contact.html" class="button">
-                    Discuss Your Challenge
-                </a>
-
-            </div>
-
-
-            <div class="why-bsga-points">
-
-                <article class="why-point">
-
-                    <span class="why-point-number">
-                        01
-                    </span>
-
-                    <div>
-
-                        <h3>
-                            Outcome focused
-                        </h3>
-
-                        <p>
-                            We focus on measurable improvements rather than
-                            recommendations that remain on paper.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="why-point">
-
-                    <span class="why-point-number">
-                        02
-                    </span>
-
-                    <div>
-
-                        <h3>
-                            Practical expertise
-                        </h3>
-
-                        <p>
-                            Our approach combines strategic thinking with
-                            practical experience in project and operational
-                            delivery.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="why-point">
-
-                    <span class="why-point-number">
-                        03
-                    </span>
-
-                    <div>
-
-                        <h3>
-                            Technology with purpose
-                        </h3>
-
-                        <p>
-                            We use Artificial Intelligence and technology
-                            where they can create genuine business value.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <article class="why-point">
-
-                    <span class="why-point-number">
-                        04
-                    </span>
-
-                    <div>
-
-                        <h3>
-                            Long-term partnership
-                        </h3>
-
-                        <p>
-                            We work alongside our clients to build capability
-                            and sustain improvements beyond the engagement.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>  
-     <!--==========================================================
-EXECUTIVE CTA
-===========================================================-->
-
-<section class="services-cta">
-
-    <div class="container">
-
-        <div class="services-cta-box">
-
-            <div class="services-cta-content">
-
-                <span class="section-kicker">
-                    LET'S TALK
-                </span>
-
-                <h2>
-                    Ready to turn your priorities into results?
-                </h2>
-
-                <p>
-                    Tell us about your objectives, challenges or
-                    transformation plans. Let's explore how BSGA
-                    Consulting can help.
-                </p>
-
-                <div class="services-cta-actions">
-
-                    <a href="contact.html" class="button">
-                        Schedule a Consultation
-                    </a>
-
-                    <a href="mailto:hello@bsgaconsulting.es"
-                       class="cta-email">
-                        hello@bsgaconsulting.es
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section> 
-</main>
-
-<script src="js/main.js"></script>
-
-</body>
-
-</html>
