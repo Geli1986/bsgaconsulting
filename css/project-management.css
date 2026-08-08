@@ -1,0 +1,1102 @@
+/* =========================================================
+   BSGA CONSULTING
+   PROJECT MANAGEMENT PAGE
+========================================================= */
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.pm-container{
+
+    width:min(92%,1230px);
+
+    margin:0 auto;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.pm-hero{
+
+    position:relative;
+
+    min-height:560px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            ellipse 55% 100% at 88% 50%,
+            rgba(75,116,168,.72),
+            transparent 68%
+        ),
+
+        linear-gradient(
+            110deg,
+            #020B16 0%,
+            #07182E 45%,
+            #183B63 75%,
+            #536981 100%
+        );
+
+}
+
+.pm-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-180px;
+    bottom:-180px;
+
+    width:850px;
+    height:420px;
+
+    border-radius:50%;
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    transform:rotate(-9deg);
+
+    box-shadow:
+
+        0 -30px 0 rgba(255,255,255,.035),
+
+        0 -60px 0 rgba(255,255,255,.025),
+
+        0 -90px 0 rgba(255,255,255,.015);
+
+}
+
+.pm-hero-glow{
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    right:-220px;
+    top:-150px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(175,200,226,.28),
+            transparent 68%
+        );
+
+    pointer-events:none;
+
+}
+
+.pm-hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    padding:75px 0;
+
+}
+
+.pm-back{
+
+    display:inline-block;
+
+    margin-bottom:42px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:13px;
+
+    font-weight:500;
+
+    transition:color .2s ease;
+
+}
+
+.pm-back:hover{
+
+    color:#FFFFFF;
+
+}
+
+.pm-kicker,
+.pm-blue-kicker{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:#3281F4;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.23em;
+
+    text-transform:uppercase;
+
+}
+
+.pm-hero h1{
+
+    max-width:780px;
+
+    margin:0 0 25px;
+
+    color:#FFFFFF;
+
+    font-size:clamp(3.3rem,5.5vw,5.4rem);
+
+    font-weight:700;
+
+    line-height:.98;
+
+    letter-spacing:-.06em;
+
+}
+
+.pm-hero p{
+
+    max-width:650px;
+
+    margin:0 0 35px;
+
+    color:rgba(255,255,255,.73);
+
+    font-size:16px;
+
+    line-height:1.75;
+
+}
+
+.pm-hero-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+.pm-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:50px;
+
+    padding:0 27px;
+
+    border-radius:999px;
+
+    background:#2867E8;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease;
+
+}
+
+.pm-button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(40,103,232,.25);
+
+}
+
+.pm-button-outline{
+
+    border:1px solid rgba(255,255,255,.45);
+
+    background:transparent;
+
+}
+
+.pm-button-outline:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.pm-overview{
+
+    padding:120px 0;
+
+    background:#FFFFFF;
+
+}
+
+.pm-overview-grid{
+
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:110px;
+
+    align-items:start;
+
+}
+
+.pm-overview-intro h2{
+
+    max-width:560px;
+
+    margin:0;
+
+    color:#07182E;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    line-height:1;
+
+    letter-spacing:-.055em;
+
+}
+
+.pm-overview-text{
+
+    padding-top:7px;
+
+}
+
+.pm-overview-text p{
+
+    margin:0 0 25px;
+
+    color:#687386;
+
+    font-size:17px;
+
+    line-height:1.85;
+
+}
+
+.pm-overview-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.pm-capabilities{
+
+    padding:120px 0;
+
+    background:#F7F9FC;
+
+}
+
+.pm-section-heading{
+
+    max-width:780px;
+
+    margin-bottom:65px;
+
+}
+
+.pm-section-heading h2{
+
+    margin:0 0 18px;
+
+    color:#07182E;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    line-height:1;
+
+    letter-spacing:-.055em;
+
+}
+
+.pm-section-heading p{
+
+    max-width:700px;
+
+    margin:0;
+
+    color:#6E7888;
+
+    font-size:16px;
+
+    line-height:1.75;
+
+}
+
+.pm-capabilities-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+}
+
+.pm-capability{
+
+    min-height:275px;
+
+    padding:35px;
+
+    border:1px solid #E4E8EF;
+
+    border-radius:16px;
+
+    background:#FFFFFF;
+
+    box-shadow:
+
+        0 8px 25px rgba(7,24,46,.035);
+
+    transition:
+
+        transform .28s ease,
+
+        box-shadow .28s ease;
+
+}
+
+.pm-capability:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 20px 40px rgba(7,24,46,.08);
+
+}
+
+.pm-number{
+
+    display:block;
+
+    margin-bottom:45px;
+
+    color:#2875ED;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.16em;
+
+}
+
+.pm-capability h3{
+
+    margin:0 0 12px;
+
+    color:#07182E;
+
+    font-size:20px;
+
+    line-height:1.25;
+
+}
+
+.pm-capability p{
+
+    margin:0;
+
+    color:#6E7888;
+
+    font-size:14px;
+
+    line-height:1.75;
+
+}
+
+
+/* =========================================================
+   PROJECT LIFECYCLE
+========================================================= */
+
+.pm-lifecycle{
+
+    padding:120px 0;
+
+    background:#FFFFFF;
+
+}
+
+.pm-lifecycle-list{
+
+    border-top:1px solid #E3E8EF;
+
+}
+
+.pm-lifecycle-list article{
+
+    display:grid;
+
+    grid-template-columns:90px 1fr;
+
+    gap:35px;
+
+    padding:38px 0;
+
+    border-bottom:1px solid #E3E8EF;
+
+}
+
+.pm-lifecycle-number{
+
+    color:#2875ED;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.16em;
+
+}
+
+.pm-lifecycle-list h3{
+
+    margin:0 0 9px;
+
+    color:#07182E;
+
+    font-size:21px;
+
+}
+
+.pm-lifecycle-list p{
+
+    max-width:700px;
+
+    margin:0;
+
+    color:#6E7888;
+
+    font-size:14px;
+
+    line-height:1.75;
+
+}
+
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.pm-results{
+
+    padding:120px 0;
+
+    background:#07182E;
+
+}
+
+.pm-results-grid{
+
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:110px;
+
+}
+
+.pm-results-intro .pm-blue-kicker{
+
+    color:#66AFFF;
+
+}
+
+.pm-results-intro h2{
+
+    max-width:560px;
+
+    margin:0 0 25px;
+
+    color:#FFFFFF;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    line-height:1;
+
+    letter-spacing:-.055em;
+
+}
+
+.pm-results-intro p{
+
+    max-width:520px;
+
+    margin:0;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.pm-results-list{
+
+    border-top:1px solid rgba(255,255,255,.16);
+
+}
+
+.pm-result{
+
+    display:grid;
+
+    grid-template-columns:50px 1fr;
+
+    gap:20px;
+
+    padding:30px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.16);
+
+}
+
+.pm-result > span{
+
+    color:#66AFFF;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.pm-result h3{
+
+    margin:0 0 8px;
+
+    color:#FFFFFF;
+
+    font-size:19px;
+
+}
+
+.pm-result p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.62);
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+
+/* =========================================================
+   WHY BSGA
+========================================================= */
+
+.pm-why{
+
+    padding:120px 0;
+
+    background:#FFFFFF;
+
+}
+
+.pm-why-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:110px;
+
+}
+
+.pm-why h2{
+
+    max-width:560px;
+
+    margin:0;
+
+    color:#07182E;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    line-height:1;
+
+    letter-spacing:-.055em;
+
+}
+
+.pm-why-grid > div:last-child{
+
+    padding-top:5px;
+
+}
+
+.pm-why-grid > div:last-child p{
+
+    margin:0 0 25px;
+
+    color:#687386;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+}
+
+.pm-why-grid .pm-button{
+
+    margin-top:10px;
+
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.pm-faq{
+
+    padding:120px 0;
+
+    background:#F7F9FC;
+
+}
+
+.pm-faq-list{
+
+    max-width:900px;
+
+    border-top:1px solid #DDE3EB;
+
+}
+
+.pm-faq details{
+
+    border-bottom:1px solid #DDE3EB;
+
+}
+
+.pm-faq summary{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    padding:27px 0;
+
+    cursor:pointer;
+
+    list-style:none;
+
+    color:#07182E;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+.pm-faq summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.pm-faq summary span{
+
+    flex-shrink:0;
+
+    color:#2875ED;
+
+    font-size:25px;
+
+    font-weight:400;
+
+    transition:transform .25s ease;
+
+}
+
+.pm-faq details[open] summary span{
+
+    transform:rotate(45deg);
+
+}
+
+.pm-faq details p{
+
+    max-width:760px;
+
+    margin:-5px 0 25px;
+
+    color:#6E7888;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.pm-cta{
+
+    padding:95px 0;
+
+    background:#FFFFFF;
+
+}
+
+.pm-cta-box{
+
+    min-height:390px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:70px 78px;
+
+    border-radius:24px;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(95,125,164,.38),
+            transparent 42%
+        ),
+
+        linear-gradient(
+            105deg,
+            #07182E 0%,
+            #122A47 60%,
+            #46566B 100%
+        );
+
+}
+
+.pm-cta-box .pm-blue-kicker{
+
+    margin-bottom:20px;
+
+}
+
+.pm-cta-box h2{
+
+    max-width:760px;
+
+    margin:0 0 20px;
+
+    color:#FFFFFF;
+
+    font-size:clamp(2.7rem,4.2vw,4.4rem);
+
+    line-height:.98;
+
+    letter-spacing:-.055em;
+
+}
+
+.pm-cta-box p{
+
+    max-width:650px;
+
+    margin:0 0 32px;
+
+    color:rgba(255,255,255,.7);
+
+    font-size:16px;
+
+    line-height:1.75;
+
+}
+
+.pm-cta-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.pm-email{
+
+    color:#FFFFFF;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.pm-email:hover{
+
+    opacity:.7;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.project-management-page .services-footer{
+
+    background:#000000;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1050px){
+
+    .pm-overview-grid,
+    .pm-results-grid,
+    .pm-why-grid{
+
+        gap:60px;
+
+    }
+
+    .pm-capabilities-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .pm-hero{
+
+        min-height:650px;
+
+    }
+
+    .pm-hero-content{
+
+        padding:70px 0;
+
+    }
+
+    .pm-back{
+
+        margin-bottom:35px;
+
+    }
+
+    .pm-hero h1{
+
+        font-size:3.15rem;
+
+    }
+
+    .pm-hero p{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+    .pm-hero-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .pm-button{
+
+        width:100%;
+
+    }
+
+
+    .pm-overview,
+    .pm-capabilities,
+    .pm-lifecycle,
+    .pm-results,
+    .pm-why,
+    .pm-faq{
+
+        padding:85px 0;
+
+    }
+
+
+    .pm-overview-grid,
+    .pm-results-grid,
+    .pm-why-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+
+    }
+
+
+    .pm-capabilities-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .pm-capability{
+
+        min-height:250px;
+
+    }
+
+
+    .pm-lifecycle-list article{
+
+        grid-template-columns:55px 1fr;
+
+        gap:18px;
+
+        padding:32px 0;
+
+    }
+
+
+    .pm-results{
+
+        background:#07182E;
+
+    }
+
+
+    .pm-cta{
+
+        padding:75px 0;
+
+    }
+
+    .pm-cta-box{
+
+        min-height:470px;
+
+        padding:45px 28px;
+
+    }
+
+    .pm-cta-box h2{
+
+        font-size:2.75rem;
+
+    }
+
+    .pm-cta-actions{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .pm-email{
+
+        text-align:center;
+
+    }
+
+
+    .pm-faq summary{
+
+        font-size:15px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+    .pm-hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .pm-section-heading h2,
+    .pm-overview-intro h2,
+    .pm-results-intro h2,
+    .pm-why h2{
+
+        font-size:2.45rem;
+
+    }
+
+}
