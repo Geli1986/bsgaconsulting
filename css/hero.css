@@ -100,23 +100,6 @@
 .hero-content {
     width: min(760px, 72%);
 }
-
-
-.hero-kicker {
-    display: inline-block;
-
-    margin-bottom: 28px;
-
-    color: #3f91ff;
-
-    font-size: 0.82rem;
-    font-weight: 800;
-
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-}
-
-
 .hero h1 {
     margin: 0 0 32px;
 
