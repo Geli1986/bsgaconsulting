@@ -60,14 +60,10 @@ LOGO
     padding:0;
 
 }
-logo img{
-
-    width:340px;
-
+.logo img{
+    width:400px;
     height:auto;
-
     display:block;
-
 }
 
 /*==========================================================
