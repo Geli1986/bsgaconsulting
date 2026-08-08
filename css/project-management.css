@@ -533,13 +533,209 @@
 
 }
 
+/* =========================================================
+   WHAT CLIENTS GAIN
+========================================================= */
+
+.pm-results{
+
+    padding:120px 0;
+
+    background:#07182E;
+
+}
+
 .pm-results-grid{
 
     display:grid;
 
-    grid-template-columns:.9fr 1.1fr;
+    grid-template-columns:minmax(0, .9fr) minmax(0, 1.1fr);
 
-    gap:110px;
+    gap:100px;
+
+    align-items:start;
+
+    width:100%;
+
+}
+
+.pm-results-intro{
+
+    min-width:0;
+
+}
+
+.pm-results-intro .pm-blue-kicker{
+
+    color:#66AFFF;
+
+}
+
+.pm-results-intro h2{
+
+    max-width:560px;
+
+    margin:0 0 28px;
+
+    color:#FFFFFF;
+
+    font-size:clamp(2.7rem,4vw,4.2rem);
+
+    line-height:.98;
+
+    letter-spacing:-.055em;
+
+}
+
+.pm-results-intro p{
+
+    max-width:560px;
+
+    margin:0;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.pm-results-list{
+
+    width:100%;
+
+    min-width:0;
+
+    border-top:1px solid rgba(255,255,255,.16);
+
+}
+
+.pm-result{
+
+    display:grid;
+
+    grid-template-columns:65px minmax(0,1fr);
+
+    gap:22px;
+
+    width:100%;
+
+    padding:30px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.16);
+
+}
+
+.pm-result > span{
+
+    color:#66AFFF;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    line-height:1.4;
+
+}
+
+.pm-result > div{
+
+    min-width:0;
+
+}
+
+.pm-result h3{
+
+    margin:0 0 12px;
+
+    color:#FFFFFF;
+
+    font-size:21px;
+
+    line-height:1.25;
+
+}
+
+.pm-result p{
+
+    width:auto;
+
+    max-width:100%;
+
+    margin:0;
+
+    color:rgba(255,255,255,.62);
+
+    font-size:16px;
+
+    line-height:1.75;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .pm-results-grid{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+    }
+
+    .pm-results-intro h2{
+
+        max-width:700px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .pm-results{
+
+        padding:85px 0;
+
+    }
+
+    .pm-results-grid{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+    }
+
+    .pm-result{
+
+        grid-template-columns:45px minmax(0,1fr);
+
+        gap:15px;
+
+    }
+
+    .pm-result h3{
+
+        font-size:18px;
+
+    }
+
+    .pm-result p{
+
+        font-size:14px;
+
+    }
 
 }
 
