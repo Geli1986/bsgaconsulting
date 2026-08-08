@@ -364,3 +364,45 @@
     }
 
 }
+/* =========================================================
+   HERO — BSGA BRAND LOCKUP
+========================================================= */
+
+.hero-brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-bottom: 30px;
+}
+
+.hero-brand-name {
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 2rem;
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+
+    line-height: 1;
+}
+
+.hero-brand-divider {
+    width: 1px;
+    height: 27px;
+
+    background: rgba(255,255,255,.55);
+}
+
+.hero-brand-type {
+    color: rgba(255,255,255,.72);
+
+    font-size: .58rem;
+    font-weight: 600;
+
+    letter-spacing: .38em;
+
+    line-height: 1;
+}
