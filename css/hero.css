@@ -985,3 +985,435 @@
     }
 
    }
+/* =========================================================
+   BSGA MOBILE HEADER — FINAL
+   ========================================================= */
+
+.site-header {
+    position: relative;
+    z-index: 10000;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        width: 100%;
+        background: #050505;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.08);
+    }
+
+
+    .site-header .header-container {
+
+        position: relative;
+
+        width: 100%;
+        height: 92px;
+
+        padding-left: 22px;
+        padding-right: 17px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       LOGO
+       ===================================================== */
+
+    .site-header .logo {
+
+        flex: 1 1 auto;
+
+        display: flex;
+        align-items: center;
+
+        min-width: 0;
+
+        color: #ffffff;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size: 34px;
+        font-weight: 400;
+
+        line-height: 1;
+
+        letter-spacing: -0.04em;
+
+        text-decoration: none;
+
+        white-space: nowrap;
+    }
+
+
+    .site-header .logo::after {
+
+        content: "CONSULTING";
+
+        display: inline-block;
+
+        margin-left: 11px;
+        padding-left: 11px;
+
+        border-left:
+            1px solid rgba(255,255,255,0.65);
+
+        color:
+            rgba(255,255,255,0.78);
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 8px;
+        font-weight: 600;
+
+        letter-spacing: 0.32em;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       CONSULTATION BUTTON
+       ===================================================== */
+
+    .site-header .header-cta {
+
+        flex: 0 0 auto;
+
+        width: 174px;
+        min-height: 52px;
+
+        padding: 7px 13px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        box-sizing: border-box;
+
+        border:
+            1px solid rgba(255,255,255,0.75);
+
+        border-radius: 999px;
+
+        background: transparent;
+
+        color: #ffffff;
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        line-height: 1.1;
+
+        text-align: center;
+        text-decoration: none;
+    }
+
+
+    .site-header .header-cta span {
+        display: block;
+    }
+
+
+    .site-header .header-cta strong {
+
+        flex-shrink: 0;
+
+        font-size: 18px;
+        font-weight: 400;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+       ===================================================== */
+
+    .site-header .menu-toggle {
+
+        flex: 0 0 40px;
+
+        width: 40px;
+        height: 42px;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        border: 0;
+
+        outline: none;
+
+        background: transparent;
+
+        cursor: pointer;
+
+        -webkit-tap-highlight-color: transparent;
+
+        position: relative;
+
+        z-index: 10002;
+    }
+
+
+    .site-header .menu-toggle span {
+
+        display: block;
+
+        width: 29px;
+        height: 2px;
+
+        margin: 0;
+
+        background: #ffffff;
+
+        border-radius: 2px;
+
+        transition:
+            transform .25s ease,
+            opacity .25s ease;
+    }
+
+
+    /* HAMBURGER → X */
+
+    .site-header .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(8px)
+            rotate(45deg);
+    }
+
+    .site-header .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .site-header .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-8px)
+            rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
+
+    .site-header #mobileNav {
+
+        position: absolute;
+
+        top: 92px;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        display: none;
+
+        padding:
+            10px 28px 30px;
+
+        box-sizing: border-box;
+
+        background: #050505;
+
+        border-top:
+            1px solid rgba(255,255,255,0.10);
+
+        box-shadow:
+            0 25px 45px rgba(0,0,0,0.40);
+
+        z-index: 10001;
+    }
+
+
+    .site-header #mobileNav.open {
+        display: block;
+    }
+
+
+    .site-header #mobileNav ul {
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    .site-header #mobileNav li {
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.10);
+    }
+
+
+    .site-header #mobileNav li:last-child {
+        border-bottom: 0;
+    }
+
+
+    .site-header #mobileNav a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 19px 0;
+
+        color: #ffffff;
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 18px;
+        font-weight: 500;
+
+        line-height: 1;
+
+        text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO POSITION
+       ===================================================== */
+
+    .hero-content {
+
+        transform:
+            translateY(-55px);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .site-header .header-container {
+
+        height: 88px;
+
+        padding-left: 18px;
+        padding-right: 13px;
+
+        gap: 8px;
+    }
+
+
+    .site-header .logo {
+
+        font-size: 30px;
+    }
+
+
+    .site-header .logo::after {
+
+        margin-left: 8px;
+        padding-left: 8px;
+
+        font-size: 7px;
+
+        letter-spacing: 0.25em;
+    }
+
+
+    .site-header .header-cta {
+
+        width: 155px;
+
+        min-height: 48px;
+
+        padding:
+            6px 10px;
+
+        font-size: 11px;
+    }
+
+
+    .site-header .header-cta strong {
+
+        font-size: 17px;
+    }
+
+
+    .site-header .menu-toggle {
+
+        flex-basis: 37px;
+
+        width: 37px;
+        height: 40px;
+    }
+
+
+    .site-header .menu-toggle span {
+
+        width: 27px;
+    }
+
+
+    .site-header #mobileNav {
+
+        top: 88px;
+    }
+
+
+    .hero-content {
+
+        transform:
+            translateY(-60px);
+    }
+
+               }
