@@ -329,7 +329,17 @@
     .hero-brand {
         display: none;
     }
+/* =========================================================
+   MOBILE HERO POSITION
+   ========================================================= */
 
+@media (max-width: 768px) {
+
+    .hero-content {
+        transform: translateY(-55px);
+    }
+
+}
 }
 
 
