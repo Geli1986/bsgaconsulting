@@ -1,10 +1,19 @@
-/*==========================================================
-HEADER
-==========================================================*/
+/* =========================================================
+   BSGA CONSULTING — MAIN JAVASCRIPT
+   ========================================================= */
 
-const header = document.querySelector(".header");
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+const header = document.querySelector("header");
 
 function updateHeader() {
+
+    if (!header) {
+        return;
+    }
 
     if (window.scrollY > 40) {
 
@@ -23,53 +32,44 @@ updateHeader();
 window.addEventListener("scroll", updateHeader);
 
 
-/*==========================================================
-FADE ANIMATION
-==========================================================*/
+/* =========================================================
+   FADE ANIMATION
+   ========================================================= */
 
-const observer = new IntersectionObserver((entries)=>{
+const fadeItems = document.querySelectorAll(".fade");
 
-    entries.forEach(entry=>{
+if ("IntersectionObserver" in window && fadeItems.length) {
 
-        if(entry.isIntersecting){
+    const observer = new IntersectionObserver((entries) => {
 
-            entry.target.classList.add("show");
+        entries.forEach(entry => {
 
-        }
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+
+    fadeItems.forEach(item => {
+
+        observer.observe(item);
 
     });
 
-},{
-    threshold:.15
-});
-
-document.querySelectorAll(".fade").forEach(item=>{
-
-    observer.observe(item);
-
-});
+}
 
 
-/*==========================================================
-ACTIVE MENU
-==========================================================*/
-
-const links = document.querySelectorAll("nav a");
-
-links.forEach(link=>{
-
-    link.addEventListener("click",()=>{
-
-        links.forEach(item=>item.classList.remove("active"));
-
-        link.classList.add("active");
-
-    });
-
-});
 /* =========================================================
    MOBILE MENU
-   BSGA CONSULTING
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -81,9 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
+
     menuToggle.addEventListener("click", function () {
 
-        const isOpen = menuToggle.classList.toggle("active");
+        const isOpen =
+            menuToggle.classList.toggle("active");
 
         mobileNav.classList.toggle("open");
 
@@ -91,6 +93,64 @@ document.addEventListener("DOMContentLoaded", function () {
             "aria-expanded",
             isOpen ? "true" : "false"
         );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+    });
+
+
+    /* Close menu when clicking a navigation link */
+
+    const mobileLinks =
+        mobileNav.querySelectorAll("a");
+
+    mobileLinks.forEach(link => {
+
+        link.addEventListener("click", function () {
+
+            menuToggle.classList.remove("active");
+
+            mobileNav.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        });
+
+    });
+
+});
+
+
+/* =========================================================
+   ACTIVE MENU
+   ========================================================= */
+
+const links = document.querySelectorAll("#mobileNav a");
+
+links.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        links.forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+        link.classList.add("active");
 
     });
 
