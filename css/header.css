@@ -273,3 +273,392 @@ width:180px;
 }
 
 }
+/* =========================================================
+   MOBILE HEADER + HERO
+   BSGA CONSULTING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -----------------------------------------------------
+       GLOBAL MOBILE
+       ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    header {
+        position: relative;
+        z-index: 1000;
+        width: 100%;
+        background: #050505;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    header .container {
+        height: 96px;
+        padding-left: 24px;
+        padding-right: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       LOGO
+       ----------------------------------------------------- */
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        flex: 1 1 auto;
+        min-width: 0;
+
+        color: #ffffff;
+        text-decoration: none;
+
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        line-height: 1;
+        letter-spacing: -1px;
+
+        white-space: nowrap;
+    }
+
+    .logo::after {
+        content: "CONSULTING";
+
+        display: inline-block;
+
+        margin-left: 12px;
+        padding-left: 12px;
+
+        border-left: 1px solid rgba(255,255,255,0.65);
+
+        font-family: Inter, Arial, sans-serif;
+        font-size: 9px;
+        font-weight: 500;
+
+        letter-spacing: 3px;
+        line-height: 1;
+
+        color: rgba(255,255,255,0.82);
+    }
+
+
+    /* -----------------------------------------------------
+       DESKTOP NAV — HIDE ON MOBILE
+       ----------------------------------------------------- */
+
+    header nav {
+        display: none !important;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE CONSULTATION BUTTON
+       ----------------------------------------------------- */
+
+    header .btn-primary,
+    header .header-cta,
+    header .nav-cta {
+
+        display: flex !important;
+
+        flex: 0 0 auto;
+
+        width: auto;
+        max-width: 205px;
+
+        min-height: 54px;
+
+        padding: 10px 17px;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 1px solid rgba(255,255,255,0.85);
+        border-radius: 999px;
+
+        background: transparent;
+
+        color: #ffffff;
+
+        font-family: Inter, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+
+        line-height: 1.15;
+        text-align: center;
+
+        text-decoration: none;
+
+        white-space: normal;
+
+        transition:
+            background 0.25s ease,
+            border-color 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    header .btn-primary:hover,
+    header .header-cta:hover,
+    header .nav-cta:hover {
+        background: rgba(255,255,255,0.08);
+        border-color: #ffffff;
+        transform: translateY(-1px);
+    }
+
+
+    /* -----------------------------------------------------
+       HAMBURGER
+       ----------------------------------------------------- */
+
+    .menu-toggle,
+    .hamburger,
+    .mobile-menu-toggle {
+
+        display: flex !important;
+
+        flex: 0 0 42px;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        background: transparent;
+        border: 0;
+
+        color: #ffffff;
+
+        cursor: pointer;
+
+        position: relative;
+        z-index: 1100;
+    }
+
+    .menu-toggle span,
+    .hamburger span,
+    .mobile-menu-toggle span {
+
+        display: block;
+
+        width: 27px;
+        height: 2px;
+
+        margin: 3px 0;
+
+        background: #ffffff;
+
+        border-radius: 2px;
+    }
+
+
+    /* -----------------------------------------------------
+       IF HAMBURGER USES SVG
+       ----------------------------------------------------- */
+
+    .menu-toggle svg,
+    .hamburger svg,
+    .mobile-menu-toggle svg {
+
+        width: 29px;
+        height: 29px;
+
+        display: block;
+
+        stroke: #ffffff;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        min-height: calc(100svh - 96px);
+
+        padding-top: 80px;
+        padding-bottom: 70px;
+
+        display: flex;
+        align-items: flex-start;
+
+        background-position: center center;
+    }
+
+    .hero .container {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+
+    .hero-content,
+    .hero-left {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO LOGO / BRAND
+       ----------------------------------------------------- */
+
+    .hero-logo {
+        margin-bottom: 32px;
+
+        max-width: 100%;
+
+        font-size: 30px;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO H1
+       ----------------------------------------------------- */
+
+    .hero h1 {
+
+        max-width: 100%;
+
+        margin: 0 0 28px;
+
+        font-size: clamp(48px, 14vw, 70px);
+
+        line-height: 0.94;
+
+        letter-spacing: -3px;
+
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO DESCRIPTION
+       ----------------------------------------------------- */
+
+    .hero p,
+    .hero-subtitle {
+
+        max-width: 100%;
+
+        margin-bottom: 38px;
+
+        font-size: 20px;
+
+        line-height: 1.55;
+
+        letter-spacing: -0.2px;
+
+        color: rgba(255,255,255,0.72);
+    }
+
+
+    /* -----------------------------------------------------
+       HERO BUTTONS
+       ----------------------------------------------------- */
+
+    .hero-buttons,
+    .hero-actions,
+    .hero-cta {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 16px;
+    }
+
+
+    .hero-buttons a,
+    .hero-actions a,
+    .hero-cta a {
+
+        width: 100%;
+
+        min-height: 68px;
+
+        padding: 18px 24px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 999px;
+
+        font-size: 17px;
+        font-weight: 700;
+
+        text-align: center;
+    }
+
+
+    /* Primary */
+
+    .hero-buttons .btn-primary,
+    .hero-actions .btn-primary,
+    .hero-cta .btn-primary {
+
+        background: #2563eb;
+
+        border: 1px solid #2563eb;
+
+        color: #ffffff;
+
+        box-shadow: 0 10px 30px rgba(37,99,235,0.22);
+    }
+
+
+    /* Secondary */
+
+    .hero-buttons .btn-secondary,
+    .hero-actions .btn-secondary,
+    .hero-cta .btn-secondary {
+
+        background: transparent;
+
+        border: 1px solid rgba(255,255,255,0.45);
+
+        color: #ffffff;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO BACKGROUND
+       ----------------------------------------------------- */
+
+    .hero::before {
+        opacity: 0.72;
+    }
+
+        }
