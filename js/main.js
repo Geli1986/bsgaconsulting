@@ -67,3 +67,31 @@ links.forEach(link=>{
     });
 
 });
+/* =========================================================
+   MOBILE MENU
+   BSGA CONSULTING
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (!menuToggle || !mobileNav) {
+        return;
+    }
+
+    menuToggle.addEventListener("click", function () {
+
+        const isOpen = menuToggle.classList.toggle("active");
+
+        mobileNav.classList.toggle("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+    });
+
+});
