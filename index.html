@@ -44,24 +44,34 @@
 
 <body>
 
-<header>
+<header class="site-header">
 
-    <div class="container">
+    <div class="container header-container">
 
+        <!-- LOGO -->
         <a href="index.html" class="logo">
             BSGA
         </a>
 
+
+        <!-- CONSULTATION BUTTON -->
         <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
            class="header-cta">
-            Schedule a Consultation
-            <span>→</span>
+
+            <span>Schedule a Consultation</span>
+            <strong>→</strong>
+
         </a>
 
-        <button class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false">
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+            type="button"
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            onclick="toggleMobileMenu()">
 
             <span></span>
             <span></span>
@@ -69,14 +79,27 @@
 
         </button>
 
-        <nav id="mobileNav">
+
+        <!-- NAVIGATION -->
+        <nav id="mobileNav" aria-hidden="true">
 
             <ul>
 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
 
             </ul>
 
@@ -85,6 +108,7 @@
     </div>
 
 </header>
+
 
 <main>
 
