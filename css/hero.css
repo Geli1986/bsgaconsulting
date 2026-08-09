@@ -1417,3 +1417,416 @@
     }
 
                }
+/* =========================================================
+   BSGA MOBILE HEADER — FINAL LAYOUT
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .site-header .header-container {
+        width: 100%;
+        height: 92px;
+
+        padding: 0 18px;
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr) 145px 38px;
+
+        align-items: center;
+
+        column-gap: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =====================================================
+       LOGO
+       ===================================================== */
+
+    .site-header .logo {
+
+        min-width: 0;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        overflow: hidden;
+
+        color: #ffffff;
+
+        font-family:
+            Georgia,
+            "Times New Roman",
+            serif;
+
+        font-size: 29px;
+        font-weight: 400;
+
+        line-height: 1;
+
+        letter-spacing: -0.04em;
+
+        white-space: nowrap;
+
+        text-decoration: none;
+    }
+
+
+    .site-header .logo::after {
+
+        content: "CONSULTING";
+
+        flex-shrink: 0;
+
+        display: inline-block;
+
+        margin-left: 8px;
+        padding-left: 8px;
+
+        border-left:
+            1px solid rgba(255,255,255,0.65);
+
+        color:
+            rgba(255,255,255,0.78);
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 6.5px;
+        font-weight: 600;
+
+        letter-spacing: 0.24em;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       CONSULTATION BUTTON
+       ===================================================== */
+
+    .site-header .header-cta {
+
+        width: 145px;
+        height: 52px;
+
+        padding: 6px 10px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+
+        border:
+            1px solid rgba(255,255,255,0.75);
+
+        border-radius: 999px;
+
+        background: transparent;
+
+        color: #ffffff;
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 11px;
+        font-weight: 600;
+
+        line-height: 1.15;
+
+        text-align: center;
+
+        text-decoration: none;
+    }
+
+
+    .site-header .header-cta span {
+
+        display: block;
+
+        max-width: 105px;
+    }
+
+
+    .site-header .header-cta strong {
+
+        flex-shrink: 0;
+
+        font-size: 17px;
+        font-weight: 400;
+
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       HAMBURGER
+       ===================================================== */
+
+    .site-header .menu-toggle {
+
+        width: 38px;
+        height: 42px;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex !important;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        border: 0;
+        outline: none;
+
+        background: transparent;
+
+        cursor: pointer;
+
+        position: relative;
+        z-index: 10002;
+    }
+
+
+    .site-header .menu-toggle span {
+
+        display: block;
+
+        width: 28px;
+        height: 2px;
+
+        margin: 0;
+
+        background: #ffffff;
+
+        border-radius: 2px;
+
+        transition:
+            transform .25s ease,
+            opacity .25s ease;
+    }
+
+
+    /* =====================================================
+       HAMBURGER → X
+       ===================================================== */
+
+    .site-header .menu-toggle.active span:nth-child(1) {
+
+        transform:
+            translateY(8px)
+            rotate(45deg);
+    }
+
+
+    .site-header .menu-toggle.active span:nth-child(2) {
+
+        opacity: 0;
+    }
+
+
+    .site-header .menu-toggle.active span:nth-child(3) {
+
+        transform:
+            translateY(-8px)
+            rotate(-45deg);
+    }
+
+
+    /* =====================================================
+       MOBILE NAV
+       ===================================================== */
+
+    .site-header #mobileNav {
+
+        position: absolute;
+
+        top: 92px;
+        left: 0;
+        right: 0;
+
+        width: 100%;
+
+        display: none;
+
+        padding: 10px 28px 30px;
+
+        box-sizing: border-box;
+
+        background: #050505;
+
+        border-top:
+            1px solid rgba(255,255,255,0.10);
+
+        box-shadow:
+            0 25px 45px rgba(0,0,0,0.40);
+
+        z-index: 10001;
+    }
+
+
+    .site-header #mobileNav.open {
+
+        display: block !important;
+    }
+
+
+    .site-header #mobileNav ul {
+
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+    }
+
+
+    .site-header #mobileNav li {
+
+        width: 100%;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.10);
+    }
+
+
+    .site-header #mobileNav a {
+
+        display: block;
+
+        padding: 19px 0;
+
+        color: #ffffff;
+
+        font-family:
+            Inter,
+            Arial,
+            sans-serif;
+
+        font-size: 18px;
+        font-weight: 500;
+
+        line-height: 1;
+
+        text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO — MOVE UP
+       ===================================================== */
+
+    .hero-content {
+
+        transform: translateY(-55px);
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .site-header .header-container {
+
+        height: 88px;
+
+        padding-left: 16px;
+        padding-right: 12px;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            140px
+            36px;
+
+        column-gap: 7px;
+    }
+
+
+    .site-header .logo {
+
+        font-size: 28px;
+    }
+
+
+    .site-header .logo::after {
+
+        margin-left: 7px;
+        padding-left: 7px;
+
+        font-size: 6px;
+
+        letter-spacing: 0.20em;
+    }
+
+
+    .site-header .header-cta {
+
+        width: 140px;
+        height: 49px;
+
+        padding: 6px 8px;
+
+        font-size: 10.5px;
+    }
+
+
+    .site-header .header-cta span {
+
+        max-width: 100px;
+    }
+
+
+    .site-header .header-cta strong {
+
+        font-size: 16px;
+    }
+
+
+    .site-header .menu-toggle {
+
+        width: 36px;
+        height: 40px;
+    }
+
+
+    .site-header .menu-toggle span {
+
+        width: 27px;
+    }
+
+
+    .site-header #mobileNav {
+
+        top: 88px;
+    }
+
+
+    .hero-content {
+
+        transform: translateY(-60px);
+    }
+
+}
