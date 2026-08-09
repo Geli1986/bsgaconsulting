@@ -70,52 +70,67 @@ if ("IntersectionObserver" in window && fadeItems.length) {
 
 /* =========================================================
    MOBILE MENU
+   BSGA CONSULTING
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
 
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileNav = document.getElementById("mobileNav");
+if (menuToggle && mobileNav) {
 
-    if (!menuToggle || !mobileNav) {
-        return;
-    }
+    menuToggle.addEventListener("click", function (event) {
 
+        event.preventDefault();
+        event.stopPropagation();
 
-    menuToggle.addEventListener("click", function () {
+        const isOpen = mobileNav.classList.contains("open");
 
-        const isOpen =
-            menuToggle.classList.toggle("active");
+        if (isOpen) {
 
-        mobileNav.classList.toggle("open");
+            mobileNav.classList.remove("open");
+            menuToggle.classList.remove("active");
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen ? "true" : "false"
-        );
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
 
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
-        );
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        } else {
+
+            mobileNav.classList.add("open");
+            menuToggle.classList.add("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close navigation menu"
+            );
+
+        }
 
     });
 
 
-    /* Close menu when clicking a navigation link */
+    /* Close menu after selecting a page */
 
     const mobileLinks =
         mobileNav.querySelectorAll("a");
 
-    mobileLinks.forEach(link => {
+    mobileLinks.forEach(function (link) {
 
         link.addEventListener("click", function () {
 
-            menuToggle.classList.remove("active");
-
             mobileNav.classList.remove("open");
+            menuToggle.classList.remove("active");
 
             menuToggle.setAttribute(
                 "aria-expanded",
@@ -131,27 +146,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-});
-
-
-/* =========================================================
-   ACTIVE MENU
-   ========================================================= */
-
-const links = document.querySelectorAll("#mobileNav a");
-
-links.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        links.forEach(item => {
-
-            item.classList.remove("active");
-
-        });
-
-        link.classList.add("active");
-
-    });
-
-});
+}
