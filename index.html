@@ -21,6 +21,10 @@
     <meta name="robots"
           content="index,follow">
 
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -28,11 +32,13 @@
           href="https://fonts.gstatic.com"
           crossorigin>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+          rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- =====================================================
+         STYLES
+    ====================================================== -->
 
     <link rel="stylesheet"
           href="css/styles.css">
@@ -42,36 +48,57 @@
 
 </head>
 
+
 <body>
+
+
+<!-- =======================================================
+HEADER
+======================================================= -->
 
 <header class="site-header">
 
     <div class="container header-container">
 
+
         <!-- LOGO -->
-        <a href="index.html" class="logo">
+
+        <a href="index.html"
+           class="logo"
+           aria-label="BSGA Consulting home">
+
             BSGA
+
         </a>
 
 
-        <!-- CONSULTATION BUTTON -->
-        <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-           class="header-cta">
+        <!-- CONSULTATION CTA -->
 
-            <span>Schedule a Consultation</span>
-            <strong>→</strong>
+        <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+           class="header-cta"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <span>
+                Schedule a Consultation
+            </span>
+
+            <strong>
+                →
+            </strong>
 
         </a>
 
 
         <!-- MOBILE MENU BUTTON -->
+
         <button
             type="button"
             class="menu-toggle"
             id="menuToggle"
             aria-label="Open navigation menu"
             aria-expanded="false"
-            onclick="toggleMobileMenu()">
+            aria-controls="mobileNav">
 
             <span></span>
             <span></span>
@@ -80,25 +107,35 @@
         </button>
 
 
-        <!-- NAVIGATION -->
-        <nav id="mobileNav" aria-hidden="true">
+        <!-- MOBILE NAVIGATION -->
+
+        <nav id="mobileNav"
+             aria-hidden="true">
 
             <ul>
 
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">
+                        Home
+                    </a>
                 </li>
 
                 <li>
-                    <a href="services.html">Services</a>
+                    <a href="services.html">
+                        Services
+                    </a>
                 </li>
 
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="about.html">
+                        About
+                    </a>
                 </li>
 
                 <li>
-                    <a href="contact.html">Contact</a>
+                    <a href="contact.html">
+                        Contact
+                    </a>
                 </li>
 
             </ul>
@@ -110,59 +147,104 @@
 </header>
 
 
+<!-- =======================================================
+MAIN
+======================================================= -->
+
 <main>
+
+
+<!-- =======================================================
+HERO
+======================================================= -->
 
 <section class="hero">
 
     <div class="hero-overlay"></div>
 
+
     <div class="container hero-container">
+
 
         <div class="hero-content">
 
- <div class="hero-brand-lockup">
 
-    <span class="hero-brand-name">
-        BSGA
-    </span>
+            <!-- BRAND LOCKUP -->
 
-    <span class="hero-brand-divider"></span>
+            <div class="hero-brand-lockup">
 
-    <span class="hero-brand-type">
-        CONSULTING
-    </span>
+                <span class="hero-brand-name">
+                    BSGA
+                </span>
 
-</div>
+                <span class="hero-brand-divider"></span>
 
-            <h1>
-                Strategic clarity.<br>
-                Measurable results.
-            </h1>
-
-            <p class="hero-lead">
-                Helping organisations improve operational performance,
-                deliver projects successfully and adopt Artificial
-                Intelligence with confidence.
-            </p>
-
-            <div class="hero-actions">
-
-                <a href="services.html" class="hero-button hero-button-primary">
-                    Explore Our Expertise
-                    <span>→</span>
-                </a>
-
-                <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-   class="hero-button hero-button-secondary"
-   target="_blank"
-   rel="noopener noreferrer">
-    Schedule a Consultation
-    <span>→</span>
-</a>
+                <span class="hero-brand-type">
+                    CONSULTING
+                </span>
 
             </div>
 
+
+            <!-- MAIN HEADLINE -->
+
+            <h1>
+
+                Strategic clarity.<br>
+                Measurable results.
+
+            </h1>
+
+
+            <!-- HERO DESCRIPTION -->
+
+            <p class="hero-lead">
+
+                Helping organisations improve operational performance,
+                deliver projects successfully and adopt Artificial
+                Intelligence with confidence.
+
+            </p>
+
+
+            <!-- HERO ACTIONS -->
+
+            <div class="hero-actions">
+
+
+                <a href="services.html"
+                   class="hero-button hero-button-primary">
+
+                    Explore Our Expertise
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+                <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                   class="hero-button hero-button-secondary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    Schedule a Consultation
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+
         </div>
+
+
+        <!-- DECORATIVE HERO BRAND -->
 
         <div class="hero-brand">
 
@@ -182,21 +264,27 @@
 
         </div>
 
+
     </div>
 
 </section>
-    
+
+
 <!-- =======================================================
 SERVICES
 ======================================================= -->
 
-<section id="services" class="services">
+<section id="services"
+         class="services">
 
     <div class="container">
 
+
         <div class="section-title">
 
-            <span>WHAT WE DO</span>
+            <span>
+                WHAT WE DO
+            </span>
 
             <h2>
 
@@ -216,16 +304,23 @@ SERVICES
 
         </div>
 
+
         <div class="services-grid">
+
+
+            <!-- PROJECT MANAGEMENT -->
 
             <article class="service-card">
 
                 <img src="images/services/project-management.webp"
-                     alt="Project Management">
+                     alt="Project Management"
+                     loading="lazy">
 
                 <div class="service-content">
 
-                    <h3>Project Management</h3>
+                    <h3>
+                        Project Management
+                    </h3>
 
                     <p>
 
@@ -236,23 +331,27 @@ SERVICES
                     </p>
 
                     <a href="services.html">
-
                         Learn More →
-
                     </a>
 
                 </div>
 
             </article>
 
+
+            <!-- ARTIFICIAL INTELLIGENCE -->
+
             <article class="service-card">
 
                 <img src="images/services/ai-adoption.webp"
-                     alt="Artificial Intelligence">
+                     alt="Artificial Intelligence"
+                     loading="lazy">
 
                 <div class="service-content">
 
-                    <h3>Artificial Intelligence</h3>
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
 
                     <p>
 
@@ -263,23 +362,27 @@ SERVICES
                     </p>
 
                     <a href="services.html">
-
                         Learn More →
-
                     </a>
 
                 </div>
 
             </article>
 
+
+            <!-- BUSINESS TRANSFORMATION -->
+
             <article class="service-card">
 
                 <img src="images/services/business-transformation.webp"
-                     alt="Business Transformation">
+                     alt="Business Transformation"
+                     loading="lazy">
 
                 <div class="service-content">
 
-                    <h3>Business Transformation</h3>
+                    <h3>
+                        Business Transformation
+                    </h3>
 
                     <p>
 
@@ -290,295 +393,289 @@ SERVICES
                     </p>
 
                     <a href="services.html">
-
                         Learn More →
-
                     </a>
 
                 </div>
 
             </article>
 
+
         </div>
 
     </div>
 
 </section>
+
+
 <!-- =======================================================
 WHY BSGA
 ======================================================= -->
 
-<section id="why" class="why">
+<section id="why"
+         class="why">
 
-<div class="container">
+    <div class="container">
 
-<div class="why-grid">
+        <div class="why-grid">
 
-<div class="why-left">
 
-<span class="section-kicker">
+            <div class="why-left">
 
-WHY BSGA
+                <span class="section-kicker">
+                    WHY BSGA
+                </span>
 
-</span>
+                <h2>
 
-<h2>
+                    Built for organisations
+                    that value execution.
 
-Built for organisations
-that value execution.
+                </h2>
 
-</h2>
+                <p>
 
-<p>
+                    We combine strategic thinking,
+                    delivery excellence and Artificial
+                    Intelligence to help organisations
+                    create sustainable business value.
 
-We combine strategic thinking,
-delivery excellence and Artificial
-Intelligence to help organisations
-create sustainable business value.
+                </p>
 
-</p>
+            </div>
 
-</div>
 
-<div class="why-right">
+            <div class="why-right">
 
-<div class="why-item">
 
-<h3>
+                <div class="why-item">
 
-Strategic Thinking
+                    <h3>
+                        Strategic Thinking
+                    </h3>
 
-</h3>
+                    <p>
 
-<p>
+                        Clear direction supported by practical
+                        recommendations and measurable outcomes.
 
-Clear direction supported by practical
-recommendations and measurable outcomes.
+                    </p>
 
-</p>
+                </div>
 
-</div>
 
-<div class="why-item">
+                <div class="why-item">
 
-<h3>
+                    <h3>
+                        Project Delivery
+                    </h3>
 
-Project Delivery
+                    <p>
 
-</h3>
+                        Experienced governance,
+                        PMO leadership and stakeholder
+                        management.
 
-<p>
+                    </p>
 
-Experienced governance,
-PMO leadership and stakeholder
-management.
+                </div>
 
-</p>
 
-</div>
+                <div class="why-item">
 
-<div class="why-item">
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
 
-<h3>
+                    <p>
 
-Artificial Intelligence
+                        Practical adoption focused on
+                        business value rather than hype.
 
-</h3>
+                    </p>
 
-<p>
+                </div>
 
-Practical adoption focused on
-business value rather than hype.
 
-</p>
+                <div class="why-item">
 
-</div>
+                    <h3>
+                        Long-term Partnership
+                    </h3>
 
-<div class="why-item">
+                    <p>
 
-<h3>
+                        Supporting organisations beyond
+                        delivery through continuous
+                        improvement.
 
-Long-term Partnership
+                    </p>
 
-</h3>
+                </div>
 
-<p>
 
-Supporting organisations beyond
-delivery through continuous
-improvement.
+            </div>
 
-</p>
+        </div>
 
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
+
 <!-- =======================================================
 OUR APPROACH
 ======================================================= -->
 
-<section id="approach" class="approach">
+<section id="approach"
+         class="approach">
 
-<div class="container">
+    <div class="container">
 
-<div class="approach-layout">
+        <div class="approach-layout">
 
-<div class="approach-image">
 
-<img
-src="images/approach/approach.webp"
-alt="Our consulting methodology">
+            <div class="approach-image">
 
-</div>
+                <img
+                    src="images/approach/approach.webp"
+                    alt="Our consulting methodology"
+                    loading="lazy">
 
-<div class="approach-content">
+            </div>
 
-<span class="section-kicker">
 
-OUR APPROACH
+            <div class="approach-content">
 
-</span>
+                <span class="section-kicker">
+                    OUR APPROACH
+                </span>
 
-<h2>
+                <h2>
 
-A structured methodology
-focused on measurable results.
+                    A structured methodology
+                    focused on measurable results.
 
-</h2>
+                </h2>
 
-<p>
+                <p>
 
-Every engagement follows a proven
-framework designed to minimise risk,
-improve execution and maximise value.
+                    Every engagement follows a proven
+                    framework designed to minimise risk,
+                    improve execution and maximise value.
 
-</p>
+                </p>
 
-<div class="timeline">
 
-<div class="timeline-item">
+                <div class="timeline">
 
-<div class="number">
 
-01
+                    <div class="timeline-item">
 
-</div>
+                        <div class="number">
+                            01
+                        </div>
 
-<div>
+                        <div>
 
-<h3>
+                            <h3>
+                                Discover
+                            </h3>
 
-Discover
+                            <p>
 
-</h3>
+                                Understand the business,
+                                people and strategic objectives.
 
-<p>
+                            </p>
 
-Understand the business,
-people and strategic objectives.
+                        </div>
 
-</p>
+                    </div>
 
-</div>
 
-</div>
+                    <div class="timeline-item">
 
-<div class="timeline-item">
+                        <div class="number">
+                            02
+                        </div>
 
-<div class="number">
+                        <div>
 
-02
+                            <h3>
+                                Design
+                            </h3>
 
-</div>
+                            <p>
 
-<div>
+                                Build a realistic roadmap
+                                aligned with business priorities.
 
-<h3>
+                            </p>
 
-Design
+                        </div>
 
-</h3>
+                    </div>
 
-<p>
 
-Build a realistic roadmap
-aligned with business priorities.
+                    <div class="timeline-item">
 
-</p>
+                        <div class="number">
+                            03
+                        </div>
 
-</div>
+                        <div>
 
-</div>
+                            <h3>
+                                Deliver
+                            </h3>
 
-<div class="timeline-item">
+                            <p>
 
-<div class="number">
+                                Execute with governance,
+                                quality and transparency.
 
-03
+                            </p>
 
-</div>
+                        </div>
 
-<div>
+                    </div>
 
-<h3>
 
-Deliver
+                    <div class="timeline-item">
 
-</h3>
+                        <div class="number">
+                            04
+                        </div>
 
-<p>
+                        <div>
 
-Execute with governance,
-quality and transparency.
+                            <h3>
+                                Improve
+                            </h3>
 
-</p>
+                            <p>
 
-</div>
+                                Measure outcomes and
+                                drive continuous improvement.
 
-</div>
+                            </p>
 
-<div class="timeline-item">
+                        </div>
 
-<div class="number">
+                    </div>
 
-04
 
-</div>
+                </div>
 
-<div>
+            </div>
 
-<h3>
+        </div>
 
-Improve
-
-</h3>
-
-<p>
-
-Measure outcomes and
-drive continuous improvement.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
+
 
 <!-- =======================================================
 CTA
@@ -591,9 +688,7 @@ CTA
         <div class="cta-box">
 
             <span class="section-kicker">
-
                 LET'S TALK
-
             </span>
 
             <h2>
@@ -604,19 +699,24 @@ CTA
 
             <p>
 
-                Let's discuss your objectives and explore how BSGA Consulting
-                can support your next strategic initiative.
+                Let's discuss your objectives and explore how
+                BSGA Consulting can support your next strategic initiative.
 
             </p>
 
+
             <div class="cta-buttons">
 
-                <a href="contact.html"
-                   class="button">
+
+                <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                   class="button"
+                   target="_blank"
+                   rel="noopener noreferrer">
 
                     Schedule a Consultation
 
                 </a>
+
 
                 <a href="services.html"
                    class="button-secondary">
@@ -624,6 +724,7 @@ CTA
                     Explore Services
 
                 </a>
+
 
             </div>
 
@@ -633,110 +734,235 @@ CTA
 
 </section>
 
+
 </main>
+
+
+<!-- =======================================================
+FOOTER
+======================================================= -->
 
 <footer class="footer">
 
-<div class="container">
+    <div class="container">
 
-<div class="footer-grid">
+        <div class="footer-grid">
 
-<div>
 
-<img
-src="images/logos/logo-white.png"
-class="footer-logo"
-alt="BSGA Consulting">
+            <!-- FOOTER BRAND -->
 
-<p>
+            <div>
 
-Helping organisations improve
-operational performance,
-deliver strategic projects
-and adopt Artificial Intelligence
-with confidence.
+                <img
+                    src="images/logos/logo-white.png"
+                    class="footer-logo"
+                    alt="BSGA Consulting"
+                    loading="lazy">
 
-</p>
+                <p>
 
-</div>
+                    Helping organisations improve
+                    operational performance,
+                    deliver strategic projects
+                    and adopt Artificial Intelligence
+                    with confidence.
 
-<div>
+                </p>
 
-<h4>
+            </div>
 
-Navigation
 
-</h4>
+            <!-- NAVIGATION -->
 
-<a href="index.html">
+            <div>
 
-Home
+                <h4>
+                    Navigation
+                </h4>
 
-</a>
+                <a href="index.html">
+                    Home
+                </a>
 
-<a href="services.html">
+                <a href="services.html">
+                    Services
+                </a>
 
-Services
+                <a href="about.html">
+                    About
+                </a>
 
-</a>
+                <a href="insights.html">
+                    Insights
+                </a>
 
-<a href="about.html">
+                <a href="contact.html">
+                    Contact
+                </a>
 
-About
+            </div>
 
-</a>
 
-<a href="insights.html">
+            <!-- CONTACT -->
 
-Insights
+            <div>
 
-</a>
+                <h4>
+                    Contact
+                </h4>
 
-<a href="contact.html">
+                <a href="mailto:info@bsgaconsulting.es">
 
-Contact
+                    info@bsgaconsulting.es
 
-</a>
+                </a>
 
-</div>
+                <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                   target="_blank"
+                   rel="noopener noreferrer">
 
-<div>
+                    Book a Consultation
 
-<h4>
+                </a>
 
-Contact
+            </div>
 
-</h4>
 
-<a href="mailto:info@bsgaconsulting.es">
+        </div>
 
-info@bsgaconsulting.es
 
-</a>
+        <div class="footer-bottom">
 
-<a href="#contact">
+            © 2026 BSGA Consulting.
+            All Rights Reserved.
 
-Book a Consultation
+        </div>
 
-</a>
-
-</div>
-
-</div>
-
-<div class="footer-bottom">
-
-© 2026 BSGA Consulting.
-All Rights Reserved.
-
-</div>
-
-</div>
+    </div>
 
 </footer>
+
+
+<!-- =======================================================
+MAIN JAVASCRIPT
+======================================================= -->
+
 <script src="js/main.js"></script>
 
-</body>
 
-</html>
+<!-- =======================================================
+MOBILE MENU + PAGE FUNCTIONS
+======================================================= -->
 
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mobileNav =
+        document.getElementById("mobileNav");
+
+
+    if (menuToggle && mobileNav) {
+
+
+        menuToggle.addEventListener("click", function () {
+
+
+            const isOpen =
+                mobileNav.classList.contains("open");
+
+
+            if (isOpen) {
+
+                mobileNav.classList.remove("open");
+
+                menuToggle.classList.remove("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+                mobileNav.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+
+            } else {
+
+                mobileNav.classList.add("open");
+
+                menuToggle.classList.add("active");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Close navigation menu"
+                );
+
+                mobileNav.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+            }
+
+        });
+
+
+        /* CLOSE MENU WHEN LINK IS CLICKED */
+
+        const mobileLinks =
+            mobileNav.querySelectorAll("a");
+
+
+        mobileLinks.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mobileNav.classList.remove("open");
+
+                    menuToggle.classList.remove("active");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                    mobileNav.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                }
+            );
+
+        });
+
+
+        /* CLOSE MENU WHEN CL
