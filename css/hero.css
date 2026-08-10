@@ -1830,3 +1830,45 @@
     }
 
 }
+/* =========================================================
+   HOME — HERO TYPOGRAPHY
+========================================================= */
+
+.hero h1 {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: clamp(4rem, 6.2vw, 6.6rem);
+
+    font-weight: 700;
+
+    line-height: .94;
+
+    letter-spacing: -.065em;
+
+    color: #FFFFFF;
+
+    max-width: 1050px;
+
+    margin: 0 0 30px;
+
+}
+
+
+.hero p {
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    letter-spacing: -.01em;
+
+    color: rgba(255,255,255,.68);
+
+    max-width: 780px;
+
+}
