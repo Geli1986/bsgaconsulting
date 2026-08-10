@@ -8,64 +8,24 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-
-    <!-- =====================================================
-         SEO
-    ====================================================== -->
-
     <title>
-        AI Consulting | AI Strategy & Adoption | BSGA Consulting
+        Services | BSGA Consulting
     </title>
 
     <meta name="description"
-          content="BSGA Consulting helps organisations develop AI strategy, identify high-value use cases, adopt Artificial Intelligence, improve productivity and establish practical AI governance.">
+          content="BSGA Consulting helps organisations improve operational performance, deliver projects successfully, adopt Artificial Intelligence and achieve sustainable business transformation.">
 
-    <meta name="theme-color"
-          content="#000000">
+    <meta name="keywords"
+          content="Business Consulting, Operational Excellence, Project Management, AI Consulting, Business Transformation">
+
+    <meta name="author"
+          content="BSGA Consulting">
 
     <meta name="robots"
           content="index,follow">
 
     <link rel="canonical"
-          href="https://bsgaconsulting.es/artificial-intelligence">
-
-
-    <!-- =====================================================
-         OPEN GRAPH
-    ====================================================== -->
-
-    <meta property="og:type"
-          content="website">
-
-    <meta property="og:title"
-          content="AI Consulting | AI Strategy & Adoption | BSGA Consulting">
-
-    <meta property="og:description"
-          content="Practical AI consulting focused on strategy, use cases, adoption, productivity, automation and responsible AI governance.">
-
-    <meta property="og:url"
-          content="https://bsgaconsulting.es/artificial-intelligence">
-
-    <meta property="og:site_name"
-          content="BSGA Consulting">
-
-    <meta property="og:image"
-          content="https://bsgaconsulting.es/images/logos/logo-white.png">
-
-
-    <!-- =====================================================
-         TWITTER / X
-    ====================================================== -->
-
-    <meta name="twitter:card"
-          content="summary_large_image">
-
-    <meta name="twitter:title"
-          content="AI Consulting | AI Strategy & Adoption | BSGA Consulting">
-
-    <meta name="twitter:description"
-          content="AI strategy, adoption, use cases, productivity, automation and governance for organisations seeking measurable business value.">
-
+          href="https://bsgaconsulting.es/services">
 
     <!-- =====================================================
          FONTS
@@ -79,7 +39,7 @@
           crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
         rel="stylesheet">
 
 
@@ -93,16 +53,6 @@
     >
 
 
-    <!-- =====================================================
-         AI PAGE CSS
-    ====================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="css/artificial-intelligence.css"
-    >
-
-
     <link
         rel="icon"
         href="images/logos/favicon.png"
@@ -110,44 +60,21 @@
 
 
     <!-- =====================================================
-         PROFESSIONAL SERVICE SCHEMA
+         SEO SCHEMA
     ====================================================== -->
 
     <script type="application/ld+json">
 
     {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "BSGA Consulting",
-        "url": "https://bsgaconsulting.es/",
-        "logo": "https://bsgaconsulting.es/images/logos/logo-white.png",
-        "description": "BSGA Consulting provides AI consulting, AI strategy, AI adoption, Artificial Intelligence use case development, productivity and AI governance support.",
-        "areaServed": "Worldwide",
-        "serviceType": [
-            "AI Consulting",
-            "AI Strategy",
-            "AI Adoption",
-            "Artificial Intelligence Consulting",
-            "AI Governance",
-            "AI Training"
-        ]
-    }
+        "@type": "CollectionPage",
 
-    </script>
+        "name": "BSGA Consulting Services",
 
+        "url": "https://bsgaconsulting.es/services",
 
-    <!-- =====================================================
-         WEB PAGE SCHEMA
-    ====================================================== -->
+        "description": "Consulting services covering operational excellence, project management, artificial intelligence and business transformation.",
 
-    <script type="application/ld+json">
-
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "AI Consulting | AI Strategy & Adoption",
-        "url": "https://bsgaconsulting.es/artificial-intelligence",
-        "description": "AI consulting focused on strategy, use cases, adoption, productivity, automation and responsible AI governance.",
         "isPartOf": {
             "@type": "WebSite",
             "name": "BSGA Consulting",
@@ -157,62 +84,26 @@
 
     </script>
 
-
-    <!-- =====================================================
-         BREADCRUMB SCHEMA
-    ====================================================== -->
-
-    <script type="application/ld+json">
-
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://bsgaconsulting.es/"
-            },
-
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Services",
-                "item": "https://bsgaconsulting.es/services"
-            },
-
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "AI Consulting",
-                "item": "https://bsgaconsulting.es/artificial-intelligence"
-            }
-
-        ]
-    }
-
-    </script>
-
 </head>
 
 
-<body class="ai-page">
+<body class="services-page">
 
 
-<!-- =========================================================
-HEADER
-========================================================= -->
+<!-- =======================================================
+     HEADER
+======================================================= -->
 
-<header class="ai-header">
+<header class="site-header">
 
-    <div class="ai-header-inner">
+    <div class="header-container">
 
+
+        <!-- LOGO -->
 
         <a
-            href="/"
-            class="ai-logo"
+            href="index.html"
+            class="site-logo"
             aria-label="BSGA Consulting Home"
         >
 
@@ -224,40 +115,44 @@ HEADER
         </a>
 
 
+        <!-- NAVIGATION -->
+
         <nav
-            class="ai-navigation"
+            class="main-navigation"
             aria-label="Main navigation"
         >
 
-            <a href="/">
+            <a href="index.html">
                 Home
             </a>
 
             <a
-                href="/services"
+                href="services.html"
                 class="active"
             >
                 Services
             </a>
 
-            <a href="/about">
+            <a href="about.html">
                 About
             </a>
 
-            <a href="/insights">
+            <a href="insights.html">
                 Insights
             </a>
 
-            <a href="/contact">
+            <a href="contact.html">
                 Contact
             </a>
 
         </nav>
 
 
+        <!-- HEADER CTA -->
+
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-            class="hero-button hero-button-secondary"
+            class="header-cta"
             target="_blank"
             rel="noopener noreferrer"
         >
@@ -271,1129 +166,771 @@ HEADER
         </a>
 
 
+        <!-- MOBILE MENU -->
+
+        <button
+            id="menuToggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
     </div>
 
+
+    <!-- MOBILE NAVIGATION -->
+
+    <nav
+        id="mobileNav"
+        class="mobile-nav"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a
+            href="services.html"
+            class="active"
+        >
+            Services
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="insights.html">
+            Insights
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+
+        <a
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="mobile-nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            Schedule a Consultation →
+
+        </a>
+
+    </nav>
+
 </header>
+
 
 
 <main>
 
 
-<!-- =========================================================
-HERO
-========================================================= -->
+<!-- =======================================================
+     SERVICES HERO
+======================================================= -->
 
-<section class="ai-hero">
+<section class="services-hero">
 
-    <div class="ai-hero-glow"></div>
-
-    <div class="ai-hero-lines"></div>
+    <div class="services-hero-overlay"></div>
 
 
-    <div class="ai-container">
+    <div class="container services-hero-container">
 
 
-        <div class="ai-hero-content">
+        <div class="services-hero-content">
 
 
-            <a
-                href="/services"
-                class="ai-back"
-            >
-
-                ← Back to Services
-
-            </a>
-
-
-            <span class="ai-kicker">
-
-                AI CONSULTING
-
+            <span class="services-kicker">
+                OUR SERVICES
             </span>
 
 
             <h1>
-
-                AI consulting for organisations
-                ready to turn Artificial Intelligence
-                into business value.
-
+                Strategic expertise.
+                <br>
+                Practical execution.
             </h1>
 
 
             <p>
 
-                We help organisations develop practical AI strategies,
-                identify high-value use cases, support adoption and
-                establish responsible governance so Artificial Intelligence
-                creates measurable business value.
+                We help organisations improve performance,
+                deliver strategic projects and navigate
+                transformation with confidence.
 
             </p>
 
 
-            <div class="ai-hero-actions">
+            <div class="services-hero-actions">
+
+                <a
+                    href="#services"
+                    class="hero-button hero-button-primary"
+                >
+
+                    Explore Our Services
+
+                    <span>
+                        ↓
+                    </span>
+
+                </a>
 
 
                 <a
                     href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="ai-button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Discuss Your AI Strategy
-
-                </a>
-
-
-                <a
-                    href="#capabilities"
-                    class="ai-button ai-button-outline"
-                >
-
-                    Explore Our Capabilities
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-OVERVIEW
-========================================================= -->
-
-<section class="ai-overview">
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-overview-grid">
-
-
-            <div class="ai-overview-intro">
-
-
-                <span class="ai-blue-kicker">
-
-                    AI STRATEGY & ADOPTION
-
-                </span>
-
-
-                <h2>
-
-                    AI should solve real
-                    business problems.
-
-                </h2>
-
-
-            </div>
-
-
-            <div class="ai-overview-text">
-
-
-                <p>
-
-                    Artificial Intelligence is rapidly changing
-                    how organisations work. But successful AI adoption
-                    requires more than selecting a technology or
-                    experimenting with isolated tools.
-
-                </p>
-
-
-                <p>
-
-                    We help organisations understand where AI can
-                    create genuine value, prioritise opportunities
-                    and establish a practical roadmap for adoption.
-
-                </p>
-
-
-                <p>
-
-                    Our focus is simple: connect AI capabilities
-                    with business priorities, people and measurable
-                    outcomes.
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-CAPABILITIES
-========================================================= -->
-
-<section
-    id="capabilities"
-    class="ai-capabilities"
->
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-section-heading">
-
-
-            <span class="ai-blue-kicker">
-
-                AI CONSULTING SERVICES
-
-            </span>
-
-
-            <h2>
-
-                From AI strategy
-                to practical adoption.
-
-            </h2>
-
-
-            <p>
-
-                We help organisations move from AI interest
-                to structured, responsible and measurable
-                implementation.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="ai-capabilities-grid">
-
-
-            <article class="ai-capability">
-
-                <span class="ai-number">
-                    01
-                </span>
-
-                <h3>
-                    AI Strategy
-                </h3>
-
-                <p>
-
-                    Define where Artificial Intelligence can
-                    support strategic priorities and create
-                    meaningful business value.
-
-                </p>
-
-                <a href="/ai-strategy-consulting"
-                   class="learn-more">
-
-                    Explore AI Strategy →
-
-                </a>
-
-            </article>
-
-
-
-            <article class="ai-capability">
-
-                <span class="ai-number">
-                    02
-                </span>
-
-                <h3>
-                    AI Use Cases
-                </h3>
-
-                <p>
-
-                    Identify and prioritise practical use cases
-                    based on business impact, feasibility and
-                    organisational readiness.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="ai-capability">
-
-                <span class="ai-number">
-                    03
-                </span>
-
-                <h3>
-                    AI Adoption
-                </h3>
-
-                <p>
-
-                    Support teams in integrating AI into everyday
-                    workflows, processes and decision-making.
-
-                </p>
-
-                <a href="/ai-adoption"
-                   class="learn-more">
-
-                    Explore AI Adoption →
-
-                </a>
-
-            </article>
-
-
-
-            <article class="ai-capability">
-
-                <span class="ai-number">
-                    04
-                </span>
-
-                <h3>
-                    Productivity & Automation
-                </h3>
-
-                <p>
-
-                    Identify opportunities to improve productivity,
-                    automate repetitive activities and enhance
-                    knowledge work.
-
-                </p>
-
-                <a href="/ai-automation"
-                   class="learn-more">
-
-                    Explore AI Automation →
-
-                </a>
-
-            </article>
-
-
-
-            <article class="ai-capability">
-
-                <span class="ai-number">
-                    05
-                </span>
-
-                <h3>
-                    AI Governance
-                </h3>
-
-                <p>
-
-                    Establish practical principles, controls and
-                    responsibilities for responsible AI adoption.
-
-                </p>
-
-                <a href="/ai-governance-consulting"
-                   class="learn-more">
-
-                    Explore AI Governance →
-
-                </a>
-
-            </article>
-
-
-
-            <article class="ai-capability">
-
-                <span class="ai-number">
-                    06
-                </span>
-
-                <h3>
-                    AI Training
-                </h3>
-
-                <p>
-
-                    Help teams build the understanding, confidence
-                    and practical skills required to use AI effectively.
-
-                </p>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-USE CASES
-========================================================= -->
-
-<section class="ai-use-cases">
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-section-heading">
-
-
-            <span class="ai-blue-kicker">
-
-                PRACTICAL AI
-
-            </span>
-
-
-            <h2>
-
-                Where AI can create
-                measurable value.
-
-            </h2>
-
-
-            <p>
-
-                We focus on practical applications that improve
-                productivity, decision-making and operational
-                performance.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="ai-use-cases-grid">
-
-
-            <article class="ai-use-case">
-
-                <span>01</span>
-
-                <h3>
-                    Knowledge Management
-                </h3>
-
-                <p>
-
-                    Make organisational knowledge easier to
-                    find, understand and use.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="ai-use-case">
-
-                <span>02</span>
-
-                <h3>
-                    Process Automation
-                </h3>
-
-                <p>
-
-                    Reduce manual work and streamline repetitive
-                    processes through intelligent automation.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="ai-use-case">
-
-                <span>03</span>
-
-                <h3>
-                    Customer Operations
-                </h3>
-
-                <p>
-
-                    Improve responsiveness, service quality and
-                    customer-facing workflows.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="ai-use-case">
-
-                <span>04</span>
-
-                <h3>
-                    Management Intelligence
-                </h3>
-
-                <p>
-
-                    Support leaders with faster access to
-                    information, analysis and insights.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="ai-use-case">
-
-                <span>05</span>
-
-                <h3>
-                    Employee Productivity
-                </h3>
-
-                <p>
-
-                    Help teams work more efficiently by integrating
-                    AI into everyday knowledge-based activities.
-
-                </p>
-
-            </article>
-
-
-
-            <article class="ai-use-case">
-
-                <span>06</span>
-
-                <h3>
-                    Microsoft Copilot
-                </h3>
-
-                <p>
-
-                    Support organisations exploring practical
-                    adoption of Microsoft Copilot and related AI tools.
-
-                </p>
-
-                <a href="/microsoft-copilot-consulting"
-                   class="learn-more">
-
-                    Explore Copilot Consulting →
-
-                </a>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-AI ADOPTION ROADMAP
-========================================================= -->
-
-<section class="ai-roadmap">
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-section-heading">
-
-
-            <span class="ai-blue-kicker">
-
-                AI ADOPTION ROADMAP
-
-            </span>
-
-
-            <h2>
-
-                A practical path from
-                experimentation to scale.
-
-            </h2>
-
-
-            <p>
-
-                We structure AI adoption around business value,
-                organisational readiness and responsible implementation.
-
-            </p>
-
-
-        </div>
-
-
-
-        <div class="ai-roadmap-list">
-
-
-            <article class="ai-roadmap-item">
-
-                <span class="ai-roadmap-number">
-                    01
-                </span>
-
-                <div>
-
-                    <h3>
-                        Discover
-                    </h3>
-
-                    <p>
-
-                        Understand the organisation's priorities,
-                        challenges, capabilities and current use of AI.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="ai-roadmap-item">
-
-                <span class="ai-roadmap-number">
-                    02
-                </span>
-
-                <div>
-
-                    <h3>
-                        Prioritise
-                    </h3>
-
-                    <p>
-
-                        Evaluate opportunities and select use cases
-                        with the strongest combination of value and feasibility.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="ai-roadmap-item">
-
-                <span class="ai-roadmap-number">
-                    03
-                </span>
-
-                <div>
-
-                    <h3>
-                        Pilot
-                    </h3>
-
-                    <p>
-
-                        Test selected solutions in controlled
-                        environments and measure their impact.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="ai-roadmap-item">
-
-                <span class="ai-roadmap-number">
-                    04
-                </span>
-
-                <div>
-
-                    <h3>
-                        Adopt
-                    </h3>
-
-                    <p>
-
-                        Integrate successful use cases into
-                        workflows, teams and operating processes.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="ai-roadmap-item">
-
-                <span class="ai-roadmap-number">
-                    05
-                </span>
-
-                <div>
-
-                    <h3>
-                        Scale
-                    </h3>
-
-                    <p>
-
-                        Expand adoption, strengthen governance and
-                        continuously identify new opportunities.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-RESPONSIBLE AI
-========================================================= -->
-
-<section class="ai-governance">
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-governance-grid">
-
-
-            <div>
-
-
-                <span class="ai-blue-kicker">
-
-                    RESPONSIBLE AI
-
-                </span>
-
-
-                <h2>
-
-                    Innovation needs
-                    the right guardrails.
-
-                </h2>
-
-
-            </div>
-
-
-            <div>
-
-
-                <p>
-
-                    AI adoption should create value without
-                    compromising trust, security, accountability
-                    or organisational standards.
-
-                </p>
-
-
-                <p>
-
-                    We help organisations establish practical
-                    governance principles that support responsible
-                    experimentation and sustainable adoption.
-
-                </p>
-
-
-                <div class="ai-governance-points">
-
-
-                    <div>
-
-                        <span>01</span>
-
-                        <strong>
-                            Clear accountability
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>02</span>
-
-                        <strong>
-                            Responsible use
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>03</span>
-
-                        <strong>
-                            Risk awareness
-                        </strong>
-
-                    </div>
-
-
-                    <div>
-
-                        <span>04</span>
-
-                        <strong>
-                            Practical governance
-                        </strong>
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-WHAT CLIENTS GAIN
-========================================================= -->
-
-<section class="ai-results">
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-results-grid">
-
-
-            <div class="ai-results-intro">
-
-
-                <span class="ai-blue-kicker">
-
-                    WHAT CLIENTS GAIN
-
-                </span>
-
-
-                <h2>
-
-                    AI adoption focused
-                    on business outcomes.
-
-                </h2>
-
-
-                <p>
-
-                    The objective is not to adopt AI for its own sake,
-                    but to build practical capabilities that improve
-                    the way your organisation works.
-
-                </p>
-
-
-            </div>
-
-
-
-            <div class="ai-results-list">
-
-
-                <article class="ai-result">
-
-                    <span>01</span>
-
-                    <h3>
-                        Clear AI priorities
-                    </h3>
-
-                    <p>
-
-                        A structured view of where AI can create
-                        the greatest value for your organisation.
-
-                    </p>
-
-                </article>
-
-
-
-                <article class="ai-result">
-
-                    <span>02</span>
-
-                    <h3>
-                        Practical use cases
-                    </h3>
-
-                    <p>
-
-                        Concrete opportunities connected to real
-                        business problems and measurable outcomes.
-
-                    </p>
-
-                </article>
-
-
-
-                <article class="ai-result">
-
-                    <span>03</span>
-
-                    <h3>
-                        Confident teams
-                    </h3>
-
-                    <p>
-
-                        People equipped to understand and use AI
-                        effectively within their roles.
-
-                    </p>
-
-                </article>
-
-
-
-                <article class="ai-result">
-
-                    <span>04</span>
-
-                    <h3>
-                        Sustainable adoption
-                    </h3>
-
-                    <p>
-
-                        Governance and operating practices that
-                        support responsible AI adoption over time.
-
-                    </p>
-
-                </article>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-WHY BSGA
-========================================================= -->
-
-<section class="ai-why">
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-why-grid">
-
-
-            <div>
-
-
-                <span class="ai-blue-kicker">
-
-                    WHY BSGA
-
-                </span>
-
-
-                <h2>
-
-                    Technology is only
-                    valuable when people
-                    can use it effectively.
-
-                </h2>
-
-
-            </div>
-
-
-            <div>
-
-
-                <p>
-
-                    We combine business transformation experience
-                    with practical AI adoption to help organisations
-                    focus on value rather than technology for its own sake.
-
-                </p>
-
-
-                <p>
-
-                    Our approach connects strategy, processes, people
-                    and technology so AI becomes part of how the
-                    organisation operates.
-
-                </p>
-
-
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="ai-button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Discuss Your AI Strategy
-
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-CTA
-========================================================= -->
-
-<section class="ai-cta">
-
-
-    <div class="ai-container">
-
-
-        <div class="ai-cta-box">
-
-
-            <span class="ai-blue-kicker">
-
-                LET'S TALK
-
-            </span>
-
-
-            <h2>
-
-                Ready to turn AI
-                into business value?
-
-            </h2>
-
-
-            <p>
-
-                Tell us about your organisation, your AI ambitions
-                or the challenges you are trying to solve.
-                Let's explore where AI can make a difference.
-
-            </p>
-
-
-            <div class="ai-cta-actions">
-
-
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="ai-button"
+                    class="hero-button hero-button-secondary"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
 
                     Schedule a Consultation
 
-                </a>
-
-
-                <a
-                    href="mailto:info@bsgaconsulting.es"
-                    class="ai-email"
-                >
-
-                    info@bsgaconsulting.es
+                    <span>
+                        →
+                    </span>
 
                 </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     INTRO
+======================================================= -->
+
+<section class="services-intro">
+
+    <div class="container">
+
+
+        <div class="services-intro-grid">
+
+
+            <div>
+
+                <span class="section-kicker">
+                    WHAT WE DO
+                </span>
+
+                <h2>
+                    Helping organisations
+                    turn complexity into
+                    measurable progress.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+
+                    BSGA Consulting combines strategic
+                    thinking with practical execution.
+
+                    We work with organisations that need
+                    greater clarity, stronger execution
+                    and sustainable business improvement.
+
+                </p>
+
+                <p>
+
+                    Our services are designed to address
+                    the challenges that sit between strategy
+                    and results — from operational performance
+                    and project delivery to Artificial Intelligence
+                    and business transformation.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     SERVICES
+======================================================= -->
+
+<section
+    id="services"
+    class="services-overview"
+>
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+
+            <span>
+                OUR EXPERTISE
+            </span>
+
+
+            <h2>
+                Four areas of expertise.
+                One focus on results.
+            </h2>
+
+
+            <p>
+
+                Practical consulting support designed
+                around your organisation's priorities,
+                challenges and ambitions.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+            <!-- =================================================
+                 OPERATIONAL EXCELLENCE
+            ================================================== -->
+
+            <article class="service-card">
+
+
+                <div class="service-card-number">
+                    01
+                </div>
+
+
+                <div class="service-card-content">
+
+
+                    <span class="service-card-kicker">
+                        PERFORMANCE
+                    </span>
+
+
+                    <h3>
+                        Operational Excellence
+                    </h3>
+
+
+                    <p>
+
+                        Improve efficiency, streamline
+                        business processes and strengthen
+                        operational performance through
+                        structured continuous improvement.
+
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Process improvement
+                        </li>
+
+                        <li>
+                            Operational efficiency
+                        </li>
+
+                        <li>
+                            Performance improvement
+                        </li>
+
+                        <li>
+                            Continuous improvement
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="operational-excellence.html"
+                        class="service-link"
+                    >
+
+                        Explore Operational Excellence
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 PROJECT MANAGEMENT
+            ================================================== -->
+
+            <article class="service-card">
+
+
+                <div class="service-card-number">
+                    02
+                </div>
+
+
+                <div class="service-card-content">
+
+
+                    <span class="service-card-kicker">
+                        DELIVERY
+                    </span>
+
+
+                    <h3>
+                        Project Management
+                    </h3>
+
+
+                    <p>
+
+                        Deliver strategic projects successfully
+                        through robust governance, planning,
+                        stakeholder management and disciplined
+                        execution.
+
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Project governance
+                        </li>
+
+                        <li>
+                            PMO support
+                        </li>
+
+                        <li>
+                            Delivery assurance
+                        </li>
+
+                        <li>
+                            Stakeholder management
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="project-management.html"
+                        class="service-link"
+                    >
+
+                        Explore Project Management
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 ARTIFICIAL INTELLIGENCE
+            ================================================== -->
+
+            <article class="service-card">
+
+
+                <div class="service-card-number">
+                    03
+                </div>
+
+
+                <div class="service-card-content">
+
+
+                    <span class="service-card-kicker">
+                        INNOVATION
+                    </span>
+
+
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
+
+
+                    <p>
+
+                        Adopt Artificial Intelligence
+                        responsibly and turn emerging
+                        technologies into practical,
+                        measurable business value.
+
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            AI strategy
+                        </li>
+
+                        <li>
+                            AI use cases
+                        </li>
+
+                        <li>
+                            AI adoption
+                        </li>
+
+                        <li>
+                            Responsible AI governance
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="artificial-intelligence.html"
+                        class="service-link"
+                    >
+
+                        Explore AI Consulting
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 BUSINESS TRANSFORMATION
+            ================================================== -->
+
+            <article class="service-card">
+
+
+                <div class="service-card-number">
+                    04
+                </div>
+
+
+                <div class="service-card-content">
+
+
+                    <span class="service-card-kicker">
+                        TRANSFORMATION
+                    </span>
+
+
+                    <h3>
+                        Business Transformation
+                    </h3>
+
+
+                    <p>
+
+                        Support organisations through
+                        strategic transformation, operational
+                        change and sustainable business growth.
+
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Transformation strategy
+                        </li>
+
+                        <li>
+                            Change management
+                        </li>
+
+                        <li>
+                            Operating model improvement
+                        </li>
+
+                        <li>
+                            Sustainable growth
+                        </li>
+
+                    </ul>
+
+
+                    <a
+                        href="business-transformation.html"
+                        class="service-link"
+                    >
+
+                        Explore Business Transformation
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     HOW WE HELP
+======================================================= -->
+
+<section class="services-approach">
+
+
+    <div class="container">
+
+
+        <div class="services-approach-grid">
+
+
+            <div>
+
+                <span class="section-kicker">
+                    OUR APPROACH
+                </span>
+
+
+                <h2>
+                    Strategy only matters
+                    when it leads to action.
+                </h2>
+
+
+                <p>
+
+                    Our approach connects strategic clarity
+                    with practical execution. We focus on
+                    what needs to change, how to implement it
+                    and how to measure whether it is working.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="approach-points">
+
+
+                <div class="approach-point">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+
+                            We clarify your objectives,
+                            challenges and priorities.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="approach-point">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Define
+                        </h3>
+
+                        <p>
+
+                            We identify practical opportunities
+                            and define a focused path forward.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="approach-point">
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Execute
+                        </h3>
+
+                        <p>
+
+                            We support implementation and
+                            disciplined delivery.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="approach-point">
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Measure
+                        </h3>
+
+                        <p>
+
+                            We focus on tangible outcomes
+                            and measurable business value.
+
+                        </p>
+
+                    </div>
+
+                </div>
 
 
             </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =======================================================
+     CTA
+======================================================= -->
+
+<section class="services-cta">
+
+    <div class="container">
+
+
+        <div class="services-cta-box">
+
+
+            <div>
+
+                <span class="section-kicker">
+                    START A CONVERSATION
+                </span>
+
+
+                <h2>
+                    Let's discuss what
+                    your organisation needs next.
+                </h2>
+
+
+                <p>
+
+                    A short conversation is often the
+                    best place to start.
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                class="hero-button hero-button-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                Schedule a Consultation
+
+                <span>
+                    →
+                </span>
+
+            </a>
 
 
         </div>
@@ -1407,74 +944,65 @@ CTA
 
 
 
-<!-- =========================================================
-FOOTER
-========================================================= -->
+<!-- =======================================================
+     FOOTER
+======================================================= -->
 
-<footer class="ai-footer">
+<footer class="site-footer">
 
-
-    <div class="ai-container">
-
-
-        <div class="ai-footer-grid">
+    <div class="container">
 
 
-            <div class="ai-footer-brand">
+        <div class="footer-grid">
 
+
+            <div class="footer-brand">
 
                 <img
                     src="images/logos/logo-white.png"
                     alt="BSGA Consulting"
-                    loading="lazy"
                 >
 
 
                 <p>
 
-                    Helping organisations improve operational
-                    performance, deliver strategic projects and
-                    adopt Artificial Intelligence with confidence.
+                    Helping organisations improve
+                    operational performance, deliver
+                    strategic projects and adopt
+                    Artificial Intelligence with confidence.
 
                 </p>
-
 
             </div>
 
 
 
             <div>
-
 
                 <h4>
                     Navigation
                 </h4>
 
 
-                <a href="/">
+                <a href="index.html">
                     Home
                 </a>
 
-
-                <a href="/services">
+                <a href="services.html">
                     Services
                 </a>
 
-
-                <a href="/about">
+                <a href="about.html">
                     About
                 </a>
 
-
-                <a href="/insights">
+                <a href="insights.html">
                     Insights
                 </a>
 
-
-                <a href="/contact">
+                <a href="contact.html">
                     Contact
                 </a>
-
 
             </div>
 
@@ -1482,18 +1010,40 @@ FOOTER
 
             <div>
 
+                <h4>
+                    Services
+                </h4>
+
+
+                <a href="operational-excellence.html">
+                    Operational Excellence
+                </a>
+
+                <a href="project-management.html">
+                    Project Management
+                </a>
+
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence
+                </a>
+
+                <a href="business-transformation.html">
+                    Business Transformation
+                </a>
+
+            </div>
+
+
+
+            <div>
 
                 <h4>
                     Contact
                 </h4>
 
 
-                <a
-                    href="mailto:info@bsgaconsulting.es"
-                >
-
+                <a href="mailto:info@bsgaconsulting.es">
                     info@bsgaconsulting.es
-
                 </a>
 
 
@@ -1502,11 +1052,8 @@ FOOTER
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-
-                    Book a Consultation
-
+                    Schedule a Consultation
                 </a>
-
 
             </div>
 
@@ -1515,10 +1062,11 @@ FOOTER
 
 
 
-        <div class="ai-footer-bottom">
+        <div class="footer-bottom">
 
-            © 2026 BSGA Consulting.
-            All Rights Reserved.
+            <span>
+                © 2026 BSGA Consulting. All rights reserved.
+            </span>
 
         </div>
 
@@ -1529,7 +1077,66 @@ FOOTER
 
 
 
-<script src="js/main.js"></script>
+<!-- =======================================================
+     MOBILE MENU SCRIPT
+======================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mobileNav =
+        document.getElementById("mobileNav");
+
+
+    if (menuToggle && mobileNav) {
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    mobileNav.classList.toggle("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    isOpen
+                );
+
+            }
+        );
+
+
+        const mobileLinks =
+            mobileNav.querySelectorAll("a");
+
+
+        mobileLinks.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mobileNav.classList.remove("open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+    }
+
+});
+
+</script>
 
 
 </body>
