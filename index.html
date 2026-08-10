@@ -53,28 +53,41 @@
 <body>
 
 
-<!-- =======================================================
-HEADER
-======================================================= -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
 <header class="site-header">
 
     <div class="header-container">
+
+        <!-- LOGO -->
 
         <a
             href="index.html"
             class="site-logo"
             aria-label="BSGA Consulting Home"
         >
+
             <img
                 src="images/logos/logo-white.png"
                 alt="BSGA Consulting"
             >
+
         </a>
 
-        <nav class="main-navigation">
 
-            <a href="index.html" class="active">
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav
+            class="main-navigation"
+            aria-label="Main navigation"
+        >
+
+            <a
+                href="index.html"
+                class="active"
+            >
                 Home
             </a>
 
@@ -96,6 +109,9 @@ HEADER
 
         </nav>
 
+
+        <!-- CONSULTATION BUTTON -->
+
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="header-cta"
@@ -106,6 +122,9 @@ HEADER
             <span>→</span>
         </a>
 
+
+        <!-- MOBILE MENU BUTTON -->
+
         <button
             id="menuToggle"
             class="menu-toggle"
@@ -114,20 +133,43 @@ HEADER
             aria-expanded="false"
             aria-controls="mobileNav"
         >
+
             <span></span>
             <span></span>
             <span></span>
+
         </button>
 
     </div>
 
-    <nav id="mobileNav" class="mobile-nav">
 
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="insights.html">Insights</a>
-        <a href="contact.html">Contact</a>
+    <!-- MOBILE NAVIGATION -->
+
+    <nav
+        id="mobileNav"
+        class="mobile-nav"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="insights.html">
+            Insights
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
 
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
