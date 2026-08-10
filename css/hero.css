@@ -1,1969 +1,482 @@
 /* =========================================================
+   BSGA CONSULTING
    HOME HERO
-   ========================================================= */
+========================================================= */
 
-.hero {
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-hero {
+
     position: relative;
-    min-height: calc(100vh - 110px);
+
+    min-height: calc(100vh - 88px);
+
     display: flex;
+
     align-items: center;
+
     overflow: hidden;
 
+    background: #020B16;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.home-hero-background {
+
+    position: absolute;
+
+    inset: 0;
+
     background:
+
         radial-gradient(
-            circle at 78% 38%,
-            rgba(72, 104, 139, 0.42),
-            transparent 34%
+            ellipse 55% 90% at 82% 45%,
+            rgba(72, 117, 171, .48),
+            transparent 68%
         ),
+
+        radial-gradient(
+            ellipse 70% 100% at 35% 100%,
+            rgba(17, 47, 79, .72),
+            transparent 70%
+        ),
+
         linear-gradient(
-            115deg,
-            #07101c 0%,
-            #101d2c 38%,
-            #334355 68%,
-            #687482 100%
+            110deg,
+            #020B16 0%,
+            #07182E 42%,
+            #173A60 72%,
+            #53677D 100%
         );
 
-    color: #ffffff;
+    transform: scale(1.02);
+
 }
 
 
-.hero::before {
-    content: "";
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.home-hero-overlay {
+
     position: absolute;
+
     inset: 0;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(4, 10, 17, 0.88),
-            rgba(8, 19, 31, 0.42) 55%,
-            rgba(140, 151, 163, 0.12)
-        );
 
-    pointer-events: none;
-}
-
-
-.hero::after {
-    content: "";
-    position: absolute;
-
-    width: 900px;
-    height: 320px;
-
-    right: -180px;
-    bottom: -100px;
-
-    border-top: 1px solid rgba(255,255,255,0.12);
-    border-radius: 50%;
-
-    transform: rotate(-8deg);
-
-    box-shadow:
-        0 -35px 0 rgba(255,255,255,0.035),
-        0 -70px 0 rgba(255,255,255,0.025);
-
-    pointer-events: none;
-}
-
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
         linear-gradient(
             90deg,
-            rgba(3, 9, 16, 0.30),
-            transparent 65%
+            rgba(2, 11, 22, .38) 0%,
+            rgba(2, 11, 22, .08) 55%,
+            rgba(2, 11, 22, .18) 100%
         );
 
     pointer-events: none;
+
 }
 
 
-.hero-container {
+/* =========================================================
+   DECORATIVE LIGHT
+========================================================= */
+
+.home-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+
+    height: 650px;
+
+    right: -220px;
+
+    top: -170px;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(194, 217, 240, .22),
+            transparent 68%
+        );
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   DECORATIVE RINGS
+========================================================= */
+
+.home-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 800px;
+
+    height: 430px;
+
+    right: -150px;
+
+    bottom: -210px;
+
+    border-radius: 50%;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+
+    transform: rotate(-9deg);
+
+    box-shadow:
+
+        0 -35px 0 rgba(255,255,255,.035),
+
+        0 -70px 0 rgba(255,255,255,.025),
+
+        0 -105px 0 rgba(255,255,255,.015);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.home-hero-container {
+
     position: relative;
+
     z-index: 2;
 
-    width: 100%;
+    width: min(92%, 1230px);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 0 auto;
 
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 
-.hero-content {
-    width: min(760px, 72%);
-}
-.hero h1 {
-    max-width: 850px;
+/* =========================================================
+   CONTENT
+========================================================= */
 
-    margin: 0 0 30px;
+.home-hero-content {
 
-    color: #ffffff;
+    max-width: 920px;
 
-    font-size: clamp(4rem, 6vw, 6.4rem);
-    font-weight: 800;
+    padding: 110px 0 125px;
 
-    line-height: .94;
-    letter-spacing: -.06em;
 }
 
 
-.hero-lead {
-    max-width: 690px;
+/* =========================================================
+   KICKER
+========================================================= */
 
-    margin: 0 0 42px;
+.home-hero-kicker {
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color: #5AA2FF;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: .24em;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.home-hero h1 {
+
+    max-width: 900px;
+
+    margin: 0 0 32px;
+
+    color: #FFFFFF;
+
+    font-size: clamp(
+        4rem,
+        7vw,
+        7.2rem
+    );
+
+    font-weight: 700;
+
+    line-height: .91;
+
+    letter-spacing: -.065em;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.home-hero p {
+
+    max-width: 670px;
+
+    margin: 0 0 38px;
 
     color: rgba(255,255,255,.72);
 
-    font-size: 1.08rem;
-    line-height: 1.75;
+    font-size: 17px;
 
-    letter-spacing: -.01em;
+    font-weight: 400;
+
+    line-height: 1.8;
+
 }
 
 
-.hero-actions {
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.home-hero-actions {
+
     display: flex;
+
     align-items: center;
+
     gap: 16px;
 
-    flex-wrap: wrap;
 }
 
 
-.hero-button {
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.home-hero-button {
+
+    min-height: 52px;
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 14px;
 
-    min-height: 62px;
-
-    padding: 0 30px;
+    padding: 0 27px;
 
     border-radius: 999px;
 
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 14px;
 
-    text-decoration: none;
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease;
-}
-
-
-.hero-button span {
-    font-size: 1.2rem;
-
-    transition: transform 0.25s ease;
-}
-
-
-.hero-button:hover {
-    transform: translateY(-3px);
-}
-
-
-.hero-button:hover span {
-    transform: translateX(4px);
-}
-
-
-.hero-button-primary {
-    background: #2563eb;
-    color: #ffffff;
-}
-
-
-.hero-button-primary:hover {
-    background: #3475ee;
-}
-
-
-.hero-button-secondary {
-    color: #ffffff;
-
-    border: 1px solid rgba(255,255,255,0.42);
-
-    background: rgba(255,255,255,0.035);
-}
-
-
-.hero-button-secondary:hover {
-    border-color: rgba(255,255,255,0.75);
-    background: rgba(255,255,255,0.08);
-}
-
-
-/* =========================================================
-   BSGA BRAND ELEMENT
-   ========================================================= */
-
-.hero-brand {
-    position: absolute;
-
-    right: 0;
-    bottom: 82px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
-    text-align: right;
-
-    opacity: 0.9;
-}
-
-
-.hero-brand-line {
-    width: 90px;
-    height: 1px;
-
-    margin-bottom: 18px;
-
-    background: rgba(255,255,255,0.45);
-}
-
-
-.hero-brand span {
-    color: rgba(255,255,255,0.55);
-
-    font-size: 0.65rem;
-    font-weight: 700;
-
-    letter-spacing: 0.28em;
-}
-
-
-.hero-brand strong {
-    margin-top: 10px;
-
-    color: rgba(255,255,255,0.12);
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(4rem, 7vw, 7rem);
-    font-weight: 400;
-
-    line-height: 0.8;
-
-    letter-spacing: -0.05em;
-}
-
-
-.hero-brand-consulting {
-    margin-top: 12px;
-
-    font-size: 0.58rem !important;
-
-    letter-spacing: 0.48em !important;
-}
-
-
-/* =========================================================
-   HERO RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 1100px) {
-
-    .hero-content {
-        width: 80%;
-    }
-
-    .hero-brand {
-        right: 20px;
-        opacity: 0.65;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-
-    header #mobileNav {
-
-        position: absolute;
-
-        top: 92px;
-        left: 0;
-
-        width: 100%;
-
-        display: none;
-
-        padding: 12px 28px 30px;
-
-        background: #050505;
-
-        border-top: 1px solid rgba(255,255,255,0.10);
-
-        box-sizing: border-box;
-
-        z-index: 9999;
-
-    }
-
-
-    header #mobileNav.open {
-        display: block;
-    }
-
-
-    header #mobileNav ul {
-
-        display: flex;
-
-        flex-direction: column;
-
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-
-    }
-
-
-    header #mobileNav li {
-
-        border-bottom:
-            1px solid rgba(255,255,255,0.10);
-
-    }
-
-
-    header #mobileNav a {
-
-        display: block;
-
-        padding: 18px 0;
-
-        color: #ffffff;
-
-        font-family: Inter, Arial, sans-serif;
-
-        font-size: 17px;
-
-        font-weight: 500;
-
-        text-decoration: none;
-
-    }
-
-                           }
-
-@media (max-width: 480px) {
-
-    .hero-container {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .hero h1 {
-        font-size: 3.15rem;
-    }
-
-    .hero-kicker {
-        font-size: 0.72rem;
-    }
-
-}
-/* =========================================================
-   HERO — BSGA BRAND LOCKUP
-========================================================= */
-
-.hero-brand-lockup {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-
-    margin-bottom: 30px;
-}
-
-.hero-brand-name {
-    color: #ffffff;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 2rem;
-    font-weight: 400;
-
-    letter-spacing: -0.04em;
-
-    line-height: 1;
-}
-
-.hero-brand-divider {
-    width: 1px;
-    height: 27px;
-
-    background: rgba(255,255,255,.55);
-}
-
-.hero-brand-type {
-    color: rgba(255,255,255,.72);
-
-    font-size: .58rem;
     font-weight: 600;
 
-    letter-spacing: .38em;
+    transition:
+
+        transform .25s ease,
+
+        box-shadow .25s ease,
+
+        background .25s ease;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.home-hero-button-primary {
+
+    background: #2867E8;
+
+    color: #FFFFFF;
+
+}
+
+.home-hero-button-primary:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(40,103,232,.28);
+
+}
+
+.home-hero-button-primary span {
+
+    font-size: 18px;
 
     line-height: 1;
+
 }
+
+
 /* =========================================================
-   BSGA MOBILE HEADER
-   ========================================================= */
+   SECONDARY BUTTON
+========================================================= */
+
+.home-hero-button-secondary {
+
+    border: 1px solid rgba(255,255,255,.24);
+
+    color: #FFFFFF;
+
+    background: rgba(255,255,255,.035);
+
+}
+
+.home-hero-button-secondary:hover {
+
+    transform: translateY(-2px);
+
+    background: rgba(255,255,255,.09);
+
+    border-color: rgba(255,255,255,.4);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .home-hero h1 {
+
+        font-size: clamp(
+            3.8rem,
+            7vw,
+            6rem
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
-    /* -----------------------------------------------------
-       HEADER
-       ----------------------------------------------------- */
+    .home-hero {
 
-    header {
-        position: relative;
-        z-index: 1000;
-        width: 100%;
-        background: #050505;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        min-height: calc(100vh - 75px);
+
     }
 
-    header .container {
-        width: 100%;
-        height: 92px;
+    .home-hero-container {
 
-        padding-left: 22px;
-        padding-right: 18px;
+        width: 92%;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        gap: 12px;
     }
 
+    .home-hero-content {
 
-    /* -----------------------------------------------------
-       LOGO
-       ----------------------------------------------------- */
+        padding: 80px 0 90px;
 
-    header .logo {
-        display: flex;
-        align-items: center;
-
-        flex: 1 1 auto;
-        min-width: 0;
-
-        color: #ffffff;
-        text-decoration: none;
-
-        font-family: Georgia, "Times New Roman", serif;
-
-        font-size: 34px;
-        font-weight: 400;
-
-        line-height: 1;
-        letter-spacing: -0.04em;
-
-        white-space: nowrap;
     }
 
+    .home-hero-kicker {
 
-    header .logo::after {
-        content: "CONSULTING";
+        font-size: 11px;
 
-        display: inline-block;
+        margin-bottom: 20px;
 
-        margin-left: 12px;
-        padding-left: 12px;
-
-        border-left: 1px solid rgba(255,255,255,0.65);
-
-        color: rgba(255,255,255,0.78);
-
-        font-family: Inter, Arial, sans-serif;
-
-        font-size: 8px;
-        font-weight: 600;
-
-        letter-spacing: 0.34em;
-
-        line-height: 1;
     }
 
+    .home-hero h1 {
 
-    /* -----------------------------------------------------
-       DESKTOP NAV — HIDE
-       ----------------------------------------------------- */
-
-    header nav {
-        display: none;
-    }
-
-
-    /* -----------------------------------------------------
-       CONSULTATION BUTTON
-       ----------------------------------------------------- */
-
-    header .header-cta {
-
-        display: flex;
-
-        flex: 0 0 auto;
-
-        width: auto;
-
-        max-width: 185px;
-        min-height: 52px;
-
-        padding: 9px 16px;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 9px;
-
-        border: 1px solid rgba(255,255,255,0.75);
-        border-radius: 999px;
-
-        background: transparent;
-
-        color: #ffffff;
-
-        font-family: Inter, Arial, sans-serif;
-
-        font-size: 13px;
-        font-weight: 600;
-
-        line-height: 1.15;
-
-        text-align: center;
-        text-decoration: none;
-
-        white-space: normal;
-
-        transition:
-            background 0.25s ease,
-            border-color 0.25s ease;
-    }
-
-
-    header .header-cta span {
-        flex-shrink: 0;
-
-        font-size: 19px;
-        line-height: 1;
-    }
-
-
-    header .header-cta:hover {
-        background: rgba(255,255,255,0.08);
-        border-color: #ffffff;
-    }
-
-
-    /* -----------------------------------------------------
-       HAMBURGER
-       ----------------------------------------------------- */
-
-    header .menu-toggle {
-
-        display: flex;
-
-        flex: 0 0 38px;
-
-        width: 38px;
-        height: 42px;
-
-        margin: 0;
-        padding: 0;
-
-        align-items: center;
-        justify-content: center;
-
-        flex-direction: column;
-
-        gap: 5px;
-
-        border: 0;
-
-        background: transparent;
-
-        cursor: pointer;
-
-        position: relative;
-
-        z-index: 1100;
-    }
-
-
-    header .menu-toggle span {
-
-        display: block;
-
-        width: 27px;
-        height: 2px;
-
-        margin: 0;
-
-        background: #ffffff;
-
-        border-radius: 2px;
-
-        transition:
-            transform 0.25s ease,
-            opacity 0.25s ease;
-    }
-
-
-    /* -----------------------------------------------------
-       HAMBURGER → X
-       ----------------------------------------------------- */
-
-    header .menu-toggle.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    header .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    header .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
-
-    /* -----------------------------------------------------
-       MOBILE MENU
-       ----------------------------------------------------- */
-
-    header #mobileNav {
-
-        display: none;
-
-        position: absolute;
-
-        top: 92px;
-        left: 0;
-        right: 0;
-
-        width: 100%;
-
-        padding: 12px 28px 30px;
-
-        background: #050505;
-
-        border-top: 1px solid rgba(255,255,255,0.08);
-
-        box-shadow:
-            0 20px 40px rgba(0,0,0,0.35);
-
-        z-index: 1050;
-    }
-
-
-    header #mobileNav.open {
-        display: block;
-    }
-
-
-    header #mobileNav ul {
-
-        display: flex;
-
-        flex-direction: column;
-
-        list-style: none;
-
-        margin: 0;
-        padding: 0;
-    }
-
-
-    header #mobileNav li {
-
-        margin: 0;
-
-        border-bottom: 1px solid rgba(255,255,255,0.10);
-    }
-
-
-    header #mobileNav li:last-child {
-        border-bottom: none;
-    }
-
-
-    header #mobileNav a {
-
-        display: block;
-
-        padding: 18px 0;
-
-        color: #ffffff;
-
-        font-family: Inter, Arial, sans-serif;
-
-        font-size: 17px;
-        font-weight: 500;
-
-        text-decoration: none;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO MOBILE
-       ----------------------------------------------------- */
-
-    .hero {
-        min-height: calc(100svh - 92px);
-
-        display: flex;
-        align-items: center;
-    }
-
-
-    .hero-container {
-
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    /* Hero BSGA lockup */
-
-    .hero-brand-lockup {
-
-        margin-bottom: 30px;
-
-        gap: 12px;
-    }
-
-
-    .hero-brand-name {
-
-        font-size: 2.1rem;
-    }
-
-
-    .hero-brand-divider {
-
-        height: 28px;
-    }
-
-
-    .hero-brand-type {
-
-        font-size: .57rem;
-
-        letter-spacing: .34em;
-    }
-
-
-    /* Main headline */
-
-    .hero h1 {
-
-        max-width: 100%;
-
-        margin-bottom: 28px;
-
-        font-size: clamp(3.2rem, 13vw, 4.8rem);
+        font-size: 3.65rem;
 
         line-height: .94;
 
         letter-spacing: -.055em;
-    }
-
-
-    /* Description */
-
-    .hero-lead {
-
-        max-width: 100%;
-
-        margin-bottom: 38px;
-
-        font-size: 1.08rem;
-
-        line-height: 1.65;
-    }
-
-
-    /* -----------------------------------------------------
-       HERO BUTTONS
-       ----------------------------------------------------- */
-
-    .hero-actions {
-
-        width: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 15px;
-    }
-
-
-    .hero-button {
-
-        width: 100%;
-
-        min-height: 64px;
-
-        padding: 0 24px;
-
-        font-size: 1rem;
-
-        border-radius: 999px;
-    }
-
-
-    .hero-button-primary {
-
-        background: #2563eb;
-    }
-
-
-    .hero-button-secondary {
-
-        background: transparent;
-
-        border: 1px solid rgba(255,255,255,0.45);
-    }
-
-
-    /* Don't show the decorative desktop brand */
-
-    .hero-brand {
-        display: none;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    header .container {
-
-        height: 88px;
-
-        padding-left: 18px;
-        padding-right: 14px;
-
-        gap: 8px;
-    }
-
-
-    header .logo {
-
-        font-size: 30px;
-    }
-
-
-    header .logo::after {
-
-        margin-left: 9px;
-        padding-left: 9px;
-
-        font-size: 7px;
-
-        letter-spacing: 0.27em;
-    }
-
-
-    header .header-cta {
-
-        max-width: 150px;
-
-        min-height: 48px;
-
-        padding: 7px 12px;
-
-        font-size: 11px;
-    }
-
-
-    header .header-cta span {
-
-        font-size: 17px;
-    }
-
-
-    header .menu-toggle {
-
-        flex-basis: 36px;
-
-        width: 36px;
-    }
-
-
-    header .menu-toggle span {
-
-        width: 25px;
-    }
-
-
-    header #mobileNav {
-
-        top: 88px;
-    }
-
-
-    .hero-container {
-
-        padding-top: 62px;
-        padding-bottom: 62px;
-    }
-
-
-    .hero-brand-lockup {
-
-        margin-bottom: 26px;
-    }
-
-
-    .hero-brand-name {
-
-        font-size: 1.9rem;
-    }
-
-
-    .hero h1 {
-
-        font-size: 3.25rem;
-
-        line-height: .95;
-    }
-
-
-    .hero-lead {
-
-        font-size: 1rem;
-
-        line-height: 1.65;
-    }
-
-
-    .hero-button {
-
-        min-height: 62px;
-
-        font-size: .98rem;
-    }
-
-       }
-@media (max-width: 768px) {
-
-    header #mobileNav {
-        display: none;
-    }
-
-    header #mobileNav.open {
-        display: block;
-    }
-
-   }
-/* =========================================================
-   BSGA MOBILE HEADER — FINAL
-   ========================================================= */
-
-.site-header {
-    position: relative;
-    z-index: 10000;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    .site-header {
-        width: 100%;
-        background: #050505;
-
-        border-bottom:
-            1px solid rgba(255,255,255,0.08);
-    }
-
-
-    .site-header .header-container {
-
-        position: relative;
-
-        width: 100%;
-        height: 92px;
-
-        padding-left: 22px;
-        padding-right: 17px;
-
-        display: flex;
-        align-items: center;
-
-        gap: 12px;
-
-        box-sizing: border-box;
-    }
-
-
-    /* =====================================================
-       LOGO
-       ===================================================== */
-
-    .site-header .logo {
-
-        flex: 1 1 auto;
-
-        display: flex;
-        align-items: center;
-
-        min-width: 0;
-
-        color: #ffffff;
-
-        font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-        font-size: 34px;
-        font-weight: 400;
-
-        line-height: 1;
-
-        letter-spacing: -0.04em;
-
-        text-decoration: none;
-
-        white-space: nowrap;
-    }
-
-
-    .site-header .logo::after {
-
-        content: "CONSULTING";
-
-        display: inline-block;
-
-        margin-left: 11px;
-        padding-left: 11px;
-
-        border-left:
-            1px solid rgba(255,255,255,0.65);
-
-        color:
-            rgba(255,255,255,0.78);
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 8px;
-        font-weight: 600;
-
-        letter-spacing: 0.32em;
-
-        line-height: 1;
-    }
-
-
-    /* =====================================================
-       CONSULTATION BUTTON
-       ===================================================== */
-
-    .site-header .header-cta {
-
-        flex: 0 0 auto;
-
-        width: 174px;
-        min-height: 52px;
-
-        padding: 7px 13px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        gap: 8px;
-
-        box-sizing: border-box;
-
-        border:
-            1px solid rgba(255,255,255,0.75);
-
-        border-radius: 999px;
-
-        background: transparent;
-
-        color: #ffffff;
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 12px;
-        font-weight: 600;
-
-        line-height: 1.1;
-
-        text-align: center;
-        text-decoration: none;
-    }
-
-
-    .site-header .header-cta span {
-        display: block;
-    }
-
-
-    .site-header .header-cta strong {
-
-        flex-shrink: 0;
-
-        font-size: 18px;
-        font-weight: 400;
-
-        line-height: 1;
-    }
-
-
-    /* =====================================================
-       HAMBURGER
-       ===================================================== */
-
-    .site-header .menu-toggle {
-
-        flex: 0 0 40px;
-
-        width: 40px;
-        height: 42px;
-
-        margin: 0;
-        padding: 0;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 6px;
-
-        border: 0;
-
-        outline: none;
-
-        background: transparent;
-
-        cursor: pointer;
-
-        -webkit-tap-highlight-color: transparent;
-
-        position: relative;
-
-        z-index: 10002;
-    }
-
-
-    .site-header .menu-toggle span {
-
-        display: block;
-
-        width: 29px;
-        height: 2px;
-
-        margin: 0;
-
-        background: #ffffff;
-
-        border-radius: 2px;
-
-        transition:
-            transform .25s ease,
-            opacity .25s ease;
-    }
-
-
-    /* HAMBURGER → X */
-
-    .site-header .menu-toggle.active span:nth-child(1) {
-        transform:
-            translateY(8px)
-            rotate(45deg);
-    }
-
-    .site-header .menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .site-header .menu-toggle.active span:nth-child(3) {
-        transform:
-            translateY(-8px)
-            rotate(-45deg);
-    }
-
-
-    /* =====================================================
-       MOBILE NAVIGATION
-       ===================================================== */
-
-    .site-header #mobileNav {
-
-        position: absolute;
-
-        top: 92px;
-        left: 0;
-        right: 0;
-
-        width: 100%;
-
-        display: none;
-
-        padding:
-            10px 28px 30px;
-
-        box-sizing: border-box;
-
-        background: #050505;
-
-        border-top:
-            1px solid rgba(255,255,255,0.10);
-
-        box-shadow:
-            0 25px 45px rgba(0,0,0,0.40);
-
-        z-index: 10001;
-    }
-
-
-    .site-header #mobileNav.open {
-        display: block;
-    }
-
-
-    .site-header #mobileNav ul {
-
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-    }
-
-
-    .site-header #mobileNav li {
-
-        width: 100%;
-
-        margin: 0;
-        padding: 0;
-
-        border-bottom:
-            1px solid rgba(255,255,255,0.10);
-    }
-
-
-    .site-header #mobileNav li:last-child {
-        border-bottom: 0;
-    }
-
-
-    .site-header #mobileNav a {
-
-        display: block;
-
-        width: 100%;
-
-        padding: 19px 0;
-
-        color: #ffffff;
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 18px;
-        font-weight: 500;
-
-        line-height: 1;
-
-        text-decoration: none;
-    }
-
-
-    /* =====================================================
-       HERO POSITION
-       ===================================================== */
-
-    .hero-content {
-
-        transform:
-            translateY(-55px);
-    }
-
-}
-
-
-/* =========================================================
-   SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .site-header .header-container {
-
-        height: 88px;
-
-        padding-left: 18px;
-        padding-right: 13px;
-
-        gap: 8px;
-    }
-
-
-    .site-header .logo {
-
-        font-size: 30px;
-    }
-
-
-    .site-header .logo::after {
-
-        margin-left: 8px;
-        padding-left: 8px;
-
-        font-size: 7px;
-
-        letter-spacing: 0.25em;
-    }
-
-
-    .site-header .header-cta {
-
-        width: 155px;
-
-        min-height: 48px;
-
-        padding:
-            6px 10px;
-
-        font-size: 11px;
-    }
-
-
-    .site-header .header-cta strong {
-
-        font-size: 17px;
-    }
-
-
-    .site-header .menu-toggle {
-
-        flex-basis: 37px;
-
-        width: 37px;
-        height: 40px;
-    }
-
-
-    .site-header .menu-toggle span {
-
-        width: 27px;
-    }
-
-
-    .site-header #mobileNav {
-
-        top: 88px;
-    }
-
-
-    .hero-content {
-
-        transform:
-            translateY(-60px);
-    }
-
-               }
-/* =========================================================
-   BSGA MOBILE HEADER — FINAL LAYOUT
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    .site-header .header-container {
-        width: 100%;
-        height: 92px;
-
-        padding: 0 18px;
-
-        display: grid;
-
-        grid-template-columns: minmax(0, 1fr) 145px 38px;
-
-        align-items: center;
-
-        column-gap: 10px;
-
-        box-sizing: border-box;
-    }
-
-
-    /* =====================================================
-       LOGO
-       ===================================================== */
-
-    .site-header .logo {
-
-        min-width: 0;
-        width: 100%;
-
-        display: flex;
-        align-items: center;
-
-        overflow: hidden;
-
-        color: #ffffff;
-
-        font-family:
-            Georgia,
-            "Times New Roman",
-            serif;
-
-        font-size: 29px;
-        font-weight: 400;
-
-        line-height: 1;
-
-        letter-spacing: -0.04em;
-
-        white-space: nowrap;
-
-        text-decoration: none;
-    }
-
-
-    .site-header .logo::after {
-
-        content: "CONSULTING";
-
-        flex-shrink: 0;
-
-        display: inline-block;
-
-        margin-left: 8px;
-        padding-left: 8px;
-
-        border-left:
-            1px solid rgba(255,255,255,0.65);
-
-        color:
-            rgba(255,255,255,0.78);
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 6.5px;
-        font-weight: 600;
-
-        letter-spacing: 0.24em;
-
-        line-height: 1;
-    }
-
-
-    /* =====================================================
-       CONSULTATION BUTTON
-       ===================================================== */
-
-    .site-header .header-cta {
-
-        width: 145px;
-        height: 52px;
-
-        padding: 6px 10px;
-
-        box-sizing: border-box;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        gap: 7px;
-
-        border:
-            1px solid rgba(255,255,255,0.75);
-
-        border-radius: 999px;
-
-        background: transparent;
-
-        color: #ffffff;
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 11px;
-        font-weight: 600;
-
-        line-height: 1.15;
-
-        text-align: center;
-
-        text-decoration: none;
-    }
-
-
-    .site-header .header-cta span {
-
-        display: block;
-
-        max-width: 105px;
-    }
-
-
-    .site-header .header-cta strong {
-
-        flex-shrink: 0;
-
-        font-size: 17px;
-        font-weight: 400;
-
-        line-height: 1;
-    }
-
-
-    /* =====================================================
-       HAMBURGER
-       ===================================================== */
-
-    .site-header .menu-toggle {
-
-        width: 38px;
-        height: 42px;
-
-        margin: 0;
-        padding: 0;
-
-        display: flex !important;
-
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 6px;
-
-        border: 0;
-        outline: none;
-
-        background: transparent;
-
-        cursor: pointer;
-
-        position: relative;
-        z-index: 10002;
-    }
-
-
-    .site-header .menu-toggle span {
-
-        display: block;
-
-        width: 28px;
-        height: 2px;
-
-        margin: 0;
-
-        background: #ffffff;
-
-        border-radius: 2px;
-
-        transition:
-            transform .25s ease,
-            opacity .25s ease;
-    }
-
-
-    /* =====================================================
-       HAMBURGER → X
-       ===================================================== */
-
-    .site-header .menu-toggle.active span:nth-child(1) {
-
-        transform:
-            translateY(8px)
-            rotate(45deg);
-    }
-
-
-    .site-header .menu-toggle.active span:nth-child(2) {
-
-        opacity: 0;
-    }
-
-
-    .site-header .menu-toggle.active span:nth-child(3) {
-
-        transform:
-            translateY(-8px)
-            rotate(-45deg);
-    }
-
-
-    /* =====================================================
-       MOBILE NAV
-       ===================================================== */
-
-    .site-header #mobileNav {
-
-        position: absolute;
-
-        top: 92px;
-        left: 0;
-        right: 0;
-
-        width: 100%;
-
-        display: none;
-
-        padding: 10px 28px 30px;
-
-        box-sizing: border-box;
-
-        background: #050505;
-
-        border-top:
-            1px solid rgba(255,255,255,0.10);
-
-        box-shadow:
-            0 25px 45px rgba(0,0,0,0.40);
-
-        z-index: 10001;
-    }
-
-
-    .site-header #mobileNav.open {
-
-        display: block !important;
-    }
-
-
-    .site-header #mobileNav ul {
-
-        display: flex;
-
-        flex-direction: column;
-
-        width: 100%;
-
-        margin: 0;
-        padding: 0;
-
-        list-style: none;
-    }
-
-
-    .site-header #mobileNav li {
-
-        width: 100%;
-
-        border-bottom:
-            1px solid rgba(255,255,255,0.10);
-    }
-
-
-    .site-header #mobileNav a {
-
-        display: block;
-
-        padding: 19px 0;
-
-        color: #ffffff;
-
-        font-family:
-            Inter,
-            Arial,
-            sans-serif;
-
-        font-size: 18px;
-        font-weight: 500;
-
-        line-height: 1;
-
-        text-decoration: none;
-    }
-
-
-    /* =====================================================
-       HERO — MOVE UP
-       ===================================================== */
-
-    .hero-content {
-
-        transform: translateY(-55px);
-    }
-
-}
-
-
-/* =========================================================
-   SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 480px) {
-
-    .site-header .header-container {
-
-        height: 88px;
-
-        padding-left: 16px;
-        padding-right: 12px;
-
-        grid-template-columns:
-            minmax(0, 1fr)
-            140px
-            36px;
-
-        column-gap: 7px;
-    }
-
-
-    .site-header .logo {
-
-        font-size: 28px;
-    }
-
-
-    .site-header .logo::after {
-
-        margin-left: 7px;
-        padding-left: 7px;
-
-        font-size: 6px;
-
-        letter-spacing: 0.20em;
-    }
-
-
-    .site-header .header-cta {
-
-        width: 140px;
-        height: 49px;
-
-        padding: 6px 8px;
-
-        font-size: 10.5px;
-    }
-
-
-    .site-header .header-cta span {
-
-        max-width: 100px;
-    }
-
-
-    .site-header .header-cta strong {
-
-        font-size: 16px;
-    }
-
-
-    .site-header .menu-toggle {
-
-        width: 36px;
-        height: 40px;
-    }
-
-
-    .site-header .menu-toggle span {
-
-        width: 27px;
-    }
-
-
-    .site-header #mobileNav {
-
-        top: 88px;
-    }
-
-
-    .hero-content {
-
-        transform: translateY(-60px);
-    }
-
-}
-/* =========================================================
-   HOME — HERO TYPOGRAPHY
-========================================================= */
-
-.hero h1 {
-
-    font-family: "Inter", sans-serif;
-
-    font-size: clamp(4rem, 6.2vw, 6.6rem);
-
-    font-weight: 700;
-
-    line-height: .94;
-
-    letter-spacing: -.065em;
-
-    color: #FFFFFF;
-
-    max-width: 1050px;
-
-    margin: 0 0 30px;
-
-}
-
-
-.hero p {
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 18px;
-
-    font-weight: 400;
-
-    line-height: 1.75;
-
-    letter-spacing: -.01em;
-
-    color: rgba(255,255,255,.68);
-
-    max-width: 780px;
-
-}
-/* =========================================================
-   BSGA HOME — HERO TYPOGRAPHY
-   Match AI Consulting visual style
-========================================================= */
-
-.hero h1 {
-
-    font-family: "Inter", sans-serif;
-
-    font-size: clamp(4rem, 6vw, 6.4rem);
-
-    font-weight: 700;
-
-    line-height: .94;
-
-    letter-spacing: -.065em;
-
-    color: #FFFFFF;
-
-    max-width: 1050px;
-
-    margin: 0 0 30px;
-
-}
-
-
-/* HERO DESCRIPTION */
-
-.hero-lead {
-
-    font-family: "Inter", sans-serif;
-
-    font-size: 18px;
-
-    font-weight: 400;
-
-    line-height: 1.75;
-
-    letter-spacing: -.01em;
-
-    color: rgba(255,255,255,.68);
-
-    max-width: 780px;
-
-}
-
-
-/* HERO BRAND LOCKUP */
-
-.hero-brand-name {
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-weight: 600;
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .hero h1 {
-
-        font-size: 3.4rem;
-
-        line-height: .96;
 
-        letter-spacing: -.055em;
+        margin-bottom: 25px;
 
     }
 
-    .hero-lead {
+    .home-hero p {
 
         font-size: 15px;
 
         line-height: 1.7;
 
+        margin-bottom: 30px;
+
+    }
+
+    .home-hero-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+
+        max-width: 330px;
+
+    }
+
+    .home-hero-button {
+
+        width: 100%;
+
     }
 
 }
 
 
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 480px) {
 
-    .hero h1 {
+    .home-hero-content {
 
-        font-size: 2.9rem;
+        padding: 65px 0 75px;
 
-        line-height: .97;
+    }
+
+    .home-hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+    .home-hero p {
+
+        font-size: 14px;
 
     }
 
