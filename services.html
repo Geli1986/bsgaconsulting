@@ -152,63 +152,76 @@
     <meta property="og:locale"
           content="en_GB">
 <!-- =========================================================
-     STRUCTURED DATA — SERVICES
+STRUCTURED DATA — SERVICES
 ========================================================= -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "@id": "https://bsgaconsulting.es/services.html#services",
-  "url": "https://bsgaconsulting.es/services.html",
-  "name": "Services | BSGA Consulting",
-  "description": "BSGA Consulting provides project management, business transformation, artificial intelligence and operational excellence consulting services.",
-  "isPartOf": {
-    "@id": "https://bsgaconsulting.es/#business"
-  }
+  "@graph": [
+
+    {
+      "@type": "CollectionPage",
+      "@id": "https://bsgaconsulting.es/services.html#webpage",
+      "url": "https://bsgaconsulting.es/services.html",
+      "name": "Consulting Services | BSGA Consulting",
+      "description": "Explore BSGA Consulting services across Project Management, Artificial Intelligence, Business Transformation and Operational Excellence.",
+      "isPartOf": {
+        "@id": "https://bsgaconsulting.es/#website"
+      },
+      "about": {
+        "@id": "https://bsgaconsulting.es/#organization"
+      },
+      "inLanguage": "en"
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://bsgaconsulting.es/services.html#project-management",
+      "name": "Project Management",
+      "description": "Governance, PMO, delivery assurance, stakeholder management and successful execution.",
+      "url": "https://bsgaconsulting.es/project-management.html",
+      "provider": {
+        "@id": "https://bsgaconsulting.es/#organization"
+      }
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://bsgaconsulting.es/services.html#artificial-intelligence",
+      "name": "Artificial Intelligence",
+      "description": "Practical AI adoption focused on productivity, efficiency and measurable business value.",
+      "url": "https://bsgaconsulting.es/artificial-intelligence.html",
+      "provider": {
+        "@id": "https://bsgaconsulting.es/#organization"
+      }
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://bsgaconsulting.es/services.html#business-transformation",
+      "name": "Business Transformation",
+      "description": "Supporting organisations through strategic change and operational improvement.",
+      "url": "https://bsgaconsulting.es/business-transformation.html",
+      "provider": {
+        "@id": "https://bsgaconsulting.es/#organization"
+      }
+    },
+
+    {
+      "@type": "Service",
+      "@id": "https://bsgaconsulting.es/services.html#operational-excellence",
+      "name": "Operational Excellence",
+      "description": "Improving processes, performance and ways of working to create sustainable operational results.",
+      "url": "https://bsgaconsulting.es/operational-excellence.html",
+      "provider": {
+        "@id": "https://bsgaconsulting.es/#organization"
+      }
+    }
+
+  ]
 }
 </script>
-    <link rel="canonical"
-      href="https://bsgaconsulting.es/services.html">
-
-<meta property="og:type"
-      content="website">
-
-<meta property="og:url"
-      content="https://bsgaconsulting.es/services.html">
-
-<meta property="og:title"
-      content="Consulting Services | BSGA Consulting">
-
-<meta property="og:description"
-      content="Explore BSGA Consulting services across Project Management, Artificial Intelligence, Business Transformation and Operational Excellence.">
-
-<meta property="og:image"
-      content="https://bsgaconsulting.es/images/og-image.jpg">
-
-<meta property="og:image:width"
-      content="1200">
-
-<meta property="og:image:height"
-      content="630">
-
-<meta property="og:site_name"
-      content="BSGA Consulting">
-
-<meta property="og:locale"
-      content="en_GB">
-
-<meta name="twitter:card"
-      content="summary_large_image">
-
-<meta name="twitter:title"
-      content="Consulting Services | BSGA Consulting">
-
-<meta name="twitter:description"
-      content="Project Management, Artificial Intelligence, Business Transformation and Operational Excellence consulting.">
-
-<meta name="twitter:image"
-      content="https://bsgaconsulting.es/images/og-image.jpg">
 
    <!-- =========================================================
 FAVICON / BRAND ICON
