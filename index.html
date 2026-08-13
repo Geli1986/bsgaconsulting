@@ -247,35 +247,42 @@
         href="css/styles.css"
     >
 <!-- =========================================================
-     STRUCTURED DATA — BSGA CONSULTING
+STRUCTURED DATA — BSGA CONSULTING
 ========================================================= -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://bsgaconsulting.es/#business",
-  "name": "BSGA Consulting",
-  "url": "https://bsgaconsulting.es/",
-  "logo": "https://bsgaconsulting.es/images/logos/logo-white.png",
-  "image": "https://bsgaconsulting.es/images/og-image.jpg",
-  "email": "info@bsgaconsulting.es",
-  "description": "BSGA Consulting helps organisations improve operational performance, deliver strategic projects, transform their businesses and adopt Artificial Intelligence with confidence.",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Spain"
-  },
-  "serviceType": [
-    "Project Management",
-    "Business Transformation",
-    "Artificial Intelligence",
-    "Operational Excellence"
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://bsgaconsulting.es/#organization",
+      "name": "BSGA Consulting",
+      "url": "https://bsgaconsulting.es/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://bsgaconsulting.es/images/logos/logo-white.png"
+      },
+      "email": "info@bsgaconsulting.es",
+      "description": "Strategic consulting for operational performance, project delivery, business transformation and Artificial Intelligence.",
+      "sameAs": []
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://bsgaconsulting.es/#website",
+      "url": "https://bsgaconsulting.es/",
+      "name": "BSGA Consulting",
+      "publisher": {
+        "@id": "https://bsgaconsulting.es/#organization"
+      },
+      "inLanguage": "en"
+    }
+
   ]
-
 }
-
-
-</script>
+</script>   
     <!-- =========================================================
 SEO / SOCIAL META
 ========================================================= -->
