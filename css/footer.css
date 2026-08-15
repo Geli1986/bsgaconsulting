@@ -95,3 +95,22 @@ gap:60px;
 }
 
 }
+/* =====================================================
+   HOME FOOTER — BLACK
+===================================================== */
+
+footer {
+    background: #000000;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer h4,
+footer h3,
+footer p,
+footer span {
+    color: #ffffff;
+}
