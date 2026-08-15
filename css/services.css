@@ -1625,3 +1625,34 @@
     }
 
 }
+/* =========================================================
+   SERVICES — SECTION SPACING
+========================================================= */
+
+.services-approach {
+    padding-bottom: 150px;
+}
+
+.services-cta {
+    padding-top: 80px;
+}
+
+@media (max-width: 900px) {
+    .services-approach {
+        padding-bottom: 110px;
+    }
+
+    .services-cta {
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-approach {
+        padding-bottom: 80px;
+    }
+
+    .services-cta {
+        padding-top: 50px;
+    }
+}
