@@ -1,14 +1,14 @@
 /* =========================================================
-   BSGA CONSULTING — MAIN JAVASCRIPT
-========================================================= */
+   BSGA CONSULTING
+   MAIN JAVASCRIPT
+   ========================================================= */
 
 
 /* =========================================================
-   HEADER
-========================================================= */
+   HEADER SCROLL
+   ========================================================= */
 
 const header = document.querySelector(".site-header");
-
 
 function updateHeader() {
 
@@ -28,7 +28,6 @@ function updateHeader() {
 
 }
 
-
 updateHeader();
 
 window.addEventListener(
@@ -40,11 +39,10 @@ window.addEventListener(
 
 /* =========================================================
    FADE ANIMATIONS
-========================================================= */
+   ========================================================= */
 
 const fadeItems =
     document.querySelectorAll(".fade");
-
 
 if (
     "IntersectionObserver" in window &&
@@ -53,15 +51,15 @@ if (
 
     const observer =
         new IntersectionObserver(
-            (entries, observerInstance) => {
+            function (entries) {
 
-                entries.forEach(entry => {
+                entries.forEach(function (entry) {
 
                     if (entry.isIntersecting) {
 
                         entry.target.classList.add("show");
 
-                        observerInstance.unobserve(
+                        observer.unobserve(
                             entry.target
                         );
 
@@ -75,8 +73,7 @@ if (
             }
         );
 
-
-    fadeItems.forEach(item => {
+    fadeItems.forEach(function (item) {
 
         observer.observe(item);
 
@@ -86,8 +83,8 @@ if (
 
 
 /* =========================================================
-   MOBILE MENU
-========================================================= */
+   GLOBAL MOBILE MENU
+   ========================================================= */
 
 const menuToggle =
     document.getElementById("menuToggle");
@@ -96,97 +93,84 @@ const mobileNav =
     document.getElementById("mobileNav");
 
 
+function closeMobileMenu() {
+
+    if (!menuToggle || !mobileNav) {
+        return;
+    }
+
+    mobileNav.classList.remove("open");
+
+    menuToggle.classList.remove("active");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+
+}
+
+
+function openMobileMenu() {
+
+    if (!menuToggle || !mobileNav) {
+        return;
+    }
+
+    mobileNav.classList.add("open");
+
+    menuToggle.classList.add("active");
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+    menuToggle.setAttribute(
+        "aria-label",
+        "Close navigation menu"
+    );
+
+}
+
+
 if (menuToggle && mobileNav) {
-
-
-    /* =====================================================
-       OPEN / CLOSE
-    ===================================================== */
-
-    function openMobileMenu() {
-
-        mobileNav.classList.add("open");
-
-        menuToggle.classList.add("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "true"
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Close navigation menu"
-        );
-
-    }
-
-
-    function closeMobileMenu() {
-
-        mobileNav.classList.remove("open");
-
-        menuToggle.classList.remove("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Open navigation menu"
-        );
-
-    }
-
-
-    function toggleMobileMenu() {
-
-        const isOpen =
-            mobileNav.classList.contains("open");
-
-
-        if (isOpen) {
-
-            closeMobileMenu();
-
-        } else {
-
-            openMobileMenu();
-
-        }
-
-    }
-
-
-    /* =====================================================
-       MENU BUTTON
-    ===================================================== */
 
     menuToggle.addEventListener(
         "click",
         function (event) {
 
             event.preventDefault();
-
             event.stopPropagation();
 
-            toggleMobileMenu();
+            const isOpen =
+                mobileNav.classList.contains("open");
+
+            if (isOpen) {
+
+                closeMobileMenu();
+
+            } else {
+
+                openMobileMenu();
+
+            }
 
         }
     );
 
 
-    /* =====================================================
-       CLOSE AFTER CLICKING A LINK
-    ===================================================== */
+    /* Close after navigation */
 
     const mobileLinks =
         mobileNav.querySelectorAll("a");
 
-
-    mobileLinks.forEach(link => {
+    mobileLinks.forEach(function (link) {
 
         link.addEventListener(
             "click",
@@ -200,9 +184,27 @@ if (menuToggle && mobileNav) {
     });
 
 
-    /* =====================================================
-       CLOSE WITH ESCAPE
-    ===================================================== */
+    /* Close when clicking outside */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                mobileNav.classList.contains("open") &&
+                !mobileNav.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
+
+
+    /* Close with ESC */
 
     document.addEventListener(
         "keydown",
@@ -223,47 +225,13 @@ if (menuToggle && mobileNav) {
     );
 
 
-    /* =====================================================
-       CLOSE WHEN CLICKING OUTSIDE
-    ===================================================== */
-
-    document.addEventListener(
-        "click",
-        function (event) {
-
-            if (
-                !mobileNav.classList.contains("open")
-            ) {
-
-                return;
-
-            }
-
-
-            const clickedInsideHeader =
-                header &&
-                header.contains(event.target);
-
-
-            if (!clickedInsideHeader) {
-
-                closeMobileMenu();
-
-            }
-
-        }
-    );
-
-
-    /* =====================================================
-       RESET MENU WHEN RETURNING TO DESKTOP
-    ===================================================== */
+    /* Close if viewport becomes desktop */
 
     window.addEventListener(
         "resize",
         function () {
 
-            if (window.innerWidth > 768) {
+            if (window.innerWidth > 900) {
 
                 closeMobileMenu();
 
