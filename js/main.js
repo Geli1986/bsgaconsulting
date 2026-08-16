@@ -1,13 +1,14 @@
 /* =========================================================
    BSGA CONSULTING — MAIN JAVASCRIPT
-   ========================================================= */
+========================================================= */
 
 
 /* =========================================================
    HEADER
-   ========================================================= */
+========================================================= */
 
-const header = document.querySelector("header");
+const header = document.querySelector(".site-header");
+
 
 function updateHeader() {
 
@@ -27,36 +28,52 @@ function updateHeader() {
 
 }
 
+
 updateHeader();
 
-window.addEventListener("scroll", updateHeader);
+window.addEventListener(
+    "scroll",
+    updateHeader,
+    { passive: true }
+);
 
 
 /* =========================================================
-   FADE ANIMATION
-   ========================================================= */
+   FADE ANIMATIONS
+========================================================= */
 
-const fadeItems = document.querySelectorAll(".fade");
+const fadeItems =
+    document.querySelectorAll(".fade");
 
-if ("IntersectionObserver" in window && fadeItems.length) {
 
-    const observer = new IntersectionObserver((entries) => {
+if (
+    "IntersectionObserver" in window &&
+    fadeItems.length
+) {
 
-        entries.forEach(entry => {
+    const observer =
+        new IntersectionObserver(
+            (entries, observerInstance) => {
 
-            if (entry.isIntersecting) {
+                entries.forEach(entry => {
 
-                entry.target.classList.add("show");
+                    if (entry.isIntersecting) {
 
-                observer.unobserve(entry.target);
+                        entry.target.classList.add("show");
 
+                        observerInstance.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
             }
-
-        });
-
-    }, {
-        threshold: 0.15
-    });
+        );
 
 
     fadeItems.forEach(item => {
@@ -70,80 +87,189 @@ if ("IntersectionObserver" in window && fadeItems.length) {
 
 /* =========================================================
    MOBILE MENU
-   BSGA CONSULTING
-   ========================================================= */
+========================================================= */
 
-const menuToggle = document.getElementById("menuToggle");
-const mobileNav = document.getElementById("mobileNav");
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const mobileNav =
+    document.getElementById("mobileNav");
+
 
 if (menuToggle && mobileNav) {
 
-    menuToggle.addEventListener("click", function (event) {
 
-        event.preventDefault();
-        event.stopPropagation();
+    /* =====================================================
+       OPEN / CLOSE
+    ===================================================== */
 
-        const isOpen = mobileNav.classList.contains("open");
+    function openMobileMenu() {
+
+        mobileNav.classList.add("open");
+
+        menuToggle.classList.add("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            "Close navigation menu"
+        );
+
+    }
+
+
+    function closeMobileMenu() {
+
+        mobileNav.classList.remove("open");
+
+        menuToggle.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+    }
+
+
+    function toggleMobileMenu() {
+
+        const isOpen =
+            mobileNav.classList.contains("open");
+
 
         if (isOpen) {
 
-            mobileNav.classList.remove("open");
-            menuToggle.classList.remove("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
+            closeMobileMenu();
 
         } else {
 
-            mobileNav.classList.add("open");
-            menuToggle.classList.add("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Close navigation menu"
-            );
+            openMobileMenu();
 
         }
 
-    });
+    }
 
 
-    /* Close menu after selecting a page */
+    /* =====================================================
+       MENU BUTTON
+    ===================================================== */
+
+    menuToggle.addEventListener(
+        "click",
+        function (event) {
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+            toggleMobileMenu();
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE AFTER CLICKING A LINK
+    ===================================================== */
 
     const mobileLinks =
         mobileNav.querySelectorAll("a");
 
-    mobileLinks.forEach(function (link) {
 
-        link.addEventListener("click", function () {
+    mobileLinks.forEach(link => {
 
-            mobileNav.classList.remove("open");
-            menuToggle.classList.remove("active");
+        link.addEventListener(
+            "click",
+            function () {
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+                closeMobileMenu();
 
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-
-        });
+            }
+        );
 
     });
+
+
+    /* =====================================================
+       CLOSE WITH ESCAPE
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                mobileNav.classList.contains("open")
+            ) {
+
+                closeMobileMenu();
+
+                menuToggle.focus();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       CLOSE WHEN CLICKING OUTSIDE
+    ===================================================== */
+
+    document.addEventListener(
+        "click",
+        function (event) {
+
+            if (
+                !mobileNav.classList.contains("open")
+            ) {
+
+                return;
+
+            }
+
+
+            const clickedInsideHeader =
+                header &&
+                header.contains(event.target);
+
+
+            if (!clickedInsideHeader) {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       RESET MENU WHEN RETURNING TO DESKTOP
+    ===================================================== */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            if (window.innerWidth > 768) {
+
+                closeMobileMenu();
+
+            }
+
+        }
+    );
 
 }
