@@ -257,12 +257,13 @@
 
 
 <!-- =========================================================
-HEADER
+     HEADER
 ========================================================= -->
 
 <header class="contact-header">
 
     <div class="contact-header-inner">
+
 
         <a
             href="index.html"
@@ -302,6 +303,7 @@ HEADER
             <a
                 href="contact.html"
                 class="active"
+                aria-current="page"
             >
                 Contact
             </a>
@@ -319,6 +321,67 @@ HEADER
             <span>→</span>
         </a>
 
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="contact-menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="contact-mobile-menu"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        id="contact-mobile-menu"
+        class="contact-mobile-menu"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="insights.html">
+            Insights
+        </a>
+
+        <a
+            href="contact.html"
+            class="active"
+            aria-current="page"
+        >
+            Contact
+        </a>
+
+        <a
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="contact-mobile-consultation"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Schedule a Consultation
+            <span>→</span>
+        </a>
+
     </div>
 
 </header>
@@ -328,7 +391,7 @@ HEADER
 
 
 <!-- =========================================================
-HERO
+     HERO
 ========================================================= -->
 
 <section class="contact-hero">
@@ -365,7 +428,7 @@ HERO
 
 
 <!-- =========================================================
-CONTACT INTRO
+     CONTACT INTRO
 ========================================================= -->
 
 <section class="contact-main">
@@ -400,6 +463,7 @@ CONTACT INTRO
                     to you to explore whether BSGA Consulting
                     can help.
                 </p>
+
 
                 <div class="contact-details">
 
@@ -443,8 +507,6 @@ CONTACT INTRO
                     method="POST"
                 >
 
-                    <!-- FormSubmit configuration -->
-
                     <input
                         type="hidden"
                         name="_subject"
@@ -481,6 +543,7 @@ CONTACT INTRO
                             id="name"
                             name="name"
                             placeholder="Your name"
+                            autocomplete="name"
                             required
                         >
 
@@ -498,6 +561,7 @@ CONTACT INTRO
                             id="email"
                             name="email"
                             placeholder="you@company.com"
+                            autocomplete="email"
                             required
                         >
 
@@ -515,6 +579,7 @@ CONTACT INTRO
                             id="company"
                             name="company"
                             placeholder="Your company"
+                            autocomplete="organization"
                         >
 
                     </div>
@@ -623,7 +688,7 @@ CONTACT INTRO
 
 
 <!-- =========================================================
-WHAT HAPPENS NEXT
+     WHAT HAPPENS NEXT
 ========================================================= -->
 
 <section class="contact-process">
@@ -645,6 +710,7 @@ WHAT HAPPENS NEXT
 
 
         <div class="contact-process-grid">
+
 
             <article class="contact-process-card">
 
@@ -717,6 +783,7 @@ WHAT HAPPENS NEXT
 
             </article>
 
+
         </div>
 
     </div>
@@ -725,7 +792,7 @@ WHAT HAPPENS NEXT
 
 
 <!-- =========================================================
-SERVICES
+     SERVICES
 ========================================================= -->
 
 <section class="contact-services">
@@ -733,6 +800,7 @@ SERVICES
     <div class="contact-container">
 
         <div class="contact-services-grid">
+
 
             <div>
 
@@ -811,7 +879,7 @@ SERVICES
 
 
 <!-- =========================================================
-DIRECT CONTACT
+     DIRECT CONTACT
 ========================================================= -->
 
 <section class="contact-direct">
@@ -851,7 +919,7 @@ DIRECT CONTACT
 
 
 <!-- =========================================================
-FOOTER
+     FOOTER
 ========================================================= -->
 
 <footer class="contact-footer">
@@ -860,11 +928,13 @@ FOOTER
 
         <div class="contact-footer-grid">
 
+
             <div class="contact-footer-brand">
 
                 <img
                     src="images/logos/logo-white.png"
                     alt="BSGA Consulting"
+                    loading="lazy"
                 >
 
                 <p>
@@ -915,7 +985,16 @@ FOOTER
                     info@bsgaconsulting.es
                 </a>
 
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Schedule a Consultation
+                </a>
+
             </div>
+
 
         </div>
 
@@ -933,52 +1012,148 @@ FOOTER
 
 
 <!-- =========================================================
-FORM SUCCESS MESSAGE
+     JAVASCRIPT
 ========================================================= -->
 
 <script>
 
-    const params = new URLSearchParams(
-        window.location.search
-    );
+document.addEventListener("DOMContentLoaded", function () {
 
-    if (params.get("sent") === "true") {
+    const toggle =
+        document.querySelector(".contact-menu-toggle");
 
-        const form = document.querySelector(".contact-form");
+    const menu =
+        document.querySelector(".contact-mobile-menu");
 
-        if (form) {
+    if (!toggle || !menu) return;
 
-            form.innerHTML = `
 
-                <div class="contact-success">
+    toggle.addEventListener("click", function () {
 
-                    <span class="contact-blue-kicker">
-                        MESSAGE SENT
-                    </span>
+        const isOpen =
+            menu.classList.toggle("open");
 
-                    <h2>
-                        Thank you.
-                    </h2>
+        toggle.classList.toggle(
+            "open",
+            isOpen
+        );
 
-                    <p>
-                        Your enquiry has been received.
-                        We will get back to you as soon as possible.
-                    </p>
+        toggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
 
-                    <a
-                        href="index.html"
-                        class="contact-success-button"
-                    >
-                        Back to Home
-                    </a>
+        toggle.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation"
+                : "Open navigation"
+        );
 
-                </div>
+    });
 
-            `;
+
+    menu.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            menu.classList.remove("open");
+
+            toggle.classList.remove("open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            toggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+            );
+
+        });
+
+    });
+
+
+    window.addEventListener("resize", function () {
+
+        if (window.innerWidth > 768) {
+
+            menu.classList.remove("open");
+
+            toggle.classList.remove("open");
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            toggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+            );
 
         }
 
-    }
+    });
+
+});
+
+</script>
+
+
+<!-- =========================================================
+     FORM SUCCESS MESSAGE
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+    if (params.get("sent") !== "true") return;
+
+
+    const form =
+        document.querySelector(".contact-form");
+
+    if (!form) return;
+
+
+    form.innerHTML = `
+
+        <div class="contact-success">
+
+            <span class="contact-blue-kicker">
+                MESSAGE SENT
+            </span>
+
+            <h2>
+                Thank you.
+            </h2>
+
+            <p>
+                Your enquiry has been received.
+                We will get back to you as soon as possible.
+            </p>
+
+            <a
+                href="index.html"
+                class="contact-success-button"
+            >
+                Back to Home
+            </a>
+
+        </div>
+
+    `;
+
+});
 
 </script>
 
