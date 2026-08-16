@@ -8,25 +8,31 @@ BSGA CONSULTING
 LARGE DESKTOP
 ==========================================================*/
 
-@media (max-width:1400px){
+@media (max-width: 1400px) {
 
-.container{
+    .container {
 
-    width:min(95%,1400px);
+        width: min(
+            95%,
+            1400px
+        );
 
-}
+    }
 
-.hero-wrapper{
 
-    grid-template-columns:48% 52%;
+    .hero-wrapper {
 
-}
+        grid-template-columns:
+            48% 52%;
 
-.hero h1{
+    }
 
-    font-size:5.4rem;
 
-}
+    .hero h1 {
+
+        font-size: 5.4rem;
+
+    }
 
 }
 
@@ -35,69 +41,50 @@ LARGE DESKTOP
 LAPTOP
 ==========================================================*/
 
-@media (max-width:1200px){
+@media (max-width: 1200px) {
 
-.container{
+    .container {
 
-    width:min(94%,1200px);
+        width: min(
+            94%,
+            1200px
+        );
 
-}
+    }
 
-.header .container{
 
-    grid-template-columns:190px 1fr 210px;
+    .hero-wrapper {
 
-}
+        grid-template-columns: 1fr;
 
-.logo img{
+        gap: 60px;
 
-    width:170px;
+    }
 
-}
 
-.header nav{
+    .hero-copy {
 
-    gap:30px;
+        max-width: 720px;
 
-}
+        margin-left: auto;
+        margin-right: auto;
 
-.header .button{
+    }
 
-    width:190px;
 
-    height:50px;
+    .hero-image {
 
-    font-size:.90rem;
+        height: 600px;
 
-}
+    }
 
-.hero-wrapper{
 
-    grid-template-columns:1fr;
+    .services-grid {
 
-    gap:60px;
+        grid-template-columns:
+            repeat(2, 1fr);
 
-}
-
-.hero-copy{
-
-    max-width:720px;
-
-    margin:auto;
-
-}
-
-.hero-image{
-
-    height:600px;
-
-}
-
-.services-grid{
-
-    grid-template-columns:repeat(2,1fr);
-
-}
+    }
 
 }
 
@@ -106,103 +93,82 @@ LAPTOP
 TABLET
 ==========================================================*/
 
-@media (max-width:992px){
+@media (max-width: 992px) {
 
-section{
+    section {
 
-    padding:90px 0;
+        padding:
+            90px 0;
 
-}
+    }
 
-.header .container{
 
-    display:flex;
+    .hero {
 
-    justify-content:space-between;
+        min-height: auto;
 
-    align-items:center;
+        padding-top: 110px;
 
-}
+    }
 
-.header nav{
 
-    display:none;
+    .hero-wrapper {
 
-}
+        grid-template-columns: 1fr;
 
-.header .button{
+    }
 
-    display:none;
 
-}
+    .hero-copy {
 
-.logo img{
+        text-align: center;
 
-    width:175px;
+        max-width: 720px;
 
-}
+        margin-left: auto;
+        margin-right: auto;
 
-.hero{
+    }
 
-    min-height:auto;
 
-    padding-top:110px;
+    .hero p {
 
-}
+        margin-left: auto;
 
-.hero-wrapper{
+        margin-right: auto;
 
-    grid-template-columns:1fr;
+    }
 
-}
 
-.hero-copy{
+    .hero-buttons {
 
-    text-align:center;
+        justify-content: center;
 
-    max-width:720px;
+    }
 
-    margin:auto;
 
-}
+    .hero-image {
 
-.hero p{
+        height: 500px;
 
-    margin-left:auto;
+    }
 
-    margin-right:auto;
 
-}
+    .services-grid,
+    .why-grid,
+    .approach-layout,
+    .footer-grid {
 
-.hero-buttons{
+        grid-template-columns: 1fr;
 
-    justify-content:center;
+    }
 
-}
 
-.hero-image{
+    .section-title {
 
-    height:500px;
+        margin-bottom: 60px;
 
-}
-
-.services-grid,
-
-.why-grid,
-
-.approach-layout,
-
-.footer-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.section-title{
-
-    margin-bottom:60px;
-
-}
+    }
 
 }
 
@@ -211,57 +177,79 @@ section{
 MOBILE
 ==========================================================*/
 
-@media (max-width:768px){
+@media (max-width: 768px) {
 
-.hero{
+    section {
 
-    padding-top:90px;
+        padding:
+            80px 0;
 
-}
+    }
 
-.hero-copy{
 
-    text-align:left;
+    .container {
 
-}
+        width:
+            calc(100% - 32px);
 
-.hero h1{
+    }
 
-    font-size:3.3rem;
 
-}
+    .hero {
 
-.hero p{
+        padding-top: 90px;
 
-    font-size:1rem;
+    }
 
-}
 
-.hero-buttons{
+    .hero-copy {
 
-    flex-direction:column;
+        text-align: left;
 
-}
+    }
 
-.hero-buttons .button,
 
-.hero-buttons .button-secondary{
+    .hero h1 {
 
-    width:100%;
+        font-size: 3.3rem;
 
-}
+    }
 
-.hero-image{
 
-    height:360px;
+    .hero p {
 
-}
+        font-size: 1rem;
 
-.section-title h2{
+    }
 
-    font-size:2.4rem;
 
-}
+    .hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .hero-buttons .button,
+    .hero-buttons .button-secondary {
+
+        width: 100%;
+
+    }
+
+
+    .hero-image {
+
+        height: 360px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 2.4rem;
+
+    }
 
 }
 
@@ -270,42 +258,42 @@ MOBILE
 SMALL MOBILE
 ==========================================================*/
 
-@media (max-width:480px){
+@media (max-width: 480px) {
 
-.container{
+    .container {
 
-    width:92%;
+        width:
+            calc(100% - 32px);
 
-}
+    }
 
-section{
 
-    padding:70px 0;
+    section {
 
-}
+        padding:
+            70px 0;
 
-.hero h1{
+    }
 
-    font-size:2.7rem;
 
-}
+    .hero h1 {
 
-.hero-kicker{
+        font-size: 2.7rem;
 
-    font-size:.72rem;
+    }
 
-}
 
-.hero-image{
+    .hero-kicker {
 
-    height:280px;
+        font-size: .72rem;
 
-}
+    }
 
-.logo img{
 
-    width:150px;
+    .hero-image {
 
-}
+        height: 280px;
+
+    }
 
 }
