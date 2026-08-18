@@ -1,174 +1,108 @@
 /* =========================================================
    BSGA CONSULTING
-   MAIN JAVASCRIPT
-   ========================================================= */
+   GLOBAL JAVASCRIPT
+   Main Navigation
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    const menuToggle =
+        document.querySelector(".menu-toggle");
+
+    const mobileNav =
+        document.querySelector(".mobile-nav");
 
 
-/* =========================================================
-   HEADER SCROLL
-   ========================================================= */
+    /* -----------------------------------------------------
+       Stop if the global navigation is not present
+    ----------------------------------------------------- */
 
-const header = document.querySelector(".site-header");
-
-function updateHeader() {
-
-    if (!header) {
+    if (!menuToggle || !mobileNav) {
         return;
     }
 
-    if (window.scrollY > 40) {
 
-        header.classList.add("scrolled");
+    /* =====================================================
+       OPEN / CLOSE MENU
+    ===================================================== */
 
-    } else {
+    function openMenu() {
 
-        header.classList.remove("scrolled");
+        mobileNav.classList.add("open");
 
-    }
+        menuToggle.classList.add("active");
 
-}
-
-updateHeader();
-
-window.addEventListener(
-    "scroll",
-    updateHeader,
-    { passive: true }
-);
-
-
-/* =========================================================
-   FADE ANIMATIONS
-   ========================================================= */
-
-const fadeItems =
-    document.querySelectorAll(".fade");
-
-if (
-    "IntersectionObserver" in window &&
-    fadeItems.length
-) {
-
-    const observer =
-        new IntersectionObserver(
-            function (entries) {
-
-                entries.forEach(function (entry) {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("show");
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.15
-            }
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "true"
         );
 
-    fadeItems.forEach(function (item) {
+        menuToggle.setAttribute(
+            "aria-label",
+            "Close navigation menu"
+        );
 
-        observer.observe(item);
-
-    });
-
-}
-
-
-/* =========================================================
-   GLOBAL MOBILE MENU
-   ========================================================= */
-
-const menuToggle =
-    document.getElementById("menuToggle");
-
-const mobileNav =
-    document.getElementById("mobileNav");
-
-
-function closeMobileMenu() {
-
-    if (!menuToggle || !mobileNav) {
-        return;
     }
 
-    mobileNav.classList.remove("open");
 
-    menuToggle.classList.remove("active");
+    function closeMenu() {
 
-    menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-    );
+        mobileNav.classList.remove("open");
 
-    menuToggle.setAttribute(
-        "aria-label",
-        "Open navigation menu"
-    );
+        menuToggle.classList.remove("active");
 
-}
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
+        menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
 
-function openMobileMenu() {
-
-    if (!menuToggle || !mobileNav) {
-        return;
     }
 
-    mobileNav.classList.add("open");
 
-    menuToggle.classList.add("active");
+    function toggleMenu() {
 
-    menuToggle.setAttribute(
-        "aria-expanded",
-        "true"
-    );
+        const isOpen =
+            mobileNav.classList.contains("open");
 
-    menuToggle.setAttribute(
-        "aria-label",
-        "Close navigation menu"
-    );
+        if (isOpen) {
 
-}
+            closeMenu();
+
+        } else {
+
+            openMenu();
+
+        }
+
+    }
 
 
-if (menuToggle && mobileNav) {
+    /* =====================================================
+       MENU BUTTON
+    ===================================================== */
 
     menuToggle.addEventListener(
         "click",
-        function (event) {
-
-            event.preventDefault();
-            event.stopPropagation();
-
-            const isOpen =
-                mobileNav.classList.contains("open");
-
-            if (isOpen) {
-
-                closeMobileMenu();
-
-            } else {
-
-                openMobileMenu();
-
-            }
-
-        }
+        toggleMenu
     );
 
 
-    /* Close after navigation */
+    /* =====================================================
+       CLOSE AFTER CLICKING A LINK
+    ===================================================== */
 
     const mobileLinks =
         mobileNav.querySelectorAll("a");
+
 
     mobileLinks.forEach(function (link) {
 
@@ -176,7 +110,7 @@ if (menuToggle && mobileNav) {
             "click",
             function () {
 
-                closeMobileMenu();
+                closeMenu();
 
             }
         );
@@ -184,19 +118,28 @@ if (menuToggle && mobileNav) {
     });
 
 
-    /* Close when clicking outside */
+    /* =====================================================
+       CLOSE WHEN CLICKING OUTSIDE THE MENU
+    ===================================================== */
 
     document.addEventListener(
         "click",
         function (event) {
 
+            const clickedInsideMenu =
+                mobileNav.contains(event.target);
+
+            const clickedToggle =
+                menuToggle.contains(event.target);
+
+
             if (
                 mobileNav.classList.contains("open") &&
-                !mobileNav.contains(event.target) &&
-                !menuToggle.contains(event.target)
+                !clickedInsideMenu &&
+                !clickedToggle
             ) {
 
-                closeMobileMenu();
+                closeMenu();
 
             }
 
@@ -204,7 +147,9 @@ if (menuToggle && mobileNav) {
     );
 
 
-    /* Close with ESC */
+    /* =====================================================
+       CLOSE WITH ESCAPE
+    ===================================================== */
 
     document.addEventListener(
         "keydown",
@@ -215,7 +160,7 @@ if (menuToggle && mobileNav) {
                 mobileNav.classList.contains("open")
             ) {
 
-                closeMobileMenu();
+                closeMenu();
 
                 menuToggle.focus();
 
@@ -225,19 +170,22 @@ if (menuToggle && mobileNav) {
     );
 
 
-    /* Close if viewport becomes desktop */
+    /* =====================================================
+       CLOSE MENU WHEN RETURNING TO DESKTOP
+    ===================================================== */
 
     window.addEventListener(
         "resize",
         function () {
 
-            if (window.innerWidth > 900) {
+            if (window.innerWidth > 768) {
 
-                closeMobileMenu();
+                closeMenu();
 
             }
 
         }
     );
 
-}
+
+});
