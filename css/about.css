@@ -25,7 +25,7 @@
 
     position:relative;
 
-    z-index:100;
+    z-index:1000;
 
     width:100%;
 
@@ -95,6 +95,8 @@
 
     font-weight:500;
 
+    text-decoration:none;
+
     transition:color .2s ease;
 
 }
@@ -123,6 +125,11 @@
 
 }
 
+
+/* =========================================================
+   HEADER CTA
+========================================================= */
+
 .about-header-button{
 
     display:inline-flex;
@@ -145,12 +152,12 @@
 
     font-weight:600;
 
+    text-decoration:none;
+
     white-space:nowrap;
 
     transition:
-
         transform .25s ease,
-
         box-shadow .25s ease;
 
 }
@@ -161,6 +168,18 @@
 
     box-shadow:
         0 10px 28px rgba(40,103,232,.25);
+
+}
+
+
+/* =========================================================
+   MOBILE CONTROLS
+========================================================= */
+
+.menu-toggle,
+.mobile-nav{
+
+    display:none;
 
 }
 
@@ -494,9 +513,7 @@
         0 8px 25px rgba(7,24,46,.035);
 
     transition:
-
         transform .28s ease,
-
         box-shadow .28s ease;
 
 }
@@ -824,11 +841,8 @@
         0 8px 25px rgba(7,24,46,.035);
 
     transition:
-
         transform .28s ease,
-
         box-shadow .28s ease,
-
         border-color .28s ease;
 
 }
@@ -1008,10 +1022,10 @@
 
     font-weight:600;
 
+    text-decoration:none;
+
     transition:
-
         transform .25s ease,
-
         box-shadow .25s ease;
 
 }
@@ -1032,6 +1046,8 @@
     font-size:14px;
 
     font-weight:500;
+
+    text-decoration:none;
 
 }
 
@@ -1112,6 +1128,8 @@
 
     font-size:13px;
 
+    text-decoration:none;
+
     transition:color .2s ease;
 
 }
@@ -1186,11 +1204,17 @@
 
     .about-header{
 
+        position:relative;
+
+        z-index:1000;
+
         height:75px;
 
     }
 
     .about-header-inner{
+
+        position:relative;
 
         height:75px;
 
@@ -1198,11 +1222,21 @@
 
     }
 
+
+    /* =====================================================
+       LOGO
+    ===================================================== */
+
     .about-logo img{
 
-        width:145px;
+        width:115px;
 
     }
+
+
+    /* =====================================================
+       DESKTOP NAVIGATION
+    ===================================================== */
 
     .about-navigation{
 
@@ -1210,18 +1244,214 @@
 
     }
 
+
+    /* =====================================================
+       DESKTOP CTA
+    ===================================================== */
+
     .about-header-button{
 
-        min-height:44px;
-
-        padding:0 16px;
-
-        font-size:13px;
+        display:none;
 
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HAMBURGER
+    ===================================================== */
+
+    .menu-toggle{
+
+        position:relative;
+
+        z-index:1100;
+
+        width:44px;
+
+        height:44px;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:5px;
+
+        padding:0;
+
+        border:0;
+
+        background:transparent;
+
+        cursor:pointer;
+
+    }
+
+    .menu-toggle span{
+
+        display:block;
+
+        width:23px;
+
+        height:2px;
+
+        background:#FFFFFF;
+
+        border-radius:2px;
+
+        transition:
+            transform .25s ease,
+            opacity .25s ease;
+
+    }
+
+    .menu-toggle.active span:nth-child(1){
+
+        transform:translateY(7px) rotate(45deg);
+
+    }
+
+    .menu-toggle.active span:nth-child(2){
+
+        opacity:0;
+
+    }
+
+    .menu-toggle.active span:nth-child(3){
+
+        transform:translateY(-7px) rotate(-45deg);
+
+    }
+
+
+    /* =====================================================
+       MOBILE NAVIGATION
+    ===================================================== */
+
+    .mobile-nav{
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        right:0;
+
+        z-index:1050;
+
+        display:flex;
+
+        flex-direction:column;
+
+        padding:18px 6% 25px;
+
+        background:#000000;
+
+        border-top:1px solid rgba(255,255,255,.08);
+
+        box-shadow:
+            0 20px 40px rgba(0,0,0,.25);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transform:translateY(-10px);
+
+        transition:
+            opacity .25s ease,
+            visibility .25s ease,
+            transform .25s ease;
+
+    }
+
+    .mobile-nav.open{
+
+        opacity:1;
+
+        visibility:visible;
+
+        transform:translateY(0);
+
+    }
+
+    .mobile-nav a{
+
+        display:flex;
+
+        align-items:center;
+
+        min-height:52px;
+
+        padding:0;
+
+        color:#FFFFFF;
+
+        font-size:16px;
+
+        font-weight:500;
+
+        text-decoration:none;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+
+    }
+
+    .mobile-nav a.active{
+
+        color:#5FA4FF;
+
+    }
+
+    .mobile-nav a:last-child{
+
+        border-bottom:0;
+
+    }
+
+
+    /* =====================================================
+       MOBILE CTA
+    ===================================================== */
+
+    .mobile-nav .mobile-nav-cta{
+
+        justify-content:center;
+
+        min-height:48px;
+
+        margin-top:18px;
+
+        padding:0 22px;
+
+        border:0;
+
+        border-radius:999px;
+
+        background:#2867E8;
+
+        color:#FFFFFF;
+
+        font-weight:600;
+
+    }
+
+    .mobile-nav .mobile-nav-cta span{
+
+        margin-left:8px;
+
+        font-size:18px;
+
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .about-hero{
 
@@ -1250,7 +1480,9 @@
     }
 
 
-    /* SECTIONS */
+    /* =====================================================
+       SECTIONS
+    ===================================================== */
 
     .about-introduction,
     .about-philosophy,
@@ -1274,7 +1506,9 @@
     }
 
 
-    /* PHILOSOPHY */
+    /* =====================================================
+       PHILOSOPHY
+    ===================================================== */
 
     .about-philosophy-grid{
 
@@ -1289,7 +1523,9 @@
     }
 
 
-    /* BELIEFS */
+    /* =====================================================
+       BELIEFS
+    ===================================================== */
 
     .about-belief{
 
@@ -1312,7 +1548,9 @@
     }
 
 
-    /* METHODOLOGY */
+    /* =====================================================
+       METHODOLOGY
+    ===================================================== */
 
     .about-methodology-item{
 
@@ -1325,7 +1563,9 @@
     }
 
 
-    /* SERVICES */
+    /* =====================================================
+       SERVICES
+    ===================================================== */
 
     .about-services-grid{
 
@@ -1340,7 +1580,9 @@
     }
 
 
-    /* CTA */
+    /* =====================================================
+       CTA
+    ===================================================== */
 
     .about-cta{
 
@@ -1377,7 +1619,9 @@
     }
 
 
-    /* FOOTER */
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     .about-footer-grid{
 
@@ -1396,15 +1640,15 @@
 
 @media(max-width:480px){
 
-    .about-header-button{
+    .about-header-inner{
 
-        display:none;
+        width:90%;
 
     }
 
     .about-logo img{
 
-        width:150px;
+        width:110px;
 
     }
 
@@ -1421,279 +1665,6 @@
 
         font-size:2.45rem;
 
-    }
-
-}
-/* =========================================================
-   MOBILE NAVIGATION
-   BSGA CONSULTING
-========================================================= */
-
-/* Hide mobile controls on desktop */
-
-.menu-toggle,
-.mobile-nav {
-    display: none;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .about-header {
-        position: relative;
-        z-index: 1000;
-        height: 75px;
-    }
-
-    .about-header-inner {
-        position: relative;
-        height: 75px;
-        width: 92%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-
-    /* LOGO */
-
-    .about-logo img {
-        width: 115px;
-        height: auto;
-    }
-
-
-    /* Hide desktop navigation */
-
-    .about-navigation {
-        display: none;
-    }
-
-
-    /* Hide desktop CTA */
-
-    .about-header-cta {
-        display: none;
-    }
-
-
-    /* =====================================================
-       HAMBURGER
-    ===================================================== */
-
-    .menu-toggle {
-
-        position: relative;
-
-        z-index: 1100;
-
-        width: 44px;
-        height: 44px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 5px;
-
-        padding: 0;
-
-        border: 0;
-
-        background: transparent;
-
-        cursor: pointer;
-
-    }
-
-
-    .menu-toggle span {
-
-        display: block;
-
-        width: 23px;
-        height: 2px;
-
-        background: #ffffff;
-
-        border-radius: 2px;
-
-        transition:
-            transform .25s ease,
-            opacity .25s ease;
-
-    }
-
-
-    /* Hamburger → X */
-
-    .menu-toggle.active span:nth-child(1) {
-
-        transform: translateY(7px) rotate(45deg);
-
-    }
-
-
-    .menu-toggle.active span:nth-child(2) {
-
-        opacity: 0;
-
-    }
-
-
-    .menu-toggle.active span:nth-child(3) {
-
-        transform: translateY(-7px) rotate(-45deg);
-
-    }
-
-
-    /* =====================================================
-       MOBILE MENU
-    ===================================================== */
-
-    .mobile-nav {
-
-        position: absolute;
-
-        top: 75px;
-        left: 0;
-        right: 0;
-
-        z-index: 1050;
-
-        display: flex;
-
-        flex-direction: column;
-
-        padding: 18px 6% 25px;
-
-        background: #000000;
-
-        border-top: 1px solid rgba(255,255,255,.08);
-
-        box-shadow:
-            0 20px 40px rgba(0,0,0,.25);
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transform: translateY(-10px);
-
-        transition:
-            opacity .25s ease,
-            visibility .25s ease,
-            transform .25s ease;
-
-    }
-
-
-    .mobile-nav.open {
-
-        opacity: 1;
-
-        visibility: visible;
-
-        transform: translateY(0);
-
-    }
-
-
-    .mobile-nav a {
-
-        display: flex;
-
-        align-items: center;
-
-        min-height: 52px;
-
-        padding: 0;
-
-        color: #ffffff;
-
-        font-size: 16px;
-
-        font-weight: 500;
-
-        text-decoration: none;
-
-        border-bottom: 1px solid rgba(255,255,255,.08);
-
-    }
-
-
-    .mobile-nav a.active {
-
-        color: #5FA4FF;
-
-    }
-
-
-    .mobile-nav a:last-child {
-
-        border-bottom: 0;
-
-    }
-
-
-    /* =====================================================
-       MOBILE CTA
-    ===================================================== */
-
-    .mobile-nav .mobile-nav-cta {
-
-        justify-content: center;
-
-        min-height: 48px;
-
-        margin-top: 18px;
-
-        padding: 0 22px;
-
-        border: 0;
-
-        border-radius: 999px;
-
-        background: #2867E8;
-
-        color: #ffffff;
-
-        font-weight: 600;
-
-    }
-
-
-    .mobile-nav .mobile-nav-cta span {
-
-        margin-left: 8px;
-
-        font-size: 18px;
-
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .about-header-inner {
-        width: 90%;
-    }
-
-    .about-logo img {
-        width: 110px;
     }
 
 }
