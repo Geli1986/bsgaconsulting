@@ -1,6 +1,7 @@
 /* =========================================================
    BSGA CONSULTING
    ABOUT PAGE
+   ABOUT.CSS
 ========================================================= */
 
 
@@ -13,173 +14,6 @@
     width:min(92%,1230px);
 
     margin:0 auto;
-
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.about-header{
-
-    position:relative;
-
-    z-index:1000;
-
-    width:100%;
-
-    height:88px;
-
-    background:#000000;
-
-}
-
-.about-header-inner{
-
-    width:min(94%,1410px);
-
-    height:88px;
-
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-.about-logo{
-
-    display:flex;
-
-    align-items:center;
-
-    flex-shrink:0;
-
-}
-
-.about-logo img{
-
-    display:block;
-
-    width:180px;
-
-    height:auto;
-
-}
-
-.about-navigation{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:40px;
-
-    margin-left:auto;
-
-    margin-right:70px;
-
-}
-
-.about-navigation a{
-
-    position:relative;
-
-    color:#FFFFFF;
-
-    font-size:16px;
-
-    font-weight:500;
-
-    text-decoration:none;
-
-    transition:color .2s ease;
-
-}
-
-.about-navigation a:hover{
-
-    color:#FFFFFF;
-
-}
-
-.about-navigation a.active::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    bottom:-10px;
-
-    height:2px;
-
-    background:#2875ED;
-
-}
-
-
-/* =========================================================
-   HEADER CTA
-========================================================= */
-
-.about-header-button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:48px;
-
-    padding:0 25px;
-
-    border-radius:999px;
-
-    background:#2867E8;
-
-    color:#FFFFFF;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    text-decoration:none;
-
-    white-space:nowrap;
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-
-}
-
-.about-header-button:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 10px 28px rgba(40,103,232,.25);
-
-}
-
-
-/* =========================================================
-   MOBILE CONTROLS
-========================================================= */
-
-.menu-toggle,
-.mobile-nav{
-
-    display:none;
 
 }
 
@@ -513,7 +347,9 @@
         0 8px 25px rgba(7,24,46,.035);
 
     transition:
+
         transform .28s ease,
+
         box-shadow .28s ease;
 
 }
@@ -689,7 +525,7 @@
 
     display:grid;
 
-    grid-template-columns:90px 1fr;
+    grid-template-columns:90px minmax(0,1fr);
 
     gap:35px;
 
@@ -840,9 +676,14 @@
     box-shadow:
         0 8px 25px rgba(7,24,46,.035);
 
+    text-decoration:none;
+
     transition:
+
         transform .28s ease,
+
         box-shadow .28s ease,
+
         border-color .28s ease;
 
 }
@@ -1025,7 +866,9 @@
     text-decoration:none;
 
     transition:
+
         transform .25s ease,
+
         box-shadow .25s ease;
 
 }
@@ -1157,27 +1000,7 @@
    TABLET
 ========================================================= */
 
-@media(max-width:1050px){
-
-    .about-navigation{
-
-        gap:25px;
-
-        margin-right:30px;
-
-    }
-
-    .about-logo img{
-
-        width:160px;
-
-    }
-
-    .about-header-button{
-
-        padding:0 20px;
-
-    }
+@media (max-width:1050px){
 
     .about-introduction-grid,
     .about-beliefs-grid,
@@ -1193,6 +1016,12 @@
 
     }
 
+    .about-footer-grid{
+
+        gap:50px;
+
+    }
+
 }
 
 
@@ -1200,258 +1029,11 @@
    MOBILE
 ========================================================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    .about-header{
-
-        position:relative;
-
-        z-index:1000;
-
-        height:75px;
-
-    }
-
-    .about-header-inner{
-
-        position:relative;
-
-        height:75px;
-
-        width:92%;
-
-    }
-
-
-    /* =====================================================
-       LOGO
-    ===================================================== */
-
-    .about-logo img{
-
-        width:115px;
-
-    }
-
-
-    /* =====================================================
-       DESKTOP NAVIGATION
-    ===================================================== */
-
-    .about-navigation{
-
-        display:none;
-
-    }
-
-
-    /* =====================================================
-       DESKTOP CTA
-    ===================================================== */
-
-    .about-header-button{
-
-        display:none;
-
-    }
-
-
-    /* =====================================================
-       HAMBURGER
-    ===================================================== */
-
-    .menu-toggle{
-
-        position:relative;
-
-        z-index:1100;
-
-        width:44px;
-
-        height:44px;
-
-        display:flex;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        justify-content:center;
-
-        gap:5px;
-
-        padding:0;
-
-        border:0;
-
-        background:transparent;
-
-        cursor:pointer;
-
-    }
-
-    .menu-toggle span{
-
-        display:block;
-
-        width:23px;
-
-        height:2px;
-
-        background:#FFFFFF;
-
-        border-radius:2px;
-
-        transition:
-            transform .25s ease,
-            opacity .25s ease;
-
-    }
-
-    .menu-toggle.active span:nth-child(1){
-
-        transform:translateY(7px) rotate(45deg);
-
-    }
-
-    .menu-toggle.active span:nth-child(2){
-
-        opacity:0;
-
-    }
-
-    .menu-toggle.active span:nth-child(3){
-
-        transform:translateY(-7px) rotate(-45deg);
-
-    }
-
-
-    /* =====================================================
-       MOBILE NAVIGATION
-    ===================================================== */
-
-    .mobile-nav{
-
-        position:absolute;
-
-        top:75px;
-
-        left:0;
-
-        right:0;
-
-        z-index:1050;
-
-        display:flex;
-
-        flex-direction:column;
-
-        padding:18px 6% 25px;
-
-        background:#000000;
-
-        border-top:1px solid rgba(255,255,255,.08);
-
-        box-shadow:
-            0 20px 40px rgba(0,0,0,.25);
-
-        opacity:0;
-
-        visibility:hidden;
-
-        transform:translateY(-10px);
-
-        transition:
-            opacity .25s ease,
-            visibility .25s ease,
-            transform .25s ease;
-
-    }
-
-    .mobile-nav.open{
-
-        opacity:1;
-
-        visibility:visible;
-
-        transform:translateY(0);
-
-    }
-
-    .mobile-nav a{
-
-        display:flex;
-
-        align-items:center;
-
-        min-height:52px;
-
-        padding:0;
-
-        color:#FFFFFF;
-
-        font-size:16px;
-
-        font-weight:500;
-
-        text-decoration:none;
-
-        border-bottom:1px solid rgba(255,255,255,.08);
-
-    }
-
-    .mobile-nav a.active{
-
-        color:#5FA4FF;
-
-    }
-
-    .mobile-nav a:last-child{
-
-        border-bottom:0;
-
-    }
-
-
-    /* =====================================================
-       MOBILE CTA
-    ===================================================== */
-
-    .mobile-nav .mobile-nav-cta{
-
-        justify-content:center;
-
-        min-height:48px;
-
-        margin-top:18px;
-
-        padding:0 22px;
-
-        border:0;
-
-        border-radius:999px;
-
-        background:#2867E8;
-
-        color:#FFFFFF;
-
-        font-weight:600;
-
-    }
-
-    .mobile-nav .mobile-nav-cta span{
-
-        margin-left:8px;
-
-        font-size:18px;
-
-    }
-
-
-    /* =====================================================
+    /* -----------------------------------------------------
        HERO
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .about-hero{
 
@@ -1479,10 +1061,34 @@
 
     }
 
+    .about-hero-lines{
 
-    /* =====================================================
+        right:-250px;
+
+        top:120px;
+
+        width:450px;
+
+        height:450px;
+
+    }
+
+    .about-hero-glow{
+
+        width:550px;
+
+        height:550px;
+
+        right:-300px;
+
+        top:-120px;
+
+    }
+
+
+    /* -----------------------------------------------------
        SECTIONS
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .about-introduction,
     .about-philosophy,
@@ -1495,9 +1101,12 @@
 
     }
 
-    .about-introduction-grid,
-    .about-beliefs-grid,
-    .about-difference-grid{
+
+    /* -----------------------------------------------------
+       INTRODUCTION
+    ----------------------------------------------------- */
+
+    .about-introduction-grid{
 
         grid-template-columns:1fr;
 
@@ -1506,9 +1115,15 @@
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        PHILOSOPHY
-    ===================================================== */
+    ----------------------------------------------------- */
+
+    .about-section-heading{
+
+        margin-bottom:45px;
+
+    }
 
     .about-philosophy-grid{
 
@@ -1520,18 +1135,36 @@
 
         min-height:250px;
 
+        padding:30px;
+
+    }
+
+    .about-number{
+
+        margin-bottom:45px;
+
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        BELIEFS
-    ===================================================== */
+    ----------------------------------------------------- */
+
+    .about-beliefs-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+
+    }
 
     .about-belief{
 
         grid-template-columns:45px minmax(0,1fr);
 
         gap:15px;
+
+        padding:27px 0;
 
     }
 
@@ -1548,13 +1181,13 @@
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        METHODOLOGY
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .about-methodology-item{
 
-        grid-template-columns:55px 1fr;
+        grid-template-columns:55px minmax(0,1fr);
 
         gap:18px;
 
@@ -1563,9 +1196,22 @@
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
+       DIFFERENCE
+    ----------------------------------------------------- */
+
+    .about-difference-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+
+    }
+
+
+    /* -----------------------------------------------------
        SERVICES
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .about-services-grid{
 
@@ -1577,12 +1223,14 @@
 
         min-height:250px;
 
+        padding:30px;
+
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        CTA
-    ===================================================== */
+    ----------------------------------------------------- */
 
     .about-cta{
 
@@ -1595,6 +1243,8 @@
         min-height:470px;
 
         padding:45px 28px;
+
+        border-radius:20px;
 
     }
 
@@ -1610,6 +1260,14 @@
 
         align-items:stretch;
 
+        gap:18px;
+
+    }
+
+    .about-button{
+
+        width:100%;
+
     }
 
     .about-email{
@@ -1619,15 +1277,23 @@
     }
 
 
-    /* =====================================================
+    /* -----------------------------------------------------
        FOOTER
-    ===================================================== */
+    ----------------------------------------------------- */
+
+    .about-footer{
+
+        padding:60px 0 25px;
+
+    }
 
     .about-footer-grid{
 
         grid-template-columns:1fr;
 
         gap:40px;
+
+        padding-bottom:45px;
 
     }
 
@@ -1638,17 +1304,23 @@
    SMALL MOBILE
 ========================================================= */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
-    .about-header-inner{
+    .about-container{
 
         width:90%;
 
     }
 
-    .about-logo img{
+    .about-hero{
 
-        width:110px;
+        min-height:590px;
+
+    }
+
+    .about-hero-content{
+
+        padding:65px 0;
 
     }
 
@@ -1658,12 +1330,76 @@
 
     }
 
+    .about-hero p{
+
+        font-size:14px;
+
+    }
+
     .about-section-heading h2,
     .about-introduction-title h2,
     .about-beliefs-intro h2,
     .about-difference h2{
 
         font-size:2.45rem;
+
+    }
+
+    .about-section-heading p{
+
+        font-size:15px;
+
+    }
+
+    .about-introduction-text p{
+
+        font-size:16px;
+
+    }
+
+    .about-philosophy-card{
+
+        min-height:230px;
+
+        padding:28px;
+
+    }
+
+    .about-belief{
+
+        grid-template-columns:38px minmax(0,1fr);
+
+        gap:12px;
+
+    }
+
+    .about-methodology-item{
+
+        grid-template-columns:45px minmax(0,1fr);
+
+        gap:15px;
+
+    }
+
+    .about-service{
+
+        min-height:235px;
+
+        padding:28px;
+
+    }
+
+    .about-cta-box{
+
+        min-height:480px;
+
+        padding:40px 24px;
+
+    }
+
+    .about-cta-box h2{
+
+        font-size:2.5rem;
 
     }
 
