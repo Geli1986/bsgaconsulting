@@ -2,6 +2,7 @@
    BSGA CONSULTING
    ABOUT PAGE
    ABOUT.CSS
+   DEFINITIVE VERSION
 ========================================================= */
 
 
@@ -902,101 +903,6 @@
 
 
 /* =========================================================
-   FOOTER
-========================================================= */
-
-.about-footer{
-
-    padding:70px 0 25px;
-
-    background:#000000;
-
-}
-
-.about-footer-grid{
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr 1fr;
-
-    gap:80px;
-
-    padding-bottom:55px;
-
-}
-
-.about-footer-brand img{
-
-    display:block;
-
-    width:180px;
-
-    height:auto;
-
-    margin-bottom:22px;
-
-}
-
-.about-footer-brand p{
-
-    max-width:420px;
-
-    margin:0;
-
-    color:rgba(255,255,255,.55);
-
-    font-size:13px;
-
-    line-height:1.7;
-
-}
-
-.about-footer h4{
-
-    margin:0 0 20px;
-
-    color:#FFFFFF;
-
-    font-size:14px;
-
-}
-
-.about-footer a{
-
-    display:block;
-
-    margin-bottom:12px;
-
-    color:rgba(255,255,255,.65);
-
-    font-size:13px;
-
-    text-decoration:none;
-
-    transition:color .2s ease;
-
-}
-
-.about-footer a:hover{
-
-    color:#FFFFFF;
-
-}
-
-.about-footer-bottom{
-
-    padding-top:25px;
-
-    border-top:1px solid rgba(255,255,255,.12);
-
-    color:rgba(255,255,255,.4);
-
-    font-size:12px;
-
-}
-
-
-/* =========================================================
    TABLET
 ========================================================= */
 
@@ -1013,12 +919,6 @@
     .about-philosophy-grid{
 
         grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .about-footer-grid{
-
-        gap:50px;
 
     }
 
@@ -1273,27 +1173,6 @@
     .about-email{
 
         text-align:center;
-
-    }
-
-
-    /* -----------------------------------------------------
-       FOOTER
-    ----------------------------------------------------- */
-
-    .about-footer{
-
-        padding:60px 0 25px;
-
-    }
-
-    .about-footer-grid{
-
-        grid-template-columns:1fr;
-
-        gap:40px;
-
-        padding-bottom:45px;
 
     }
 
