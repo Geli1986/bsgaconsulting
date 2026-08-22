@@ -107,11 +107,6 @@
         href="css/styles.css"
     >
 
-
-    <!-- =========================================================
-         ABOUT CSS
-    ========================================================== -->
-
     <link
         rel="stylesheet"
         href="css/about.css"
@@ -204,49 +199,49 @@
 
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
+        "@context": "https://schema.org",
+        "@graph": [
 
-        {
-          "@type": "Organization",
-          "@id": "https://bsgaconsulting.es/#organization",
-          "name": "BSGA Consulting",
-          "url": "https://bsgaconsulting.es/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://bsgaconsulting.es/images/logos/logo-white.png"
-          },
-          "email": "info@bsgaconsulting.es",
-          "description": "Strategic consulting for project management, business transformation, operational excellence and Artificial Intelligence."
-        },
+            {
+                "@type": "Organization",
+                "@id": "https://bsgaconsulting.es/#organization",
+                "name": "BSGA Consulting",
+                "url": "https://bsgaconsulting.es/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bsgaconsulting.es/images/logos/logo-white.png"
+                },
+                "email": "info@bsgaconsulting.es",
+                "description": "Strategic consulting for project management, business transformation, operational excellence and Artificial Intelligence."
+            },
 
-        {
-          "@type": "AboutPage",
-          "@id": "https://bsgaconsulting.es/about.html#webpage",
-          "url": "https://bsgaconsulting.es/about.html",
-          "name": "About BSGA Consulting | Strategy, Transformation & AI",
-          "description": "Learn about BSGA Consulting and our practical approach to project management, business transformation, operational improvement and Artificial Intelligence adoption.",
-          "isPartOf": {
-            "@id": "https://bsgaconsulting.es/#website"
-          },
-          "about": {
-            "@id": "https://bsgaconsulting.es/#organization"
-          },
-          "inLanguage": "en"
-        },
+            {
+                "@type": "AboutPage",
+                "@id": "https://bsgaconsulting.es/about.html#webpage",
+                "url": "https://bsgaconsulting.es/about.html",
+                "name": "About BSGA Consulting | Strategy, Transformation & AI",
+                "description": "Learn about BSGA Consulting and our practical approach to project management, business transformation, operational improvement and Artificial Intelligence adoption.",
+                "isPartOf": {
+                    "@id": "https://bsgaconsulting.es/#website"
+                },
+                "about": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "inLanguage": "en"
+            },
 
-        {
-          "@type": "WebSite",
-          "@id": "https://bsgaconsulting.es/#website",
-          "url": "https://bsgaconsulting.es/",
-          "name": "BSGA Consulting",
-          "publisher": {
-            "@id": "https://bsgaconsulting.es/#organization"
-          },
-          "inLanguage": "en"
-        }
+            {
+                "@type": "WebSite",
+                "@id": "https://bsgaconsulting.es/#website",
+                "url": "https://bsgaconsulting.es/",
+                "name": "BSGA Consulting",
+                "publisher": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "inLanguage": "en"
+            }
 
-      ]
+        ]
     }
     </script>
 
@@ -255,10 +250,6 @@
 
 <body class="about-page">
 
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
 
 <!-- =========================================================
      GLOBAL HEADER
@@ -380,6 +371,7 @@
 
         <a
             href="about.html"
+            class="active"
             aria-current="page"
         >
             About
@@ -399,7 +391,8 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            Schedule a Consultation →
+            Schedule a Consultation
+            <span aria-hidden="true">→</span>
         </a>
 
     </nav>
@@ -1163,14 +1156,22 @@
 
 
         <div class="about-footer-bottom">
+
             © 2026 BSGA Consulting. All Rights Reserved.
+
         </div>
 
     </div>
 
 </footer>
 
+
+<!-- =========================================================
+     GLOBAL JAVASCRIPT
+========================================================= -->
+
 <script src="js/main.js"></script>
+
 </body>
 
 </html>
