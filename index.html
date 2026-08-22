@@ -43,6 +43,7 @@
         content="#000000"
     >
 
+
     <!-- =====================================================
          CANONICAL
     ====================================================== -->
@@ -51,6 +52,7 @@
         rel="canonical"
         href="https://bsgaconsulting.es/"
     >
+
 
     <!-- =====================================================
          FAVICON
@@ -68,6 +70,12 @@
         sizes="180x180"
         href="images/logos/apple-touch-icon.png"
     >
+
+    <link
+        rel="manifest"
+        href="/manifest.webmanifest"
+    >
+
 
     <!-- =====================================================
          GOOGLE FONTS
@@ -88,6 +96,17 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
 
     <!-- =====================================================
          OPEN GRAPH
@@ -143,6 +162,7 @@
         content="en_GB"
     >
 
+
     <!-- =====================================================
          TWITTER / X
     ====================================================== -->
@@ -167,14 +187,6 @@
         content="https://bsgaconsulting.es/images/og-image.jpg"
     >
 
-    <!-- =====================================================
-         GLOBAL CSS
-    ====================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="css/styles.css"
-    >
 
     <!-- =====================================================
          STRUCTURED DATA
@@ -214,19 +226,10 @@
     }
     </script>
 
-    <!-- =====================================================
-         MANIFEST
-    ====================================================== -->
-
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
-    >
-
 </head>
 
 
-<body>
+<body class="home-page">
 
 
 <!-- =========================================================
@@ -236,6 +239,7 @@
 <header class="site-header">
 
     <div class="header-container">
+
 
         <!-- LOGO -->
 
@@ -263,6 +267,7 @@
             <a
                 href="index.html"
                 class="active"
+                aria-current="page"
             >
                 Home
             </a>
@@ -286,20 +291,24 @@
         </nav>
 
 
-        <!-- CONSULTATION CTA -->
+        <!-- HEADER CTA -->
 
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="header-cta"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Schedule a Consultation"
         >
 
             <span class="header-cta-text">
                 Schedule a Consultation
             </span>
 
-            <span class="header-cta-arrow">
+            <span
+                class="header-cta-arrow"
+                aria-hidden="true"
+            >
                 →
             </span>
 
@@ -334,7 +343,11 @@
         aria-label="Mobile navigation"
     >
 
-        <a href="index.html">
+        <a
+            href="index.html"
+            class="active"
+            aria-current="page"
+        >
             Home
         </a>
 
@@ -359,13 +372,17 @@
             class="mobile-nav-cta"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Schedule a Consultation"
         >
 
-            <span>
+            <span class="mobile-nav-cta-text">
                 Schedule a Consultation
             </span>
 
-            <span>
+            <span
+                class="mobile-nav-cta-arrow"
+                aria-hidden="true"
+            >
                 →
             </span>
 
@@ -376,9 +393,9 @@
 </header>
 
 
-<!-- =======================================================
+<!-- =========================================================
      MAIN
-======================================================= -->
+========================================================= -->
 
 <main>
 
@@ -389,9 +406,16 @@
 
 <section class="home-hero">
 
-    <div class="home-hero-background"></div>
+    <div
+        class="home-hero-background"
+        aria-hidden="true"
+    ></div>
 
-    <div class="home-hero-overlay"></div>
+    <div
+        class="home-hero-overlay"
+        aria-hidden="true"
+    ></div>
+
 
     <div class="home-hero-container">
 
@@ -413,6 +437,7 @@
                 Intelligence with confidence.
             </p>
 
+
             <div class="home-hero-actions">
 
                 <a
@@ -420,7 +445,9 @@
                     class="home-hero-button home-hero-button-primary"
                 >
                     Discuss Your Challenge
-                    <span>→</span>
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </a>
 
                 <a
@@ -439,168 +466,173 @@
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      SERVICES
-======================================================= -->
+========================================================= -->
 
-<div class="container">
+<section class="home-services">
 
-    <div class="section-title">
+    <div class="container">
 
-        <span>
-            WHAT WE DO
-        </span>
 
-        <h2>
-            Helping organisations solve
-            complex business challenges.
-        </h2>
+        <div class="section-title">
 
-        <p>
-            Combining strategic thinking,
-            project delivery and Artificial
-            Intelligence to achieve measurable
-            business outcomes.
-        </p>
+            <span class="section-kicker">
+                WHAT WE DO
+            </span>
+
+            <h2>
+                Helping organisations solve
+                complex business challenges.
+            </h2>
+
+            <p>
+                Combining strategic thinking,
+                project delivery and Artificial
+                Intelligence to achieve measurable
+                business outcomes.
+            </p>
+
+        </div>
+
+
+        <div class="home-services-grid">
+
+
+            <!-- PROJECT MANAGEMENT -->
+
+            <article class="home-service-card">
+
+                <img
+                    src="images/services/project-management.webp"
+                    alt="Project Management"
+                    loading="lazy"
+                >
+
+                <div class="home-service-content">
+
+                    <h3>
+                        Project Management
+                    </h3>
+
+                    <p>
+                        Governance, PMO, delivery assurance,
+                        stakeholder management and successful
+                        execution.
+                    </p>
+
+                    <a href="project-management.html">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ARTIFICIAL INTELLIGENCE -->
+
+            <article class="home-service-card">
+
+                <img
+                    src="images/services/ai-adoption.webp"
+                    alt="Artificial Intelligence"
+                    loading="lazy"
+                >
+
+                <div class="home-service-content">
+
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
+
+                    <p>
+                        Practical AI adoption focused on
+                        productivity, efficiency and
+                        measurable business value.
+                    </p>
+
+                    <a href="artificial-intelligence.html">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BUSINESS TRANSFORMATION -->
+
+            <article class="home-service-card">
+
+                <img
+                    src="images/services/business-transformation.webp"
+                    alt="Business Transformation"
+                    loading="lazy"
+                >
+
+                <div class="home-service-content">
+
+                    <h3>
+                        Business Transformation
+                    </h3>
+
+                    <p>
+                        Supporting organisations through
+                        strategic change and operational
+                        improvement.
+                    </p>
+
+                    <a href="business-transformation.html">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- OPERATIONAL EXCELLENCE -->
+
+            <article class="home-service-card">
+
+                <img
+                    src="images/services/operational-excellence.webp"
+                    alt="Operational Excellence"
+                    loading="lazy"
+                >
+
+                <div class="home-service-content">
+
+                    <h3>
+                        Operational Excellence
+                    </h3>
+
+                    <p>
+                        Improving processes, performance and
+                        ways of working to create sustainable
+                        operational results.
+                    </p>
+
+                    <a href="operational-excellence.html">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
 
     </div>
 
-
-    <div class="services-grid">
-
-
-        <!-- PROJECT MANAGEMENT -->
-
-        <article class="service-card">
-
-            <img
-                src="images/services/project-management.webp"
-                alt="Project Management"
-                loading="lazy"
-            >
-
-            <div class="service-content">
-
-                <h3>
-                    Project Management
-                </h3>
-
-                <p>
-                    Governance, PMO, delivery assurance,
-                    stakeholder management and successful
-                    execution.
-                </p>
-
-                <a href="project-management.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
+</section>
 
 
-        <!-- ARTIFICIAL INTELLIGENCE -->
-
-        <article class="service-card">
-
-            <img
-                src="images/services/ai-adoption.webp"
-                alt="Artificial Intelligence"
-                loading="lazy"
-            >
-
-            <div class="service-content">
-
-                <h3>
-                    Artificial Intelligence
-                </h3>
-
-                <p>
-                    Practical AI adoption focused on
-                    productivity, efficiency and
-                    measurable business value.
-                </p>
-
-                <a href="artificial-intelligence.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- BUSINESS TRANSFORMATION -->
-
-        <article class="service-card">
-
-            <img
-                src="images/services/business-transformation.webp"
-                alt="Business Transformation"
-                loading="lazy"
-            >
-
-            <div class="service-content">
-
-                <h3>
-                    Business Transformation
-                </h3>
-
-                <p>
-                    Supporting organisations through
-                    strategic change and operational
-                    improvement.
-                </p>
-
-                <a href="business-transformation.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
-
-
-        <!-- OPERATIONAL EXCELLENCE -->
-
-        <article class="service-card">
-
-            <img
-                src="images/services/operational-excellence.webp"
-                alt="Operational Excellence"
-                loading="lazy"
-            >
-
-            <div class="service-content">
-
-                <h3>
-                    Operational Excellence
-                </h3>
-
-                <p>
-                    Improving processes, performance and
-                    ways of working to create sustainable
-                    operational results.
-                </p>
-
-                <a href="operational-excellence.html">
-                    Learn More →
-                </a>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</div>
-
-
-<!-- =======================================================
+<!-- =========================================================
      WHY BSGA
-======================================================= -->
+========================================================= -->
 
 <section
     id="why"
@@ -703,9 +735,9 @@
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      OUR APPROACH
-======================================================= -->
+========================================================= -->
 
 <section
     id="approach"
@@ -848,9 +880,9 @@
 </section>
 
 
-<!-- =======================================================
+<!-- =========================================================
      CTA
-======================================================= -->
+========================================================= -->
 
 <section class="cta fade">
 
@@ -903,9 +935,9 @@
 </main>
 
 
-<!-- =======================================================
-     FOOTER
-======================================================= -->
+<!-- =========================================================
+     GLOBAL FOOTER
+========================================================= -->
 
 <footer class="footer">
 
@@ -914,7 +946,7 @@
         <div class="footer-grid">
 
 
-            <!-- FOOTER BRAND -->
+            <!-- BRAND -->
 
             <div>
 
@@ -1005,12 +1037,13 @@
 </footer>
 
 
-<!-- =======================================================
-     JAVASCRIPT
-======================================================= -->
+<!-- =========================================================
+     GLOBAL JAVASCRIPT
+========================================================= -->
 
 <script src="js/main.js"></script>
 
 
 </body>
+
 </html>
