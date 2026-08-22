@@ -1,55 +1,123 @@
-/*==========================================================
-BSGA CONSULTING
-BASE.CSS
-==========================================================*/
-
-/*==========================================================
-GOOGLE FONTS
-
-Añade también en el <head> del index:
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
-
-==========================================================*/
+/* =========================================================
+   BSGA CONSULTING
+   BASE.CSS
+   GLOBAL FOUNDATION
+========================================================= */
 
 
-/*==========================================================
-RESET
-==========================================================*/
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root{
+
+    /* -----------------------------------------------------
+       BRAND COLORS
+    ----------------------------------------------------- */
+
+    --navy:#07182E;
+
+    --navy-soft:#0F2440;
+
+    --blue:#2867E8;
+
+    --blue-light:#66AFFF;
+
+    --text:#16263C;
+
+    --muted:#6B7280;
+
+    --white:#FFFFFF;
+
+
+    /* -----------------------------------------------------
+       SURFACES & BORDERS
+    ----------------------------------------------------- */
+
+    --surface:#F7F9FC;
+
+    --surface-soft:#F8FAFC;
+
+    --border:#E3E8EF;
+
+    --border-soft:#E8EDF4;
+
+
+    /* -----------------------------------------------------
+       EFFECTS
+    ----------------------------------------------------- */
+
+    --shadow:0 14px 40px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.30s ease;
+
+
+    /* -----------------------------------------------------
+       LAYOUT
+    ----------------------------------------------------- */
+
+    --container:1500px;
+
+    --header-height:88px;
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *,
 *::before,
 *::after{
 
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
 
 }
+
+
+/* =========================================================
+   DOCUMENT
+========================================================= */
 
 html{
 
     scroll-behavior:smooth;
 
+    -webkit-text-size-adjust:100%;
+
 }
 
 body{
+
+    min-width:320px;
 
     font-family:"Inter",sans-serif;
 
     background:#FFFFFF;
 
-    color:#132238;
+    color:var(--text);
 
     -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
 
     text-rendering:optimizeLegibility;
 
     overflow-x:hidden;
 
 }
+
+
+/* =========================================================
+   MEDIA
+========================================================= */
 
 img{
 
@@ -61,6 +129,19 @@ img{
 
 }
 
+svg{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
 a{
 
     color:inherit;
@@ -69,9 +150,44 @@ a{
 
 }
 
-button{
+
+/* =========================================================
+   BUTTONS & FORM CONTROLS
+========================================================= */
+
+button,
+input,
+textarea,
+select{
 
     font:inherit;
+
+}
+
+button{
+
+    border:0;
+
+}
+
+button,
+a{
+
+    -webkit-tap-highlight-color:transparent;
+
+}
+
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+ul,
+ol{
+
+    margin:0;
+
+    padding:0;
 
 }
 
@@ -82,124 +198,55 @@ ul{
 }
 
 
-/*==========================================================
-VARIABLES
-==========================================================*/
+/* =========================================================
+   HEADINGS
+========================================================= */
 
-:root{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
 
-    --navy:#07182E;
+    margin:0;
 
-    --navy-soft:#0F2440;
-
-    --blue:#2563EB;
-
-    --blue-light:#5DAEFF;
-
-    --text:#16263C;
-
-    --muted:#6B7280;
-
-    --white:#FFFFFF;
-
-    --border:#E8EDF4;
-
-    --surface:#F8FAFC;
-
-    --shadow:0 14px 40px rgba(0,0,0,.08);
-
-    --radius:18px;
-
-    --container:1500px;
-
-    --header-height:96px;
-
-    --transition:.35s ease;
+    font-family:"Inter",sans-serif;
 
 }
 
 
-/*==========================================================
-CONTAINER
-==========================================================*/
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+p{
+
+    margin:0;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+   GLOBAL UTILITY
+========================================================= */
 
 .container{
 
     width:min(96%,var(--container));
 
-    margin:auto;
+    margin:0 auto;
 
 }
 
 
-/*==========================================================
-SECTIONS
-==========================================================*/
-
-section{
-
-    padding:120px 0;
-
-}
-
-
-/*==========================================================
-TYPOGRAPHY
-==========================================================*/
-
-h1{
-
-    font-family:"Inter",sans-serif;
-
-    font-size:clamp(4.6rem,6vw,6.2rem);
-
-    line-height:.90;
-
-    font-weight:800;
-
-    letter-spacing:-0.06em;
-
-}
-
-h2{
-
-    font-size:clamp(2.6rem,4vw,4rem);
-
-    line-height:1.05;
-
-    font-weight:700;
-
-    color:var(--navy);
-
-}
-
-h3{
-
-    font-size:1.55rem;
-
-    font-weight:700;
-
-    color:var(--navy);
-
-}
-
-p{
-
-    font-size:1.03rem;
-
-    line-height:1.9;
-
-    color:var(--muted);
-
-}
-
-
-/*==========================================================
-BUTTONS
-==========================================================*/
+/* =========================================================
+   GLOBAL BUTTON
+   USED ONLY WHERE A PAGE DOES NOT DEFINE ITS OWN BUTTON
+========================================================= */
 
 .button,
-
 .button-secondary{
 
     display:inline-flex;
@@ -208,25 +255,46 @@ BUTTONS
 
     justify-content:center;
 
-    height:58px;
+    min-height:50px;
 
-    padding:0 34px;
+    padding:0 27px;
 
     border-radius:999px;
 
-    font-size:.95rem;
+    font-size:15px;
 
     font-weight:600;
 
-    transition:all .30s ease;
+    line-height:1;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:
+
+        transform var(--transition),
+
+        box-shadow var(--transition),
+
+        background var(--transition),
+
+        color var(--transition),
+
+        border-color var(--transition);
 
 }
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
 
 .button{
 
     background:var(--blue);
 
-    color:white;
+    color:var(--white);
 
 }
 
@@ -234,32 +302,39 @@ BUTTONS
 
     transform:translateY(-2px);
 
-    box-shadow:0 12px 30px rgba(37,99,235,.30);
+    box-shadow:
+        0 12px 30px rgba(40,103,232,.25);
 
 }
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
 
 .button-secondary{
 
     border:1px solid rgba(255,255,255,.25);
 
-    color:white;
-
     background:transparent;
+
+    color:var(--white);
 
 }
 
 .button-secondary:hover{
 
-    background:white;
+    background:var(--white);
 
     color:var(--navy);
 
 }
 
 
-/*==========================================================
-SECTION TITLE
-==========================================================*/
+/* =========================================================
+   GLOBAL SECTION KICKER
+   KEPT FOR SHARED COMPONENTS
+========================================================= */
 
 .section-kicker{
 
@@ -269,21 +344,29 @@ SECTION TITLE
 
     color:var(--blue);
 
-    font-size:.82rem;
+    font-size:13px;
 
     font-weight:700;
 
-    letter-spacing:.24em;
+    letter-spacing:.23em;
+
+    line-height:1.3;
 
     text-transform:uppercase;
 
 }
 
+
+/* =========================================================
+   GLOBAL SECTION TITLE
+   KEPT FOR SHARED COMPONENTS
+========================================================= */
+
 .section-title{
 
     max-width:760px;
 
-    margin:0 auto 80px;
+    margin:0 auto 65px;
 
     text-align:center;
 
@@ -291,7 +374,17 @@ SECTION TITLE
 
 .section-title h2{
 
-    margin-bottom:22px;
+    margin:0 0 20px;
+
+    color:var(--navy);
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    font-weight:700;
+
+    line-height:1;
+
+    letter-spacing:-.055em;
 
 }
 
@@ -299,33 +392,54 @@ SECTION TITLE
 
     max-width:650px;
 
-    margin:auto;
+    margin:0 auto;
+
+    color:var(--muted);
+
+    font-size:16px;
+
+    line-height:1.8;
 
 }
 
 
-/*==========================================================
-ANIMATIONS
-==========================================================*/
+/* =========================================================
+   FOCUS
+========================================================= */
 
-.fade{
+:focus-visible{
 
-    opacity:0;
+    outline:2px solid var(--blue-light);
 
-    transform:translateY(35px);
-
-    transition:
-
-        opacity .8s ease,
-
-        transform .8s ease;
+    outline-offset:3px;
 
 }
 
-.fade.show{
 
-    opacity:1;
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 
-    transform:none;
+@media (prefers-reduced-motion:reduce){
+
+    html{
+
+        scroll-behavior:auto;
+
+    }
+
+    *,
+    *::before,
+    *::after{
+
+        animation-duration:.01ms !important;
+
+        animation-iteration-count:1 !important;
+
+        transition-duration:.01ms !important;
+
+        scroll-behavior:auto !important;
+
+    }
 
 }
