@@ -14,7 +14,9 @@
          PRIMARY SEO
     ========================================================== -->
 
-    <title>Contact BSGA Consulting | Let's Discuss Your Challenge</title>
+    <title>
+        Contact BSGA Consulting | Let's Discuss Your Challenge
+    </title>
 
     <meta
         name="description"
@@ -104,7 +106,6 @@
         rel="stylesheet"
         href="css/styles.css"
     >
-
 
     <!-- =========================================================
          CONTACT CSS
@@ -255,16 +256,19 @@
 
 
 <!-- =========================================================
-     HEADER
+     GLOBAL HEADER
 ========================================================= -->
 
-<header class="contact-header">
+<header class="site-header">
 
-    <div class="contact-header-inner">
+    <div class="header-container">
+
+
+        <!-- LOGO -->
 
         <a
             href="index.html"
-            class="contact-logo"
+            class="site-logo"
             aria-label="BSGA Consulting Home"
         >
 
@@ -276,8 +280,10 @@
         </a>
 
 
+        <!-- DESKTOP NAVIGATION -->
+
         <nav
-            class="contact-navigation"
+            class="main-navigation"
             aria-label="Main navigation"
         >
 
@@ -308,25 +314,39 @@
         </nav>
 
 
+        <!-- CONSULTATION BUTTON -->
+
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-            class="hero-button hero-button-secondary"
+            class="header-cta"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Schedule a Consultation"
         >
-            Schedule a Consultation
-            <span>→</span>
+
+            <span class="header-cta-text">
+                Schedule a Consultation
+            </span>
+
+            <span
+                class="header-cta-arrow"
+                aria-hidden="true"
+            >
+                →
+            </span>
+
         </a>
 
 
         <!-- MOBILE MENU BUTTON -->
 
         <button
-            class="contact-menu-toggle"
+            id="menuToggle"
+            class="menu-toggle"
             type="button"
-            aria-label="Open navigation"
+            aria-label="Open navigation menu"
             aria-expanded="false"
-            aria-controls="contact-mobile-menu"
+            aria-controls="mobileNav"
         >
 
             <span></span>
@@ -338,13 +358,12 @@
     </div>
 
 
-    <!-- =====================================================
-         MOBILE MENU
-    ====================================================== -->
+    <!-- MOBILE NAVIGATION -->
 
-    <div
-        class="contact-mobile-menu"
-        id="contact-mobile-menu"
+    <nav
+        id="mobileNav"
+        class="mobile-nav"
+        aria-label="Mobile navigation"
     >
 
         <a href="index.html">
@@ -373,14 +392,14 @@
 
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="mobile-nav-cta"
             target="_blank"
             rel="noopener noreferrer"
-            class="mobile-consultation"
         >
             Schedule a Consultation →
         </a>
 
-    </div>
+    </nav>
 
 </header>
 
@@ -999,7 +1018,10 @@
                     Insights
                 </a>
 
-                <a href="contact.html">
+                <a
+                    href="contact.html"
+                    aria-current="page"
+                >
                     Contact
                 </a>
 
@@ -1045,92 +1067,10 @@
 
 
 <!-- =========================================================
-     MOBILE NAVIGATION JAVASCRIPT
+     GLOBAL JAVASCRIPT
 ========================================================= -->
 
-<script>
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const toggle =
-        document.querySelector(".contact-menu-toggle");
-
-    const menu =
-        document.querySelector(".contact-mobile-menu");
-
-    if (!toggle || !menu) return;
-
-
-    toggle.addEventListener("click", function () {
-
-        const open =
-            menu.classList.toggle("open");
-
-        toggle.classList.toggle("open", open);
-
-        toggle.setAttribute(
-            "aria-expanded",
-            open ? "true" : "false"
-        );
-
-        toggle.setAttribute(
-            "aria-label",
-            open
-                ? "Close navigation"
-                : "Open navigation"
-        );
-
-    });
-
-
-    menu.querySelectorAll("a").forEach(function (link) {
-
-        link.addEventListener("click", function () {
-
-            menu.classList.remove("open");
-
-            toggle.classList.remove("open");
-
-            toggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            toggle.setAttribute(
-                "aria-label",
-                "Open navigation"
-            );
-
-        });
-
-    });
-
-
-    document.addEventListener("keydown", function (event) {
-
-        if (event.key === "Escape") {
-
-            menu.classList.remove("open");
-
-            toggle.classList.remove("open");
-
-            toggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            toggle.setAttribute(
-                "aria-label",
-                "Open navigation"
-            );
-
-        }
-
-    });
-
-});
-
-</script>
+<script src="js/main.js"></script>
 
 
 <!-- =========================================================
@@ -1171,10 +1111,12 @@ document.addEventListener("DOMContentLoaded", function () {
             </p>
 
             <a
-                href="index.html"
+                href="https://calendly.com/angel-bajo-sanchez/discovery-call"
                 class="contact-success-button"
+                target="_blank"
+                rel="noopener noreferrer"
             >
-                Back to Home
+                Schedule a Consultation
             </a>
 
         </div>
