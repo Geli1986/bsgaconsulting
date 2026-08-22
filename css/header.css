@@ -1,7 +1,7 @@
 /* =========================================================
    BSGA CONSULTING
    GLOBAL HEADER
-   Definitive version
+   HEADER.CSS — DEFINITIVE VERSION
 ========================================================= */
 
 
@@ -9,34 +9,34 @@
    HEADER
 ========================================================= */
 
-.site-header {
+.site-header{
 
-    position: relative;
+    position:relative;
 
-    z-index: 1000;
+    z-index:1000;
 
-    width: 100%;
+    width:100%;
 
-    height: 88px;
+    height:88px;
 
-    background: #000000;
+    background:#000000;
 
 }
 
 
-.header-container {
+.header-container{
 
-    width: min(94%, 1410px);
+    width:min(94%,1410px);
 
-    height: 88px;
+    height:88px;
 
-    margin: 0 auto;
+    margin:0 auto;
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    justify-content: space-between;
+    justify-content:space-between;
 
 }
 
@@ -45,26 +45,26 @@
    LOGO
 ========================================================= */
 
-.site-logo {
+.site-logo{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    flex-shrink: 0;
+    flex-shrink:0;
 
-    text-decoration: none;
+    text-decoration:none;
 
 }
 
 
-.site-logo img {
+.site-logo img{
 
-    display: block;
+    display:block;
 
-    width: 180px;
+    width:180px;
 
-    height: auto;
+    height:auto;
 
 }
 
@@ -73,76 +73,76 @@
    DESKTOP NAVIGATION
 ========================================================= */
 
-.main-navigation {
+.main-navigation{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    gap: 40px;
+    gap:40px;
 
-    margin-left: auto;
+    margin-left:auto;
 
-    margin-right: 55px;
-
-}
-
-
-.main-navigation a {
-
-    position: relative;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    height: 88px;
-
-    color: #FFFFFF;
-
-    font-size: 15px;
-
-    font-weight: 500;
-
-    line-height: 1;
-
-    text-decoration: none;
-
-    white-space: nowrap;
-
-    transition: color .2s ease;
+    margin-right:55px;
 
 }
 
 
-.main-navigation a:hover {
+.main-navigation a{
 
-    color: #FFFFFF;
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    height:88px;
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    line-height:1;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    transition:color .2s ease;
+
+}
+
+
+.main-navigation a:hover{
+
+    color:#FFFFFF;
 
 }
 
 
 /* =========================================================
-   ACTIVE NAVIGATION
+   ACTIVE PAGE
 ========================================================= */
 
-.main-navigation a.active::after {
+.main-navigation a.active::after{
 
-    content: "";
+    content:"";
 
-    position: absolute;
+    position:absolute;
 
-    left: 0;
+    left:0;
 
-    right: 0;
+    right:0;
 
-    bottom: 25px;
+    bottom:25px;
 
-    height: 2px;
+    height:2px;
 
-    background: #2875ED;
+    border-radius:2px;
 
-    border-radius: 2px;
+    background:#2875ED;
 
 }
 
@@ -151,41 +151,41 @@
    HEADER CTA
 ========================================================= */
 
-.header-cta {
+.header-cta{
 
-    display: inline-flex;
+    display:inline-flex;
 
-    align-items: center;
+    align-items:center;
 
-    justify-content: center;
+    justify-content:center;
 
-    gap: 10px;
+    gap:10px;
 
-    flex-shrink: 0;
+    flex-shrink:0;
 
-    min-height: 48px;
+    min-height:48px;
 
-    padding: 0 22px;
+    padding:0 22px;
 
-    border: 0;
+    border:0;
 
-    border-radius: 999px;
+    border-radius:999px;
 
-    background: #2867E8;
+    background:#2867E8;
 
-    color: #FFFFFF;
+    color:#FFFFFF;
 
-    font-size: 14px;
+    font-size:14px;
 
-    font-weight: 600;
+    font-weight:600;
 
-    line-height: 1;
+    line-height:1;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    white-space: nowrap;
+    white-space:nowrap;
 
-    cursor: pointer;
+    cursor:pointer;
 
     transition:
 
@@ -198,46 +198,43 @@
 }
 
 
-.header-cta:hover {
+.header-cta:hover{
 
-    transform: translateY(-2px);
+    transform:translateY(-2px);
 
-    background: #2867E8;
+    background:#3475F0;
 
-    color: #FFFFFF;
+    color:#FFFFFF;
 
     box-shadow:
-
-        0 10px 28px rgba(40, 103, 232, .25);
-
-}
-
-
-.header-cta-text {
-
-    display: inline-block;
+        0 10px 28px rgba(40,103,232,.25);
 
 }
 
 
-.header-cta-arrow {
+.header-cta-text{
 
-    display: inline-block;
-
-    font-size: 17px;
-
-    line-height: 1;
-
-    transition:
-
-        transform .25s ease;
+    display:inline-block;
 
 }
 
 
-.header-cta:hover .header-cta-arrow {
+.header-cta-arrow{
 
-    transform: translateX(3px);
+    display:inline-block;
+
+    font-size:17px;
+
+    line-height:1;
+
+    transition:transform .25s ease;
+
+}
+
+
+.header-cta:hover .header-cta-arrow{
+
+    transform:translateX(3px);
 
 }
 
@@ -246,52 +243,52 @@
    MOBILE MENU BUTTON
 ========================================================= */
 
-.menu-toggle {
+.menu-toggle{
 
-    display: none;
+    display:none;
 
-    position: relative;
+    position:relative;
 
-    z-index: 1100;
+    z-index:1100;
 
-    width: 44px;
+    width:44px;
 
-    height: 44px;
+    height:44px;
 
-    align-items: center;
+    align-items:center;
 
-    justify-content: center;
+    justify-content:center;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    gap: 5px;
+    gap:5px;
 
-    padding: 0;
+    padding:0;
 
-    margin: 0;
+    margin:0;
 
-    border: 0;
+    border:0;
 
-    background: transparent;
+    background:transparent;
 
-    cursor: pointer;
+    cursor:pointer;
 
 }
 
 
-.menu-toggle span {
+.menu-toggle span{
 
-    display: block;
+    display:block;
 
-    width: 23px;
+    width:23px;
 
-    height: 2px;
+    height:2px;
 
-    flex-shrink: 0;
+    flex-shrink:0;
 
-    background: #FFFFFF;
+    border-radius:2px;
 
-    border-radius: 2px;
+    background:#FFFFFF;
 
     transition:
 
@@ -304,25 +301,27 @@
 
 /* =========================================================
    HAMBURGER → X
+   IMPORTANT:
+   main.js uses .active
 ========================================================= */
 
-.menu-toggle.active span:nth-child(1) {
+.menu-toggle.active span:nth-child(1){
 
-    transform: translateY(7px) rotate(45deg);
-
-}
-
-
-.menu-toggle.active span:nth-child(2) {
-
-    opacity: 0;
+    transform:translateY(7px) rotate(45deg);
 
 }
 
 
-.menu-toggle.active span:nth-child(3) {
+.menu-toggle.active span:nth-child(2){
 
-    transform: translateY(-7px) rotate(-45deg);
+    opacity:0;
+
+}
+
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:translateY(-7px) rotate(-45deg);
 
 }
 
@@ -331,39 +330,38 @@
    MOBILE NAVIGATION
 ========================================================= */
 
-.mobile-nav {
+.mobile-nav{
 
-    position: absolute;
+    position:absolute;
 
-    top: 88px;
+    top:88px;
 
-    left: 0;
+    left:0;
 
-    right: 0;
+    right:0;
 
-    z-index: 1050;
+    z-index:1050;
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
 
-    padding: 18px 6% 25px;
+    padding:18px 6% 25px;
 
-    background: #000000;
+    background:#000000;
 
-    border-top: 1px solid rgba(255, 255, 255, .08);
+    border-top:1px solid rgba(255,255,255,.08);
 
     box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
 
-        0 20px 40px rgba(0, 0, 0, .25);
+    opacity:0;
 
-    opacity: 0;
+    visibility:hidden;
 
-    visibility: hidden;
+    pointer-events:none;
 
-    pointer-events: none;
-
-    transform: translateY(-10px);
+    transform:translateY(-10px);
 
     transition:
 
@@ -376,44 +374,50 @@
 }
 
 
-.mobile-nav.open {
+/* =========================================================
+   MOBILE NAV OPEN STATE
+   IMPORTANT:
+   main.js uses .open
+========================================================= */
 
-    opacity: 1;
+.mobile-nav.open{
 
-    visibility: visible;
+    opacity:1;
 
-    pointer-events: auto;
+    visibility:visible;
 
-    transform: translateY(0);
+    pointer-events:auto;
+
+    transform:translateY(0);
 
 }
 
 
 /* =========================================================
-   MOBILE NAV LINKS
+   MOBILE NAVIGATION LINKS
 ========================================================= */
 
-.mobile-nav a {
+.mobile-nav a{
 
-    display: flex;
+    display:flex;
 
-    align-items: center;
+    align-items:center;
 
-    min-height: 52px;
+    min-height:52px;
 
-    padding: 0;
+    padding:0;
 
-    color: #FFFFFF;
+    border-bottom:1px solid rgba(255,255,255,.08);
 
-    font-size: 16px;
+    color:#FFFFFF;
 
-    font-weight: 500;
+    font-size:16px;
 
-    line-height: 1.2;
+    font-weight:500;
 
-    text-decoration: none;
+    line-height:1.2;
 
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    text-decoration:none;
 
     transition:
 
@@ -424,65 +428,65 @@
 }
 
 
-.mobile-nav a:hover {
+.mobile-nav a:hover{
 
-    color: #FFFFFF;
-
-}
-
-
-.mobile-nav a.active {
-
-    color: #5FA4FF;
+    color:#FFFFFF;
 
 }
 
 
-.mobile-nav a:last-child {
+.mobile-nav a.active{
 
-    border-bottom: 0;
+    color:#5FA4FF;
+
+}
+
+
+.mobile-nav a:last-child{
+
+    border-bottom:0;
 
 }
 
 
 /* =========================================================
-   MOBILE CTA
+   MOBILE CONSULTATION CTA
 ========================================================= */
 
-.mobile-nav .mobile-nav-cta {
+.mobile-nav .mobile-nav-cta{
 
-    justify-content: center;
+    justify-content:center;
 
-    min-height: 48px;
+    min-height:48px;
 
-    margin-top: 18px;
+    margin-top:18px;
 
-    padding: 0 22px;
+    padding:0 22px;
 
-    border: 0;
+    border:0;
 
-    border-radius: 999px;
+    border-radius:999px;
 
-    background: #2867E8;
+    background:#2867E8;
 
-    color: #FFFFFF;
+    color:#FFFFFF;
 
-    font-size: 14px;
+    font-size:14px;
 
-    font-weight: 600;
+    font-weight:600;
 
-    line-height: 1;
+    line-height:1;
 
-    text-align: center;
+    text-align:center;
 
 }
 
 
-.mobile-nav .mobile-nav-cta:hover {
+.mobile-nav .mobile-nav-cta:hover{
 
-    background: #2867E8;
+    background:#3475F0;
 
-    color: #FFFFFF;
+    color:#FFFFFF;
 
 }
 
@@ -491,43 +495,43 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width:1100px){
 
-    .header-container {
+    .header-container{
 
-        width: min(94%, 1280px);
-
-    }
-
-
-    .site-logo img {
-
-        width: 165px;
+        width:min(94%,1280px);
 
     }
 
 
-    .main-navigation {
+    .site-logo img{
 
-        gap: 27px;
-
-        margin-right: 35px;
+        width:165px;
 
     }
 
 
-    .main-navigation a {
+    .main-navigation{
 
-        font-size: 14px;
+        gap:27px;
+
+        margin-right:35px;
 
     }
 
 
-    .header-cta {
+    .main-navigation a{
 
-        padding: 0 18px;
+        font-size:14px;
 
-        font-size: 13px;
+    }
+
+
+    .header-cta{
+
+        padding:0 18px;
+
+        font-size:13px;
 
     }
 
@@ -538,65 +542,79 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-    .site-header {
+    .site-header{
 
-        height: 75px;
-
-    }
-
-
-    .header-container {
-
-        width: 92%;
-
-        height: 75px;
+        height:75px;
 
     }
 
 
-    /* LOGO */
+    .header-container{
 
-    .site-logo img {
+        width:92%;
 
-        width: 115px;
-
-    }
-
-
-    /* DESKTOP NAVIGATION */
-
-    .main-navigation {
-
-        display: none;
+        height:75px;
 
     }
 
 
-    /* DESKTOP CTA */
+    /* -----------------------------------------------------
+       LOGO
+    ----------------------------------------------------- */
 
-    .header-cta {
+    .site-logo img{
 
-        display: none;
-
-    }
-
-
-    /* MOBILE BUTTON */
-
-    .menu-toggle {
-
-        display: flex;
+        width:145px;
 
     }
 
 
-    /* MOBILE MENU */
+    /* -----------------------------------------------------
+       DESKTOP NAVIGATION
+    ----------------------------------------------------- */
 
-    .mobile-nav {
+    .main-navigation{
 
-        top: 75px;
+        display:none;
+
+    }
+
+
+    /* -----------------------------------------------------
+       DESKTOP CTA
+    ----------------------------------------------------- */
+
+    .header-cta{
+
+        display:none;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE BUTTON
+    ----------------------------------------------------- */
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE MENU
+    ----------------------------------------------------- */
+
+    .mobile-nav{
+
+        top:75px;
+
+        padding-left:4%;
+
+        padding-right:4%;
 
     }
 
@@ -607,43 +625,74 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width:480px){
 
-    .header-container {
+    .header-container{
 
-        width: 90%;
-
-    }
-
-
-    .site-logo img {
-
-        width: 110px;
+        width:90%;
 
     }
 
 
-    .menu-toggle {
+    .site-logo img{
 
-        width: 42px;
-
-        height: 42px;
+        width:140px;
 
     }
 
 
-    .menu-toggle span {
+    .menu-toggle{
 
-        width: 22px;
+        width:42px;
+
+        height:42px;
 
     }
 
 
-    .mobile-nav {
+    .menu-toggle span{
 
-        padding-left: 5%;
+        width:22px;
 
-        padding-right: 5%;
+    }
+
+
+    .mobile-nav{
+
+        padding-left:5%;
+
+        padding-right:5%;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width:360px){
+
+    .site-logo img{
+
+        width:130px;
+
+    }
+
+
+    .menu-toggle{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+
+    .menu-toggle span{
+
+        width:21px;
 
     }
 
@@ -657,11 +706,11 @@
 .menu-toggle:focus-visible,
 .header-cta:focus-visible,
 .main-navigation a:focus-visible,
-.mobile-nav a:focus-visible {
+.mobile-nav a:focus-visible{
 
-    outline: 2px solid #5FA4FF;
+    outline:2px solid #5FA4FF;
 
-    outline-offset: 4px;
+    outline-offset:4px;
 
 }
 
@@ -670,16 +719,16 @@
    REDUCED MOTION
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion:reduce){
 
     .header-cta,
     .header-cta-arrow,
     .menu-toggle span,
     .mobile-nav,
     .main-navigation a,
-    .mobile-nav a {
+    .mobile-nav a{
 
-        transition: none;
+        transition:none;
 
     }
 
