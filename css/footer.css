@@ -1,15 +1,27 @@
-/*==========================================================
-FOOTER PREMIUM
-==========================================================*/
+/* =========================================================
+   BSGA CONSULTING
+   GLOBAL FOOTER
+========================================================= */
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .footer{
 
-    background: #000000;
-    color: #ffffff;
+    background:#000000;
+
+    color:#FFFFFF;
 
     padding:110px 0 40px;
 
 }
+
+
+/* =========================================================
+   FOOTER GRID
+========================================================= */
 
 .footer-grid{
 
@@ -23,93 +35,232 @@ FOOTER PREMIUM
 
 }
 
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
 .footer-logo{
 
+    display:block;
+
     width:170px;
+
+    height:auto;
 
     margin-bottom:28px;
 
 }
 
+
+/* =========================================================
+   FOOTER TEXT
+========================================================= */
+
 .footer p{
+
+    max-width:420px;
+
+    margin:0;
 
     color:rgba(255,255,255,.72);
 
-    max-width:420px;
+    font-size:14px;
 
     line-height:1.9;
 
 }
 
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
 .footer h4{
 
-    margin-bottom:24px;
+    margin:0 0 24px;
+
+    color:#FFFFFF;
 
     font-size:1rem;
 
-    color:white;
+    font-weight:600;
+
+    line-height:1.3;
 
 }
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
 
 .footer a{
 
     display:block;
 
-    color:rgba(255,255,255,.72);
-
     margin-bottom:16px;
 
-    transition:.25s;
+    color:rgba(255,255,255,.72);
+
+    font-size:14px;
+
+    line-height:1.5;
+
+    text-decoration:none;
+
+    transition:
+
+        color .25s ease,
+
+        transform .25s ease;
 
 }
 
 .footer a:hover{
 
-    color:white;
+    color:#FFFFFF;
 
-    padding-left:8px;
+    transform:translateX(8px);
 
 }
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
 
 .footer-bottom{
 
-    border-top:1px solid rgba(255,255,255,.08);
-
     padding-top:32px;
 
-    text-align:center;
+    border-top:1px solid rgba(255,255,255,.08);
 
     color:rgba(255,255,255,.55);
 
+    font-size:12px;
+
+    line-height:1.5;
+
+    text-align:center;
+
 }
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media(max-width:1000px){
 
-.footer-grid{
+    .footer{
 
-grid-template-columns:1fr;
+        padding:90px 0 35px;
 
-gap:60px;
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+        margin-bottom:55px;
+
+    }
 
 }
 
-}
-/* =====================================================
-   HOME FOOTER — BLACK
-===================================================== */
 
-footer {
-    background: #000000;
-    color: #ffffff;
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+    .footer{
+
+        padding:70px 0 30px;
+
+    }
+
+    .footer-grid{
+
+        gap:40px;
+
+        margin-bottom:45px;
+
+    }
+
+    .footer-logo{
+
+        width:160px;
+
+        margin-bottom:22px;
+
+    }
+
+    .footer p{
+
+        font-size:13px;
+
+        line-height:1.75;
+
+    }
+
+    .footer h4{
+
+        margin-bottom:18px;
+
+    }
+
+    .footer a{
+
+        margin-bottom:12px;
+
+        font-size:13px;
+
+    }
+
+    .footer a:hover{
+
+        transform:none;
+
+    }
+
+    .footer-bottom{
+
+        padding-top:24px;
+
+        font-size:11px;
+
+    }
+
 }
 
-footer a {
-    color: #ffffff;
-}
 
-footer h4,
-footer h3,
-footer p,
-footer span {
-    color: #ffffff;
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+    .footer{
+
+        padding:60px 0 25px;
+
+    }
+
+    .footer-grid{
+
+        gap:35px;
+
+    }
+
+    .footer-logo{
+
+        width:150px;
+
+    }
+
 }
