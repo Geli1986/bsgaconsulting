@@ -1,6 +1,7 @@
 /* =========================================================
    BSGA CONSULTING
    OPERATIONAL EXCELLENCE PAGE
+   OPERATIONAL-EXCELLENCE.CSS
 ========================================================= */
 
 
@@ -18,154 +19,6 @@
 
 
 /* =========================================================
-   HEADER
-========================================================= */
-
-.oe-header{
-
-    position:relative;
-
-    z-index:100;
-
-    width:100%;
-
-    height:88px;
-
-    background:#000000;
-
-}
-
-.oe-header-inner{
-
-    width:min(94%,1410px);
-
-    height:88px;
-
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-.oe-logo{
-
-    display:flex;
-
-    align-items:center;
-
-    flex-shrink:0;
-
-}
-
-.oe-logo img{
-
-    display:block;
-
-    width:180px;
-
-    height:auto;
-
-}
-
-.oe-navigation{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:40px;
-
-    margin-left:auto;
-
-    margin-right:70px;
-
-}
-
-.oe-navigation a{
-
-    position:relative;
-
-    color:#FFFFFF;
-
-    font-size:16px;
-
-    font-weight:500;
-
-    transition:color .2s ease;
-
-}
-
-.oe-navigation a:hover{
-
-    color:#FFFFFF;
-
-}
-
-.oe-navigation a.active::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    right:0;
-
-    bottom:-10px;
-
-    height:2px;
-
-    background:#2875ED;
-
-}
-
-.oe-header-button{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:48px;
-
-    padding:0 25px;
-
-    border-radius:999px;
-
-    background:#2867E8;
-
-    color:#FFFFFF;
-
-    font-size:16px;
-
-    font-weight:600;
-
-    white-space:nowrap;
-
-    transition:
-
-        transform .25s ease,
-
-        box-shadow .25s ease;
-
-}
-
-.oe-header-button:hover{
-
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 10px 28px rgba(40,103,232,.25);
-
-}
-
-
-/* =========================================================
    HERO
 ========================================================= */
 
@@ -173,7 +26,7 @@
 
     position:relative;
 
-    min-height:560px;
+    min-height:590px;
 
     display:flex;
 
@@ -269,7 +122,7 @@
 
     right:80px;
 
-    top:70px;
+    top:45px;
 
     width:500px;
 
@@ -297,9 +150,9 @@
 
     z-index:2;
 
-    max-width:800px;
+    max-width:900px;
 
-    padding:75px 0;
+    padding:105px 0 95px;
 
 }
 
@@ -307,13 +160,15 @@
 
     display:inline-block;
 
-    margin-bottom:42px;
+    margin-bottom:38px;
 
-    color:rgba(255,255,255,.65);
+    color:rgba(255,255,255,.62);
 
     font-size:13px;
 
     font-weight:500;
+
+    text-decoration:none;
 
     transition:color .2s ease;
 
@@ -330,7 +185,7 @@
 
     display:inline-block;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     color:#3281F4;
 
@@ -346,13 +201,13 @@
 
 .oe-hero h1{
 
-    max-width:790px;
+    max-width:900px;
 
-    margin:0 0 25px;
+    margin:0 0 28px;
 
     color:#FFFFFF;
 
-    font-size:clamp(3.3rem,5.5vw,5.4rem);
+    font-size:clamp(3.2rem,5.4vw,5.2rem);
 
     font-weight:700;
 
@@ -364,15 +219,15 @@
 
 .oe-hero p{
 
-    max-width:670px;
+    max-width:720px;
 
-    margin:0 0 35px;
+    margin:0;
 
-    color:rgba(255,255,255,.73);
+    color:rgba(255,255,255,.72);
 
-    font-size:16px;
+    font-size:17px;
 
-    line-height:1.75;
+    line-height:1.8;
 
 }
 
@@ -382,9 +237,9 @@
 
     align-items:center;
 
-    gap:15px;
+    gap:16px;
 
-    flex-wrap:wrap;
+    margin-top:38px;
 
 }
 
@@ -400,21 +255,27 @@
 
     padding:0 27px;
 
+    border:1px solid transparent;
+
     border-radius:999px;
 
     background:#2867E8;
 
     color:#FFFFFF;
 
-    font-size:15px;
+    font-size:14px;
 
     font-weight:600;
+
+    text-decoration:none;
 
     transition:
 
         transform .25s ease,
 
-        box-shadow .25s ease;
+        box-shadow .25s ease,
+
+        background .25s ease;
 
 }
 
@@ -429,7 +290,7 @@
 
 .oe-button-outline{
 
-    border:1px solid rgba(255,255,255,.45);
+    border-color:rgba(255,255,255,.24);
 
     background:transparent;
 
@@ -437,7 +298,9 @@
 
 .oe-button-outline:hover{
 
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.07);
+
+    box-shadow:none;
 
 }
 
@@ -508,20 +371,12 @@
 
 
 /* =========================================================
-   CAPABILITIES
+   SECTION HEADINGS
 ========================================================= */
-
-.oe-capabilities{
-
-    padding:120px 0;
-
-    background:#F7F9FC;
-
-}
 
 .oe-section-heading{
 
-    max-width:780px;
+    max-width:800px;
 
     margin-bottom:65px;
 
@@ -529,7 +384,7 @@
 
 .oe-section-heading h2{
 
-    margin:0 0 18px;
+    margin:0 0 20px;
 
     color:#07182E;
 
@@ -551,7 +406,20 @@
 
     font-size:16px;
 
-    line-height:1.75;
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.oe-capabilities{
+
+    padding:120px 0;
+
+    background:#F7F9FC;
 
 }
 
@@ -567,7 +435,7 @@
 
 .oe-capability{
 
-    min-height:275px;
+    min-height:285px;
 
     padding:35px;
 
@@ -584,13 +452,17 @@
 
         transform .28s ease,
 
-        box-shadow .28s ease;
+        box-shadow .28s ease,
+
+        border-color .28s ease;
 
 }
 
 .oe-capability:hover{
 
     transform:translateY(-5px);
+
+    border-color:#D3DCE9;
 
     box-shadow:
         0 20px 40px rgba(7,24,46,.08);
@@ -601,7 +473,7 @@
 
     display:block;
 
-    margin-bottom:45px;
+    margin-bottom:48px;
 
     color:#2875ED;
 
@@ -619,9 +491,9 @@
 
     color:#07182E;
 
-    font-size:20px;
+    font-size:21px;
 
-    line-height:1.25;
+    line-height:1.2;
 
 }
 
@@ -639,7 +511,7 @@
 
 
 /* =========================================================
-   IMPROVEMENT APPROACH
+   IMPROVEMENT / APPROACH
 ========================================================= */
 
 .oe-improvement{
@@ -660,7 +532,7 @@
 
     display:grid;
 
-    grid-template-columns:90px 1fr;
+    grid-template-columns:90px minmax(0,1fr);
 
     gap:35px;
 
@@ -725,31 +597,39 @@
 
     grid-template-columns:repeat(3,1fr);
 
-    border-top:1px solid #DDE3EB;
-
-    border-left:1px solid #DDE3EB;
+    gap:16px;
 
 }
 
 .oe-performance-card{
 
-    min-height:210px;
+    min-height:235px;
 
     padding:32px;
 
-    border-right:1px solid #DDE3EB;
+    border:1px solid #E4E8EF;
 
-    border-bottom:1px solid #DDE3EB;
+    border-radius:16px;
 
-    background:#F7F9FC;
+    background:#FFFFFF;
 
-    transition:background .25s ease;
+    box-shadow:
+        0 8px 25px rgba(7,24,46,.035);
+
+    transition:
+
+        transform .28s ease,
+
+        box-shadow .28s ease;
 
 }
 
 .oe-performance-card:hover{
 
-    background:#FFFFFF;
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 20px 40px rgba(7,24,46,.08);
 
 }
 
@@ -757,7 +637,7 @@
 
     display:block;
 
-    margin-bottom:45px;
+    margin-bottom:42px;
 
     color:#2875ED;
 
@@ -771,17 +651,15 @@
 
 .oe-performance-card h3{
 
-    margin:0 0 10px;
+    margin:0 0 11px;
 
     color:#07182E;
 
-    font-size:20px;
+    font-size:21px;
 
 }
 
 .oe-performance-card p{
-
-    max-width:330px;
 
     margin:0;
 
@@ -789,7 +667,7 @@
 
     font-size:14px;
 
-    line-height:1.7;
+    line-height:1.75;
 
 }
 
@@ -810,17 +688,11 @@
 
     display:grid;
 
-    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    grid-template-columns:.9fr 1.1fr;
 
     gap:100px;
 
     align-items:start;
-
-}
-
-.oe-results-intro{
-
-    min-width:0;
 
 }
 
@@ -832,9 +704,9 @@
 
 .oe-results-intro h2{
 
-    max-width:560px;
+    max-width:570px;
 
-    margin:0 0 28px;
+    margin:0 0 22px;
 
     color:#FFFFFF;
 
@@ -846,15 +718,15 @@
 
 }
 
-.oe-results-intro p{
+.oe-results-intro > p{
 
-    max-width:560px;
+    max-width:500px;
 
     margin:0;
 
-    color:rgba(255,255,255,.65);
+    color:rgba(255,255,255,.62);
 
-    font-size:17px;
+    font-size:15px;
 
     line-height:1.8;
 
@@ -862,29 +734,13 @@
 
 .oe-results-list{
 
-    width:100%;
-
-    min-width:0;
-
     border-top:1px solid rgba(255,255,255,.16);
 
 }
 
 .oe-result{
 
-    display:grid;
-
-    grid-template-columns:65px minmax(0,1fr);
-
-    grid-template-rows:auto auto;
-
-    column-gap:22px;
-
-    row-gap:8px;
-
-    width:100%;
-
-    padding:30px 0;
+    padding:29px 0;
 
     border-bottom:1px solid rgba(255,255,255,.16);
 
@@ -892,9 +748,9 @@
 
 .oe-result > span{
 
-    grid-column:1;
+    display:block;
 
-    grid-row:1;
+    margin-bottom:13px;
 
     color:#66AFFF;
 
@@ -902,43 +758,29 @@
 
     font-weight:700;
 
-    line-height:1.4;
+    letter-spacing:.16em;
 
 }
 
 .oe-result h3{
 
-    grid-column:2;
-
-    grid-row:1;
-
-    min-width:0;
-
-    margin:0;
+    margin:0 0 8px;
 
     color:#FFFFFF;
 
     font-size:20px;
 
-    line-height:1.25;
-
 }
 
 .oe-result p{
 
-    grid-column:2;
+    max-width:650px;
 
-    grid-row:2;
-
-    max-width:100%;
-
-    min-width:0;
-
-    margin:6px 0 0;
+    margin:0;
 
     color:rgba(255,255,255,.62);
 
-    font-size:15px;
+    font-size:14px;
 
     line-height:1.75;
 
@@ -969,7 +811,7 @@
 
 .oe-why h2{
 
-    max-width:580px;
+    max-width:600px;
 
     margin:0;
 
@@ -1001,9 +843,157 @@
 
 }
 
-.oe-why-grid .oe-button{
+.oe-why-grid > div:last-child p:last-of-type{
 
-    margin-top:10px;
+    margin-bottom:32px;
+
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.oe-faq{
+
+    padding:120px 0;
+
+    background:#F7F9FC;
+
+}
+
+.oe-faq-list{
+
+    max-width:950px;
+
+    border-top:1px solid #DDE3EB;
+
+}
+
+.oe-faq details{
+
+    border-bottom:1px solid #DDE3EB;
+
+}
+
+.oe-faq summary{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    padding:27px 0;
+
+    color:#07182E;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    line-height:1.5;
+
+    cursor:pointer;
+
+    list-style:none;
+
+}
+
+.oe-faq summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.oe-faq summary span{
+
+    flex:none;
+
+    color:#2875ED;
+
+    font-size:24px;
+
+    font-weight:400;
+
+    transition:transform .2s ease;
+
+}
+
+.oe-faq details[open] summary span{
+
+    transform:rotate(45deg);
+
+}
+
+.oe-faq details p{
+
+    max-width:800px;
+
+    margin:0;
+
+    padding:0 45px 28px 0;
+
+    color:#6E7888;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+/* =========================================================
+   RELATED SERVICES
+========================================================= */
+
+.oe-related-services{
+
+    padding:120px 0;
+
+    background:#FFFFFF;
+
+}
+
+.oe-related-content{
+
+    max-width:950px;
+
+    border-top:1px solid #E3E8EF;
+
+}
+
+.oe-related-content p{
+
+    margin:0;
+
+    padding:28px 0;
+
+    border-bottom:1px solid #E3E8EF;
+
+    color:#687386;
+
+    font-size:16px;
+
+    line-height:1.85;
+
+}
+
+.oe-related-content a{
+
+    color:#2875ED;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+.oe-related-content a:hover{
+
+    text-decoration:underline;
 
 }
 
@@ -1105,6 +1095,8 @@
 
     font-weight:500;
 
+    text-decoration:none;
+
 }
 
 .oe-email:hover{
@@ -1130,9 +1122,9 @@
 
     display:grid;
 
-    grid-template-columns:2fr 1fr 1fr;
+    grid-template-columns:2fr 1fr 1fr 1fr;
 
-    gap:80px;
+    gap:55px;
 
     padding-bottom:55px;
 
@@ -1184,6 +1176,8 @@
 
     font-size:13px;
 
+    text-decoration:none;
+
     transition:color .2s ease;
 
 }
@@ -1211,27 +1205,7 @@
    TABLET
 ========================================================= */
 
-@media(max-width:1050px){
-
-    .oe-navigation{
-
-        gap:25px;
-
-        margin-right:30px;
-
-    }
-
-    .oe-logo img{
-
-        width:160px;
-
-    }
-
-    .oe-header-button{
-
-        padding:0 20px;
-
-    }
+@media (max-width:1050px){
 
     .oe-overview-grid,
     .oe-results-grid,
@@ -1248,6 +1222,14 @@
 
     }
 
+    .oe-footer-grid{
+
+        grid-template-columns:2fr 1fr 1fr;
+
+        gap:45px;
+
+    }
+
 }
 
 
@@ -1255,46 +1237,11 @@
    MOBILE
 ========================================================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    .oe-header{
-
-        height:75px;
-
-    }
-
-    .oe-header-inner{
-
-        height:75px;
-
-        width:92%;
-
-    }
-
-    .oe-logo img{
-
-        width:145px;
-
-    }
-
-    .oe-navigation{
-
-        display:none;
-
-    }
-
-    .oe-header-button{
-
-        min-height:44px;
-
-        padding:0 16px;
-
-        font-size:13px;
-
-    }
-
-
-    /* HERO */
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
 
     .oe-hero{
 
@@ -1304,13 +1251,13 @@
 
     .oe-hero-content{
 
-        padding:70px 0;
+        padding:75px 0;
 
     }
 
     .oe-back{
 
-        margin-bottom:35px;
+        margin-bottom:30px;
 
     }
 
@@ -1328,11 +1275,37 @@
 
     }
 
+    .oe-hero-lines{
+
+        right:-250px;
+
+        top:120px;
+
+        width:450px;
+
+        height:450px;
+
+    }
+
+    .oe-hero-glow{
+
+        width:550px;
+
+        height:550px;
+
+        right:-300px;
+
+        top:-120px;
+
+    }
+
     .oe-hero-actions{
 
         flex-direction:column;
 
         align-items:stretch;
+
+        gap:12px;
 
     }
 
@@ -1343,22 +1316,29 @@
     }
 
 
-    /* SECTIONS */
+    /* -----------------------------------------------------
+       SECTIONS
+    ----------------------------------------------------- */
 
     .oe-overview,
     .oe-capabilities,
     .oe-improvement,
     .oe-performance,
     .oe-results,
-    .oe-why{
+    .oe-why,
+    .oe-faq,
+    .oe-related-services{
 
         padding:85px 0;
 
     }
 
-    .oe-overview-grid,
-    .oe-results-grid,
-    .oe-why-grid{
+
+    /* -----------------------------------------------------
+       OVERVIEW
+    ----------------------------------------------------- */
+
+    .oe-overview-grid{
 
         grid-template-columns:1fr;
 
@@ -1367,7 +1347,20 @@
     }
 
 
-    /* CAPABILITIES */
+    /* -----------------------------------------------------
+       SECTION HEADINGS
+    ----------------------------------------------------- */
+
+    .oe-section-heading{
+
+        margin-bottom:45px;
+
+    }
+
+
+    /* -----------------------------------------------------
+       CAPABILITIES
+    ----------------------------------------------------- */
 
     .oe-capabilities-grid{
 
@@ -1377,16 +1370,26 @@
 
     .oe-capability{
 
-        min-height:250px;
+        min-height:245px;
+
+        padding:30px;
+
+    }
+
+    .oe-number{
+
+        margin-bottom:42px;
 
     }
 
 
-    /* IMPROVEMENT */
+    /* -----------------------------------------------------
+       IMPROVEMENT
+    ----------------------------------------------------- */
 
     .oe-improvement-item{
 
-        grid-template-columns:55px 1fr;
+        grid-template-columns:55px minmax(0,1fr);
 
         gap:18px;
 
@@ -1395,7 +1398,9 @@
     }
 
 
-    /* PERFORMANCE */
+    /* -----------------------------------------------------
+       PERFORMANCE
+    ----------------------------------------------------- */
 
     .oe-performance-grid{
 
@@ -1405,115 +1410,13 @@
 
     .oe-performance-card{
 
-        min-height:190px;
+        min-height:215px;
+
+        padding:30px;
 
     }
 
 
-    /* RESULTS */
-
-    .oe-result{
-
-        grid-template-columns:45px minmax(0,1fr);
-
-        column-gap:15px;
-
-    }
-
-    .oe-result h3{
-
-        font-size:18px;
-
-    }
-
-    .oe-result p{
-
-        font-size:14px;
-
-    }
-
-
-    /* CTA */
-
-    .oe-cta{
-
-        padding:75px 0;
-
-    }
-
-    .oe-cta-box{
-
-        min-height:470px;
-
-        padding:45px 28px;
-
-    }
-
-    .oe-cta-box h2{
-
-        font-size:2.75rem;
-
-    }
-
-    .oe-cta-actions{
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-    }
-
-    .oe-email{
-
-        text-align:center;
-
-    }
-
-
-    /* FOOTER */
-
-    .oe-footer-grid{
-
-        grid-template-columns:1fr;
-
-        gap:40px;
-
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media(max-width:480px){
-
-    .oe-header-button{
-
-        display:none;
-
-    }
-
-    .oe-logo img{
-
-        width:150px;
-
-    }
-
-    .oe-hero h1{
-
-        font-size:2.8rem;
-
-    }
-
-    .oe-section-heading h2,
-    .oe-overview-intro h2,
-    .oe-results-intro h2,
-    .oe-why h2{
-
-        font-size:2.45rem;
-
-    }
-
-}
+    /* -----------------------------------------------------
+       RESULTS
+    ------------------------------------------------
