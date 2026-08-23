@@ -2558,3 +2558,44 @@ a {
     }
 
 }
+
+/* =========================================================
+   HOME HERO — IPAD / TABLET REFINEMENT
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .home-hero {
+        min-height: 720px;
+        height: 720px;
+        max-height: none;
+    }
+
+    .home-hero-container {
+        width: calc(100% - 100px);
+    }
+
+    .home-hero-content {
+        width: min(680px, 62vw);
+        padding-top: 0;
+        transform: translateY(-15px);
+    }
+
+    .home-hero h1 {
+        max-width: 720px;
+        font-size: clamp(52px, 5.4vw, 70px);
+        line-height: .97;
+    }
+
+    .home-hero p {
+        max-width: 650px;
+        margin-top: 28px;
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .home-hero-actions {
+        margin-top: 32px;
+    }
+
+}
