@@ -1,6 +1,7 @@
 /* =========================================================
    BSGA CONSULTING
-   BUSINESS TRANSFORMATION PAGE
+   BUSINESS TRANSFORMATION
+   BUSINESS-TRANSFORMATION.CSS
 ========================================================= */
 
 
@@ -18,109 +19,6 @@
 
 
 /* =========================================================
-   HEADER
-========================================================= */
-
-.business-transformation-page .site-header{
-
-    position:relative;
-
-    z-index:100;
-
-    width:100%;
-
-    height:88px;
-
-    background:#000000;
-
-}
-
-.business-transformation-page .header-container{
-
-    width:min(94%,1410px);
-
-    height:88px;
-
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-.business-transformation-page .site-logo{
-
-    display:flex;
-
-    align-items:center;
-
-    flex-shrink:0;
-
-}
-
-.business-transformation-page .site-logo img{
-
-    display:block;
-
-    width:180px;
-
-    height:auto;
-
-}
-
-.business-transformation-page .main-navigation{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:40px;
-
-    margin-left:auto;
-
-    margin-right:70px;
-
-}
-
-.business-transformation-page .main-navigation a{
-
-    color:#FFFFFF;
-
-    font-size:16px;
-
-    font-weight:500;
-
-}
-
-.business-transformation-page .header-cta{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    min-height:48px;
-
-    padding:0 25px;
-
-    border-radius:999px;
-
-    background:#2867E8;
-
-    color:#FFFFFF;
-
-    font-size:16px;
-
-    font-weight:600;
-
-}
-
-
-/* =========================================================
    HERO
 ========================================================= */
 
@@ -128,7 +26,7 @@
 
     position:relative;
 
-    min-height:560px;
+    min-height:650px;
 
     display:flex;
 
@@ -139,20 +37,27 @@
     background:
 
         radial-gradient(
-            ellipse 55% 100% at 88% 50%,
-            rgba(75,116,168,.72),
+            ellipse 55% 100% at 88% 48%,
+            rgba(77,125,183,.72),
             transparent 68%
+        ),
+
+        radial-gradient(
+            ellipse 70% 100% at 40% 100%,
+            rgba(18,49,82,.75),
+            transparent 70%
         ),
 
         linear-gradient(
             110deg,
             #020B16 0%,
-            #07182E 45%,
-            #183B63 75%,
-            #536981 100%
+            #07182E 43%,
+            #183B63 74%,
+            #64758A 100%
         );
 
 }
+
 
 .bt-hero::after{
 
@@ -164,13 +69,13 @@
 
     bottom:-180px;
 
-    width:850px;
+    width:900px;
 
-    height:420px;
+    height:430px;
 
     border-radius:50%;
 
-    border-top:1px solid rgba(255,255,255,.15);
+    border-top:1px solid rgba(255,255,255,.16);
 
     transform:rotate(-9deg);
 
@@ -182,19 +87,22 @@
 
         0 -90px 0 rgba(255,255,255,.015);
 
+    pointer-events:none;
+
 }
+
 
 .bt-hero-glow{
 
     position:absolute;
 
-    width:650px;
+    width:700px;
 
-    height:650px;
+    height:700px;
 
-    right:-220px;
+    right:-250px;
 
-    top:-150px;
+    top:-180px;
 
     border-radius:50%;
 
@@ -202,7 +110,7 @@
 
         radial-gradient(
             circle,
-            rgba(175,200,226,.28),
+            rgba(190,214,237,.28),
             transparent 68%
         );
 
@@ -210,44 +118,93 @@
 
 }
 
+
+.bt-hero-lines{
+
+    position:absolute;
+
+    right:80px;
+
+    top:70px;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    box-shadow:
+
+        0 0 0 55px rgba(255,255,255,.025),
+
+        0 0 0 110px rgba(255,255,255,.018),
+
+        0 0 0 165px rgba(255,255,255,.012);
+
+    pointer-events:none;
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
 .bt-hero-content{
 
     position:relative;
 
     z-index:2;
 
-    max-width:780px;
+    max-width:900px;
 
-    padding:75px 0;
+    padding:105px 0;
 
 }
+
 
 .bt-back{
 
-    display:inline-block;
+    display:inline-flex;
 
-    margin-bottom:42px;
+    align-items:center;
 
-    color:rgba(255,255,255,.65);
+    margin-bottom:32px;
 
-    font-size:13px;
+    color:rgba(255,255,255,.62);
+
+    font-size:14px;
 
     font-weight:500;
 
+    text-decoration:none;
+
+    transition:
+
+        color .25s ease,
+
+        transform .25s ease;
+
 }
+
 
 .bt-back:hover{
 
     color:#FFFFFF;
 
+    transform:translateX(-3px);
+
 }
+
 
 .bt-kicker,
 .bt-blue-kicker{
 
     display:inline-block;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     color:#3281F4;
 
@@ -257,19 +214,22 @@
 
     letter-spacing:.23em;
 
+    line-height:1.3;
+
     text-transform:uppercase;
 
 }
 
+
 .bt-hero h1{
 
-    max-width:780px;
+    max-width:900px;
 
-    margin:0 0 25px;
+    margin:0 0 28px;
 
     color:#FFFFFF;
 
-    font-size:clamp(3.3rem,5.5vw,5.4rem);
+    font-size:clamp(3.2rem,5.3vw,5.25rem);
 
     font-weight:700;
 
@@ -279,19 +239,25 @@
 
 }
 
+
 .bt-hero p{
 
-    max-width:650px;
+    max-width:700px;
 
-    margin:0 0 35px;
+    margin:0;
 
     color:rgba(255,255,255,.73);
 
-    font-size:16px;
+    font-size:17px;
 
-    line-height:1.75;
+    line-height:1.8;
 
 }
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .bt-hero-actions{
 
@@ -299,11 +265,14 @@
 
     align-items:center;
 
-    gap:15px;
-
     flex-wrap:wrap;
 
+    gap:16px;
+
+    margin-top:38px;
+
 }
+
 
 .bt-button{
 
@@ -312,6 +281,8 @@
     align-items:center;
 
     justify-content:center;
+
+    gap:9px;
 
     min-height:50px;
 
@@ -327,13 +298,22 @@
 
     font-weight:600;
 
+    line-height:1;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
     transition:
 
         transform .25s ease,
 
-        box-shadow .25s ease;
+        box-shadow .25s ease,
+
+        background .25s ease;
 
 }
+
 
 .bt-button:hover{
 
@@ -344,17 +324,32 @@
 
 }
 
-.bt-button-outline{
 
-    border:1px solid rgba(255,255,255,.45);
+.bt-button span{
 
-    background:transparent;
+    font-size:17px;
 
 }
 
+
+.bt-button-outline{
+
+    border:1px solid rgba(255,255,255,.28);
+
+    background:transparent;
+
+    color:#FFFFFF;
+
+}
+
+
 .bt-button-outline:hover{
 
-    background:rgba(255,255,255,.08);
+    background:#FFFFFF;
+
+    color:#07182E;
+
+    box-shadow:none;
 
 }
 
@@ -371,6 +366,7 @@
 
 }
 
+
 .bt-overview-grid{
 
     display:grid;
@@ -383,6 +379,14 @@
 
 }
 
+
+.bt-overview-intro{
+
+    padding-top:2px;
+
+}
+
+
 .bt-overview-intro h2{
 
     max-width:560px;
@@ -393,17 +397,21 @@
 
     font-size:clamp(2.5rem,4vw,4rem);
 
+    font-weight:700;
+
     line-height:1;
 
     letter-spacing:-.055em;
 
 }
 
+
 .bt-overview-text{
 
     padding-top:7px;
 
 }
+
 
 .bt-overview-text p{
 
@@ -417,9 +425,57 @@
 
 }
 
+
 .bt-overview-text p:last-child{
 
     margin-bottom:0;
+
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.bt-section-heading{
+
+    max-width:800px;
+
+    margin-bottom:65px;
+
+}
+
+
+.bt-section-heading h2{
+
+    max-width:700px;
+
+    margin:0 0 20px;
+
+    color:#07182E;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    font-weight:700;
+
+    line-height:1;
+
+    letter-spacing:-.055em;
+
+}
+
+
+.bt-section-heading > p{
+
+    max-width:700px;
+
+    margin:0;
+
+    color:#6E7888;
+
+    font-size:16px;
+
+    line-height:1.8;
 
 }
 
@@ -436,91 +492,65 @@
 
 }
 
-.bt-section-heading{
-
-    max-width:780px;
-
-    margin-bottom:65px;
-
-}
-
-.bt-section-heading h2{
-
-    margin:0 0 18px;
-
-    color:#07182E;
-
-    font-size:clamp(2.5rem,4vw,4rem);
-
-    line-height:1;
-
-    letter-spacing:-.055em;
-
-}
-
-.bt-section-heading p{
-
-    max-width:700px;
-
-    margin:0;
-
-    color:#6E7888;
-
-    font-size:16px;
-
-    line-height:1.75;
-
-}
 
 .bt-capabilities-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:16px;
 
 }
 
+
 .bt-capability{
 
-    min-height:275px;
+    min-height:285px;
+
+    display:flex;
+
+    flex-direction:column;
 
     padding:35px;
 
-    border:1px solid #E4E8EF;
+    border:1px solid #E3E8EF;
 
-    border-radius:16px;
+    border-radius:18px;
 
     background:#FFFFFF;
 
     box-shadow:
-
         0 8px 25px rgba(7,24,46,.035);
 
     transition:
 
         transform .28s ease,
 
-        box-shadow .28s ease;
+        box-shadow .28s ease,
+
+        border-color .28s ease;
 
 }
+
 
 .bt-capability:hover{
 
     transform:translateY(-5px);
 
-    box-shadow:
+    border-color:#D3DCE9;
 
+    box-shadow:
         0 20px 40px rgba(7,24,46,.08);
 
 }
+
 
 .bt-number{
 
     display:block;
 
-    margin-bottom:45px;
+    margin-bottom:48px;
 
     color:#2875ED;
 
@@ -532,19 +562,25 @@
 
 }
 
+
 .bt-capability h3{
 
     margin:0 0 12px;
 
     color:#07182E;
 
-    font-size:20px;
+    font-size:22px;
 
-    line-height:1.25;
+    font-weight:700;
+
+    line-height:1.2;
 
 }
 
+
 .bt-capability p{
+
+    max-width:520px;
 
     margin:0;
 
@@ -558,7 +594,7 @@
 
 
 /* =========================================================
-   TRANSFORMATION JOURNEY
+   JOURNEY
 ========================================================= */
 
 .bt-journey{
@@ -569,17 +605,19 @@
 
 }
 
+
 .bt-journey-list{
 
     border-top:1px solid #E3E8EF;
 
 }
 
+
 .bt-journey-item{
 
     display:grid;
 
-    grid-template-columns:90px 1fr;
+    grid-template-columns:90px minmax(0,1fr);
 
     gap:35px;
 
@@ -589,17 +627,6 @@
 
 }
 
-.bt-journey-number{
-
-    color:#2875ED;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    letter-spacing:.16em;
-
-}
 
 .bt-journey-item h3{
 
@@ -611,9 +638,10 @@
 
 }
 
+
 .bt-journey-item p{
 
-    max-width:750px;
+    max-width:760px;
 
     margin:0;
 
@@ -627,215 +655,59 @@
 
 
 /* =========================================================
-   RESULTS
+   RELATED SERVICES
 ========================================================= */
 
-.bt-results{
+.bt-related-services{
 
     padding:120px 0;
 
-    background:#07182E;
+    background:#F7F9FC;
 
 }
 
-.bt-results-grid{
 
-    display:grid;
+.bt-related-content{
 
-    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
-
-    gap:100px;
-
-    align-items:start;
+    max-width:850px;
 
 }
 
-.bt-results-intro{
 
-    min-width:0;
-
-}
-
-.bt-results-intro .bt-blue-kicker{
-
-    color:#66AFFF;
-
-}
-
-.bt-results-intro h2{
-
-    max-width:560px;
+.bt-related-content p{
 
     margin:0 0 28px;
 
-    color:#FFFFFF;
-
-    font-size:clamp(2.7rem,4vw,4.2rem);
-
-    line-height:.98;
-
-    letter-spacing:-.055em;
-
-}
-
-.bt-results-intro p{
-
-    max-width:560px;
-
-    margin:0;
-
-    color:rgba(255,255,255,.65);
+    color:#687386;
 
     font-size:17px;
 
-    line-height:1.8;
-
-}
-
-.bt-results-list{
-
-    width:100%;
-
-    min-width:0;
-
-    border-top:1px solid rgba(255,255,255,.16);
-
-}
-
-.bt-result{
-
-    display:grid;
-
-    grid-template-columns:65px minmax(0,1fr);
-
-    grid-template-rows:auto auto;
-
-    column-gap:22px;
-
-    row-gap:8px;
-
-    width:100%;
-
-    padding:30px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.16);
-
-}
-
-.bt-result > span{
-
-    grid-column:1;
-
-    grid-row:1;
-
-    color:#66AFFF;
-
-    font-size:13px;
-
-    font-weight:700;
-
-    line-height:1.4;
-
-}
-
-.bt-result h3{
-
-    grid-column:2;
-
-    grid-row:1;
-
-    min-width:0;
-
-    margin:0;
-
-    color:#FFFFFF;
-
-    font-size:20px;
-
-    line-height:1.25;
-
-}
-
-.bt-result p{
-
-    grid-column:2;
-
-    grid-row:2;
-
-    max-width:100%;
-
-    min-width:0;
-
-    margin:6px 0 0;
-
-    color:rgba(255,255,255,.62);
-
-    font-size:15px;
-
-    line-height:1.75;
+    line-height:1.85;
 
 }
 
 
-/* =========================================================
-   WHY BSGA
-========================================================= */
+.bt-related-content p:last-child{
 
-.bt-why{
-
-    padding:120px 0;
-
-    background:#FFFFFF;
+    margin-bottom:0;
 
 }
 
-.bt-why-grid{
 
-    display:grid;
+.bt-related-content a{
 
-    grid-template-columns:1fr 1fr;
+    color:#2875ED;
 
-    gap:110px;
+    font-weight:600;
 
-}
-
-.bt-why h2{
-
-    max-width:580px;
-
-    margin:0;
-
-    color:#07182E;
-
-    font-size:clamp(2.5rem,4vw,4rem);
-
-    line-height:1;
-
-    letter-spacing:-.055em;
+    text-decoration:none;
 
 }
 
-.bt-why-grid > div:last-child{
 
-    padding-top:5px;
+.bt-related-content a:hover{
 
-}
-
-.bt-why-grid > div:last-child p{
-
-    margin:0 0 25px;
-
-    color:#687386;
-
-    font-size:16px;
-
-    line-height:1.8;
-
-}
-
-.bt-why-grid .bt-button{
-
-    margin-top:10px;
+    text-decoration:underline;
 
 }
 
@@ -848,9 +720,10 @@
 
     padding:95px 0;
 
-    background:#F7F9FC;
+    background:#FFFFFF;
 
 }
+
 
 .bt-cta-box{
 
@@ -862,7 +735,7 @@
 
     justify-content:center;
 
-    padding:70px 78px;
+    padding:75px 78px;
 
     border-radius:24px;
 
@@ -883,17 +756,19 @@
 
 }
 
+
 .bt-cta-box .bt-blue-kicker{
 
-    margin-bottom:20px;
+    margin-bottom:22px;
 
 }
+
 
 .bt-cta-box h2{
 
     max-width:760px;
 
-    margin:0 0 20px;
+    margin:0 0 22px;
 
     color:#FFFFFF;
 
@@ -905,19 +780,21 @@
 
 }
 
-.bt-cta-box p{
 
-    max-width:650px;
+.bt-cta-box > p{
 
-    margin:0 0 32px;
+    max-width:680px;
+
+    margin:0 0 36px;
 
     color:rgba(255,255,255,.7);
 
     font-size:16px;
 
-    line-height:1.75;
+    line-height:1.8;
 
 }
+
 
 .bt-cta-actions{
 
@@ -925,9 +802,12 @@
 
     align-items:center;
 
+    flex-wrap:wrap;
+
     gap:25px;
 
 }
+
 
 .bt-email{
 
@@ -937,7 +817,10 @@
 
     font-weight:500;
 
+    text-decoration:none;
+
 }
+
 
 .bt-email:hover{
 
@@ -950,42 +833,114 @@
    FOOTER
 ========================================================= */
 
-.business-transformation-page .site-footer{
+.bt-footer{
 
     padding:70px 0 25px;
 
     background:#000000;
 
-}
-
-.business-transformation-page .footer-container{
-
-    width:min(92%,1230px);
-
-    margin:0 auto;
+    color:#FFFFFF;
 
 }
 
-.business-transformation-page .footer-brand img{
+
+.bt-footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:60px;
+
+    padding-bottom:55px;
+
+}
+
+
+.bt-footer-brand img{
+
+    display:block;
 
     width:180px;
 
+    height:auto;
+
+    margin-bottom:22px;
+
 }
 
-.business-transformation-page .footer-brand p{
+
+.bt-footer-brand p{
+
+    max-width:420px;
+
+    margin:0;
 
     color:rgba(255,255,255,.55);
 
     font-size:13px;
 
+    line-height:1.7;
+
 }
 
-.business-transformation-page .footer-links a,
-.business-transformation-page .footer-contact a{
+
+.bt-footer-column h4{
+
+    margin:0 0 20px;
+
+    color:#FFFFFF;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+.bt-footer-column a{
+
+    display:block;
+
+    margin-bottom:12px;
 
     color:rgba(255,255,255,.65);
 
     font-size:13px;
+
+    line-height:1.5;
+
+    text-decoration:none;
+
+    transition:color .2s ease;
+
+}
+
+
+.bt-footer-column a:hover{
+
+    color:#FFFFFF;
+
+}
+
+
+.bt-footer-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    color:rgba(255,255,255,.4);
+
+    font-size:12px;
 
 }
 
@@ -994,33 +949,31 @@
    TABLET
 ========================================================= */
 
-@media(max-width:1050px){
+@media (max-width:1050px){
 
-    .business-transformation-page .main-navigation{
-
-        gap:25px;
-
-        margin-right:30px;
-
-    }
-
-    .business-transformation-page .site-logo img{
-
-        width:160px;
-
-    }
-
-    .bt-overview-grid,
-    .bt-results-grid,
-    .bt-why-grid{
+    .bt-overview-grid{
 
         gap:60px;
 
     }
 
-    .bt-capabilities-grid{
+    .bt-footer-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1.6fr 1fr 1fr;
+
+        gap:45px;
+
+    }
+
+    .bt-footer-column:last-child{
+
+        grid-column:2 / 4;
+
+    }
+
+    .bt-hero-lines{
+
+        right:-100px;
 
     }
 
@@ -1031,41 +984,11 @@
    MOBILE
 ========================================================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    .business-transformation-page .site-header{
-
-        height:75px;
-
-    }
-
-    .business-transformation-page .header-container{
-
-        height:75px;
+    .bt-container{
 
         width:92%;
-
-    }
-
-    .business-transformation-page .site-logo img{
-
-        width:145px;
-
-    }
-
-    .business-transformation-page .main-navigation{
-
-        display:none;
-
-    }
-
-    .business-transformation-page .header-cta{
-
-        min-height:44px;
-
-        padding:0 16px;
-
-        font-size:13px;
 
     }
 
@@ -1080,13 +1003,13 @@
 
     .bt-hero-content{
 
-        padding:70px 0;
+        padding:80px 0;
 
     }
 
     .bt-back{
 
-        margin-bottom:35px;
+        margin-bottom:27px;
 
     }
 
@@ -1108,13 +1031,39 @@
 
         flex-direction:column;
 
-        align-items:stretch;
+        align-items:flex-start;
+
+        gap:14px;
 
     }
 
-    .bt-button{
+    .bt-hero-actions .bt-button{
 
-        width:100%;
+        min-height:48px;
+
+    }
+
+    .bt-hero-lines{
+
+        right:-280px;
+
+        top:150px;
+
+        width:450px;
+
+        height:450px;
+
+    }
+
+    .bt-hero-glow{
+
+        width:550px;
+
+        height:550px;
+
+        right:-300px;
+
+        top:-120px;
 
     }
 
@@ -1124,20 +1073,29 @@
     .bt-overview,
     .bt-capabilities,
     .bt-journey,
-    .bt-results,
-    .bt-why{
+    .bt-related-services{
 
         padding:85px 0;
 
     }
 
-    .bt-overview-grid,
-    .bt-results-grid,
-    .bt-why-grid{
+
+    /* OVERVIEW */
+
+    .bt-overview-grid{
 
         grid-template-columns:1fr;
 
         gap:55px;
+
+    }
+
+
+    /* HEADINGS */
+
+    .bt-section-heading{
+
+        margin-bottom:45px;
 
     }
 
@@ -1154,6 +1112,8 @@
 
         min-height:250px;
 
+        padding:30px;
+
     }
 
 
@@ -1161,34 +1121,11 @@
 
     .bt-journey-item{
 
-        grid-template-columns:55px 1fr;
+        grid-template-columns:55px minmax(0,1fr);
 
         gap:18px;
 
         padding:32px 0;
-
-    }
-
-
-    /* RESULTS */
-
-    .bt-result{
-
-        grid-template-columns:45px minmax(0,1fr);
-
-        column-gap:15px;
-
-    }
-
-    .bt-result h3{
-
-        font-size:18px;
-
-    }
-
-    .bt-result p{
-
-        font-size:14px;
 
     }
 
@@ -1205,7 +1142,9 @@
 
         min-height:470px;
 
-        padding:45px 28px;
+        padding:50px 28px;
+
+        border-radius:20px;
 
     }
 
@@ -1221,11 +1160,54 @@
 
         align-items:stretch;
 
+        gap:18px;
+
+    }
+
+    .bt-cta-actions .bt-button{
+
+        width:100%;
+
     }
 
     .bt-email{
 
         text-align:center;
+
+    }
+
+
+    /* FOOTER */
+
+    .bt-footer{
+
+        padding:60px 0 25px;
+
+    }
+
+    .bt-footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        padding-bottom:45px;
+
+    }
+
+    .bt-footer-column:last-child{
+
+        grid-column:auto;
+
+    }
+
+    .bt-footer-bottom{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
 
     }
 
@@ -1236,17 +1218,23 @@
    SMALL MOBILE
 ========================================================= */
 
-@media(max-width:480px){
+@media (max-width:480px){
 
-    .business-transformation-page .header-cta{
+    .bt-container{
 
-        display:none;
+        width:90%;
 
     }
 
-    .business-transformation-page .site-logo img{
+    .bt-hero{
 
-        width:150px;
+        min-height:620px;
+
+    }
+
+    .bt-hero-content{
+
+        padding:65px 0;
 
     }
 
@@ -1256,12 +1244,67 @@
 
     }
 
+    .bt-hero p{
+
+        font-size:14px;
+
+    }
+
     .bt-section-heading h2,
-    .bt-overview-intro h2,
-    .bt-results-intro h2,
-    .bt-why h2{
+    .bt-overview-intro h2{
 
         font-size:2.45rem;
+
+    }
+
+    .bt-section-heading > p{
+
+        font-size:15px;
+
+    }
+
+    .bt-overview-text p{
+
+        font-size:16px;
+
+    }
+
+    .bt-capability{
+
+        min-height:235px;
+
+        padding:28px;
+
+    }
+
+    .bt-cta-box{
+
+        min-height:480px;
+
+        padding:42px 24px;
+
+    }
+
+    .bt-cta-box h2{
+
+        font-size:2.5rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion:reduce){
+
+    .bt-button,
+    .bt-capability,
+    .bt-back{
+
+        transition:none;
 
     }
 
