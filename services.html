@@ -40,7 +40,7 @@
 
     <meta
         name="theme-color"
-        content="#000000"
+        content="#061426"
     >
 
 
@@ -62,13 +62,13 @@
         rel="icon"
         type="image/png"
         sizes="512x512"
-        href="images/logos/favicon.png"
+        href="images/favicon.png"
     >
 
     <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="images/logos/apple-touch-icon.png"
+        href="images/apple-touch-icon.png"
     >
 
     <link
@@ -268,6 +268,9 @@
 
     <div class="header-container">
 
+
+        <!-- LOGO -->
+
         <a
             href="index.html"
             class="site-logo"
@@ -281,6 +284,8 @@
 
         </a>
 
+
+        <!-- DESKTOP NAVIGATION -->
 
         <nav
             class="main-navigation"
@@ -314,6 +319,8 @@
         </nav>
 
 
+        <!-- CONSULTATION CTA -->
+
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="header-cta"
@@ -336,6 +343,8 @@
         </a>
 
 
+        <!-- MOBILE MENU -->
+
         <button
             id="menuToggle"
             class="menu-toggle"
@@ -353,6 +362,8 @@
 
     </div>
 
+
+    <!-- MOBILE NAVIGATION -->
 
     <nav
         id="mobileNav"
@@ -390,7 +401,8 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            Schedule a Consultation →
+            Schedule a Consultation
+            <span aria-hidden="true">→</span>
         </a>
 
     </nav>
@@ -416,6 +428,11 @@
         aria-hidden="true"
     ></div>
 
+    <div
+        class="services-hero-lines"
+        aria-hidden="true"
+    ></div>
+
     <div class="services-container">
 
         <div class="services-hero-content">
@@ -437,6 +454,7 @@
                 confidence.
             </p>
 
+
             <div class="services-hero-actions">
 
                 <a
@@ -456,28 +474,6 @@
                 </a>
 
             </div>
-
-        </div>
-
-
-        <div
-            class="services-hero-side"
-            aria-hidden="true"
-        >
-
-            <div class="hero-side-line"></div>
-
-            <span>
-                STRATEGY
-            </span>
-
-            <span>
-                EXECUTION
-            </span>
-
-            <span>
-                TRANSFORMATION
-            </span>
 
         </div>
 
@@ -535,7 +531,7 @@
 
 
 <!-- =========================================================
-     SERVICES / EXPERTISE
+     EXPERTISE
 ========================================================= -->
 
 <section
@@ -561,6 +557,8 @@
 
         <div class="services-cards">
 
+
+            <!-- PROJECT MANAGEMENT -->
 
             <a
                 href="project-management.html"
@@ -603,6 +601,8 @@
             </a>
 
 
+            <!-- BUSINESS TRANSFORMATION -->
+
             <a
                 href="business-transformation.html"
                 class="services-card"
@@ -643,6 +643,8 @@
 
             </a>
 
+
+            <!-- ARTIFICIAL INTELLIGENCE -->
 
             <a
                 href="artificial-intelligence.html"
@@ -685,6 +687,8 @@
             </a>
 
 
+            <!-- OPERATIONAL EXCELLENCE -->
+
             <a
                 href="operational-excellence.html"
                 class="services-card"
@@ -724,6 +728,7 @@
                 </div>
 
             </a>
+
 
         </div>
 
@@ -770,6 +775,7 @@
                     or AI adoption, our focus remains the same:
                     creating measurable progress.
                 </p>
+
 
                 <div class="services-approach-actions">
 
@@ -855,23 +861,22 @@
 
 
 <!-- =========================================================
-     GLOBAL FOOTER
+     FOOTER
 ========================================================= -->
 
-<footer class="footer">
+<footer class="services-footer">
 
-    <div class="container">
+    <div class="services-container">
 
-        <div class="footer-grid">
+        <div class="services-footer-grid">
 
 
             <!-- BRAND -->
 
-            <div>
+            <div class="services-footer-brand">
 
                 <img
                     src="images/logos/logo-white.png"
-                    class="footer-logo"
                     alt="BSGA Consulting"
                     loading="lazy"
                 >
@@ -887,11 +892,11 @@
 
             <!-- NAVIGATION -->
 
-            <div>
+            <div class="services-footer-column">
 
-                <h4>
+                <h3>
                     Navigation
-                </h4>
+                </h3>
 
                 <a href="index.html">
                     Home
@@ -919,13 +924,40 @@
             </div>
 
 
+            <!-- SERVICES -->
+
+            <div class="services-footer-column">
+
+                <h3>
+                    Services
+                </h3>
+
+                <a href="project-management.html">
+                    Project Management
+                </a>
+
+                <a href="business-transformation.html">
+                    Business Transformation
+                </a>
+
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence
+                </a>
+
+                <a href="operational-excellence.html">
+                    Operational Excellence
+                </a>
+
+            </div>
+
+
             <!-- CONTACT -->
 
-            <div>
+            <div class="services-footer-column">
 
-                <h4>
+                <h3>
                     Contact
-                </h4>
+                </h3>
 
                 <a href="mailto:info@bsgaconsulting.es">
                     info@bsgaconsulting.es
@@ -945,10 +977,17 @@
         </div>
 
 
-        <div class="footer-bottom">
+        <!-- FOOTER BOTTOM -->
 
-            © 2026 BSGA Consulting.
-            All Rights Reserved.
+        <div class="services-footer-bottom">
+
+            <span>
+                © 2026 BSGA Consulting. All Rights Reserved.
+            </span>
+
+            <span>
+                Strategy · Execution · Transformation
+            </span>
 
         </div>
 
@@ -958,7 +997,7 @@
 
 
 <!-- =========================================================
-     GLOBAL JAVASCRIPT
+     JAVASCRIPT
 ========================================================= -->
 
 <script src="js/main.js"></script>
