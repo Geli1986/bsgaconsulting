@@ -1,6 +1,6 @@
 /* =========================================================
    BSGA CONSULTING
-   HOME — DEFINITIVE GLOBAL STYLES
+   HOME — DEFINITIVE STYLES.CSS
 ========================================================= */
 
 
@@ -28,8 +28,6 @@
     --container: 1500px;
 
     --header-height: 88px;
-
-    --transition: .30s ease;
 
 }
 
@@ -116,18 +114,9 @@ button {
 }
 
 
-ul,
-ol {
+p {
 
     margin: 0;
-    padding: 0;
-
-}
-
-
-ul {
-
-    list-style: none;
 
 }
 
@@ -138,15 +127,6 @@ h3,
 h4,
 h5,
 h6 {
-
-    margin: 0;
-
-    font-family: "Inter", sans-serif;
-
-}
-
-
-p {
 
     margin: 0;
 
@@ -284,6 +264,7 @@ a {
     position: absolute;
 
     left: 0;
+
     right: 0;
 
     bottom: -11px;
@@ -354,7 +335,7 @@ a {
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
+   MOBILE MENU
 ========================================================= */
 
 .menu-toggle {
@@ -813,7 +794,7 @@ a {
 
 
 /* =========================================================
-   HOME SERVICES
+   SERVICES
 ========================================================= */
 
 .home-services {
@@ -1218,7 +1199,7 @@ a {
 
 
 /* =========================================================
-   HOME CTA
+   CTA — REDESIGNED
 ========================================================= */
 
 .cta {
@@ -1243,7 +1224,7 @@ a {
 
     position: relative;
 
-    min-height: 390px;
+    min-height: 430px;
 
     display: flex;
 
@@ -1251,9 +1232,9 @@ a {
 
     overflow: hidden;
 
-    padding: 75px 80px;
+    padding: 78px 82px;
 
-    border-radius: 24px;
+    border-radius: 26px;
 
     background:
 
@@ -1264,9 +1245,9 @@ a {
         ),
 
         radial-gradient(
-            circle at 75% 100%,
-            rgba(40,103,232,.12),
-            transparent 42%
+            circle at 76% 100%,
+            rgba(40,103,232,.13),
+            transparent 44%
         ),
 
         linear-gradient(
@@ -1288,13 +1269,13 @@ a {
 
     position: absolute;
 
-    width: 520px;
+    width: 540px;
 
-    height: 520px;
+    height: 540px;
 
-    right: -220px;
+    right: -230px;
 
-    top: -260px;
+    top: -275px;
 
     border-radius: 50%;
 
@@ -1319,7 +1300,9 @@ a {
 
     z-index: 2;
 
-    max-width: 790px;
+    width: 100%;
+
+    max-width: 820px;
 
 }
 
@@ -1328,7 +1311,7 @@ a {
 
     display: inline-block;
 
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 
     color: #66AFFF;
 
@@ -1347,13 +1330,13 @@ a {
 
 .cta-box h2 {
 
-    max-width: 760px;
+    max-width: 780px;
 
-    margin: 0 0 24px;
+    margin: 0 0 25px;
 
     color: #FFFFFF;
 
-    font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+    font-size: clamp(2.9rem, 4.6vw, 4.6rem);
 
     font-weight: 700;
 
@@ -1366,9 +1349,9 @@ a {
 
 .cta-box p {
 
-    max-width: 650px;
+    max-width: 680px;
 
-    margin: 0 0 36px;
+    margin: 0 0 38px;
 
     color: rgba(255,255,255,.70);
 
@@ -1392,7 +1375,7 @@ a {
 
 .cta-buttons .button {
 
-    min-height: 52px;
+    min-height: 54px;
 
     display: inline-flex;
 
@@ -1402,7 +1385,7 @@ a {
 
     gap: 12px;
 
-    padding: 0 28px;
+    padding: 0 30px;
 
     border-radius: 999px;
 
@@ -1450,7 +1433,7 @@ a {
 
 .cta-buttons .button-secondary {
 
-    min-height: 52px;
+    min-height: 54px;
 
     display: inline-flex;
 
@@ -1458,7 +1441,7 @@ a {
 
     justify-content: center;
 
-    padding: 0 27px;
+    padding: 0 28px;
 
     border: 1px solid rgba(255,255,255,.25);
 
@@ -1502,7 +1485,7 @@ a {
 
 .footer {
 
-    padding: 110px 0 40px;
+    padding: 105px 0 40px;
 
     background: #000000;
 
@@ -1539,6 +1522,8 @@ a {
 
     color: rgba(255,255,255,.72);
 
+    font-size: 15px;
+
     line-height: 1.9;
 
 }
@@ -1550,7 +1535,7 @@ a {
 
     color: #FFFFFF;
 
-    font-size: 1rem;
+    font-size: 16px;
 
 }
 
@@ -1562,6 +1547,8 @@ a {
     margin-bottom: 16px;
 
     color: rgba(255,255,255,.72);
+
+    font-size: 15px;
 
     transition:
 
@@ -1625,11 +1612,13 @@ a {
 
     }
 
+
     .header-cta {
 
         padding: 0 20px;
 
     }
+
 
     .site-logo img {
 
@@ -1637,11 +1626,13 @@ a {
 
     }
 
+
     .home-services-grid {
 
         grid-template-columns: repeat(2, 1fr);
 
     }
+
 
     .why-grid {
 
@@ -1650,6 +1641,7 @@ a {
         gap: 65px;
 
     }
+
 
     .approach-layout {
 
@@ -1676,17 +1668,20 @@ a {
 
     }
 
+
     .main-navigation a {
 
         font-size: 14px;
 
     }
 
+
     .header-cta {
 
         font-size: 13px;
 
     }
+
 
     .why-grid {
 
@@ -1696,11 +1691,13 @@ a {
 
     }
 
+
     .why-left {
 
         position: static;
 
     }
+
 
     .approach-layout {
 
@@ -1710,11 +1707,13 @@ a {
 
     }
 
+
     .approach-image {
 
         max-width: 850px;
 
     }
+
 
     .footer-grid {
 
@@ -2106,11 +2105,11 @@ a {
 
     .cta-box {
 
-        min-height: 500px;
+        min-height: 510px;
 
         align-items: center;
 
-        padding: 50px 28px;
+        padding: 55px 30px;
 
         border-radius: 20px;
 
@@ -2137,7 +2136,7 @@ a {
 
         max-width: 100%;
 
-        margin-bottom: 22px;
+        margin-bottom: 23px;
 
         font-size: 2.75rem;
 
@@ -2309,6 +2308,8 @@ a {
     }
 
 
+    /* CTA */
+
     .cta {
 
         padding: 70px 0 80px;
@@ -2318,7 +2319,7 @@ a {
 
     .cta-box {
 
-        min-height: 510px;
+        min-height: 520px;
 
         padding: 45px 24px;
 
@@ -2388,6 +2389,7 @@ a {
         scroll-behavior: auto;
 
     }
+
 
     *,
     *::before,
