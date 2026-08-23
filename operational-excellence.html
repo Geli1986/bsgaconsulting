@@ -10,6 +10,10 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <!-- =====================================================
+         PRIMARY SEO
+    ====================================================== -->
+
     <title>
         Operational Excellence Consulting | BSGA Consulting
     </title>
@@ -38,6 +42,7 @@
         name="theme-color"
         content="#000000"
     >
+
 
     <!-- =====================================================
          CANONICAL
@@ -269,17 +274,19 @@
 
 
 <!-- =========================================================
-HEADER
+     HEADER
 ========================================================= -->
 
-<header class="oe-header">
+<header class="site-header">
 
-    <div class="oe-header-inner">
+    <div class="header-container">
 
+
+        <!-- LOGO -->
 
         <a
-            href="/"
-            class="oe-logo"
+            href="index.html"
+            class="site-logo"
             aria-label="BSGA Consulting Home"
         >
 
@@ -291,59 +298,136 @@ HEADER
         </a>
 
 
+        <!-- DESKTOP NAVIGATION -->
+
         <nav
-            class="oe-navigation"
+            class="main-navigation"
             aria-label="Main navigation"
         >
 
-            <a href="/">
+            <a href="index.html">
                 Home
             </a>
 
-
             <a
-                href="/services"
+                href="services.html"
                 class="active"
                 aria-current="page"
             >
                 Services
             </a>
 
-
-            <a href="/about">
+            <a href="about.html">
                 About
             </a>
 
-
-            <a href="/insights">
+            <a href="insights.html">
                 Insights
             </a>
 
-
-            <a href="/contact">
+            <a href="contact.html">
                 Contact
             </a>
 
         </nav>
 
 
+        <!-- HEADER CTA -->
+
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-            class="hero-button hero-button-secondary"
+            class="header-cta"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Schedule a Consultation"
         >
 
-            Schedule a Consultation
+            <span class="header-cta-text">
+                Schedule a Consultation
+            </span>
 
-            <span>
+            <span
+                class="header-cta-arrow"
+                aria-hidden="true"
+            >
                 →
             </span>
 
         </a>
 
 
+        <!-- MOBILE MENU -->
+
+        <button
+            id="menuToggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
     </div>
+
+
+    <!-- MOBILE NAVIGATION -->
+
+    <nav
+        id="mobileNav"
+        class="mobile-nav"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a
+            href="services.html"
+            class="active"
+            aria-current="page"
+        >
+            Services
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="insights.html">
+            Insights
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="mobile-nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Schedule a Consultation"
+        >
+            <span class="mobile-nav-cta-text">
+                Schedule a Consultation
+            </span>
+
+            <span
+                class="mobile-nav-cta-arrow"
+                aria-hidden="true"
+            >
+                →
+            </span>
+        </a>
+
+    </nav>
 
 </header>
 
@@ -352,14 +436,21 @@ HEADER
 
 
 <!-- =========================================================
-HERO
+     HERO
 ========================================================= -->
 
 <section class="oe-hero">
 
-    <div class="oe-hero-glow"></div>
+    <div
+        class="oe-hero-glow"
+        aria-hidden="true"
+    ></div>
 
-    <div class="oe-hero-lines"></div>
+    <div
+        class="oe-hero-lines"
+        aria-hidden="true"
+    ></div>
+
 
     <div class="oe-container">
 
@@ -367,7 +458,7 @@ HERO
 
 
             <a
-                href="/services"
+                href="services.html"
                 class="oe-back"
             >
                 ← Back to Services
@@ -423,7 +514,7 @@ HERO
 
 
 <!-- =========================================================
-OVERVIEW
+     OVERVIEW
 ========================================================= -->
 
 <section class="oe-overview">
@@ -474,7 +565,6 @@ OVERVIEW
 
             </div>
 
-
         </div>
 
     </div>
@@ -483,7 +573,7 @@ OVERVIEW
 
 
 <!-- =========================================================
-CAPABILITIES
+     CAPABILITIES
 ========================================================= -->
 
 <section
@@ -521,7 +611,9 @@ CAPABILITIES
 
             <article class="oe-capability">
 
-                <span class="oe-number">01</span>
+                <span class="oe-number">
+                    01
+                </span>
 
                 <h3>
                     Process Improvement
@@ -538,7 +630,9 @@ CAPABILITIES
 
             <article class="oe-capability">
 
-                <span class="oe-number">02</span>
+                <span class="oe-number">
+                    02
+                </span>
 
                 <h3>
                     Performance Management
@@ -555,7 +649,9 @@ CAPABILITIES
 
             <article class="oe-capability">
 
-                <span class="oe-number">03</span>
+                <span class="oe-number">
+                    03
+                </span>
 
                 <h3>
                     KPI Design
@@ -572,7 +668,9 @@ CAPABILITIES
 
             <article class="oe-capability">
 
-                <span class="oe-number">04</span>
+                <span class="oe-number">
+                    04
+                </span>
 
                 <h3>
                     Lean &amp; Continuous Improvement
@@ -589,7 +687,9 @@ CAPABILITIES
 
             <article class="oe-capability">
 
-                <span class="oe-number">05</span>
+                <span class="oe-number">
+                    05
+                </span>
 
                 <h3>
                     Operating Efficiency
@@ -606,7 +706,9 @@ CAPABILITIES
 
             <article class="oe-capability">
 
-                <span class="oe-number">06</span>
+                <span class="oe-number">
+                    06
+                </span>
 
                 <h3>
                     Operational Maturity
@@ -629,7 +731,7 @@ CAPABILITIES
 
 
 <!-- =========================================================
-OUR APPROACH
+     OUR APPROACH
 ========================================================= -->
 
 <section class="oe-improvement">
@@ -785,7 +887,7 @@ OUR APPROACH
 
 
 <!-- =========================================================
-PERFORMANCE AREAS
+     PERFORMANCE AREAS
 ========================================================= -->
 
 <section class="oe-performance">
@@ -915,7 +1017,7 @@ PERFORMANCE AREAS
 
 
 <!-- =========================================================
-WHAT CLIENTS GAIN
+     WHAT CLIENTS GAIN
 ========================================================= -->
 
 <section class="oe-results">
@@ -1026,7 +1128,7 @@ WHAT CLIENTS GAIN
 
 
 <!-- =========================================================
-WHY BSGA
+     WHY BSGA
 ========================================================= -->
 
 <section class="oe-why">
@@ -1088,7 +1190,7 @@ WHY BSGA
 
 
 <!-- =========================================================
-FAQ
+     FAQ
 ========================================================= -->
 
 <section class="oe-faq">
@@ -1191,7 +1293,7 @@ FAQ
 
 
 <!-- =========================================================
-RELATED CONSULTING SERVICES
+     RELATED CONSULTING SERVICES
 ========================================================= -->
 
 <section class="oe-related-services">
@@ -1213,224 +1315,4 @@ RELATED CONSULTING SERVICES
 
 
             <p>
-                Improving operational performance often requires
-                a combination of process improvement, effective
-                project delivery, organisational change and
-                technology.
-            </p>
-
-        </div>
-
-
-        <div class="oe-related-content">
-
-
-            <p>
-                When operational improvements form part of a wider
-                transformation programme, our
-                <a href="business-transformation.html">
-                    Business Transformation
-                </a>
-                consulting helps connect operational initiatives
-                with strategic priorities and organisational change.
-            </p>
-
-
-            <p>
-                When improvement initiatives require structured
-                planning, governance and delivery, our
-                <a href="project-management.html">
-                    Project Management
-                </a>
-                consulting provides the delivery structure needed
-                to move initiatives forward.
-            </p>
-
-
-            <p>
-                Where Artificial Intelligence can improve processes,
-                decision-making or operational performance, our
-                <a href="artificial-intelligence.html">
-                    Artificial Intelligence
-                </a>
-                consulting supports practical adoption and
-                implementation.
-            </p>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-CTA
-========================================================= -->
-
-<section class="oe-cta">
-
-    <div class="oe-container">
-
-
-        <div class="oe-cta-box">
-
-
-            <span class="oe-blue-kicker">
-                LET'S TALK
-            </span>
-
-
-            <h2>
-                Ready to improve
-                operational performance?
-            </h2>
-
-
-            <p>
-                Tell us about the processes, performance challenges
-                or improvement opportunities you are facing.
-                Let's explore how BSGA Consulting can help.
-            </p>
-
-
-            <div class="oe-cta-actions">
-
-
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="oe-button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Schedule a Consultation
-                </a>
-
-
-                <a
-                    href="mailto:info@bsgaconsulting.es"
-                    class="oe-email"
-                >
-                    info@bsgaconsulting.es
-                </a>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-<!-- =========================================================
-FOOTER
-========================================================= -->
-
-<footer class="oe-footer">
-
-    <div class="oe-container">
-
-
-        <div class="oe-footer-grid">
-
-
-            <div class="oe-footer-brand">
-
-                <img
-                    src="images/logos/logo-white.png"
-                    alt="BSGA Consulting"
-                    loading="lazy"
-                >
-
-
-                <p>
-                    Helping organisations improve operational
-                    performance, deliver strategic projects and
-                    adopt Artificial Intelligence with confidence.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h4>
-                    Navigation
-                </h4>
-
-
-                <a href="/">
-                    Home
-                </a>
-
-
-                <a href="/services">
-                    Services
-                </a>
-
-
-                <a href="/about">
-                    About
-                </a>
-
-
-                <a href="/insights">
-                    Insights
-                </a>
-
-
-                <a href="/contact">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <div>
-
-                <h4>
-                    Contact
-                </h4>
-
-
-                <a href="mailto:info@bsgaconsulting.es">
-                    info@bsgaconsulting.es
-                </a>
-
-
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Book a Consultation
-                </a>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="oe-footer-bottom">
-
-            © 2026 BSGA Consulting.
-            All Rights Reserved.
-
-        </div>
-
-
-    </div>
-
-</footer>
-
-
-</body>
-
-</html>
+                Improving operational performance often
