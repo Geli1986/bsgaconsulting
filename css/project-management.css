@@ -1,6 +1,7 @@
 /* =========================================================
    BSGA CONSULTING
-   PROJECT MANAGEMENT PAGE
+   PROJECT MANAGEMENT
+   PROJECT-MANAGEMENT.CSS
 ========================================================= */
 
 
@@ -25,7 +26,7 @@
 
     position:relative;
 
-    min-height:560px;
+    min-height:650px;
 
     display:flex;
 
@@ -36,20 +37,87 @@
     background:
 
         radial-gradient(
-            ellipse 55% 100% at 88% 50%,
-            rgba(75,116,168,.72),
+            ellipse 55% 100% at 88% 48%,
+            rgba(77,125,183,.72),
             transparent 68%
+        ),
+
+        radial-gradient(
+            ellipse 70% 100% at 40% 100%,
+            rgba(18,49,82,.75),
+            transparent 70%
         ),
 
         linear-gradient(
             110deg,
             #020B16 0%,
-            #07182E 45%,
-            #183B63 75%,
-            #536981 100%
+            #07182E 43%,
+            #183B63 74%,
+            #64758A 100%
         );
 
 }
+
+
+/* HERO GLOW */
+
+.pm-hero-glow{
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    right:-250px;
+
+    top:-180px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(190,214,237,.28),
+            transparent 68%
+        );
+
+    pointer-events:none;
+
+}
+
+
+/* HERO DECORATIVE LINES */
+
+.pm-hero-lines{
+
+    position:absolute;
+
+    right:80px;
+
+    top:70px;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    box-shadow:
+
+        0 0 0 55px rgba(255,255,255,.025),
+
+        0 0 0 110px rgba(255,255,255,.018),
+
+        0 0 0 165px rgba(255,255,255,.012);
+
+    pointer-events:none;
+
+}
+
 
 .pm-hero::after{
 
@@ -58,14 +126,16 @@
     position:absolute;
 
     right:-180px;
+
     bottom:-180px;
 
-    width:850px;
-    height:420px;
+    width:900px;
+
+    height:430px;
 
     border-radius:50%;
 
-    border-top:1px solid rgba(255,255,255,.15);
+    border-top:1px solid rgba(255,255,255,.16);
 
     transform:rotate(-9deg);
 
@@ -77,31 +147,14 @@
 
         0 -90px 0 rgba(255,255,255,.015);
 
-}
-
-.pm-hero-glow{
-
-    position:absolute;
-
-    width:650px;
-    height:650px;
-
-    right:-220px;
-    top:-150px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(175,200,226,.28),
-            transparent 68%
-        );
-
     pointer-events:none;
 
 }
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .pm-hero-content{
 
@@ -109,40 +162,53 @@
 
     z-index:2;
 
-    max-width:760px;
+    max-width:900px;
 
-    padding:75px 0;
+    padding:105px 0;
 
 }
+
 
 .pm-back{
 
-    display:inline-block;
+    display:inline-flex;
 
-    margin-bottom:42px;
+    align-items:center;
 
-    color:rgba(255,255,255,.65);
+    margin-bottom:32px;
 
-    font-size:13px;
+    color:rgba(255,255,255,.62);
+
+    font-size:14px;
 
     font-weight:500;
 
-    transition:color .2s ease;
+    text-decoration:none;
+
+    transition:
+
+        color .25s ease,
+
+        transform .25s ease;
 
 }
+
 
 .pm-back:hover{
 
     color:#FFFFFF;
 
+    transform:translateX(-3px);
+
 }
+
 
 .pm-kicker,
 .pm-blue-kicker{
 
     display:inline-block;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     color:#3281F4;
 
@@ -152,19 +218,22 @@
 
     letter-spacing:.23em;
 
+    line-height:1.3;
+
     text-transform:uppercase;
 
 }
 
+
 .pm-hero h1{
 
-    max-width:780px;
+    max-width:900px;
 
-    margin:0 0 25px;
+    margin:0 0 28px;
 
     color:#FFFFFF;
 
-    font-size:clamp(3.3rem,5.5vw,5.4rem);
+    font-size:clamp(3.2rem,5.3vw,5.25rem);
 
     font-weight:700;
 
@@ -174,19 +243,25 @@
 
 }
 
+
 .pm-hero p{
 
-    max-width:650px;
+    max-width:700px;
 
-    margin:0 0 35px;
+    margin:0;
 
     color:rgba(255,255,255,.73);
 
-    font-size:16px;
+    font-size:17px;
 
-    line-height:1.75;
+    line-height:1.8;
 
 }
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .pm-hero-actions{
 
@@ -194,11 +269,14 @@
 
     align-items:center;
 
-    gap:15px;
-
     flex-wrap:wrap;
 
+    gap:16px;
+
+    margin-top:38px;
+
 }
+
 
 .pm-button{
 
@@ -207,6 +285,8 @@
     align-items:center;
 
     justify-content:center;
+
+    gap:9px;
 
     min-height:50px;
 
@@ -222,13 +302,22 @@
 
     font-weight:600;
 
+    line-height:1;
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
     transition:
 
         transform .25s ease,
 
-        box-shadow .25s ease;
+        box-shadow .25s ease,
+
+        background .25s ease;
 
 }
+
 
 .pm-button:hover{
 
@@ -239,17 +328,32 @@
 
 }
 
-.pm-button-outline{
 
-    border:1px solid rgba(255,255,255,.45);
+.pm-button span{
 
-    background:transparent;
+    font-size:17px;
 
 }
 
+
+.pm-button-outline{
+
+    border:1px solid rgba(255,255,255,.28);
+
+    background:transparent;
+
+    color:#FFFFFF;
+
+}
+
+
 .pm-button-outline:hover{
 
-    background:rgba(255,255,255,.08);
+    background:#FFFFFF;
+
+    color:#07182E;
+
+    box-shadow:none;
 
 }
 
@@ -266,6 +370,7 @@
 
 }
 
+
 .pm-overview-grid{
 
     display:grid;
@@ -278,6 +383,14 @@
 
 }
 
+
+.pm-overview-intro{
+
+    padding-top:2px;
+
+}
+
+
 .pm-overview-intro h2{
 
     max-width:560px;
@@ -288,17 +401,21 @@
 
     font-size:clamp(2.5rem,4vw,4rem);
 
+    font-weight:700;
+
     line-height:1;
 
     letter-spacing:-.055em;
 
 }
 
+
 .pm-overview-text{
 
     padding-top:7px;
 
 }
+
 
 .pm-overview-text p{
 
@@ -312,9 +429,57 @@
 
 }
 
+
 .pm-overview-text p:last-child{
 
     margin-bottom:0;
+
+}
+
+
+/* =========================================================
+   SHARED SECTION HEADING
+========================================================= */
+
+.pm-section-heading{
+
+    max-width:800px;
+
+    margin-bottom:65px;
+
+}
+
+
+.pm-section-heading h2{
+
+    max-width:700px;
+
+    margin:0 0 20px;
+
+    color:#07182E;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+    font-weight:700;
+
+    line-height:1;
+
+    letter-spacing:-.055em;
+
+}
+
+
+.pm-section-heading > p{
+
+    max-width:700px;
+
+    margin:0;
+
+    color:#6E7888;
+
+    font-size:16px;
+
+    line-height:1.8;
 
 }
 
@@ -331,91 +496,65 @@
 
 }
 
-.pm-section-heading{
-
-    max-width:780px;
-
-    margin-bottom:65px;
-
-}
-
-.pm-section-heading h2{
-
-    margin:0 0 18px;
-
-    color:#07182E;
-
-    font-size:clamp(2.5rem,4vw,4rem);
-
-    line-height:1;
-
-    letter-spacing:-.055em;
-
-}
-
-.pm-section-heading p{
-
-    max-width:700px;
-
-    margin:0;
-
-    color:#6E7888;
-
-    font-size:16px;
-
-    line-height:1.75;
-
-}
 
 .pm-capabilities-grid{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:16px;
 
 }
 
+
 .pm-capability{
 
-    min-height:275px;
+    min-height:285px;
+
+    display:flex;
+
+    flex-direction:column;
 
     padding:35px;
 
-    border:1px solid #E4E8EF;
+    border:1px solid #E3E8EF;
 
-    border-radius:16px;
+    border-radius:18px;
 
     background:#FFFFFF;
 
     box-shadow:
-
         0 8px 25px rgba(7,24,46,.035);
 
     transition:
 
         transform .28s ease,
 
-        box-shadow .28s ease;
+        box-shadow .28s ease,
+
+        border-color .28s ease;
 
 }
+
 
 .pm-capability:hover{
 
     transform:translateY(-5px);
 
-    box-shadow:
+    border-color:#D3DCE9;
 
+    box-shadow:
         0 20px 40px rgba(7,24,46,.08);
 
 }
+
 
 .pm-number{
 
     display:block;
 
-    margin-bottom:45px;
+    margin-bottom:48px;
 
     color:#2875ED;
 
@@ -427,19 +566,25 @@
 
 }
 
+
 .pm-capability h3{
 
     margin:0 0 12px;
 
     color:#07182E;
 
-    font-size:20px;
+    font-size:22px;
 
-    line-height:1.25;
+    font-weight:700;
+
+    line-height:1.2;
 
 }
 
+
 .pm-capability p{
+
+    max-width:520px;
 
     margin:0;
 
@@ -453,10 +598,10 @@
 
 
 /* =========================================================
-   PROJECT LIFECYCLE
+   RELATED SERVICES
 ========================================================= */
 
-.pm-lifecycle{
+.pm-related-services{
 
     padding:120px 0;
 
@@ -464,17 +609,77 @@
 
 }
 
+
+.pm-related-content{
+
+    max-width:850px;
+
+}
+
+
+.pm-related-content p{
+
+    margin:0 0 28px;
+
+    color:#687386;
+
+    font-size:17px;
+
+    line-height:1.85;
+
+}
+
+
+.pm-related-content p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+.pm-related-content a{
+
+    color:#2875ED;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+.pm-related-content a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* =========================================================
+   LIFECYCLE
+========================================================= */
+
+.pm-lifecycle{
+
+    padding:120px 0;
+
+    background:#F7F9FC;
+
+}
+
+
 .pm-lifecycle-list{
 
     border-top:1px solid #E3E8EF;
 
 }
 
+
 .pm-lifecycle-list article{
 
     display:grid;
 
-    grid-template-columns:90px 1fr;
+    grid-template-columns:90px minmax(0,1fr);
 
     gap:35px;
 
@@ -483,6 +688,7 @@
     border-bottom:1px solid #E3E8EF;
 
 }
+
 
 .pm-lifecycle-number{
 
@@ -496,6 +702,7 @@
 
 }
 
+
 .pm-lifecycle-list h3{
 
     margin:0 0 9px;
@@ -506,9 +713,10 @@
 
 }
 
+
 .pm-lifecycle-list p{
 
-    max-width:700px;
+    max-width:760px;
 
     margin:0;
 
@@ -533,37 +741,19 @@
 
 }
 
-/* =========================================================
-   WHAT CLIENTS GAIN
-========================================================= */
-
-.pm-results{
-
-    padding:120px 0;
-
-    background:#07182E;
-
-}
 
 .pm-results-grid{
 
     display:grid;
 
-    grid-template-columns:minmax(0, .9fr) minmax(0, 1.1fr);
+    grid-template-columns:.9fr 1.1fr;
 
     gap:100px;
 
     align-items:start;
 
-    width:100%;
-
 }
 
-.pm-results-intro{
-
-    min-width:0;
-
-}
 
 .pm-results-intro .pm-blue-kicker{
 
@@ -571,11 +761,12 @@
 
 }
 
+
 .pm-results-intro h2{
 
     max-width:560px;
 
-    margin:0 0 28px;
+    margin:0 0 25px;
 
     color:#FFFFFF;
 
@@ -587,47 +778,47 @@
 
 }
 
-.pm-results-intro p{
 
-    max-width:560px;
+.pm-results-intro > p{
+
+    max-width:570px;
 
     margin:0;
 
-    color:rgba(255,255,255,.65);
+    color:rgba(255,255,255,.62);
 
-    font-size:17px;
+    font-size:16px;
 
     line-height:1.8;
 
 }
 
+
 .pm-results-list{
-
-    width:100%;
-
-    min-width:0;
 
     border-top:1px solid rgba(255,255,255,.16);
 
 }
 
+
 .pm-result{
 
     display:grid;
 
-    grid-template-columns:65px minmax(0,1fr);
+    grid-template-columns:55px minmax(0,1fr);
 
-    gap:22px;
+    column-gap:18px;
 
-    width:100%;
-
-    padding:30px 0;
+    padding:29px 0;
 
     border-bottom:1px solid rgba(255,255,255,.16);
 
 }
 
+
 .pm-result > span{
+
+    grid-row:span 2;
 
     color:#66AFFF;
 
@@ -639,171 +830,6 @@
 
 }
 
-.pm-result > div{
-
-    min-width:0;
-
-}
-
-.pm-result h3{
-
-    margin:0 0 12px;
-
-    color:#FFFFFF;
-
-    font-size:21px;
-
-    line-height:1.25;
-
-}
-
-.pm-result p{
-
-    width:auto;
-
-    max-width:100%;
-
-    margin:0;
-
-    color:rgba(255,255,255,.62);
-
-    font-size:16px;
-
-    line-height:1.75;
-
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:900px){
-
-    .pm-results-grid{
-
-        grid-template-columns:1fr;
-
-        gap:60px;
-
-    }
-
-    .pm-results-intro h2{
-
-        max-width:700px;
-
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:600px){
-
-    .pm-results{
-
-        padding:85px 0;
-
-    }
-
-    .pm-results-grid{
-
-        grid-template-columns:1fr;
-
-        gap:50px;
-
-    }
-
-    .pm-result{
-
-        grid-template-columns:45px minmax(0,1fr);
-
-        gap:15px;
-
-    }
-
-    .pm-result h3{
-
-        font-size:18px;
-
-    }
-
-    .pm-result p{
-
-        font-size:14px;
-
-    }
-
-}
-
-.pm-results-intro .pm-blue-kicker{
-
-    color:#66AFFF;
-
-}
-
-.pm-results-intro h2{
-
-    max-width:560px;
-
-    margin:0 0 25px;
-
-    color:#FFFFFF;
-
-    font-size:clamp(2.5rem,4vw,4rem);
-
-    line-height:1;
-
-    letter-spacing:-.055em;
-
-}
-
-.pm-results-intro p{
-
-    max-width:520px;
-
-    margin:0;
-
-    color:rgba(255,255,255,.65);
-
-    font-size:16px;
-
-    line-height:1.8;
-
-}
-
-.pm-results-list{
-
-    border-top:1px solid rgba(255,255,255,.16);
-
-}
-
-.pm-result{
-
-    display:grid;
-
-    grid-template-columns:50px 1fr;
-
-    gap:20px;
-
-    padding:30px 0;
-
-    border-bottom:1px solid rgba(255,255,255,.16);
-
-}
-
-.pm-result > span{
-
-    color:#66AFFF;
-
-    font-size:13px;
-
-    font-weight:700;
-
-}
 
 .pm-result h3{
 
@@ -811,9 +837,10 @@
 
     color:#FFFFFF;
 
-    font-size:19px;
+    font-size:20px;
 
 }
+
 
 .pm-result p{
 
@@ -823,7 +850,7 @@
 
     font-size:14px;
 
-    line-height:1.7;
+    line-height:1.75;
 
 }
 
@@ -840,6 +867,7 @@
 
 }
 
+
 .pm-why-grid{
 
     display:grid;
@@ -850,9 +878,10 @@
 
 }
 
+
 .pm-why h2{
 
-    max-width:560px;
+    max-width:580px;
 
     margin:0;
 
@@ -866,11 +895,13 @@
 
 }
 
+
 .pm-why-grid > div:last-child{
 
     padding-top:5px;
 
 }
+
 
 .pm-why-grid > div:last-child p{
 
@@ -884,9 +915,10 @@
 
 }
 
-.pm-why-grid .pm-button{
 
-    margin-top:10px;
+.pm-why-grid > div:last-child .pm-button{
+
+    margin-top:12px;
 
 }
 
@@ -903,21 +935,24 @@
 
 }
 
+
 .pm-faq-list{
 
-    max-width:900px;
+    max-width:950px;
 
-    border-top:1px solid #DDE3EB;
-
-}
-
-.pm-faq details{
-
-    border-bottom:1px solid #DDE3EB;
+    border-top:1px solid #DDE4EC;
 
 }
 
-.pm-faq summary{
+
+.pm-faq-list details{
+
+    border-bottom:1px solid #DDE4EC;
+
+}
+
+
+.pm-faq-list summary{
 
     display:flex;
 
@@ -929,25 +964,29 @@
 
     padding:27px 0;
 
-    cursor:pointer;
-
-    list-style:none;
-
     color:#07182E;
 
     font-size:17px;
 
     font-weight:600;
 
+    line-height:1.5;
+
+    cursor:pointer;
+
+    list-style:none;
+
 }
 
-.pm-faq summary::-webkit-details-marker{
+
+.pm-faq-list summary::-webkit-details-marker{
 
     display:none;
 
 }
 
-.pm-faq summary span{
+
+.pm-faq-list summary span{
 
     flex-shrink:0;
 
@@ -957,25 +996,29 @@
 
     font-weight:400;
 
+    line-height:1;
+
     transition:transform .25s ease;
 
 }
 
-.pm-faq details[open] summary span{
+
+.pm-faq-list details[open] summary span{
 
     transform:rotate(45deg);
 
 }
 
-.pm-faq details p{
 
-    max-width:760px;
+.pm-faq-list details p{
 
-    margin:-5px 0 25px;
+    max-width:800px;
+
+    padding:0 55px 28px 0;
 
     color:#6E7888;
 
-    font-size:14px;
+    font-size:15px;
 
     line-height:1.8;
 
@@ -994,6 +1037,7 @@
 
 }
 
+
 .pm-cta-box{
 
     min-height:390px;
@@ -1004,7 +1048,7 @@
 
     justify-content:center;
 
-    padding:70px 78px;
+    padding:75px 78px;
 
     border-radius:24px;
 
@@ -1025,17 +1069,19 @@
 
 }
 
+
 .pm-cta-box .pm-blue-kicker{
 
-    margin-bottom:20px;
+    margin-bottom:22px;
 
 }
+
 
 .pm-cta-box h2{
 
     max-width:760px;
 
-    margin:0 0 20px;
+    margin:0 0 22px;
 
     color:#FFFFFF;
 
@@ -1047,19 +1093,21 @@
 
 }
 
-.pm-cta-box p{
 
-    max-width:650px;
+.pm-cta-box > p{
 
-    margin:0 0 32px;
+    max-width:680px;
+
+    margin:0 0 36px;
 
     color:rgba(255,255,255,.7);
 
     font-size:16px;
 
-    line-height:1.75;
+    line-height:1.8;
 
 }
+
 
 .pm-cta-actions{
 
@@ -1067,9 +1115,12 @@
 
     align-items:center;
 
+    flex-wrap:wrap;
+
     gap:25px;
 
 }
+
 
 .pm-email{
 
@@ -1079,7 +1130,10 @@
 
     font-weight:500;
 
+    text-decoration:none;
+
 }
+
 
 .pm-email:hover{
 
@@ -1092,9 +1146,114 @@
    FOOTER
 ========================================================= */
 
-.project-management-page .services-footer{
+.pm-footer{
+
+    padding:70px 0 25px;
 
     background:#000000;
+
+    color:#FFFFFF;
+
+}
+
+
+.pm-footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:60px;
+
+    padding-bottom:55px;
+
+}
+
+
+.pm-footer-brand img{
+
+    display:block;
+
+    width:180px;
+
+    height:auto;
+
+    margin-bottom:22px;
+
+}
+
+
+.pm-footer-brand p{
+
+    max-width:420px;
+
+    margin:0;
+
+    color:rgba(255,255,255,.55);
+
+    font-size:13px;
+
+    line-height:1.7;
+
+}
+
+
+.pm-footer-column h4{
+
+    margin:0 0 20px;
+
+    color:#FFFFFF;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+.pm-footer-column a{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:13px;
+
+    line-height:1.5;
+
+    text-decoration:none;
+
+    transition:color .2s ease;
+
+}
+
+
+.pm-footer-column a:hover{
+
+    color:#FFFFFF;
+
+}
+
+
+.pm-footer-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    color:rgba(255,255,255,.4);
+
+    font-size:12px;
 
 }
 
@@ -1103,7 +1262,7 @@
    TABLET
 ========================================================= */
 
-@media(max-width:1050px){
+@media (max-width:1050px){
 
     .pm-overview-grid,
     .pm-results-grid,
@@ -1113,9 +1272,23 @@
 
     }
 
-    .pm-capabilities-grid{
+    .pm-footer-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1.6fr 1fr 1fr;
+
+        gap:45px;
+
+    }
+
+    .pm-footer-column:last-child{
+
+        grid-column:2 / 4;
+
+    }
+
+    .pm-hero-lines{
+
+        right:-100px;
 
     }
 
@@ -1126,7 +1299,18 @@
    MOBILE
 ========================================================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
+
+    /* HEADER */
+
+    .pm-container{
+
+        width:92%;
+
+    }
+
+
+    /* HERO */
 
     .pm-hero{
 
@@ -1136,13 +1320,13 @@
 
     .pm-hero-content{
 
-        padding:70px 0;
+        padding:80px 0;
 
     }
 
     .pm-back{
 
-        margin-bottom:35px;
+        margin-bottom:27px;
 
     }
 
@@ -1154,6 +1338,8 @@
 
     .pm-hero p{
 
+        max-width:600px;
+
         font-size:14px;
 
         line-height:1.7;
@@ -1164,19 +1350,48 @@
 
         flex-direction:column;
 
-        align-items:stretch;
+        align-items:flex-start;
+
+        gap:14px;
 
     }
 
-    .pm-button{
+    .pm-hero-actions .pm-button{
 
-        width:100%;
+        min-height:48px;
 
     }
 
+    .pm-hero-lines{
+
+        right:-280px;
+
+        top:150px;
+
+        width:450px;
+
+        height:450px;
+
+    }
+
+    .pm-hero-glow{
+
+        width:550px;
+
+        height:550px;
+
+        right:-300px;
+
+        top:-120px;
+
+    }
+
+
+    /* SECTIONS */
 
     .pm-overview,
     .pm-capabilities,
+    .pm-related-services,
     .pm-lifecycle,
     .pm-results,
     .pm-why,
@@ -1187,8 +1402,77 @@
     }
 
 
-    .pm-overview-grid,
-    .pm-results-grid,
+    /* OVERVIEW */
+
+    .pm-overview-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+
+    }
+
+
+    /* HEADINGS */
+
+    .pm-section-heading{
+
+        margin-bottom:45px;
+
+    }
+
+
+    /* CAPABILITIES */
+
+    .pm-capabilities-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .pm-capability{
+
+        min-height:250px;
+
+        padding:30px;
+
+    }
+
+
+    /* LIFECYCLE */
+
+    .pm-lifecycle-list article{
+
+        grid-template-columns:55px minmax(0,1fr);
+
+        gap:18px;
+
+        padding:32px 0;
+
+    }
+
+
+    /* RESULTS */
+
+    .pm-results-grid{
+
+        grid-template-columns:1fr;
+
+        gap:55px;
+
+    }
+
+    .pm-result{
+
+        grid-template-columns:45px minmax(0,1fr);
+
+        gap:15px;
+
+    }
+
+
+    /* WHY */
+
     .pm-why-grid{
 
         grid-template-columns:1fr;
@@ -1198,37 +1482,22 @@
     }
 
 
-    .pm-capabilities-grid{
+    /* FAQ */
 
-        grid-template-columns:1fr;
+    .pm-faq-list summary{
+
+        font-size:16px;
+
+    }
+
+    .pm-faq-list details p{
+
+        padding-right:0;
 
     }
 
 
-    .pm-capability{
-
-        min-height:250px;
-
-    }
-
-
-    .pm-lifecycle-list article{
-
-        grid-template-columns:55px 1fr;
-
-        gap:18px;
-
-        padding:32px 0;
-
-    }
-
-
-    .pm-results{
-
-        background:#07182E;
-
-    }
-
+    /* CTA */
 
     .pm-cta{
 
@@ -1240,7 +1509,9 @@
 
         min-height:470px;
 
-        padding:45px 28px;
+        padding:50px 28px;
+
+        border-radius:20px;
 
     }
 
@@ -1256,6 +1527,14 @@
 
         align-items:stretch;
 
+        gap:18px;
+
+    }
+
+    .pm-cta-actions .pm-button{
+
+        width:100%;
+
     }
 
     .pm-email{
@@ -1265,9 +1544,37 @@
     }
 
 
-    .pm-faq summary{
+    /* FOOTER */
 
-        font-size:15px;
+    .pm-footer{
+
+        padding:60px 0 25px;
+
+    }
+
+    .pm-footer-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+        padding-bottom:45px;
+
+    }
+
+    .pm-footer-column:last-child{
+
+        grid-column:auto;
+
+    }
+
+    .pm-footer-bottom{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
 
     }
 
@@ -1278,11 +1585,35 @@
    SMALL MOBILE
 ========================================================= */
 
-@media(max-width:480px){
+@media (max-width:480px){
+
+    .pm-container{
+
+        width:90%;
+
+    }
+
+    .pm-hero{
+
+        min-height:620px;
+
+    }
+
+    .pm-hero-content{
+
+        padding:65px 0;
+
+    }
 
     .pm-hero h1{
 
         font-size:2.8rem;
+
+    }
+
+    .pm-hero p{
+
+        font-size:14px;
 
     }
 
@@ -1295,117 +1626,63 @@
 
     }
 
-}
-/* =========================================================
-   FINAL FIX — WHAT CLIENTS GAIN
-========================================================= */
+    .pm-section-heading > p{
 
-.pm-results-list {
-    width: 100% !important;
-    min-width: 0 !important;
-}
+        font-size:15px;
 
-.pm-result {
-    display: grid !important;
+    }
 
-    grid-template-columns: 65px minmax(0, 1fr) !important;
+    .pm-overview-text p{
 
-    grid-template-rows: auto auto !important;
+        font-size:16px;
 
-    column-gap: 22px !important;
+    }
 
-    row-gap: 10px !important;
+    .pm-capability{
 
-    width: 100% !important;
+        min-height:235px;
 
-    padding: 30px 0 !important;
+        padding:28px;
 
-    border-bottom: 1px solid rgba(255,255,255,.16) !important;
+    }
 
-    box-sizing: border-box !important;
-}
+    .pm-result{
 
-/* Número */
+        grid-template-columns:38px minmax(0,1fr);
 
-.pm-result > span {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
+        gap:12px;
 
-    align-self: start !important;
+    }
 
-    color: #66AFFF !important;
+    .pm-cta-box{
 
-    font-size: 13px !important;
+        min-height:480px;
 
-    font-weight: 700 !important;
+        padding:42px 24px;
 
-    line-height: 1.4 !important;
-}
+    }
 
-/* Título */
+    .pm-cta-box h2{
 
-.pm-result > h3 {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
+        font-size:2.5rem;
 
-    min-width: 0 !important;
+    }
 
-    margin: 0 !important;
-
-    color: #FFFFFF !important;
-
-    font-size: 21px !important;
-
-    line-height: 1.25 !important;
-}
-
-/* Texto */
-
-.pm-result > p {
-    grid-column: 2 !important;
-    grid-row: 2 !important;
-
-    width: auto !important;
-
-    max-width: 100% !important;
-
-    min-width: 0 !important;
-
-    margin: 8px 0 0 !important;
-
-    color: rgba(255,255,255,.62) !important;
-
-    font-size: 16px !important;
-
-    line-height: 1.75 !important;
 }
 
 
 /* =========================================================
-   MOBILE
+   REDUCED MOTION
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (prefers-reduced-motion:reduce){
 
-    .pm-result {
+    .pm-button,
+    .pm-capability,
+    .pm-back,
+    .pm-faq-list summary span{
 
-        grid-template-columns: 45px minmax(0, 1fr) !important;
-
-        column-gap: 15px !important;
-
-    }
-
-    .pm-result > h3 {
-
-        font-size: 18px !important;
-
-    }
-
-    .pm-result > p {
-
-        font-size: 14px !important;
-
-        line-height: 1.7 !important;
+        transition:none;
 
     }
 
