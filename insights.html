@@ -10,18 +10,17 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-
-    <!-- =========================================================
+    <!-- =====================================================
          PRIMARY SEO
-    ========================================================== -->
+    ====================================================== -->
 
     <title>
-        Insights | BSGA Consulting
+        Insights | Strategy, Transformation & AI | BSGA Consulting
     </title>
 
     <meta
         name="description"
-        content="Insights from BSGA Consulting on strategy, project management, business transformation, operational excellence and Artificial Intelligence."
+        content="Insights from BSGA Consulting on strategy, business transformation, operational excellence, project delivery and Artificial Intelligence."
     >
 
     <meta
@@ -45,9 +44,9 @@
     >
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          CANONICAL
-    ========================================================== -->
+    ====================================================== -->
 
     <link
         rel="canonical"
@@ -55,21 +54,21 @@
     >
 
 
-    <!-- =========================================================
-         FAVICONS
-    ========================================================== -->
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
 
     <link
         rel="icon"
         type="image/png"
         sizes="512x512"
-        href="images/favicon.png"
+        href="images/logos/favicon.png"
     >
 
     <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="images/apple-touch-icon.png"
+        href="images/logos/apple-touch-icon.png"
     >
 
     <link
@@ -78,9 +77,9 @@
     >
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          GOOGLE FONTS
-    ========================================================== -->
+    ====================================================== -->
 
     <link
         rel="preconnect"
@@ -99,19 +98,14 @@
     >
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          GLOBAL CSS
-    ========================================================== -->
+    ====================================================== -->
 
     <link
         rel="stylesheet"
         href="css/styles.css"
     >
-
-
-    <!-- =========================================================
-         INSIGHTS CSS
-    ========================================================== -->
 
     <link
         rel="stylesheet"
@@ -119,9 +113,9 @@
     >
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          OPEN GRAPH
-    ========================================================== -->
+    ====================================================== -->
 
     <meta
         property="og:type"
@@ -140,17 +134,12 @@
 
     <meta
         property="og:description"
-        content="Perspectives and practical insights on strategy, project delivery, transformation, operational excellence and Artificial Intelligence."
+        content="Perspectives on strategy, transformation, operational performance, project delivery and Artificial Intelligence."
     >
 
     <meta
         property="og:image"
         content="https://bsgaconsulting.es/images/og-image.jpg"
-    >
-
-    <meta
-        property="og:image:alt"
-        content="BSGA Consulting — Insights"
     >
 
     <meta
@@ -164,6 +153,11 @@
     >
 
     <meta
+        property="og:image:alt"
+        content="BSGA Consulting — Insights"
+    >
+
+    <meta
         property="og:site_name"
         content="BSGA Consulting"
     >
@@ -174,9 +168,9 @@
     >
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          TWITTER / X
-    ========================================================== -->
+    ====================================================== -->
 
     <meta
         name="twitter:card"
@@ -190,7 +184,7 @@
 
     <meta
         name="twitter:description"
-        content="Practical perspectives on strategy, transformation, operational performance, project management and AI."
+        content="Perspectives on strategy, transformation, operational performance, project delivery and Artificial Intelligence."
     >
 
     <meta
@@ -199,9 +193,9 @@
     >
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          STRUCTURED DATA
-    ========================================================== -->
+    ====================================================== -->
 
     <script type="application/ld+json">
     {
@@ -218,15 +212,15 @@
                     "url": "https://bsgaconsulting.es/images/logos/logo-white.png"
                 },
                 "email": "info@bsgaconsulting.es",
-                "description": "Strategic consulting for project management, business transformation, operational excellence and Artificial Intelligence."
+                "description": "Strategic consulting for operational performance, project delivery, business transformation and Artificial Intelligence."
             },
 
             {
-                "@type": "CollectionPage",
+                "@type": "WebPage",
                 "@id": "https://bsgaconsulting.es/insights.html#webpage",
                 "url": "https://bsgaconsulting.es/insights.html",
                 "name": "Insights | BSGA Consulting",
-                "description": "Perspectives and practical insights on strategy, project delivery, transformation, operational excellence and Artificial Intelligence.",
+                "description": "Perspectives on strategy, transformation, operational performance, project delivery and Artificial Intelligence.",
                 "isPartOf": {
                     "@id": "https://bsgaconsulting.es/#website"
                 },
@@ -258,17 +252,13 @@
 
 
 <!-- =========================================================
-     GLOBAL HEADER
+     HEADER
 ========================================================= -->
 
 <header class="site-header">
 
     <div class="header-container">
 
-
-        <!-- =====================================================
-             LOGO
-        ====================================================== -->
 
         <a
             href="index.html"
@@ -283,10 +273,6 @@
 
         </a>
 
-
-        <!-- =====================================================
-             DESKTOP NAVIGATION
-        ====================================================== -->
 
         <nav
             class="main-navigation"
@@ -320,10 +306,6 @@
         </nav>
 
 
-        <!-- =====================================================
-             HEADER CTA
-        ====================================================== -->
-
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="header-cta"
@@ -346,10 +328,6 @@
         </a>
 
 
-        <!-- =====================================================
-             MOBILE MENU BUTTON
-        ====================================================== -->
-
         <button
             id="menuToggle"
             class="menu-toggle"
@@ -368,9 +346,7 @@
     </div>
 
 
-    <!-- =========================================================
-         MOBILE NAVIGATION
-    ========================================================== -->
+    <!-- MOBILE NAV -->
 
     <nav
         id="mobileNav"
@@ -408,7 +384,8 @@
             target="_blank"
             rel="noopener noreferrer"
         >
-            Schedule a Consultation →
+            Schedule a Consultation
+            <span aria-hidden="true">→</span>
         </a>
 
     </nav>
@@ -426,119 +403,174 @@
 <section class="insights-hero">
 
     <div
-        class="insights-hero-glow"
+        class="insights-hero-background"
         aria-hidden="true"
     ></div>
+
 
     <div
-        class="insights-hero-lines"
+        class="insights-hero-overlay"
         aria-hidden="true"
     ></div>
 
 
-    <div class="insights-container">
+    <div class="insights-hero-container">
 
         <div class="insights-hero-content">
 
-            <span class="insights-kicker">
-                INSIGHTS
+
+            <span class="insights-hero-kicker">
+                BSGA CONSULTING
             </span>
 
+
             <h1>
-                Perspectives on strategy,
-                transformation and execution.
+                Ideas that shape
+                better decisions.
             </h1>
 
+
             <p>
-                Practical perspectives to help leaders navigate
-                complexity, improve performance and turn strategic
-                priorities into action.
+                Perspectives on strategy, transformation,
+                operational performance and Artificial Intelligence.
+            </p>
+
+
+            <div class="insights-hero-actions">
+
+                <a
+                    href="#insights"
+                    class="insights-hero-button insights-hero-button-primary"
+                >
+                    Explore Insights
+                    <span aria-hidden="true">→</span>
+                </a>
+
+
+                <a
+                    href="contact.html"
+                    class="insights-hero-button insights-hero-button-secondary"
+                >
+                    Discuss Your Challenge
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section class="insights-intro">
+
+    <div class="insights-container">
+
+        <div class="insights-intro-grid">
+
+
+            <div class="insights-intro-heading">
+
+                <span class="insights-kicker">
+                    INSIGHTS &amp; PERSPECTIVES
+                </span>
+
+                <h2>
+                    Thinking beyond
+                    the immediate challenge.
+                </h2>
+
+            </div>
+
+
+            <div class="insights-intro-copy">
+
+                <p>
+                    Business decisions increasingly require
+                    organisations to understand change before
+                    they act on it.
+                </p>
+
+                <p>
+                    Through our insights, we explore the practical
+                    challenges facing organisations across strategy,
+                    transformation, operational performance and
+                    Artificial Intelligence.
+                </p>
+
+                <p>
+                    Our focus is simple: useful thinking that can
+                    help leaders make better decisions and turn
+                    priorities into action.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     INSIGHTS
+========================================================= -->
+
+<section
+    id="insights"
+    class="insights-list"
+>
+
+    <div class="insights-container">
+
+
+        <div class="insights-section-heading">
+
+            <span class="insights-kicker">
+                LATEST INSIGHTS
+            </span>
+
+            <h2>
+                Practical perspectives
+                for organisations in motion.
+            </h2>
+
+            <p>
+                Explore ideas and perspectives across the areas
+                where organisations are navigating change.
             </p>
 
         </div>
 
-    </div>
 
-</section>
+        <!-- FEATURED INSIGHT -->
 
+        <article class="insight-featured">
 
-<!-- =========================================================
-     INTRODUCTION
-========================================================= -->
-
-<section class="insights-introduction">
-
-    <div class="insights-container">
-
-        <div class="insights-introduction-grid">
-
-            <div>
-
-                <span class="insights-blue-kicker">
-                    FROM BSGA CONSULTING
-                </span>
-
-                <h2>
-                    Ideas that help
-                    organisations move forward.
-                </h2>
-
-            </div>
-
-
-            <div>
-
-                <p>
-                    Business transformation rarely follows a
-                    straightforward path. Leaders must balance
-                    strategy, execution, people, technology and
-                    changing market conditions.
-                </p>
-
-                <p>
-                    Our insights explore practical questions around
-                    project delivery, operational performance,
-                    transformation and Artificial Intelligence.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     FEATURED INSIGHT
-========================================================= -->
-
-<section class="insights-featured">
-
-    <div class="insights-container">
-
-        <article class="featured-insight">
-
-            <div class="featured-insight-content">
+            <div class="insight-featured-content">
 
                 <span class="insight-category">
-                    AI &amp; TRANSFORMATION
+                    ARTIFICIAL INTELLIGENCE
                 </span>
 
-                <span class="insight-date">
-                    FEATURED INSIGHT
-                </span>
-
-                <h2>
+                <h3>
                     From AI experimentation
                     to business value.
-                </h2>
+                </h3>
 
                 <p>
-                    How organisations can move beyond isolated AI
-                    experiments and develop a structured approach
-                    to adoption, governance and measurable impact.
+                    Why organisations need to move beyond
+                    experimentation and focus on the use cases,
+                    capabilities and operating practices that
+                    create measurable value.
                 </p>
 
                 <a
@@ -551,331 +583,227 @@
 
             </div>
 
-
-            <div
-                class="featured-insight-visual"
-                aria-hidden="true"
-            >
-
-                <div
-                    class="insight-orbit insight-orbit-one"
-                ></div>
-
-                <div
-                    class="insight-orbit insight-orbit-two"
-                ></div>
-
-                <div
-                    class="insight-orbit insight-orbit-three"
-                ></div>
-
-                <div class="insight-visual-core">
-                    AI
-                </div>
-
-            </div>
-
         </article>
 
-    </div>
-
-</section>
 
 
-<!-- =========================================================
-     INSIGHTS LIBRARY
-========================================================= -->
-
-<section class="insights-library">
-
-    <div class="insights-container">
-
-        <div class="insights-section-heading">
-
-            <div>
-
-                <span class="insights-blue-kicker">
-                    LATEST INSIGHTS
-                </span>
-
-                <h2>
-                    Perspectives for
-                    better decisions.
-                </h2>
-
-            </div>
-
-            <p>
-                Explore practical ideas across project delivery,
-                transformation, operational excellence and AI adoption.
-            </p>
-
-        </div>
-
+        <!-- INSIGHT GRID -->
 
         <div class="insights-grid">
 
-
-            <!-- =================================================
-                 CARD 01
-            ================================================== -->
 
             <article class="insight-card">
 
                 <div class="insight-card-top">
 
-                    <span class="insight-category">
-                        PROJECT MANAGEMENT
+                    <span class="insight-number">
+                        01
                     </span>
 
-                    <span class="insight-card-number">
-                        01
+                    <span class="insight-category">
+                        STRATEGY
                     </span>
 
                 </div>
 
                 <h3>
                     Why strategy execution
-                    fails — and how to improve it.
+                    matters more than strategy alone.
                 </h3>
 
                 <p>
-                    Five common barriers that prevent strategic
-                    initiatives from moving successfully from
-                    planning to execution.
+                    Turning strategic priorities into practical
+                    initiatives, clear ownership and measurable
+                    outcomes.
                 </p>
 
-                <div class="insight-card-bottom">
-
-                    <span>
-                        Project Delivery
-                    </span>
-
-                    <a href="#">
-                        Read →
-                    </a>
-
-                </div>
+                <a
+                    href="#"
+                    class="insight-link"
+                >
+                    Read Insight
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </article>
 
-
-            <!-- =================================================
-                 CARD 02
-            ================================================== -->
 
             <article class="insight-card">
 
                 <div class="insight-card-top">
 
-                    <span class="insight-category">
-                        AI
-                    </span>
-
-                    <span class="insight-card-number">
+                    <span class="insight-number">
                         02
                     </span>
-
-                </div>
-
-                <h3>
-                    AI adoption should start
-                    with the business problem.
-                </h3>
-
-                <p>
-                    Why organisations should identify business
-                    opportunities before choosing AI technologies
-                    or tools.
-                </p>
-
-                <div class="insight-card-bottom">
-
-                    <span>
-                        Artificial Intelligence
-                    </span>
-
-                    <a href="#">
-                        Read →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 CARD 03
-            ================================================== -->
-
-            <article class="insight-card">
-
-                <div class="insight-card-top">
 
                     <span class="insight-category">
                         TRANSFORMATION
                     </span>
 
-                    <span class="insight-card-number">
+                </div>
+
+                <h3>
+                    Transformation is not
+                    a technology project.
+                </h3>
+
+                <p>
+                    Sustainable transformation requires changes
+                    across strategy, operating models, people,
+                    processes and technology.
+                </p>
+
+                <a
+                    href="#"
+                    class="insight-link"
+                >
+                    Read Insight
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </article>
+
+
+            <article class="insight-card">
+
+                <div class="insight-card-top">
+
+                    <span class="insight-number">
                         03
                     </span>
 
+                    <span class="insight-category">
+                        OPERATIONAL EXCELLENCE
+                    </span>
+
                 </div>
 
                 <h3>
-                    Transformation is more
-                    than implementing technology.
+                    Better performance starts
+                    with better ways of working.
                 </h3>
 
                 <p>
-                    Successful transformation requires changes
-                    across strategy, processes, people, governance
-                    and organisational capabilities.
+                    How organisations can improve efficiency,
+                    visibility and accountability through
+                    practical operational improvement.
                 </p>
 
-                <div class="insight-card-bottom">
-
-                    <span>
-                        Business Transformation
-                    </span>
-
-                    <a href="#">
-                        Read →
-                    </a>
-
-                </div>
+                <a
+                    href="#"
+                    class="insight-link"
+                >
+                    Read Insight
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </article>
 
-
-            <!-- =================================================
-                 CARD 04
-            ================================================== -->
 
             <article class="insight-card">
 
                 <div class="insight-card-top">
 
-                    <span class="insight-category">
-                        OPERATIONS
-                    </span>
-
-                    <span class="insight-card-number">
+                    <span class="insight-number">
                         04
                     </span>
 
+                    <span class="insight-category">
+                        PROJECT MANAGEMENT
+                    </span>
+
                 </div>
 
                 <h3>
-                    Operational excellence:
-                    where should you start?
+                    Delivery discipline creates
+                    strategic momentum.
                 </h3>
 
                 <p>
-                    A practical framework for identifying the
-                    operational constraints that have the greatest
-                    impact on business performance.
+                    Why effective governance, accountability and
+                    visibility can make the difference between
+                    plans and results.
                 </p>
 
-                <div class="insight-card-bottom">
-
-                    <span>
-                        Operational Excellence
-                    </span>
-
-                    <a href="#">
-                        Read →
-                    </a>
-
-                </div>
+                <a
+                    href="#"
+                    class="insight-link"
+                >
+                    Read Insight
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </article>
 
 
-            <!-- =================================================
-                 CARD 05
-            ================================================== -->
+            <article class="insight-card">
+
+                <div class="insight-card-top">
+
+                    <span class="insight-number">
+                        05
+                    </span>
+
+                    <span class="insight-category">
+                        ARTIFICIAL INTELLIGENCE
+                    </span>
+
+                </div>
+
+                <h3>
+                    Choosing AI use cases
+                    that actually matter.
+                </h3>
+
+                <p>
+                    A practical way to evaluate AI opportunities
+                    based on business value, feasibility and
+                    organisational readiness.
+                </p>
+
+                <a
+                    href="#"
+                    class="insight-link"
+                >
+                    Read Insight
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </article>
+
 
             <article class="insight-card">
 
                 <div class="insight-card-top">
+
+                    <span class="insight-number">
+                        06
+                    </span>
 
                     <span class="insight-category">
                         LEADERSHIP
                     </span>
 
-                    <span class="insight-card-number">
-                        05
-                    </span>
-
                 </div>
 
                 <h3>
-                    The difference between
-                    activity and progress.
+                    Turning complexity
+                    into clear priorities.
                 </h3>
 
                 <p>
-                    Organisations can be extremely busy without
-                    necessarily moving closer to their strategic
-                    objectives.
+                    How leadership teams can create clarity,
+                    focus resources and maintain momentum
+                    when organisations face competing priorities.
                 </p>
 
-                <div class="insight-card-bottom">
-
-                    <span>
-                        Strategy &amp; Execution
-                    </span>
-
-                    <a href="#">
-                        Read →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- =================================================
-                 CARD 06
-            ================================================== -->
-
-            <article class="insight-card">
-
-                <div class="insight-card-top">
-
-                    <span class="insight-category">
-                        AI &amp; PEOPLE
-                    </span>
-
-                    <span class="insight-card-number">
-                        06
-                    </span>
-
-                </div>
-
-                <h3>
-                    Preparing teams for
-                    an AI-enabled workplace.
-                </h3>
-
-                <p>
-                    Technology adoption succeeds when people
-                    understand how new capabilities change
-                    the way work is performed.
-                </p>
-
-                <div class="insight-card-bottom">
-
-                    <span>
-                        AI Adoption
-                    </span>
-
-                    <a href="#">
-                        Read →
-                    </a>
-
-                </div>
+                <a
+                    href="#"
+                    class="insight-link"
+                >
+                    Read Insight
+                    <span aria-hidden="true">→</span>
+                </a>
 
             </article>
 
@@ -885,6 +813,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =========================================================
@@ -897,44 +826,108 @@
 
         <div class="insights-topics-grid">
 
+
             <div>
 
-                <span class="insights-blue-kicker">
+                <span class="insights-kicker">
                     EXPLORE BY TOPIC
                 </span>
 
                 <h2>
-                    Focused perspectives
-                    for complex challenges.
+                    Areas of focus.
                 </h2>
 
             </div>
 
 
-            <div class="topic-list">
+            <div class="insights-topic-list">
+
+                <a href="#">
+                    Strategy
+                    <span>→</span>
+                </a>
 
                 <a href="#">
                     Project Management
-                    <span aria-hidden="true">→</span>
+                    <span>→</span>
                 </a>
 
                 <a href="#">
                     Business Transformation
-                    <span aria-hidden="true">→</span>
-                </a>
-
-                <a href="#">
-                    Artificial Intelligence
-                    <span aria-hidden="true">→</span>
+                    <span>→</span>
                 </a>
 
                 <a href="#">
                     Operational Excellence
-                    <span aria-hidden="true">→</span>
+                    <span>→</span>
                 </a>
 
                 <a href="#">
-                    Strategy &amp; Execution
+                    Artificial Intelligence
+                    <span>→</span>
+                </a>
+
+                <a href="#">
+                    Leadership
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY BSGA
+========================================================= -->
+
+<section class="insights-why">
+
+    <div class="insights-container">
+
+        <div class="insights-why-grid">
+
+
+            <div>
+
+                <span class="insights-kicker">
+                    WHY BSGA
+                </span>
+
+                <h2>
+                    Practical thinking.
+                    Real business context.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p>
+                    Our perspective combines strategic thinking
+                    with practical experience across transformation,
+                    project delivery, operational improvement and
+                    Artificial Intelligence.
+                </p>
+
+                <p>
+                    We focus on what organisations can actually
+                    do with an idea — how it can be translated
+                    into decisions, initiatives and measurable
+                    business outcomes.
+                </p>
+
+                <a
+                    href="about.html"
+                    class="insights-primary-button"
+                >
+                    About BSGA
                     <span aria-hidden="true">→</span>
                 </a>
 
@@ -947,6 +940,7 @@
 </section>
 
 
+
 <!-- =========================================================
      CTA
 ========================================================= -->
@@ -957,27 +951,32 @@
 
         <div class="insights-cta-box">
 
-            <span class="insights-blue-kicker">
+            <span class="insights-kicker">
                 LET'S TALK
             </span>
 
             <h2>
-                Have a challenge
+                Have a business challenge
                 worth exploring?
             </h2>
 
             <p>
-                If you are facing a strategic, operational or
-                transformation challenge, let's start a conversation.
+                Insights are useful when they lead to action.
+                Let's discuss your priorities and explore how
+                BSGA Consulting can help.
             </p>
+
 
             <div class="insights-cta-actions">
 
                 <a
-                    href="contact.html"
-                    class="insights-button"
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    class="insights-primary-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
                     Schedule a Consultation
+                    <span aria-hidden="true">→</span>
                 </a>
 
                 <a
@@ -999,6 +998,7 @@
 </main>
 
 
+
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -1009,8 +1009,6 @@
 
         <div class="insights-footer-grid">
 
-
-            <!-- BRAND -->
 
             <div class="insights-footer-brand">
 
@@ -1028,8 +1026,6 @@
 
             </div>
 
-
-            <!-- NAVIGATION -->
 
             <div>
 
@@ -1060,7 +1056,30 @@
             </div>
 
 
-            <!-- CONTACT -->
+            <div>
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="project-management.html">
+                    Project Management
+                </a>
+
+                <a href="business-transformation.html">
+                    Business Transformation
+                </a>
+
+                <a href="operational-excellence.html">
+                    Operational Excellence
+                </a>
+
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence
+                </a>
+
+            </div>
+
 
             <div>
 
@@ -1099,10 +1118,11 @@
 
 
 <!-- =========================================================
-     GLOBAL JAVASCRIPT
+     JAVASCRIPT
 ========================================================= -->
 
 <script src="js/main.js"></script>
+
 
 </body>
 
