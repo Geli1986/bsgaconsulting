@@ -20,7 +20,7 @@
 
     <meta
         name="description"
-        content="BSGA Consulting provides project management consulting, PMO, governance, delivery assurance and programme management to help organisations deliver complex initiatives with clarity and control."
+        content="BSGA Consulting provides project management consulting, PMO, programme management, governance and delivery assurance for complex projects and strategic initiatives."
     >
 
     <meta
@@ -30,12 +30,12 @@
 
     <meta
         name="robots"
-        content="index, follow, max-image-preview:large"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     >
 
     <meta
         name="googlebot"
-        content="index, follow, max-image-preview:large"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     >
 
     <meta
@@ -139,7 +139,7 @@
 
     <meta
         property="og:description"
-        content="Project management, PMO, governance and delivery assurance for organisations managing complex strategic initiatives."
+        content="Project management consulting, PMO, programme management, governance and delivery assurance for complex strategic initiatives."
     >
 
     <meta
@@ -189,7 +189,7 @@
 
     <meta
         name="twitter:description"
-        content="Project management, PMO, governance and delivery assurance for complex strategic initiatives."
+        content="Project management consulting, PMO, programme management, governance and delivery assurance for complex strategic initiatives."
     >
 
     <meta
@@ -224,7 +224,7 @@
                     "contentUrl": "https://bsgaconsulting.es/images/logos/logo-white.png"
                 },
                 "email": "info@bsgaconsulting.es",
-                "description": "Strategic consulting for project delivery, business transformation, operational excellence and Artificial Intelligence."
+                "description": "Strategic consulting for project delivery, business transformation, operational excellence and artificial intelligence."
             },
 
             {
@@ -243,7 +243,7 @@
                 "@id": "https://bsgaconsulting.es/project-management.html#webpage",
                 "url": "https://bsgaconsulting.es/project-management.html",
                 "name": "Project Management Consulting | BSGA Consulting",
-                "description": "Project management consulting, PMO, governance, programme management and delivery assurance.",
+                "description": "Project management consulting, PMO, programme management, governance and delivery assurance for complex projects and strategic initiatives.",
                 "isPartOf": {
                     "@id": "https://bsgaconsulting.es/#website"
                 },
@@ -252,7 +252,13 @@
                 },
                 "primaryImageOfPage": {
                     "@type": "ImageObject",
-                    "url": "https://bsgaconsulting.es/images/heroes/BSGA-Project-Management-Hero.png"
+                    "@id": "https://bsgaconsulting.es/project-management.html#primaryimage",
+                    "url": "https://bsgaconsulting.es/images/heroes/BSGA-Project-Management-Hero.png",
+                    "contentUrl": "https://bsgaconsulting.es/images/heroes/BSGA-Project-Management-Hero.png",
+                    "caption": "Project management consulting and project delivery"
+                },
+                "breadcrumb": {
+                    "@id": "https://bsgaconsulting.es/project-management.html#breadcrumb"
                 },
                 "inLanguage": "en"
             },
@@ -261,8 +267,14 @@
                 "@type": "Service",
                 "@id": "https://bsgaconsulting.es/project-management.html#service",
                 "name": "Project Management Consulting",
-                "serviceType": "Project Management Consulting",
-                "description": "Project management consulting covering project and programme management, PMO, governance, risk management, stakeholder management and delivery assurance.",
+                "serviceType": [
+                    "Project Management Consulting",
+                    "Programme Management",
+                    "PMO Consulting",
+                    "Project Governance",
+                    "Delivery Assurance"
+                ],
+                "description": "Project management consulting covering project and programme management, PMO, governance, risk and dependency management, stakeholder management and delivery assurance.",
                 "provider": {
                     "@id": "https://bsgaconsulting.es/#organization"
                 },
@@ -270,7 +282,66 @@
                 "areaServed": {
                     "@type": "Place",
                     "name": "International"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Project Management Consulting Capabilities",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Project & Programme Management"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "PMO & Governance"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Risk & Dependency Management"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Delivery Assurance"
+                            }
+                        }
+                    ]
                 }
+            },
+
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://bsgaconsulting.es/project-management.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://bsgaconsulting.es/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Services",
+                        "item": "https://bsgaconsulting.es/services.html"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Project Management",
+                        "item": "https://bsgaconsulting.es/project-management.html"
+                    }
+                ]
             }
 
         ]
@@ -291,9 +362,6 @@
 
     <div class="header-container">
 
-
-        <!-- LOGO -->
-
         <a
             href="index.html"
             class="site-logo"
@@ -309,8 +377,6 @@
 
         </a>
 
-
-        <!-- DESKTOP NAVIGATION -->
 
         <nav
             class="main-navigation"
@@ -344,8 +410,6 @@
         </nav>
 
 
-        <!-- HEADER CTA -->
-
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="header-cta"
@@ -368,8 +432,6 @@
         </a>
 
 
-        <!-- MOBILE MENU -->
-
         <button
             id="menuToggle"
             class="menu-toggle"
@@ -387,8 +449,6 @@
 
     </div>
 
-
-    <!-- MOBILE NAVIGATION -->
 
     <nav
         id="mobileNav"
@@ -450,7 +510,7 @@
 
 
 <!-- =========================================================
-     PROJECT MANAGEMENT HERO
+     HERO
 ========================================================= -->
 
 <section
@@ -458,30 +518,24 @@
     aria-labelledby="pm-hero-title"
 >
 
-
     <div
         class="pm-hero-background"
         role="img"
         aria-label="Architectural structure representing project delivery, governance and execution"
     ></div>
 
-
     <div
         class="pm-hero-overlay"
         aria-hidden="true"
     ></div>
 
-
     <div class="pm-hero-container">
-
 
         <div class="pm-hero-content">
 
-
             <span class="pm-hero-kicker">
-                PROJECT MANAGEMENT
+                PROJECT MANAGEMENT CONSULTING
             </span>
-
 
             <h1 id="pm-hero-title">
                 Delivering complex
@@ -489,43 +543,30 @@
                 projects with confidence.
             </h1>
 
-
             <p>
                 Project management consulting that brings
                 structure, governance and delivery discipline
                 to strategic initiatives and complex programmes.
             </p>
 
-
             <div class="pm-hero-actions">
-
 
                 <a
                     href="contact.html"
                     class="pm-hero-button pm-hero-button-primary"
                 >
-
                     Discuss Your Project
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
+                    <span aria-hidden="true">→</span>
                 </a>
-
 
                 <a
                     href="#capabilities"
                     class="pm-hero-button pm-hero-button-secondary"
                 >
-
                     Explore Our Capabilities
-
                 </a>
 
-
             </div>
-
 
         </div>
 
@@ -545,9 +586,7 @@
 
     <div class="pm-container">
 
-
         <div class="pm-intro-grid">
-
 
             <div>
 
@@ -555,14 +594,12 @@
                     PROJECT DELIVERY
                 </span>
 
-
                 <h2 id="pm-intro-heading">
                     Turning strategic priorities
                     into controlled execution.
                 </h2>
 
             </div>
-
 
             <div class="pm-intro-copy">
 
@@ -579,8 +616,14 @@
                     moving towards measurable outcomes.
                 </p>
 
-            </div>
+                <p>
+                    Our project management consulting can support
+                    organisations across mobilisation, planning,
+                    execution, governance, risk management and
+                    delivery assurance.
+                </p>
 
+            </div>
 
         </div>
 
@@ -601,19 +644,16 @@
 
     <div class="pm-container">
 
-
         <div class="pm-section-heading">
 
             <span class="pm-kicker">
                 OUR CAPABILITIES
             </span>
 
-
             <h2 id="pm-capabilities-heading">
                 Project management built
                 around delivery reality.
             </h2>
-
 
             <p>
                 Flexible support across the project lifecycle,
@@ -625,9 +665,6 @@
 
 
         <div class="pm-capabilities-grid">
-
-
-            <!-- 01 -->
 
             <article class="pm-capability-card">
 
@@ -652,8 +689,6 @@
             </article>
 
 
-            <!-- 02 -->
-
             <article class="pm-capability-card">
 
                 <span class="pm-capability-number">
@@ -676,8 +711,6 @@
 
             </article>
 
-
-            <!-- 03 -->
 
             <article class="pm-capability-card">
 
@@ -702,8 +735,6 @@
             </article>
 
 
-            <!-- 04 -->
-
             <article class="pm-capability-card">
 
                 <span class="pm-capability-number">
@@ -726,7 +757,6 @@
 
             </article>
 
-
         </div>
 
     </div>
@@ -745,9 +775,7 @@
 
     <div class="pm-container">
 
-
         <div class="pm-lifecycle-grid">
-
 
             <div class="pm-lifecycle-intro">
 
@@ -755,12 +783,10 @@
                     PROJECT LIFECYCLE
                 </span>
 
-
                 <h2 id="pm-lifecycle-heading">
                     From mobilisation
                     to measurable outcomes.
                 </h2>
-
 
                 <p>
                     We help organisations establish the structure
@@ -773,12 +799,9 @@
 
             <div class="pm-lifecycle-steps">
 
-
                 <article class="pm-lifecycle-step">
 
-                    <span>
-                        01
-                    </span>
+                    <span>01</span>
 
                     <div>
 
@@ -799,9 +822,7 @@
 
                 <article class="pm-lifecycle-step">
 
-                    <span>
-                        02
-                    </span>
+                    <span>02</span>
 
                     <div>
 
@@ -822,9 +843,7 @@
 
                 <article class="pm-lifecycle-step">
 
-                    <span>
-                        03
-                    </span>
+                    <span>03</span>
 
                     <div>
 
@@ -845,9 +864,7 @@
 
                 <article class="pm-lifecycle-step">
 
-                    <span>
-                        04
-                    </span>
+                    <span>04</span>
 
                     <div>
 
@@ -865,7 +882,6 @@
 
                 </article>
 
-
             </div>
 
         </div>
@@ -876,7 +892,7 @@
 
 
 <!-- =========================================================
-     WHY BSGA PROJECT MANAGEMENT
+     WHY BSGA
 ========================================================= -->
 
 <section
@@ -886,16 +902,13 @@
 
     <div class="pm-container">
 
-
         <div class="pm-why-grid">
-
 
             <div>
 
                 <span class="pm-kicker">
                     WHY BSGA
                 </span>
-
 
                 <h2 id="pm-why-heading">
                     Structure without
@@ -914,7 +927,6 @@
                     across stakeholders.
                 </p>
 
-
                 <p>
                     BSGA Consulting combines strategic perspective
                     with hands-on delivery discipline to create
@@ -922,22 +934,26 @@
                     the project lifecycle.
                 </p>
 
+                <p>
+                    Explore our broader
+                    <a href="services.html">
+                        consulting services
+                    </a>
+                    or learn more
+                    <a href="about.html">
+                        about BSGA Consulting
+                    </a>.
+                </p>
 
                 <a
                     href="contact.html"
                     class="pm-primary-button"
                 >
-
                     Discuss Your Project
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
+                    <span aria-hidden="true">→</span>
                 </a>
 
             </div>
-
 
         </div>
 
@@ -957,19 +973,16 @@
 
     <div class="pm-container">
 
-
         <div class="pm-section-heading">
 
             <span class="pm-kicker">
                 RELATED SERVICES
             </span>
 
-
             <h2 id="pm-related-heading">
                 Project delivery rarely
                 exists in isolation.
             </h2>
-
 
             <p>
                 Project management can be combined with transformation,
@@ -982,15 +995,12 @@
 
         <div class="pm-related-grid">
 
-
             <a
                 href="business-transformation.html"
                 class="pm-related-card"
             >
 
-                <span>
-                    01
-                </span>
+                <span>01</span>
 
                 <h3>
                     Business Transformation
@@ -1013,9 +1023,7 @@
                 class="pm-related-card"
             >
 
-                <span>
-                    02
-                </span>
+                <span>02</span>
 
                 <h3>
                     Operational Excellence
@@ -1038,9 +1046,7 @@
                 class="pm-related-card"
             >
 
-                <span>
-                    03
-                </span>
+                <span>03</span>
 
                 <h3>
                     Artificial Intelligence
@@ -1057,6 +1063,48 @@
 
             </a>
 
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INSIGHTS
+========================================================= -->
+
+<section
+    class="pm-related"
+    aria-labelledby="pm-insights-heading"
+>
+
+    <div class="pm-container">
+
+        <div class="pm-section-heading">
+
+            <span class="pm-kicker">
+                INSIGHTS
+            </span>
+
+            <h2 id="pm-insights-heading">
+                Practical thinking for
+                better project delivery.
+            </h2>
+
+            <p>
+                Explore BSGA Consulting insights on strategy,
+                project delivery, transformation, operational
+                performance and artificial intelligence.
+            </p>
+
+            <a
+                href="insights.html"
+                class="pm-primary-button"
+            >
+                Explore Insights
+                <span aria-hidden="true">→</span>
+            </a>
 
         </div>
 
@@ -1076,29 +1124,23 @@
 
     <div class="pm-container">
 
-
         <div class="pm-cta-box">
-
 
             <span class="pm-kicker">
                 LET'S TALK
             </span>
-
 
             <h2 id="pm-cta-heading">
                 Need greater confidence
                 in your project delivery?
             </h2>
 
-
             <p>
                 Let's discuss your project, programme or delivery
                 challenge and explore how BSGA Consulting can help.
             </p>
 
-
             <div class="pm-cta-actions">
-
 
                 <a
                     href="https://calendly.com/angel-bajo-sanchez/discovery-call"
@@ -1106,28 +1148,18 @@
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-
                     Schedule a Consultation
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
+                    <span aria-hidden="true">→</span>
                 </a>
-
 
                 <a
                     href="mailto:info@bsgaconsulting.es"
                     class="pm-email"
                 >
-
                     info@bsgaconsulting.es
-
                 </a>
 
-
             </div>
-
 
         </div>
 
@@ -1147,11 +1179,7 @@
 
     <div class="container">
 
-
         <div class="footer-grid">
-
-
-            <!-- BRAND -->
 
             <div class="footer-brand">
 
@@ -1172,8 +1200,6 @@
 
             </div>
 
-
-            <!-- NAVIGATION -->
 
             <div>
 
@@ -1207,15 +1233,16 @@
             </div>
 
 
-            <!-- SERVICES -->
-
             <div>
 
                 <h4>
                     Services
                 </h4>
 
-                <a href="project-management.html">
+                <a
+                    href="project-management.html"
+                    aria-current="page"
+                >
                     Project Management
                 </a>
 
@@ -1233,8 +1260,6 @@
 
             </div>
 
-
-            <!-- CONTACT -->
 
             <div>
 
@@ -1256,7 +1281,6 @@
 
             </div>
 
-
         </div>
 
 
@@ -1266,7 +1290,6 @@
             All Rights Reserved.
 
         </div>
-
 
     </div>
 
