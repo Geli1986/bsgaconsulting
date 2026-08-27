@@ -3,6 +3,7 @@
   "short_name": "BSGA",
   "description": "Strategic consulting for operational performance, project delivery, business transformation and Artificial Intelligence.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
@@ -10,7 +11,8 @@
     {
       "src": "/images/logos/favicon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
