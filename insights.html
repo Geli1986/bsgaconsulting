@@ -15,7 +15,7 @@
     ====================================================== -->
 
     <title>
-        Insights | Strategy, Transformation & AI | BSGA Consulting
+        Insights | Strategy, Transformation &amp; AI | BSGA Consulting
     </title>
 
     <meta
@@ -30,17 +30,22 @@
 
     <meta
         name="robots"
-        content="index, follow"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     >
 
     <meta
         name="googlebot"
-        content="index, follow"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     >
 
     <meta
         name="theme-color"
         content="#000000"
+    >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
     >
 
 
@@ -99,7 +104,7 @@
 
 
     <!-- =====================================================
-         GLOBAL CSS
+         CSS
     ====================================================== -->
 
     <link
@@ -129,12 +134,12 @@
 
     <meta
         property="og:title"
-        content="Insights | BSGA Consulting"
+        content="Insights | Strategy, Transformation &amp; AI | BSGA Consulting"
     >
 
     <meta
         property="og:description"
-        content="Perspectives on strategy, transformation, operational performance, project delivery and Artificial Intelligence."
+        content="Practical perspectives on strategy, business transformation, operational excellence, project delivery and Artificial Intelligence."
     >
 
     <meta
@@ -179,17 +184,22 @@
 
     <meta
         name="twitter:title"
-        content="Insights | BSGA Consulting"
+        content="Insights | Strategy, Transformation &amp; AI | BSGA Consulting"
     >
 
     <meta
         name="twitter:description"
-        content="Perspectives on strategy, transformation, operational performance, project delivery and Artificial Intelligence."
+        content="Practical perspectives on strategy, transformation, operational performance, project delivery and Artificial Intelligence."
     >
 
     <meta
         name="twitter:image"
         content="https://bsgaconsulting.es/images/og-image.jpg"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="BSGA Consulting — Insights"
     >
 
 
@@ -209,26 +219,14 @@
                 "url": "https://bsgaconsulting.es/",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "https://bsgaconsulting.es/images/logos/logo-white.png"
+                    "@id": "https://bsgaconsulting.es/#logo",
+                    "url": "https://bsgaconsulting.es/images/logos/logo-white.png",
+                    "contentUrl": "https://bsgaconsulting.es/images/logos/logo-white.png"
                 },
                 "email": "info@bsgaconsulting.es",
                 "description": "Strategic consulting for operational performance, project delivery, business transformation and Artificial Intelligence."
             },
 
-            {
-                "@type": "WebPage",
-                "@id": "https://bsgaconsulting.es/insights.html#webpage",
-                "url": "https://bsgaconsulting.es/insights.html",
-                "name": "Insights | BSGA Consulting",
-                "description": "Perspectives on strategy, transformation, operational performance, project delivery and Artificial Intelligence.",
-                "isPartOf": {
-                    "@id": "https://bsgaconsulting.es/#website"
-                },
-                "about": {
-                    "@id": "https://bsgaconsulting.es/#organization"
-                },
-                "inLanguage": "en"
-            },
 
             {
                 "@type": "WebSite",
@@ -239,6 +237,55 @@
                     "@id": "https://bsgaconsulting.es/#organization"
                 },
                 "inLanguage": "en"
+            },
+
+
+            {
+                "@type": "WebPage",
+                "@id": "https://bsgaconsulting.es/insights.html#webpage",
+                "url": "https://bsgaconsulting.es/insights.html",
+                "name": "Insights | Strategy, Transformation & AI | BSGA Consulting",
+                "description": "Practical perspectives on strategy, business transformation, operational excellence, project delivery and Artificial Intelligence.",
+                "isPartOf": {
+                    "@id": "https://bsgaconsulting.es/#website"
+                },
+                "about": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "@id": "https://bsgaconsulting.es/insights.html#primaryimage",
+                    "url": "https://bsgaconsulting.es/images/og-image.jpg",
+                    "contentUrl": "https://bsgaconsulting.es/images/og-image.jpg",
+                    "caption": "BSGA Consulting — Insights"
+                },
+                "breadcrumb": {
+                    "@id": "https://bsgaconsulting.es/insights.html#breadcrumb"
+                },
+                "inLanguage": "en"
+            },
+
+
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://bsgaconsulting.es/insights.html#breadcrumb",
+                "itemListElement": [
+
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://bsgaconsulting.es/"
+                    },
+
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Insights",
+                        "item": "https://bsgaconsulting.es/insights.html"
+                    }
+
+                ]
             }
 
         ]
@@ -393,6 +440,10 @@
 </header>
 
 
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
 <main>
 
 
@@ -400,7 +451,10 @@
      HERO
 ========================================================= -->
 
-<section class="insights-hero">
+<section
+    class="insights-hero"
+    aria-labelledby="insights-hero-title"
+>
 
     <div
         class="insights-hero-background"
@@ -424,15 +478,16 @@
             </span>
 
 
-            <h1>
+            <h1 id="insights-hero-title">
                 Ideas that shape
                 better decisions.
             </h1>
 
 
             <p>
-                Perspectives on strategy, transformation,
-                operational performance and Artificial Intelligence.
+                Practical perspectives on strategy,
+                transformation, operational performance
+                and Artificial Intelligence.
             </p>
 
 
@@ -463,12 +518,14 @@
 </section>
 
 
-
 <!-- =========================================================
      INTRO
 ========================================================= -->
 
-<section class="insights-intro">
+<section
+    class="insights-intro"
+    aria-labelledby="insights-intro-heading"
+>
 
     <div class="insights-container">
 
@@ -481,7 +538,7 @@
                     INSIGHTS &amp; PERSPECTIVES
                 </span>
 
-                <h2>
+                <h2 id="insights-intro-heading">
                     Thinking beyond
                     the immediate challenge.
                 </h2>
@@ -519,7 +576,6 @@
 </section>
 
 
-
 <!-- =========================================================
      INSIGHTS
 ========================================================= -->
@@ -527,6 +583,7 @@
 <section
     id="insights"
     class="insights-list"
+    aria-labelledby="insights-heading"
 >
 
     <div class="insights-container">
@@ -538,7 +595,7 @@
                 LATEST INSIGHTS
             </span>
 
-            <h2>
+            <h2 id="insights-heading">
                 Practical perspectives
                 for organisations in motion.
             </h2>
@@ -573,18 +630,14 @@
                     create measurable value.
                 </p>
 
-                <a
-                    href="#"
-                    class="insight-link"
-                >
-                    Read Insight
-                    <span aria-hidden="true">→</span>
-                </a>
+                <!--
+                    Article link intentionally omitted until
+                    the individual insight page exists.
+                -->
 
             </div>
 
         </article>
-
 
 
         <!-- INSIGHT GRID -->
@@ -617,14 +670,6 @@
                     outcomes.
                 </p>
 
-                <a
-                    href="#"
-                    class="insight-link"
-                >
-                    Read Insight
-                    <span aria-hidden="true">→</span>
-                </a>
-
             </article>
 
 
@@ -652,14 +697,6 @@
                     across strategy, operating models, people,
                     processes and technology.
                 </p>
-
-                <a
-                    href="#"
-                    class="insight-link"
-                >
-                    Read Insight
-                    <span aria-hidden="true">→</span>
-                </a>
 
             </article>
 
@@ -689,14 +726,6 @@
                     practical operational improvement.
                 </p>
 
-                <a
-                    href="#"
-                    class="insight-link"
-                >
-                    Read Insight
-                    <span aria-hidden="true">→</span>
-                </a>
-
             </article>
 
 
@@ -724,14 +753,6 @@
                     visibility can make the difference between
                     plans and results.
                 </p>
-
-                <a
-                    href="#"
-                    class="insight-link"
-                >
-                    Read Insight
-                    <span aria-hidden="true">→</span>
-                </a>
 
             </article>
 
@@ -761,14 +782,6 @@
                     organisational readiness.
                 </p>
 
-                <a
-                    href="#"
-                    class="insight-link"
-                >
-                    Read Insight
-                    <span aria-hidden="true">→</span>
-                </a>
-
             </article>
 
 
@@ -797,14 +810,6 @@
                     when organisations face competing priorities.
                 </p>
 
-                <a
-                    href="#"
-                    class="insight-link"
-                >
-                    Read Insight
-                    <span aria-hidden="true">→</span>
-                </a>
-
             </article>
 
 
@@ -815,12 +820,14 @@
 </section>
 
 
-
 <!-- =========================================================
      TOPICS
 ========================================================= -->
 
-<section class="insights-topics">
+<section
+    class="insights-topics"
+    aria-labelledby="insights-topics-heading"
+>
 
     <div class="insights-container">
 
@@ -833,7 +840,7 @@
                     EXPLORE BY TOPIC
                 </span>
 
-                <h2>
+                <h2 id="insights-topics-heading">
                     Areas of focus.
                 </h2>
 
@@ -842,34 +849,34 @@
 
             <div class="insights-topic-list">
 
-                <a href="#">
+                <a href="business-transformation.html">
                     Strategy
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
-                <a href="#">
+                <a href="project-management.html">
                     Project Management
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
-                <a href="#">
+                <a href="business-transformation.html">
                     Business Transformation
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
-                <a href="#">
+                <a href="operational-excellence.html">
                     Operational Excellence
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
-                <a href="#">
+                <a href="artificial-intelligence.html">
                     Artificial Intelligence
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
-                <a href="#">
+                <a href="about.html">
                     Leadership
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
             </div>
@@ -881,12 +888,14 @@
 </section>
 
 
-
 <!-- =========================================================
      WHY BSGA
 ========================================================= -->
 
-<section class="insights-why">
+<section
+    class="insights-why"
+    aria-labelledby="insights-why-heading"
+>
 
     <div class="insights-container">
 
@@ -899,7 +908,7 @@
                     WHY BSGA
                 </span>
 
-                <h2>
+                <h2 id="insights-why-heading">
                     Practical thinking.
                     Real business context.
                 </h2>
@@ -940,12 +949,14 @@
 </section>
 
 
-
 <!-- =========================================================
      CTA
 ========================================================= -->
 
-<section class="insights-cta">
+<section
+    class="insights-cta"
+    aria-labelledby="insights-cta-heading"
+>
 
     <div class="insights-container">
 
@@ -955,7 +966,7 @@
                 LET'S TALK
             </span>
 
-            <h2>
+            <h2 id="insights-cta-heading">
                 Have a business challenge
                 worth exploring?
             </h2>
@@ -998,7 +1009,6 @@
 </main>
 
 
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -1020,8 +1030,9 @@
 
                 <p>
                     Helping organisations improve operational
-                    performance, deliver strategic projects and
-                    adopt Artificial Intelligence with confidence.
+                    performance, deliver strategic projects,
+                    transform their businesses and adopt
+                    Artificial Intelligence with confidence.
                 </p>
 
             </div>
@@ -1045,7 +1056,10 @@
                     About
                 </a>
 
-                <a href="insights.html">
+                <a
+                    href="insights.html"
+                    aria-current="page"
+                >
                     Insights
                 </a>
 
