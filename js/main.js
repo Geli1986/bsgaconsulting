@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openMenu() {
 
-        mobileNav.classList.add("open");
+        mobileNav.classList.add("is-open");
 
         menuToggle.classList.add("active");
 
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function closeMenu() {
 
-        mobileNav.classList.remove("open");
+        mobileNav.classList.remove("is-open");
 
         menuToggle.classList.remove("active");
 
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function toggleMenu() {
 
         const isOpen =
-            mobileNav.classList.contains("open");
+            mobileNav.classList.contains("is-open");
 
         if (isOpen) {
 
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             if (
-                mobileNav.classList.contains("open") &&
+                mobileNav.classList.contains("is-open") &&
                 !clickedInsideMenu &&
                 !clickedToggle
             ) {
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (
                 event.key === "Escape" &&
-                mobileNav.classList.contains("open")
+                mobileNav.classList.contains("is-open")
             ) {
 
                 closeMenu();
