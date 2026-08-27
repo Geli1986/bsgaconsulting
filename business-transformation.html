@@ -48,7 +48,6 @@
         content="strict-origin-when-cross-origin"
     >
 
-
     <!-- =====================================================
          CANONICAL
     ====================================================== -->
@@ -58,9 +57,8 @@
         href="https://bsgaconsulting.es/business-transformation.html"
     >
 
-
     <!-- =====================================================
-         FAVICONS
+         FAVICON
     ====================================================== -->
 
     <link
@@ -81,9 +79,8 @@
         href="/manifest.webmanifest"
     >
 
-
     <!-- =====================================================
-         GOOGLE FONTS
+         FONTS
     ====================================================== -->
 
     <link
@@ -102,6 +99,16 @@
         rel="stylesheet"
     >
 
+    <!-- =====================================================
+         HERO IMAGE PRELOAD
+    ====================================================== -->
+
+    <link
+        rel="preload"
+        as="image"
+        href="images/BSGA-Business-Transformation-Hero.png"
+        fetchpriority="high"
+    >
 
     <!-- =====================================================
          CSS
@@ -116,7 +123,6 @@
         rel="stylesheet"
         href="css/business-transformation.css"
     >
-
 
     <!-- =====================================================
          OPEN GRAPH
@@ -139,7 +145,7 @@
 
     <meta
         property="og:description"
-        content="Business transformation consulting focused on strategy execution, operating model design, organisational change, process improvement and sustainable business results."
+        content="Business transformation consulting that connects strategy, operating models, organisational change and execution to deliver measurable business improvement."
     >
 
     <meta
@@ -149,17 +155,7 @@
 
     <meta
         property="og:image:alt"
-        content="BSGA Consulting — Business Transformation Consulting"
-    >
-
-    <meta
-        property="og:image:width"
-        content="1536"
-    >
-
-    <meta
-        property="og:image:height"
-        content="1024"
+        content="BSGA Consulting Business Transformation Consulting"
     >
 
     <meta
@@ -171,7 +167,6 @@
         property="og:locale"
         content="en_GB"
     >
-
 
     <!-- =====================================================
          TWITTER / X
@@ -189,7 +184,7 @@
 
     <meta
         name="twitter:description"
-        content="Business transformation consulting focused on strategy execution, operating models, organisational change and measurable business improvement."
+        content="Business transformation consulting that connects strategy, operating models, organisational change and execution to deliver measurable business improvement."
     >
 
     <meta
@@ -199,9 +194,8 @@
 
     <meta
         name="twitter:image:alt"
-        content="BSGA Consulting — Business Transformation Consulting"
+        content="BSGA Consulting Business Transformation Consulting"
     >
-
 
     <!-- =====================================================
          STRUCTURED DATA
@@ -224,9 +218,8 @@
                     "contentUrl": "https://bsgaconsulting.es/images/logos/logo-white.png"
                 },
                 "email": "info@bsgaconsulting.es",
-                "description": "Strategic consulting for project management, business transformation, operational excellence and artificial intelligence."
+                "description": "Strategic business consulting focused on project management, business transformation, operational excellence and artificial intelligence."
             },
-
 
             {
                 "@type": "WebSite",
@@ -239,25 +232,20 @@
                 "inLanguage": "en"
             },
 
-
             {
                 "@type": "WebPage",
                 "@id": "https://bsgaconsulting.es/business-transformation.html#webpage",
                 "url": "https://bsgaconsulting.es/business-transformation.html",
-                "name": "Business Transformation Consulting | BSGA Consulting",
-                "description": "Business transformation consulting covering strategy execution, operating model design, process improvement, organisational change and transformation governance.",
+                "name": "Business Transformation Consulting | Strategy & Change",
+                "description": "BSGA Consulting provides business transformation consulting to turn strategic priorities into practical change, stronger operating models, organisational improvement and measurable business results.",
                 "isPartOf": {
                     "@id": "https://bsgaconsulting.es/#website"
                 },
                 "about": {
-                    "@id": "https://bsgaconsulting.es/business-transformation.html#service"
+                    "@id": "https://bsgaconsulting.es/#organization"
                 },
                 "primaryImageOfPage": {
-                    "@type": "ImageObject",
-                    "@id": "https://bsgaconsulting.es/business-transformation.html#primaryimage",
-                    "url": "https://bsgaconsulting.es/images/BSGA-Business-Transformation-Hero.png",
-                    "contentUrl": "https://bsgaconsulting.es/images/BSGA-Business-Transformation-Hero.png",
-                    "caption": "Business transformation consulting"
+                    "@id": "https://bsgaconsulting.es/business-transformation.html#primaryimage"
                 },
                 "breadcrumb": {
                     "@id": "https://bsgaconsulting.es/business-transformation.html#breadcrumb"
@@ -265,85 +253,30 @@
                 "inLanguage": "en"
             },
 
-
             {
                 "@type": "Service",
                 "@id": "https://bsgaconsulting.es/business-transformation.html#service",
                 "name": "Business Transformation Consulting",
-                "serviceType": [
-                    "Business Transformation Consulting",
-                    "Strategy Execution",
-                    "Operating Model Design",
-                    "Process Improvement",
-                    "Organisational Change",
-                    "Transformation Governance"
-                ],
-                "description": "Business transformation consulting focused on turning strategic priorities into practical transformation programmes, stronger operating models, organisational improvement and measurable business results.",
+                "serviceType": "Business Transformation Consulting",
+                "description": "Business transformation consulting covering strategy execution, operating model improvement, organisational change, process transformation and transformation governance.",
                 "provider": {
                     "@id": "https://bsgaconsulting.es/#organization"
                 },
                 "url": "https://bsgaconsulting.es/business-transformation.html",
                 "areaServed": {
                     "@type": "Place",
-                    "name": "International"
-                },
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "Business Transformation Consulting Capabilities",
-                    "itemListElement": [
-
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Strategy Execution"
-                            }
-                        },
-
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Operating Model Design"
-                            }
-                        },
-
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Process Improvement"
-                            }
-                        },
-
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Change Management"
-                            }
-                        },
-
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Organisational Improvement"
-                            }
-                        },
-
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Transformation Governance"
-                            }
-                        }
-
-                    ]
+                    "name": "Worldwide"
                 }
             },
 
+            {
+                "@type": "ImageObject",
+                "@id": "https://bsgaconsulting.es/business-transformation.html#primaryimage",
+                "url": "https://bsgaconsulting.es/images/BSGA-Business-Transformation-Hero.png",
+                "contentUrl": "https://bsgaconsulting.es/images/BSGA-Business-Transformation-Hero.png",
+                "name": "Business Transformation Consulting",
+                "description": "BSGA Consulting business transformation consulting."
+            },
 
             {
                 "@type": "BreadcrumbList",
@@ -367,7 +300,7 @@
                     {
                         "@type": "ListItem",
                         "position": 3,
-                        "name": "Business Transformation",
+                        "name": "Business Transformation Consulting",
                         "item": "https://bsgaconsulting.es/business-transformation.html"
                     }
 
@@ -383,34 +316,106 @@
 
 <body class="business-transformation-page">
 
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+    <header class="site-header">
 
-<header class="site-header">
+        <div class="header-container">
 
-    <div class="header-container">
-
-        <a
-            href="index.html"
-            class="site-logo"
-            aria-label="BSGA Consulting Home"
-        >
-
-            <img
-                src="images/logos/logo-white.png"
-                alt="BSGA Consulting"
-                width="178"
-                height="auto"
+            <a
+                href="index.html"
+                class="site-logo"
+                aria-label="BSGA Consulting Home"
             >
 
-        </a>
+                <img
+                    src="images/logos/logo-white.png"
+                    alt="BSGA Consulting"
+                    width="1774"
+                    height="887"
+                >
+
+            </a>
+
+
+            <nav
+                class="main-navigation"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="services.html"
+                    class="active"
+                    aria-current="page"
+                >
+                    Services
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="insights.html">
+                    Insights
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <a
+                href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                class="header-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Schedule a consultation with BSGA Consulting"
+            >
+
+                <span class="header-cta-text">
+                    Schedule a Consultation
+                </span>
+
+                <span
+                    class="header-cta-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+
+            </a>
+
+
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
 
 
         <nav
-            class="main-navigation"
-            aria-label="Main navigation"
+            id="mobileNav"
+            class="mobile-nav"
+            aria-label="Mobile navigation"
         >
 
             <a href="index.html">
@@ -437,854 +442,93 @@
                 Contact
             </a>
 
-        </nav>
-
-
-        <a
-            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-            class="header-cta"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Schedule a consultation with BSGA Consulting"
-        >
-
-            <span>
+            <a
+                href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                class="mobile-nav-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Schedule a consultation with BSGA Consulting"
+            >
                 Schedule a Consultation
-            </span>
-
-            <span aria-hidden="true">
-                →
-            </span>
-
-        </a>
-
-
-        <button
-            id="menuToggle"
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="mobileNav"
-        >
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-    </div>
-
-
-    <nav
-        id="mobileNav"
-        class="mobile-nav"
-        aria-label="Mobile navigation"
-    >
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a
-            href="services.html"
-            class="active"
-            aria-current="page"
-        >
-            Services
-        </a>
-
-        <a href="about.html">
-            About
-        </a>
-
-        <a href="insights.html">
-            Insights
-        </a>
-
-        <a href="contact.html">
-            Contact
-        </a>
-
-        <a
-            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-            class="mobile-nav-cta"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Schedule a consultation with BSGA Consulting"
-        >
-
-            Schedule a Consultation
-
-            <span aria-hidden="true">
-                →
-            </span>
-
-        </a>
-
-    </nav>
-
-</header>
-
-
-<!-- =====================================================
-     MAIN
-===================================================== -->
-
-<main>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section
-    class="bt-hero"
-    aria-labelledby="bt-hero-title"
->
-
-    <div
-        class="bt-hero-background"
-        role="img"
-        aria-label="Business transformation environment representing strategy, organisational change and transformation"
-    ></div>
-
-    <div
-        class="bt-hero-overlay"
-        aria-hidden="true"
-    ></div>
-
-
-    <div class="bt-hero-container">
-
-        <div class="bt-hero-content">
-
-
-            <a
-                href="services.html"
-                class="bt-back"
-            >
-                ← Back to Services
-            </a>
-
-
-            <span class="bt-kicker">
-                BUSINESS TRANSFORMATION CONSULTING
-            </span>
-
-
-            <h1 id="bt-hero-title">
-                Turning strategy into
-                meaningful transformation.
-            </h1>
-
-
-            <p>
-                Helping organisations translate strategic priorities
-                into practical change, stronger operating models
-                and sustainable business results.
-            </p>
-
-
-            <div class="bt-hero-actions">
-
-                <a
-                    href="contact.html"
-                    class="bt-button bt-button-primary"
-                >
-                    Discuss Your Challenge
-                    <span aria-hidden="true">→</span>
-                </a>
-
-
-                <a
-                    href="#capabilities"
-                    class="bt-button bt-button-outline"
-                >
-                    Explore Our Approach
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     OVERVIEW
-===================================================== -->
-
-<section
-    class="bt-overview"
-    aria-labelledby="bt-overview-heading"
->
-
-    <div class="bt-container">
-
-        <div class="bt-overview-grid">
-
-
-            <div class="bt-overview-intro">
-
-                <span class="bt-blue-kicker">
-                    TRANSFORMATION WITH PURPOSE
-                </span>
-
-                <h2 id="bt-overview-heading">
-                    Change should strengthen
-                    the way your organisation works.
-                </h2>
-
-            </div>
-
-
-            <div class="bt-overview-text">
-
-                <p>
-                    Transformation is not simply about introducing
-                    new processes, technologies or organisational
-                    structures.
-                </p>
-
-                <p>
-                    It is about creating a better way of working
-                    that supports your strategy, improves performance
-                    and enables your organisation to respond with
-                    greater confidence.
-                </p>
-
-                <p>
-                    We work with leadership teams to turn strategic
-                    ambitions into practical transformation programmes
-                    with clear priorities, ownership and measurable
-                    outcomes.
-                </p>
-
-                <p>
-                    Our business transformation consulting connects
-                    strategy execution, operating model design,
-                    organisational change and performance improvement.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CAPABILITIES
-===================================================== -->
-
-<section
-    id="capabilities"
-    class="bt-capabilities"
-    aria-labelledby="bt-capabilities-heading"
->
-
-    <div class="bt-container">
-
-
-        <div class="bt-section-heading">
-
-            <span class="bt-blue-kicker">
-                BUSINESS TRANSFORMATION SERVICES
-            </span>
-
-            <h2 id="bt-capabilities-heading">
-                Transformation designed
-                around your business.
-            </h2>
-
-            <p>
-                We focus on the areas where strategic change can
-                create the greatest operational and commercial impact.
-            </p>
-
-        </div>
-
-
-        <div class="bt-capabilities-grid">
-
-
-            <article class="bt-capability">
-
-                <span class="bt-number">
-                    01
-                </span>
-
-                <h3>
-                    Strategy Execution
-                </h3>
-
-                <p>
-                    Translating strategic priorities into clear
-                    transformation initiatives, roadmaps and
-                    measurable objectives.
-                </p>
-
-            </article>
-
-
-            <article class="bt-capability">
-
-                <span class="bt-number">
-                    02
-                </span>
-
-                <h3>
-                    Operating Model Design
-                </h3>
-
-                <p>
-                    Reviewing structures, processes, governance
-                    and responsibilities to create more effective
-                    ways of working.
-                </p>
-
-            </article>
-
-
-            <article class="bt-capability">
-
-                <span class="bt-number">
-                    03
-                </span>
-
-                <h3>
-                    Process Improvement
-                </h3>
-
-                <p>
-                    Identifying inefficiencies and redesigning
-                    critical processes to improve performance,
-                    quality and customer outcomes.
-                </p>
-
-            </article>
-
-
-            <article class="bt-capability">
-
-                <span class="bt-number">
-                    04
-                </span>
-
-                <h3>
-                    Change Management
-                </h3>
-
-                <p>
-                    Helping organisations prepare people, teams
-                    and leaders to adopt new ways of working
-                    successfully.
-                </p>
-
-            </article>
-
-
-            <article class="bt-capability">
-
-                <span class="bt-number">
-                    05
-                </span>
-
-                <h3>
-                    Organisational Improvement
-                </h3>
-
-                <p>
-                    Strengthening organisational capability,
-                    accountability and performance to support
-                    long-term improvement.
-                </p>
-
-            </article>
-
-
-            <article class="bt-capability">
-
-                <span class="bt-number">
-                    06
-                </span>
-
-                <h3>
-                    Transformation Governance
-                </h3>
-
-                <p>
-                    Establishing the governance, reporting and
-                    decision-making structures required to keep
-                    transformation programmes moving.
-                </p>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     TRANSFORMATION JOURNEY
-===================================================== -->
-
-<section
-    class="bt-journey"
-    aria-labelledby="bt-journey-heading"
->
-
-    <div class="bt-container">
-
-
-        <div class="bt-section-heading">
-
-            <span class="bt-blue-kicker">
-                HOW WE TRANSFORM
-            </span>
-
-            <h2 id="bt-journey-heading">
-                From ambition to measurable improvement.
-            </h2>
-
-            <p>
-                A structured approach keeps transformation focused,
-                practical and connected to business priorities.
-            </p>
-
-        </div>
-
-
-        <div class="bt-journey-list">
-
-
-            <article class="bt-journey-item">
-
-                <span class="bt-number">
-                    01
-                </span>
-
-                <div>
-
-                    <h3>
-                        Discover
-                    </h3>
-
-                    <p>
-                        Understand the organisation, strategic
-                        priorities, current challenges and desired
-                        outcomes.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="bt-journey-item">
-
-                <span class="bt-number">
-                    02
-                </span>
-
-                <div>
-
-                    <h3>
-                        Define
-                    </h3>
-
-                    <p>
-                        Establish clear priorities, transformation
-                        objectives, ownership and a practical roadmap.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="bt-journey-item">
-
-                <span class="bt-number">
-                    03
-                </span>
-
-                <div>
-
-                    <h3>
-                        Deliver
-                    </h3>
-
-                    <p>
-                        Execute transformation initiatives with
-                        appropriate governance, stakeholder engagement
-                        and transparency.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-            <article class="bt-journey-item">
-
-                <span class="bt-number">
-                    04
-                </span>
-
-                <div>
-
-                    <h3>
-                        Improve
-                    </h3>
-
-                    <p>
-                        Measure outcomes, embed new ways of working
-                        and continue improving organisational performance.
-                    </p>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     RELATED SERVICES
-===================================================== -->
-
-<section
-    class="bt-related-services"
-    aria-labelledby="bt-related-heading"
->
-
-    <div class="bt-container">
-
-
-        <div class="bt-section-heading">
-
-            <span class="bt-blue-kicker">
-                RELATED CONSULTING SERVICES
-            </span>
-
-            <h2 id="bt-related-heading">
-                Transformation supported by
-                the right capabilities.
-            </h2>
-
-            <p>
-                Business transformation often requires a combination
-                of strategic direction, disciplined delivery,
-                operational improvement and new technology.
-            </p>
-
-        </div>
-
-
-        <div class="bt-related-content">
-
-            <p>
-                Turning transformation priorities into structured
-                initiatives requires strong execution. Our
-                <a href="project-management.html">
-                    Project Management
-                </a>
-                consulting helps organisations establish the governance,
-                delivery discipline and visibility needed to move
-                strategic programmes forward.
-            </p>
-
-
-            <p>
-                When transformation focuses on improving processes,
-                efficiency and organisational performance, our
-                <a href="operational-excellence.html">
-                    Operational Excellence
-                </a>
-                services can help create more effective and sustainable
-                ways of working.
-            </p>
-
-
-            <p>
-                Where Artificial Intelligence forms part of the
-                transformation agenda, our
-                <a href="artificial-intelligence.html">
-                    Artificial Intelligence
-                </a>
-                consulting supports practical adoption, implementation
-                and measurable business value.
-            </p>
-
-
-            <p>
-                Explore all
-                <a href="services.html">
-                    BSGA Consulting services
-                </a>
-                to see how these capabilities can work together.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     INSIGHTS
-===================================================== -->
-
-<section
-    class="bt-related-services"
-    aria-labelledby="bt-insights-heading"
->
-
-    <div class="bt-container">
-
-        <div class="bt-section-heading">
-
-            <span class="bt-blue-kicker">
-                INSIGHTS
-            </span>
-
-            <h2 id="bt-insights-heading">
-                Practical perspectives on
-                transformation and strategy.
-            </h2>
-
-            <p>
-                Explore practical perspectives from BSGA Consulting
-                on business transformation, strategy execution,
-                operational performance, project delivery and AI.
-            </p>
-
-            <a
-                href="insights.html"
-                class="bt-button bt-button-primary"
-            >
-                Explore Insights
                 <span aria-hidden="true">→</span>
             </a>
 
-        </div>
+        </nav>
 
-    </div>
+    </header>
 
-</section>
 
+    <main>
 
-<!-- =====================================================
-     CTA
-===================================================== -->
+        <!-- =================================================
+             HERO
+        ================================================== -->
 
-<section
-    class="bt-cta"
-    aria-labelledby="bt-cta-heading"
->
+        <section
+            class="service-hero"
+            aria-labelledby="bt-hero-title"
+        >
 
-    <div class="bt-container">
+            <div
+                class="service-hero-background"
+                role="img"
+                aria-label="Business transformation and organisational strategy"
+            ></div>
 
-        <div class="bt-cta-box">
+            <div
+                class="service-hero-overlay"
+                aria-hidden="true"
+            ></div>
 
-            <span class="bt-blue-kicker">
-                LET'S TALK
-            </span>
 
-            <h2 id="bt-cta-heading">
-                Ready to transform
-                your organisation?
-            </h2>
+            <div class="service-hero-container">
 
-            <p>
-                Let's discuss your objectives and explore how
-                BSGA Consulting can support your next strategic initiative.
-            </p>
+                <div class="service-hero-content">
 
+                    <span class="service-hero-kicker">
+                        BUSINESS TRANSFORMATION
+                    </span>
 
-            <div class="bt-cta-actions">
 
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="bt-button bt-button-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Schedule a consultation with BSGA Consulting"
-                >
-                    Schedule a Consultation
-                    <span aria-hidden="true">→</span>
-                </a>
+                    <h1 id="bt-hero-title">
 
+                        Business Transformation Consulting
 
-                <a
-                    href="mailto:info@bsgaconsulting.es"
-                    class="bt-email"
-                >
-                    info@bsgaconsulting.es
-                </a>
+                        <span>
+                            for meaningful organisational change.
+                        </span>
 
-            </div>
+                    </h1>
 
-        </div>
 
-    </div>
+                    <p class="hero-description">
 
-</section>
+                        We help organisations turn strategic priorities
+                        into practical transformation, stronger operating
+                        models and measurable business improvement.
 
+                    </p>
 
-</main>
 
+                    <div class="service-hero-actions">
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+                        <a
+                            href="contact.html"
+                            class="service-button service-button-primary"
+                        >
+                            Discuss Your Transformation
+                            <span aria-hidden="true">→</span>
+                        </a>
 
-<footer class="bt-footer">
+                        <a
+                            href="#approach"
+                            class="service-button service-button-secondary"
+                        >
+                            Discover Our Approach
+                        </a>
 
-    <div class="bt-container">
+                    </div>
 
-        <div class="bt-footer-grid">
+                </div>
 
-
-            <div class="bt-footer-brand">
-
-                <img
-                    src="images/logos/logo-white.png"
-                    alt="BSGA Consulting"
-                    width="175"
-                    height="auto"
-                    loading="lazy"
-                >
-
-                <p>
-                    Helping organisations improve operational
-                    performance, deliver strategic projects,
-                    transform their businesses and adopt
-                    Artificial Intelligence with confidence.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h4>
-                    Navigation
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a
-                    href="services.html"
-                    aria-current="page"
-                >
-                    Services
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="insights.html">
-                    Insights
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <div>
-
-                <h4>
-                    Services
-                </h4>
-
-                <a href="project-management.html">
-                    Project Management
-                </a>
-
-                <a
-                    href="business-transformation.html"
-                    aria-current="page"
-                >
-                    Business Transformation
-                </a>
-
-                <a href="operational-excellence.html">
-                    Operational Excellence
-                </a>
-
-                <a href="artificial-intelligence.html">
-                    Artificial Intelligence
-                </a>
-
-            </div>
-
-
-            <div>
-
-                <h4>
-                    Contact
-                </h4>
-
-                <a href="mailto:info@bsgaconsulting.es">
-                    info@bsgaconsulting.es
-                </a>
-
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Book a consultation with BSGA Consulting"
-                >
-                    Book a Consultation
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="bt-footer-bottom">
-
-            © 2026 BSGA Consulting.
-            All Rights Reserved.
-
-        </div>
-
-    </div>
-
-</footer>
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script src="js/main.js"></script>
-
-
-</body>
-</html>
+            </
