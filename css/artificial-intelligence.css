@@ -1,30 +1,33 @@
 /* =========================================================
    BSGA CONSULTING
    ARTIFICIAL INTELLIGENCE PAGE
+   artificial-intelligence.css
+
+   Works with:
+   - css/styles.css
+   - artificial-intelligence.html
+
+   IMPORTANT:
+   Global header / navigation / footer styles remain in
+   styles.css. This file controls the AI service page.
 ========================================================= */
 
 
 /* =========================================================
-   VARIABLES
+   PAGE VARIABLES
 ========================================================= */
 
-.ai-page {
+.artificial-intelligence-page {
 
-    --ai-blue: #2f6df6;
-    --ai-blue-light: #4c82ff;
-
-    --ai-black: #000000;
-    --ai-dark: #03070d;
-    --ai-dark-2: #070d15;
-
+    --ai-blue: #1473e6;
+    --ai-blue-dark: #0b5fc7;
+    --ai-black: #050505;
+    --ai-dark: #0b0b0d;
+    --ai-text: #17181b;
+    --ai-muted: #62666d;
+    --ai-light: #f5f7fa;
+    --ai-border: #e5e8ec;
     --ai-white: #ffffff;
-    --ai-text: #d6d9df;
-    --ai-muted: #9ca3af;
-
-    --ai-border: rgba(255, 255, 255, 0.12);
-
-    background: var(--ai-black);
-    color: var(--ai-white);
 
 }
 
@@ -33,130 +36,10 @@
    CONTAINER
 ========================================================= */
 
-.ai-container {
+.artificial-intelligence-page .service-container {
 
-    width: min(1320px, calc(100% - 100px));
+    width: min(1180px, calc(100% - 48px));
     margin: 0 auto;
-
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.ai-header {
-
-    position: relative;
-    z-index: 100;
-
-    width: 100%;
-
-    background: #000000;
-
-}
-
-
-.ai-header-inner {
-
-    min-height: 108px;
-
-    width: min(1380px, calc(100% - 100px));
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 40px;
-
-}
-
-
-.ai-logo {
-
-    display: flex;
-    align-items: center;
-
-    flex-shrink: 0;
-
-}
-
-
-.ai-logo img {
-
-    display: block;
-
-    width: 185px;
-    height: auto;
-
-}
-
-
-.ai-navigation {
-
-    display: flex;
-    align-items: center;
-
-    gap: 38px;
-
-    margin-left: auto;
-
-}
-
-
-.ai-navigation a {
-
-    position: relative;
-
-    color: #ffffff;
-    text-decoration: none;
-
-    font-size: 16px;
-    font-weight: 500;
-
-    padding: 42px 0;
-
-    transition:
-        color 0.25s ease;
-
-}
-
-
-.ai-navigation a:hover {
-
-    color: #ffffff;
-
-}
-
-
-.ai-navigation a::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 29px;
-
-    height: 2px;
-
-    background: var(--ai-blue);
-
-    transform: scaleX(0);
-    transform-origin: center;
-
-    transition:
-        transform 0.25s ease;
-
-}
-
-
-.ai-navigation a:hover::after,
-.ai-navigation a.active::after {
-
-    transform: scaleX(1);
 
 }
 
@@ -165,296 +48,405 @@
    HERO
 ========================================================= */
 
-.ai-hero {
+.artificial-intelligence-page .service-hero {
 
     position: relative;
 
-    min-height: 780px;
+    min-height: 720px;
 
     display: flex;
     align-items: center;
 
     overflow: hidden;
 
-    isolation: isolate;
+    background:
+        #050505;
 
-    background: #02070d;
+    color: #ffffff;
 
 }
 
 
-/* =========================================================
-   HERO IMAGE
-========================================================= */
+/* ---------------------------------------------------------
+   HERO BACKGROUND
+--------------------------------------------------------- */
 
-.ai-hero-background {
+.artificial-intelligence-page .service-hero-background {
 
     position: absolute;
 
     inset: 0;
 
-    z-index: -3;
+    z-index: 0;
 
     background-image:
         url("../images/BSGA-Artificial-Intelligence-Hero.png");
 
-    background-repeat: no-repeat;
-
     background-size: cover;
 
-    background-position: center center;
+    background-position: center;
 
-    transform: scale(1.01);
+    background-repeat: no-repeat;
 
 }
 
 
-/* =========================================================
+/* ---------------------------------------------------------
    HERO OVERLAY
+--------------------------------------------------------- */
 
-   Keeps left side readable while preserving
-   the architecture and blue AI environment.
-========================================================= */
-
-.ai-hero-overlay {
+.artificial-intelligence-page .service-hero-overlay {
 
     position: absolute;
 
     inset: 0;
 
-    z-index: -2;
+    z-index: 1;
 
     background:
-
         linear-gradient(
             90deg,
-            rgba(2, 7, 13, 0.98) 0%,
-            rgba(2, 7, 13, 0.93) 25%,
-            rgba(2, 7, 13, 0.72) 46%,
-            rgba(2, 7, 13, 0.25) 68%,
-            rgba(2, 7, 13, 0.08) 100%
+            rgba(0, 0, 0, 0.90) 0%,
+            rgba(0, 0, 0, 0.78) 38%,
+            rgba(0, 0, 0, 0.48) 68%,
+            rgba(0, 0, 0, 0.32) 100%
         );
 
 }
 
 
-/* =========================================================
-   HERO CONTENT
-========================================================= */
+/* ---------------------------------------------------------
+   HERO CONTAINER
+--------------------------------------------------------- */
 
-.ai-hero .ai-container {
+.artificial-intelligence-page .service-hero-container {
 
     position: relative;
+
     z-index: 2;
 
-    display: flex;
-    align-items: center;
+    width: min(1180px, calc(100% - 48px));
 
-    min-height: 780px;
+    margin: 0 auto;
 
-}
-
-
-.ai-hero-content {
-
-    width: min(700px, 58%);
-
-    padding: 90px 0;
+    padding-top: 90px;
+    padding-bottom: 90px;
 
 }
 
 
-.ai-back {
+/* ---------------------------------------------------------
+   HERO CONTENT
+--------------------------------------------------------- */
+
+.artificial-intelligence-page .service-hero-content {
+
+    max-width: 790px;
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO KICKER
+--------------------------------------------------------- */
+
+.artificial-intelligence-page .service-hero-kicker {
 
     display: inline-flex;
 
-    margin-bottom: 42px;
+    align-items: center;
 
-    color: rgba(255, 255, 255, 0.72);
-
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 500;
-
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
-
-}
-
-
-.ai-back:hover {
-
-    color: #ffffff;
-
-    transform: translateX(-3px);
-
-}
-
-
-.ai-kicker {
-
-    display: block;
+    gap: 10px;
 
     margin-bottom: 24px;
 
-    color: var(--ai-blue-light);
+    color: #ffffff;
 
-    font-size: 15px;
+    font-size: 12px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    letter-spacing: 5px;
+    letter-spacing: 0.16em;
 
-    line-height: 1.4;
+    text-transform: uppercase;
 
 }
 
 
-.ai-hero h1 {
+.artificial-intelligence-page .service-hero-kicker::before {
+
+    content: "";
+
+    display: block;
+
+    width: 28px;
+
+    height: 2px;
+
+    background: var(--ai-blue);
+
+}
+
+
+/* ---------------------------------------------------------
+   HERO H1
+--------------------------------------------------------- */
+
+.artificial-intelligence-page .service-hero h1 {
 
     margin: 0;
 
-    max-width: 720px;
+    max-width: 850px;
 
     color: #ffffff;
 
-    font-size: clamp(52px, 5vw, 78px);
+    font-size: clamp(42px, 5vw, 72px);
 
-    line-height: 0.98;
+    line-height: 1.02;
 
-    letter-spacing: -3.5px;
+    letter-spacing: -0.045em;
 
-    font-weight: 700;
+    font-weight: 800;
 
 }
 
 
-.ai-hero p {
+/* H1 second line */
 
-    max-width: 650px;
+.artificial-intelligence-page .service-hero h1 span {
 
-    margin: 34px 0 0;
+    display: block;
 
-    color: rgba(255, 255, 255, 0.78);
+    margin-top: 10px;
 
-    font-size: 20px;
+    color: rgba(255, 255, 255, 0.72);
 
-    line-height: 1.65;
+}
+
+
+/* ---------------------------------------------------------
+   HERO DESCRIPTION
+--------------------------------------------------------- */
+
+.artificial-intelligence-page .service-hero .hero-description {
+
+    max-width: 690px;
+
+    margin: 30px 0 0;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 19px;
+
+    line-height: 1.7;
 
     font-weight: 400;
 
 }
 
 
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
+/* ---------------------------------------------------------
+   HERO ACTIONS
+--------------------------------------------------------- */
 
-.ai-hero-actions {
+.artificial-intelligence-page .service-hero-actions {
 
     display: flex;
-    align-items: center;
-
-    gap: 16px;
-
-    margin-top: 42px;
 
     flex-wrap: wrap;
 
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 38px;
+
 }
 
 
-.ai-button {
+/* ---------------------------------------------------------
+   HERO BUTTONS
+--------------------------------------------------------- */
+
+.artificial-intelligence-page .service-button {
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
-    min-height: 58px;
+    gap: 14px;
 
-    padding: 0 30px;
+    min-height: 54px;
 
-    border: 1px solid var(--ai-blue);
+    padding: 0 24px;
 
-    background: var(--ai-blue);
+    border-radius: 2px;
 
-    color: #ffffff;
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1;
 
     text-decoration: none;
 
-    font-size: 16px;
-    font-weight: 600;
-
     transition:
-        background 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
+        transform 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease;
 
 }
 
 
-.ai-button:hover {
-
-    background: var(--ai-blue-light);
-
-    border-color: var(--ai-blue-light);
+.artificial-intelligence-page .service-button:hover {
 
     transform: translateY(-2px);
 
 }
 
 
-.ai-button-outline {
+/* Primary */
 
-    background: rgba(0, 0, 0, 0.12);
+.artificial-intelligence-page .service-button-primary {
 
-    border-color: rgba(255, 255, 255, 0.45);
+    background: var(--ai-blue);
+
+    border: 1px solid var(--ai-blue);
+
+    color: #ffffff;
 
 }
 
 
-.ai-button-outline:hover {
+.artificial-intelligence-page .service-button-primary:hover {
+
+    background: var(--ai-blue-dark);
+
+    border-color: var(--ai-blue-dark);
+
+}
+
+
+/* Secondary */
+
+.artificial-intelligence-page .service-button-secondary {
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    color: #ffffff;
+
+}
+
+
+.artificial-intelligence-page .service-button-secondary:hover {
 
     background: rgba(255, 255, 255, 0.08);
 
-    border-color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.75);
 
 }
 
 
 /* =========================================================
-   SECTION GLOBAL
+   GENERAL SECTIONS
 ========================================================= */
 
-.ai-overview,
-.ai-capabilities,
-.ai-use-cases,
-.ai-roadmap,
-.ai-governance,
-.ai-results,
-.ai-why,
-.ai-related-services,
-.ai-cta {
+.artificial-intelligence-page section:not(.service-hero) {
 
     position: relative;
 
 }
 
 
-.ai-overview {
+/* =========================================================
+   BLUE KICKER
+========================================================= */
 
-    padding: 130px 0;
+.artificial-intelligence-page .ai-blue-kicker {
 
-    background: #ffffff;
+    display: block;
 
-    color: #080b10;
+    margin-bottom: 18px;
+
+    color: var(--ai-blue);
+
+    font-size: 12px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
 
 }
 
 
-.ai-overview-grid {
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.artificial-intelligence-page .ai-section-heading {
+
+    max-width: 780px;
+
+    margin-bottom: 58px;
+
+}
+
+
+.artificial-intelligence-page .ai-section-heading h2 {
+
+    margin: 0;
+
+    color: var(--ai-text);
+
+    font-size: clamp(34px, 4vw, 54px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 800;
+
+}
+
+
+.artificial-intelligence-page .ai-section-heading p {
+
+    max-width: 700px;
+
+    margin: 22px 0 0;
+
+    color: var(--ai-muted);
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.artificial-intelligence-page .ai-overview {
+
+    padding: 120px 0;
+
+    background: #ffffff;
+
+}
+
+
+.artificial-intelligence-page .ai-overview-grid {
 
     display: grid;
 
@@ -464,118 +456,174 @@
 
     gap: 100px;
 
-}
-
-
-.ai-overview-intro h2 {
-
-    margin: 22px 0 0;
-
-    max-width: 620px;
-
-    font-size: clamp(42px, 4vw, 62px);
-
-    line-height: 1.02;
-
-    letter-spacing: -2.8px;
+    align-items: start;
 
 }
 
 
-.ai-overview-text {
+.artificial-intelligence-page .ai-overview-intro h2 {
 
-    padding-top: 48px;
+    margin: 0;
+
+    max-width: 510px;
+
+    color: var(--ai-text);
+
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
 
 }
 
 
-.ai-overview-text p {
+.artificial-intelligence-page .ai-overview-text {
 
     max-width: 650px;
 
-    margin: 0 0 28px;
+}
 
-    color: #555b64;
 
-    font-size: 19px;
+.artificial-intelligence-page .ai-overview-text p {
 
-    line-height: 1.75;
+    margin: 0 0 24px;
+
+    color: var(--ai-muted);
+
+    font-size: 17px;
+
+    line-height: 1.8;
 
 }
 
 
-.ai-blue-kicker {
+.artificial-intelligence-page .ai-overview-text p:last-child {
 
-    display: inline-block;
-
-    color: var(--ai-blue);
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 3.5px;
-
-    line-height: 1.4;
+    margin-bottom: 0;
 
 }
 
 
 /* =========================================================
-   CAPABILITIES
+   AI CAPABILITIES
 ========================================================= */
 
-.ai-capabilities {
+.artificial-intelligence-page .ai-capabilities {
 
-    padding: 140px 0;
+    padding: 120px 0;
 
-    background: #03070d;
-
-}
-
-
-.ai-section-heading {
-
-    max-width: 850px;
-
-    margin-bottom: 70px;
+    background: var(--ai-light);
 
 }
 
 
-.ai-section-heading h2 {
+.artificial-intelligence-page .ai-capabilities-grid {
 
-    margin: 20px 0 20px;
+    display: grid;
 
-    font-size: clamp(42px, 4vw, 62px);
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
 
-    line-height: 1.02;
-
-    letter-spacing: -2.8px;
+    gap: 20px;
 
 }
 
 
-.ai-section-heading p {
+.artificial-intelligence-page .ai-capability-card {
 
-    max-width: 720px;
+    min-height: 300px;
+
+    padding: 36px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--ai-border);
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+
+}
+
+
+.artificial-intelligence-page .ai-capability-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(20, 115, 230, 0.35);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.artificial-intelligence-page .ai-capability-number {
+
+    display: block;
+
+    margin-bottom: 58px;
+
+    color: var(--ai-blue);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.artificial-intelligence-page .ai-capability-card h3 {
+
+    margin: 0 0 14px;
+
+    color: var(--ai-text);
+
+    font-size: 23px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.02em;
+
+}
+
+
+.artificial-intelligence-page .ai-capability-card p {
 
     margin: 0;
 
     color: var(--ai-muted);
 
-    font-size: 18px;
+    font-size: 15px;
 
     line-height: 1.7;
 
 }
 
 
-.ai-capabilities-grid {
+/* =========================================================
+   AI USE CASES
+========================================================= */
+
+.artificial-intelligence-page .ai-use-cases {
+
+    padding: 120px 0;
+
+    background: #ffffff;
+
+}
+
+
+.artificial-intelligence-page .ai-use-cases-grid {
 
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
     gap: 1px;
 
@@ -586,262 +634,58 @@
 }
 
 
-.ai-capability {
+.artificial-intelligence-page .ai-use-case {
 
-    min-height: 330px;
-
-    padding: 42px;
-
-    background: #03070d;
-
-    transition:
-        background 0.3s ease;
-
-}
-
-
-.ai-capability:hover {
-
-    background: #07101b;
-
-}
-
-
-.ai-number {
-
-    display: block;
-
-    margin-bottom: 45px;
-
-    color: var(--ai-blue-light);
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-}
-
-
-.ai-capability h3 {
-
-    margin: 0 0 16px;
-
-    font-size: 25px;
-
-    line-height: 1.2;
-
-    letter-spacing: -0.7px;
-
-}
-
-
-.ai-capability p {
-
-    margin: 0;
-
-    color: #aeb4bd;
-
-    font-size: 16px;
-
-    line-height: 1.7;
-
-}
-
-
-.learn-more {
-
-    display: inline-block;
-
-    margin-top: 24px;
-
-    color: var(--ai-blue-light);
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-}
-
-
-.learn-more:hover {
-
-    text-decoration: underline;
-
-}
-
-
-/* =========================================================
-   USE CASES
-========================================================= */
-
-.ai-use-cases {
-
-    padding: 140px 0;
-
-    background: #ffffff;
-
-    color: #080b10;
-
-}
-
-
-.ai-use-cases .ai-section-heading p {
-
-    color: #666d76;
-
-}
-
-
-.ai-use-cases-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 18px;
-
-}
-
-
-.ai-use-case {
-
-    min-height: 260px;
+    min-height: 250px;
 
     padding: 36px;
 
-    border: 1px solid #e4e6e9;
-
     background: #ffffff;
 
-    transition:
-        border-color 0.25s ease,
-        transform 0.25s ease;
-
 }
 
 
-.ai-use-case:hover {
-
-    border-color: #b8c8ee;
-
-    transform: translateY(-4px);
-
-}
-
-
-.ai-use-case > span {
+.artificial-intelligence-page .ai-use-case span {
 
     display: block;
 
-    margin-bottom: 40px;
+    margin-bottom: 44px;
 
     color: var(--ai-blue);
 
-    font-size: 13px;
+    font-size: 12px;
 
-    font-weight: 700;
+    font-weight: 800;
 
-    letter-spacing: 2px;
+    letter-spacing: 0.12em;
 
 }
 
 
-.ai-use-case h3 {
+.artificial-intelligence-page .ai-use-case h3 {
 
-    margin: 0 0 14px;
+    margin: 0 0 13px;
+
+    color: var(--ai-text);
 
     font-size: 23px;
 
     line-height: 1.2;
 
+    letter-spacing: -0.02em;
+
 }
 
 
-.ai-use-case p {
+.artificial-intelligence-page .ai-use-case p {
+
+    max-width: 520px;
 
     margin: 0;
 
-    color: #626872;
+    color: var(--ai-muted);
 
-    font-size: 16px;
-
-    line-height: 1.65;
-
-}
-
-
-/* =========================================================
-   ROADMAP
-========================================================= */
-
-.ai-roadmap {
-
-    padding: 140px 0;
-
-    background: #03070d;
-
-}
-
-
-.ai-roadmap-list {
-
-    border-top: 1px solid var(--ai-border);
-
-}
-
-
-.ai-roadmap-item {
-
-    display: grid;
-
-    grid-template-columns: 100px 1fr;
-
-    gap: 40px;
-
-    padding: 42px 0;
-
-    border-bottom: 1px solid var(--ai-border);
-
-}
-
-
-.ai-roadmap-number {
-
-    color: var(--ai-blue-light);
-
-    font-size: 14px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-}
-
-
-.ai-roadmap-item h3 {
-
-    margin: 0 0 12px;
-
-    font-size: 28px;
-
-    letter-spacing: -0.8px;
-
-}
-
-
-.ai-roadmap-item p {
-
-    max-width: 700px;
-
-    margin: 0;
-
-    color: #9ea6b1;
-
-    font-size: 17px;
+    font-size: 15px;
 
     line-height: 1.7;
 
@@ -849,21 +693,158 @@
 
 
 /* =========================================================
-   GOVERNANCE
+   AI APPROACH
 ========================================================= */
 
-.ai-governance {
+.artificial-intelligence-page .ai-approach {
 
-    padding: 140px 0;
+    padding: 120px 0;
 
-    background: #ffffff;
+    background: var(--ai-dark);
 
-    color: #080b10;
+    color: #ffffff;
 
 }
 
 
-.ai-governance-grid {
+.artificial-intelligence-page .ai-approach-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
+
+    gap: 100px;
+
+    align-items: start;
+
+}
+
+
+.artificial-intelligence-page .ai-approach .ai-blue-kicker {
+
+    color: #62a8ff;
+
+}
+
+
+.artificial-intelligence-page .ai-approach h2 {
+
+    margin: 0;
+
+    max-width: 520px;
+
+    color: #ffffff;
+
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
+
+}
+
+
+.artificial-intelligence-page .ai-approach-intro p {
+
+    max-width: 480px;
+
+    margin: 24px 0 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 16px;
+
+    line-height: 1.75;
+
+}
+
+
+.artificial-intelligence-page .ai-approach-steps {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.artificial-intelligence-page .ai-approach-step {
+
+    display: grid;
+
+    grid-template-columns: 64px minmax(0, 1fr);
+
+    gap: 24px;
+
+    padding: 28px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+
+}
+
+
+.artificial-intelligence-page .ai-approach-step:last-child {
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+
+}
+
+
+.artificial-intelligence-page .ai-approach-step > span {
+
+    color: #62a8ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.artificial-intelligence-page .ai-approach-step h3 {
+
+    margin: 0 0 9px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+
+}
+
+
+.artificial-intelligence-page .ai-approach-step p {
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   RESPONSIBLE AI
+========================================================= */
+
+.artificial-intelligence-page .ai-responsible {
+
+    padding: 120px 0;
+
+    background: #ffffff;
+
+}
+
+
+.artificial-intelligence-page .ai-responsible-grid {
 
     display: grid;
 
@@ -873,87 +854,44 @@
 
     gap: 100px;
 
-}
-
-
-.ai-governance-grid h2 {
-
-    max-width: 600px;
-
-    margin: 22px 0 0;
-
-    font-size: clamp(42px, 4vw, 60px);
-
-    line-height: 1.03;
-
-    letter-spacing: -2.8px;
+    align-items: start;
 
 }
 
 
-.ai-governance-grid > div:last-child > p {
+.artificial-intelligence-page .ai-responsible-intro h2 {
 
-    max-width: 680px;
+    margin: 0;
+
+    max-width: 520px;
+
+    color: var(--ai-text);
+
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
+
+}
+
+
+.artificial-intelligence-page .ai-responsible-text p {
 
     margin: 0 0 24px;
 
-    color: #5f6670;
+    color: var(--ai-muted);
 
-    font-size: 18px;
+    font-size: 17px;
 
-    line-height: 1.7;
-
-}
-
-
-.ai-governance-points {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    margin-top: 45px;
-
-    border-top: 1px solid #dfe2e6;
-
-    border-left: 1px solid #dfe2e6;
+    line-height: 1.8;
 
 }
 
 
-.ai-governance-points > div {
+.artificial-intelligence-page .ai-responsible-text p:last-child {
 
-    display: flex;
-    align-items: center;
-
-    gap: 20px;
-
-    min-height: 80px;
-
-    padding: 20px;
-
-    border-right: 1px solid #dfe2e6;
-    border-bottom: 1px solid #dfe2e6;
-
-}
-
-
-.ai-governance-points span {
-
-    color: var(--ai-blue);
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-
-}
-
-
-.ai-governance-points strong {
-
-    font-size: 15px;
+    margin-bottom: 0;
 
 }
 
@@ -962,16 +900,16 @@
    RESULTS
 ========================================================= */
 
-.ai-results {
+.artificial-intelligence-page .ai-results {
 
-    padding: 140px 0;
+    padding: 120px 0;
 
-    background: #03070d;
+    background: var(--ai-light);
 
 }
 
 
-.ai-results-grid {
+.artificial-intelligence-page .ai-results-grid {
 
     display: grid;
 
@@ -981,157 +919,109 @@
 
     gap: 100px;
 
-}
-
-
-.ai-results-intro h2 {
-
-    margin: 22px 0;
-
-    font-size: clamp(42px, 4vw, 60px);
-
-    line-height: 1.03;
-
-    letter-spacing: -2.8px;
+    align-items: start;
 
 }
 
 
-.ai-results-intro p {
+.artificial-intelligence-page .ai-results-intro h2 {
+
+    margin: 0;
 
     max-width: 500px;
 
-    margin: 0;
+    color: var(--ai-text);
 
-    color: #9ca4ae;
+    font-size: clamp(34px, 4vw, 52px);
 
-    font-size: 17px;
+    line-height: 1.08;
 
-    line-height: 1.7;
-
-}
-
-
-.ai-results-list {
-
-    border-top: 1px solid var(--ai-border);
+    letter-spacing: -0.035em;
 
 }
 
 
-.ai-result {
+.artificial-intelligence-page .ai-results-intro p {
 
-    display: grid;
+    max-width: 460px;
 
-    grid-template-columns: 60px 1fr;
+    margin: 24px 0 0;
 
-    column-gap: 20px;
+    color: var(--ai-muted);
 
-    padding: 30px 0;
+    font-size: 16px;
 
-    border-bottom: 1px solid var(--ai-border);
-
-}
-
-
-.ai-result > span {
-
-    grid-row: span 2;
-
-    color: var(--ai-blue-light);
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
+    line-height: 1.75;
 
 }
 
 
-.ai-result h3 {
-
-    margin: 0 0 8px;
-
-    font-size: 22px;
-
-}
-
-
-.ai-result p {
-
-    margin: 0;
-
-    color: #9ca4ae;
-
-    font-size: 15px;
-
-    line-height: 1.65;
-
-}
-
-
-/* =========================================================
-   WHY BSGA
-========================================================= */
-
-.ai-why {
-
-    padding: 140px 0;
-
-    background: #ffffff;
-
-    color: #080b10;
-
-}
-
-
-.ai-why-grid {
+.artificial-intelligence-page .ai-results-list {
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.9fr)
-        minmax(0, 1.1fr);
+        repeat(2, minmax(0, 1fr));
 
-    gap: 100px;
+    gap: 1px;
 
-}
+    background: var(--ai-border);
 
-
-.ai-why h2 {
-
-    max-width: 600px;
-
-    margin: 22px 0 0;
-
-    font-size: clamp(42px, 4vw, 60px);
-
-    line-height: 1.03;
-
-    letter-spacing: -2.8px;
+    border: 1px solid var(--ai-border);
 
 }
 
 
-.ai-why-grid > div:last-child p {
+.artificial-intelligence-page .ai-result {
 
-    max-width: 680px;
+    min-height: 235px;
 
-    margin: 0 0 25px;
+    padding: 32px;
 
-    color: #606771;
+    background: #ffffff;
 
-    font-size: 18px;
+}
+
+
+.artificial-intelligence-page .ai-result > span {
+
+    display: block;
+
+    margin-bottom: 44px;
+
+    color: var(--ai-blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.artificial-intelligence-page .ai-result h3 {
+
+    margin: 0 0 12px;
+
+    color: var(--ai-text);
+
+    font-size: 21px;
+
+    line-height: 1.25;
+
+}
+
+
+.artificial-intelligence-page .ai-result p {
+
+    margin: 0;
+
+    color: var(--ai-muted);
+
+    font-size: 14px;
 
     line-height: 1.7;
-
-}
-
-
-.ai-why-grid .ai-button {
-
-    margin-top: 18px;
 
 }
 
@@ -1140,269 +1030,334 @@
    RELATED SERVICES
 ========================================================= */
 
-.ai-related-services {
+.artificial-intelligence-page .ai-related {
 
-    padding: 130px 0;
+    padding: 120px 0;
 
-    background: #f5f6f8;
-
-    color: #080b10;
+    background: #ffffff;
 
 }
 
 
-.ai-related-content {
+.artificial-intelligence-page .ai-related-grid {
 
-    max-width: 950px;
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
 
 }
 
 
-.ai-related-content p {
+.artificial-intelligence-page .ai-related-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 330px;
+
+    padding: 34px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--ai-border);
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        transform 180ms ease,
+        border-color 180ms ease,
+        box-shadow 180ms ease;
+
+}
+
+
+.artificial-intelligence-page .ai-related-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(20, 115, 230, 0.4);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.08);
+
+}
+
+
+.artificial-intelligence-page .ai-related-card > span {
+
+    display: block;
+
+    margin-bottom: 60px;
+
+    color: var(--ai-blue);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+
+}
+
+
+.artificial-intelligence-page .ai-related-card h3 {
+
+    margin: 0 0 14px;
+
+    color: var(--ai-text);
+
+    font-size: 23px;
+
+    line-height: 1.2;
+
+}
+
+
+.artificial-intelligence-page .ai-related-card p {
 
     margin: 0;
 
-    padding: 28px 0;
+    color: var(--ai-muted);
 
-    border-top: 1px solid #dfe2e6;
+    font-size: 15px;
 
-    color: #555c66;
+    line-height: 1.7;
 
-    font-size: 18px;
+}
+
+
+.artificial-intelligence-page .ai-related-card strong {
+
+    margin-top: auto;
+
+    padding-top: 28px;
+
+    color: var(--ai-text);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+}
+
+
+/* =========================================================
+   INSIGHTS
+========================================================= */
+
+.artificial-intelligence-page .ai-insights {
+
+    padding: 120px 0;
+
+    background: var(--ai-light);
+
+}
+
+
+.artificial-intelligence-page .ai-insights-content {
+
+    max-width: 760px;
+
+}
+
+
+.artificial-intelligence-page .ai-insights-content h2 {
+
+    margin: 0;
+
+    color: var(--ai-text);
+
+    font-size: clamp(34px, 4vw, 52px);
+
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
+
+}
+
+
+.artificial-intelligence-page .ai-insights-content p {
+
+    max-width: 670px;
+
+    margin: 22px 0 0;
+
+    color: var(--ai-muted);
+
+    font-size: 17px;
 
     line-height: 1.75;
 
 }
 
 
-.ai-related-content p:last-child {
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
 
-    border-bottom: 1px solid #dfe2e6;
+.artificial-intelligence-page .ai-primary-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    min-height: 54px;
+
+    margin-top: 30px;
+
+    padding: 0 24px;
+
+    background: var(--ai-blue);
+
+    border: 1px solid var(--ai-blue);
+
+    border-radius: 2px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 180ms ease,
+        background-color 180ms ease,
+        border-color 180ms ease;
 
 }
 
 
-.ai-related-content a {
+.artificial-intelligence-page .ai-primary-button:hover {
 
-    color: #111827;
+    transform: translateY(-2px);
 
-    font-weight: 600;
+    background: var(--ai-blue-dark);
 
-    text-decoration: underline;
-
-    text-decoration-color: var(--ai-blue);
-
-    text-underline-offset: 4px;
+    border-color: var(--ai-blue-dark);
 
 }
 
 
 /* =========================================================
-   CTA
+   FINAL CTA
 ========================================================= */
 
-.ai-cta {
+.artificial-intelligence-page .ai-cta {
 
     padding: 120px 0;
 
-    background: #000000;
+    background: #050505;
 
 }
 
 
-.ai-cta-box {
+.artificial-intelligence-page .ai-cta-box {
 
-    position: relative;
+    max-width: 900px;
 
-    overflow: hidden;
+    margin: 0 auto;
 
-    padding: 90px;
-
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    background:
-
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(47, 109, 246, 0.20),
-            transparent 40%
-        ),
-
-        #050a11;
+    text-align: center;
 
 }
 
 
-.ai-cta-box h2 {
+.artificial-intelligence-page .ai-cta .ai-blue-kicker {
 
-    max-width: 800px;
-
-    margin: 22px 0;
-
-    font-size: clamp(44px, 4.5vw, 68px);
-
-    line-height: 1.02;
-
-    letter-spacing: -3px;
+    color: #62a8ff;
 
 }
 
 
-.ai-cta-box p {
-
-    max-width: 700px;
+.artificial-intelligence-page .ai-cta h2 {
 
     margin: 0;
 
-    color: #a8afb9;
+    color: #ffffff;
 
-    font-size: 18px;
+    font-size: clamp(38px, 5vw, 62px);
 
-    line-height: 1.7;
+    line-height: 1.05;
+
+    letter-spacing: -0.04em;
 
 }
 
 
-.ai-cta-actions {
+.artificial-intelligence-page .ai-cta p {
+
+    max-width: 720px;
+
+    margin: 25px auto 0;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 17px;
+
+    line-height: 1.75;
+
+}
+
+
+.artificial-intelligence-page .ai-cta-actions {
 
     display: flex;
-    align-items: center;
-
-    gap: 30px;
-
-    margin-top: 40px;
 
     flex-wrap: wrap;
 
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 22px;
+
+    margin-top: 36px;
+
 }
 
 
-.ai-email {
+.artificial-intelligence-page .ai-email {
 
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 14px;
+
+    font-weight: 600;
 
     text-decoration: none;
 
-    font-size: 16px;
-
-    font-weight: 500;
-
 }
 
 
-.ai-email:hover {
+.artificial-intelligence-page .ai-email:hover {
 
-    color: var(--ai-blue-light);
+    color: #ffffff;
 
 }
 
 
 /* =========================================================
-   FOOTER
+   FOCUS STATES
 ========================================================= */
 
-.ai-footer {
+.artificial-intelligence-page a:focus-visible,
+.artificial-intelligence-page button:focus-visible {
 
-    padding: 80px 0 30px;
+    outline: 3px solid rgba(20, 115, 230, 0.55);
 
-    background: #000000;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-
-}
-
-
-.ai-footer-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1.6fr
-        0.8fr
-        0.8fr;
-
-    gap: 80px;
-
-}
-
-
-.ai-footer-brand img {
-
-    width: 185px;
-
-    height: auto;
-
-    margin-bottom: 24px;
-
-}
-
-
-.ai-footer-brand p {
-
-    max-width: 400px;
-
-    margin: 0;
-
-    color: #858d98;
-
-    font-size: 14px;
-
-    line-height: 1.7;
-
-}
-
-
-.ai-footer h4 {
-
-    margin: 0 0 22px;
-
-    color: #ffffff;
-
-    font-size: 14px;
-
-    letter-spacing: 0.5px;
-
-}
-
-
-.ai-footer a {
-
-    display: block;
-
-    width: fit-content;
-
-    margin-bottom: 12px;
-
-    color: #8d95a0;
-
-    text-decoration: none;
-
-    font-size: 14px;
-
-    transition:
-        color 0.2s ease;
-
-}
-
-
-.ai-footer a:hover {
-
-    color: #ffffff;
-
-}
-
-
-.ai-footer-bottom {
-
-    margin-top: 70px;
-
-    padding-top: 25px;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-
-    color: #666e79;
-
-    font-size: 13px;
+    outline-offset: 4px;
 
 }
 
@@ -1411,201 +1366,49 @@
    TABLET
 ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
 
 
-    .ai-container {
+    .artificial-intelligence-page .service-hero {
 
-        width: min(100% - 64px, 1000px);
-
-    }
-
-
-    .ai-header-inner {
-
-        width: calc(100% - 64px);
+        min-height: 650px;
 
     }
 
 
-    .ai-navigation {
+    .artificial-intelligence-page .service-hero-container {
 
-        gap: 24px;
-
-    }
-
-
-    .ai-navigation a {
-
-        font-size: 15px;
+        padding-top: 75px;
+        padding-bottom: 75px;
 
     }
 
 
-    .ai-hero {
+    .artificial-intelligence-page .ai-overview-grid,
+    .artificial-intelligence-page .ai-approach-grid,
+    .artificial-intelligence-page .ai-responsible-grid,
+    .artificial-intelligence-page .ai-results-grid {
 
-        min-height: 720px;
+        grid-template-columns:
+            1fr;
 
-    }
-
-
-    .ai-hero .ai-container {
-
-        min-height: 720px;
-
-    }
-
-
-    .ai-hero-content {
-
-        width: 62%;
+        gap: 55px;
 
     }
 
 
-    .ai-hero h1 {
+    .artificial-intelligence-page .ai-capabilities-grid {
 
-        font-size: clamp(48px, 5.5vw, 68px);
-
-    }
-
-
-    .ai-capabilities-grid,
-    .ai-use-cases-grid {
-
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
     }
 
 
-    .ai-overview-grid,
-    .ai-governance-grid,
-    .ai-results-grid,
-    .ai-why-grid {
+    .artificial-intelligence-page .ai-related-grid {
 
-        gap: 60px;
-
-    }
-
-}
-
-
-/* =========================================================
-   IPAD / TABLET PORTRAIT
-========================================================= */
-
-@media (max-width: 900px) {
-
-
-    .ai-header-inner {
-
-        min-height: 90px;
-
-    }
-
-
-    .ai-navigation {
-
-        display: none;
-
-    }
-
-
-    .ai-logo img {
-
-        width: 165px;
-
-    }
-
-
-    .ai-hero {
-
-        min-height: 760px;
-
-    }
-
-
-    .ai-hero .ai-container {
-
-        min-height: 760px;
-
-        align-items: flex-end;
-
-    }
-
-
-    /*
-       On iPad the image moves slightly right and
-       remains clearly visible behind the content.
-    */
-
-    .ai-hero-background {
-
-        background-position: 63% center;
-
-    }
-
-
-    .ai-hero-overlay {
-
-        background:
-
-            linear-gradient(
-                90deg,
-                rgba(2, 7, 13, 0.98) 0%,
-                rgba(2, 7, 13, 0.90) 35%,
-                rgba(2, 7, 13, 0.62) 60%,
-                rgba(2, 7, 13, 0.18) 100%
-            );
-
-    }
-
-
-    .ai-hero-content {
-
-        width: 72%;
-
-        padding: 70px 0 80px;
-
-    }
-
-
-    .ai-hero h1 {
-
-        font-size: clamp(48px, 7vw, 64px);
-
-    }
-
-
-    .ai-hero p {
-
-        font-size: 18px;
-
-    }
-
-
-    .ai-overview-grid,
-    .ai-governance-grid,
-    .ai-results-grid,
-    .ai-why-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .ai-overview-text {
-
-        padding-top: 0;
-
-    }
-
-
-    .ai-footer-grid {
-
-        grid-template-columns: 1.4fr 1fr 1fr;
-
-        gap: 40px;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
     }
 
@@ -1616,221 +1419,145 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 
 
-    .ai-container {
+    .artificial-intelligence-page .service-container {
 
-        width: calc(100% - 40px);
-
-    }
-
-
-    .ai-header-inner {
-
-        width: calc(100% - 40px);
-
-        min-height: 78px;
+        width: min(100% - 36px, 1180px);
 
     }
 
 
-    .ai-logo img {
+    .artificial-intelligence-page .service-hero {
 
-        width: 145px;
-
-    }
-
-
-    /*
-       Hero remains photographic on mobile.
-       We intentionally don't hide the image.
-    */
-
-    .ai-hero {
-
-        min-height: 720px;
-
-    }
-
-
-    .ai-hero .ai-container {
-
-        min-height: 720px;
+        min-height: 650px;
 
         align-items: flex-end;
 
     }
 
 
-    .ai-hero-background {
+    .artificial-intelligence-page .service-hero-background {
 
-        background-size: cover;
-
-        background-position: 68% center;
+        background-position: 58% center;
 
     }
 
 
-    .ai-hero-overlay {
+    .artificial-intelligence-page .service-hero-overlay {
 
         background:
-
             linear-gradient(
                 180deg,
-                rgba(2, 7, 13, 0.25) 0%,
-                rgba(2, 7, 13, 0.55) 35%,
-                rgba(2, 7, 13, 0.92) 66%,
-                rgba(2, 7, 13, 0.99) 100%
+                rgba(0, 0, 0, 0.40) 0%,
+                rgba(0, 0, 0, 0.72) 42%,
+                rgba(0, 0, 0, 0.94) 100%
             );
 
     }
 
 
-    .ai-hero-content {
+    .artificial-intelligence-page .service-hero-container {
 
-        width: 100%;
+        width: min(100% - 36px, 1180px);
 
-        padding: 50px 0 55px;
-
-    }
-
-
-    .ai-back {
-
-        margin-bottom: 28px;
-
-        font-size: 14px;
+        padding-top: 110px;
+        padding-bottom: 58px;
 
     }
 
 
-    .ai-kicker {
-
-        margin-bottom: 18px;
-
-        font-size: 12px;
-
-        letter-spacing: 3.5px;
-
-    }
-
-
-    .ai-hero h1 {
+    .artificial-intelligence-page .service-hero-content {
 
         max-width: 100%;
 
-        font-size: clamp(42px, 11vw, 54px);
+    }
 
-        line-height: 0.98;
 
-        letter-spacing: -2.2px;
+    .artificial-intelligence-page .service-hero h1 {
+
+        font-size: clamp(38px, 11vw, 56px);
+
+        letter-spacing: -0.04em;
 
     }
 
 
-    .ai-hero p {
+    .artificial-intelligence-page .service-hero .hero-description {
 
-        margin-top: 24px;
+        margin-top: 22px;
 
         font-size: 16px;
 
-        line-height: 1.6;
+        line-height: 1.65;
 
     }
 
 
-    .ai-hero-actions {
-
-        margin-top: 30px;
-
-        flex-direction: column;
+    .artificial-intelligence-page .service-hero-actions {
 
         align-items: stretch;
 
-        gap: 12px;
+        flex-direction: column;
+
+        margin-top: 30px;
 
     }
 
 
-    .ai-button {
+    .artificial-intelligence-page .service-button {
 
         width: 100%;
 
-        min-height: 56px;
+    }
+
+
+    .artificial-intelligence-page .ai-overview,
+    .artificial-intelligence-page .ai-capabilities,
+    .artificial-intelligence-page .ai-use-cases,
+    .artificial-intelligence-page .ai-approach,
+    .artificial-intelligence-page .ai-responsible,
+    .artificial-intelligence-page .ai-results,
+    .artificial-intelligence-page .ai-related,
+    .artificial-intelligence-page .ai-insights,
+    .artificial-intelligence-page .ai-cta {
+
+        padding: 78px 0;
 
     }
 
 
-    .ai-overview,
-    .ai-capabilities,
-    .ai-use-cases,
-    .ai-roadmap,
-    .ai-governance,
-    .ai-results,
-    .ai-why,
-    .ai-related-services {
+    .artificial-intelligence-page .ai-section-heading {
 
-        padding: 90px 0;
+        margin-bottom: 40px;
 
     }
 
 
-    .ai-section-heading {
-
-        margin-bottom: 48px;
-
-    }
-
-
-    .ai-section-heading h2,
-    .ai-overview-intro h2,
-    .ai-governance-grid h2,
-    .ai-results-intro h2,
-    .ai-why h2 {
-
-        font-size: 40px;
-
-        line-height: 1.05;
-
-        letter-spacing: -2px;
-
-    }
-
-
-    .ai-section-heading p,
-    .ai-overview-text p {
-
-        font-size: 16px;
-
-    }
-
-
-    .ai-capabilities-grid,
-    .ai-use-cases-grid {
+    .artificial-intelligence-page .ai-capabilities-grid,
+    .artificial-intelligence-page .ai-related-grid {
 
         grid-template-columns: 1fr;
 
     }
 
 
-    .ai-capability {
+    .artificial-intelligence-page .ai-use-cases-grid {
 
-        min-height: auto;
-
-        padding: 32px;
+        grid-template-columns: 1fr;
 
     }
 
 
-    .ai-number {
+    .artificial-intelligence-page .ai-results-list {
 
-        margin-bottom: 32px;
+        grid-template-columns: 1fr;
 
     }
 
 
-    .ai-use-case {
+    .artificial-intelligence-page .ai-capability-card {
 
         min-height: auto;
 
@@ -1839,126 +1566,75 @@
     }
 
 
-    .ai-roadmap-item {
+    .artificial-intelligence-page .ai-capability-number {
 
-        grid-template-columns: 50px 1fr;
-
-        gap: 20px;
-
-        padding: 32px 0;
+        margin-bottom: 42px;
 
     }
 
 
-    .ai-roadmap-item h3 {
+    .artificial-intelligence-page .ai-use-case {
 
-        font-size: 24px;
+        min-height: auto;
 
-    }
-
-
-    .ai-roadmap-item p {
-
-        font-size: 15px;
+        padding: 30px;
 
     }
 
 
-    .ai-governance-points {
+    .artificial-intelligence-page .ai-use-case span {
 
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .ai-result {
-
-        grid-template-columns: 45px 1fr;
+        margin-bottom: 34px;
 
     }
 
 
-    .ai-result h3 {
-
-        font-size: 20px;
-
-    }
-
-
-    .ai-result p {
-
-        font-size: 14px;
-
-    }
-
-
-    .ai-cta {
-
-        padding: 80px 0;
-
-    }
-
-
-    .ai-cta-box {
-
-        padding: 55px 28px;
-
-    }
-
-
-    .ai-cta-box h2 {
-
-        font-size: 42px;
-
-        letter-spacing: -2px;
-
-    }
-
-
-    .ai-cta-box p {
-
-        font-size: 16px;
-
-    }
-
-
-    .ai-cta-actions {
-
-        align-items: stretch;
-
-        flex-direction: column;
-
-        gap: 20px;
-
-    }
-
-
-    .ai-email {
-
-        text-align: center;
-
-    }
-
-
-    .ai-footer {
-
-        padding-top: 60px;
-
-    }
-
-
-    .ai-footer-grid {
-
-        grid-template-columns: 1fr;
+    .artificial-intelligence-page .ai-approach-grid {
 
         gap: 45px;
 
     }
 
 
-    .ai-footer-bottom {
+    .artificial-intelligence-page .ai-approach-step {
 
-        margin-top: 50px;
+        grid-template-columns: 48px minmax(0, 1fr);
+
+        gap: 16px;
+
+    }
+
+
+    .artificial-intelligence-page .ai-result {
+
+        min-height: auto;
+
+        padding: 30px;
+
+    }
+
+
+    .artificial-intelligence-page .ai-related-card {
+
+        min-height: 290px;
+
+        padding: 30px;
+
+    }
+
+
+    .artificial-intelligence-page .ai-cta h2 {
+
+        font-size: clamp(36px, 10vw, 52px);
+
+    }
+
+
+    .artificial-intelligence-page .ai-cta-actions {
+
+        flex-direction: column;
+
+        gap: 18px;
 
     }
 
@@ -1966,89 +1642,59 @@
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
 
 
-    .ai-container {
+    .artificial-intelligence-page .service-hero {
 
-        width: calc(100% - 32px);
-
-    }
-
-
-    .ai-header-inner {
-
-        width: calc(100% - 32px);
+        min-height: 610px;
 
     }
 
 
-    .ai-logo img {
+    .artificial-intelligence-page .service-hero-container {
 
-        width: 135px;
-
-    }
-
-
-    .ai-hero {
-
-        min-height: 700px;
+        padding-bottom: 45px;
 
     }
 
 
-    .ai-hero .ai-container {
+    .artificial-intelligence-page .service-hero-kicker {
 
-        min-height: 700px;
+        font-size: 10px;
 
-    }
-
-
-    .ai-hero-background {
-
-        background-position: 70% center;
+        letter-spacing: 0.13em;
 
     }
 
 
-    .ai-hero h1 {
+    .artificial-intelligence-page .service-hero h1 {
 
-        font-size: 39px;
-
-        letter-spacing: -1.8px;
+        font-size: 38px;
 
     }
 
 
-    .ai-section-heading h2,
-    .ai-overview-intro h2,
-    .ai-governance-grid h2,
-    .ai-results-intro h2,
-    .ai-why h2 {
+    .artificial-intelligence-page .ai-section-heading h2,
+    .artificial-intelligence-page .ai-overview-intro h2,
+    .artificial-intelligence-page .ai-approach h2,
+    .artificial-intelligence-page .ai-responsible-intro h2,
+    .artificial-intelligence-page .ai-results-intro h2,
+    .artificial-intelligence-page .ai-insights-content h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .artificial-intelligence-page .ai-cta h2 {
 
         font-size: 36px;
 
     }
 
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .ai-button,
-    .ai-back,
-    .ai-capability,
-    .ai-use-case {
-
-        transition: none;
-
-    }
 
 }
