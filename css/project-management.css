@@ -1,553 +1,434 @@
 /* =========================================================
    BSGA CONSULTING
-   PROJECT MANAGEMENT
-   Premium Corporate / Strategic Consulting
-   Specific stylesheet
+   PROJECT MANAGEMENT PAGE
+   css/project-management.css
+
+   Works with:
+   - css/styles.css
+   - project-management.html
+
+   Page-specific classes:
+   pm-*
 ========================================================= */
 
 
 /* =========================================================
-   VARIABLES
+   1. PAGE VARIABLES
 ========================================================= */
 
 .project-management-page {
+    --pm-navy: #07182e;
+    --pm-navy-deep: #040b15;
+    --pm-blue: #0f4c81;
+    --pm-blue-light: #2563eb;
 
-    --pm-black: #000000;
-    --pm-deep: #02070d;
-    --pm-dark: #050b12;
-    --pm-panel: #071019;
+    --pm-text: #101828;
+    --pm-muted: #667085;
 
     --pm-white: #ffffff;
-    --pm-off-white: #f5f6f8;
+    --pm-light: #f5f7fa;
+    --pm-border: #e4e7ec;
 
-    --pm-text: #d8dde5;
-    --pm-muted: #929ba8;
-    --pm-muted-dark: #68717d;
+    --pm-radius: 18px;
 
-    --pm-blue: #2f6df6;
-    --pm-blue-bright: #3d78ff;
-
-    --pm-border: rgba(255,255,255,0.14);
-    --pm-border-soft: rgba(255,255,255,0.08);
-
-    --pm-container: 1180px;
-
+    --pm-shadow:
+        0 18px 45px rgba(7, 24, 46, 0.08);
 }
 
 
 /* =========================================================
-   CONTAINER
-========================================================= */
-
-.pm-container {
-
-    width: min(
-        var(--pm-container),
-        calc(100% - 100px)
-    );
-
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-
-/* =========================================================
-   HERO
+   2. HERO
 ========================================================= */
 
 .pm-hero {
-
     position: relative;
 
-    min-height: 760px;
+    min-height: 680px;
 
     display: flex;
-
     align-items: center;
 
     overflow: hidden;
 
-    isolation: isolate;
-
-    background: var(--pm-deep);
-
+    background: var(--pm-navy);
+    color: var(--pm-white);
 }
 
-
-/* =========================================================
-   HERO IMAGE
-========================================================= */
-
 .pm-hero-background {
-
     position: absolute;
-
     inset: 0;
 
-    z-index: -2;
+    z-index: 0;
 
     background-image:
         url("../images/heroes/BSGA-Project-Management-Hero.png");
 
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 
-    background-size: cover;
-
-    background-position: center center;
-
+    transform: scale(1.01);
 }
-
-
-/* =========================================================
-   HERO OVERLAY
-========================================================= */
 
 .pm-hero-overlay {
-
     position: absolute;
-
     inset: 0;
 
-    z-index: -1;
+    z-index: 1;
 
     background:
-
         linear-gradient(
             90deg,
-            rgba(0,4,9,0.97) 0%,
-            rgba(0,5,10,0.89) 22%,
-            rgba(0,5,10,0.66) 43%,
-            rgba(0,5,10,0.34) 68%,
-            rgba(0,5,10,0.10) 100%
+            rgba(4, 11, 21, 0.94) 0%,
+            rgba(4, 11, 21, 0.84) 42%,
+            rgba(4, 11, 21, 0.48) 72%,
+            rgba(4, 11, 21, 0.30) 100%
         );
-
 }
-
-
-/* =========================================================
-   HERO CONTAINER
-========================================================= */
 
 .pm-hero-container {
-
     position: relative;
+    z-index: 2;
 
     width: min(
-        var(--pm-container),
-        calc(100% - 100px)
+        calc(100% - 48px),
+        var(--container-width)
     );
 
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 
-    padding: 115px 0 105px;
-
+    padding:
+        110px 0;
 }
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
 
 .pm-hero-content {
-
-    width: min(
-        760px,
-        100%
-    );
-
+    max-width: 760px;
 }
 
+.pm-back {
+    display: inline-flex;
+    align-items: center;
 
-/* =========================================================
-   HERO KICKER
-========================================================= */
+    margin-bottom: 34px;
 
-.pm-hero-kicker {
-
-    display: inline-block;
-
-    margin-bottom: 28px;
-
-    color: var(--pm-blue-bright);
+    color:
+        rgba(255, 255, 255, 0.76);
 
     font-size: 14px;
+    font-weight: 600;
 
-    line-height: 1.4;
-
-    font-weight: 700;
-
-    letter-spacing: 5px;
-
+    transition:
+        color var(--transition),
+        transform var(--transition);
 }
 
+.pm-back:hover {
+    color: #ffffff;
 
-/* =========================================================
-   HERO H1
-========================================================= */
+    transform: translateX(-3px);
+}
+
+.pm-hero-kicker,
+.pm-blue-kicker {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--pm-blue-light);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+    line-height: 1.3;
+}
+
+.pm-hero-kicker {
+    color: #9ecbff;
+}
 
 .pm-hero h1 {
-
     max-width: 850px;
 
-    margin: 0;
+    margin:
+        0 0 26px;
 
-    color: var(--pm-white);
+    color: #ffffff;
 
-    font-size: clamp(
-        62px,
-        6.2vw,
-        92px
-    );
-
-    line-height: 0.98;
+    font-size:
+        clamp(3.1rem, 6vw, 5.4rem);
 
     font-weight: 700;
 
-    letter-spacing: -4.5px;
+    letter-spacing: -0.045em;
 
+    line-height: 0.98;
 }
 
+.pm-hero h1 span {
+    display: block;
 
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
+    margin-top: 12px;
 
-.pm-hero-content > p {
+    color:
+        rgba(255, 255, 255, 0.78);
 
-    max-width: 680px;
-
-    margin: 38px 0 0;
-
-    color: rgba(
-        255,
-        255,
-        255,
-        0.82
-    );
-
-    font-size: 20px;
-
-    line-height: 1.65;
-
-    font-weight: 400;
-
+    font-weight: 500;
 }
 
+.pm-hero .hero-description {
+    max-width: 670px;
 
-/* =========================================================
-   HERO ACTIONS
-========================================================= */
+    margin:
+        0 0 38px;
+
+    color:
+        rgba(255, 255, 255, 0.82);
+
+    font-size: 18px;
+    line-height: 1.75;
+}
 
 .pm-hero-actions {
-
     display: flex;
+    align-items: center;
 
     flex-wrap: wrap;
 
-    align-items: center;
-
-    gap: 16px;
-
-    margin-top: 42px;
-
+    gap: 14px;
 }
-
-
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
 
 .pm-hero-button {
-
-    min-height: 60px;
+    min-height: 56px;
 
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
-    gap: 28px;
+    gap: 12px;
 
-    padding: 0 30px;
+    padding:
+        0 25px;
 
-    border: 1px solid transparent;
+    border-radius: 999px;
 
-    font-family: inherit;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    line-height: 1;
-
-    text-decoration: none;
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease;
-
-}
-
-
-.pm-hero-button:hover {
-
-    transform: translateY(-2px);
-
-}
-
-
-.pm-hero-button-primary {
-
-    background: var(--pm-blue);
-
-    color: var(--pm-white);
-
-}
-
-
-.pm-hero-button-primary:hover {
-
-    background: var(--pm-blue-bright);
-
-}
-
-
-.pm-hero-button-secondary {
-
-    background: rgba(0,0,0,0.18);
-
-    border-color: rgba(255,255,255,0.48);
-
-    color: var(--pm-white);
-
-}
-
-
-.pm-hero-button-secondary:hover {
-
-    background: rgba(255,255,255,0.06);
-
-    border-color: var(--pm-white);
-
-}
-
-
-/* =========================================================
-   GENERIC KICKER
-========================================================= */
-
-.pm-kicker {
-
-    display: inline-block;
-
-    margin-bottom: 22px;
-
-    color: var(--pm-blue);
-
-    font-size: 12px;
-
-    line-height: 1.4;
-
+    font-size: 14px;
     font-weight: 700;
 
-    letter-spacing: 4px;
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
 
+.pm-hero-button:hover {
+    transform: translateY(-2px);
+}
+
+.pm-hero-button-primary {
+    background: #ffffff;
+    color: var(--pm-navy);
+
+    border:
+        1px solid #ffffff;
+}
+
+.pm-hero-button-primary:hover {
+    background: var(--pm-blue);
+    color: #ffffff;
+
+    border-color: var(--pm-blue);
+}
+
+.pm-hero-button-secondary {
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.35);
+}
+
+.pm-hero-button-secondary:hover {
+    background: #ffffff;
+    color: var(--pm-navy);
+
+    border-color: #ffffff;
 }
 
 
 /* =========================================================
-   INTRO
+   3. OVERVIEW
 ========================================================= */
 
-.pm-intro {
+.pm-overview {
+    padding:
+        var(--section-padding) 0;
 
-    padding: 135px 0;
-
-    background: var(--pm-white);
-
-    color: #05070a;
-
+    background: #ffffff;
 }
 
-
-.pm-intro-grid {
-
+.pm-overview-grid {
     display: grid;
 
     grid-template-columns:
-        minmax(0,0.95fr)
-        minmax(0,1.05fr);
+        minmax(280px, 0.9fr)
+        minmax(360px, 1.1fr);
 
-    gap: 110px;
+    gap: 100px;
 
     align-items: start;
-
 }
 
+.pm-overview-intro {
+    position: sticky;
+    top: 40px;
+}
 
-.pm-intro h2 {
-
-    max-width: 640px;
+.pm-overview-intro h2 {
+    max-width: 520px;
 
     margin: 0;
 
-    color: #05070a;
+    font-size:
+        clamp(2.4rem, 4vw, 4rem);
 
-    font-size: clamp(
-        42px,
-        4.4vw,
-        64px
-    );
-
-    line-height: 1.04;
-
-    font-weight: 700;
-
-    letter-spacing: -2.8px;
-
+    letter-spacing: -0.035em;
 }
 
-
-.pm-intro-copy p {
-
-    max-width: 620px;
-
-    margin: 0 0 26px;
-
-    color: #4f5863;
-
-    font-size: 18px;
-
-    line-height: 1.75;
-
+.pm-overview-text {
+    max-width: 680px;
 }
 
-
-.pm-intro-copy p:last-child {
-
-    margin-bottom: 0;
-
-}
-
-
-/* =========================================================
-   CAPABILITIES
-========================================================= */
-
-.pm-capabilities {
-
-    padding: 135px 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            #050b12 0%,
-            #02070d 100%
-        );
-
-    color: var(--pm-white);
-
-}
-
-
-.pm-section-heading {
-
-    max-width: 800px;
-
-    margin-bottom: 70px;
-
-}
-
-
-.pm-section-heading h2 {
-
-    max-width: 760px;
-
-    margin: 0;
-
-    color: var(--pm-white);
-
-    font-size: clamp(
-        42px,
-        4.5vw,
-        64px
-    );
-
-    line-height: 1.04;
-
-    font-weight: 700;
-
-    letter-spacing: -2.8px;
-
-}
-
-
-.pm-section-heading p {
-
-    max-width: 650px;
-
-    margin: 28px 0 0;
+.pm-overview-text p {
+    margin-bottom: 26px;
 
     color: var(--pm-muted);
 
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.8;
+}
 
-    line-height: 1.7;
-
+.pm-overview-text p:last-child {
+    margin-bottom: 0;
 }
 
 
 /* =========================================================
-   CAPABILITY GRID
+   4. SECTION HEADINGS
 ========================================================= */
 
-.pm-capabilities-grid {
+.pm-section-heading {
+    max-width: 820px;
 
+    margin-bottom: 60px;
+}
+
+.pm-section-heading h2 {
+    margin:
+        0 0 20px;
+
+    font-size:
+        clamp(2.35rem, 4vw, 4rem);
+
+    letter-spacing: -0.04em;
+}
+
+.pm-section-heading > p {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: var(--pm-muted);
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   5. CAPABILITIES
+========================================================= */
+
+.pm-capabilities {
+    padding:
+        var(--section-padding) 0;
+
+    background: var(--pm-light);
+}
+
+.pm-capabilities-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(2,minmax(0,1fr));
+        repeat(2, minmax(0, 1fr));
 
-    gap: 1px;
-
-    background: var(--pm-border);
-
-    border: 1px solid var(--pm-border);
-
+    gap: 20px;
 }
-
-
-/* =========================================================
-   CAPABILITY CARD
-========================================================= */
 
 .pm-capability-card {
+    position: relative;
 
-    min-height: 330px;
+    min-height: 290px;
 
-    padding: 42px 40px 45px;
+    padding: 38px;
 
-    background: #050b12;
+    background: #ffffff;
+
+    border:
+        1px solid var(--pm-border);
+
+    border-radius: var(--pm-radius);
+
+    box-shadow:
+        0 10px 35px rgba(7, 24, 46, 0.035);
+
+    overflow: hidden;
 
     transition:
-        background 0.3s ease;
-
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
 }
 
+.pm-capability-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--pm-blue);
+
+    transform:
+        scaleX(0);
+
+    transform-origin: left;
+
+    transition:
+        transform var(--transition);
+}
 
 .pm-capability-card:hover {
+    transform: translateY(-5px);
 
-    background: #07111b;
+    border-color:
+        rgba(15, 76, 129, 0.25);
 
+    box-shadow: var(--pm-shadow);
 }
 
+.pm-capability-card:hover::after {
+    transform: scaleX(1);
+}
 
 .pm-capability-number {
-
     display: block;
 
     margin-bottom: 58px;
@@ -555,1201 +436,961 @@
     color: var(--pm-blue);
 
     font-size: 13px;
+    font-weight: 800;
 
-    line-height: 1;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
+    letter-spacing: 0.12em;
 }
-
-
-.pm-capability-label {
-
-    display: block;
-
-    margin-bottom: 15px;
-
-    color: #7c8794;
-
-    font-size: 11px;
-
-    line-height: 1.4;
-
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-}
-
 
 .pm-capability-card h3 {
+    margin:
+        0 0 14px;
 
+    font-size: 23px;
+
+    letter-spacing: -0.025em;
+}
+
+.pm-capability-card p {
     max-width: 520px;
 
     margin: 0;
-
-    color: var(--pm-white);
-
-    font-size: 30px;
-
-    line-height: 1.12;
-
-    font-weight: 700;
-
-    letter-spacing: -1px;
-
-}
-
-
-.pm-capability-card p {
-
-    max-width: 530px;
-
-    margin: 20px 0 0;
 
     color: var(--pm-muted);
 
-    font-size: 16px;
-
-    line-height: 1.7;
-
+    font-size: 15px;
+    line-height: 1.75;
 }
 
 
 /* =========================================================
-   LIFECYCLE
+   6. DELIVERY CHALLENGES
 ========================================================= */
 
-.pm-lifecycle {
+.pm-challenges {
+    padding:
+        var(--section-padding) 0;
 
-    padding: 135px 0;
-
-    background: var(--pm-white);
-
-    color: #05070a;
-
+    background: #ffffff;
 }
 
-
-.pm-lifecycle-grid {
-
+.pm-challenges-grid {
     display: grid;
 
     grid-template-columns:
-        minmax(0,0.9fr)
-        minmax(0,1.1fr);
+        repeat(3, minmax(0, 1fr));
 
-    gap: 120px;
+    border-top:
+        1px solid var(--pm-border);
 
+    border-left:
+        1px solid var(--pm-border);
 }
 
+.pm-challenge {
+    min-height: 270px;
 
-.pm-lifecycle-intro h2 {
+    padding: 34px;
 
-    max-width: 600px;
+    border-right:
+        1px solid var(--pm-border);
 
-    margin: 0;
-
-    color: #05070a;
-
-    font-size: clamp(
-        42px,
-        4.2vw,
-        62px
-    );
-
-    line-height: 1.04;
-
-    font-weight: 700;
-
-    letter-spacing: -2.6px;
-
+    border-bottom:
+        1px solid var(--pm-border);
 }
 
+.pm-challenge > span {
+    display: block;
 
-.pm-lifecycle-intro p {
-
-    max-width: 520px;
-
-    margin: 30px 0 0;
-
-    color: #5d6670;
-
-    font-size: 17px;
-
-    line-height: 1.7;
-
-}
-
-
-/* =========================================================
-   LIFECYCLE STEPS
-========================================================= */
-
-.pm-lifecycle-steps {
-
-    border-top: 1px solid #d9dde2;
-
-}
-
-
-.pm-lifecycle-step {
-
-    display: grid;
-
-    grid-template-columns: 70px 1fr;
-
-    gap: 28px;
-
-    padding: 32px 0;
-
-    border-bottom: 1px solid #d9dde2;
-
-}
-
-
-.pm-lifecycle-step > span {
+    margin-bottom: 54px;
 
     color: var(--pm-blue);
 
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 800;
 
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
+    letter-spacing: 0.12em;
 }
 
+.pm-challenge h3 {
+    margin:
+        0 0 13px;
 
-.pm-lifecycle-step h3 {
+    font-size: 20px;
 
-    margin: 0 0 10px;
-
-    color: #05070a;
-
-    font-size: 24px;
-
-    line-height: 1.2;
-
-    font-weight: 700;
-
+    letter-spacing: -0.02em;
 }
 
-
-.pm-lifecycle-step p {
-
-    max-width: 570px;
-
+.pm-challenge p {
     margin: 0;
 
-    color: #68717c;
+    color: var(--pm-muted);
 
-    font-size: 16px;
-
-    line-height: 1.65;
-
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   WHY BSGA
+   7. PROJECT LIFECYCLE
 ========================================================= */
 
-.pm-why {
+.pm-lifecycle {
+    padding:
+        var(--section-padding) 0;
 
-    padding: 135px 0;
+    background: var(--pm-navy);
 
-    background: #f5f6f8;
-
-    color: #05070a;
-
+    color: #ffffff;
 }
 
-
-.pm-why-grid {
-
+.pm-lifecycle-grid {
     display: grid;
 
     grid-template-columns:
-        minmax(0,0.95fr)
-        minmax(0,1.05fr);
+        minmax(280px, 0.8fr)
+        minmax(420px, 1.2fr);
 
-    gap: 110px;
+    gap: 100px;
 
+    align-items: start;
 }
 
+.pm-lifecycle-intro {
+    position: sticky;
+    top: 40px;
+}
 
-.pm-why h2 {
+.pm-lifecycle-intro h2 {
+    max-width: 500px;
 
+    margin:
+        0 0 24px;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(2.35rem, 4vw, 3.8rem);
+
+    letter-spacing: -0.04em;
+}
+
+.pm-lifecycle-intro p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.68);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pm-lifecycle .pm-blue-kicker {
+    color: #8dc5ff;
+}
+
+.pm-lifecycle-steps {
+    border-top:
+        1px solid rgba(255, 255, 255, 0.16);
+}
+
+.pm-lifecycle-step {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 24px;
+
+    padding:
+        30px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.16);
+}
+
+.pm-lifecycle-step > span {
+    color: #8dc5ff;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+}
+
+.pm-lifecycle-step h3 {
+    margin:
+        0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+}
+
+.pm-lifecycle-step p {
     max-width: 620px;
 
     margin: 0;
 
-    color: #05070a;
+    color:
+        rgba(255, 255, 255, 0.66);
 
-    font-size: clamp(
-        42px,
-        4.3vw,
-        64px
-    );
-
-    line-height: 1.04;
-
-    font-weight: 700;
-
-    letter-spacing: -2.8px;
-
-}
-
-
-.pm-why-grid > div:last-child p {
-
-    max-width: 600px;
-
-    margin: 0 0 26px;
-
-    color: #59626d;
-
-    font-size: 18px;
-
+    font-size: 14px;
     line-height: 1.75;
-
-}
-
-
-.pm-why-grid > div:last-child p:last-of-type {
-
-    margin-bottom: 35px;
-
 }
 
 
 /* =========================================================
-   PRIMARY BUTTON
+   8. RESULTS
 ========================================================= */
 
-.pm-primary-button {
+.pm-results {
+    padding:
+        var(--section-padding) 0;
 
-    min-height: 60px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 28px;
-
-    padding: 0 30px;
-
-    background: var(--pm-blue);
-
-    color: var(--pm-white);
-
-    text-decoration: none;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    transition:
-        transform 0.25s ease,
-        background 0.25s ease;
-
+    background: var(--pm-light);
 }
 
-
-.pm-primary-button:hover {
-
-    background: var(--pm-blue-bright);
-
-    transform: translateY(-2px);
-
-}
-
-
-/* =========================================================
-   RELATED SERVICES
-========================================================= */
-
-.pm-related {
-
-    padding: 135px 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            #050b12 0%,
-            #02070d 100%
-        );
-
-    color: var(--pm-white);
-
-}
-
-
-.pm-related-grid {
-
+.pm-results-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(3,minmax(0,1fr));
+        minmax(280px, 0.85fr)
+        minmax(400px, 1.15fr);
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.pm-results-intro h2 {
+    max-width: 520px;
+
+    margin:
+        0 0 22px;
+
+    font-size:
+        clamp(2.35rem, 4vw, 3.8rem);
+
+    letter-spacing: -0.04em;
+}
+
+.pm-results-intro p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: var(--pm-muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pm-results-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
     gap: 1px;
 
     background: var(--pm-border);
 
-    border: 1px solid var(--pm-border);
+    border:
+        1px solid var(--pm-border);
+}
 
+.pm-result {
+    min-height: 250px;
+
+    padding: 30px;
+
+    background: #ffffff;
+}
+
+.pm-result > span {
+    display: block;
+
+    margin-bottom: 45px;
+
+    color: var(--pm-blue);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+.pm-result h3 {
+    margin:
+        0 0 12px;
+
+    font-size: 19px;
+}
+
+.pm-result p {
+    margin: 0;
+
+    color: var(--pm-muted);
+
+    font-size: 14px;
+    line-height: 1.7;
 }
 
 
+/* =========================================================
+   9. WHY BSGA
+========================================================= */
+
+.pm-why {
+    padding:
+        var(--section-padding) 0;
+
+    background: #ffffff;
+}
+
+.pm-why-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.8fr)
+        minmax(400px, 1.2fr);
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.pm-why-grid h2 {
+    max-width: 510px;
+
+    margin: 0;
+
+    font-size:
+        clamp(2.35rem, 4vw, 3.8rem);
+
+    letter-spacing: -0.04em;
+}
+
+.pm-why-grid > div:last-child {
+    max-width: 680px;
+}
+
+.pm-why-grid > div:last-child p {
+    margin-bottom: 24px;
+
+    color: var(--pm-muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.pm-primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 54px;
+
+    margin-top: 15px;
+
+    padding:
+        0 25px;
+
+    background: var(--pm-blue);
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform var(--transition),
+        background var(--transition);
+}
+
+.pm-primary-button:hover {
+    background: var(--pm-navy);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   10. RELATED SERVICES
+========================================================= */
+
+.pm-related {
+    padding:
+        var(--section-padding) 0;
+
+    background: var(--pm-light);
+}
+
+.pm-related-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
 .pm-related-card {
-
-    position: relative;
-
     min-height: 330px;
 
     display: flex;
-
     flex-direction: column;
 
-    align-items: flex-start;
+    padding: 34px;
 
-    padding: 38px 36px 40px;
+    background: #ffffff;
 
-    background: #050b12;
+    border:
+        1px solid var(--pm-border);
 
-    color: var(--pm-white);
-
-    text-decoration: none;
+    border-radius: var(--pm-radius);
 
     transition:
-        background 0.3s ease;
-
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
 }
-
 
 .pm-related-card:hover {
+    transform: translateY(-5px);
 
-    background: #07111b;
+    border-color:
+        rgba(15, 76, 129, 0.25);
 
+    box-shadow: var(--pm-shadow);
 }
 
-
 .pm-related-card > span {
+    display: block;
 
-    margin-bottom: 55px;
+    margin-bottom: 58px;
+
+    color: var(--pm-blue);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+.pm-related-card h3 {
+    margin:
+        0 0 13px;
+
+    font-size: 21px;
+}
+
+.pm-related-card p {
+    margin: 0;
+
+    color: var(--pm-muted);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.pm-related-card strong {
+    margin-top: auto;
+    padding-top: 28px;
 
     color: var(--pm-blue);
 
     font-size: 13px;
-
     font-weight: 700;
-
-    letter-spacing: 2px;
-
-}
-
-
-.pm-related-card h3 {
-
-    margin: 0;
-
-    font-size: 27px;
-
-    line-height: 1.15;
-
-    letter-spacing: -0.8px;
-
-}
-
-
-.pm-related-card p {
-
-    max-width: 400px;
-
-    margin: 17px 0 25px;
-
-    color: var(--pm-muted);
-
-    font-size: 15px;
-
-    line-height: 1.65;
-
-}
-
-
-.pm-related-card strong {
-
-    margin-top: auto;
-
-    color: var(--pm-white);
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-}
-
-
-.pm-related-card:hover strong {
-
-    color: var(--pm-blue-bright);
-
 }
 
 
 /* =========================================================
-   CTA
+   11. INSIGHTS
 ========================================================= */
 
-.pm-cta {
+.pm-insights {
+    padding:
+        var(--section-padding) 0;
 
-    padding: 120px 0;
+    background: #ffffff;
+}
 
-    background: #02060b;
+.pm-insights-content {
+    max-width: 850px;
+}
 
+.pm-insights-content h2 {
+    max-width: 800px;
+
+    margin:
+        0 0 20px;
+
+    font-size:
+        clamp(2.35rem, 4vw, 4rem);
+
+    letter-spacing: -0.04em;
+}
+
+.pm-insights-content p {
+    max-width: 680px;
+
+    margin:
+        0 0 30px;
+
+    color: var(--pm-muted);
+
+    font-size: 17px;
+    line-height: 1.8;
 }
 
 
-.pm-cta-box {
+/* =========================================================
+   12. CTA
+========================================================= */
 
+.pm-cta {
+    padding:
+        0 0 var(--section-padding);
+
+    background: #ffffff;
+}
+
+.pm-cta-box {
     position: relative;
 
     overflow: hidden;
 
-    padding: 90px;
+    padding:
+        80px 70px;
 
     background:
         linear-gradient(
             135deg,
-            #07111c 0%,
-            #03080e 72%
+            var(--pm-navy) 0%,
+            var(--pm-blue) 100%
         );
 
-    border: 1px solid var(--pm-border-soft);
+    border-radius:
+        var(--pm-radius);
 
+    color: #ffffff;
 }
 
-
 .pm-cta-box::after {
-
     content: "";
 
     position: absolute;
 
-    width: 450px;
-    height: 450px;
+    width: 420px;
+    height: 420px;
 
-    right: -190px;
-    bottom: -260px;
+    right: -180px;
+    top: -180px;
 
     border-radius: 50%;
 
-    background: rgba(
-        47,
-        109,
-        246,
-        0.11
-    );
+    border:
+        1px solid rgba(255, 255, 255, 0.12);
 
-    filter: blur(45px);
-
+    box-shadow:
+        0 0 0 80px rgba(255, 255, 255, 0.025),
+        0 0 0 160px rgba(255, 255, 255, 0.015);
 }
 
+.pm-cta-box > * {
+    position: relative;
+    z-index: 2;
+}
+
+.pm-cta-box .pm-blue-kicker {
+    color: #9ecbff;
+}
 
 .pm-cta-box h2 {
+    max-width: 850px;
 
-    position: relative;
+    margin:
+        0 0 22px;
 
-    z-index: 1;
+    color: #ffffff;
 
-    max-width: 760px;
+    font-size:
+        clamp(2.5rem, 5vw, 4.5rem);
 
-    margin: 0;
-
-    color: var(--pm-white);
-
-    font-size: clamp(
-        44px,
-        5vw,
-        70px
-    );
-
-    line-height: 1.02;
-
-    font-weight: 700;
-
-    letter-spacing: -3px;
-
+    letter-spacing: -0.045em;
 }
-
 
 .pm-cta-box > p {
+    max-width: 760px;
 
-    position: relative;
+    margin:
+        0 0 34px;
 
-    z-index: 1;
+    color:
+        rgba(255, 255, 255, 0.76);
 
-    max-width: 650px;
-
-    margin: 28px 0 0;
-
-    color: #aeb7c2;
-
-    font-size: 18px;
-
-    line-height: 1.7;
-
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-
 .pm-cta-actions {
-
-    position: relative;
-
-    z-index: 1;
-
     display: flex;
-
     align-items: center;
 
     flex-wrap: wrap;
 
-    gap: 30px;
-
-    margin-top: 40px;
-
+    gap: 20px;
 }
 
+.pm-cta .pm-primary-button {
+    margin-top: 0;
+
+    background: #ffffff;
+    color: var(--pm-navy);
+}
+
+.pm-cta .pm-primary-button:hover {
+    background: var(--pm-navy-deep);
+    color: #ffffff;
+}
 
 .pm-email {
+    color:
+        rgba(255, 255, 255, 0.82);
 
-    color: var(--pm-white);
-
-    text-decoration: none;
-
-    font-size: 16px;
-
+    font-size: 14px;
     font-weight: 600;
 
     transition:
-        color 0.25s ease;
-
+        color var(--transition);
 }
-
 
 .pm-email:hover {
-
-    color: var(--pm-blue-bright);
-
+    color: #ffffff;
 }
 
 
 /* =========================================================
-   PROJECT PAGE FOOTER
-   Uses global .site-footer styles,
-   but reinforces compatibility.
+   13. TABLET
 ========================================================= */
 
-.project-management-page .site-footer {
-
-    background: #000000;
-
-}
-
-
-/* =========================================================
-   LARGE TABLET / SMALL LAPTOP
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .pm-container,
-    .pm-hero-container {
-
-        width: calc(100% - 70px);
-
-    }
-
+@media (max-width: 1024px) {
 
     .pm-hero {
-
-        min-height: 720px;
-
+        min-height: 620px;
     }
 
-
-    .pm-hero-background {
-
-        background-position: 58% center;
-
-    }
-
-
-    .pm-hero h1 {
-
-        font-size: clamp(
-            58px,
-            7vw,
-            82px
-        );
-
-    }
-
-
-    .pm-intro-grid,
-    .pm-why-grid {
-
-        gap: 65px;
-
-    }
-
-
-    .pm-lifecycle-grid {
-
-        gap: 70px;
-
-    }
-
-
-    .pm-related-grid {
-
-        grid-template-columns:
-            repeat(3,minmax(0,1fr));
-
-    }
-
-}
-
-
-/* =========================================================
-   IPAD
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .pm-container,
     .pm-hero-container {
-
-        width: calc(100% - 56px);
-
+        padding:
+            90px 0;
     }
 
-
-    .pm-hero {
-
-        min-height: 700px;
-
-    }
-
-
-    .pm-hero-background {
-
-        background-position: 62% center;
-
-    }
-
-
-    .pm-hero-overlay {
-
-        background:
-            linear-gradient(
-                90deg,
-                rgba(0,4,9,0.97) 0%,
-                rgba(0,5,10,0.88) 32%,
-                rgba(0,5,10,0.60) 60%,
-                rgba(0,5,10,0.20) 100%
-            );
-
-    }
-
-
-    .pm-hero h1 {
-
-        font-size: clamp(
-            56px,
-            8vw,
-            76px
-        );
-
-    }
-
-
-    .pm-hero-content > p {
-
-        font-size: 19px;
-
-    }
-
-
-    .pm-intro-grid,
+    .pm-overview-grid,
     .pm-lifecycle-grid,
+    .pm-results-grid,
     .pm-why-grid {
-
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 55px;
-
     }
 
+    .pm-overview-intro,
+    .pm-lifecycle-intro {
+        position: static;
+    }
 
     .pm-capabilities-grid {
-
-        grid-template-columns: 1fr;
-
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
+    .pm-challenges-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
 
     .pm-related-grid {
-
-        grid-template-columns: 1fr;
-
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
     }
 
-
-    .pm-capability-card {
-
-        min-height: auto;
-
+    .pm-related-card:last-child {
+        grid-column:
+            1 / -1;
     }
-
-
-    .pm-related-card {
-
-        min-height: 290px;
-
-    }
-
-
-    .pm-cta-box {
-
-        padding: 70px 55px;
-
-    }
-
 }
 
 
 /* =========================================================
-   MOBILE
+   14. MOBILE
 ========================================================= */
 
-@media (max-width: 767px) {
-
-    .pm-container,
-    .pm-hero-container {
-
-        width: calc(100% - 40px);
-
-    }
-
+@media (max-width: 768px) {
 
     .pm-hero {
-
-        min-height: 720px;
+        min-height: 650px;
 
         align-items: flex-end;
-
     }
-
-
-    .pm-hero-container {
-
-        padding:
-            70px 0
-            58px;
-
-    }
-
 
     .pm-hero-background {
-
-        background-position: 68% center;
-
+        background-position:
+            62% center;
     }
 
-
     .pm-hero-overlay {
-
         background:
             linear-gradient(
                 180deg,
-                rgba(0,4,9,0.25) 0%,
-                rgba(0,4,9,0.48) 28%,
-                rgba(0,4,9,0.82) 58%,
-                rgba(0,4,9,0.98) 100%
+                rgba(4, 11, 21, 0.42) 0%,
+                rgba(4, 11, 21, 0.76) 45%,
+                rgba(4, 11, 21, 0.96) 100%
             );
-
     }
 
+    .pm-hero-container {
+        width: calc(100% - 36px);
+
+        padding:
+            70px 0 62px;
+    }
+
+    .pm-hero-content {
+        max-width: 100%;
+    }
+
+    .pm-back {
+        margin-bottom: 24px;
+
+        font-size: 13px;
+    }
 
     .pm-hero-kicker {
-
-        margin-bottom: 20px;
+        margin-bottom: 14px;
 
         font-size: 11px;
-
-        letter-spacing: 3.5px;
-
     }
-
 
     .pm-hero h1 {
+        margin-bottom: 22px;
 
-        max-width: 620px;
-
-        font-size: clamp(
-            46px,
-            13vw,
-            64px
-        );
+        font-size:
+            clamp(2.7rem, 12vw, 4.3rem);
 
         line-height: 0.98;
-
-        letter-spacing: -2.8px;
-
     }
 
-
-    .pm-hero-content > p {
-
-        max-width: 580px;
-
-        margin-top: 25px;
-
-        font-size: 16px;
-
-        line-height: 1.62;
-
+    .pm-hero h1 span {
+        margin-top: 9px;
     }
 
-
-    .pm-hero-actions {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 12px;
-
-        margin-top: 30px;
-
-    }
-
-
-    .pm-hero-button {
-
-        width: 100%;
-
-        min-height: 56px;
-
-        padding: 0 22px;
-
-    }
-
-
-    .pm-intro,
-    .pm-capabilities,
-    .pm-lifecycle,
-    .pm-why,
-    .pm-related {
-
-        padding: 85px 0;
-
-    }
-
-
-    .pm-section-heading {
-
-        margin-bottom: 48px;
-
-    }
-
-
-    .pm-section-heading h2,
-    .pm-intro h2,
-    .pm-lifecycle-intro h2,
-    .pm-why h2 {
-
-        font-size: 39px;
-
-        line-height: 1.06;
-
-        letter-spacing: -1.8px;
-
-    }
-
-
-    .pm-section-heading p {
-
-        margin-top: 20px;
-
-        font-size: 16px;
-
-    }
-
-
-    .pm-intro-copy p,
-    .pm-lifecycle-intro p,
-    .pm-why-grid > div:last-child p {
-
-        font-size: 16px;
-
-        line-height: 1.7;
-
-    }
-
-
-    .pm-capability-card {
-
-        padding: 32px 27px 35px;
-
-    }
-
-
-    .pm-capability-number {
-
-        margin-bottom: 42px;
-
-    }
-
-
-    .pm-capability-card h3 {
-
-        font-size: 27px;
-
-    }
-
-
-    .pm-capability-card p {
+    .pm-hero .hero-description {
+        margin-bottom: 28px;
 
         font-size: 15px;
-
+        line-height: 1.7;
     }
 
+    .pm-hero-actions {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .pm-hero-button {
+        width: 100%;
+
+        min-height: 54px;
+    }
+
+    .pm-section-heading {
+        margin-bottom: 42px;
+    }
+
+    .pm-overview-grid,
+    .pm-lifecycle-grid,
+    .pm-results-grid,
+    .pm-why-grid {
+        gap: 42px;
+    }
+
+    .pm-overview-intro h2,
+    .pm-results-intro h2,
+    .pm-why-grid h2,
+    .pm-lifecycle-intro h2,
+    .pm-insights-content h2 {
+        font-size:
+            clamp(2.25rem, 10vw, 3.25rem);
+    }
+
+    .pm-overview-text p {
+        font-size: 15px;
+    }
+
+    .pm-capabilities-grid,
+    .pm-challenges-grid,
+    .pm-related-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pm-related-card:last-child {
+        grid-column: auto;
+    }
+
+    .pm-capability-card {
+        min-height: 0;
+
+        padding: 30px;
+    }
+
+    .pm-capability-number,
+    .pm-related-card > span {
+        margin-bottom: 38px;
+    }
+
+    .pm-challenge {
+        min-height: 0;
+
+        padding: 30px;
+    }
+
+    .pm-challenge > span {
+        margin-bottom: 38px;
+    }
 
     .pm-lifecycle-step {
-
         grid-template-columns:
             42px 1fr;
 
         gap: 14px;
 
-        padding: 27px 0;
-
+        padding:
+            25px 0;
     }
 
-
-    .pm-lifecycle-step h3 {
-
-        font-size: 22px;
-
+    .pm-results-list {
+        grid-template-columns: 1fr;
     }
 
+    .pm-result {
+        min-height: 0;
 
-    .pm-lifecycle-step p {
+        padding: 28px;
+    }
 
+    .pm-result > span {
+        margin-bottom: 30px;
+    }
+
+    .pm-why-grid > div:last-child p {
         font-size: 15px;
-
     }
-
 
     .pm-related-card {
+        min-height: 290px;
 
-        min-height: 270px;
-
-        padding: 32px 27px 35px;
-
+        padding: 30px;
     }
 
-
-    .pm-related-card > span {
-
-        margin-bottom: 42px;
-
-    }
-
-
-    .pm-related-card h3 {
-
-        font-size: 25px;
-
-    }
-
-
-    .pm-related-card p {
-
+    .pm-insights-content p {
         font-size: 15px;
-
     }
-
-
-    .pm-cta {
-
-        padding: 80px 0;
-
-    }
-
 
     .pm-cta-box {
-
-        padding: 55px 27px;
-
+        padding:
+            58px 28px;
     }
-
 
     .pm-cta-box h2 {
-
-        font-size: 42px;
-
-        line-height: 1.04;
-
-        letter-spacing: -2px;
-
+        font-size:
+            clamp(2.35rem, 10vw, 3.5rem);
     }
-
 
     .pm-cta-box > p {
-
-        font-size: 16px;
-
-        line-height: 1.65;
-
+        font-size: 15px;
     }
 
-
     .pm-cta-actions {
-
         align-items: stretch;
 
         flex-direction: column;
-
-        gap: 22px;
-
     }
 
-
-    .pm-primary-button {
-
+    .pm-cta .pm-primary-button {
         width: 100%;
-
     }
-
 
     .pm-email {
-
         text-align: center;
-
     }
-
 }
 
 
 /* =========================================================
-   SMALL IPHONE
+   15. SMALL PHONES
 ========================================================= */
 
-@media (max-width: 390px) {
-
-    .pm-container,
-    .pm-hero-container {
-
-        width: calc(100% - 32px);
-
-    }
-
+@media (max-width: 480px) {
 
     .pm-hero {
-
-        min-height: 700px;
-
+        min-height: 680px;
     }
 
+    .pm-hero-container {
+        width: calc(100% - 32px);
+
+        padding-bottom: 48px;
+    }
 
     .pm-hero h1 {
-
-        font-size: 44px;
-
-        letter-spacing: -2px;
-
+        font-size:
+            clamp(2.5rem, 12vw, 3.35rem);
     }
 
-
-    .pm-hero-content > p {
-
-        font-size: 15.5px;
-
+    .pm-hero .hero-description {
+        font-size: 14px;
     }
 
-
-    .pm-section-heading h2,
-    .pm-intro h2,
-    .pm-lifecycle-intro h2,
-    .pm-why h2 {
-
-        font-size: 35px;
-
+    .pm-blue-kicker {
+        font-size: 10px;
     }
 
+    .pm-capability-card,
+    .pm-challenge,
+    .pm-result,
+    .pm-related-card {
+        padding: 26px;
+    }
+
+    .pm-cta-box {
+        padding:
+            48px 24px;
+    }
 
     .pm-cta-box h2 {
-
-        font-size: 38px;
-
+        font-size:
+            clamp(2.2rem, 11vw, 3rem);
     }
-
-
-    .pm-capability-card h3 {
-
-        font-size: 25px;
-
-    }
-
 }
 
 
 /* =========================================================
-   TOUCH DEVICES
-========================================================= */
-
-@media (hover: none) {
-
-    .pm-hero-button:hover,
-    .pm-primary-button:hover {
-
-        transform: none;
-
-    }
-
-
-    .pm-capability-card:hover,
-    .pm-related-card:hover {
-
-        background: #050b12;
-
-    }
-
-}
-
-
-/* =========================================================
-   REDUCED MOTION
+   16. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .project-management-page *,
-    .project-management-page *::before,
-    .project-management-page *::after {
-
-        transition: none !important;
-
-        animation: none !important;
-
+    .pm-capability-card,
+    .pm-related-card,
+    .pm-primary-button,
+    .pm-hero-button,
+    .pm-back {
+        transition: none;
     }
-
 }
