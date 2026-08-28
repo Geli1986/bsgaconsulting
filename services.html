@@ -1,833 +1,1344 @@
-/* =========================================================
-   BSGA CONSULTING
-   SERVICES PAGE
-   services.css
-========================================================= */
-/* =========================================================
-   PAGE FOUNDATION
-========================================================= */
-.services-page {
-    background: #ffffff;
-    color: #111111;
-}
-.services-page main {
-    overflow: hidden;
-}
-.services-container {
-    width: min(1180px, calc(100% - 48px));
-    margin: 0 auto;
-}
-/* =========================================================
-   HERO
-========================================================= */
-.services-hero {
-    position: relative;
-    min-height: 720px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: #080808;
-    color: #ffffff;
-}
-.services-hero-background {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-}
-.services-hero-background img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: center center;
-}
-.services-hero-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.88) 0%,
-            rgba(0, 0, 0, 0.72) 38%,
-            rgba(0, 0, 0, 0.38) 72%,
-            rgba(0, 0, 0, 0.22) 100%
-        );
-}
-.services-hero-container {
-    position: relative;
-    z-index: 2;
-    width: min(1180px, calc(100% - 48px));
-    margin: 0 auto;
-    padding: 150px 0 120px;
-}
-.services-hero-content {
-    width: min(760px, 100%);
-}
-.services-hero-kicker,
-.services-kicker {
-    display: inline-block;
-    margin-bottom: 22px;
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-}
-.services-hero-kicker {
-    color: rgba(255, 255, 255, 0.72);
-}
-.services-hero h1 {
-    max-width: 850px;
-    margin: 0;
-    font-size: clamp(44px, 6vw, 76px);
-    line-height: 0.98;
-    font-weight: 700;
-    letter-spacing: -0.045em;
-    color: #ffffff;
-}
-.services-hero p {
-    max-width: 690px;
-    margin: 30px 0 0;
-    font-size: 18px;
-    line-height: 1.7;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.82);
-}
-.services-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 14px;
-    margin-top: 38px;
-}
-.services-hero-button {
-    min-height: 52px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    padding: 14px 23px;
-    border: 1px solid transparent;
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 600;
-    text-decoration: none;
-    transition:
-        background-color 180ms ease,
-        border-color 180ms ease,
-        color 180ms ease,
-        transform 180ms ease;
-}
-.services-hero-button:hover {
-    transform: translateY(-2px);
-}
-.services-hero-button-primary {
-    background: #ffffff;
-    color: #111111;
-    border-color: #ffffff;
-}
-.services-hero-button-primary:hover {
-    background: transparent;
-    color: #ffffff;
-}
-.services-hero-button-secondary {
-    background: transparent;
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.45);
-}
-.services-hero-button-secondary:hover {
-    background: #ffffff;
-    color: #111111;
-    border-color: #ffffff;
-}
-/* =========================================================
-   INTRO
-========================================================= */
-.services-intro {
-    padding: 115px 0 105px;
-    background: #ffffff;
-}
-.services-intro-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-    gap: 90px;
-    align-items: start;
-}
-.services-intro-heading h2,
-.services-section-heading h2,
-.services-approach-intro h2,
-.services-why h2,
-.services-insights-link h2,
-.services-cta h2 {
-    margin: 0;
-    color: #111111;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-}
-.services-kicker {
-    color: #666666;
-}
-.services-intro-heading h2 {
-    max-width: 560px;
-    font-size: clamp(38px, 4.5vw, 58px);
-    line-height: 1.04;
-}
-.services-intro-copy {
-    max-width: 610px;
-    padding-top: 5px;
-}
-.services-intro-copy p {
-    margin: 0 0 24px;
-    font-size: 18px;
-    line-height: 1.75;
-    color: #555555;
-}
-.services-intro-copy p:last-child {
-    margin-bottom: 0;
-}
-/* =========================================================
-   SERVICES LIST
-========================================================= */
-.services-list {
-    padding: 110px 0 125px;
-    background: #f6f6f4;
-}
-.services-section-heading {
-    max-width: 800px;
-    margin-bottom: 60px;
-}
-.services-section-heading h2 {
-    font-size: clamp(38px, 4.5vw, 58px);
-    line-height: 1.04;
-}
-.services-section-heading p {
-    max-width: 720px;
-    margin: 25px 0 0;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #5c5c5c;
-}
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-}
-/* =========================================================
-   SERVICE CARD
-========================================================= */
-.service-card {
-    position: relative;
-    display: flex;
-    min-height: 500px;
-    padding: 42px;
-    background: #ffffff;
-    border: 1px solid #e7e7e4;
-    overflow: hidden;
-    transition:
-        transform 220ms ease,
-        box-shadow 220ms ease,
-        border-color 220ms ease;
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: #d6d6d2;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.07);
-}
-.service-card-number {
-    flex: 0 0 auto;
-    width: 54px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 28px;
-    border: 1px solid #dcdcd8;
-    font-size: 13px;
-    font-weight: 700;
-    color: #333333;
-}
-.service-card-content {
-    display: flex;
-    flex: 1;
-    min-width: 0;
-    flex-direction: column;
-}
-.service-card-label {
-    display: block;
-    margin-bottom: 17px;
-    font-size: 11px;
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: #777777;
-}
-.service-card h3 {
-    margin: 0;
-    font-size: clamp(25px, 2.4vw, 34px);
-    line-height: 1.12;
-    font-weight: 700;
-    letter-spacing: -0.035em;
-    color: #111111;
-}
-.service-card p {
-    margin: 20px 0 25px;
-    font-size: 15px;
-    line-height: 1.7;
-    color: #5b5b5b;
-}
-.service-card ul {
-    display: grid;
-    gap: 11px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.service-card li {
-    position: relative;
-    padding-left: 18px;
-    font-size: 14px;
-    line-height: 1.45;
-    color: #333333;
-}
-.service-card li::before {
-    content: "";
-    position: absolute;
-    top: 0.65em;
-    left: 0;
-    width: 5px;
-    height: 5px;
-    background: #111111;
-    border-radius: 50%;
-    transform: translateY(-50%);
-}
-.service-card-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    width: fit-content;
-    margin-top: auto;
-    padding-top: 32px;
-    font-size: 14px;
-    line-height: 1.4;
-    font-weight: 700;
-    color: #111111;
-    text-decoration: none;
-    border-bottom: 1px solid #111111;
-    transition:
-        gap 180ms ease,
-        opacity 180ms ease;
-}
-.service-card-link span {
-    font-size: 18px;
-    line-height: 1;
-}
-.service-card-link:hover {
-    gap: 17px;
-    opacity: 0.65;
-}
-/* =========================================================
-   APPROACH
-========================================================= */
-.services-approach {
-    padding: 120px 0;
-    background: #ffffff;
-}
-.services-approach-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 100px;
-    align-items: start;
-}
-.services-approach-intro {
-    position: sticky;
-    top: 110px;
-}
-.services-approach-intro h2 {
-    max-width: 560px;
-    font-size: clamp(38px, 4.5vw, 58px);
-    line-height: 1.04;
-}
-.services-approach-intro p {
-    max-width: 510px;
-    margin: 28px 0 0;
-    font-size: 17px;
-    line-height: 1.75;
-    color: #5c5c5c;
-}
-.services-approach-steps {
-    border-top: 1px solid #dededb;
-}
-.services-approach-step {
-    display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    gap: 26px;
-    padding: 32px 0;
-    border-bottom: 1px solid #dededb;
-}
-.services-approach-step > span {
-    font-size: 12px;
-    line-height: 1.5;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: #777777;
-}
-.services-approach-step h3 {
-    margin: 0;
-    font-size: 25px;
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    color: #111111;
-}
-.services-approach-step p {
-    max-width: 520px;
-    margin: 10px 0 0;
-    font-size: 15px;
-    line-height: 1.65;
-    color: #5b5b5b;
-}
-/* =========================================================
-   WHY BSGA
-========================================================= */
-.services-why {
-    padding: 120px 0;
-    background: #111111;
-    color: #ffffff;
-}
-.services-why-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 100px;
-    align-items: start;
-}
-.services-why .services-kicker {
-    color: rgba(255, 255, 255, 0.58);
-}
-.services-why h2 {
-    max-width: 570px;
-    color: #ffffff;
-    font-size: clamp(38px, 4.5vw, 58px);
-    line-height: 1.04;
-}
-.services-why-grid > div:last-child {
-    max-width: 570px;
-}
-.services-why p {
-    margin: 0 0 25px;
-    font-size: 17px;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.72);
-}
-.services-why p:last-of-type {
-    margin-bottom: 34px;
-}
-/* =========================================================
-   PRIMARY BUTTON
-========================================================= */
-.services-primary-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 13px;
-    min-height: 52px;
-    padding: 14px 22px;
-    border: 1px solid #111111;
-    background: #111111;
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 600;
-    text-decoration: none;
-    transition:
-        background-color 180ms ease,
-        border-color 180ms ease,
-        color 180ms ease,
-        transform 180ms ease;
-}
-.services-primary-button:hover {
-    background: #ffffff;
-    border-color: #ffffff;
-    color: #111111;
-    transform: translateY(-2px);
-}
-.services-why .services-primary-button {
-    background: #ffffff;
-    border-color: #ffffff;
-    color: #111111;
-}
-.services-why .services-primary-button:hover {
-    background: transparent;
-    border-color: rgba(255, 255, 255, 0.65);
-    color: #ffffff;
-}
-/* =========================================================
-   INSIGHTS CROSS-LINK
-========================================================= */
-.services-insights-link {
-    padding: 115px 0;
-    background: #f6f6f4;
-}
-.services-insights-link-content {
-    max-width: 900px;
-}
-.services-insights-link h2 {
-    max-width: 850px;
-    font-size: clamp(38px, 4.5vw, 58px);
-    line-height: 1.05;
-}
-.services-insights-link p {
-    max-width: 690px;
-    margin: 26px 0 32px;
-    font-size: 17px;
-    line-height: 1.75;
-    color: #5c5c5c;
-}
-/* =========================================================
-   CTA
-========================================================= */
-.services-cta {
-    padding: 100px 0;
-    background: #ffffff;
-}
-.services-cta-box {
-    padding: 75px 80px;
-    background: #f2f2ef;
-    border: 1px solid #e1e1dd;
-}
-.services-cta-box .services-kicker {
-    color: #666666;
-}
-.services-cta h2 {
-    max-width: 800px;
-    font-size: clamp(40px, 5vw, 64px);
-    line-height: 1.02;
-}
-.services-cta p {
-    max-width: 720px;
-    margin: 25px 0 34px;
-    font-size: 17px;
-    line-height: 1.75;
-    color: #5b5b5b;
-}
-.services-cta-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 25px;
-}
-.services-email {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333333;
-    text-decoration: none;
-    border-bottom: 1px solid #777777;
-    transition:
-        color 180ms ease,
-        border-color 180ms ease;
-}
-.services-email:hover {
-    color: #000000;
-    border-color: #000000;
-}
-/* =========================================================
-   FOOTER
-========================================================= */
-.services-footer {
-    padding: 75px 0 28px;
-    background: #080808;
-    color: #ffffff;
-}
-.services-footer-grid {
-    display: grid;
-    grid-template-columns: minmax(250px, 1.5fr) repeat(3, minmax(150px, 1fr));
-    gap: 55px;
-    padding-bottom: 65px;
-}
-.services-footer-brand img {
-    display: block;
-    width: 175px;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 25px;
-}
-.services-footer-brand p {
-    max-width: 390px;
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.58);
-}
-.services-footer h4 {
-    margin: 4px 0 22px;
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.55);
-}
-.services-footer-grid > div:not(.services-footer-brand) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.services-footer-grid a {
-    display: block;
-    margin-bottom: 12px;
-    font-size: 14px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.78);
-    text-decoration: none;
-    transition: color 180ms ease;
-}
-.services-footer-grid a:hover {
-    color: #ffffff;
-}
-.services-footer-bottom {
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    font-size: 12px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.42);
-}
-/* =========================================================
-   FOCUS STATES
-========================================================= */
-.services-page a:focus-visible,
-.services-page button:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
-}
-/* =========================================================
-   TABLET
-========================================================= */
-@media (max-width: 1000px) {
-    .services-hero {
-        min-height: 650px;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Consulting Services | Project Management, Transformation, Operations & AI | BSGA Consulting
+    </title>
+
+    <meta
+        name="description"
+        content="Explore BSGA Consulting services in project management, business transformation, operational excellence and AI consulting. Practical solutions focused on measurable business results."
+    >
+
+    <meta
+        name="author"
+        content="BSGA Consulting"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
+
+    <meta
+        name="googlebot"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
+
+    <meta
+        name="theme-color"
+        content="#000000"
+    >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
+    >
+
+    <!-- CANONICAL -->
+
+    <link
+        rel="canonical"
+        href="https://bsgaconsulting.es/services.html"
+    >
+
+    <!-- FAVICONS -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="512x512"
+        href="images/logos/favicon.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="images/logos/apple-touch-icon.png"
+    >
+
+    <link
+        rel="manifest"
+        href="/manifest.webmanifest"
+    >
+
+    <!-- FONTS -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- HERO IMAGE -->
+
+    <link
+        rel="preload"
+        as="image"
+        href="images/heroes/BSGA-Services-Hero.png"
+        fetchpriority="high"
+    >
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/services.css"
+    >
+
+    <!-- OPEN GRAPH -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://bsgaconsulting.es/services.html"
+    >
+
+    <meta
+        property="og:title"
+        content="Consulting Services | Project Management, Transformation, Operations & AI | BSGA Consulting"
+    >
+
+    <meta
+        property="og:description"
+        content="Practical consulting across project management, business transformation, operational excellence and artificial intelligence, focused on measurable business results."
+    >
+
+    <meta
+        property="og:image"
+        content="https://bsgaconsulting.es/images/heroes/BSGA-Services-Hero.png"
+    >
+
+    <meta
+        property="og:image:width"
+        content="1200"
+    >
+
+    <meta
+        property="og:image:height"
+        content="630"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="BSGA Consulting business consulting services"
+    >
+
+    <meta
+        property="og:site_name"
+        content="BSGA Consulting"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_GB"
+    >
+
+    <!-- TWITTER / X -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Consulting Services | Project Management, Transformation, Operations & AI | BSGA Consulting"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Practical consulting across project management, business transformation, operational excellence and artificial intelligence, focused on measurable business results."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://bsgaconsulting.es/images/heroes/BSGA-Services-Hero.png"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="BSGA Consulting business consulting services"
+    >
+
+    <!-- STRUCTURED DATA -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+
+            {
+                "@type": "Organization",
+                "@id": "https://bsgaconsulting.es/#organization",
+                "name": "BSGA Consulting",
+                "url": "https://bsgaconsulting.es/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://bsgaconsulting.es/#logo",
+                    "url": "https://bsgaconsulting.es/images/logos/logo-white.png",
+                    "contentUrl": "https://bsgaconsulting.es/images/logos/logo-white.png"
+                },
+                "email": "info@bsgaconsulting.es",
+                "description": "Strategic business consulting focused on project management, business transformation, operational excellence and artificial intelligence."
+            },
+
+            {
+                "@type": "WebSite",
+                "@id": "https://bsgaconsulting.es/#website",
+                "url": "https://bsgaconsulting.es/",
+                "name": "BSGA Consulting",
+                "publisher": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "inLanguage": "en"
+            },
+
+            {
+                "@type": "WebPage",
+                "@id": "https://bsgaconsulting.es/services.html#webpage",
+                "url": "https://bsgaconsulting.es/services.html",
+                "name": "Consulting Services | BSGA Consulting",
+                "description": "Explore BSGA Consulting services in project management, business transformation, operational excellence and artificial intelligence.",
+                "isPartOf": {
+                    "@id": "https://bsgaconsulting.es/#website"
+                },
+                "about": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "primaryImageOfPage": {
+                    "@id": "https://bsgaconsulting.es/services.html#primaryimage"
+                },
+                "breadcrumb": {
+                    "@id": "https://bsgaconsulting.es/services.html#breadcrumb"
+                },
+                "inLanguage": "en"
+            },
+
+            {
+                "@type": "ImageObject",
+                "@id": "https://bsgaconsulting.es/services.html#primaryimage",
+                "url": "https://bsgaconsulting.es/images/heroes/BSGA-Services-Hero.png",
+                "contentUrl": "https://bsgaconsulting.es/images/heroes/BSGA-Services-Hero.png",
+                "name": "BSGA Consulting Services",
+                "description": "Business consulting services covering project management, business transformation, operational excellence and artificial intelligence."
+            },
+
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://bsgaconsulting.es/services.html#breadcrumb",
+                "itemListElement": [
+
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://bsgaconsulting.es/"
+                    },
+
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Consulting Services",
+                        "item": "https://bsgaconsulting.es/services.html"
+                    }
+
+                ]
+            },
+
+            {
+                "@type": "ItemList",
+                "@id": "https://bsgaconsulting.es/services.html#services",
+                "name": "BSGA Consulting Services",
+                "numberOfItems": 4,
+                "itemListOrder": "https://schema.org/ItemListOrderAscending",
+                "itemListElement": [
+
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Project Management Consulting",
+                        "url": "https://bsgaconsulting.es/project-management.html"
+                    },
+
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Business Transformation Consulting",
+                        "url": "https://bsgaconsulting.es/business-transformation.html"
+                    },
+
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Operational Excellence Consulting",
+                        "url": "https://bsgaconsulting.es/operational-excellence.html"
+                    },
+
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Artificial Intelligence Consulting",
+                        "url": "https://bsgaconsulting.es/artificial-intelligence.html"
+                    }
+
+                ]
+            }
+
+        ]
     }
-    .services-hero-container {
-        padding-top: 125px;
-        padding-bottom: 100px;
-    }
-    .services-intro-grid,
-    .services-approach-grid,
-    .services-why-grid {
-        grid-template-columns: 1fr;
-        gap: 55px;
-    }
-    .services-approach-intro {
-        position: static;
-    }
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-    .services-footer-grid {
-        grid-template-columns: 1.5fr 1fr 1fr;
-    }
-    .services-footer-brand {
-        grid-column: 1 / -1;
-    }
-}
-/* =========================================================
-   MOBILE
-========================================================= */
-@media (max-width: 700px) {
-    .services-container,
-    .services-hero-container {
-        width: min(100% - 36px, 1180px);
-    }
-    /* HERO */
-    .services-hero {
-        min-height: 680px;
-        align-items: flex-end;
-    }
-    .services-hero-background img {
-        object-position: center center;
-    }
-    .services-hero-overlay {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(0, 0, 0, 0.35) 0%,
-                rgba(0, 0, 0, 0.72) 48%,
-                rgba(0, 0, 0, 0.94) 100%
-            );
-    }
-    .services-hero-container {
-        padding: 110px 0 65px;
-    }
-    .services-hero-kicker {
-        margin-bottom: 18px;
-    }
-    .services-hero h1 {
-        font-size: clamp(40px, 12vw, 58px);
-        line-height: 1;
-        letter-spacing: -0.045em;
-    }
-    .services-hero p {
-        margin-top: 24px;
-        font-size: 16px;
-        line-height: 1.65;
-    }
-    .services-hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-        margin-top: 30px;
-    }
-    .services-hero-button {
-        width: 100%;
-    }
-    /* SECTIONS */
-    .services-intro,
-    .services-list,
-    .services-approach,
-    .services-why,
-    .services-insights-link {
-        padding: 78px 0;
-    }
-    .services-cta {
-        padding: 65px 0;
-    }
-    .services-intro-grid,
-    .services-approach-grid,
-    .services-why-grid {
-        gap: 38px;
-    }
-    .services-intro-heading h2,
-    .services-section-heading h2,
-    .services-approach-intro h2,
-    .services-why h2,
-    .services-insights-link h2 {
-        font-size: clamp(34px, 10vw, 48px);
-        line-height: 1.06;
-    }
-    .services-intro-copy p,
-    .services-section-heading p,
-    .services-approach-intro p,
-    .services-why p,
-    .services-insights-link p,
-    .services-cta p {
-        font-size: 16px;
-        line-height: 1.7;
-    }
-    /* SERVICE CARDS */
-    .services-section-heading {
-        margin-bottom: 40px;
-    }
-    .services-grid {
-        gap: 15px;
-    }
-    .service-card {
-        display: block;
-        min-height: auto;
-        padding: 30px 25px 32px;
-    }
-    .service-card-number {
-        width: 46px;
-        height: 46px;
-        margin: 0 0 27px;
-    }
-    .service-card h3 {
-        font-size: 27px;
-    }
-    .service-card p {
-        font-size: 15px;
-        margin-top: 17px;
-    }
-    .service-card-link {
-        margin-top: 30px;
-        padding-top: 0;
-    }
-    /* APPROACH */
-    .services-approach-step {
-        grid-template-columns: 42px minmax(0, 1fr);
-        gap: 15px;
-        padding: 26px 0;
-    }
-    .services-approach-step h3 {
-        font-size: 22px;
-    }
-    .services-approach-step p {
-        font-size: 14px;
-    }
-    /* WHY */
-    .services-why-grid {
-        gap: 35px;
-    }
-    /* CTA */
-    .services-cta-box {
-        padding: 42px 27px;
-    }
-    .services-cta h2 {
-        font-size: clamp(36px, 10vw, 50px);
-    }
-    .services-cta-actions {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 22px;
-    }
-    /* FOOTER */
-    .services-footer {
-        padding: 60px 0 25px;
-    }
-    .services-footer-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding-bottom: 45px;
-    }
-    .services-footer-brand {
-        grid-column: auto;
-    }
-    .services-footer-brand p {
-        font-size: 13px;
-    }
-    .services-footer h4 {
-        margin-bottom: 17px;
-    }
-    .services-footer-grid a {
-        margin-bottom: 10px;
-    }
-}
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-@media (max-width: 420px) {
-    .services-container,
-    .services-hero-container {
-        width: calc(100% - 30px);
-    }
-    .services-hero {
-        min-height: 650px;
-    }
-    .services-hero h1 {
-        font-size: 39px;
-    }
-    .service-card {
-        padding: 27px 21px 30px;
-    }
-    .service-card h3 {
-        font-size: 25px;
-    }
-    .services-cta-box {
-        padding: 36px 22px;
-    }
-}
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-@media (prefers-reduced-motion: reduce) {
-    .service-card,
-    .service-card-link,
-    .services-primary-button,
-    .services-hero-button,
-    .services-email {
-        transition: none;
-    }
-    .service-card:hover,
-    .services-primary-button:hover,
-    .services-hero-button:hover {
-        transform: none;
-    }
-}
+    </script>
+
+</head>
+
+<body class="services-page">
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="BSGA Consulting Home"
+        >
+
+            <img
+                src="images/logos/logo-white.png"
+                alt="BSGA Consulting"
+                width="178"
+                height="auto"
+            >
+
+        </a>
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav
+            class="main-navigation"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="services.html"
+                class="active"
+                aria-current="page"
+            >
+                Services
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="insights.html">
+                Insights
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <!-- HEADER CTA -->
+
+        <a
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="header-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Schedule a consultation with BSGA Consulting"
+        >
+
+            <span class="header-cta-text">
+                Schedule a Consultation
+            </span>
+
+            <span
+                class="header-cta-arrow"
+                aria-hidden="true"
+            >
+                →
+            </span>
+
+        </a>
+
+        <!-- MOBILE MENU -->
+
+        <button
+            id="menuToggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+    <!-- MOBILE NAVIGATION -->
+
+    <nav
+        id="mobileNav"
+        class="mobile-nav"
+        aria-label="Mobile navigation"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a
+            href="services.html"
+            class="active"
+            aria-current="page"
+        >
+            Services
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="insights.html">
+            Insights
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="mobile-nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Schedule a consultation with BSGA Consulting"
+        >
+
+            <span>
+                Schedule a Consultation
+            </span>
+
+            <span aria-hidden="true">
+                →
+            </span>
+
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+    class="services-hero"
+    aria-labelledby="services-hero-title"
+>
+
+    <div class="services-hero-background">
+
+        <img
+            src="images/heroes/BSGA-Services-Hero.png"
+            alt="Architectural environment representing strategy, structure and business transformation"
+            width="1920"
+            height="900"
+            fetchpriority="high"
+            decoding="async"
+        >
+
+    </div>
+
+    <div
+        class="services-hero-overlay"
+        aria-hidden="true"
+    ></div>
+
+    <div class="services-hero-container">
+
+        <div class="services-hero-content">
+
+            <span class="services-hero-kicker">
+                BSGA CONSULTING SERVICES
+            </span>
+
+            <h1 id="services-hero-title">
+                Consulting services for
+                strategy, transformation,
+                operations and AI.
+            </h1>
+
+            <p>
+                BSGA Consulting helps organisations turn strategic
+                priorities into measurable business results through
+                project management, business transformation,
+                operational excellence and artificial intelligence.
+            </p>
+
+            <div class="services-hero-actions">
+
+                <a
+                    href="contact.html"
+                    class="services-hero-button services-hero-button-primary"
+                >
+
+                    Discuss Your Challenge
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
+                </a>
+
+                <a
+                    href="#services"
+                    class="services-hero-button services-hero-button-secondary"
+                >
+
+                    Explore Our Services
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES INTRO
+========================================================= -->
+
+<section
+    class="services-intro"
+    aria-labelledby="services-intro-heading"
+>
+
+    <div class="services-container">
+
+        <div class="services-intro-grid">
+
+            <div class="services-intro-heading">
+
+                <span class="services-kicker">
+                    WHAT WE DO
+                </span>
+
+                <h2 id="services-intro-heading">
+                    Consulting built around
+                    the challenges that matter.
+                </h2>
+
+            </div>
+
+            <div class="services-intro-copy">
+
+                <p>
+                    BSGA Consulting helps organisations improve
+                    performance, deliver strategic initiatives and
+                    navigate complex business transformation.
+                </p>
+
+                <p>
+                    Our consulting services combine strategic thinking,
+                    disciplined execution and practical technology
+                    adoption to create measurable business value.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section
+    id="services"
+    class="services-list"
+    aria-labelledby="services-heading"
+>
+
+    <div class="services-container">
+
+        <div class="services-section-heading">
+
+            <span class="services-kicker">
+                OUR SERVICES
+            </span>
+
+            <h2 id="services-heading">
+                Four capabilities.
+                One focus: measurable results.
+            </h2>
+
+            <p>
+                Our consulting services can be delivered individually
+                or combined to address complex business challenges,
+                from strategic project delivery and transformation
+                through to operational performance and AI adoption.
+            </p>
+
+        </div>
+
+        <div class="services-grid">
+
+            <!-- =================================================
+                 PROJECT MANAGEMENT
+            ================================================== -->
+
+            <article class="service-card">
+
+                <div class="service-card-number">
+                    01
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-card-label">
+                        DELIVERY
+                    </span>
+
+                    <h3>
+                        Project Management Consulting
+                    </h3>
+
+                    <p>
+                        Project management consulting that brings
+                        structure, governance and delivery discipline
+                        to complex projects, programmes and strategic
+                        initiatives.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Project &amp; Programme Management
+                        </li>
+
+                        <li>
+                            PMO &amp; Governance
+                        </li>
+
+                        <li>
+                            Risk &amp; Dependency Management
+                        </li>
+
+                        <li>
+                            Delivery Assurance
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="project-management.html"
+                        class="service-card-link"
+                        aria-label="Explore Project Management Consulting"
+                    >
+
+                        Explore Project Management
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- =================================================
+                 BUSINESS TRANSFORMATION
+            ================================================== -->
+
+            <article class="service-card">
+
+                <div class="service-card-number">
+                    02
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-card-label">
+                        TRANSFORMATION
+                    </span>
+
+                    <h3>
+                        Business Transformation Consulting
+                    </h3>
+
+                    <p>
+                        Business transformation consulting that turns
+                        strategic priorities into practical programmes,
+                        organisational change and sustainable improvement.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Strategy Execution
+                        </li>
+
+                        <li>
+                            Operating Model Design
+                        </li>
+
+                        <li>
+                            Organisational Change
+                        </li>
+
+                        <li>
+                            Transformation Governance
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="business-transformation.html"
+                        class="service-card-link"
+                        aria-label="Explore Business Transformation Consulting"
+                    >
+
+                        Explore Business Transformation
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- =================================================
+                 OPERATIONAL EXCELLENCE
+            ================================================== -->
+
+            <article class="service-card">
+
+                <div class="service-card-number">
+                    03
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-card-label">
+                        PERFORMANCE
+                    </span>
+
+                    <h3>
+                        Operational Excellence Consulting
+                    </h3>
+
+                    <p>
+                        Operational excellence consulting focused on
+                        improving processes, performance and ways of
+                        working to create sustainable operational results.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Process Improvement
+                        </li>
+
+                        <li>
+                            Performance Management
+                        </li>
+
+                        <li>
+                            KPI Design
+                        </li>
+
+                        <li>
+                            Continuous Improvement
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="operational-excellence.html"
+                        class="service-card-link"
+                        aria-label="Explore Operational Excellence Consulting"
+                    >
+
+                        Explore Operational Excellence
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- =================================================
+                 ARTIFICIAL INTELLIGENCE
+            ================================================== -->
+
+            <article class="service-card">
+
+                <div class="service-card-number">
+                    04
+                </div>
+
+                <div class="service-card-content">
+
+                    <span class="service-card-label">
+                        ARTIFICIAL INTELLIGENCE
+                    </span>
+
+                    <h3>
+                        Artificial Intelligence Consulting
+                    </h3>
+
+                    <p>
+                        AI consulting that helps organisations move
+                        from experimentation to practical adoption,
+                        automation and measurable business value.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            AI Strategy
+                        </li>
+
+                        <li>
+                            High-Value AI Use Cases
+                        </li>
+
+                        <li>
+                            AI Adoption &amp; Automation
+                        </li>
+
+                        <li>
+                            Responsible AI Governance
+                        </li>
+
+                    </ul>
+
+                    <a
+                        href="artificial-intelligence.html"
+                        class="service-card-link"
+                        aria-label="Explore Artificial Intelligence Consulting"
+                    >
+
+                        Explore Artificial Intelligence
+
+                        <span aria-hidden="true">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     APPROACH
+========================================================= -->
+
+<section
+    class="services-approach"
+    aria-labelledby="approach-heading"
+>
+
+    <div class="services-container">
+
+        <div class="services-approach-grid">
+
+            <div class="services-approach-intro">
+
+                <span class="services-kicker">
+                    OUR APPROACH
+                </span>
+
+                <h2 id="approach-heading">
+                    Strategy is only valuable
+                    when it leads to action.
+                </h2>
+
+                <p>
+                    We connect strategic thinking with practical
+                    execution so organisations can move from
+                    ambition to measurable results.
+                </p>
+
+            </div>
+
+            <div class="services-approach-steps">
+
+                <article class="services-approach-step">
+
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            Understand the organisation, its priorities,
+                            challenges and desired outcomes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="services-approach-step">
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Define
+                        </h3>
+
+                        <p>
+                            Establish clear priorities, practical
+                            recommendations and a realistic roadmap.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="services-approach-step">
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Deliver
+                        </h3>
+
+                        <p>
+                            Execute with governance, accountability,
+                            transparency and focus.
+                        </p>
+
+                    </div>
+
+                </article>
+
+                <article class="services-approach-step">
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Improve
+                        </h3>
+
+                        <p>
+                            Measure outcomes and identify further
+                            opportunities to strengthen performance.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     WHY BSGA
+========================================================= -->
+
+<section
+    class="services-why"
+    aria-labelledby="why-heading"
+>
+
+    <div class="services-container">
+
+        <div class="services-why-grid">
+
+            <div>
+
+                <span class="services-kicker">
+                    WHY BSGA
+                </span>
+
+                <h2 id="why-heading">
+                    Practical consulting.
+                    Clear accountability.
+                    Measurable outcomes.
+                </h2>
+
+            </div>
+
+            <div>
+
+                <p>
+                    Organisations do not need more complexity.
+                    They need clear priorities, strong execution
+                    and practical solutions that create value.
+                </p>
+
+                <p>
+                    BSGA Consulting works alongside leadership teams
+                    and delivery organisations to turn challenges
+                    into structured action across strategy, projects,
+                    transformation, operations and technology.
+                </p>
+
+                <a
+                    href="about.html"
+                    class="services-primary-button"
+                >
+
+                    About BSGA Consulting
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     INSIGHTS CROSS-LINK
+========================================================= -->
+
+<section
+    class="services-insights-link"
+    aria-labelledby="insights-heading"
+>
+
+    <div class="services-container">
+
+        <div class="services-insights-link-content">
+
+            <span class="services-kicker">
+                INSIGHTS
+            </span>
+
+            <h2 id="insights-heading">
+                Practical perspectives on strategy,
+                transformation, performance and AI.
+            </h2>
+
+            <p>
+                Explore ideas and practical perspectives designed
+                to help leaders navigate complex business challenges
+                and turn strategic priorities into action.
+            </p>
+
+            <a
+                href="insights.html"
+                class="services-primary-button"
+            >
+
+                Explore Insights
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section
+    class="services-cta"
+    aria-labelledby="cta-heading"
+>
+
+    <div class="services-container">
+
+        <div class="services-cta-box">
+
+            <span class="services-kicker">
+                LET'S TALK
+            </span>
+
+            <h2 id="cta-heading">
+                Ready to turn your priorities
+                into measurable results?
+            </h2>
+
+            <p>
+                Let's discuss your objectives and explore how
+                BSGA Consulting can support your next strategic
+                initiative, transformation programme or business
+                challenge.
+            </p>
+
+            <div class="services-cta-actions">
+
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    class="services-primary-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Schedule a consultation with BSGA Consulting"
+                >
+
+                    Schedule a Consultation
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
+                </a>
+
+                <a
+                    href="mailto:info@bsgaconsulting.es"
+                    class="services-email"
+                >
+
+                    info@bsgaconsulting.es
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="services-footer">
+
+    <div class="services-container">
+
+        <div class="services-footer-grid">
+
+            <!-- BRAND -->
+
+            <div class="services-footer-brand">
+
+                <img
+                    src="images/logos/logo-white.png"
+                    alt="BSGA Consulting"
+                    width="175"
+                    height="auto"
+                    loading="lazy"
+                >
+
+                <p>
+                    BSGA Consulting helps organisations improve
+                    operational performance, deliver strategic projects,
+                    transform their businesses and adopt Artificial
+                    Intelligence with confidence.
+                </p>
+
+            </div>
+
+            <!-- NAVIGATION -->
+
+            <div>
+
+                <h4>
+                    Navigation
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="services.html"
+                    aria-current="page"
+                >
+                    Services
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="insights.html">
+                    Insights
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+            <!-- SERVICES -->
+
+            <div>
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="project-management.html">
+                    Project Management Consulting
+                </a>
+
+                <a href="business-transformation.html">
+                    Business Transformation Consulting
+                </a>
+
+                <a href="operational-excellence.html">
+                    Operational Excellence Consulting
+                </a>
+
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence Consulting
+                </a>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <a href="mailto:info@bsgaconsulting.es">
+                    info@bsgaconsulting.es
+                </a>
+
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Book a Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="services-footer-bottom">
+
+            © 2026 BSGA Consulting.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
