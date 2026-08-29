@@ -16,12 +16,7 @@
 
     <meta
         name="description"
-        content="BSGA Consulting helps organisations plan, govern and deliver strategic projects through disciplined project management, PMO, stakeholder management and delivery assurance."
-    >
-
-    <meta
-        name="author"
-        content="BSGA Consulting"
+        content="BSGA Consulting helps organisations plan, govern and deliver strategic projects through disciplined project management, PMO, governance, stakeholder management and delivery assurance."
     >
 
     <meta
@@ -31,91 +26,31 @@
 
     <meta
         name="theme-color"
-        content="#000000"
+        content="#050505"
     >
-
-    <!-- =====================================================
-         CANONICAL
-    ====================================================== -->
 
     <link
         rel="canonical"
         href="https://bsgaconsulting.es/project-management.html"
     >
 
-
     <!-- =====================================================
-         OPEN GRAPH
+         FAVICON
     ====================================================== -->
 
-    <meta
-        property="og:type"
-        content="website"
+    <link
+        rel="icon"
+        type="image/png"
+        href="images/logos/favicon.png"
     >
 
-    <meta
-        property="og:url"
-        content="https://bsgaconsulting.es/project-management.html"
+    <link
+        rel="apple-touch-icon"
+        href="images/logos/apple-touch-icon.png"
     >
-
-    <meta
-        property="og:title"
-        content="Project Management Consulting | BSGA Consulting"
-    >
-
-    <meta
-        property="og:description"
-        content="Project management consulting focused on governance, PMO, delivery assurance, stakeholder management and successful execution."
-    >
-
-    <meta
-        property="og:image"
-        content="https://bsgaconsulting.es/images/BSGA-Project-Management-Hero.png"
-    >
-
-    <meta
-        property="og:image:alt"
-        content="BSGA Consulting Project Management"
-    >
-
-    <meta
-        property="og:site_name"
-        content="BSGA Consulting"
-    >
-
-    <meta
-        property="og:locale"
-        content="en_GB"
-    >
-
 
     <!-- =====================================================
-         TWITTER / X
-    ====================================================== -->
-
-    <meta
-        name="twitter:card"
-        content="summary_large_image"
-    >
-
-    <meta
-        name="twitter:title"
-        content="Project Management Consulting | BSGA Consulting"
-    >
-
-    <meta
-        name="twitter:description"
-        content="Project management consulting focused on governance, PMO, delivery assurance, stakeholder management and successful execution."
-    >
-
-    <meta
-        name="twitter:image"
-        content="https://bsgaconsulting.es/images/BSGA-Project-Management-Hero.png"
-    >
-
-
-    <!-- =====================================================
-         GOOGLE FONTS
+         FONT
     ====================================================== -->
 
     <link
@@ -130,10 +65,9 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
-
 
     <!-- =====================================================
          GLOBAL CSS
@@ -144,7 +78,6 @@
         href="css/styles.css"
     >
 
-
     <!-- =====================================================
          PAGE CSS
     ====================================================== -->
@@ -154,6 +87,44 @@
         href="css/project-management.css"
     >
 
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:title"
+        content="Project Management Consulting | BSGA Consulting"
+    >
+
+    <meta
+        property="og:description"
+        content="Project management, PMO, governance, delivery assurance and stakeholder management focused on successful execution."
+    >
+
+    <meta
+        property="og:url"
+        content="https://bsgaconsulting.es/project-management.html"
+    >
+
+    <meta
+        property="og:site_name"
+        content="BSGA Consulting"
+    >
+
+    <meta
+        property="og:image"
+        content="https://bsgaconsulting.es/images/og-image.jpg"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="BSGA Consulting — Project Management"
+    >
 
     <!-- =====================================================
          STRUCTURED DATA
@@ -238,13 +209,13 @@
      HEADER
 ========================================================= -->
 
-<header class="header">
+<header class="pm-site-header">
 
-    <div class="header-inner">
+    <div class="pm-header-inner">
 
         <a
             href="index.html"
-            class="header-logo"
+            class="pm-logo"
             aria-label="BSGA Consulting Home"
         >
 
@@ -257,7 +228,7 @@
 
 
         <nav
-            class="header-nav"
+            class="pm-desktop-nav"
             aria-label="Main navigation"
         >
 
@@ -267,7 +238,7 @@
 
             <a
                 href="services.html"
-                class="active"
+                class="pm-active"
                 aria-current="page"
             >
                 Services
@@ -290,18 +261,77 @@
 
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-            class="hero-button hero-button-secondary"
+            class="pm-header-cta"
             target="_blank"
             rel="noopener noreferrer"
         >
 
-            Schedule a Consultation
-
             <span>
-                →
+                Schedule a Consultation
             </span>
 
+            <strong aria-hidden="true">
+                →
+            </strong>
+
         </a>
+
+
+        <!-- MOBILE MENU -->
+
+        <details class="pm-mobile-menu">
+
+            <summary
+                aria-label="Open navigation menu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </summary>
+
+
+            <nav
+                class="pm-mobile-nav"
+                aria-label="Mobile navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a
+                    href="services.html"
+                    class="pm-active"
+                >
+                    Services
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="insights.html">
+                    Insights
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    class="pm-mobile-cta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Schedule a Consultation →
+                </a>
+
+            </nav>
+
+        </details>
 
     </div>
 
@@ -321,21 +351,9 @@
 
 <section class="pm-hero">
 
-    <div class="pm-hero-background">
-
-        <img
-            src="images/BSGA-Project-Management-Hero.png"
-            alt="Project Management Consulting"
-        >
-
-    </div>
-
-
-    <div class="pm-hero-overlay"></div>
-
+    <div class="pm-hero-background"></div>
 
     <div class="pm-hero-glow"></div>
-
 
     <div class="pm-container">
 
@@ -362,7 +380,7 @@
             </h1>
 
 
-            <p>
+            <p class="pm-hero-lead">
                 We help organisations plan, govern and deliver
                 complex projects and programmes with clarity,
                 discipline and measurable outcomes.
@@ -373,12 +391,12 @@
 
                 <a
                     href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="pm-button"
+                    class="pm-button pm-button-primary"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Discuss Your Project
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
 
@@ -387,7 +405,7 @@
                     class="pm-button pm-button-outline"
                 >
                     Explore Our Capabilities
-                    <span>↓</span>
+                    <span aria-hidden="true">↓</span>
                 </a>
 
             </div>
@@ -397,7 +415,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -413,7 +430,7 @@
 
             <div class="pm-overview-intro">
 
-                <span class="pm-blue-kicker">
+                <span class="pm-section-kicker">
                     PROJECT DELIVERY
                 </span>
 
@@ -450,14 +467,13 @@
 </section>
 
 
-
 <!-- =========================================================
      CAPABILITIES
 ========================================================= -->
 
 <section
-    id="capabilities"
     class="pm-capabilities"
+    id="capabilities"
 >
 
     <div class="pm-container">
@@ -465,8 +481,8 @@
 
         <div class="pm-section-heading">
 
-            <span class="pm-blue-kicker">
-                PROJECT MANAGEMENT CAPABILITIES
+            <span class="pm-section-kicker">
+                PROJECT MANAGEMENT SERVICES
             </span>
 
             <h2>
@@ -475,9 +491,9 @@
             </h2>
 
             <p>
-                We provide the governance, structure and delivery
-                discipline organisations need to manage complex
-                projects with confidence.
+                We provide practical support across the project
+                lifecycle, from initial planning and governance
+                through implementation and continuous improvement.
             </p>
 
         </div>
@@ -512,13 +528,13 @@
                 </span>
 
                 <h3>
-                    PMO & Governance
+                    PMO Consulting
                 </h3>
 
                 <p>
-                    Establishing governance frameworks,
-                    reporting structures, controls and decision
-                    processes that give leadership clear visibility.
+                    Designing and strengthening PMO capabilities,
+                    standards and reporting frameworks to improve
+                    consistency and visibility across projects.
                 </p>
 
             </article>
@@ -531,13 +547,13 @@
                 </span>
 
                 <h3>
-                    Project Planning
+                    Delivery Assurance
                 </h3>
 
                 <p>
-                    Translating strategic objectives into
-                    realistic plans, milestones, resources,
-                    responsibilities and measurable outcomes.
+                    Providing independent oversight of project
+                    progress, risks, dependencies and delivery
+                    performance.
                 </p>
 
             </article>
@@ -550,13 +566,13 @@
                 </span>
 
                 <h3>
-                    Risk Management
+                    Stakeholder Management
                 </h3>
 
                 <p>
-                    Identifying, assessing and managing risks
-                    before they become obstacles to successful
-                    project delivery.
+                    Creating effective communication and engagement
+                    across sponsors, leadership teams, delivery
+                    teams and other key stakeholders.
                 </p>
 
             </article>
@@ -569,13 +585,13 @@
                 </span>
 
                 <h3>
-                    Stakeholder Management
+                    Project Planning &amp; Control
                 </h3>
 
                 <p>
-                    Creating effective communication and
-                    engagement strategies across leadership,
-                    delivery teams and key stakeholders.
+                    Establishing practical plans, milestones,
+                    dependencies and controls that provide greater
+                    visibility over project delivery.
                 </p>
 
             </article>
@@ -588,13 +604,13 @@
                 </span>
 
                 <h3>
-                    Delivery Assurance
+                    Successful Project Execution
                 </h3>
 
                 <p>
-                    Providing independent oversight and practical
-                    recommendations to improve delivery confidence,
-                    quality and performance.
+                    Supporting delivery teams from initiation
+                    through implementation, keeping projects aligned
+                    with strategic objectives and expected outcomes.
                 </p>
 
             </article>
@@ -605,7 +621,6 @@
     </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -619,7 +634,7 @@
 
         <div class="pm-section-heading">
 
-            <span class="pm-blue-kicker">
+            <span class="pm-section-kicker">
                 PROJECT LIFECYCLE
             </span>
 
@@ -715,7 +730,7 @@
                 <div>
 
                     <h3>
-                        Measure & Improve
+                        Measure &amp; Improve
                     </h3>
 
                     <p>
@@ -735,7 +750,6 @@
 </section>
 
 
-
 <!-- =========================================================
      RESULTS
 ========================================================= -->
@@ -749,7 +763,7 @@
 
             <div class="pm-results-intro">
 
-                <span class="pm-blue-kicker">
+                <span class="pm-section-kicker">
                     WHAT CLIENTS GAIN
                 </span>
 
@@ -854,7 +868,6 @@
 </section>
 
 
-
 <!-- =========================================================
      WHY BSGA
 ========================================================= -->
@@ -868,7 +881,7 @@
 
             <div>
 
-                <span class="pm-blue-kicker">
+                <span class="pm-section-kicker">
                     WHY BSGA
                 </span>
 
@@ -899,12 +912,12 @@
 
                 <a
                     href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="pm-button"
+                    class="pm-button pm-button-primary"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Discuss Your Project
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
             </div>
@@ -915,6 +928,79 @@
 
 </section>
 
+
+<!-- =========================================================
+     RELATED SERVICES
+========================================================= -->
+
+<section class="pm-related-services">
+
+    <div class="pm-container">
+
+
+        <div class="pm-section-heading">
+
+            <span class="pm-section-kicker">
+                RELATED CONSULTING SERVICES
+            </span>
+
+            <h2>
+                Project delivery within a wider
+                transformation agenda.
+            </h2>
+
+            <p>
+                Complex projects often form part of broader
+                organisational change. Our consulting capabilities
+                can work together to address the wider challenge.
+            </p>
+
+        </div>
+
+
+        <div class="pm-related-content">
+
+
+            <p>
+                When a project involves significant organisational
+                change, our
+                <a href="business-transformation.html">
+                    Business Transformation
+                </a>
+                consulting helps connect project delivery with
+                strategic priorities, operating models and
+                organisational change.
+            </p>
+
+
+            <p>
+                When the objective is to improve processes,
+                efficiency and performance, our
+                <a href="operational-excellence.html">
+                    Operational Excellence
+                </a>
+                services can complement project management with
+                a focus on continuous improvement and better ways
+                of working.
+            </p>
+
+
+            <p>
+                For projects involving the adoption or implementation
+                of AI, our
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence
+                </a>
+                consulting can support practical adoption,
+                implementation and measurable business value.
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 
 <!-- =========================================================
@@ -928,7 +1014,7 @@
 
         <div class="pm-section-heading">
 
-            <span class="pm-blue-kicker">
+            <span class="pm-section-kicker">
                 FREQUENTLY ASKED QUESTIONS
             </span>
 
@@ -946,10 +1032,14 @@
 
                 <summary>
 
-                    When should an organisation bring in
-                    external project management support?
+                    <span>
+                        When should an organisation bring in
+                        external project management support?
+                    </span>
 
-                    <span>+</span>
+                    <strong>
+                        +
+                    </strong>
 
                 </summary>
 
@@ -967,9 +1057,13 @@
 
                 <summary>
 
-                    Can BSGA support an existing PMO?
+                    <span>
+                        Can BSGA support an existing PMO?
+                    </span>
 
-                    <span>+</span>
+                    <strong>
+                        +
+                    </strong>
 
                 </summary>
 
@@ -986,9 +1080,13 @@
 
                 <summary>
 
-                    Do you manage projects directly?
+                    <span>
+                        Do you manage projects directly?
+                    </span>
 
-                    <span>+</span>
+                    <strong>
+                        +
+                    </strong>
 
                 </summary>
 
@@ -1005,9 +1103,13 @@
 
                 <summary>
 
-                    Can you provide an independent project review?
+                    <span>
+                        Can you provide an independent project review?
+                    </span>
 
-                    <span>+</span>
+                    <strong>
+                        +
+                    </strong>
 
                 </summary>
 
@@ -1028,7 +1130,6 @@
 </section>
 
 
-
 <!-- =========================================================
      CTA
 ========================================================= -->
@@ -1039,17 +1140,14 @@
 
         <div class="pm-cta-box">
 
-
-            <span class="pm-blue-kicker">
+            <span class="pm-section-kicker">
                 LET'S TALK
             </span>
-
 
             <h2>
                 Need stronger control
                 over project delivery?
             </h2>
-
 
             <p>
                 Let's discuss your project, programme or
@@ -1062,12 +1160,12 @@
 
                 <a
                     href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="pm-button"
+                    class="pm-button pm-button-primary"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
                     Schedule a Consultation
-                    <span>→</span>
+                    <span aria-hidden="true">→</span>
                 </a>
 
 
@@ -1090,7 +1188,6 @@
 </main>
 
 
-
 <!-- =========================================================
      FOOTER
 ========================================================= -->
@@ -1099,7 +1196,7 @@
 
     <div class="pm-container">
 
-        <div class="pm-footer-top">
+        <div class="pm-footer-grid">
 
 
             <div class="pm-footer-brand">
@@ -1119,7 +1216,7 @@
             </div>
 
 
-            <div class="pm-footer-column">
+            <div>
 
                 <h4>
                     Navigation
@@ -1148,7 +1245,32 @@
             </div>
 
 
-            <div class="pm-footer-column">
+            <div>
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="project-management.html">
+                    Project Management
+                </a>
+
+                <a href="business-transformation.html">
+                    Business Transformation
+                </a>
+
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence
+                </a>
+
+                <a href="operational-excellence.html">
+                    Operational Excellence
+                </a>
+
+            </div>
+
+
+            <div>
 
                 <h4>
                     Contact
@@ -1174,8 +1296,9 @@
 
         <div class="pm-footer-bottom">
 
-            © 2026 BSGA Consulting.
-            All Rights Reserved.
+            <span>
+                © 2026 BSGA Consulting. All Rights Reserved.
+            </span>
 
         </div>
 
