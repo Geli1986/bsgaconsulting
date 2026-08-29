@@ -1,160 +1,158 @@
 /* =========================================================
-   BSGA CONSULTING
-   GLOBAL JAVASCRIPT
-   Version: 2026
-========================================================= */
-
-"use strict";
-
-
-/* =========================================================
-   01. DOM READY
+   BSGA CONSULTING — MAIN JAVASCRIPT
+   Global functionality for all pages
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initMobileNavigation();
-    initSmoothAnchors();
-    initExternalLinks();
-    initHeaderState();
-
-});
-
-
-/* =========================================================
-   02. MOBILE NAVIGATION
-========================================================= */
-
-function initMobileNavigation() {
+    /* =====================================================
+       MOBILE NAVIGATION
+    ====================================================== */
 
     const menuToggle = document.getElementById("menuToggle");
     const mobileNav = document.getElementById("mobileNav");
 
-    if (!menuToggle || !mobileNav) {
-        return;
-    }
+    if (menuToggle && mobileNav) {
+
+        const closeMobileMenu = () => {
+
+            menuToggle.classList.remove("active");
+            mobileNav.classList.remove("active");
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+            document.body.classList.remove("mobile-menu-open");
+        };
 
 
-    const closeMenu = () => {
+        const openMobileMenu = () => {
 
-        menuToggle.classList.remove("is-open");
+            menuToggle.classList.add("active");
+            mobileNav.classList.add("active");
 
-        mobileNav.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "true");
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close navigation menu"
+            );
 
-        menuToggle.setAttribute("aria-expanded", "false");
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Open navigation menu"
-        );
-
-        document.body.classList.remove("mobile-menu-open");
-
-    };
+            document.body.classList.add("mobile-menu-open");
+        };
 
 
-    const openMenu = () => {
+        menuToggle.addEventListener("click", () => {
 
-        menuToggle.classList.add("is-open");
+            const isOpen =
+                menuToggle.getAttribute("aria-expanded") === "true";
 
-        mobileNav.classList.add("is-open");
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
 
-        menuToggle.setAttribute("aria-expanded", "true");
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Close navigation menu"
-        );
-
-        document.body.classList.add("mobile-menu-open");
-
-    };
+        });
 
 
-    menuToggle.addEventListener("click", () => {
+        /* Close menu when clicking a navigation link */
 
-        const isOpen =
-            menuToggle.getAttribute("aria-expanded") === "true";
+        const mobileLinks =
+            mobileNav.querySelectorAll("a");
 
-        if (isOpen) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-
-    });
-
-
-    /* Close when selecting a navigation link */
-
-    mobileNav
-        .querySelectorAll("a")
-        .forEach((link) => {
+        mobileLinks.forEach((link) => {
 
             link.addEventListener("click", () => {
-                closeMenu();
+                closeMobileMenu();
             });
 
         });
 
 
-    /* Close with Escape */
+        /* Close menu when clicking outside */
 
-    document.addEventListener("keydown", (event) => {
+        document.addEventListener("click", (event) => {
 
-        if (event.key === "Escape") {
-            closeMenu();
-        }
+            if (
+                mobileNav.classList.contains("active") &&
+                !mobileNav.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                closeMobileMenu();
+            }
 
-    });
-
-
-    /* Close when clicking outside the menu */
-
-    document.addEventListener("click", (event) => {
-
-        if (
-            !mobileNav.classList.contains("is-open") ||
-            menuToggle.contains(event.target) ||
-            mobileNav.contains(event.target)
-        ) {
-            return;
-        }
-
-        closeMenu();
-
-    });
+        });
 
 
-    /* Reset mobile navigation when returning to desktop */
+        /* Close menu with Escape */
 
-    window.addEventListener("resize", () => {
+        document.addEventListener("keydown", (event) => {
 
-        if (window.innerWidth > 780) {
-            closeMenu();
-        }
+            if (
+                event.key === "Escape" &&
+                mobileNav.classList.contains("active")
+            ) {
+                closeMobileMenu();
+                menuToggle.focus();
+            }
 
-    });
-
-}
+        });
 
 
-/* =========================================================
-   03. SMOOTH INTERNAL ANCHORS
-========================================================= */
+        /* Close mobile menu if viewport becomes desktop */
 
-function initSmoothAnchors() {
+        window.addEventListener("resize", () => {
 
-    const links = document.querySelectorAll(
-        'a[href^="#"]'
-    );
+            if (window.innerWidth > 900) {
+                closeMobileMenu();
+            }
 
-    if (!links.length) {
-        return;
+        });
+
     }
 
 
-    links.forEach((link) => {
+    /* =====================================================
+       HEADER SCROLL STATE
+    ====================================================== */
+
+    const siteHeader =
+        document.querySelector(".site-header");
+
+    if (siteHeader) {
+
+        const updateHeader = () => {
+
+            if (window.scrollY > 30) {
+                siteHeader.classList.add("scrolled");
+            } else {
+                siteHeader.classList.remove("scrolled");
+            }
+
+        };
+
+        updateHeader();
+
+        window.addEventListener(
+            "scroll",
+            updateHeader,
+            { passive: true }
+        );
+
+    }
+
+
+    /* =====================================================
+       SMOOTH SCROLL
+    ====================================================== */
+
+    const anchorLinks =
+        document.querySelectorAll('a[href^="#"]');
+
+    anchorLinks.forEach((link) => {
 
         link.addEventListener("click", (event) => {
 
@@ -169,7 +167,6 @@ function initSmoothAnchors() {
                 return;
             }
 
-
             const target =
                 document.querySelector(targetId);
 
@@ -177,178 +174,45 @@ function initSmoothAnchors() {
                 return;
             }
 
-
             event.preventDefault();
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+            const header =
+                document.querySelector(".site-header");
+
+            const headerHeight =
+                header
+                    ? header.offsetHeight
+                    : 0;
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.scrollY -
+                headerHeight -
+                20;
+
+            window.scrollTo({
+                top: Math.max(0, targetPosition),
+                behavior: "smooth"
             });
-
-
-            /*
-             * Keep the URL anchor without forcing
-             * an abrupt browser jump.
-             */
-
-            if (
-                window.history &&
-                window.history.pushState
-            ) {
-
-                window.history.pushState(
-                    null,
-                    "",
-                    targetId
-                );
-
-            }
 
         });
 
     });
 
-}
 
+    /* =====================================================
+       CURRENT PAGE NAVIGATION
+    ====================================================== */
 
-/* =========================================================
-   04. EXTERNAL LINKS
-========================================================= */
-
-function initExternalLinks() {
-
-    const currentHost =
-        window.location.hostname;
-
-    const links =
-        document.querySelectorAll("a[href]");
-
-
-    links.forEach((link) => {
-
-        const href =
-            link.getAttribute("href");
-
-        if (!href) {
-            return;
-        }
-
-
-        /*
-         * Ignore:
-         * - mailto:
-         * - tel:
-         * - anchors
-         * - relative links
-         */
-
-        if (
-            href.startsWith("#") ||
-            href.startsWith("mailto:") ||
-            href.startsWith("tel:")
-        ) {
-            return;
-        }
-
-
-        let url;
-
-        try {
-
-            url = new URL(
-                href,
-                window.location.href
-            );
-
-        } catch {
-            return;
-        }
-
-
-        /*
-         * Only process genuinely external URLs.
-         */
-
-        if (
-            url.hostname &&
-            url.hostname !== currentHost
-        ) {
-
-            link.setAttribute(
-                "target",
-                "_blank"
-            );
-
-            link.setAttribute(
-                "rel",
-                "noopener noreferrer"
-            );
-
-        }
-
-    });
-
-}
-
-
-/* =========================================================
-   05. HEADER SCROLL STATE
-========================================================= */
-
-function initHeaderState() {
-
-    const header =
-        document.querySelector(".site-header");
-
-    if (!header) {
-        return;
-    }
-
-
-    const updateHeader =
-        () => {
-
-            if (window.scrollY > 20) {
-
-                header.classList.add(
-                    "is-scrolled"
-                );
-
-            } else {
-
-                header.classList.remove(
-                    "is-scrolled"
-                );
-
-            }
-
-        };
-
-
-    updateHeader();
-
-
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        {
-            passive: true
-        }
-    );
-
-}
-
-
-/* =========================================================
-   06. CURRENT PAGE NAVIGATION
-========================================================= */
-
-function setCurrentNavigation() {
-
-    const currentPath =
+    const currentPage =
         window.location.pathname
             .split("/")
             .pop() || "index.html";
+
+    const normalizedPage =
+        currentPage === ""
+            ? "index.html"
+            : currentPage;
 
 
     const navigationLinks =
@@ -366,14 +230,13 @@ function setCurrentNavigation() {
             return;
         }
 
-
         /*
-         * Ignore external links, email and telephone.
+         * Ignore external links, email links,
+         * telephone links and anchor links.
          */
 
         if (
-            href.startsWith("http://") ||
-            href.startsWith("https://") ||
+            href.startsWith("http") ||
             href.startsWith("mailto:") ||
             href.startsWith("tel:") ||
             href.startsWith("#")
@@ -382,11 +245,11 @@ function setCurrentNavigation() {
         }
 
 
-        const linkPath =
+        const linkPage =
             href.split("/").pop() || "index.html";
 
 
-        if (linkPath === currentPath) {
+        if (linkPage === normalizedPage) {
 
             link.classList.add("active");
 
@@ -395,32 +258,517 @@ function setCurrentNavigation() {
                 "page"
             );
 
-        } else {
+        }
 
-            link.classList.remove("active");
+    });
+
+
+    /* =====================================================
+       EXTERNAL LINKS
+    ====================================================== */
+
+    const externalLinks =
+        document.querySelectorAll(
+            'a[href^="http"]'
+        );
+
+
+    externalLinks.forEach((link) => {
+
+        const href =
+            link.getAttribute("href");
+
+        if (!href) {
+            return;
+        }
+
+
+        try {
+
+            const url =
+                new URL(
+                    href,
+                    window.location.origin
+                );
+
+            /*
+             * Only apply target="_blank" automatically
+             * to links pointing outside the BSGA domain.
+             */
 
             if (
-                link.getAttribute("aria-current") === "page"
+                url.hostname &&
+                url.hostname !== window.location.hostname
             ) {
 
-                link.removeAttribute(
-                    "aria-current"
+                link.setAttribute(
+                    "target",
+                    "_blank"
+                );
+
+                link.setAttribute(
+                    "rel",
+                    "noopener noreferrer"
                 );
 
             }
+
+        } catch (error) {
+
+            /*
+             * Invalid URLs are left untouched.
+             */
 
         }
 
     });
 
-}
+
+    /* =====================================================
+       SCROLL REVEAL
+    ====================================================== */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".reveal, " +
+            ".service-card, " +
+            ".services-approach-step, " +
+            ".about-card, " +
+            ".insight-card"
+        );
 
 
-/* =========================================================
-   07. INITIALISE CURRENT NAVIGATION
-========================================================= */
+    if (
+        revealElements.length &&
+        "IntersectionObserver" in window
+    ) {
 
-document.addEventListener(
-    "DOMContentLoaded",
-    setCurrentNavigation
-);
+        const revealObserver =
+            new IntersectionObserver(
+                (entries, observer) => {
+
+                    entries.forEach((entry) => {
+
+                        if (!entry.isIntersecting) {
+                            return;
+                        }
+
+                        entry.target.classList.add(
+                            "is-visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    });
+
+                },
+                {
+                    threshold: 0.12,
+                    rootMargin: "0px 0px -40px 0px"
+                }
+            );
+
+
+        revealElements.forEach((element) => {
+
+            element.classList.add(
+                "reveal-ready"
+            );
+
+            revealObserver.observe(element);
+
+        });
+
+    } else {
+
+        /*
+         * Fallback for browsers without
+         * IntersectionObserver.
+         */
+
+        revealElements.forEach((element) => {
+
+            element.classList.add(
+                "is-visible"
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
+       CONTACT / EMAIL LINKS
+    ====================================================== */
+
+    const emailLinks =
+        document.querySelectorAll(
+            'a[href^="mailto:"]'
+        );
+
+
+    emailLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            link.classList.add(
+                "email-clicked"
+            );
+
+        });
+
+    });
+
+
+    /* =====================================================
+       HERO IMAGE LOADING
+    ====================================================== */
+
+    const heroImages =
+        document.querySelectorAll(
+            ".services-hero-background img, " +
+            ".service-hero-background img, " +
+            ".hero-background img"
+        );
+
+
+    heroImages.forEach((image) => {
+
+        if (image.complete) {
+
+            image.classList.add(
+                "image-loaded"
+            );
+
+        } else {
+
+            image.addEventListener(
+                "load",
+                () => {
+
+                    image.classList.add(
+                        "image-loaded"
+                    );
+
+                },
+                { once: true }
+            );
+
+        }
+
+    });
+
+
+    /* =====================================================
+       REDUCED MOTION ACCESSIBILITY
+    ====================================================== */
+
+    const prefersReducedMotion =
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        );
+
+
+    if (prefersReducedMotion.matches) {
+
+        document.documentElement.classList.add(
+            "reduce-motion"
+        );
+
+    }
+
+
+    const handleMotionPreference = (event) => {
+
+        if (event.matches) {
+
+            document.documentElement.classList.add(
+                "reduce-motion"
+            );
+
+        } else {
+
+            document.documentElement.classList.remove(
+                "reduce-motion"
+            );
+
+        }
+
+    };
+
+
+    if (
+        typeof prefersReducedMotion.addEventListener ===
+        "function"
+    ) {
+
+        prefersReducedMotion.addEventListener(
+            "change",
+            handleMotionPreference
+        );
+
+    } else if (
+        typeof prefersReducedMotion.addListener ===
+        "function"
+    ) {
+
+        prefersReducedMotion.addListener(
+            handleMotionPreference
+        );
+
+    }
+
+
+    /* =====================================================
+       CONTACT FORM BASIC VALIDATION
+       Works only if a form exists.
+    ====================================================== */
+
+    const contactForms =
+        document.querySelectorAll(
+            ".contact-form, form[data-contact-form]"
+        );
+
+
+    contactForms.forEach((form) => {
+
+        form.addEventListener("submit", (event) => {
+
+            let valid = true;
+
+
+            const requiredFields =
+                form.querySelectorAll(
+                    "[required]"
+                );
+
+
+            requiredFields.forEach((field) => {
+
+                const value =
+                    field.value.trim();
+
+
+                if (!value) {
+
+                    valid = false;
+
+                    field.classList.add(
+                        "input-error"
+                    );
+
+                } else {
+
+                    field.classList.remove(
+                        "input-error"
+                    );
+
+                }
+
+            });
+
+
+            const emailField =
+                form.querySelector(
+                    'input[type="email"]'
+                );
+
+
+            if (
+                emailField &&
+                emailField.value.trim()
+            ) {
+
+                const emailPattern =
+                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+                if (
+                    !emailPattern.test(
+                        emailField.value.trim()
+                    )
+                ) {
+
+                    valid = false;
+
+                    emailField.classList.add(
+                        "input-error"
+                    );
+
+                }
+
+            }
+
+
+            if (!valid) {
+
+                event.preventDefault();
+
+                const firstError =
+                    form.querySelector(
+                        ".input-error"
+                    );
+
+
+                if (firstError) {
+                    firstError.focus();
+                }
+
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       FORM INPUT ERROR CLEANUP
+    ====================================================== */
+
+    const formInputs =
+        document.querySelectorAll(
+            "input, textarea, select"
+        );
+
+
+    formInputs.forEach((input) => {
+
+        input.addEventListener(
+            "input",
+            () => {
+
+                if (
+                    input.value.trim()
+                ) {
+
+                    input.classList.remove(
+                        "input-error"
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       LAZY LOADING SAFETY
+    ====================================================== */
+
+    const contentImages =
+        document.querySelectorAll(
+            "img"
+        );
+
+
+    contentImages.forEach((image) => {
+
+        /*
+         * Do not override explicitly high-priority
+         * hero images.
+         */
+
+        if (
+            !image.hasAttribute("loading") &&
+            !image.hasAttribute("fetchpriority")
+        ) {
+
+            image.setAttribute(
+                "loading",
+                "lazy"
+            );
+
+        }
+
+    });
+
+
+    /* =====================================================
+       YEAR AUTO-UPDATE
+       Optional footer support.
+    ====================================================== */
+
+    const yearElements =
+        document.querySelectorAll(
+            "[data-current-year]"
+        );
+
+
+    yearElements.forEach((element) => {
+
+        element.textContent =
+            new Date().getFullYear();
+
+    });
+
+
+    /* =====================================================
+       BACK TO TOP
+       Only activates if a matching button exists.
+    ====================================================== */
+
+    const backToTop =
+        document.querySelector(
+            "[data-back-to-top]"
+        );
+
+
+    if (backToTop) {
+
+        const updateBackToTop = () => {
+
+            if (window.scrollY > 600) {
+
+                backToTop.classList.add(
+                    "visible"
+                );
+
+            } else {
+
+                backToTop.classList.remove(
+                    "visible"
+                );
+
+            }
+
+        };
+
+
+        updateBackToTop();
+
+
+        window.addEventListener(
+            "scroll",
+            updateBackToTop,
+            { passive: true }
+        );
+
+
+        backToTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       PAGE READY
+    ====================================================== */
+
+    document.documentElement.classList.add(
+        "js-enabled"
+    );
+
+});
