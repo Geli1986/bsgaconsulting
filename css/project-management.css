@@ -1,1135 +1,1515 @@
 /* =========================================================
    BSGA CONSULTING
    PROJECT MANAGEMENT PAGE
-   project-management.css
-
-   Works with:
+   Page-specific CSS
+   Compatible with:
    - styles.css
-   - project-management.html
-
-   IMPORTANT:
-   No project-specific image is required.
+   - index.css
 ========================================================= */
 
 
 /* =========================================================
-   01. PROJECT MANAGEMENT VARIABLES
+   PAGE BASE
 ========================================================= */
 
-:root {
-    --pm-black: #050505;
-    --pm-black-soft: #0b0b0b;
-    --pm-white: #ffffff;
-    --pm-off-white: #f7f7f5;
-    --pm-text: #111111;
-    --pm-muted: #686868;
-    --pm-border: #dcdcdc;
-    --pm-border-dark: rgba(255,255,255,0.16);
-    --pm-gold: #b8954e;
-    --pm-gold-light: #c6a565;
+.project-management-page {
+    background: #ffffff;
+    color: #080808;
 }
 
-
-/* =========================================================
-   02. PAGE BASE
-========================================================= */
-
-.pm-container {
-    width: min(1380px, calc(100% - 60px));
-    margin: 0 auto;
+.project-management-page main {
+    width: 100%;
+    overflow: hidden;
 }
 
-.pm-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-
-    margin-bottom: 24px;
-
-    color: var(--pm-gold);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    line-height: 1.2;
-    text-transform: uppercase;
+.project-management-page *,
+.project-management-page *::before,
+.project-management-page *::after {
+    box-sizing: border-box;
 }
 
-.pm-kicker::before {
-    content: "";
+.project-management-page a {
+    text-decoration: none;
+}
+
+.project-management-page img {
     display: block;
-
-    width: 34px;
-    height: 1px;
-
-    background: currentColor;
-}
-
-.pm-kicker-light {
-    color: var(--pm-gold);
+    max-width: 100%;
 }
 
 
 /* =========================================================
-   03. HERO
+   CONTAINER
 ========================================================= */
 
-.pm-hero {
+.project-management-page .pm-container {
+    width: min(
+        1240px,
+        calc(100% - 60px)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HEADER COMPATIBILITY
+   Uses the same global header structure.
+========================================================= */
+
+.project-management-page .header {
+    position: relative;
+    z-index: 1000;
+}
+
+.project-management-page .header-inner {
+    width: min(
+        1410px,
+        calc(100% - 60px)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.project-management-page .pm-hero {
     position: relative;
 
-    min-height: calc(100vh - 105px);
+    min-height: 720px;
 
     display: flex;
     align-items: center;
 
     overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at 78% 38%,
-            rgba(184,149,78,0.18) 0%,
-            rgba(184,149,78,0.08) 18%,
-            rgba(184,149,78,0) 42%
-        ),
-        #050505;
+    isolation: isolate;
 
-    color: var(--pm-white);
+    background: #050505;
+    color: #ffffff;
 }
 
-.pm-hero-glow {
+
+/* ---------------------------------------------------------
+   HERO IMAGE
+--------------------------------------------------------- */
+
+.project-management-page .pm-hero-background {
+    position: absolute;
+    inset: 0;
+
+    z-index: -4;
+
+    overflow: hidden;
+}
+
+.project-management-page .pm-hero-background img {
+    width: 100%;
+    height: 100%;
+
+    max-width: none;
+
+    object-fit: cover;
+    object-position: center center;
+
+    opacity: 1;
+
+    transform: scale(1.01);
+}
+
+
+/* ---------------------------------------------------------
+   HERO OVERLAY
+--------------------------------------------------------- */
+
+.project-management-page .pm-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: -3;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .94) 0%,
+            rgba(0, 0, 0, .84) 34%,
+            rgba(0, 0, 0, .58) 65%,
+            rgba(0, 0, 0, .30) 100%
+        );
+}
+
+
+/* ---------------------------------------------------------
+   HERO DECORATIVE GLOW
+--------------------------------------------------------- */
+
+.project-management-page .pm-hero-glow {
     position: absolute;
 
-    width: 620px;
-    height: 620px;
+    width: 650px;
+    height: 650px;
 
-    right: -120px;
-    top: 50%;
+    right: -220px;
+    top: -120px;
 
-    transform: translateY(-50%);
+    z-index: -2;
 
     border-radius: 50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(198,165,101,0.16) 0%,
-            rgba(198,165,101,0.06) 28%,
-            transparent 70%
+            rgba(201, 169, 106, .17) 0%,
+            rgba(201, 169, 106, .07) 28%,
+            rgba(201, 169, 106, 0) 70%
         );
-
-    filter: blur(12px);
 
     pointer-events: none;
 }
 
-.pm-hero-glow::after {
-    content: "";
 
-    position: absolute;
+/* ---------------------------------------------------------
+   HERO CONTAINER
+--------------------------------------------------------- */
 
-    inset: 110px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(198,165,101,0.08);
-}
-
-.pm-hero-content {
+.project-management-page .pm-hero .pm-container {
     position: relative;
     z-index: 2;
 
-    width: min(900px, 100%);
-
-    padding: 100px 0 110px;
+    padding-top: 105px;
+    padding-bottom: 95px;
 }
 
-.pm-back {
+
+/* ---------------------------------------------------------
+   HERO CONTENT
+--------------------------------------------------------- */
+
+.project-management-page .pm-hero-content {
+    width: min(
+        900px,
+        100%
+    );
+}
+
+
+/* ---------------------------------------------------------
+   BACK LINK
+--------------------------------------------------------- */
+
+.project-management-page .pm-back {
     display: inline-flex;
     align-items: center;
 
-    margin-bottom: 65px;
+    margin-bottom: 38px;
 
-    color: rgba(255,255,255,0.68);
+    color: rgba(255,255,255,.70);
 
-    font-size: 15px;
+    font-size: .88rem;
     font-weight: 500;
 
     transition:
-        color 0.25s ease,
-        transform 0.25s ease;
+        color .25s ease,
+        transform .25s ease;
 }
 
-.pm-back:hover {
-    color: var(--pm-white);
+.project-management-page .pm-back:hover {
+    color: #ffffff;
     transform: translateX(-3px);
 }
 
-.pm-hero h1 {
-    max-width: 920px;
 
-    margin: 0 0 30px;
+/* ---------------------------------------------------------
+   KICKER
+--------------------------------------------------------- */
 
-    color: var(--pm-white);
-
-    font-size: clamp(52px, 6vw, 94px);
-    font-weight: 700;
-
-    letter-spacing: -0.055em;
-    line-height: 0.98;
-}
-
-.pm-hero p {
-    max-width: 760px;
-
-    margin: 0 0 42px;
-
-    color: rgba(255,255,255,0.70);
-
-    font-size: clamp(18px, 2vw, 22px);
-    line-height: 1.65;
-}
-
-.pm-hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.pm-button {
+.project-management-page .pm-kicker,
+.project-management-page .pm-blue-kicker {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 22px;
 
-    min-height: 58px;
+    color: #c9a96a;
 
-    padding: 0 28px;
-
-    border: 1px solid var(--pm-white);
-
-    background: var(--pm-white);
-    color: #080808;
-
-    font-size: 15px;
+    font-size: .72rem;
     font-weight: 700;
 
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        border-color 0.25s ease,
-        transform 0.25s ease;
+    letter-spacing: .19em;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
 }
 
-.pm-button span {
-    font-size: 19px;
-    line-height: 1;
+
+/* ---------------------------------------------------------
+   HERO KICKER
+--------------------------------------------------------- */
+
+.project-management-page .pm-kicker {
+    margin-bottom: 24px;
 }
 
-.pm-button:hover {
-    transform: translateY(-2px);
+.project-management-page .pm-kicker::before {
+    content: "";
 
-    background: transparent;
-    color: var(--pm-white);
+    width: 28px;
+    height: 1px;
+
+    margin-right: 12px;
+
+    background: currentColor;
 }
 
-.pm-button-outline {
-    border-color: rgba(255,255,255,0.35);
 
-    background: transparent;
-    color: var(--pm-white);
+/* ---------------------------------------------------------
+   HERO TITLE
+--------------------------------------------------------- */
+
+.project-management-page .pm-hero h1 {
+    max-width: 900px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            3.2rem,
+            6vw,
+            5.9rem
+        );
+
+    font-weight: 700;
+
+    line-height: .98;
+
+    letter-spacing: -.055em;
 }
 
-.pm-button-outline:hover {
-    border-color: var(--pm-white);
 
-    background: var(--pm-white);
-    color: #080808;
+/* ---------------------------------------------------------
+   HERO TEXT
+--------------------------------------------------------- */
+
+.project-management-page .pm-hero p {
+    max-width: 760px;
+
+    margin: 32px 0 0;
+
+    color: rgba(255,255,255,.76);
+
+    font-size:
+        clamp(
+            1rem,
+            1.45vw,
+            1.2rem
+        );
+
+    line-height: 1.7;
 }
 
-.pm-button-light {
-    background: var(--pm-white);
-    color: #050505;
-}
 
-.pm-button-light:hover {
-    background: transparent;
-    color: var(--pm-white);
+/* ---------------------------------------------------------
+   HERO ACTIONS
+--------------------------------------------------------- */
+
+.project-management-page .pm-hero-actions {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 38px;
 }
 
 
 /* =========================================================
-   04. OVERVIEW
+   BUTTONS
 ========================================================= */
 
-.pm-overview {
-    padding: 130px 0;
+.project-management-page .pm-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    background: var(--pm-off-white);
-    color: var(--pm-text);
+    gap: 12px;
+
+    min-height: 52px;
+
+    padding: 14px 24px;
+
+    border: 1px solid transparent;
+
+    background: #ffffff;
+    color: #080808;
+
+    font-size: .9rem;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    transition:
+        transform .25s ease,
+        background-color .25s ease,
+        border-color .25s ease,
+        color .25s ease;
 }
 
-.pm-overview-grid {
+.project-management-page .pm-button span {
+    transition:
+        transform .25s ease;
+}
+
+.project-management-page .pm-button:hover {
+    transform: translateY(-2px);
+}
+
+.project-management-page .pm-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* ---------------------------------------------------------
+   OUTLINE BUTTON
+--------------------------------------------------------- */
+
+.project-management-page .pm-button-outline {
+    background: transparent;
+
+    color: #ffffff;
+
+    border-color:
+        rgba(255,255,255,.42);
+}
+
+.project-management-page .pm-button-outline:hover {
+    background: rgba(255,255,255,.08);
+
+    border-color: #ffffff;
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.project-management-page .pm-overview {
+    padding: 125px 0;
+
+    background: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   OVERVIEW GRID
+--------------------------------------------------------- */
+
+.project-management-page .pm-overview-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+    grid-template-columns:
+        minmax(0, .9fr)
+        minmax(0, 1.1fr);
+
     gap: 100px;
+
     align-items: start;
 }
 
-.pm-overview-intro h2 {
-    max-width: 600px;
 
-    margin: 0;
+/* ---------------------------------------------------------
+   OVERVIEW TITLE
+--------------------------------------------------------- */
 
-    font-size: clamp(40px, 4vw, 64px);
+.project-management-page .pm-overview-intro h2 {
+    max-width: 620px;
+
+    margin: 20px 0 0;
+
+    color: #080808;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4.2vw,
+            4.25rem
+        );
+
     font-weight: 700;
 
-    letter-spacing: -0.045em;
     line-height: 1.02;
+
+    letter-spacing: -.045em;
 }
 
-.pm-overview-text {
-    max-width: 720px;
+
+/* ---------------------------------------------------------
+   OVERVIEW TEXT
+--------------------------------------------------------- */
+
+.project-management-page .pm-overview-text {
+    padding-top: 5px;
 }
 
-.pm-overview-text p {
-    margin: 0 0 28px;
+.project-management-page .pm-overview-text p {
+    max-width: 620px;
 
-    color: var(--pm-muted);
+    margin: 0 0 25px;
 
-    font-size: 20px;
-    line-height: 1.7;
+    color: #666666;
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
 }
 
-.pm-overview-text p:last-child {
+.project-management-page .pm-overview-text p:last-child {
     margin-bottom: 0;
 }
 
 
 /* =========================================================
-   05. CAPABILITIES
+   SECTION HEADINGS
 ========================================================= */
 
-.pm-capabilities {
-    padding: 140px 0;
-
-    background: var(--pm-white);
-    color: var(--pm-text);
-}
-
-.pm-section-heading {
+.project-management-page .pm-section-heading {
     max-width: 850px;
 
-    margin-bottom: 70px;
+    margin-bottom: 65px;
 }
 
-.pm-section-heading h2 {
-    margin: 0 0 25px;
+.project-management-page .pm-section-heading h2 {
+    max-width: 850px;
 
-    color: var(--pm-text);
+    margin: 20px 0 0;
 
-    font-size: clamp(42px, 4.8vw, 70px);
+    color: #080808;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4.5vw,
+            4.5rem
+        );
+
     font-weight: 700;
 
-    letter-spacing: -0.05em;
     line-height: 1.02;
+
+    letter-spacing: -.05em;
 }
 
-.pm-section-heading p {
-    max-width: 720px;
+.project-management-page .pm-section-heading p {
+    max-width: 700px;
 
-    margin: 0;
+    margin: 26px 0 0;
 
-    color: var(--pm-muted);
+    color: #686868;
 
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 1rem;
+
+    line-height: 1.75;
 }
 
-.pm-capabilities-grid {
+
+/* =========================================================
+   CAPABILITIES
+========================================================= */
+
+.project-management-page .pm-capabilities {
+    padding: 125px 0;
+
+    background: #f6f6f4;
+}
+
+
+/* ---------------------------------------------------------
+   CAPABILITIES GRID
+--------------------------------------------------------- */
+
+.project-management-page .pm-capabilities-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
 
-    border-top: 1px solid var(--pm-border);
-    border-left: 1px solid var(--pm-border);
+    border-top:
+        1px solid #d9d9d6;
+
+    border-left:
+        1px solid #d9d9d6;
 }
 
-.pm-capability {
+
+/* ---------------------------------------------------------
+   CAPABILITY
+--------------------------------------------------------- */
+
+.project-management-page .pm-capability {
     min-height: 300px;
 
-    padding: 34px 34px 38px;
+    padding: 34px;
 
-    border-right: 1px solid var(--pm-border);
-    border-bottom: 1px solid var(--pm-border);
+    border-right:
+        1px solid #d9d9d6;
 
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
+    border-bottom:
+        1px solid #d9d9d6;
+
+    background: #ffffff;
 }
 
-.pm-capability:hover {
-    background: #fafafa;
-}
-
-.pm-number {
+.project-management-page .pm-number {
     display: block;
 
-    margin-bottom: 55px;
+    margin-bottom: 70px;
 
-    color: var(--pm-gold);
+    color: #c19d5b;
 
-    font-size: 13px;
+    font-size: .78rem;
     font-weight: 700;
-    letter-spacing: 0.15em;
+
+    letter-spacing: .12em;
 }
 
-.pm-capability h3 {
-    margin: 0 0 18px;
+.project-management-page .pm-capability h3 {
+    margin: 0 0 14px;
 
-    color: var(--pm-text);
+    color: #080808;
 
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 1.35rem;
 
-    letter-spacing: -0.025em;
     line-height: 1.15;
+
+    letter-spacing: -.025em;
 }
 
-.pm-capability p {
-    margin: 0;
-
-    color: var(--pm-muted);
-
-    font-size: 16px;
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   06. PROJECT LIFECYCLE
-========================================================= */
-
-.pm-lifecycle {
-    padding: 140px 0;
-
-    background: var(--pm-black);
-    color: var(--pm-white);
-}
-
-.pm-lifecycle .pm-section-heading h2 {
-    color: var(--pm-white);
-}
-
-.pm-lifecycle .pm-section-heading p {
-    color: rgba(255,255,255,0.62);
-}
-
-.pm-lifecycle-list {
-    border-top: 1px solid var(--pm-border-dark);
-}
-
-.pm-lifecycle-list article {
-    display: grid;
-
-    grid-template-columns: 120px minmax(0, 1fr);
-
-    gap: 45px;
-
-    padding: 38px 0;
-
-    border-bottom: 1px solid var(--pm-border-dark);
-}
-
-.pm-lifecycle-number {
-    color: var(--pm-gold);
-
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-}
-
-.pm-lifecycle-list h3 {
-    margin: 0 0 10px;
-
-    color: var(--pm-white);
-
-    font-size: 27px;
-    font-weight: 600;
-
-    letter-spacing: -0.025em;
-}
-
-.pm-lifecycle-list p {
-    max-width: 720px;
+.project-management-page .pm-capability p {
+    max-width: 360px;
 
     margin: 0;
 
-    color: rgba(255,255,255,0.60);
+    color: #6b6b6b;
 
-    font-size: 17px;
-    line-height: 1.65;
-}
+    font-size: .94rem;
 
-
-/* =========================================================
-   07. RESULTS
-========================================================= */
-
-.pm-results {
-    padding: 140px 0;
-
-    background: var(--pm-off-white);
-    color: var(--pm-text);
-}
-
-.pm-results-grid {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.85fr)
-        minmax(0, 1.15fr);
-
-    gap: 110px;
-}
-
-.pm-results-intro h2 {
-    max-width: 650px;
-
-    margin: 0 0 25px;
-
-    font-size: clamp(42px, 4.5vw, 66px);
-    font-weight: 700;
-
-    letter-spacing: -0.05em;
-    line-height: 1.02;
-}
-
-.pm-results-intro p {
-    max-width: 570px;
-
-    margin: 0;
-
-    color: var(--pm-muted);
-
-    font-size: 18px;
     line-height: 1.7;
 }
 
-.pm-results-list {
-    border-top: 1px solid var(--pm-border);
+
+/* =========================================================
+   PROJECT LIFECYCLE
+========================================================= */
+
+.project-management-page .pm-lifecycle {
+    padding: 125px 0;
+
+    background: #ffffff;
 }
 
-.pm-result {
+.project-management-page .pm-lifecycle-list {
+    border-top:
+        1px solid #d9d9d9;
+}
+
+.project-management-page .pm-lifecycle-list article {
     display: grid;
 
-    grid-template-columns: 60px minmax(0, 1fr);
+    grid-template-columns:
+        90px
+        minmax(0, 1fr);
 
-    gap: 25px;
+    gap: 30px;
 
-    padding: 30px 0;
+    padding: 32px 0;
 
-    border-bottom: 1px solid var(--pm-border);
+    border-bottom:
+        1px solid #d9d9d9;
 }
 
-.pm-result > span {
-    color: var(--pm-gold);
+.project-management-page .pm-lifecycle-number {
+    color: #c19d5b;
 
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-}
-
-.pm-result h3 {
-    margin: 0 0 8px;
-
-    font-size: 22px;
+    font-size: .78rem;
     font-weight: 700;
 
-    letter-spacing: -0.02em;
+    letter-spacing: .12em;
 }
 
-.pm-result p {
-    max-width: 620px;
+.project-management-page .pm-lifecycle-list h3 {
+    margin: 0 0 9px;
+
+    color: #080808;
+
+    font-size: 1.4rem;
+
+    line-height: 1.2;
+}
+
+.project-management-page .pm-lifecycle-list p {
+    max-width: 680px;
 
     margin: 0;
 
-    color: var(--pm-muted);
+    color: #6a6a6a;
 
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: .95rem;
+
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   08. WHY BSGA
+   RESULTS
 ========================================================= */
 
-.pm-why {
-    padding: 140px 0;
+.project-management-page .pm-results {
+    padding: 125px 0;
 
-    background: var(--pm-white);
+    background: #f6f6f4;
 }
 
-.pm-why-grid {
+.project-management-page .pm-results-grid {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.9fr)
+        minmax(0, .9fr)
         minmax(0, 1.1fr);
 
     gap: 100px;
+
+    align-items: start;
 }
 
-.pm-why h2 {
-    max-width: 650px;
+.project-management-page .pm-results-intro h2 {
+    max-width: 620px;
 
-    margin: 0;
+    margin: 20px 0 0;
 
-    color: var(--pm-text);
+    color: #080808;
 
-    font-size: clamp(42px, 4.5vw, 66px);
-    font-weight: 700;
+    font-size:
+        clamp(
+            2.5rem,
+            4vw,
+            4.1rem
+        );
 
-    letter-spacing: -0.05em;
     line-height: 1.02;
+
+    letter-spacing: -.045em;
 }
 
-.pm-why p {
-    max-width: 720px;
+.project-management-page .pm-results-intro p {
+    max-width: 560px;
 
-    margin: 0 0 25px;
+    margin: 28px 0 0;
 
-    color: var(--pm-muted);
+    color: #686868;
 
-    font-size: 19px;
-    line-height: 1.7;
-}
+    font-size: 1rem;
 
-.pm-why .pm-button {
-    margin-top: 18px;
+    line-height: 1.75;
 }
 
 
-/* =========================================================
-   09. RELATED SERVICES
-========================================================= */
+/* ---------------------------------------------------------
+   RESULTS LIST
+--------------------------------------------------------- */
 
-.pm-related-services {
-    padding: 140px 0;
-
-    background: #f4f4f2;
+.project-management-page .pm-results-list {
+    border-top:
+        1px solid #d8d8d5;
 }
 
-.pm-related-content {
+.project-management-page .pm-result {
     display: grid;
 
     grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        55px
+        minmax(0, 1fr);
 
-    border-top: 1px solid var(--pm-border);
-    border-left: 1px solid var(--pm-border);
+    column-gap: 18px;
+
+    padding: 25px 0;
+
+    border-bottom:
+        1px solid #d8d8d5;
 }
 
-.pm-related-content > a {
-    display: flex;
-    flex-direction: column;
+.project-management-page .pm-result > span {
+    grid-row: span 2;
 
-    min-height: 360px;
+    color: #c19d5b;
 
-    padding: 32px;
-
-    border-right: 1px solid var(--pm-border);
-    border-bottom: 1px solid var(--pm-border);
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-.pm-related-content > a:hover {
-    background: var(--pm-white);
-    transform: translateY(-3px);
-}
-
-.pm-related-content > a > span {
-    margin-bottom: 70px;
-
-    color: var(--pm-gold);
-
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-}
-
-.pm-related-content h3 {
-    margin: 0 0 16px;
-
-    color: var(--pm-text);
-
-    font-size: 25px;
+    font-size: .75rem;
     font-weight: 700;
 
-    letter-spacing: -0.025em;
+    letter-spacing: .12em;
 }
 
-.pm-related-content p {
-    margin: 0 0 30px;
+.project-management-page .pm-result h3 {
+    margin: 0 0 8px;
 
-    color: var(--pm-muted);
+    color: #080808;
 
-    font-size: 16px;
+    font-size: 1.2rem;
+
+    line-height: 1.25;
+}
+
+.project-management-page .pm-result p {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: #6b6b6b;
+
+    font-size: .92rem;
+
     line-height: 1.65;
 }
 
-.pm-related-content strong {
-    margin-top: auto;
-
-    color: var(--pm-text);
-
-    font-size: 15px;
-    font-weight: 700;
-}
-
 
 /* =========================================================
-   10. FAQ
+   WHY BSGA
 ========================================================= */
 
-.pm-faq {
-    padding: 140px 0;
+.project-management-page .pm-why {
+    padding: 125px 0;
 
-    background: var(--pm-white);
+    background: #ffffff;
 }
 
-.pm-faq-list {
-    max-width: 1000px;
-
-    border-top: 1px solid var(--pm-border);
-}
-
-.pm-faq details {
-    border-bottom: 1px solid var(--pm-border);
-}
-
-.pm-faq summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-
-    padding: 28px 0;
-
-    list-style: none;
-
-    cursor: pointer;
-
-    color: var(--pm-text);
-
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-.pm-faq summary::-webkit-details-marker {
-    display: none;
-}
-
-.pm-faq summary span {
-    flex: 0 0 auto;
-
-    color: var(--pm-gold);
-
-    font-size: 28px;
-    font-weight: 400;
-
-    transition: transform 0.25s ease;
-}
-
-.pm-faq details[open] summary span {
-    transform: rotate(45deg);
-}
-
-.pm-faq details p {
-    max-width: 780px;
-
-    padding: 0 60px 30px 0;
-
-    margin: 0;
-
-    color: var(--pm-muted);
-
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   11. CTA
-========================================================= */
-
-.pm-cta {
-    padding: 120px 0;
-
-    background: var(--pm-black);
-}
-
-.pm-cta-box {
-    position: relative;
-
-    overflow: hidden;
-
-    padding: 90px;
-
-    border: 1px solid var(--pm-border-dark);
-
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(184,149,78,0.15),
-            transparent 42%
-        ),
-        #0b0b0b;
-}
-
-.pm-cta-box::after {
-    content: "";
-
-    position: absolute;
-
-    width: 380px;
-    height: 380px;
-
-    right: -160px;
-    bottom: -220px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(184,149,78,0.10);
-
-    pointer-events: none;
-}
-
-.pm-cta-box h2 {
-    position: relative;
-    z-index: 1;
-
-    max-width: 950px;
-
-    margin: 0 0 25px;
-
-    color: var(--pm-white);
-
-    font-size: clamp(44px, 5vw, 76px);
-    font-weight: 700;
-
-    letter-spacing: -0.055em;
-    line-height: 1.02;
-}
-
-.pm-cta-box p {
-    position: relative;
-    z-index: 1;
-
-    max-width: 700px;
-
-    margin: 0 0 38px;
-
-    color: rgba(255,255,255,0.62);
-
-    font-size: 19px;
-    line-height: 1.7;
-}
-
-.pm-cta-box .pm-button {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* =========================================================
-   12. FOOTER
-========================================================= */
-
-.pm-footer {
-    background: #050505;
-    color: var(--pm-white);
-}
-
-.pm-footer-inner {
+.project-management-page .pm-why-grid {
     display: grid;
 
     grid-template-columns:
-        1fr auto 1fr;
+        minmax(0, .9fr)
+        minmax(0, 1.1fr);
 
-    align-items: center;
+    gap: 100px;
 
-    gap: 40px;
-
-    padding: 50px 0;
-
-    border-top: 1px solid var(--pm-border-dark);
+    align-items: start;
 }
 
-.pm-footer-logo img {
-    width: 112px;
-    height: auto;
+.project-management-page .pm-why h2 {
+    max-width: 650px;
+
+    margin: 20px 0 0;
+
+    color: #080808;
+
+    font-size:
+        clamp(
+            2.5rem,
+            4vw,
+            4.1rem
+        );
+
+    line-height: 1.02;
+
+    letter-spacing: -.045em;
 }
 
-.pm-footer-links {
+.project-management-page .pm-why p {
+    max-width: 620px;
+
+    margin: 0 0 25px;
+
+    color: #666666;
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+.project-management-page .pm-why .pm-button {
+    margin-top: 12px;
+
+    background: #080808;
+
+    color: #ffffff;
+}
+
+.project-management-page .pm-why .pm-button:hover {
+    background: #c19d5b;
+
+    color: #080808;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.project-management-page .pm-faq {
+    padding: 125px 0;
+
+    background: #f6f6f4;
+}
+
+.project-management-page .pm-faq-list {
+    max-width: 1000px;
+
+    border-top:
+        1px solid #d8d8d5;
+}
+
+.project-management-page .pm-faq-list details {
+    border-bottom:
+        1px solid #d8d8d5;
+}
+
+.project-management-page .pm-faq-list summary {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 
-    gap: 26px;
+    gap: 30px;
+
+    padding: 27px 0;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    color: #080808;
+
+    font-size: 1.05rem;
+    font-weight: 600;
+
+    line-height: 1.45;
 }
 
-.pm-footer-links a {
-    color: rgba(255,255,255,0.62);
-
-    font-size: 14px;
-
-    transition: color 0.25s ease;
+.project-management-page .pm-faq-list summary::-webkit-details-marker {
+    display: none;
 }
 
-.pm-footer-links a:hover {
-    color: var(--pm-white);
+.project-management-page .pm-faq-list summary span {
+    flex-shrink: 0;
+
+    color: #c19d5b;
+
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    transition:
+        transform .25s ease;
 }
 
-.pm-footer-inner > p {
+.project-management-page .pm-faq-list details[open]
+summary span {
+    transform: rotate(45deg);
+}
+
+.project-management-page .pm-faq-list details p {
+    max-width: 780px;
+
     margin: 0;
 
-    color: rgba(255,255,255,0.42);
+    padding: 0 60px 28px 0;
 
-    font-size: 13px;
-    text-align: right;
+    color: #6b6b6b;
+
+    font-size: .95rem;
+
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   13. TABLET
+   CTA
 ========================================================= */
 
-@media (max-width: 1100px) {
+.project-management-page .pm-cta {
+    padding: 110px 0;
 
-    .pm-container {
-        width: min(100% - 48px, 1380px);
+    background: #050505;
+}
+
+.project-management-page .pm-cta-box {
+    padding: 75px;
+
+    border:
+        1px solid rgba(255,255,255,.12);
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(201,169,106,.10),
+            transparent 38%
+        ),
+        #080808;
+}
+
+.project-management-page .pm-cta-box h2 {
+    max-width: 850px;
+
+    margin: 22px 0 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            2.7rem,
+            5vw,
+            5rem
+        );
+
+    line-height: 1;
+
+    letter-spacing: -.05em;
+}
+
+.project-management-page .pm-cta-box p {
+    max-width: 720px;
+
+    margin: 30px 0 0;
+
+    color: rgba(255,255,255,.65);
+
+    font-size: 1rem;
+
+    line-height: 1.75;
+}
+
+.project-management-page .pm-cta-actions {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 24px;
+
+    margin-top: 36px;
+}
+
+.project-management-page .pm-cta .pm-button {
+    background: #ffffff;
+
+    color: #080808;
+}
+
+.project-management-page .pm-email {
+    color: rgba(255,255,255,.72);
+
+    font-size: .95rem;
+    font-weight: 500;
+
+    transition:
+        color .25s ease;
+}
+
+.project-management-page .pm-email:hover {
+    color: #c19d5b;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.project-management-page .pm-footer {
+    padding: 75px 0 25px;
+
+    background: #050505;
+
+    color: #ffffff;
+}
+
+.project-management-page .pm-footer-top {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr;
+
+    gap: 70px;
+
+    padding-bottom: 55px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
+}
+
+.project-management-page .pm-footer-logo {
+    width: 145px;
+
+    height: auto;
+
+    margin-bottom: 25px;
+}
+
+.project-management-page .pm-footer-brand p {
+    max-width: 430px;
+
+    margin: 0;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: .9rem;
+
+    line-height: 1.7;
+}
+
+.project-management-page .pm-footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 13px;
+}
+
+.project-management-page .pm-footer-column h4 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+    letter-spacing: .13em;
+
+    text-transform: uppercase;
+}
+
+.project-management-page .pm-footer-column a {
+    color: rgba(255,255,255,.55);
+
+    font-size: .9rem;
+
+    transition:
+        color .25s ease;
+}
+
+.project-management-page .pm-footer-column a:hover {
+    color: #ffffff;
+}
+
+.project-management-page .pm-footer-bottom {
+    padding-top: 22px;
+
+    color: rgba(255,255,255,.38);
+
+    font-size: .75rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .project-management-page .pm-container {
+        width:
+            min(
+                calc(100% - 48px),
+                900px
+            );
     }
 
-    .pm-overview-grid,
-    .pm-results-grid,
-    .pm-why-grid {
-        grid-template-columns: 1fr;
+
+    .project-management-page .header-inner {
+        width:
+            calc(100% - 48px);
+    }
+
+
+    .project-management-page .pm-hero {
+        min-height: 680px;
+    }
+
+
+    .project-management-page .pm-overview-grid,
+    .project-management-page .pm-results-grid,
+    .project-management-page .pm-why-grid {
 
         gap: 60px;
+
     }
 
-    .pm-capabilities-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    .project-management-page .pm-capabilities-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+
     }
 
-    .pm-related-content {
-        grid-template-columns: 1fr;
-    }
 
-    .pm-related-content > a {
-        min-height: 300px;
-    }
+    .project-management-page .pm-footer-top {
 
-    .pm-footer-inner {
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1.4fr
+            1fr
+            1fr;
 
-        justify-items: center;
+        gap: 40px;
 
-        text-align: center;
-    }
-
-    .pm-footer-inner > p {
-        text-align: center;
     }
 
 }
 
 
 /* =========================================================
-   14. MOBILE
+   MOBILE / IPAD PORTRAIT
 ========================================================= */
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
-    .pm-container {
-        width: calc(100% - 36px);
+    .project-management-page .pm-container {
+
+        width:
+            calc(100% - 40px);
+
     }
 
-    .pm-hero {
-        min-height: auto;
+
+    .project-management-page .header-inner {
+
+        width:
+            calc(100% - 40px);
+
     }
 
-    .pm-hero-content {
-        padding: 75px 0 85px;
+
+    /* HERO */
+
+    .project-management-page .pm-hero {
+
+        min-height: 650px;
+
     }
 
-    .pm-hero-glow {
-        width: 400px;
-        height: 400px;
 
-        right: -180px;
+    .project-management-page .pm-hero .pm-container {
+
+        padding-top: 85px;
+        padding-bottom: 70px;
+
     }
 
-    .pm-back {
-        margin-bottom: 45px;
+
+    .project-management-page .pm-hero-background img {
+
+        object-position:
+            62% center;
+
     }
 
-    .pm-hero h1 {
-        font-size: clamp(46px, 13vw, 64px);
-        line-height: 0.98;
+
+    .project-management-page .pm-hero-overlay {
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0,0,0,.94),
+                rgba(0,0,0,.72)
+            );
+
     }
 
-    .pm-hero p {
-        font-size: 17px;
-        line-height: 1.6;
+
+    .project-management-page .pm-hero h1 {
+
+        font-size:
+            clamp(
+                2.7rem,
+                11vw,
+                4.1rem
+            );
+
     }
 
-    .pm-hero-actions {
-        flex-direction: column;
+
+    .project-management-page .pm-hero p {
+
+        font-size: 1rem;
+
+    }
+
+
+    .project-management-page .pm-hero-actions {
+
         align-items: stretch;
+
+        flex-direction: column;
+
     }
 
-    .pm-button {
+
+    .project-management-page .pm-button {
+
         width: 100%;
+
     }
 
-    .pm-overview,
-    .pm-capabilities,
-    .pm-lifecycle,
-    .pm-results,
-    .pm-why,
-    .pm-related-services,
-    .pm-faq {
-        padding: 90px 0;
+
+    /* SECTIONS */
+
+    .project-management-page .pm-overview,
+    .project-management-page .pm-capabilities,
+    .project-management-page .pm-lifecycle,
+    .project-management-page .pm-results,
+    .project-management-page .pm-why,
+    .project-management-page .pm-faq {
+
+        padding:
+            85px 0;
+
     }
 
-    .pm-section-heading {
-        margin-bottom: 50px;
-    }
 
-    .pm-section-heading h2,
-    .pm-overview-intro h2,
-    .pm-results-intro h2,
-    .pm-why h2 {
-        font-size: 42px;
-    }
+    .project-management-page .pm-overview-grid,
+    .project-management-page .pm-results-grid,
+    .project-management-page .pm-why-grid {
 
-    .pm-section-heading p,
-    .pm-overview-text p,
-    .pm-why p {
-        font-size: 17px;
-    }
-
-    .pm-capabilities-grid {
         grid-template-columns: 1fr;
+
+        gap: 45px;
+
     }
 
-    .pm-capability {
+
+    .project-management-page .pm-section-heading {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .project-management-page .pm-section-heading h2 {
+
+        font-size:
+            clamp(
+                2.35rem,
+                10vw,
+                3.5rem
+            );
+
+    }
+
+
+    /* CAPABILITIES */
+
+    .project-management-page .pm-capabilities-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .project-management-page .pm-capability {
+
         min-height: auto;
 
         padding: 28px;
+
     }
 
-    .pm-number {
-        margin-bottom: 42px;
+
+    .project-management-page .pm-number {
+
+        margin-bottom: 48px;
+
     }
 
-    .pm-lifecycle-list article {
-        grid-template-columns: 50px minmax(0, 1fr);
 
-        gap: 20px;
+    /* LIFECYCLE */
 
-        padding: 28px 0;
-    }
+    .project-management-page .pm-lifecycle-list article {
 
-    .pm-lifecycle-list h3 {
-        font-size: 23px;
-    }
+        grid-template-columns:
+            55px
+            minmax(0,1fr);
 
-    .pm-lifecycle-list p {
-        font-size: 16px;
-    }
-
-    .pm-result {
-        grid-template-columns: 45px minmax(0, 1fr);
-
-        gap: 15px;
-    }
-
-    .pm-result h3 {
-        font-size: 20px;
-    }
-
-    .pm-result p {
-        font-size: 15px;
-    }
-
-    .pm-related-content > a {
-        min-height: 320px;
-
-        padding: 28px;
-    }
-
-    .pm-related-content > a > span {
-        margin-bottom: 55px;
-    }
-
-    .pm-faq summary {
-        padding: 24px 0;
-
-        font-size: 18px;
-    }
-
-    .pm-faq details p {
-        padding-right: 0;
-
-        font-size: 16px;
-    }
-
-    .pm-cta {
-        padding: 70px 0;
-    }
-
-    .pm-cta-box {
-        padding: 55px 28px;
-    }
-
-    .pm-cta-box h2 {
-        font-size: 43px;
-    }
-
-    .pm-cta-box p {
-        font-size: 17px;
-    }
-
-    .pm-footer-inner {
-        padding: 40px 0;
-    }
-
-    .pm-footer-links {
         gap: 18px;
+
+    }
+
+
+    /* RESULTS */
+
+    .project-management-page .pm-result {
+
+        grid-template-columns:
+            45px
+            minmax(0,1fr);
+
+    }
+
+
+    /* CTA */
+
+    .project-management-page .pm-cta {
+
+        padding:
+            70px 0;
+
+    }
+
+
+    .project-management-page .pm-cta-box {
+
+        padding:
+            45px 28px;
+
+    }
+
+
+    .project-management-page .pm-cta-box h2 {
+
+        font-size:
+            clamp(
+                2.5rem,
+                10vw,
+                3.7rem
+            );
+
+    }
+
+
+    .project-management-page .pm-cta-actions {
+
+        align-items:
+            stretch;
+
+        flex-direction:
+            column;
+
+    }
+
+
+    .project-management-page .pm-email {
+
+        text-align:
+            center;
+
+    }
+
+
+    /* FOOTER */
+
+    .project-management-page .pm-footer {
+
+        padding:
+            60px 0 25px;
+
+    }
+
+
+    .project-management-page .pm-footer-top {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
     }
 
 }
 
 
 /* =========================================================
-   15. REDUCED MOTION
+   SMALL MOBILE
 ========================================================= */
 
-@media (prefers-reduced-motion: reduce) {
+@media (max-width: 480px) {
 
-    .pm-button,
-    .pm-back,
-    .pm-capability,
-    .pm-related-content > a,
-    .pm-footer-links a {
-        transition: none;
+    .project-management-page .pm-container {
+
+        width:
+            calc(100% - 32px);
+
+    }
+
+
+    .project-management-page .header-inner {
+
+        width:
+            calc(100% - 32px);
+
+    }
+
+
+    .project-management-page .pm-hero {
+
+        min-height: 620px;
+
+    }
+
+
+    .project-management-page .pm-back {
+
+        margin-bottom: 28px;
+
+    }
+
+
+    .project-management-page .pm-hero h1 {
+
+        font-size:
+            2.65rem;
+
+    }
+
+
+    .project-management-page .pm-overview-intro h2,
+    .project-management-page .pm-results-intro h2,
+    .project-management-page .pm-why h2 {
+
+        font-size:
+            2.55rem;
+
+    }
+
+
+    .project-management-page .pm-lifecycle-list article {
+
+        padding:
+            25px 0;
+
+    }
+
+
+    .project-management-page .pm-faq-list summary {
+
+        font-size:
+            .98rem;
+
+    }
+
+
+    .project-management-page .pm-faq-list details p {
+
+        padding-right:
+            15px;
+
     }
 
 }
