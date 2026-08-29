@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="Explore BSGA Consulting services in project management, business transformation, operational excellence and artificial intelligence."
+        content="Explore BSGA Consulting services across project management, business transformation, operational excellence and artificial intelligence."
     >
 
     <meta
@@ -29,37 +29,36 @@
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     >
 
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
-
     <link
         rel="canonical"
         href="https://bsgaconsulting.es/services.html"
     >
 
-    <!-- FAVICON -->
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
 
     <link
         rel="icon"
         type="image/png"
         sizes="512x512"
-        href="/images/logos/favicon.png"
+        href="images/logos/favicon.png"
     >
 
     <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/images/logos/apple-touch-icon.png"
+        href="images/logos/apple-touch-icon.png"
     >
 
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
+    <meta
+        name="theme-color"
+        content="#000000"
     >
 
-    <!-- GOOGLE FONT -->
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
 
     <link
         rel="preconnect"
@@ -77,30 +76,37 @@
         rel="stylesheet"
     >
 
-    <!-- GLOBAL CSS -->
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
 
     <link
         rel="stylesheet"
-        href="/css/styles.css"
+        href="css/styles.css"
     >
 
-    <!-- PAGE CSS -->
+    <!-- =====================================================
+         SERVICES CSS
+    ====================================================== -->
 
     <link
         rel="stylesheet"
-        href="/css/services.css"
+        href="css/services.css"
     >
 
-    <!-- HERO PRELOAD -->
+    <!-- =====================================================
+         HERO PRELOAD
+    ====================================================== -->
 
     <link
         rel="preload"
         as="image"
-        href="/images/heroes/BSGA-Services-Hero.webp"
-        fetchpriority="high"
+        href="images/heroes/BSGA-Services-Hero.png"
     >
 
-    <!-- OPEN GRAPH -->
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
 
     <meta
         property="og:type"
@@ -119,7 +125,7 @@
 
     <meta
         property="og:description"
-        content="Project management, business transformation, operational excellence and AI consulting from BSGA Consulting."
+        content="Project management, business transformation, operational excellence and artificial intelligence consulting."
     >
 
     <meta
@@ -138,11 +144,6 @@
     >
 
     <meta
-        property="og:image:alt"
-        content="BSGA Consulting"
-    >
-
-    <meta
         property="og:site_name"
         content="BSGA Consulting"
     >
@@ -152,37 +153,14 @@
         content="en_GB"
     >
 
-    <!-- STRUCTURED DATA -->
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@graph": [
-
-            {
-                "@type": "Organization",
-                "@id": "https://bsgaconsulting.es/#organization",
-                "name": "BSGA Consulting",
-                "url": "https://bsgaconsulting.es/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://bsgaconsulting.es/images/logos/logo-white.webp"
-                },
-                "email": "info@bsgaconsulting.es",
-                "description": "Strategic business consulting focused on project delivery, business transformation, operational excellence and artificial intelligence."
-            },
-
-            {
-                "@type": "WebPage",
-                "@id": "https://bsgaconsulting.es/services.html#webpage",
-                "url": "https://bsgaconsulting.es/services.html",
-                "name": "Consulting Services | BSGA Consulting",
-                "description": "Project management, business transformation, operational excellence and AI consulting.",
-                "isPartOf": {
-                    "@id": "https://bsgaconsulting.es/#website"
-                },
-                "inLanguage": "en-US"
-            },
 
             {
                 "@type": "WebSite",
@@ -192,22 +170,25 @@
             },
 
             {
-                "@type": "BreadcrumbList",
-                "@id": "https://bsgaconsulting.es/services.html#breadcrumb",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://bsgaconsulting.es/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Services",
-                        "item": "https://bsgaconsulting.es/services.html"
-                    }
-                ]
+                "@type": "Organization",
+                "@id": "https://bsgaconsulting.es/#organization",
+                "name": "BSGA Consulting",
+                "url": "https://bsgaconsulting.es/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bsgaconsulting.es/images/logos/logo-white.png"
+                }
+            },
+
+            {
+                "@type": "CollectionPage",
+                "@id": "https://bsgaconsulting.es/services.html#webpage",
+                "url": "https://bsgaconsulting.es/services.html",
+                "name": "Consulting Services | BSGA Consulting",
+                "description": "Explore BSGA Consulting services across project management, business transformation, operational excellence and artificial intelligence.",
+                "isPartOf": {
+                    "@id": "https://bsgaconsulting.es/#website"
+                }
             },
 
             {
@@ -216,30 +197,35 @@
                 "name": "BSGA Consulting Services",
                 "numberOfItems": 4,
                 "itemListElement": [
+
                     {
                         "@type": "ListItem",
                         "position": 1,
                         "name": "Project Management Consulting",
                         "url": "https://bsgaconsulting.es/project-management.html"
                     },
+
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Business Transformation Consulting",
                         "url": "https://bsgaconsulting.es/business-transformation.html"
                     },
+
                     {
                         "@type": "ListItem",
                         "position": 3,
-                        "name": "Operational Excellence Consulting",
-                        "url": "https://bsgaconsulting.es/operational-excellence.html"
+                        "name": "Artificial Intelligence Consulting",
+                        "url": "https://bsgaconsulting.es/artificial-intelligence.html"
                     },
+
                     {
                         "@type": "ListItem",
                         "position": 4,
-                        "name": "Artificial Intelligence Consulting",
-                        "url": "https://bsgaconsulting.es/artificial-intelligence.html"
+                        "name": "Operational Excellence Consulting",
+                        "url": "https://bsgaconsulting.es/operational-excellence.html"
                     }
+
                 ]
             }
 
@@ -260,14 +246,16 @@
 
     <div class="header-container">
 
+        <!-- LOGO -->
+
         <a
-            href="/index.html"
+            href="index.html"
             class="site-logo"
             aria-label="BSGA Consulting Home"
         >
 
             <img
-                src="/images/logos/logo-white.webp"
+                src="images/logos/logo-white.png"
                 alt="BSGA Consulting"
                 width="178"
                 height="89"
@@ -276,37 +264,41 @@
         </a>
 
 
+        <!-- DESKTOP NAVIGATION -->
+
         <nav
             class="main-navigation"
             aria-label="Main navigation"
         >
 
-            <a href="/index.html">
+            <a href="index.html">
                 Home
             </a>
 
             <a
-                href="/services.html"
+                href="services.html"
                 class="active"
                 aria-current="page"
             >
                 Services
             </a>
 
-            <a href="/about.html">
+            <a href="about.html">
                 About
             </a>
 
-            <a href="/insights.html">
+            <a href="insights.html">
                 Insights
             </a>
 
-            <a href="/contact.html">
+            <a href="contact.html">
                 Contact
             </a>
 
         </nav>
 
+
+        <!-- HEADER CTA -->
 
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
@@ -316,7 +308,7 @@
             aria-label="Schedule a consultation with BSGA Consulting"
         >
 
-            <span>
+            <span class="header-cta-text">
                 Schedule a Consultation
             </span>
 
@@ -329,6 +321,8 @@
 
         </a>
 
+
+        <!-- MOBILE MENU -->
 
         <button
             id="menuToggle"
@@ -348,33 +342,35 @@
     </div>
 
 
+    <!-- MOBILE NAV -->
+
     <nav
         id="mobileNav"
         class="mobile-nav"
         aria-label="Mobile navigation"
     >
 
-        <a href="/index.html">
+        <a href="index.html">
             Home
         </a>
 
         <a
-            href="/services.html"
+            href="services.html"
             class="active"
             aria-current="page"
         >
             Services
         </a>
 
-        <a href="/about.html">
+        <a href="about.html">
             About
         </a>
 
-        <a href="/insights.html">
+        <a href="insights.html">
             Insights
         </a>
 
-        <a href="/contact.html">
+        <a href="contact.html">
             Contact
         </a>
 
@@ -384,6 +380,7 @@
             target="_blank"
             rel="noopener noreferrer"
         >
+
             <span>
                 Schedule a Consultation
             </span>
@@ -391,6 +388,7 @@
             <span aria-hidden="true">
                 →
             </span>
+
         </a>
 
     </nav>
@@ -414,16 +412,18 @@
     aria-labelledby="services-hero-title"
 >
 
+    <!-- REAL IMAGE: THE ONLY IMAGE USED ON THIS PAGE -->
+
     <div class="services-hero-background">
 
         <img
-            src="/images/heroes/BSGA-Services-Hero.webp"
-            alt="Business consulting services for strategy, projects, operations and AI"
+            src="images/heroes/BSGA-Services-Hero.png"
+            alt="BSGA Consulting Services"
             width="1536"
             height="1024"
             fetchpriority="high"
-            decoding="async"
             loading="eager"
+            decoding="async"
         >
 
     </div>
@@ -440,36 +440,47 @@
         <div class="services-hero-content">
 
             <span class="services-hero-kicker">
-                BSGA CONSULTING SERVICES
+                OUR SERVICES
             </span>
 
+
             <h1 id="services-hero-title">
-                Business Consulting Services for Strategy, Projects, Operations and AI.
+                Turning complexity
+                into measurable
+                progress.
             </h1>
 
+
             <p>
-                BSGA Consulting helps organisations turn strategic
-                priorities into measurable business results through
-                project management, business transformation,
-                operational excellence and artificial intelligence.
+                BSGA Consulting helps organisations improve performance,
+                deliver strategic initiatives, transform their operations
+                and adopt Artificial Intelligence with confidence.
             </p>
 
 
             <div class="services-hero-actions">
 
                 <a
-                    href="/contact.html"
+                    href="#services"
                     class="services-hero-button services-hero-button-primary"
                 >
-                    Discuss Your Challenge
-                    <span aria-hidden="true">→</span>
+                    Explore Our Services
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </a>
 
+
                 <a
-                    href="#services"
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
                     class="services-hero-button services-hero-button-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Explore Our Services
+                    Schedule a Consultation
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </a>
 
             </div>
@@ -482,12 +493,12 @@
 
 
 <!-- =========================================================
-     INTRO
+     INTRODUCTION
 ========================================================= -->
 
 <section
     class="services-intro"
-    aria-labelledby="services-intro-heading"
+    aria-labelledby="services-intro-title"
 >
 
     <div class="services-container">
@@ -497,11 +508,12 @@
             <div class="services-intro-heading">
 
                 <span class="services-kicker">
-                    WHAT WE DO
+                    HOW WE HELP
                 </span>
 
-                <h2 id="services-intro-heading">
-                    Consulting built around the challenges that matter.
+                <h2 id="services-intro-title">
+                    Practical consulting
+                    focused on outcomes.
                 </h2>
 
             </div>
@@ -510,15 +522,15 @@
             <div class="services-intro-copy">
 
                 <p>
-                    BSGA Consulting helps organisations improve
-                    performance, deliver strategic initiatives and
-                    navigate complex business transformation.
+                    Organisations rarely face a single isolated challenge.
+                    Strategic priorities, operational performance, technology
+                    and delivery are often closely connected.
                 </p>
 
                 <p>
-                    Our consulting services combine strategic thinking,
-                    disciplined execution and practical technology
-                    adoption to create measurable business value.
+                    Our services are designed to address those challenges
+                    individually or together, depending on what your
+                    organisation needs.
                 </p>
 
             </div>
@@ -542,22 +554,21 @@
 
     <div class="services-container">
 
+
         <div class="services-section-heading">
 
             <span class="services-kicker">
-                OUR SERVICES
+                OUR EXPERTISE
             </span>
 
             <h2 id="services-heading">
-                Four capabilities.
-                One focus: measurable results.
+                Four areas of expertise.
             </h2>
 
             <p>
-                Our consulting services can be delivered individually
-                or combined to address complex business challenges,
-                from strategic project delivery and transformation
-                through to operational performance and AI adoption.
+                Each service is designed to create clarity,
+                strengthen execution and deliver measurable
+                business improvement.
             </p>
 
         </div>
@@ -566,71 +577,60 @@
         <div class="services-grid">
 
 
-            <!-- PROJECT MANAGEMENT -->
+            <!-- =================================================
+                 SERVICE 01 — PROJECT MANAGEMENT
+            ================================================== -->
 
             <article class="service-card">
 
-                <div class="service-card-image">
+                <div
+                    class="service-card-visual visual-project"
+                    aria-hidden="true"
+                >
 
-                    <img
-                        src="/images/heroes/BSGA-Project-Management-Hero.webp"
-                        alt="Project Management Consulting"
-                        width="1536"
-                        height="1024"
-                        loading="lazy"
-                        decoding="async"
-                    >
+                    <div class="visual-project-number">
+                        01
+                    </div>
+
+                    <div class="visual-project-line line-1"></div>
+                    <div class="visual-project-line line-2"></div>
+                    <div class="visual-project-line line-3"></div>
+
+                    <div class="visual-project-node node-1"></div>
+                    <div class="visual-project-node node-2"></div>
+                    <div class="visual-project-node node-3"></div>
 
                 </div>
 
-                <div class="service-card-number">
-                    01
-                </div>
 
                 <div class="service-card-content">
+
+                    <span class="service-card-number">
+                        01
+                    </span>
 
                     <span class="service-card-label">
                         DELIVERY
                     </span>
 
                     <h3>
-                        Project Management Consulting
+                        Project Management
                     </h3>
 
                     <p>
-                        Project management consulting that brings
-                        structure, governance and delivery discipline
-                        to complex projects, programmes and strategic
-                        initiatives.
+                        Governance, PMO, delivery assurance,
+                        stakeholder management and successful
+                        execution of strategic projects.
                     </p>
 
-                    <ul>
-
-                        <li>
-                            Project &amp; Programme Management
-                        </li>
-
-                        <li>
-                            PMO &amp; Governance
-                        </li>
-
-                        <li>
-                            Risk &amp; Dependency Management
-                        </li>
-
-                        <li>
-                            Delivery Assurance
-                        </li>
-
-                    </ul>
-
                     <a
-                        href="/project-management.html"
+                        href="project-management.html"
                         class="service-card-link"
-                        aria-label="Explore Project Management Consulting"
                     >
-                        Explore Project Management
-                        <span aria-hidden="true">→</span>
+                        Explore service
+                        <span aria-hidden="true">
+                            →
+                        </span>
                     </a>
 
                 </div>
@@ -638,70 +638,55 @@
             </article>
 
 
-            <!-- BUSINESS TRANSFORMATION -->
+            <!-- =================================================
+                 SERVICE 02 — BUSINESS TRANSFORMATION
+            ================================================== -->
 
             <article class="service-card">
 
-                <div class="service-card-image">
+                <div
+                    class="service-card-visual visual-transformation"
+                    aria-hidden="true"
+                >
 
-                    <img
-                        src="/images/BSGA-Business-Transformation-Hero.webp"
-                        alt="Business Transformation Consulting"
-                        width="1536"
-                        height="1024"
-                        loading="lazy"
-                        decoding="async"
-                    >
+                    <div class="visual-transform-grid"></div>
+
+                    <div class="visual-transform-block block-1"></div>
+                    <div class="visual-transform-block block-2"></div>
+                    <div class="visual-transform-block block-3"></div>
+
+                    <div class="visual-transform-line"></div>
 
                 </div>
 
-                <div class="service-card-number">
-                    02
-                </div>
 
                 <div class="service-card-content">
+
+                    <span class="service-card-number">
+                        02
+                    </span>
 
                     <span class="service-card-label">
                         TRANSFORMATION
                     </span>
 
                     <h3>
-                        Business Transformation Consulting
+                        Business Transformation
                     </h3>
 
                     <p>
-                        Business transformation consulting that turns
-                        strategic priorities into practical programmes,
-                        organisational change and sustainable improvement.
+                        Supporting organisations through strategic change,
+                        operating model improvement and transformation.
                     </p>
 
-                    <ul>
-
-                        <li>
-                            Strategy Execution
-                        </li>
-
-                        <li>
-                            Operating Model Design
-                        </li>
-
-                        <li>
-                            Organisational Change
-                        </li>
-
-                        <li>
-                            Transformation Governance
-                        </li>
-
-                    </ul>
-
                     <a
-                        href="/business-transformation.html"
+                        href="business-transformation.html"
                         class="service-card-link"
-                        aria-label="Explore Business Transformation Consulting"
                     >
-                        Explore Business Transformation
-                        <span aria-hidden="true">→</span>
+                        Explore service
+                        <span aria-hidden="true">
+                            →
+                        </span>
                     </a>
 
                 </div>
@@ -709,141 +694,135 @@
             </article>
 
 
-            <!-- OPERATIONAL EXCELLENCE -->
+            <!-- =================================================
+                 SERVICE 03 — ARTIFICIAL INTELLIGENCE
+            ================================================== -->
 
             <article class="service-card">
 
-                <div class="service-card-image">
+                <div
+                    class="service-card-visual visual-ai"
+                    aria-hidden="true"
+                >
 
-                    <img
-                        src="/images/BSGA-Operational-Excellence-Hero.webp"
-                        alt="Operational Excellence Consulting"
-                        width="1536"
-                        height="1024"
-                        loading="lazy"
-                        decoding="async"
-                    >
+                    <div class="visual-ai-orbit orbit-1"></div>
+                    <div class="visual-ai-orbit orbit-2"></div>
+                    <div class="visual-ai-orbit orbit-3"></div>
+
+                    <div class="visual-ai-core">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                    <div class="visual-ai-dot dot-1"></div>
+                    <div class="visual-ai-dot dot-2"></div>
+                    <div class="visual-ai-dot dot-3"></div>
+                    <div class="visual-ai-dot dot-4"></div>
 
                 </div>
 
-                <div class="service-card-number">
-                    03
-                </div>
 
                 <div class="service-card-content">
 
-                    <span class="service-card-label">
-                        PERFORMANCE
+                    <span class="service-card-number">
+                        03
                     </span>
-
-                    <h3>
-                        Operational Excellence Consulting
-                    </h3>
-
-                    <p>
-                        Operational excellence consulting focused on
-                        improving processes, performance and ways of
-                        working to create sustainable operational results.
-                    </p>
-
-                    <ul>
-
-                        <li>
-                            Process Improvement
-                        </li>
-
-                        <li>
-                            Performance Management
-                        </li>
-
-                        <li>
-                            KPI Design
-                        </li>
-
-                        <li>
-                            Continuous Improvement
-                        </li>
-
-                    </ul>
-
-                    <a
-                        href="/operational-excellence.html"
-                        class="service-card-link"
-                        aria-label="Explore Operational Excellence Consulting"
-                    >
-                        Explore Operational Excellence
-                        <span aria-hidden="true">→</span>
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- ARTIFICIAL INTELLIGENCE -->
-
-            <article class="service-card">
-
-                <div class="service-card-image">
-
-                    <img
-                        src="/images/BSGA-Artificial-Intelligence-Hero.webp"
-                        alt="Artificial Intelligence Consulting"
-                        width="1536"
-                        height="1024"
-                        loading="lazy"
-                        decoding="async"
-                    >
-
-                </div>
-
-                <div class="service-card-number">
-                    04
-                </div>
-
-                <div class="service-card-content">
 
                     <span class="service-card-label">
                         ARTIFICIAL INTELLIGENCE
                     </span>
 
                     <h3>
-                        Artificial Intelligence Consulting
+                        Artificial Intelligence
                     </h3>
 
                     <p>
-                        AI consulting that helps organisations move
-                        from experimentation to practical adoption,
-                        automation and measurable business value.
+                        Practical AI adoption focused on productivity,
+                        automation, efficiency and measurable business value.
                     </p>
 
-                    <ul>
+                    <a
+                        href="artificial-intelligence.html"
+                        class="service-card-link"
+                    >
+                        Explore service
+                        <span aria-hidden="true">
+                            →
+                        </span>
+                    </a>
 
-                        <li>
-                            AI Strategy
-                        </li>
+                </div>
 
-                        <li>
-                            High-Value AI Use Cases
-                        </li>
+            </article>
 
-                        <li>
-                            AI Adoption &amp; Automation
-                        </li>
 
-                        <li>
-                            Responsible AI Governance
-                        </li>
+            <!-- =================================================
+                 SERVICE 04 — OPERATIONAL EXCELLENCE
+            ================================================== -->
 
-                    </ul>
+            <article class="service-card">
+
+                <div
+                    class="service-card-visual visual-operational"
+                    aria-hidden="true"
+                >
+
+                    <div class="visual-flow-axis"></div>
+
+                    <div class="visual-flow-step step-1">
+                        <span></span>
+                    </div>
+
+                    <div class="visual-flow-step step-2">
+                        <span></span>
+                    </div>
+
+                    <div class="visual-flow-step step-3">
+                        <span></span>
+                    </div>
+
+                    <div class="visual-flow-step step-4">
+                        <span></span>
+                    </div>
+
+                    <div class="visual-flow-arrow">
+                        →
+                    </div>
+
+                </div>
+
+
+                <div class="service-card-content">
+
+                    <span class="service-card-number">
+                        04
+                    </span>
+
+                    <span class="service-card-label">
+                        PERFORMANCE
+                    </span>
+
+                    <h3>
+                        Operational Excellence
+                    </h3>
+
+                    <p>
+                        Improving processes, performance and ways of working
+                        to create sustainable operational results.
+                    </p>
 
                     <a
-                        href="/artificial-intelligence.html"
+                        href="operational-excellence.html"
                         class="service-card-link"
-                        aria-label="Explore Artificial Intelligence Consulting"
                     >
-                        Explore Artificial Intelligence
-                        <span aria-hidden="true">→</span>
+                        Explore service
+                        <span aria-hidden="true">
+                            →
+                        </span>
                     </a>
 
                 </div>
@@ -862,14 +841,12 @@
      APPROACH
 ========================================================= -->
 
-<section
-    class="services-approach"
-    aria-labelledby="approach-heading"
->
+<section class="services-approach">
 
     <div class="services-container">
 
         <div class="services-approach-grid">
+
 
             <div class="services-approach-intro">
 
@@ -877,14 +854,15 @@
                     OUR APPROACH
                 </span>
 
-                <h2 id="approach-heading">
-                    Strategy is only valuable when it leads to action.
+                <h2>
+                    From complexity
+                    to clear action.
                 </h2>
 
                 <p>
-                    We connect strategic thinking with practical
-                    execution so organisations can move from
-                    ambition to measurable results.
+                    We combine strategic thinking with disciplined
+                    execution to help organisations move from
+                    difficult questions to practical results.
                 </p>
 
             </div>
@@ -892,68 +870,94 @@
 
             <div class="services-approach-steps">
 
-                <article class="services-approach-step">
 
-                    <span>01</span>
+                <div class="services-approach-step">
 
-                    <div>
-                        <h3>Understand</h3>
-
-                        <p>
-                            Understand the organisation, its priorities,
-                            challenges and desired outcomes.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="services-approach-step">
-
-                    <span>02</span>
+                    <span>
+                        01
+                    </span>
 
                     <div>
-                        <h3>Define</h3>
+
+                        <h3>
+                            Understand
+                        </h3>
 
                         <p>
-                            Establish clear priorities, practical
-                            recommendations and a realistic roadmap.
+                            We start by understanding your objectives,
+                            challenges and organisational context.
                         </p>
+
                     </div>
 
-                </article>
+                </div>
 
 
-                <article class="services-approach-step">
+                <div class="services-approach-step">
 
-                    <span>03</span>
+                    <span>
+                        02
+                    </span>
 
                     <div>
-                        <h3>Deliver</h3>
+
+                        <h3>
+                            Structure
+                        </h3>
 
                         <p>
-                            Execute with governance, accountability,
-                            transparency and focus.
+                            We create clarity around priorities,
+                            decisions, responsibilities and actions.
                         </p>
+
                     </div>
 
-                </article>
+                </div>
 
 
-                <article class="services-approach-step">
+                <div class="services-approach-step">
 
-                    <span>04</span>
+                    <span>
+                        03
+                    </span>
 
                     <div>
-                        <h3>Improve</h3>
+
+                        <h3>
+                            Execute
+                        </h3>
 
                         <p>
-                            Measure outcomes and identify further
-                            opportunities to strengthen performance.
+                            We work alongside your teams to turn
+                            strategy into practical implementation.
                         </p>
+
                     </div>
 
-                </article>
+                </div>
+
+
+                <div class="services-approach-step">
+
+                    <span>
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Improve
+                        </h3>
+
+                        <p>
+                            We measure outcomes, identify opportunities
+                            and support continuous improvement.
+                        </p>
+
+                    </div>
+
+                </div>
+
 
             </div>
 
@@ -968,14 +972,12 @@
      WHY BSGA
 ========================================================= -->
 
-<section
-    class="services-why"
-    aria-labelledby="why-heading"
->
+<section class="services-why">
 
     <div class="services-container">
 
         <div class="services-why-grid">
+
 
             <div>
 
@@ -983,37 +985,83 @@
                     WHY BSGA
                 </span>
 
-                <h2 id="why-heading">
-                    Practical consulting.
-                    Clear accountability.
-                    Measurable outcomes.
+                <h2>
+                    Strategy matters.
+                    Execution makes
+                    the difference.
                 </h2>
 
             </div>
 
 
-            <div>
+            <div class="services-why-list">
 
-                <p>
-                    Organisations do not need more complexity.
-                    They need clear priorities, strong execution
-                    and practical solutions that create value.
-                </p>
 
-                <p>
-                    BSGA Consulting works alongside leadership teams
-                    and delivery organisations to turn challenges
-                    into structured action across strategy, projects,
-                    transformation, operations and technology.
-                </p>
+                <article>
 
-                <a
-                    href="/about.html"
-                    class="services-primary-button"
-                >
-                    About BSGA Consulting
-                    <span aria-hidden="true">→</span>
-                </a>
+                    <span>
+                        01
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Business Focus
+                        </h3>
+
+                        <p>
+                            Every recommendation is aligned with
+                            measurable business objectives.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        02
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Practical Execution
+                        </h3>
+
+                        <p>
+                            We focus on implementation rather than
+                            recommendations that remain on paper.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article>
+
+                    <span>
+                        03
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Measurable Outcomes
+                        </h3>
+
+                        <p>
+                            Success is defined by tangible improvements
+                            in performance, delivery and business value.
+                        </p>
+
+                    </div>
+
+                </article>
+
 
             </div>
 
@@ -1028,36 +1076,40 @@
      INSIGHTS
 ========================================================= -->
 
-<section
-    class="services-insights-link"
-    aria-labelledby="insights-heading"
->
+<section class="services-insights">
 
     <div class="services-container">
 
-        <div class="services-insights-link-content">
+        <div class="services-insights-box">
 
-            <span class="services-kicker">
-                INSIGHTS
-            </span>
+            <div>
 
-            <h2 id="insights-heading">
-                Practical perspectives on strategy,
-                transformation, performance and AI.
-            </h2>
+                <span class="services-kicker">
+                    INSIGHTS
+                </span>
 
-            <p>
-                Explore ideas and practical perspectives designed
-                to help leaders navigate complex business challenges
-                and turn strategic priorities into action.
-            </p>
+                <h2>
+                    Practical perspectives
+                    on strategy and transformation.
+                </h2>
+
+                <p>
+                    Explore perspectives from BSGA Consulting on
+                    project delivery, operational performance,
+                    transformation and Artificial Intelligence.
+                </p>
+
+            </div>
+
 
             <a
-                href="/insights.html"
+                href="insights.html"
                 class="services-primary-button"
             >
                 Explore Insights
-                <span aria-hidden="true">→</span>
+                <span aria-hidden="true">
+                    →
+                </span>
             </a>
 
         </div>
@@ -1071,10 +1123,7 @@
      CTA
 ========================================================= -->
 
-<section
-    class="services-cta"
-    aria-labelledby="cta-heading"
->
+<section class="services-cta">
 
     <div class="services-container">
 
@@ -1084,16 +1133,14 @@
                 LET'S TALK
             </span>
 
-            <h2 id="cta-heading">
-                Ready to turn your priorities
-                into measurable results?
+            <h2>
+                Ready to turn complexity
+                into measurable progress?
             </h2>
 
             <p>
                 Let's discuss your objectives and explore how
-                BSGA Consulting can support your next strategic
-                initiative, transformation programme or business
-                challenge.
+                BSGA Consulting can support your organisation.
             </p>
 
 
@@ -1106,14 +1153,19 @@
                     rel="noopener noreferrer"
                 >
                     Schedule a Consultation
-                    <span aria-hidden="true">→</span>
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </a>
 
                 <a
-                    href="mailto:info@bsgaconsulting.es"
+                    href="contact.html"
                     class="services-email"
                 >
-                    info@bsgaconsulting.es
+                    Contact BSGA
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </a>
 
             </div>
@@ -1141,19 +1193,19 @@
 
             <div class="services-footer-brand">
 
-                <img
-                    src="/images/logos/logo-white.webp"
-                    alt="BSGA Consulting"
-                    width="175"
-                    height="88"
-                    loading="lazy"
-                >
+                <a href="index.html">
+
+                    <img
+                        src="images/logos/logo-white.png"
+                        alt="BSGA Consulting"
+                    >
+
+                </a>
 
                 <p>
-                    BSGA Consulting helps organisations improve
-                    operational performance, deliver strategic projects,
-                    transform their businesses and adopt Artificial
-                    Intelligence with confidence.
+                    Strategic business consulting focused on
+                    project delivery, transformation, operational
+                    excellence and Artificial Intelligence.
                 </p>
 
             </div>
@@ -1162,30 +1214,23 @@
             <div>
 
                 <h4>
-                    Navigation
+                    Services
                 </h4>
 
-                <a href="/index.html">
-                    Home
+                <a href="project-management.html">
+                    Project Management
                 </a>
 
-                <a
-                    href="/services.html"
-                    aria-current="page"
-                >
-                    Services
+                <a href="business-transformation.html">
+                    Business Transformation
                 </a>
 
-                <a href="/about.html">
-                    About
+                <a href="operational-excellence.html">
+                    Operational Excellence
                 </a>
 
-                <a href="/insights.html">
-                    Insights
-                </a>
-
-                <a href="/contact.html">
-                    Contact
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence
                 </a>
 
             </div>
@@ -1194,23 +1239,19 @@
             <div>
 
                 <h4>
-                    Services
+                    Company
                 </h4>
 
-                <a href="/project-management.html">
-                    Project Management Consulting
+                <a href="about.html">
+                    About
                 </a>
 
-                <a href="/business-transformation.html">
-                    Business Transformation Consulting
+                <a href="insights.html">
+                    Insights
                 </a>
 
-                <a href="/operational-excellence.html">
-                    Operational Excellence Consulting
-                </a>
-
-                <a href="/artificial-intelligence.html">
-                    Artificial Intelligence Consulting
+                <a href="contact.html">
+                    Contact
                 </a>
 
             </div>
@@ -1231,7 +1272,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Book a Consultation
+                    Schedule a Consultation
                 </a>
 
             </div>
@@ -1242,8 +1283,7 @@
 
         <div class="services-footer-bottom">
 
-            © 2026 BSGA Consulting.
-            All Rights Reserved.
+            © 2026 BSGA Consulting. All rights reserved.
 
         </div>
 
@@ -1252,10 +1292,67 @@
 </footer>
 
 
-<!-- JAVASCRIPT -->
+<!-- =========================================================
+     MOBILE MENU SCRIPT
+========================================================= -->
 
-<script src="/js/main.js"></script>
+<script>
+
+(function () {
+
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (!menuToggle || !mobileNav) {
+        return;
+    }
+
+    menuToggle.addEventListener("click", function () {
+
+        const isOpen =
+            menuToggle.getAttribute("aria-expanded") === "true";
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+        );
+
+        mobileNav.classList.toggle(
+            "is-open",
+            !isOpen
+        );
+
+        document.body.classList.toggle(
+            "mobile-menu-open",
+            !isOpen
+        );
+
+    });
+
+
+    mobileNav.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            mobileNav.classList.remove("is-open");
+
+            document.body.classList.remove(
+                "mobile-menu-open"
+            );
+
+        });
+
+    });
+
+})();
+
+</script>
+
 
 </body>
-
 </html>
