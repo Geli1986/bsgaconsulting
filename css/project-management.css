@@ -1,229 +1,51 @@
 /* =========================================================
    PROJECT MANAGEMENT
    BSGA CONSULTING
-   PAGE-SPECIFIC / INDEPENDENT CSS
+   PAGE-SPECIFIC CSS
 ========================================================= */
 
 
 /* =========================================================
-   RESET / PAGE FOUNDATION
+   FOUNDATION
 ========================================================= */
 
-.pm-header,
 .pm-hero,
 .pm-overview,
 .pm-capabilities,
 .pm-lifecycle,
 .pm-results,
 .pm-why,
+.pm-related-services,
 .pm-faq,
 .pm-cta,
 .pm-footer {
     box-sizing: border-box;
 }
 
-.pm-header *,
 .pm-hero *,
 .pm-overview *,
 .pm-capabilities *,
 .pm-lifecycle *,
 .pm-results *,
 .pm-why *,
+.pm-related-services *,
 .pm-faq *,
 .pm-cta *,
 .pm-footer * {
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background: #050505;
-    color: #111111;
-}
 
-body,
-body * {
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-}
-
-
-/* =========================================================
-   CONTAINER
-========================================================= */
+/*
+   IMPORTANT:
+   Do NOT redefine body font-family here.
+   styles.css controls the global typography.
+*/
 
 .pm-container {
-    width: min(
-        calc(100% - 60px),
-        1380px
-    );
-
+    width: min(1380px, calc(100% - 60px));
     margin-left: auto;
     margin-right: auto;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.pm-header {
-    position: relative;
-    z-index: 100;
-
-    width: 100%;
-
-    background: #151515;
-    color: #ffffff;
-
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-
-.pm-header-inner {
-    width: min(
-        calc(100% - 60px),
-        1380px
-    );
-
-    min-height: 104px;
-
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 40px;
-}
-
-
-/* =========================================================
-   HEADER LOGO
-========================================================= */
-
-.pm-header-logo {
-    display: flex;
-    align-items: center;
-
-    flex-shrink: 0;
-
-    text-decoration: none;
-}
-
-
-.pm-header-logo img {
-    display: block;
-
-    width: 130px;
-    height: auto;
-
-    object-fit: contain;
-}
-
-
-/* =========================================================
-   HEADER NAV
-========================================================= */
-
-.pm-header-nav {
-    display: flex;
-    align-items: center;
-
-    gap: 42px;
-
-    margin-left: auto;
-}
-
-
-.pm-header-nav a {
-    position: relative;
-
-    display: inline-flex;
-    align-items: center;
-
-    height: 104px;
-
-    color: rgba(255,255,255,0.72);
-
-    text-decoration: none;
-
-    font-size: 16px;
-    font-weight: 400;
-
-    transition:
-        color 0.25s ease;
-}
-
-
-.pm-header-nav a:hover {
-    color: #ffffff;
-}
-
-
-.pm-header-nav a.pm-nav-active {
-    color: #ffffff;
-}
-
-
-.pm-header-nav a.pm-nav-active::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: 25px;
-
-    height: 1px;
-
-    background: #c6a15b;
-}
-
-
-/* =========================================================
-   HEADER CTA
-========================================================= */
-
-.pm-header-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 18px;
-
-    min-height: 56px;
-
-    padding: 0 25px;
-
-    background: #ffffff;
-    color: #111111;
-
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    white-space: nowrap;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-
-.pm-header-button:hover {
-    background: #f0f0f0;
-    transform: translateY(-1px);
-}
-
-
-.pm-header-button span:last-child {
-    font-size: 21px;
-    line-height: 1;
 }
 
 
@@ -250,38 +72,31 @@ body * {
 
 
 /* =========================================================
-   HERO REAL IMAGE
+   HERO IMAGE
+========================================================= */
 
-   IMPORTANT:
-
-   This CSS file is:
-
+/*
+   project-management.css
+        ↓
    /css/project-management.css
 
-   Image is:
-
+   Image
+        ↓
    /images/BSGA-Project-Management-Hero.png
 
-   Therefore the correct relative path is:
+   Therefore:
 
    ../images/BSGA-Project-Management-Hero.png
-========================================================= */
+*/
 
 .pm-hero-background {
     position: absolute;
 
     inset: 0;
 
-    z-index: -3;
+    z-index: 0;
 
     background-image:
-        linear-gradient(
-            90deg,
-            rgba(5,5,5,0.90) 0%,
-            rgba(5,5,5,0.76) 32%,
-            rgba(5,5,5,0.34) 62%,
-            rgba(5,5,5,0.48) 100%
-        ),
         url("../images/BSGA-Project-Management-Hero.png");
 
     background-repeat: no-repeat;
@@ -294,26 +109,32 @@ body * {
 }
 
 
-/* Additional dark layer.
-   Keeps text readable without hiding the image. */
+/* =========================================================
+   HERO OVERLAY
+========================================================= */
 
-.pm-hero::after {
-    content: "";
-
+.pm-hero-overlay {
     position: absolute;
 
     inset: 0;
 
-    z-index: -2;
+    z-index: 1;
 
     pointer-events: none;
 
     background:
         linear-gradient(
+            90deg,
+            rgba(5, 5, 5, 0.94) 0%,
+            rgba(5, 5, 5, 0.82) 32%,
+            rgba(5, 5, 5, 0.46) 62%,
+            rgba(5, 5, 5, 0.56) 100%
+        ),
+        linear-gradient(
             180deg,
-            rgba(0,0,0,0.12) 0%,
-            rgba(0,0,0,0.00) 45%,
-            rgba(0,0,0,0.34) 100%
+            rgba(0, 0, 0, 0.08) 0%,
+            rgba(0, 0, 0, 0.00) 45%,
+            rgba(0, 0, 0, 0.35) 100%
         );
 }
 
@@ -325,13 +146,13 @@ body * {
 .pm-hero-glow {
     position: absolute;
 
-    z-index: -1;
-
     width: 680px;
     height: 680px;
 
     right: -170px;
-    top: 10px;
+    top: 0;
+
+    z-index: 2;
 
     border-radius: 50%;
 
@@ -356,27 +177,26 @@ body * {
 
 .pm-hero .pm-container {
     position: relative;
+
     z-index: 5;
 }
 
 
 .pm-hero-content {
-    width: min(
-        760px,
-        100%
-    );
+    width: min(760px, 100%);
 
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 
 /* =========================================================
-   HERO BACK LINK
+   BACK LINK
 ========================================================= */
 
 .pm-back {
     display: inline-flex;
+
     align-items: center;
 
     gap: 10px;
@@ -388,10 +208,10 @@ body * {
     text-decoration: none;
 
     font-size: 15px;
+
     font-weight: 500;
 
-    transition:
-        color 0.25s ease;
+    transition: color 0.25s ease;
 }
 
 
@@ -400,13 +220,8 @@ body * {
 }
 
 
-.pm-back span {
-    font-size: 18px;
-}
-
-
 /* =========================================================
-   KICKERS
+   KICKER
 ========================================================= */
 
 .pm-kicker {
@@ -444,11 +259,7 @@ body * {
 
     color: #ffffff;
 
-    font-size: clamp(
-        54px,
-        6.2vw,
-        92px
-    );
+    font-size: clamp(54px, 6.2vw, 92px);
 
     font-weight: 700;
 
@@ -459,7 +270,7 @@ body * {
 
 
 /* =========================================================
-   HERO PARAGRAPH
+   HERO TEXT
 ========================================================= */
 
 .pm-hero-content > p {
@@ -472,8 +283,6 @@ body * {
     font-size: 20px;
 
     line-height: 1.65;
-
-    font-weight: 400;
 }
 
 
@@ -483,6 +292,7 @@ body * {
 
 .pm-hero-actions {
     display: flex;
+
     flex-wrap: wrap;
 
     align-items: center;
@@ -492,12 +302,14 @@ body * {
 
 
 /* =========================================================
-   GLOBAL PAGE BUTTON
+   BUTTONS
 ========================================================= */
 
 .pm-button {
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 20px;
@@ -537,13 +349,10 @@ body * {
 
 .pm-button span {
     font-size: 20px;
+
     line-height: 1;
 }
 
-
-/* =========================================================
-   OUTLINE BUTTON
-========================================================= */
 
 .pm-button-outline {
     background: transparent;
@@ -568,8 +377,6 @@ body * {
 ========================================================= */
 
 .pm-overview {
-    position: relative;
-
     padding: 125px 0;
 
     background: #f5f5f3;
@@ -596,11 +403,7 @@ body * {
 
     margin: 0;
 
-    font-size: clamp(
-        42px,
-        4.5vw,
-        68px
-    );
+    font-size: clamp(42px, 4.5vw, 68px);
 
     line-height: 1.02;
 
@@ -654,11 +457,7 @@ body * {
 .pm-section-heading h2 {
     margin: 0 0 25px;
 
-    font-size: clamp(
-        42px,
-        4.8vw,
-        72px
-    );
+    font-size: clamp(42px, 4.8vw, 72px);
 
     line-height: 1.02;
 
@@ -681,10 +480,6 @@ body * {
 }
 
 
-/* =========================================================
-   CAPABILITIES GRID
-========================================================= */
-
 .pm-capabilities-grid {
     display: grid;
 
@@ -692,6 +487,7 @@ body * {
         repeat(2, minmax(0, 1fr));
 
     border-top: 1px solid #d9d9d9;
+
     border-left: 1px solid #d9d9d9;
 }
 
@@ -702,13 +498,12 @@ body * {
     padding: 45px;
 
     border-right: 1px solid #d9d9d9;
+
     border-bottom: 1px solid #d9d9d9;
 
     background: #ffffff;
 
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
+    transition: background 0.25s ease;
 }
 
 
@@ -779,7 +574,7 @@ body * {
 .pm-lifecycle-list article {
     display: grid;
 
-    grid-template-columns: 100px minmax(0, 1fr);
+    grid-template-columns: 100px minmax(0,1fr);
 
     gap: 50px;
 
@@ -841,8 +636,8 @@ body * {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.85fr)
-        minmax(0, 1.15fr);
+        minmax(0,0.85fr)
+        minmax(0,1.15fr);
 
     gap: 110px;
 }
@@ -853,11 +648,7 @@ body * {
 
     margin: 0 0 25px;
 
-    font-size: clamp(
-        42px,
-        4.5vw,
-        67px
-    );
+    font-size: clamp(42px,4.5vw,67px);
 
     line-height: 1.02;
 
@@ -884,11 +675,9 @@ body * {
 
 
 .pm-result {
-    position: relative;
-
     display: grid;
 
-    grid-template-columns: 55px minmax(0, 1fr);
+    grid-template-columns: 55px minmax(0,1fr);
 
     column-gap: 25px;
 
@@ -899,8 +688,6 @@ body * {
 
 
 .pm-result > span {
-    grid-row: span 2;
-
     color: #b58f4e;
 
     font-size: 13px;
@@ -917,8 +704,6 @@ body * {
     font-size: 25px;
 
     line-height: 1.2;
-
-    letter-spacing: -0.025em;
 }
 
 
@@ -950,8 +735,8 @@ body * {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+        minmax(0,1fr)
+        minmax(0,1fr);
 
     gap: 100px;
 }
@@ -962,11 +747,7 @@ body * {
 
     margin: 0;
 
-    font-size: clamp(
-        42px,
-        4.6vw,
-        68px
-    );
+    font-size: clamp(42px,4.6vw,68px);
 
     line-height: 1.02;
 
@@ -1001,10 +782,96 @@ body * {
 }
 
 
-.pm-why-grid .pm-button:hover {
-    background: #2b2b2b;
+/* =========================================================
+   RELATED SERVICES
+========================================================= */
 
-    border-color: #2b2b2b;
+.pm-related-services {
+    padding: 130px 0;
+
+    background: #ffffff;
+
+    color: #111111;
+}
+
+
+.pm-related-content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+    border-top: 1px solid #d5d5d5;
+
+    border-left: 1px solid #d5d5d5;
+}
+
+
+.pm-related-content > a {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 360px;
+
+    padding: 40px;
+
+    border-right: 1px solid #d5d5d5;
+
+    border-bottom: 1px solid #d5d5d5;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    transition: background 0.25s ease;
+}
+
+
+.pm-related-content > a:hover {
+    background: #f7f7f5;
+}
+
+
+.pm-related-content > a > span {
+    margin-bottom: 60px;
+
+    color: #b58f4e;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+.pm-related-content h3 {
+    margin: 0 0 15px;
+
+    font-size: 27px;
+
+    letter-spacing: -0.03em;
+}
+
+
+.pm-related-content p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 16px;
+
+    line-height: 1.65;
+}
+
+
+.pm-related-content strong {
+    margin-top: auto;
+
+    padding-top: 30px;
+
+    font-size: 14px;
 }
 
 
@@ -1015,7 +882,7 @@ body * {
 .pm-faq {
     padding: 130px 0;
 
-    background: #ffffff;
+    background: #f5f5f3;
 
     color: #111111;
 }
@@ -1035,7 +902,9 @@ body * {
 
 .pm-faq-list summary {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 30px;
@@ -1067,6 +936,8 @@ body * {
     font-size: 26px;
 
     font-weight: 300;
+
+    transition: transform 0.2s ease;
 }
 
 
@@ -1128,11 +999,7 @@ body * {
 
     color: #ffffff;
 
-    font-size: clamp(
-        44px,
-        5vw,
-        76px
-    );
+    font-size: clamp(44px,5vw,76px);
 
     line-height: 1.02;
 
@@ -1153,31 +1020,10 @@ body * {
 }
 
 
-.pm-cta-actions {
-    display: flex;
-    flex-wrap: wrap;
+.pm-button-light {
+    background: #ffffff;
 
-    align-items: center;
-
-    gap: 25px;
-}
-
-
-.pm-email {
-    color: #ffffff;
-
-    text-decoration: none;
-
-    font-size: 16px;
-
-    border-bottom: 1px solid rgba(255,255,255,0.4);
-
-    padding-bottom: 3px;
-}
-
-
-.pm-email:hover {
-    border-color: #ffffff;
+    color: #111111;
 }
 
 
@@ -1220,9 +1066,16 @@ body * {
 
     width: 130px;
 
-    height: auto;
-
     margin-bottom: 25px;
+}
+
+
+.pm-footer-logo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
 }
 
 
@@ -1272,8 +1125,7 @@ body * {
 
     line-height: 1.5;
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 
@@ -1298,24 +1150,6 @@ body * {
 ========================================================= */
 
 @media (max-width: 1050px) {
-
-    .pm-header-inner {
-        min-height: 90px;
-    }
-
-    .pm-header-nav {
-        gap: 24px;
-    }
-
-    .pm-header-nav a {
-        height: 90px;
-        font-size: 14px;
-    }
-
-    .pm-header-button {
-        padding: 0 18px;
-        font-size: 13px;
-    }
 
     .pm-hero {
         min-height: 680px;
@@ -1344,40 +1178,8 @@ body * {
 
 @media (max-width: 760px) {
 
-    .pm-container,
-    .pm-header-inner {
+    .pm-container {
         width: calc(100% - 36px);
-    }
-
-
-    /* HEADER */
-
-    .pm-header-inner {
-        min-height: 76px;
-
-        gap: 15px;
-    }
-
-    .pm-header-logo img {
-        width: 105px;
-    }
-
-    .pm-header-nav {
-        display: none;
-    }
-
-    .pm-header-button {
-        min-height: 48px;
-
-        padding: 0 14px;
-
-        font-size: 12px;
-
-        gap: 9px;
-    }
-
-    .pm-header-button span:last-child {
-        font-size: 17px;
     }
 
 
@@ -1390,37 +1192,37 @@ body * {
     }
 
 
-    /*
-       On mobile we show more of the real image.
-       The text still receives a strong dark gradient.
-    */
-
     .pm-hero-background {
-        background-image:
+        background-position: center center;
+    }
+
+
+    .pm-hero-overlay {
+        background:
             linear-gradient(
                 180deg,
-                rgba(5,5,5,0.25) 0%,
+                rgba(5,5,5,0.20) 0%,
                 rgba(5,5,5,0.38) 30%,
                 rgba(5,5,5,0.88) 67%,
                 rgba(5,5,5,0.98) 100%
-            ),
-            url("../images/BSGA-Project-Management-Hero.png");
-
-        background-position: center center;
+            );
     }
 
 
     .pm-hero-glow {
         width: 450px;
+
         height: 450px;
 
         right: -180px;
+
         top: 20px;
     }
 
 
     .pm-hero-content {
         padding-top: 50px;
+
         padding-bottom: 55px;
     }
 
@@ -1431,11 +1233,7 @@ body * {
 
 
     .pm-hero h1 {
-        font-size: clamp(
-            44px,
-            12vw,
-            64px
-        );
+        font-size: clamp(44px,12vw,64px);
 
         letter-spacing: -0.055em;
     }
@@ -1449,9 +1247,9 @@ body * {
 
 
     .pm-hero-actions {
-        align-items: stretch;
-
         flex-direction: column;
+
+        align-items: stretch;
     }
 
 
@@ -1467,6 +1265,7 @@ body * {
     .pm-lifecycle,
     .pm-results,
     .pm-why,
+    .pm-related-services,
     .pm-faq {
         padding: 85px 0;
     }
@@ -1505,11 +1304,6 @@ body * {
     }
 
 
-    .pm-capability h3 {
-        font-size: 26px;
-    }
-
-
     /* LIFECYCLE */
 
     .pm-lifecycle-list article {
@@ -1521,12 +1315,10 @@ body * {
     }
 
 
-    /* RESULTS */
+    /* RELATED */
 
-    .pm-result {
-        grid-template-columns: 42px minmax(0,1fr);
-
-        column-gap: 15px;
+    .pm-related-content {
+        grid-template-columns: 1fr;
     }
 
 
@@ -1539,18 +1331,6 @@ body * {
 
     .pm-cta-box {
         padding: 45px 28px;
-    }
-
-
-    .pm-cta-actions {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-
-    .pm-email {
-        text-align: center;
     }
 
 
@@ -1578,18 +1358,8 @@ body * {
 
 @media (max-width: 420px) {
 
-    .pm-container,
-    .pm-header-inner {
+    .pm-container {
         width: calc(100% - 28px);
-    }
-
-
-    .pm-header-button span:first-child {
-        max-width: 120px;
-
-        white-space: normal;
-
-        text-align: center;
     }
 
 
