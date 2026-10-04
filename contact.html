@@ -14,19 +14,14 @@
          PRIMARY SEO
     ====================================================== -->
 
-    <title>
-        Contact BSGA Consulting | Business Consulting &amp; Advisory
-    </title>
+    <title>Contact BSGA Consulting | Business Consulting &amp; Advisory</title>
 
     <meta
         name="description"
         content="Contact BSGA Consulting to discuss project management, business transformation, operational excellence and AI consulting opportunities."
     >
 
-    <meta
-        name="author"
-        content="BSGA Consulting"
-    >
+    <meta name="author" content="BSGA Consulting">
 
     <meta
         name="robots"
@@ -38,15 +33,13 @@
         content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     >
 
-    <meta
-        name="theme-color"
-        content="#000000"
-    >
+    <meta name="theme-color" content="#000000">
 
     <meta
         name="referrer"
         content="strict-origin-when-cross-origin"
     >
+
 
     <!-- =====================================================
          CANONICAL
@@ -56,6 +49,7 @@
         rel="canonical"
         href="https://bsgaconsulting.es/contact.html"
     >
+
 
     <!-- =====================================================
          FAVICONS
@@ -79,14 +73,12 @@
         href="/manifest.webmanifest"
     >
 
+
     <!-- =====================================================
          FONTS
     ====================================================== -->
 
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -99,28 +91,62 @@
         rel="stylesheet"
     >
 
+
     <!-- =====================================================
          CSS
     ====================================================== -->
 
-    <link
-        rel="stylesheet"
-        href="css/styles.css"
-    >
+    <link rel="stylesheet" href="css/styles.css">
 
-    <link
-        rel="stylesheet"
-        href="css/contact.css"
-    >
+    <link rel="stylesheet" href="css/contact.css">
+
+
+    <!-- =====================================================
+         CONTACT PAGE BUTTON OVERRIDE
+         Schedule a Consultation = WHITE / BLACK
+    ====================================================== -->
+
+    <style>
+
+        .contact-page .header-cta,
+        .contact-page .contact-button-primary,
+        .contact-page .contact-primary-button,
+        .contact-page .mobile-nav-cta {
+            background: #ffffff !important;
+            color: #000000 !important;
+            border-color: #ffffff !important;
+        }
+
+        .contact-page .header-cta *,
+        .contact-page .contact-button-primary *,
+        .contact-page .contact-primary-button *,
+        .contact-page .mobile-nav-cta * {
+            color: #000000 !important;
+        }
+
+        .contact-page .header-cta:hover,
+        .contact-page .contact-button-primary:hover,
+        .contact-page .contact-primary-button:hover,
+        .contact-page .mobile-nav-cta:hover {
+            background: #f2f2f2 !important;
+            color: #000000 !important;
+        }
+
+        .contact-page .header-cta:hover *,
+        .contact-page .contact-button-primary:hover *,
+        .contact-page .contact-primary-button:hover *,
+        .contact-page .mobile-nav-cta:hover * {
+            color: #000000 !important;
+        }
+
+    </style>
+
 
     <!-- =====================================================
          OPEN GRAPH
     ====================================================== -->
 
-    <meta
-        property="og:type"
-        content="website"
-    >
+    <meta property="og:type" content="website">
 
     <meta
         property="og:url"
@@ -142,30 +168,19 @@
         content="https://bsgaconsulting.es/images/og-image.jpg"
     >
 
-    <meta
-        property="og:image:width"
-        content="1200"
-    >
+    <meta property="og:image:width" content="1200">
 
-    <meta
-        property="og:image:height"
-        content="630"
-    >
+    <meta property="og:image:height" content="630">
 
     <meta
         property="og:image:alt"
         content="Contact BSGA Consulting"
     >
 
-    <meta
-        property="og:site_name"
-        content="BSGA Consulting"
-    >
+    <meta property="og:site_name" content="BSGA Consulting">
 
-    <meta
-        property="og:locale"
-        content="en_GB"
-    >
+    <meta property="og:locale" content="en_GB">
+
 
     <!-- =====================================================
          TWITTER / X
@@ -195,6 +210,7 @@
         name="twitter:image:alt"
         content="Contact BSGA Consulting"
     >
+
 
     <!-- =====================================================
          STRUCTURED DATA
@@ -304,6 +320,8 @@
     <div class="header-container">
 
 
+        <!-- LOGO -->
+
         <a
             href="index.html"
             class="site-logo"
@@ -319,6 +337,8 @@
 
         </a>
 
+
+        <!-- NAVIGATION -->
 
         <nav
             class="main-navigation"
@@ -352,6 +372,8 @@
         </nav>
 
 
+        <!-- HEADER CTA -->
+
         <a
             href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="header-cta"
@@ -374,6 +396,8 @@
         </a>
 
 
+        <!-- MOBILE MENU -->
+
         <button
             id="menuToggle"
             class="menu-toggle"
@@ -391,6 +415,8 @@
 
     </div>
 
+
+    <!-- MOBILE NAV -->
 
     <nav
         id="mobileNav"
@@ -475,7 +501,6 @@
 
     <div class="contact-container">
 
-
         <div class="contact-hero-content">
 
             <span class="contact-hero-kicker">
@@ -484,10 +509,8 @@
 
 
             <h1 id="contact-hero-title">
-
                 Let's discuss
                 what comes next.
-
             </h1>
 
 
@@ -507,14 +530,15 @@
                     class="contact-button contact-button-primary"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Schedule a consultation with BSGA Consulting"
                 >
-
-                    Schedule a Consultation
+                    <span>
+                        Schedule a Consultation
+                    </span>
 
                     <span aria-hidden="true">
                         →
                     </span>
-
                 </a>
 
 
@@ -522,9 +546,7 @@
                     href="mailto:info@bsgaconsulting.es"
                     class="contact-button contact-button-secondary"
                 >
-
                     Email BSGA Consulting
-
                 </a>
 
             </div>
@@ -547,9 +569,7 @@
 
     <div class="contact-container">
 
-
         <div class="contact-intro-grid">
-
 
             <div class="contact-intro-heading">
 
@@ -600,7 +620,6 @@
 >
 
     <div class="contact-container">
-
 
         <div class="contact-section-heading">
 
@@ -653,13 +672,8 @@
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-
                         Book a Discovery Call
-
-                        <span aria-hidden="true">
-                            →
-                        </span>
-
+                        <span aria-hidden="true">→</span>
                     </a>
 
                 </div>
@@ -699,13 +713,8 @@
                         href="mailto:info@bsgaconsulting.es"
                         class="contact-card-link"
                     >
-
                         info@bsgaconsulting.es
-
-                        <span aria-hidden="true">
-                            →
-                        </span>
-
+                        <span aria-hidden="true">→</span>
                     </a>
 
                 </div>
@@ -745,19 +754,13 @@
                         href="services.html"
                         class="contact-card-link"
                     >
-
                         Explore Our Services
-
-                        <span aria-hidden="true">
-                            →
-                        </span>
-
+                        <span aria-hidden="true">→</span>
                     </a>
 
                 </div>
 
             </article>
-
 
         </div>
 
@@ -777,9 +780,7 @@
 
     <div class="contact-container">
 
-
         <div class="contact-process-grid">
-
 
             <div class="contact-process-intro">
 
@@ -805,12 +806,9 @@
 
             <div class="contact-process-steps">
 
-
                 <article class="contact-process-step">
 
-                    <span>
-                        01
-                    </span>
+                    <span>01</span>
 
                     <div>
 
@@ -830,9 +828,7 @@
 
                 <article class="contact-process-step">
 
-                    <span>
-                        02
-                    </span>
+                    <span>02</span>
 
                     <div>
 
@@ -852,9 +848,7 @@
 
                 <article class="contact-process-step">
 
-                    <span>
-                        03
-                    </span>
+                    <span>03</span>
 
                     <div>
 
@@ -870,7 +864,6 @@
                     </div>
 
                 </article>
-
 
             </div>
 
@@ -891,7 +884,6 @@
 >
 
     <div class="contact-container">
-
 
         <div class="contact-services-heading">
 
@@ -916,20 +908,12 @@
 
         <div class="contact-services-grid">
 
-
             <a
                 href="project-management.html"
                 class="contact-service-link"
             >
-
-                <span>
-                    Project Management
-                </span>
-
-                <span aria-hidden="true">
-                    →
-                </span>
-
+                <span>Project Management</span>
+                <span aria-hidden="true">→</span>
             </a>
 
 
@@ -937,15 +921,8 @@
                 href="business-transformation.html"
                 class="contact-service-link"
             >
-
-                <span>
-                    Business Transformation
-                </span>
-
-                <span aria-hidden="true">
-                    →
-                </span>
-
+                <span>Business Transformation</span>
+                <span aria-hidden="true">→</span>
             </a>
 
 
@@ -953,15 +930,8 @@
                 href="operational-excellence.html"
                 class="contact-service-link"
             >
-
-                <span>
-                    Operational Excellence
-                </span>
-
-                <span aria-hidden="true">
-                    →
-                </span>
-
+                <span>Operational Excellence</span>
+                <span aria-hidden="true">→</span>
             </a>
 
 
@@ -969,15 +939,8 @@
                 href="artificial-intelligence.html"
                 class="contact-service-link"
             >
-
-                <span>
-                    Artificial Intelligence
-                </span>
-
-                <span aria-hidden="true">
-                    →
-                </span>
-
+                <span>Artificial Intelligence</span>
+                <span aria-hidden="true">→</span>
             </a>
 
         </div>
@@ -997,7 +960,6 @@
 >
 
     <div class="contact-container">
-
 
         <div class="contact-cta-box">
 
@@ -1025,9 +987,12 @@
                     class="contact-primary-button"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Schedule a consultation with BSGA Consulting"
                 >
 
-                    Schedule a Consultation
+                    <span>
+                        Schedule a Consultation
+                    </span>
 
                     <span aria-hidden="true">
                         →
@@ -1040,9 +1005,7 @@
                     href="mailto:info@bsgaconsulting.es"
                     class="contact-email"
                 >
-
                     info@bsgaconsulting.es
-
                 </a>
 
             </div>
@@ -1064,7 +1027,6 @@
 <footer class="contact-footer">
 
     <div class="contact-container">
-
 
         <div class="contact-footer-grid">
 
@@ -1185,7 +1147,6 @@
                 </a>
 
             </div>
-
 
         </div>
 
