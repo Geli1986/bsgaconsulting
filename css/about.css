@@ -1,12 +1,12 @@
 /* =========================================================
    BSGA CONSULTING
    ABOUT PAGE
-   PAGE-SPECIFIC STYLES
+   PAGE STYLES
    ========================================================= */
 
 
 /* =========================================================
-   01. PAGE BASE
+   01. BASE
 ========================================================= */
 
 .about-page {
@@ -26,8 +26,7 @@
 }
 
 
-.about-kicker,
-.about-hero-kicker {
+.about-kicker {
     display: inline-flex;
 
     align-items: center;
@@ -48,8 +47,7 @@
 }
 
 
-.about-kicker::before,
-.about-hero-kicker::before {
+.about-kicker::before {
     content: "";
 
     width: 28px;
@@ -77,13 +75,17 @@
 
     overflow: hidden;
 
+    isolation: isolate;
+
     background: #050505;
 
     color: #ffffff;
-
-    isolation: isolate;
 }
 
+
+/* ---------------------------------------------------------
+   HERO BACKGROUND
+--------------------------------------------------------- */
 
 .about-hero-background {
     position: absolute;
@@ -93,6 +95,9 @@
     z-index: -2;
 
     overflow: hidden;
+
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -107,15 +112,14 @@
     object-fit: cover;
 
     object-position: center center;
+
+    opacity: 1;
 }
 
 
-/*
-   Hero overlay.
-
-   Darker on the left to guarantee readability.
-   Gradually becomes lighter towards the image.
-*/
+/* ---------------------------------------------------------
+   HERO OVERLAY
+--------------------------------------------------------- */
 
 .about-hero-overlay {
     position: absolute;
@@ -124,19 +128,40 @@
 
     z-index: -1;
 
+    pointer-events: none;
+
     background:
         linear-gradient(
             90deg,
             rgba(5, 5, 5, 0.94) 0%,
-            rgba(5, 5, 5, 0.82) 32%,
-            rgba(5, 5, 5, 0.54) 64%,
-            rgba(5, 5, 5, 0.30) 100%
+            rgba(5, 5, 5, 0.84) 30%,
+            rgba(5, 5, 5, 0.58) 58%,
+            rgba(5, 5, 5, 0.32) 100%
+        );
+}
+
+
+/* Additional bottom protection */
+
+.about-hero-overlay::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 5, 5, 0.08) 0%,
+            rgba(5, 5, 5, 0) 55%,
+            rgba(5, 5, 5, 0.28) 100%
         );
 }
 
 
 /* =========================================================
-   03. HERO CONTENT
+   03. HERO CONTAINER
 ========================================================= */
 
 .about-hero-container {
@@ -166,12 +191,41 @@
         850px
     );
 
-    padding-top: 84px;
+    padding-top: 80px;
 }
 
 
 .about-hero-kicker {
-    margin-bottom: 24px;
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+
+    color: #c9a96a;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    line-height: 1.2;
+
+    text-transform: uppercase;
+}
+
+
+.about-hero-kicker::before {
+    content: "";
+
+    width: 28px;
+
+    height: 1px;
+
+    margin-right: 12px;
+
+    background: currentColor;
 }
 
 
@@ -209,7 +263,7 @@
 
 
 /* =========================================================
-   04. HERO ACTIONS
+   04. HERO BUTTONS
 ========================================================= */
 
 .about-hero-actions {
@@ -238,14 +292,14 @@
 
     border: 1px solid transparent;
 
-    font-size: 0.92rem;
+    text-decoration: none;
+
+    font-size: 0.9rem;
 
     font-weight: 600;
 
-    text-decoration: none;
-
     transition:
-        background 180ms ease,
+        background-color 180ms ease,
         border-color 180ms ease,
         color 180ms ease,
         transform 180ms ease;
@@ -253,7 +307,7 @@
 
 
 .about-hero-button:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 
@@ -279,7 +333,7 @@
     background: transparent;
 
     border-color:
-        rgba(255, 255, 255, 0.50);
+        rgba(255, 255, 255, 0.55);
 
     color: #ffffff;
 }
@@ -341,7 +395,7 @@
 
 
 .about-intro-copy p {
-    margin: 0 0 26px;
+    margin: 0 0 24px;
 
     color: #4f4f4b;
 
@@ -377,15 +431,13 @@
 
 
 .about-section-heading {
-    max-width: 800px;
+    max-width: 820px;
 
     margin-bottom: 60px;
 }
 
 
 .about-section-heading h2 {
-    max-width: 780px;
-
     margin: 0;
 
     color: #050505;
@@ -416,10 +468,6 @@
 .about-belief-card {
     min-height: 330px;
 
-    display: flex;
-
-    flex-direction: column;
-
     padding: 34px 30px;
 
     background: #ffffff;
@@ -429,7 +477,7 @@
 .about-belief-number {
     display: block;
 
-    margin-bottom: 58px;
+    margin-bottom: 80px;
 
     color: #999995;
 
@@ -447,8 +495,6 @@
     color: #050505;
 
     font-size: 1.45rem;
-
-    line-height: 1.2;
 }
 
 
@@ -456,8 +502,6 @@
     margin: 0;
 
     color: #5f5f5b;
-
-    font-size: 0.96rem;
 
     line-height: 1.7;
 }
@@ -478,8 +522,8 @@
     display: grid;
 
     grid-template-columns:
-        minmax(0, 0.9fr)
-        minmax(0, 1.1fr);
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
 
     gap: 100px;
 
@@ -487,12 +531,9 @@
 }
 
 
-.about-capabilities-intro {
-    max-width: 600px;
-}
-
-
 .about-capabilities-intro h2 {
+    max-width: 650px;
+
     margin: 0 0 28px;
 
     color: #050505;
@@ -507,21 +548,19 @@
 
 
 .about-capabilities-intro > p {
-    max-width: 580px;
+    max-width: 600px;
 
-    margin: 0 0 34px;
+    margin: 0 0 32px;
 
     color: #5f5f5b;
-
-    font-size: 1.05rem;
 
     line-height: 1.75;
 }
 
 
-/* =========================================================
-   08. PRIMARY BUTTON
-========================================================= */
+/* ---------------------------------------------------------
+   PRIMARY BUTTON
+--------------------------------------------------------- */
 
 .about-primary-button {
     display: inline-flex;
@@ -532,9 +571,9 @@
 
     gap: 12px;
 
-    min-height: 50px;
+    min-height: 52px;
 
-    padding: 13px 20px;
+    padding: 14px 22px;
 
     background: #050505;
 
@@ -542,14 +581,14 @@
 
     color: #ffffff;
 
+    text-decoration: none;
+
     font-size: 0.9rem;
 
     font-weight: 600;
 
-    text-decoration: none;
-
     transition:
-        background 180ms ease,
+        background-color 180ms ease,
         border-color 180ms ease,
         color 180ms ease,
         transform 180ms ease;
@@ -563,17 +602,16 @@
 
     color: #050505;
 
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   09. CAPABILITY LIST
-========================================================= */
+/* ---------------------------------------------------------
+   CAPABILITY LIST
+--------------------------------------------------------- */
 
 .about-capabilities-list {
-    border-top:
-        1px solid #d6d6d2;
+    border-top: 1px solid #d6d6d2;
 }
 
 
@@ -583,7 +621,7 @@
     grid-template-columns:
         50px
         minmax(0, 1fr)
-        32px;
+        30px;
 
     gap: 20px;
 
@@ -591,21 +629,11 @@
 
     padding: 30px 0;
 
-    border-bottom:
-        1px solid #d6d6d2;
+    border-bottom: 1px solid #d6d6d2;
 
     color: inherit;
 
     text-decoration: none;
-
-    transition:
-        padding-left 180ms ease,
-        background 180ms ease;
-}
-
-
-.about-capability:hover {
-    padding-left: 10px;
 }
 
 
@@ -616,7 +644,7 @@
 
     font-weight: 700;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
 }
 
 
@@ -625,53 +653,41 @@
 
     color: #050505;
 
-    font-size: 1.35rem;
-
-    line-height: 1.25;
+    font-size: 1.3rem;
 }
 
 
 .about-capability p {
-    max-width: 620px;
+    max-width: 650px;
 
     margin: 0;
 
-    color: #666662;
-
-    font-size: 0.95rem;
+    color: #686864;
 
     line-height: 1.65;
 }
 
 
 .about-capability-arrow {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: flex-end;
-
-    padding-top: 2px;
-
     color: #999995;
 
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 
     transition:
-        color 180ms ease,
-        transform 180ms ease;
+        transform 180ms ease,
+        color 180ms ease;
 }
 
 
 .about-capability:hover .about-capability-arrow {
     color: #c9a96a;
 
-    transform: translateX(4px);
+    transform: translateX(5px);
 }
 
 
 /* =========================================================
-   10. APPROACH
+   08. APPROACH
 ========================================================= */
 
 .about-approach {
@@ -680,11 +696,6 @@
     background: #050505;
 
     color: #ffffff;
-}
-
-
-.about-approach .about-kicker {
-    color: #c9a96a;
 }
 
 
@@ -701,12 +712,7 @@
 }
 
 
-.about-approach-intro {
-    max-width: 620px;
-}
-
-
-.about-approach-intro h2 {
+.about-approach h2 {
     max-width: 650px;
 
     margin: 0 0 30px;
@@ -723,7 +729,7 @@
 
 
 .about-approach-intro > p {
-    max-width: 580px;
+    max-width: 600px;
 
     margin: 0;
 
@@ -736,10 +742,6 @@
 }
 
 
-/* =========================================================
-   11. APPROACH STEPS
-========================================================= */
-
 .about-approach-steps {
     border-top:
         1px solid rgba(255, 255, 255, 0.16);
@@ -749,7 +751,7 @@
 .about-approach-step {
     display: grid;
 
-    grid-template-columns: 70px minmax(0, 1fr);
+    grid-template-columns: 70px 1fr;
 
     gap: 20px;
 
@@ -777,27 +779,21 @@
     color: #ffffff;
 
     font-size: 1.35rem;
-
-    line-height: 1.25;
 }
 
 
 .about-approach-step p {
-    max-width: 620px;
-
     margin: 0;
 
     color:
         rgba(255, 255, 255, 0.62);
-
-    font-size: 0.96rem;
 
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   12. WHY BSGA
+   09. WHY BSGA
 ========================================================= */
 
 .about-why {
@@ -842,23 +838,21 @@
 
 
 .about-why-grid > div:last-child p {
-    margin: 0 0 25px;
+    margin: 0 0 24px;
 
     color: #4f4f4b;
-
-    font-size: 1.05rem;
 
     line-height: 1.75;
 }
 
 
 .about-why-grid > div:last-child p:last-of-type {
-    margin-bottom: 34px;
+    margin-bottom: 32px;
 }
 
 
 /* =========================================================
-   13. SERVICES CROSS-LINK
+   10. SERVICES CROSS LINK
 ========================================================= */
 
 .about-services-link {
@@ -869,12 +863,12 @@
 
 
 .about-services-link-content {
-    max-width: 850px;
+    max-width: 900px;
 }
 
 
-.about-services-link-content h2 {
-    max-width: 800px;
+.about-services-link h2 {
+    max-width: 850px;
 
     margin: 0 0 28px;
 
@@ -889,10 +883,10 @@
 }
 
 
-.about-services-link-content > p {
-    max-width: 680px;
+.about-services-link p {
+    max-width: 700px;
 
-    margin: 0 0 34px;
+    margin: 0 0 32px;
 
     color: #5f5f5b;
 
@@ -903,7 +897,7 @@
 
 
 /* =========================================================
-   14. FINAL CTA
+   11. CTA
 ========================================================= */
 
 .about-cta {
@@ -914,10 +908,6 @@
 
 
 .about-cta-box {
-    position: relative;
-
-    overflow: hidden;
-
     padding: 80px;
 
     background: #050505;
@@ -926,44 +916,7 @@
 }
 
 
-/*
-   Subtle gold accent.
-*/
-
-.about-cta-box::after {
-    content: "";
-
-    position: absolute;
-
-    right: -90px;
-
-    bottom: -90px;
-
-    width: 260px;
-
-    height: 260px;
-
-    border:
-        1px solid rgba(201, 169, 106, 0.28);
-
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-
-.about-cta-box .about-kicker {
-    position: relative;
-
-    z-index: 1;
-}
-
-
 .about-cta-box h2 {
-    position: relative;
-
-    z-index: 1;
-
     max-width: 850px;
 
     margin: 0 0 28px;
@@ -980,10 +933,6 @@
 
 
 .about-cta-box > p {
-    position: relative;
-
-    z-index: 1;
-
     max-width: 680px;
 
     margin: 0 0 34px;
@@ -991,17 +940,13 @@
     color:
         rgba(255, 255, 255, 0.68);
 
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 
 .about-cta-actions {
-    position: relative;
-
-    z-index: 2;
-
     display: flex;
 
     align-items: center;
@@ -1031,18 +976,18 @@
 
 
 .about-email {
-    color: rgba(255, 255, 255, 0.72);
+    color: #ffffff;
 
     font-size: 0.95rem;
 
-    font-weight: 500;
+    font-weight: 600;
 
     text-decoration: none;
 
     border-bottom:
-        1px solid rgba(255, 255, 255, 0.30);
+        1px solid rgba(255, 255, 255, 0.35);
 
-    padding-bottom: 3px;
+    padding-bottom: 4px;
 
     transition:
         color 180ms ease,
@@ -1051,14 +996,14 @@
 
 
 .about-email:hover {
-    color: #ffffff;
+    color: #c9a96a;
 
-    border-color: #ffffff;
+    border-color: #c9a96a;
 }
 
 
 /* =========================================================
-   15. FOOTER
+   12. FOOTER
 ========================================================= */
 
 .about-footer {
@@ -1100,7 +1045,7 @@
     margin: 0;
 
     color:
-        rgba(255, 255, 255, 0.56);
+        rgba(255, 255, 255, 0.58);
 
     font-size: 0.92rem;
 
@@ -1119,20 +1064,18 @@
 }
 
 
-.about-footer-grid h4 {
+.about-footer h4 {
     margin: 0 0 10px;
 
     color: #ffffff;
 
-    font-size: 0.9rem;
-
-    font-weight: 700;
+    font-size: 0.95rem;
 }
 
 
-.about-footer-grid a {
+.about-footer a {
     color:
-        rgba(255, 255, 255, 0.56);
+        rgba(255, 255, 255, 0.58);
 
     font-size: 0.9rem;
 
@@ -1144,7 +1087,7 @@
 }
 
 
-.about-footer-grid a:hover {
+.about-footer a:hover {
     color: #ffffff;
 }
 
@@ -1156,14 +1099,14 @@
         1px solid rgba(255, 255, 255, 0.10);
 
     color:
-        rgba(255, 255, 255, 0.40);
+        rgba(255, 255, 255, 0.42);
 
     font-size: 0.75rem;
 }
 
 
 /* =========================================================
-   16. TABLET
+   13. TABLET
 ========================================================= */
 
 @media (max-width: 1100px) {
@@ -1189,7 +1132,7 @@
 
 
 /* =========================================================
-   17. TABLET / SMALL LAPTOP
+   14. TABLET / MOBILE
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -1211,7 +1154,7 @@
     .about-why-grid {
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        gap: 48px;
     }
 
 
@@ -1227,14 +1170,14 @@
 
 
     .about-cta-box {
-        padding: 64px;
+        padding: 60px;
     }
 
 }
 
 
 /* =========================================================
-   18. MOBILE
+   15. MOBILE
 ========================================================= */
 
 @media (max-width: 640px) {
@@ -1272,9 +1215,9 @@
         background:
             linear-gradient(
                 90deg,
-                rgba(5, 5, 5, 0.92) 0%,
-                rgba(5, 5, 5, 0.76) 55%,
-                rgba(5, 5, 5, 0.48) 100%
+                rgba(5, 5, 5, 0.93) 0%,
+                rgba(5, 5, 5, 0.78) 52%,
+                rgba(5, 5, 5, 0.55) 100%
             );
     }
 
@@ -1284,8 +1227,6 @@
 
         font-size:
             clamp(2.8rem, 13vw, 4rem);
-
-        line-height: 1;
     }
 
 
@@ -1293,8 +1234,6 @@
         margin-bottom: 30px;
 
         font-size: 1rem;
-
-        line-height: 1.65;
     }
 
 
@@ -1312,7 +1251,7 @@
     }
 
 
-    /* GENERAL SECTIONS */
+    /* SECTIONS */
 
     .about-intro,
     .about-beliefs,
@@ -1322,14 +1261,6 @@
     .about-services-link,
     .about-cta {
         padding: 68px 0;
-    }
-
-
-    .about-intro-grid,
-    .about-capabilities-grid,
-    .about-approach-grid,
-    .about-why-grid {
-        gap: 42px;
     }
 
 
@@ -1348,7 +1279,7 @@
 
 
     .about-belief-number {
-        margin-bottom: 42px;
+        margin-bottom: 48px;
     }
 
 
@@ -1366,18 +1297,13 @@
     }
 
 
-    .about-capability:hover {
-        padding-left: 0;
-    }
-
-
     .about-capability h3 {
         font-size: 1.2rem;
     }
 
 
     .about-capability p {
-        font-size: 0.92rem;
+        font-size: 0.95rem;
     }
 
 
@@ -1385,8 +1311,7 @@
 
     .about-approach-step {
         grid-template-columns:
-            48px
-            minmax(0, 1fr);
+            48px 1fr;
 
         gap: 14px;
 
@@ -1394,23 +1319,10 @@
     }
 
 
-    .about-approach-step h3 {
-        font-size: 1.2rem;
-    }
-
-
     /* CTA */
 
     .about-cta-box {
         padding: 48px 28px;
-    }
-
-
-    .about-cta-box h2 {
-        font-size:
-            clamp(2.35rem, 11vw, 3.4rem);
-
-        line-height: 1.02;
     }
 
 
@@ -1438,16 +1350,11 @@
         padding-bottom: 50px;
     }
 
-
-    .about-footer-brand p {
-        max-width: 100%;
-    }
-
 }
 
 
 /* =========================================================
-   19. SMALL MOBILE
+   16. SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 400px) {
@@ -1474,49 +1381,21 @@
     }
 
 
-    .about-belief-card {
-        padding: 28px 22px;
-    }
-
-
     .about-cta-box {
-        padding: 42px 22px;
-    }
-
-
-    .about-capability {
-        grid-template-columns:
-            36px
-            minmax(0, 1fr)
-            20px;
-
-        gap: 10px;
+        padding: 40px 22px;
     }
 
 }
 
 
 /* =========================================================
-   20. ACCESSIBILITY
-========================================================= */
-
-.about-page a:focus-visible,
-.about-page button:focus-visible {
-    outline: 2px solid #c9a96a;
-
-    outline-offset: 4px;
-}
-
-
-/* =========================================================
-   21. REDUCED MOTION
+   17. REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
     .about-hero-button,
     .about-primary-button,
-    .about-capability,
     .about-capability-arrow,
     .about-email {
         transition: none;
