@@ -16,7 +16,7 @@
 
     <meta
         name="description"
-        content="BSGA Consulting helps organisations turn transformation priorities into practical operating models, organisational change and measurable business results."
+        content="BSGA Consulting helps organisations turn transformation priorities into practical action, stronger operating models and measurable business outcomes."
     >
 
     <meta
@@ -26,7 +26,12 @@
 
     <meta
         name="robots"
-        content="index, follow"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
+
+    <meta
+        name="theme-color"
+        content="#050505"
     >
 
     <link
@@ -98,7 +103,7 @@
 
     <meta
         property="og:description"
-        content="Practical business transformation focused on operating models, organisational change and measurable results."
+        content="Practical business transformation focused on operating models, organisational change, execution and measurable outcomes."
     >
 
     <meta
@@ -116,10 +121,65 @@
         content="en_GB"
     >
 
+    <!-- Structured Data -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+
+            {
+                "@type": "Organization",
+                "@id": "https://bsgaconsulting.es/#organization",
+                "name": "BSGA Consulting",
+                "url": "https://bsgaconsulting.es/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bsgaconsulting.es/images/logos/logo-white.png"
+                },
+                "email": "info@bsgaconsulting.es"
+            },
+
+            {
+                "@type": "WebPage",
+                "@id": "https://bsgaconsulting.es/business-transformation.html#webpage",
+                "url": "https://bsgaconsulting.es/business-transformation.html",
+                "name": "Business Transformation Consulting | BSGA Consulting",
+                "description": "Practical business transformation focused on operating models, organisational change, execution and measurable outcomes.",
+                "isPartOf": {
+                    "@id": "https://bsgaconsulting.es/#website"
+                },
+                "about": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "inLanguage": "en"
+            },
+
+            {
+                "@type": "Service",
+                "name": "Business Transformation Consulting",
+                "provider": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "description": "Practical business transformation connecting strategy, operating models, organisational change and execution."
+            }
+
+        ]
+    }
+    </script>
+
 </head>
 
 
-<body class="service-page transformation-page">
+<body class="business-transformation-page">
+
+
+<a
+    href="#main-content"
+    class="skip-link"
+>
+    Skip to main content
+</a>
 
 
 <!-- =========================================================
@@ -273,7 +333,7 @@
      MAIN
 ========================================================= -->
 
-<main>
+<main id="main-content">
 
 
 <!-- =========================================================
@@ -281,76 +341,55 @@
 ========================================================= -->
 
 <section
-    class="service-hero"
-    aria-labelledby="transformation-title"
+    class="bt-hero"
+    aria-labelledby="bt-hero-title"
 >
 
     <div class="container">
 
-        <div class="service-hero-grid">
+        <div class="bt-hero-content">
 
-            <div class="service-hero-content">
+            <span class="kicker">
+                BUSINESS TRANSFORMATION
+            </span>
 
-                <span class="kicker">
-                    BUSINESS TRANSFORMATION
-                </span>
+            <h1 id="bt-hero-title">
+                Turn transformation
+                into practical change.
+            </h1>
 
-                <h1 id="transformation-title">
-                    Transform the business.
-                    Make change work.
-                </h1>
-
-                <p class="service-hero-lead">
-                    We help organisations turn transformation
-                    ambition into practical change, stronger
-                    operating models and measurable results.
-                </p>
+            <p class="bt-hero-description">
+                We help organisations translate strategic ambition
+                into focused transformation programmes, stronger
+                operating models and measurable business outcomes.
+            </p>
 
 
-                <div class="service-hero-actions">
+            <div class="bt-hero-actions">
 
-                    <a
-                        href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                        class="primary-button"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    class="primary-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
 
-                        Discuss Your Transformation
+                    Discuss Your Transformation
 
-                        <span aria-hidden="true">
-                            →
-                        </span>
+                    <span aria-hidden="true">
+                        →
+                    </span>
 
-                    </a>
+                </a>
 
-                    <a
-                        href="contact.html"
-                        class="text-link"
-                    >
+                <a
+                    href="#capabilities"
+                    class="secondary-button"
+                >
 
-                        Contact BSGA
+                    Explore Our Approach
 
-                        <span aria-hidden="true">
-                            →
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="service-hero-aside">
-
-                <span class="service-hero-number">
-                    02
-                </span>
-
-                <span class="service-hero-label">
-                    TRANSFORMATION
-                </span>
+                </a>
 
             </div>
 
@@ -362,17 +401,17 @@
 
 
 <!-- =========================================================
-     VALUE PROPOSITION
+     INTRO
 ========================================================= -->
 
 <section
-    class="service-intro section-light"
-    aria-labelledby="transformation-intro-title"
+    class="bt-intro section-light"
+    aria-labelledby="bt-intro-heading"
 >
 
     <div class="container">
 
-        <div class="service-intro-grid">
+        <div class="bt-intro-grid">
 
             <div>
 
@@ -381,11 +420,11 @@
                 </span>
 
                 <h2
-                    id="transformation-intro-title"
+                    id="bt-intro-heading"
                     class="section-title"
                 >
-                    Transformation should create
-                    clarity, capability and results.
+                    Transformation is
+                    more than a strategy.
                 </h2>
 
             </div>
@@ -394,15 +433,15 @@
             <div>
 
                 <p class="section-intro">
-                    Transformation initiatives often become
-                    disconnected from day-to-day execution.
+                    Successful transformation requires alignment
+                    between strategy, people, processes, technology
+                    and execution.
                 </p>
 
-                <p class="service-copy">
-                    We help connect strategic ambition with
-                    operating models, people, processes and
-                    execution so that change becomes practical
-                    and sustainable.
+                <p class="bt-muted-copy">
+                    We focus on turning complex transformation
+                    priorities into clear actions that organisations
+                    can execute and sustain.
                 </p>
 
             </div>
@@ -419,35 +458,41 @@
 ========================================================= -->
 
 <section
-    class="service-capabilities section-soft"
-    aria-labelledby="transformation-capabilities-title"
+    id="capabilities"
+    class="bt-capabilities section-soft"
+    aria-labelledby="bt-capabilities-heading"
 >
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="bt-section-heading">
 
             <span class="kicker">
-                CAPABILITIES
+                OUR CAPABILITIES
             </span>
 
             <h2
-                id="transformation-capabilities-title"
+                id="bt-capabilities-heading"
                 class="section-title"
             >
-                What we help transform.
+                Focused support
+                across the transformation journey.
             </h2>
 
         </div>
 
 
-        <div class="capabilities-grid">
+        <div class="bt-capabilities-grid">
 
 
-            <article class="capability-card">
+            <article class="bt-capability-card">
 
-                <span class="capability-number">
+                <span class="bt-number">
                     01
+                </span>
+
+                <span class="kicker">
+                    STRATEGY
                 </span>
 
                 <h3>
@@ -455,35 +500,43 @@
                 </h3>
 
                 <p>
-                    Translate strategic ambition into
-                    clear transformation priorities.
+                    Define priorities, outcomes and a practical
+                    roadmap for transformation.
                 </p>
 
             </article>
 
 
-            <article class="capability-card">
+            <article class="bt-capability-card">
 
-                <span class="capability-number">
+                <span class="bt-number">
                     02
                 </span>
 
+                <span class="kicker">
+                    OPERATING MODEL
+                </span>
+
                 <h3>
-                    Operating Models
+                    Operating Model Design
                 </h3>
 
                 <p>
-                    Design practical ways of working
-                    aligned with business objectives.
+                    Align structures, processes, roles and
+                    capabilities with strategic priorities.
                 </p>
 
             </article>
 
 
-            <article class="capability-card">
+            <article class="bt-capability-card">
 
-                <span class="capability-number">
+                <span class="bt-number">
                     03
+                </span>
+
+                <span class="kicker">
+                    CHANGE
                 </span>
 
                 <h3>
@@ -491,17 +544,21 @@
                 </h3>
 
                 <p>
-                    Help people and organisations adopt
-                    new ways of working effectively.
+                    Support people and teams through the transition
+                    from current state to future state.
                 </p>
 
             </article>
 
 
-            <article class="capability-card">
+            <article class="bt-capability-card">
 
-                <span class="capability-number">
+                <span class="bt-number">
                     04
+                </span>
+
+                <span class="kicker">
+                    EXECUTION
                 </span>
 
                 <h3>
@@ -509,11 +566,12 @@
                 </h3>
 
                 <p>
-                    Turn transformation plans into
-                    coordinated, measurable execution.
+                    Establish governance, accountability and
+                    execution discipline to deliver change.
                 </p>
 
             </article>
+
 
         </div>
 
@@ -527,13 +585,13 @@
 ========================================================= -->
 
 <section
-    class="service-approach section-dark"
-    aria-labelledby="transformation-approach-title"
+    class="bt-approach section-dark"
+    aria-labelledby="bt-approach-heading"
 >
 
     <div class="container">
 
-        <div class="service-approach-grid">
+        <div class="bt-approach-grid">
 
 
             <div>
@@ -543,25 +601,26 @@
                 </span>
 
                 <h2
-                    id="transformation-approach-title"
+                    id="bt-approach-heading"
                     class="section-title"
                 >
-                    From ambition
-                    to adoption.
+                    Clear direction.
+                    Focused execution.
+                    Sustainable change.
                 </h2>
 
                 <p class="dark-copy">
-                    We focus on making transformation
-                    practical, structured and measurable.
+                    We keep transformation practical, structured
+                    and connected to measurable business outcomes.
                 </p>
 
             </div>
 
 
-            <div class="service-steps">
+            <div class="bt-steps">
 
 
-                <article class="service-step">
+                <article>
 
                     <span>
                         01
@@ -574,8 +633,8 @@
                         </h3>
 
                         <p class="dark-copy">
-                            Understand the current operating
-                            environment, priorities and constraints.
+                            Understand the current state,
+                            challenges and priorities.
                         </p>
 
                     </div>
@@ -583,7 +642,7 @@
                 </article>
 
 
-                <article class="service-step">
+                <article>
 
                     <span>
                         02
@@ -596,8 +655,8 @@
                         </h3>
 
                         <p class="dark-copy">
-                            Define the target state, priorities
-                            and practical transformation roadmap.
+                            Define the target state and
+                            transformation roadmap.
                         </p>
 
                     </div>
@@ -605,7 +664,7 @@
                 </article>
 
 
-                <article class="service-step">
+                <article>
 
                     <span>
                         03
@@ -614,12 +673,12 @@
                     <div>
 
                         <h3>
-                            Implement
+                            Transform
                         </h3>
 
                         <p class="dark-copy">
-                            Coordinate change and embed new
-                            ways of working across the organisation.
+                            Translate plans into coordinated
+                            action and organisational change.
                         </p>
 
                     </div>
@@ -627,7 +686,7 @@
                 </article>
 
 
-                <article class="service-step">
+                <article>
 
                     <span>
                         04
@@ -636,12 +695,12 @@
                     <div>
 
                         <h3>
-                            Measure
+                            Sustain
                         </h3>
 
                         <p class="dark-copy">
-                            Track outcomes and continuously
-                            improve the transformation.
+                            Embed new ways of working and
+                            measure ongoing performance.
                         </p>
 
                     </div>
@@ -663,83 +722,56 @@
 ========================================================= -->
 
 <section
-    class="service-outcomes section-light"
-    aria-labelledby="transformation-outcomes-title"
+    class="bt-outcomes section-light"
+    aria-labelledby="bt-outcomes-heading"
 >
 
     <div class="container">
 
-        <div class="service-outcomes-grid">
-
+        <div class="bt-outcomes-grid">
 
             <div>
 
                 <span class="kicker">
-                    EXPECTED OUTCOMES
+                    OUTCOMES
                 </span>
 
                 <h2
-                    id="transformation-outcomes-title"
+                    id="bt-outcomes-heading"
                     class="section-title"
                 >
-                    Change that
-                    delivers value.
+                    Transformation
+                    that creates value.
                 </h2>
 
             </div>
 
 
-            <div class="outcomes-list">
+            <div class="bt-outcome-list">
 
-                <div class="outcome-item">
-
-                    <span>
-                        →
-                    </span>
-
-                    <p>
-                        Clear transformation priorities
-                    </p>
-
+                <div>
+                    <span>01</span>
+                    <strong>Clearer strategic priorities</strong>
                 </div>
 
-
-                <div class="outcome-item">
-
-                    <span>
-                        →
-                    </span>
-
-                    <p>
-                        Stronger operating models
-                    </p>
-
+                <div>
+                    <span>02</span>
+                    <strong>Stronger operating models</strong>
                 </div>
 
-
-                <div class="outcome-item">
-
-                    <span>
-                        →
-                    </span>
-
-                    <p>
-                        Better organisational alignment
-                    </p>
-
+                <div>
+                    <span>03</span>
+                    <strong>Better organisational alignment</strong>
                 </div>
 
+                <div>
+                    <span>04</span>
+                    <strong>More effective execution</strong>
+                </div>
 
-                <div class="outcome-item">
-
-                    <span>
-                        →
-                    </span>
-
-                    <p>
-                        Sustainable business improvement
-                    </p>
-
+                <div>
+                    <span>05</span>
+                    <strong>Measurable business improvement</strong>
                 </div>
 
             </div>
@@ -756,43 +788,40 @@
 ========================================================= -->
 
 <section
-    class="service-related section-soft"
-    aria-labelledby="related-services-title"
+    class="bt-related section-soft"
+    aria-labelledby="bt-related-heading"
 >
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="bt-section-heading">
 
             <span class="kicker">
-                OTHER CAPABILITIES
+                RELATED SERVICES
             </span>
 
             <h2
-                id="related-services-title"
+                id="bt-related-heading"
                 class="section-title"
             >
-                Explore our other services.
+                Transformation rarely
+                happens in isolation.
             </h2>
 
         </div>
 
 
-        <div class="related-services-grid">
+        <div class="bt-related-grid">
 
 
             <a
                 href="project-management.html"
-                class="related-service"
+                class="bt-related-link"
             >
 
                 <span>
-                    01
-                </span>
-
-                <strong>
                     Project Management
-                </strong>
+                </span>
 
                 <span aria-hidden="true">
                     →
@@ -803,16 +832,12 @@
 
             <a
                 href="operational-excellence.html"
-                class="related-service"
+                class="bt-related-link"
             >
 
                 <span>
-                    03
-                </span>
-
-                <strong>
                     Operational Excellence
-                </strong>
+                </span>
 
                 <span aria-hidden="true">
                     →
@@ -823,22 +848,19 @@
 
             <a
                 href="artificial-intelligence.html"
-                class="related-service"
+                class="bt-related-link"
             >
 
                 <span>
-                    04
-                </span>
-
-                <strong>
                     Artificial Intelligence
-                </strong>
+                </span>
 
                 <span aria-hidden="true">
                     →
                 </span>
 
             </a>
+
 
         </div>
 
@@ -848,37 +870,37 @@
 
 
 <!-- =========================================================
-     FINAL CTA
+     CTA
 ========================================================= -->
 
 <section
-    class="service-cta section-dark"
-    aria-labelledby="transformation-cta-title"
+    class="bt-cta section-dark"
+    aria-labelledby="bt-cta-heading"
 >
 
     <div class="container">
 
-        <div class="service-cta-content">
+        <div class="bt-cta-content">
 
             <span class="kicker">
-                READY TO TRANSFORM?
+                LET'S TALK
             </span>
 
             <h2
-                id="transformation-cta-title"
+                id="bt-cta-heading"
                 class="section-title"
             >
-                Let's turn your transformation
-                priorities into action.
+                Have a transformation
+                challenge?
             </h2>
 
             <p class="dark-copy">
-                Start with a conversation about your objectives,
-                challenges and priorities.
+                Let's discuss your priorities and identify
+                the most practical way forward.
             </p>
 
 
-            <div class="service-cta-actions">
+            <div class="bt-cta-actions">
 
                 <a
                     href="https://calendly.com/angel-bajo-sanchez/discovery-call"
@@ -1046,5 +1068,7 @@
 
 <script src="js/main.js"></script>
 
+
 </body>
+
 </html>
