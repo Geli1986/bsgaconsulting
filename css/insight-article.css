@@ -1,0 +1,713 @@
+/* =========================================================
+   BSGA CONSULTING
+   INSIGHT ARTICLE
+   Executive / Minimal / Responsive
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.insight-article-page {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.insight-article-page .container {
+    width: min(100% - 80px, 1400px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ARTICLE HERO
+========================================================= */
+
+.article-hero {
+    background: #050505;
+    color: #ffffff;
+}
+
+.article-hero .container {
+    padding-top: 48px;
+    padding-bottom: 110px;
+}
+
+
+/* =========================================================
+   BACK LINK
+========================================================= */
+
+.article-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 100px;
+
+    color: rgba(255, 255, 255, 0.62);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 180ms ease,
+        gap 180ms ease;
+}
+
+.article-back span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.article-back:hover {
+    color: #ffffff;
+    gap: 14px;
+}
+
+
+/* =========================================================
+   ARTICLE META
+========================================================= */
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    margin-bottom: 30px;
+}
+
+.article-meta span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.2;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+
+/* =========================================================
+   ARTICLE TITLE
+========================================================= */
+
+.article-hero h1 {
+    max-width: 1000px;
+
+    margin: 0;
+
+    font-size: clamp(58px, 8vw, 112px);
+    font-weight: 700;
+    letter-spacing: -0.065em;
+    line-height: 0.94;
+}
+
+
+/* =========================================================
+   ARTICLE LEAD
+========================================================= */
+
+.article-lead {
+    max-width: 720px;
+
+    margin: 42px 0 0;
+
+    font-size: clamp(18px, 2vw, 23px);
+    font-weight: 400;
+    line-height: 1.55;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   ARTICLE CONTENT
+========================================================= */
+
+.article-content {
+    padding: 120px 0 140px;
+
+    background: #ffffff;
+}
+
+.article-layout {
+    display: grid;
+
+    grid-template-columns: 220px minmax(0, 760px);
+
+    gap: 100px;
+
+    justify-content: center;
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.article-sidebar {
+    position: sticky;
+    top: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    padding-top: 8px;
+}
+
+.article-sidebar span {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    line-height: 1.4;
+
+    color: #999999;
+}
+
+
+/* =========================================================
+   ARTICLE BODY
+========================================================= */
+
+.article-body {
+    min-width: 0;
+}
+
+.article-body p {
+    margin: 0 0 28px;
+
+    font-size: 18px;
+    line-height: 1.72;
+
+    color: #606060;
+}
+
+.article-body .article-opening {
+    margin-bottom: 34px;
+
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   ARTICLE HEADINGS
+========================================================= */
+
+.article-body h2 {
+    margin: 90px 0 30px;
+
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+
+    color: #111111;
+}
+
+.article-body h2:first-of-type {
+    margin-top: 80px;
+}
+
+.article-body h3 {
+    margin: 0;
+
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   ARTICLE POINTS
+========================================================= */
+
+.article-points {
+    margin: 65px 0 75px;
+
+    border-top: 1px solid #d8d8d8;
+}
+
+.article-point {
+    display: grid;
+
+    grid-template-columns: 55px minmax(0, 1fr);
+
+    gap: 28px;
+
+    padding: 34px 0;
+
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.article-point > span {
+    padding-top: 3px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+
+    color: #999999;
+}
+
+.article-point p {
+    max-width: 620px;
+
+    margin: 15px 0 0;
+
+    font-size: 16px;
+    line-height: 1.65;
+
+    color: #707070;
+}
+
+
+/* =========================================================
+   ARTICLE CONCLUSION
+========================================================= */
+
+.article-conclusion {
+    margin-top: 80px;
+    padding: 42px 46px;
+
+    background: #f4f4f4;
+}
+
+.article-conclusion > span {
+    display: block;
+
+    margin-bottom: 22px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    color: #888888;
+}
+
+.article-conclusion p {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: -0.025em;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   ARTICLE CTA
+========================================================= */
+
+.article-cta {
+    padding: 120px 0;
+
+    background: #050505;
+    color: #ffffff;
+}
+
+.article-cta-content {
+    max-width: 900px;
+}
+
+.article-cta-content > span {
+    display: block;
+
+    margin-bottom: 26px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+
+    color: rgba(255, 255, 255, 0.48);
+}
+
+.article-cta h2 {
+    max-width: 850px;
+
+    margin: 0;
+
+    font-size: clamp(44px, 5.5vw, 76px);
+    font-weight: 700;
+    letter-spacing: -0.055em;
+    line-height: 0.98;
+}
+
+.article-cta p {
+    max-width: 620px;
+
+    margin: 32px 0 0;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.article-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    margin-top: 44px;
+}
+
+
+/* =========================================================
+   CTA BUTTON OVERRIDE
+   White background / black text
+========================================================= */
+
+.article-cta .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    min-height: 54px;
+
+    padding: 15px 22px;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 1px solid #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease;
+}
+
+.article-cta .primary-button span {
+    font-size: 21px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.article-cta .primary-button:hover {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   CTA TEXT LINK
+========================================================= */
+
+.article-cta .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-bottom: 7px;
+
+    transition:
+        border-color 180ms ease,
+        gap 180ms ease;
+}
+
+.article-cta .text-link span {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.article-cta .text-link:hover {
+    gap: 17px;
+    border-color: #ffffff;
+}
+
+
+/* =========================================================
+   LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .insight-article-page .container {
+        width: min(100% - 56px, 1400px);
+    }
+
+    .article-layout {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 65px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .article-hero .container {
+        padding-top: 40px;
+        padding-bottom: 90px;
+    }
+
+    .article-back {
+        margin-bottom: 80px;
+    }
+
+    .article-content {
+        padding: 90px 0 100px;
+    }
+
+    .article-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .article-sidebar {
+        position: static;
+
+        flex-direction: row;
+        gap: 25px;
+
+        padding: 0;
+    }
+
+    .article-body h2 {
+        margin-top: 70px;
+    }
+
+    .article-cta {
+        padding: 90px 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .insight-article-page .container {
+        width: calc(100% - 40px);
+    }
+
+
+    /* HERO */
+
+    .article-hero .container {
+        padding-top: 32px;
+        padding-bottom: 75px;
+    }
+
+    .article-back {
+        margin-bottom: 65px;
+
+        font-size: 13px;
+    }
+
+    .article-meta {
+        gap: 22px;
+        margin-bottom: 22px;
+    }
+
+    .article-meta span {
+        font-size: 10px;
+    }
+
+    .article-hero h1 {
+        font-size: clamp(48px, 13vw, 68px);
+        letter-spacing: -0.06em;
+    }
+
+    .article-lead {
+        margin-top: 28px;
+
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+
+    /* CONTENT */
+
+    .article-content {
+        padding: 70px 0 80px;
+    }
+
+    .article-sidebar {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .article-sidebar span {
+        font-size: 10px;
+    }
+
+    .article-body p {
+        font-size: 17px;
+        line-height: 1.68;
+    }
+
+    .article-body .article-opening {
+        font-size: 23px;
+        line-height: 1.45;
+    }
+
+    .article-body h2 {
+        margin-top: 62px;
+        margin-bottom: 24px;
+
+        font-size: 34px;
+    }
+
+
+    /* POINTS */
+
+    .article-points {
+        margin: 50px 0 60px;
+    }
+
+    .article-point {
+        grid-template-columns: 38px minmax(0, 1fr);
+
+        gap: 18px;
+
+        padding: 28px 0;
+    }
+
+    .article-point h3 {
+        font-size: 19px;
+    }
+
+    .article-point p {
+        margin-top: 12px;
+
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+
+    /* CONCLUSION */
+
+    .article-conclusion {
+        margin-top: 60px;
+        padding: 30px 26px;
+    }
+
+    .article-conclusion p {
+        font-size: 20px;
+    }
+
+
+    /* CTA */
+
+    .article-cta {
+        padding: 75px 0;
+    }
+
+    .article-cta h2 {
+        font-size: clamp(40px, 11vw, 58px);
+    }
+
+    .article-cta p {
+        margin-top: 26px;
+        font-size: 17px;
+    }
+
+    .article-cta-actions {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 24px;
+
+        margin-top: 34px;
+    }
+
+    .article-cta .primary-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .insight-article-page .container {
+        width: calc(100% - 32px);
+    }
+
+    .article-hero h1 {
+        font-size: 46px;
+    }
+
+    .article-conclusion {
+        padding: 26px 22px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.article-back:focus-visible,
+.article-cta a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .article-back,
+    .article-cta .primary-button,
+    .article-cta .text-link {
+        transition: none;
+    }
+
+}
