@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -9,118 +10,153 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <title>
+        Operational Excellence Consulting | BSGA Consulting
+    </title>
+
     <meta
         name="description"
-        content="BSGA Consulting Operational Excellence. Improve processes, performance and operational efficiency through practical, measurable transformation."
+        content="BSGA Consulting helps organisations improve processes, performance and ways of working through practical operational excellence and continuous improvement."
     >
 
-    <title>Operational Excellence | BSGA Consulting</title>
+    <meta
+        name="author"
+        content="BSGA Consulting"
+    >
 
-    <!-- Global styles -->
-    <link rel="stylesheet" href="styles.css">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    <!-- Page styles -->
-    <link rel="stylesheet" href="operational-excellence.css">
+    <link
+        rel="canonical"
+        href="https://bsgaconsulting.es/operational-excellence.html"
+    >
+
+    <!-- =====================================================
+         FAVICONS
+    ====================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        sizes="512x512"
+        href="images/logos/favicon.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="images/logos/apple-touch-icon.png"
+    >
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/operational-excellence.css"
+    >
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:url"
+        content="https://bsgaconsulting.es/operational-excellence.html"
+    >
+
+    <meta
+        property="og:title"
+        content="Operational Excellence Consulting | BSGA Consulting"
+    >
+
+    <meta
+        property="og:description"
+        content="Practical operational excellence focused on process improvement, performance management and sustainable business results."
+    >
+
+    <meta
+        property="og:image"
+        content="https://bsgaconsulting.es/images/heroes/BSGA-Home-Hero.png"
+    >
+
+    <meta
+        property="og:site_name"
+        content="BSGA Consulting"
+    >
+
+    <meta
+        property="og:locale"
+        content="en_GB"
+    >
+
 </head>
 
 
-<body>
-
-    <!-- =====================================================
-         SKIP LINK
-    ====================================================== -->
-
-    <a
-        class="skip-link"
-        href="#main-content"
-    >
-        Skip to content
-    </a>
+<body class="service-page operational-excellence-page">
 
 
-    <!-- =====================================================
-         HEADER
-    ====================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-    <header class="site-header">
+<header class="site-header">
 
-        <div class="header-container">
+    <div class="header-container">
 
-            <a
-                href="index.html"
-                class="site-logo"
-                aria-label="BSGA Consulting home"
-            >
-                <img
-                    src="images/BSGA-Logo-White.png"
-                    alt="BSGA Consulting"
-                >
-            </a>
+        <a
+            href="index.html"
+            class="site-logo"
+            aria-label="BSGA Consulting Home"
+        >
 
-
-            <nav
-                class="main-navigation"
-                aria-label="Main navigation"
+            <img
+                src="images/logos/logo-white.png"
+                alt="BSGA Consulting"
+                width="148"
+                height="74"
             >
 
-                <a href="index.html">
-                    Home
-                </a>
+        </a>
 
-                <a
-                    href="services.html"
-                    class="active"
-                >
-                    Services
-                </a>
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="insights.html">
-                    Insights
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
-            </nav>
-
-
-            <a
-                href="contact.html"
-                class="header-cta"
-            >
-                Let's talk
-                <span class="header-cta-arrow" aria-hidden="true">
-                    →
-                </span>
-            </a>
-
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
-                aria-controls="mobile-navigation"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-
-        <!-- Mobile navigation -->
 
         <nav
-            id="mobile-navigation"
-            class="mobile-nav"
-            aria-label="Mobile navigation"
+            class="main-navigation"
+            aria-label="Main navigation"
         >
 
             <a href="index.html">
@@ -130,6 +166,7 @@
             <a
                 href="services.html"
                 class="active"
+                aria-current="page"
             >
                 Services
             </a>
@@ -146,632 +183,170 @@
                 Contact
             </a>
 
-            <a
-                href="contact.html"
-                class="mobile-nav-cta"
-            >
-                Let's talk
-                <span aria-hidden="true">→</span>
-            </a>
-
         </nav>
 
-    </header>
 
-
-
-    <!-- =====================================================
-         MAIN
-    ====================================================== -->
-
-    <main id="main-content">
-
-
-        <!-- =================================================
-             HERO
-        ================================================== -->
-
-        <section class="oe-hero">
-
-            <!--
-                IMPORTANT:
-                Hero image is loaded directly from HTML.
-                This avoids broken background-image paths
-                caused by relative CSS locations.
-            -->
-
-            <div
-                class="oe-hero-background"
-                aria-hidden="true"
-            >
-
-                <img
-                    src="images/BSGA-Operational-Excellence-Hero.png"
-                    alt=""
-                    class="oe-hero-image"
-                >
-
-                <div class="oe-hero-overlay"></div>
-
-            </div>
-
-
-            <div class="oe-hero-container">
-
-                <div class="oe-hero-content">
-
-                    <div class="oe-hero-kicker">
-                        Operational Excellence
-                    </div>
-
-
-                    <h1>
-                        Make operations
-                        <br>
-                        work better.
-                    </h1>
-
-
-                    <p class="oe-hero-description">
-                        We help organisations improve the way they operate,
-                        creating simpler processes, stronger performance
-                        and sustainable operational efficiency.
-                    </p>
-
-
-                    <div class="oe-hero-actions">
-
-                        <a
-                            href="contact.html"
-                            class="primary-button"
-                        >
-                            Discuss your challenge
-                            <span aria-hidden="true">→</span>
-                        </a>
-
-
-                        <a
-                            href="#approach"
-                            class="secondary-button"
-                        >
-                            Explore our approach
-                            <span aria-hidden="true">↓</span>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             INTRO
-        ================================================== -->
-
-        <section class="oe-intro">
-
-            <div class="oe-container">
-
-                <div class="oe-intro-grid">
-
-                    <div>
-
-                        <span class="oe-kicker">
-                            The challenge
-                        </span>
-
-                        <h2>
-                            Better operations
-                            start with clarity.
-                        </h2>
-
-                    </div>
-
-
-                    <div class="oe-intro-copy">
-
-                        <p class="oe-lead">
-                            Operational problems rarely come from a single
-                            issue. They emerge when processes, people,
-                            systems and priorities stop working together.
-                        </p>
-
-                        <p>
-                            BSGA helps organisations identify where
-                            performance is being lost and turn complexity
-                            into practical improvements that can be
-                            implemented and measured.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             CAPABILITIES
-        ================================================== -->
-
-        <section class="oe-capabilities oe-section-soft">
-
-            <div class="oe-container">
-
-                <div class="oe-section-heading">
-
-                    <span class="oe-kicker">
-                        What we improve
-                    </span>
-
-                    <h2>
-                        From operational friction
-                        to measurable performance.
-                    </h2>
-
-                    <p>
-                        We focus on the areas that have the greatest
-                        impact on how an organisation performs every day.
-                    </p>
-
-                </div>
-
-
-                <div class="oe-capabilities-grid">
-
-
-                    <article class="oe-capability-card">
-
-                        <span class="oe-number">
-                            01
-                        </span>
-
-                        <div class="oe-capability-visual oe-visual-process">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <h3>
-                            Process optimisation
-                        </h3>
-
-                        <p>
-                            Analyse existing processes, remove unnecessary
-                            complexity and create clearer, more efficient
-                            ways of working.
-                        </p>
-
-                    </article>
-
-
-
-                    <article class="oe-capability-card">
-
-                        <span class="oe-number">
-                            02
-                        </span>
-
-                        <div class="oe-capability-visual oe-visual-performance">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <h3>
-                            Performance improvement
-                        </h3>
-
-                        <p>
-                            Establish meaningful measures and identify the
-                            operational levers that can improve performance
-                            and accountability.
-                        </p>
-
-                    </article>
-
-
-
-                    <article class="oe-capability-card">
-
-                        <span class="oe-number">
-                            03
-                        </span>
-
-                        <div class="oe-capability-visual oe-visual-workflow">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <h3>
-                            Workflow design
-                        </h3>
-
-                        <p>
-                            Redesign workflows around the way people
-                            actually work, improving coordination,
-                            visibility and consistency.
-                        </p>
-
-                    </article>
-
-
-
-                    <article class="oe-capability-card">
-
-                        <span class="oe-number">
-                            04
-                        </span>
-
-                        <div class="oe-capability-visual oe-visual-continuous">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-
-                        <h3>
-                            Continuous improvement
-                        </h3>
-
-                        <p>
-                            Build practical improvement disciplines that
-                            allow teams to sustain gains and keep improving
-                            over time.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             APPROACH
-        ================================================== -->
-
-        <section
-            id="approach"
-            class="oe-approach oe-section-dark"
+        <a
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="header-cta"
+            target="_blank"
+            rel="noopener noreferrer"
         >
 
-            <div class="oe-container">
+            <span class="header-cta-text">
+                Schedule a Consultation
+            </span>
 
-                <div class="oe-approach-grid">
+            <span
+                class="header-cta-arrow"
+                aria-hidden="true"
+            >
+                →
+            </span>
 
-                    <div class="oe-approach-intro">
+        </a>
 
-                        <span class="oe-kicker">
-                            Our approach
-                        </span>
 
-                        <h2>
-                            Practical improvement,
-                            not complexity.
-                        </h2>
+        <button
+            id="menuToggle"
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileNav"
+        >
 
-                        <p>
-                            Operational excellence should make work
-                            easier, not introduce another layer of
-                            bureaucracy.
-                        </p>
+            <span></span>
+            <span></span>
+            <span></span>
 
-                    </div>
+        </button>
 
+    </div>
 
-                    <div class="oe-steps">
 
-                        <article>
+    <nav
+        id="mobileNav"
+        class="mobile-nav"
+        aria-label="Mobile navigation"
+    >
 
-                            <span>01</span>
+        <a href="index.html">
+            Home
+        </a>
 
-                            <div>
+        <a
+            href="services.html"
+            class="active"
+            aria-current="page"
+        >
+            Services
+        </a>
 
-                                <h3>
-                                    Understand
-                                </h3>
+        <a href="about.html">
+            About
+        </a>
 
-                                <p>
-                                    We establish a clear view of the current
-                                    operation, its constraints and its
-                                    biggest opportunities.
-                                </p>
+        <a href="insights.html">
+            Insights
+        </a>
 
-                            </div>
+        <a href="contact.html">
+            Contact
+        </a>
 
-                        </article>
+        <a
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            class="mobile-nav-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
+            <span>
+                Schedule a Consultation
+            </span>
 
-                        <article>
+            <span aria-hidden="true">
+                →
+            </span>
 
-                            <span>02</span>
+        </a>
 
-                            <div>
+    </nav>
 
-                                <h3>
-                                    Simplify
-                                </h3>
+</header>
 
-                                <p>
-                                    We remove unnecessary steps,
-                                    duplication and friction from critical
-                                    processes.
-                                </p>
 
-                            </div>
+<!-- =========================================================
+     MAIN
+========================================================= -->
 
-                        </article>
+<main>
 
 
-                        <article>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-                            <span>03</span>
+<section
+    class="service-hero"
+    aria-labelledby="operational-title"
+>
 
-                            <div>
+    <div class="container">
 
-                                <h3>
-                                    Improve
-                                </h3>
+        <div class="service-hero-grid">
 
-                                <p>
-                                    We introduce practical changes designed
-                                    around measurable operational outcomes.
-                                </p>
 
-                            </div>
+            <div class="service-hero-content">
 
-                        </article>
+                <span class="kicker">
+                    OPERATIONAL EXCELLENCE
+                </span>
 
 
-                        <article>
+                <h1 id="operational-title">
+                    Improve performance.
+                    Build better ways of working.
+                </h1>
 
-                            <span>04</span>
 
-                            <div>
+                <p class="service-hero-lead">
+                    We help organisations simplify processes,
+                    improve performance and create more effective
+                    operating environments.
+                </p>
 
-                                <h3>
-                                    Sustain
-                                </h3>
 
-                                <p>
-                                    We help teams embed new ways of working
-                                    so improvements continue after the
-                                    initial intervention.
-                                </p>
+                <div class="service-hero-actions">
 
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             OUTCOMES
-        ================================================== -->
-
-        <section class="oe-outcomes">
-
-            <div class="oe-container">
-
-                <div class="oe-outcomes-grid">
-
-                    <div>
-
-                        <span class="oe-kicker">
-                            Outcomes
-                        </span>
-
-                        <h2>
-                            What operational
-                            excellence can deliver.
-                        </h2>
-
-                    </div>
-
-
-                    <div class="oe-outcomes-list">
-
-                        <div>
-                            <span>01</span>
-                            <p>
-                                Greater operational efficiency
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>02</span>
-                            <p>
-                                Clearer processes and responsibilities
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>03</span>
-                            <p>
-                                Better visibility of performance
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>04</span>
-                            <p>
-                                More consistent execution
-                            </p>
-                        </div>
-
-                        <div>
-                            <span>05</span>
-                            <p>
-                                A stronger culture of continuous improvement
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =================================================
-             FINAL CTA
-        ================================================== -->
-
-        <section class="oe-cta oe-section-dark">
-
-            <div class="oe-container">
-
-                <div class="oe-cta-content">
-
-                    <span class="oe-kicker">
-                        Start a conversation
-                    </span>
-
-                    <h2>
-                        Where could your
-                        operation work better?
-                    </h2>
-
-                    <p>
-                        Let's identify the opportunities and turn them
-                        into practical improvements.
-                    </p>
-
-                    <div class="oe-cta-actions">
-
-                        <a
-                            href="contact.html"
-                            class="primary-button"
-                        >
-                            Let's talk
-                            <span aria-hidden="true">→</span>
-                        </a>
-
-                        <a
-                            href="services.html"
-                            class="oe-text-link"
-                        >
-                            View all services
-                            <span aria-hidden="true">→</span>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
-    <footer class="site-footer">
-
-        <div class="footer-container">
-
-            <div class="footer-grid">
-
-
-                <div class="footer-brand">
-
-                    <img
-                        src="images/BSGA-Logo-White.png"
-                        alt="BSGA Consulting"
+                    <a
+                        href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                        class="primary-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
 
-                    <p>
-                        Practical consulting for organisations
-                        looking to improve performance, transform
-                        operations and create sustainable results.
-                    </p>
+                        Discuss Your Challenge
 
-                </div>
+                        <span aria-hidden="true">
+                            →
+                        </span>
 
-
-                <div class="footer-column">
-
-                    <h4>
-                        Services
-                    </h4>
-
-                    <a href="project-management.html">
-                        Project Management
                     </a>
 
-                    <a href="operational-excellence.html">
-                        Operational Excellence
-                    </a>
 
-                    <a href="business-transformation.html">
-                        Business Transformation
-                    </a>
+                    <a
+                        href="contact.html"
+                        class="text-link"
+                    >
 
-                    <a href="artificial-intelligence.html">
-                        Artificial Intelligence
-                    </a>
+                        Contact BSGA
 
-                </div>
+                        <span aria-hidden="true">
+                            →
+                        </span>
 
-
-                <div class="footer-column">
-
-                    <h4>
-                        Company
-                    </h4>
-
-                    <a href="about.html">
-                        About
-                    </a>
-
-                    <a href="insights.html">
-                        Insights
-                    </a>
-
-                    <a href="contact.html">
-                        Contact
-                    </a>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h4>
-                        Connect
-                    </h4>
-
-                    <a href="contact.html">
-                        Start a conversation
                     </a>
 
                 </div>
@@ -779,137 +354,761 @@
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="service-hero-aside">
 
-                <p>
-                    © 2026 BSGA Consulting. All rights reserved.
+                <span class="service-hero-number">
+                    03
+                </span>
+
+                <span class="service-hero-label">
+                    PERFORMANCE
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTRO
+========================================================= -->
+
+<section
+    class="service-intro section-light"
+    aria-labelledby="operational-intro-title"
+>
+
+    <div class="container">
+
+        <div class="service-intro-grid">
+
+
+            <div>
+
+                <span class="kicker">
+                    THE CHALLENGE
+                </span>
+
+
+                <h2
+                    id="operational-intro-title"
+                    class="section-title"
+                >
+                    Better performance starts
+                    with better ways of working.
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p class="section-intro">
+                    Operational problems are often symptoms
+                    of unclear processes, inefficient workflows
+                    or limited performance visibility.
+                </p>
+
+
+                <p class="service-copy">
+                    We help organisations identify the issues
+                    that matter, simplify how work gets done
+                    and build sustainable performance improvement.
                 </p>
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
 
 
+<!-- =========================================================
+     CAPABILITIES
+========================================================= -->
 
-    <!-- =====================================================
-         MOBILE MENU
-    ====================================================== -->
+<section
+    class="service-capabilities section-soft"
+    aria-labelledby="operational-capabilities-title"
+>
 
-    <script>
-
-        const menuToggle =
-            document.querySelector(".menu-toggle");
-
-        const mobileNav =
-            document.querySelector(".mobile-nav");
-
-        if (menuToggle && mobileNav) {
-
-            menuToggle.addEventListener(
-                "click",
-                function () {
-
-                    const isOpen =
-                        menuToggle.classList.toggle("active");
-
-                    mobileNav.classList.toggle(
-                        "active",
-                        isOpen
-                    );
-
-                    menuToggle.setAttribute(
-                        "aria-expanded",
-                        String(isOpen)
-                    );
-
-                    menuToggle.setAttribute(
-                        "aria-label",
-                        isOpen
-                            ? "Close menu"
-                            : "Open menu"
-                    );
-
-                    document.body.classList.toggle(
-                        "mobile-menu-open",
-                        isOpen
-                    );
-
-                }
-            );
-
-        }
+    <div class="container">
 
 
-        /*
-         * Header scroll state
-         */
+        <div class="section-heading">
 
-        const header =
-            document.querySelector(".site-header");
-
-        if (header) {
-
-            const updateHeader =
-                function () {
-
-                    header.classList.toggle(
-                        "scrolled",
-                        window.scrollY > 20
-                    );
-
-                };
-
-            updateHeader();
-
-            window.addEventListener(
-                "scroll",
-                updateHeader,
-                {
-                    passive: true
-                }
-            );
-
-        }
+            <span class="kicker">
+                CAPABILITIES
+            </span>
 
 
-        /*
-         * Close mobile navigation when
-         * a navigation link is selected.
-         */
+            <h2
+                id="operational-capabilities-title"
+                class="section-title"
+            >
+                Where we improve performance.
+            </h2>
 
-        document
-            .querySelectorAll(".mobile-nav a")
-            .forEach(function (link) {
+        </div>
 
-                link.addEventListener(
-                    "click",
-                    function () {
 
-                        menuToggle?.classList.remove(
-                            "active"
-                        );
+        <div class="capabilities-grid">
 
-                        mobileNav?.classList.remove(
-                            "active"
-                        );
 
-                        menuToggle?.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
+            <article class="capability-card">
 
-                        document.body.classList.remove(
-                            "mobile-menu-open"
-                        );
+                <span class="capability-number">
+                    01
+                </span>
 
-                    }
-                );
 
-            });
+                <h3>
+                    Process Improvement
+                </h3>
 
-    </script>
+
+                <p>
+                    Identify inefficiencies and redesign
+                    processes around business value.
+                </p>
+
+            </article>
+
+
+            <article class="capability-card">
+
+                <span class="capability-number">
+                    02
+                </span>
+
+
+                <h3>
+                    Performance Management
+                </h3>
+
+
+                <p>
+                    Establish meaningful measures,
+                    visibility and management routines.
+                </p>
+
+            </article>
+
+
+            <article class="capability-card">
+
+                <span class="capability-number">
+                    03
+                </span>
+
+
+                <h3>
+                    Operating Efficiency
+                </h3>
+
+
+                <p>
+                    Improve workflows, responsibilities
+                    and ways of working.
+                </p>
+
+            </article>
+
+
+            <article class="capability-card">
+
+                <span class="capability-number">
+                    04
+                </span>
+
+
+                <h3>
+                    Continuous Improvement
+                </h3>
+
+
+                <p>
+                    Create practical mechanisms for
+                    sustained improvement over time.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     APPROACH
+========================================================= -->
+
+<section
+    class="service-approach section-dark"
+    aria-labelledby="operational-approach-title"
+>
+
+    <div class="container">
+
+        <div class="service-approach-grid">
+
+
+            <div>
+
+                <span class="kicker">
+                    OUR APPROACH
+                </span>
+
+
+                <h2
+                    id="operational-approach-title"
+                    class="section-title"
+                >
+                    Understand.
+                    Improve.
+                    Sustain.
+                </h2>
+
+
+                <p class="dark-copy">
+                    We focus on practical improvements that
+                    can be implemented, measured and sustained.
+                </p>
+
+            </div>
+
+
+            <div class="service-steps">
+
+
+                <article class="service-step">
+
+                    <span>
+                        01
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Diagnose
+                        </h3>
+
+
+                        <p class="dark-copy">
+                            Understand processes, performance,
+                            bottlenecks and root causes.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="service-step">
+
+                    <span>
+                        02
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Improve
+                        </h3>
+
+
+                        <p class="dark-copy">
+                            Prioritise and implement changes
+                            that create measurable value.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="service-step">
+
+                    <span>
+                        03
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Embed
+                        </h3>
+
+
+                        <p class="dark-copy">
+                            Establish ownership, routines
+                            and standards for new ways of working.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="service-step">
+
+                    <span>
+                        04
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Sustain
+                        </h3>
+
+
+                        <p class="dark-copy">
+                            Monitor results and continuously
+                            identify further opportunities.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OUTCOMES
+========================================================= -->
+
+<section
+    class="service-outcomes section-light"
+    aria-labelledby="operational-outcomes-title"
+>
+
+    <div class="container">
+
+        <div class="service-outcomes-grid">
+
+
+            <div>
+
+                <span class="kicker">
+                    EXPECTED OUTCOMES
+                </span>
+
+
+                <h2
+                    id="operational-outcomes-title"
+                    class="section-title"
+                >
+                    Performance people
+                    can see and improve.
+                </h2>
+
+            </div>
+
+
+            <div class="outcomes-list">
+
+
+                <div class="outcome-item">
+
+                    <span>
+                        →
+                    </span>
+
+                    <p>
+                        More efficient processes
+                    </p>
+
+                </div>
+
+
+                <div class="outcome-item">
+
+                    <span>
+                        →
+                    </span>
+
+                    <p>
+                        Clearer performance visibility
+                    </p>
+
+                </div>
+
+
+                <div class="outcome-item">
+
+                    <span>
+                        →
+                    </span>
+
+                    <p>
+                        Reduced operational friction
+                    </p>
+
+                </div>
+
+
+                <div class="outcome-item">
+
+                    <span>
+                        →
+                    </span>
+
+                    <p>
+                        Sustainable continuous improvement
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RELATED SERVICES
+========================================================= -->
+
+<section
+    class="service-related section-soft"
+    aria-labelledby="related-services-title"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span class="kicker">
+                OTHER CAPABILITIES
+            </span>
+
+
+            <h2
+                id="related-services-title"
+                class="section-title"
+            >
+                Explore our other services.
+            </h2>
+
+        </div>
+
+
+        <div class="related-services-grid">
+
+
+            <a
+                href="project-management.html"
+                class="related-service"
+            >
+
+                <span>
+                    01
+                </span>
+
+                <strong>
+                    Project Management
+                </strong>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="business-transformation.html"
+                class="related-service"
+            >
+
+                <span>
+                    02
+                </span>
+
+                <strong>
+                    Business Transformation
+                </strong>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="artificial-intelligence.html"
+                class="related-service"
+            >
+
+                <span>
+                    04
+                </span>
+
+                <strong>
+                    Artificial Intelligence
+                </strong>
+
+                <span aria-hidden="true">
+                    →
+                </span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section
+    class="service-cta section-dark"
+    aria-labelledby="operational-cta-title"
+>
+
+    <div class="container">
+
+        <div class="service-cta-content">
+
+
+            <span class="kicker">
+                READY TO IMPROVE?
+            </span>
+
+
+            <h2
+                id="operational-cta-title"
+                class="section-title"
+            >
+                Turn operational challenges
+                into measurable improvement.
+            </h2>
+
+
+            <p class="dark-copy">
+                Let's discuss where performance can be improved
+                and what practical action could make the difference.
+            </p>
+
+
+            <div class="service-cta-actions">
+
+
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    class="primary-button"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    Schedule a Consultation
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="mailto:info@bsgaconsulting.es"
+                    class="text-link"
+                >
+
+                    info@bsgaconsulting.es
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-grid">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="images/logos/logo-white.png"
+                    alt="BSGA Consulting"
+                    width="150"
+                    height="75"
+                    loading="lazy"
+                >
+
+
+                <p>
+                    BSGA Consulting helps organisations improve
+                    operational performance, deliver strategic projects,
+                    transform their businesses and adopt Artificial
+                    Intelligence with confidence.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Navigation
+                </h4>
+
+
+                <a href="index.html">
+                    Home
+                </a>
+
+
+                <a
+                    href="services.html"
+                    aria-current="page"
+                >
+                    Services
+                </a>
+
+
+                <a href="about.html">
+                    About
+                </a>
+
+
+                <a href="insights.html">
+                    Insights
+                </a>
+
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Services
+                </h4>
+
+
+                <a href="project-management.html">
+                    Project Management
+                </a>
+
+
+                <a href="business-transformation.html">
+                    Business Transformation
+                </a>
+
+
+                <a
+                    href="operational-excellence.html"
+                    aria-current="page"
+                >
+                    Operational Excellence
+                </a>
+
+
+                <a href="artificial-intelligence.html">
+                    Artificial Intelligence
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+
+                <a href="mailto:info@bsgaconsulting.es">
+                    info@bsgaconsulting.es
+                </a>
+
+
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Book a Consultation
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 BSGA Consulting.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="js/main.js"></script>
+
 
 </body>
 
