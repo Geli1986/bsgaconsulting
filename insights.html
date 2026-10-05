@@ -10,13 +10,17 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <!-- =====================================================
+         PRIMARY SEO
+    ====================================================== -->
+
     <title>
         Insights | BSGA Consulting
     </title>
 
     <meta
         name="description"
-        content="Practical insights on project management, business transformation, operational excellence and artificial intelligence."
+        content="Practical insights on project management, operations, business transformation, performance, artificial intelligence and leadership from BSGA Consulting."
     >
 
     <meta
@@ -30,16 +34,34 @@
     >
 
     <meta
+        name="googlebot"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    >
+
+    <meta
         name="theme-color"
         content="#050505"
     >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
+    >
+
+
+    <!-- =====================================================
+         CANONICAL
+    ====================================================== -->
 
     <link
         rel="canonical"
         href="https://bsgaconsulting.es/insights.html"
     >
 
-    <!-- FAVICONS -->
+
+    <!-- =====================================================
+         FAVICONS
+    ====================================================== -->
 
     <link
         rel="icon"
@@ -59,7 +81,10 @@
         href="/manifest.webmanifest"
     >
 
-    <!-- FONTS -->
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
 
     <link
         rel="preconnect"
@@ -77,7 +102,10 @@
         rel="stylesheet"
     >
 
-    <!-- CSS -->
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
 
     <link
         rel="stylesheet"
@@ -89,7 +117,10 @@
         href="css/insights.css"
     >
 
-    <!-- OPEN GRAPH -->
+
+    <!-- =====================================================
+         OPEN GRAPH
+    ====================================================== -->
 
     <meta
         property="og:type"
@@ -108,12 +139,27 @@
 
     <meta
         property="og:description"
-        content="Practical perspectives on projects, transformation, operations and AI."
+        content="Practical perspectives on projects, operations, transformation, performance, AI and leadership."
     >
 
     <meta
         property="og:image"
-        content="https://bsgaconsulting.es/images/og-image.jpg"
+        content="https://bsgaconsulting.es/images/heroes/BSGA-Home-Hero.png"
+    >
+
+    <meta
+        property="og:image:width"
+        content="1200"
+    >
+
+    <meta
+        property="og:image:height"
+        content="630"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="BSGA Consulting Insights"
     >
 
     <meta
@@ -126,11 +172,110 @@
         content="en_GB"
     >
 
+
+    <!-- =====================================================
+         TWITTER / X
+    ====================================================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="Insights | BSGA Consulting"
+    >
+
+    <meta
+        name="twitter:description"
+        content="Practical perspectives on projects, operations, transformation, performance, AI and leadership."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://bsgaconsulting.es/images/heroes/BSGA-Home-Hero.png"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="BSGA Consulting Insights"
+    >
+
+
+    <!-- =====================================================
+         STRUCTURED DATA
+    ====================================================== -->
+
+    <script type="application/ld+json">
+
+    {
+        "@context": "https://schema.org",
+
+        "@graph": [
+
+            {
+                "@type": "Organization",
+                "@id": "https://bsgaconsulting.es/#organization",
+                "name": "BSGA Consulting",
+                "url": "https://bsgaconsulting.es/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://bsgaconsulting.es/#logo",
+                    "url": "https://bsgaconsulting.es/images/logos/logo-white.png",
+                    "contentUrl": "https://bsgaconsulting.es/images/logos/logo-white.png"
+                },
+                "email": "info@bsgaconsulting.es"
+            },
+
+            {
+                "@type": "WebSite",
+                "@id": "https://bsgaconsulting.es/#website",
+                "url": "https://bsgaconsulting.es/",
+                "name": "BSGA Consulting",
+                "publisher": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "inLanguage": "en"
+            },
+
+            {
+                "@type": "WebPage",
+                "@id": "https://bsgaconsulting.es/insights.html#webpage",
+                "url": "https://bsgaconsulting.es/insights.html",
+                "name": "Insights | BSGA Consulting",
+                "description": "Practical insights on project management, operations, transformation, performance, artificial intelligence and leadership.",
+                "isPartOf": {
+                    "@id": "https://bsgaconsulting.es/#website"
+                },
+                "about": {
+                    "@id": "https://bsgaconsulting.es/#organization"
+                },
+                "inLanguage": "en"
+            },
+
+            {
+                "@type": "CollectionPage",
+                "@id": "https://bsgaconsulting.es/insights.html#collection",
+                "url": "https://bsgaconsulting.es/insights.html",
+                "name": "BSGA Consulting Insights",
+                "description": "Practical business insights from BSGA Consulting."
+            }
+
+        ]
+    }
+
+    </script>
+
 </head>
 
 
 <body class="insights-page">
 
+
+<!-- =========================================================
+     SKIP LINK
+========================================================= -->
 
 <a
     href="#main-content"
@@ -147,6 +292,7 @@
 <header class="site-header">
 
     <div class="header-container">
+
 
         <a
             href="index.html"
@@ -236,6 +382,8 @@
     </div>
 
 
+    <!-- MOBILE NAV -->
+
     <nav
         id="mobileNav"
         class="mobile-nav"
@@ -272,6 +420,7 @@
             class="mobile-nav-cta"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Schedule a consultation with BSGA Consulting"
         >
 
             <span>
@@ -297,91 +446,47 @@
 
 
 <!-- =========================================================
-     HERO
+     INSIGHTS INTRO
 ========================================================= -->
 
-<section class="insights-hero">
+<section
+    class="insights-intro section-light"
+    aria-labelledby="insights-heading"
+>
 
     <div class="container">
 
-        <div class="insights-hero-content">
 
-            <span class="kicker">
-                INSIGHTS
-            </span>
-
-            <h1>
-                Practical thinking
-                for business leaders.
-            </h1>
-
-            <p>
-                Clear perspectives on projects,
-                transformation, performance and AI.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+        <div class="insights-intro-grid">
 
 
-<!-- =========================================================
-     FEATURED
-========================================================= -->
-
-<section class="insights-featured section-light">
-
-    <div class="container">
-
-        <div class="insights-featured-grid">
-
-
-            <div class="insights-featured-label">
+            <div>
 
                 <span class="kicker">
-                    FEATURED
+                    INSIGHTS
                 </span>
 
-                <span class="insights-featured-number">
-                    01
-                </span>
+
+                <h1
+                    id="insights-heading"
+                    class="section-title"
+                >
+                    Practical perspectives
+                    for better decisions.
+                </h1>
 
             </div>
 
 
-            <article class="insight-featured-card">
+            <div>
 
-                <div class="insight-category">
-                    BUSINESS TRANSFORMATION
-                </div>
-
-                <h2>
-                    Turning strategy
-                    into execution.
-                </h2>
-
-                <p>
-                    Why successful transformation depends
-                    as much on execution as strategy.
+                <p class="section-intro">
+                    Short, practical perspectives on the challenges
+                    organisations face when delivering projects,
+                    improving performance and navigating change.
                 </p>
 
-                <a
-                    href="#"
-                    class="text-link"
-                    aria-label="Read featured insight"
-                >
-
-                    Read Insight
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
-                </a>
-
-            </article>
+            </div>
 
 
         </div>
@@ -395,24 +500,27 @@
      INSIGHTS GRID
 ========================================================= -->
 
-<section class="insights-library section-soft">
+<section
+    class="insights-library section-soft"
+    aria-labelledby="insights-library-heading"
+>
 
     <div class="container">
 
 
-        <div class="insights-section-heading">
+        <div class="insights-library-heading">
 
-            <div>
+            <span class="kicker">
+                SELECTED INSIGHTS
+            </span>
 
-                <span class="kicker">
-                    LATEST THINKING
-                </span>
 
-                <h2 class="section-title">
-                    Ideas worth exploring.
-                </h2>
-
-            </div>
+            <h2
+                id="insights-library-heading"
+                class="section-title"
+            >
+                Ideas you can apply.
+            </h2>
 
         </div>
 
@@ -420,7 +528,9 @@
         <div class="insights-grid">
 
 
-            <!-- INSIGHT 01 -->
+            <!-- =================================================
+                 ARTICLE 01
+            ================================================== -->
 
             <article class="insight-card">
 
@@ -437,25 +547,30 @@
                 </div>
 
 
-                <h3>
-                    Why projects
-                    lose momentum.
-                </h3>
+                <div class="insight-card-body">
+
+                    <h3>
+                        Why projects lose momentum.
+                    </h3>
 
 
-                <p>
-                    The practical signals that a project
-                    is starting to drift.
-                </p>
+                    <p>
+                        The practical signals that a project
+                        is starting to drift.
+                    </p>
+
+                </div>
 
 
                 <a
-                    href="#"
-                    class="text-link"
-                    aria-label="Read insight about project momentum"
+                    href="insights/why-projects-lose-momentum.html"
+                    class="insight-card-link"
+                    aria-label="Read Why projects lose momentum"
                 >
 
-                    Read
+                    <span>
+                        Read
+                    </span>
 
                     <span aria-hidden="true">
                         →
@@ -466,7 +581,9 @@
             </article>
 
 
-            <!-- INSIGHT 02 -->
+            <!-- =================================================
+                 ARTICLE 02
+            ================================================== -->
 
             <article class="insight-card">
 
@@ -483,25 +600,30 @@
                 </div>
 
 
-                <h3>
-                    From busy
-                    to effective.
-                </h3>
+                <div class="insight-card-body">
+
+                    <h3>
+                        From busy to effective.
+                    </h3>
 
 
-                <p>
-                    How operational clarity can improve
-                    performance without adding complexity.
-                </p>
+                    <p>
+                        How operational clarity can improve
+                        performance without adding complexity.
+                    </p>
+
+                </div>
 
 
                 <a
-                    href="#"
-                    class="text-link"
-                    aria-label="Read insight about operational effectiveness"
+                    href="insights/from-busy-to-effective.html"
+                    class="insight-card-link"
+                    aria-label="Read From busy to effective"
                 >
 
-                    Read
+                    <span>
+                        Read
+                    </span>
 
                     <span aria-hidden="true">
                         →
@@ -512,7 +634,9 @@
             </article>
 
 
-            <!-- INSIGHT 03 -->
+            <!-- =================================================
+                 ARTICLE 03
+            ================================================== -->
 
             <article class="insight-card">
 
@@ -529,25 +653,30 @@
                 </div>
 
 
-                <h3>
-                    AI needs
-                    a business case.
-                </h3>
+                <div class="insight-card-body">
+
+                    <h3>
+                        AI needs a business case.
+                    </h3>
 
 
-                <p>
-                    Moving beyond experimentation
-                    towards measurable business value.
-                </p>
+                    <p>
+                        Moving beyond experimentation towards
+                        measurable business value.
+                    </p>
+
+                </div>
 
 
                 <a
-                    href="#"
-                    class="text-link"
-                    aria-label="Read insight about AI business value"
+                    href="insights/ai-needs-a-business-case.html"
+                    class="insight-card-link"
+                    aria-label="Read AI needs a business case"
                 >
 
-                    Read
+                    <span>
+                        Read
+                    </span>
 
                     <span aria-hidden="true">
                         →
@@ -558,7 +687,9 @@
             </article>
 
 
-            <!-- INSIGHT 04 -->
+            <!-- =================================================
+                 ARTICLE 04
+            ================================================== -->
 
             <article class="insight-card">
 
@@ -575,25 +706,30 @@
                 </div>
 
 
-                <h3>
-                    Transformation
-                    needs ownership.
-                </h3>
+                <div class="insight-card-body">
+
+                    <h3>
+                        Transformation needs ownership.
+                    </h3>
 
 
-                <p>
-                    Why accountability is critical
-                    when organisations change.
-                </p>
+                    <p>
+                        Why accountability is critical when
+                        organisations change.
+                    </p>
+
+                </div>
 
 
                 <a
-                    href="#"
-                    class="text-link"
-                    aria-label="Read insight about transformation ownership"
+                    href="insights/transformation-needs-ownership.html"
+                    class="insight-card-link"
+                    aria-label="Read Transformation needs ownership"
                 >
 
-                    Read
+                    <span>
+                        Read
+                    </span>
 
                     <span aria-hidden="true">
                         →
@@ -604,7 +740,9 @@
             </article>
 
 
-            <!-- INSIGHT 05 -->
+            <!-- =================================================
+                 ARTICLE 05
+            ================================================== -->
 
             <article class="insight-card">
 
@@ -621,25 +759,30 @@
                 </div>
 
 
-                <h3>
-                    Measure what
-                    actually matters.
-                </h3>
+                <div class="insight-card-body">
+
+                    <h3>
+                        Measure what actually matters.
+                    </h3>
 
 
-                <p>
-                    Choosing performance indicators
-                    that support better decisions.
-                </p>
+                    <p>
+                        Choosing performance indicators that
+                        support better decisions.
+                    </p>
+
+                </div>
 
 
                 <a
-                    href="#"
-                    class="text-link"
-                    aria-label="Read insight about performance measurement"
+                    href="insights/measure-what-actually-matters.html"
+                    class="insight-card-link"
+                    aria-label="Read Measure what actually matters"
                 >
 
-                    Read
+                    <span>
+                        Read
+                    </span>
 
                     <span aria-hidden="true">
                         →
@@ -650,7 +793,9 @@
             </article>
 
 
-            <!-- INSIGHT 06 -->
+            <!-- =================================================
+                 ARTICLE 06
+            ================================================== -->
 
             <article class="insight-card">
 
@@ -667,25 +812,30 @@
                 </div>
 
 
-                <h3>
-                    Clarity creates
-                    momentum.
-                </h3>
+                <div class="insight-card-body">
+
+                    <h3>
+                        Clarity creates momentum.
+                    </h3>
 
 
-                <p>
-                    The role of clear priorities
-                    in effective decision-making.
-                </p>
+                    <p>
+                        The role of clear priorities in effective
+                        decision-making.
+                    </p>
+
+                </div>
 
 
                 <a
-                    href="#"
-                    class="text-link"
-                    aria-label="Read insight about clarity and momentum"
+                    href="insights/clarity-creates-momentum.html"
+                    class="insight-card-link"
+                    aria-label="Read Clarity creates momentum"
                 >
 
-                    Read
+                    <span>
+                        Read
+                    </span>
 
                     <span aria-hidden="true">
                         →
@@ -704,68 +854,16 @@
 
 
 <!-- =========================================================
-     TOPICS
+     INSIGHTS CTA
 ========================================================= -->
 
-<section class="insights-topics section-light">
+<section
+    class="insights-cta section-dark"
+    aria-labelledby="insights-cta-heading"
+>
 
     <div class="container">
 
-        <div class="insights-topics-grid">
-
-
-            <div>
-
-                <span class="kicker">
-                    EXPLORE BY TOPIC
-                </span>
-
-                <h2 class="section-title">
-                    Focused perspectives.
-                </h2>
-
-            </div>
-
-
-            <div class="topic-list">
-
-                <a href="#">
-                    Project Management
-                    <span aria-hidden="true">→</span>
-                </a>
-
-                <a href="#">
-                    Business Transformation
-                    <span aria-hidden="true">→</span>
-                </a>
-
-                <a href="#">
-                    Operational Excellence
-                    <span aria-hidden="true">→</span>
-                </a>
-
-                <a href="#">
-                    Artificial Intelligence
-                    <span aria-hidden="true">→</span>
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     CTA
-========================================================= -->
-
-<section class="insights-cta section-dark">
-
-    <div class="container">
 
         <div class="insights-cta-content">
 
@@ -774,14 +872,18 @@
             </span>
 
 
-            <h2 class="section-title">
+            <h2
+                id="insights-cta-heading"
+                class="section-title"
+            >
                 Have a challenge
-                worth discussing?
+                behind the question?
             </h2>
 
 
             <p class="dark-copy">
-                Let's explore it together.
+                Let's discuss it and identify the most practical
+                way forward.
             </p>
 
 
@@ -792,6 +894,7 @@
                     class="primary-button"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Schedule a consultation with BSGA Consulting"
                 >
 
                     Schedule a Consultation
@@ -808,7 +911,7 @@
                     class="text-link"
                 >
 
-                    Contact BSGA
+                    Discuss Your Challenge
 
                     <span aria-hidden="true">
                         →
@@ -836,8 +939,11 @@
 
     <div class="footer-container">
 
+
         <div class="footer-grid">
 
+
+            <!-- BRAND -->
 
             <div class="footer-brand">
 
@@ -849,19 +955,25 @@
                     loading="lazy"
                 >
 
+
                 <p>
-                    BSGA Consulting helps organisations
-                    turn strategy into measurable results.
+                    BSGA Consulting helps organisations improve
+                    operational performance, deliver strategic projects,
+                    transform their businesses and adopt Artificial
+                    Intelligence with confidence.
                 </p>
 
             </div>
 
+
+            <!-- NAVIGATION -->
 
             <div class="footer-column">
 
                 <h4>
                     Navigation
                 </h4>
+
 
                 <a href="index.html">
                     Home
@@ -889,11 +1001,14 @@
             </div>
 
 
+            <!-- SERVICES -->
+
             <div class="footer-column">
 
                 <h4>
                     Services
                 </h4>
+
 
                 <a href="project-management.html">
                     Project Management
@@ -914,15 +1029,19 @@
             </div>
 
 
+            <!-- CONTACT -->
+
             <div class="footer-column">
 
                 <h4>
                     Contact
                 </h4>
 
+
                 <a href="mailto:info@bsgaconsulting.es">
                     info@bsgaconsulting.es
                 </a>
+
 
                 <a
                     href="https://calendly.com/angel-bajo-sanchez/discovery-call"
@@ -950,7 +1069,12 @@
 </footer>
 
 
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
 <script src="js/main.js"></script>
+
 
 </body>
 
