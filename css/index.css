@@ -1,18 +1,16 @@
 /* =========================================================
-   BSGA CONSULTING
-   INDEX.CSS
-   Home page
+   BSGA CONSULTING — INDEX.CSS
+   HOME PAGE
    ========================================================= */
 
 
 /* =========================================================
-   HOME HERO
+   HERO
 ========================================================= */
 
 .home-hero {
     position: relative;
-    min-height: calc(100vh - 90px);
-    min-height: 720px;
+    min-height: min(780px, 90vh);
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -30,7 +28,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center;
     display: block;
 }
 
@@ -41,71 +39,57 @@
     background:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.82) 0%,
-            rgba(0, 0, 0, 0.65) 38%,
-            rgba(0, 0, 0, 0.28) 72%,
-            rgba(0, 0, 0, 0.12) 100%
+            rgba(0, 0, 0, 0.88) 0%,
+            rgba(0, 0, 0, 0.68) 42%,
+            rgba(0, 0, 0, 0.28) 100%
         );
 }
 
 .home-hero-container {
     position: relative;
     z-index: 2;
-    width: min(100% - 48px, 1280px);
+    width: 100%;
+    max-width: var(--container-width, 1280px);
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    min-height: inherit;
+    padding: 120px 32px;
 }
 
 .home-hero-content {
-    width: min(100%, 760px);
-    padding: 100px 0;
+    max-width: 760px;
 }
 
 .home-hero-kicker {
-    display: inline-flex;
-    align-items: center;
+    display: block;
     margin-bottom: 28px;
     font-size: 0.72rem;
-    line-height: 1;
     font-weight: 700;
-    letter-spacing: 0.20em;
-    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
     color: rgba(255, 255, 255, 0.72);
-}
-
-.home-hero-kicker::before {
-    content: "";
-    width: 34px;
-    height: 1px;
-    margin-right: 14px;
-    background: rgba(255, 255, 255, 0.65);
 }
 
 .home-hero h1 {
     max-width: 760px;
     margin: 0;
-    font-size: clamp(3.2rem, 6vw, 6.5rem);
-    line-height: 0.98;
+    font-size: clamp(3.2rem, 6vw, 6.8rem);
     font-weight: 700;
+    line-height: 0.98;
     letter-spacing: -0.055em;
     color: #ffffff;
 }
 
 .home-hero-description {
-    max-width: 640px;
+    max-width: 620px;
     margin: 34px 0 0;
-    font-size: clamp(1rem, 1.4vw, 1.18rem);
-    line-height: 1.7;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.78);
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.82);
 }
 
 .home-hero-actions {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     gap: 14px;
     margin-top: 42px;
 }
@@ -116,34 +100,24 @@
 ========================================================= */
 
 .home-intro {
-    padding: 130px 0;
+    padding-top: clamp(90px, 10vw, 150px);
+    padding-bottom: clamp(90px, 10vw, 150px);
 }
 
 .home-intro-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
-    gap: 100px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+    gap: clamp(60px, 10vw, 160px);
     align-items: start;
 }
 
-.home-intro-grid > div {
-    min-width: 0;
-}
-
-.home-intro .section-title {
-    max-width: 650px;
-}
-
-.home-intro .section-intro {
-    max-width: 620px;
+.home-intro-grid > div:last-child {
+    padding-top: 8px;
 }
 
 .home-intro-copy {
-    max-width: 590px;
-    margin: 28px 0 0;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--text-muted, #666666);
+    max-width: 600px;
+    margin-top: 26px;
 }
 
 
@@ -152,80 +126,70 @@
 ========================================================= */
 
 .home-services {
-    padding: 130px 0;
+    padding-top: clamp(90px, 10vw, 140px);
+    padding-bottom: clamp(90px, 10vw, 140px);
 }
 
 .home-section-heading {
-    max-width: 850px;
-    margin-bottom: 70px;
-}
-
-.home-section-heading .section-title {
     max-width: 760px;
-}
-
-.home-section-heading .section-intro {
-    max-width: 650px;
-    margin-top: 24px;
+    margin-bottom: 70px;
 }
 
 .home-services-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1px;
-    background: var(--border-color, #dedede);
-    border-top: 1px solid var(--border-color, #dedede);
-    border-bottom: 1px solid var(--border-color, #dedede);
+    border-top: 1px solid var(--border-light, #dedede);
+    border-left: 1px solid var(--border-light, #dedede);
 }
 
 .home-service-card {
-    position: relative;
     min-width: 0;
-    padding: 42px 32px 48px;
-    background: #ffffff;
+    padding: 36px 30px 40px;
+    border-right: 1px solid var(--border-light, #dedede);
+    border-bottom: 1px solid var(--border-light, #dedede);
+    background: transparent;
     transition:
         background-color 0.25s ease,
         transform 0.25s ease;
 }
 
 .home-service-card:hover {
-    background: #f7f7f7;
+    background: #ffffff;
+    transform: translateY(-3px);
 }
 
 .home-service-number {
     display: block;
-    margin-bottom: 42px;
+    margin-bottom: 58px;
     font-size: 0.78rem;
-    line-height: 1;
     font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #999999;
+    letter-spacing: 0.08em;
+    color: #777777;
+}
+
+.home-service-card .kicker {
+    display: block;
+    margin-bottom: 18px;
 }
 
 .home-service-card h3 {
-    margin: 16px 0 18px;
-    font-size: 1.35rem;
-    line-height: 1.18;
+    margin: 0;
+    font-size: clamp(1.35rem, 1.8vw, 1.7rem);
+    line-height: 1.15;
     letter-spacing: -0.025em;
-    font-weight: 700;
-    color: var(--heading-color, #111111);
 }
 
 .home-service-card p {
-    margin: 0;
-    font-size: 0.94rem;
-    line-height: 1.7;
-    color: var(--text-muted, #666666);
-}
-
-.home-service-card .text-link {
-    margin-top: 34px;
+    margin: 22px 0 30px;
+    color: #666666;
+    font-size: 0.96rem;
+    line-height: 1.65;
 }
 
 .home-services-action {
     display: flex;
-    justify-content: center;
-    margin-top: 54px;
+    justify-content: flex-start;
+    margin-top: 46px;
 }
 
 
@@ -234,18 +198,15 @@
 ========================================================= */
 
 .home-approach {
-    padding: 130px 0;
+    padding-top: clamp(90px, 10vw, 140px);
+    padding-bottom: clamp(90px, 10vw, 140px);
 }
 
 .home-approach-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 110px;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+    gap: clamp(70px, 10vw, 150px);
     align-items: start;
-}
-
-.home-approach-grid .section-title {
-    max-width: 620px;
 }
 
 .home-approach-grid > div:first-child {
@@ -253,40 +214,34 @@
     top: 120px;
 }
 
-.home-approach-grid .dark-copy {
-    max-width: 540px;
-    margin-top: 30px;
-}
-
 .home-approach-steps {
-    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .home-approach-steps article {
     display: grid;
-    grid-template-columns: 70px 1fr;
-    gap: 28px;
-    padding: 34px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    grid-template-columns: 60px 1fr;
+    gap: 20px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .home-approach-steps article > span {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 700;
-    letter-spacing: 0.12em;
-    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.48);
 }
 
 .home-approach-steps h3 {
-    margin: 0 0 10px;
-    font-size: 1.35rem;
-    line-height: 1.2;
-    font-weight: 600;
+    margin: 0;
     color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
-.home-approach-steps .dark-copy {
-    margin: 0;
+.home-approach-steps p {
+    margin: 10px 0 0;
 }
 
 
@@ -295,30 +250,24 @@
 ========================================================= */
 
 .home-why {
-    padding: 130px 0;
+    padding-top: clamp(90px, 10vw, 150px);
+    padding-bottom: clamp(90px, 10vw, 150px);
 }
 
 .home-why-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
-    gap: 100px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+    gap: clamp(60px, 10vw, 150px);
     align-items: start;
 }
 
-.home-why-grid .section-title {
-    max-width: 650px;
-}
-
 .home-why-grid > div:last-child {
-    padding-top: 4px;
+    padding-top: 8px;
 }
 
 .home-why-copy {
-    max-width: 600px;
-    margin: 28px 0 34px;
-    font-size: 1rem;
-    line-height: 1.8;
-    color: var(--text-muted, #666666);
+    max-width: 580px;
+    margin: 26px 0 34px;
 }
 
 
@@ -327,29 +276,19 @@
 ========================================================= */
 
 .home-insights {
-    padding: 120px 0;
+    padding-top: clamp(90px, 10vw, 130px);
+    padding-bottom: clamp(90px, 10vw, 130px);
 }
 
 .home-insights-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
-    gap: 100px;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.75fr);
+    gap: clamp(60px, 10vw, 150px);
     align-items: center;
 }
 
-.home-insights-grid .section-title {
-    max-width: 620px;
-}
-
 .home-insights-grid > div:last-child {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.home-insights-grid .section-intro {
-    max-width: 570px;
-    margin-bottom: 32px;
+    padding-top: 8px;
 }
 
 
@@ -358,57 +297,67 @@
 ========================================================= */
 
 .home-cta {
-    padding: 140px 0;
+    padding-top: clamp(100px, 11vw, 170px);
+    padding-bottom: clamp(100px, 11vw, 170px);
 }
 
 .home-cta-content {
     max-width: 850px;
 }
 
-.home-cta .section-title {
-    max-width: 850px;
+.home-cta-content .section-title {
+    max-width: 800px;
 }
 
-.home-cta .dark-copy {
+.home-cta-content .dark-copy {
     max-width: 620px;
-    margin-top: 28px;
+    margin-top: 26px;
 }
 
 .home-cta-actions {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 28px;
-    margin-top: 40px;
+    gap: 30px;
+    margin-top: 42px;
 }
 
 
 /* =========================================================
-   RESPONSIVE — LARGE TABLETS
+   LARGE SCREENS
+========================================================= */
+
+@media (min-width: 1440px) {
+
+    .home-hero-container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .home-hero {
+        min-height: 820px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS / IPAD
 ========================================================= */
 
 @media (max-width: 1100px) {
 
-    .home-hero {
-        min-height: 680px;
+    .home-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .home-hero-container {
-        width: min(100% - 48px, 960px);
+    .home-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
     }
 
-    .home-hero h1 {
-        font-size: clamp(3.2rem, 7vw, 5.2rem);
-    }
-
-    .home-intro,
-    .home-services,
-    .home-approach,
-    .home-why,
-    .home-insights,
-    .home-cta {
-        padding-top: 110px;
-        padding-bottom: 110px;
+    .home-approach-grid > div:first-child {
+        position: static;
     }
 
     .home-intro-grid,
@@ -417,8 +366,44 @@
         gap: 60px;
     }
 
-    .home-approach-grid {
-        gap: 70px;
+}
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .home-hero {
+        min-height: 720px;
+    }
+
+    .home-hero-container {
+        padding: 100px 28px;
+    }
+
+    .home-hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.88) 0%,
+                rgba(0, 0, 0, 0.68) 65%,
+                rgba(0, 0, 0, 0.45) 100%
+            );
+    }
+
+    .home-intro-grid,
+    .home-why-grid,
+    .home-insights-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .home-intro-grid > div:last-child,
+    .home-why-grid > div:last-child,
+    .home-insights-grid > div:last-child {
+        padding-top: 0;
     }
 
     .home-services-grid {
@@ -426,27 +411,21 @@
     }
 
     .home-service-card {
-        padding: 38px 30px 44px;
+        padding: 32px 26px 36px;
     }
+
 }
 
 
 /* =========================================================
-   RESPONSIVE — TABLETS / IPAD
+   MOBILE
 ========================================================= */
 
-@media (max-width: 820px) {
+@media (max-width: 600px) {
 
     .home-hero {
         min-height: 680px;
-    }
-
-    .home-hero-container {
-        width: min(100% - 40px, 700px);
-    }
-
-    .home-hero-content {
-        padding: 90px 0;
+        align-items: flex-end;
     }
 
     .home-hero-background img {
@@ -456,104 +435,41 @@
     .home-hero-overlay {
         background:
             linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.82) 0%,
-                rgba(0, 0, 0, 0.65) 60%,
-                rgba(0, 0, 0, 0.30) 100%
+                180deg,
+                rgba(0, 0, 0, 0.30) 0%,
+                rgba(0, 0, 0, 0.60) 45%,
+                rgba(0, 0, 0, 0.94) 100%
             );
-    }
-
-    .home-intro-grid,
-    .home-why-grid,
-    .home-insights-grid,
-    .home-approach-grid {
-        grid-template-columns: 1fr;
-        gap: 55px;
-    }
-
-    .home-approach-grid > div:first-child {
-        position: static;
-    }
-
-    .home-intro,
-    .home-services,
-    .home-approach,
-    .home-why,
-    .home-insights,
-    .home-cta {
-        padding-top: 95px;
-        padding-bottom: 95px;
-    }
-
-    .home-section-heading {
-        margin-bottom: 55px;
-    }
-
-    .home-services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .home-hero {
-        min-height: 650px;
     }
 
     .home-hero-container {
-        width: calc(100% - 36px);
+        padding: 70px 22px 64px;
     }
 
     .home-hero-content {
-        padding: 80px 0 70px;
-    }
-
-    .home-hero-background img {
-        object-position: 62% center;
-    }
-
-    .home-hero-overlay {
-        background:
-            linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.88) 0%,
-                rgba(0, 0, 0, 0.72) 65%,
-                rgba(0, 0, 0, 0.45) 100%
-            );
+        max-width: 100%;
     }
 
     .home-hero-kicker {
         margin-bottom: 22px;
-        font-size: 0.66rem;
-    }
-
-    .home-hero-kicker::before {
-        width: 26px;
-        margin-right: 11px;
     }
 
     .home-hero h1 {
-        max-width: 100%;
-        font-size: clamp(2.8rem, 13vw, 4rem);
-        line-height: 0.99;
+        font-size: clamp(2.75rem, 13vw, 4.3rem);
+        line-height: 0.98;
         letter-spacing: -0.055em;
     }
 
     .home-hero-description {
-        margin-top: 26px;
-        font-size: 0.96rem;
-        line-height: 1.65;
+        margin-top: 24px;
+        font-size: 0.98rem;
+        line-height: 1.6;
     }
 
     .home-hero-actions {
         align-items: stretch;
         flex-direction: column;
-        margin-top: 34px;
+        margin-top: 32px;
     }
 
     .home-hero-actions .primary-button,
@@ -562,78 +478,82 @@
         justify-content: center;
     }
 
+
     .home-intro,
     .home-services,
     .home-approach,
     .home-why,
     .home-insights,
     .home-cta {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 78px;
+        padding-bottom: 78px;
     }
 
-    .home-intro-grid,
-    .home-why-grid,
-    .home-insights-grid,
-    .home-approach-grid {
-        gap: 42px;
+
+    .home-section-heading {
+        margin-bottom: 46px;
     }
 
-    .home-intro-copy,
-    .home-why-copy {
-        margin-top: 22px;
-        font-size: 0.95rem;
-        line-height: 1.7;
-    }
 
     .home-services-grid {
         grid-template-columns: 1fr;
     }
 
-    .home-section-heading {
-        margin-bottom: 42px;
-    }
-
     .home-service-card {
-        padding: 34px 26px 40px;
+        padding: 30px 24px 34px;
     }
 
     .home-service-number {
-        margin-bottom: 34px;
+        margin-bottom: 42px;
     }
 
-    .home-service-card h3 {
-        font-size: 1.25rem;
-    }
-
-    .home-service-card p {
-        font-size: 0.92rem;
-    }
 
     .home-services-action {
-        margin-top: 42px;
+        margin-top: 34px;
+    }
+
+    .home-services-action .primary-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    .home-approach-grid {
+        gap: 48px;
     }
 
     .home-approach-steps article {
-        grid-template-columns: 48px 1fr;
-        gap: 18px;
-        padding: 28px 0;
+        grid-template-columns: 42px 1fr;
+        gap: 14px;
+        padding: 25px 0;
     }
 
-    .home-approach-steps h3 {
-        font-size: 1.2rem;
+
+    .home-why-grid,
+    .home-insights-grid {
+        gap: 34px;
     }
+
+
+    .home-why-grid .primary-button,
+    .home-insights-grid .primary-button {
+        width: 100%;
+        justify-content: center;
+    }
+
 
     .home-cta-actions {
-        align-items: flex-start;
+        align-items: stretch;
         flex-direction: column;
-        gap: 22px;
+        gap: 24px;
+        margin-top: 34px;
     }
 
     .home-cta-actions .primary-button {
         width: 100%;
         justify-content: center;
     }
+
 }
 
 
@@ -644,40 +564,24 @@
 @media (max-width: 380px) {
 
     .home-hero-container {
-        width: calc(100% - 28px);
-    }
-
-    .home-hero {
-        min-height: 620px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
     .home-hero h1 {
         font-size: 2.65rem;
     }
 
-    .home-hero-description {
-        font-size: 0.9rem;
-    }
-
-    .home-intro,
-    .home-services,
-    .home-approach,
-    .home-why,
-    .home-insights,
-    .home-cta {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
     .home-service-card {
-        padding-left: 22px;
-        padding-right: 22px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
+
 }
 
 
 /* =========================================================
-   ACCESSIBILITY
+   REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -685,20 +589,5 @@
     .home-service-card {
         transition: none;
     }
-}
 
-
-/* =========================================================
-   LANDSCAPE MOBILE
-========================================================= */
-
-@media (max-height: 600px) and (orientation: landscape) {
-
-    .home-hero {
-        min-height: 600px;
-    }
-
-    .home-hero-content {
-        padding: 70px 0;
-    }
 }
