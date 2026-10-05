@@ -1,6 +1,7 @@
 /* =========================================================
-   BUSINESS TRANSFORMATION
    BSGA CONSULTING
+   BUSINESS TRANSFORMATION
+   PAGE-SPECIFIC STYLES
    ========================================================= */
 
 
@@ -10,7 +11,7 @@
 
 .business-transformation-page {
     background: #ffffff;
-    color: #111111;
+    color: #050505;
 }
 
 
@@ -42,11 +43,13 @@
     position: absolute;
     inset: 0;
     z-index: 0;
+    overflow: hidden;
 }
 
 .bt-hero-background img {
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
     object-position: center;
 }
@@ -59,8 +62,8 @@
         linear-gradient(
             90deg,
             rgba(0, 0, 0, 0.90) 0%,
-            rgba(0, 0, 0, 0.68) 45%,
-            rgba(0, 0, 0, 0.25) 100%
+            rgba(0, 0, 0, 0.72) 42%,
+            rgba(0, 0, 0, 0.34) 100%
         );
 }
 
@@ -69,22 +72,22 @@
     z-index: 2;
     width: min(1180px, calc(100% - 48px));
     margin: 0 auto;
+    padding: 120px 0;
 }
 
 .bt-hero-content {
     max-width: 760px;
-    padding: 120px 0 110px;
 }
 
 .bt-hero-kicker {
     display: inline-block;
     margin-bottom: 28px;
     font-size: 12px;
-    line-height: 1;
+    line-height: 1.2;
     font-weight: 700;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.68);
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .bt-hero h1 {
@@ -92,22 +95,24 @@
     margin: 0;
     font-size: clamp(48px, 6vw, 82px);
     line-height: 0.98;
-    font-weight: 700;
-    letter-spacing: -0.045em;
+    font-weight: 600;
+    letter-spacing: -0.055em;
+    color: #ffffff;
 }
 
 .bt-hero-description {
-    max-width: 620px;
+    max-width: 650px;
     margin: 34px 0 0;
     font-size: 18px;
     line-height: 1.65;
+    font-weight: 400;
     color: rgba(255, 255, 255, 0.78);
 }
 
 .bt-hero-actions {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     gap: 14px;
     margin-top: 42px;
 }
@@ -117,53 +122,68 @@
    BUTTONS
 ========================================================= */
 
-.bt-primary-button,
-.bt-secondary-button {
+.business-transformation-page .primary-button,
+.business-transformation-page .bt-primary-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 14px;
-    min-height: 52px;
-    padding: 0 24px;
-    border: 1px solid transparent;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    transition:
-        transform 180ms ease,
-        background-color 180ms ease,
-        color 180ms ease,
-        border-color 180ms ease;
-}
-
-.bt-primary-button {
+    gap: 18px;
+    min-height: 54px;
+    padding: 15px 23px;
+    border: 1px solid #ffffff;
     background: #ffffff;
     color: #050505;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease,
+        transform 180ms ease;
 }
 
-.bt-primary-button:hover {
-    background: #f0f0f0;
-    transform: translateY(-2px);
-}
-
-.bt-secondary-button {
-    border-color: rgba(255, 255, 255, 0.30);
+.business-transformation-page .primary-button:hover,
+.business-transformation-page .bt-primary-button:hover {
     background: transparent;
     color: #ffffff;
-}
-
-.bt-secondary-button:hover {
-    border-color: rgba(255, 255, 255, 0.65);
-    background: rgba(255, 255, 255, 0.08);
     transform: translateY(-2px);
 }
 
-.bt-primary-button span,
-.bt-secondary-button span {
+.business-transformation-page .primary-button span,
+.business-transformation-page .bt-primary-button span {
     font-size: 18px;
     line-height: 1;
+}
+
+.business-transformation-page .secondary-button,
+.business-transformation-page .bt-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 15px 23px;
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 600;
+    transition:
+        background-color 180ms ease,
+        border-color 180ms ease,
+        color 180ms ease,
+        transform 180ms ease;
+}
+
+.business-transformation-page .secondary-button:hover,
+.business-transformation-page .bt-secondary-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #ffffff;
+    transform: translateY(-2px);
 }
 
 
@@ -178,121 +198,117 @@
 
 .bt-intro-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 100px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 90px;
     align-items: start;
 }
 
 .bt-kicker {
-    display: inline-block;
-    margin-bottom: 24px;
+    display: block;
+    margin-bottom: 22px;
     font-size: 11px;
-    line-height: 1;
+    line-height: 1.2;
     font-weight: 700;
-    letter-spacing: 0.16em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #777777;
 }
 
 .bt-intro h2 {
-    max-width: 560px;
+    max-width: 650px;
     margin: 0;
-    font-size: clamp(34px, 4vw, 56px);
-    line-height: 1.05;
-    font-weight: 650;
-    letter-spacing: -0.04em;
-    color: #111111;
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.04;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    color: #050505;
 }
 
 .bt-intro-copy {
-    max-width: 600px;
+    padding-top: 5px;
 }
 
 .bt-intro-copy p {
-    margin: 0;
-    font-size: 18px;
+    max-width: 570px;
+    margin: 0 0 22px;
+    font-size: 17px;
     line-height: 1.7;
     color: #555555;
 }
 
-.bt-intro-copy p + p {
-    margin-top: 24px;
+.bt-intro-copy p:last-child {
+    margin-bottom: 0;
 }
 
 
 /* =========================================================
-   TRANSFORMATION AREAS
+   TRANSFORMATION PRINCIPLES
 ========================================================= */
 
-.bt-capabilities {
-    padding: 120px 0;
-    background: #f6f6f4;
+.bt-principles {
+    padding: 110px 0 120px;
+    background: #f5f5f3;
 }
 
 .bt-section-heading {
-    max-width: 720px;
-    margin-bottom: 64px;
+    max-width: 760px;
+    margin-bottom: 62px;
 }
 
 .bt-section-heading h2 {
     margin: 0;
-    font-size: clamp(34px, 4vw, 56px);
-    line-height: 1.05;
-    font-weight: 650;
-    letter-spacing: -0.04em;
-    color: #111111;
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.04;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    color: #050505;
 }
 
 .bt-section-heading p {
-    max-width: 620px;
+    max-width: 650px;
     margin: 24px 0 0;
     font-size: 17px;
     line-height: 1.65;
     color: #666666;
 }
 
-.bt-capabilities-grid {
+.bt-principles-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1px;
-    border: 1px solid #d9d9d6;
-    background: #d9d9d6;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid #d8d8d5;
+    border-left: 1px solid #d8d8d5;
 }
 
-.bt-capability {
-    min-height: 280px;
-    padding: 38px;
-    background: #f6f6f4;
-    transition:
-        background-color 180ms ease,
-        transform 180ms ease;
+.bt-principle {
+    min-height: 310px;
+    padding: 38px 34px;
+    border-right: 1px solid #d8d8d5;
+    border-bottom: 1px solid #d8d8d5;
+    background: #f5f5f3;
 }
 
-.bt-capability:hover {
-    background: #ffffff;
-}
-
-.bt-capability-number {
+.bt-principle-number {
     display: block;
-    margin-bottom: 60px;
+    margin-bottom: 58px;
     font-size: 12px;
+    line-height: 1;
     font-weight: 700;
     letter-spacing: 0.12em;
-    color: #999999;
+    color: #777777;
 }
 
-.bt-capability h3 {
-    margin: 0;
-    font-size: 25px;
+.bt-principle h3 {
+    margin: 0 0 14px;
+    font-size: 23px;
     line-height: 1.15;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: -0.025em;
-    color: #111111;
+    color: #050505;
 }
 
-.bt-capability p {
-    max-width: 470px;
-    margin: 16px 0 0;
+.bt-principle p {
+    max-width: 340px;
+    margin: 0;
     font-size: 15px;
     line-height: 1.65;
     color: #666666;
@@ -300,72 +316,144 @@
 
 
 /* =========================================================
-   APPROACH
+   TRANSFORMATION FRAMEWORK
 ========================================================= */
 
-.bt-approach {
+.bt-framework {
     padding: 120px 0;
-    background: #050505;
-    color: #ffffff;
+    background: #ffffff;
 }
 
-.bt-approach-grid {
+.bt-framework-grid {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 100px;
     align-items: start;
 }
 
-.bt-approach h2 {
-    max-width: 560px;
+.bt-framework-intro {
+    position: sticky;
+    top: 100px;
+}
+
+.bt-framework-intro h2 {
+    max-width: 500px;
     margin: 0;
-    font-size: clamp(36px, 4vw, 58px);
+    font-size: clamp(36px, 4vw, 56px);
     line-height: 1.04;
-    font-weight: 650;
-    letter-spacing: -0.04em;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    color: #050505;
 }
 
-.bt-approach-intro {
-    max-width: 540px;
-    margin-top: 28px;
-    font-size: 17px;
+.bt-framework-intro p {
+    max-width: 460px;
+    margin: 25px 0 0;
+    font-size: 16px;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.65);
+    color: #666666;
 }
 
-.bt-approach-steps {
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
+.bt-framework-steps {
+    border-top: 1px solid #d9d9d9;
 }
 
-.bt-approach-step {
+.bt-framework-step {
     display: grid;
-    grid-template-columns: 58px 1fr;
-    gap: 28px;
-    padding: 30px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 30px;
+    padding: 34px 0;
+    border-bottom: 1px solid #d9d9d9;
 }
 
-.bt-approach-step > span {
+.bt-framework-step > span {
     font-size: 12px;
+    line-height: 1.4;
     font-weight: 700;
-    letter-spacing: 0.12em;
-    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 0.1em;
+    color: #777777;
 }
 
-.bt-approach-step h3 {
-    margin: 0;
-    font-size: 21px;
+.bt-framework-step h3 {
+    margin: 0 0 9px;
+    font-size: 24px;
     line-height: 1.2;
     font-weight: 600;
-    color: #ffffff;
+    letter-spacing: -0.025em;
+    color: #050505;
 }
 
-.bt-approach-step p {
-    max-width: 500px;
-    margin: 10px 0 0;
+.bt-framework-step p {
+    max-width: 560px;
+    margin: 0;
     font-size: 15px;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.62);
+    color: #666666;
+}
+
+
+/* =========================================================
+   AREAS OF TRANSFORMATION
+========================================================= */
+
+.bt-areas {
+    padding: 110px 0 120px;
+    background: #f5f5f3;
+}
+
+.bt-areas-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.75fr);
+    gap: 80px;
+    align-items: end;
+    margin-bottom: 62px;
+}
+
+.bt-areas-heading h2 {
+    margin: 0;
+    font-size: clamp(36px, 4vw, 56px);
+    line-height: 1.04;
+    font-weight: 600;
+    letter-spacing: -0.045em;
+    color: #050505;
+}
+
+.bt-areas-heading p {
+    max-width: 480px;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666666;
+}
+
+.bt-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    background: #d9d9d6;
+}
+
+.bt-area {
+    min-height: 220px;
+    padding: 35px;
+    background: #ffffff;
+}
+
+.bt-area h3 {
+    margin: 0 0 13px;
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: #050505;
+}
+
+.bt-area p {
+    max-width: 470px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #666666;
 }
 
 
@@ -375,249 +463,256 @@
 
 .bt-outcomes {
     padding: 120px 0;
-    background: #ffffff;
-}
-
-.bt-outcomes-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-    gap: 100px;
-    align-items: start;
-}
-
-.bt-outcomes h2 {
-    max-width: 560px;
-    margin: 0;
-    font-size: clamp(36px, 4vw, 56px);
-    line-height: 1.05;
-    font-weight: 650;
-    letter-spacing: -0.04em;
-}
-
-.bt-outcomes-copy {
-    max-width: 600px;
-}
-
-.bt-outcomes-copy > p {
-    margin: 0 0 34px;
-    font-size: 18px;
-    line-height: 1.7;
-    color: #555555;
-}
-
-.bt-outcomes-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    border-top: 1px solid #ddddda;
-}
-
-.bt-outcome {
-    padding: 24px 20px 24px 0;
-    border-bottom: 1px solid #ddddda;
-}
-
-.bt-outcome h3 {
-    margin: 0;
-    font-size: 17px;
-    line-height: 1.3;
-    font-weight: 650;
-    color: #111111;
-}
-
-.bt-outcome p {
-    margin: 8px 0 0;
-    font-size: 14px;
-    line-height: 1.55;
-    color: #777777;
-}
-
-
-/* =========================================================
-   TRANSFORMATION FIT
-========================================================= */
-
-.bt-fit {
-    padding: 110px 0;
-    background: #f6f6f4;
-}
-
-.bt-fit-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-    gap: 100px;
-    align-items: start;
-}
-
-.bt-fit h2 {
-    max-width: 480px;
-    margin: 0;
-    font-size: clamp(34px, 4vw, 52px);
-    line-height: 1.05;
-    font-weight: 650;
-    letter-spacing: -0.04em;
-}
-
-.bt-fit-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1px;
-    border: 1px solid #d8d8d4;
-    background: #d8d8d4;
-}
-
-.bt-fit-item {
-    padding: 30px;
-    background: #f6f6f4;
-}
-
-.bt-fit-item h3 {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.3;
-    font-weight: 650;
-    color: #111111;
-}
-
-.bt-fit-item p {
-    margin: 10px 0 0;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #6b6b6b;
-}
-
-
-/* =========================================================
-   FINAL CTA
-========================================================= */
-
-.bt-cta {
-    padding: 120px 0;
     background: #050505;
     color: #ffffff;
 }
 
-.bt-cta-content {
-    max-width: 850px;
+.bt-outcomes-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 100px;
+    align-items: start;
 }
 
-.bt-cta h2 {
-    max-width: 820px;
+.bt-outcomes-intro .bt-kicker {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.bt-outcomes-intro h2 {
+    max-width: 530px;
     margin: 0;
-    font-size: clamp(40px, 5vw, 68px);
-    line-height: 1.02;
-    font-weight: 650;
-    letter-spacing: -0.045em;
-}
-
-.bt-cta p {
-    max-width: 600px;
-    margin: 28px 0 0;
-    font-size: 17px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.64);
-}
-
-.bt-cta-actions {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 28px;
-    margin-top: 38px;
-}
-
-.bt-cta-email {
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 14px;
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.03;
     font-weight: 600;
-    text-decoration: none;
-    transition: color 180ms ease;
+    letter-spacing: -0.045em;
+    color: #ffffff;
 }
 
-.bt-cta-email:hover {
+.bt-outcomes-intro p {
+    max-width: 470px;
+    margin: 25px 0 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.bt-outcomes-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bt-outcome {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 24px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.bt-outcome > span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.bt-outcome h3 {
+    margin: 0 0 8px;
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 600;
     color: #ffffff;
+}
+
+.bt-outcome p {
+    max-width: 530px;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 
 /* =========================================================
-   TABLETS
+   CTA
+========================================================= */
+
+.bt-cta {
+    padding: 110px 0 120px;
+    background: #ffffff;
+}
+
+.bt-cta-box {
+    max-width: 920px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bt-cta-box .bt-kicker {
+    margin-bottom: 24px;
+}
+
+.bt-cta-box h2 {
+    margin: 0 auto;
+    max-width: 850px;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 1.02;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    color: #050505;
+}
+
+.bt-cta-box p {
+    max-width: 590px;
+    margin: 28px auto 0;
+    font-size: 17px;
+    line-height: 1.65;
+    color: #666666;
+}
+
+.bt-cta-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 38px;
+}
+
+.bt-cta .primary-button {
+    background: #050505;
+    border-color: #050505;
+    color: #ffffff;
+}
+
+.bt-cta .primary-button:hover {
+    background: #ffffff;
+    border-color: #050505;
+    color: #050505;
+}
+
+.bt-cta-email {
+    color: #050505;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #999999;
+    padding-bottom: 4px;
+    transition:
+        border-color 180ms ease,
+        color 180ms ease;
+}
+
+.bt-cta-email:hover {
+    border-color: #050505;
+}
+
+
+/* =========================================================
+   RESPONSIVE — LARGE TABLETS / SMALL LAPTOPS
 ========================================================= */
 
 @media (max-width: 1024px) {
-
-    .business-transformation-page .container,
-    .bt-hero-container {
-        width: min(100% - 40px, 900px);
-    }
 
     .bt-hero {
         min-height: 650px;
     }
 
-    .bt-hero-content {
-        padding: 100px 0 90px;
+    .bt-hero-container {
+        padding: 100px 0;
     }
 
     .bt-intro,
-    .bt-capabilities,
-    .bt-approach,
-    .bt-outcomes,
+    .bt-framework,
+    .bt-outcomes {
+        padding: 95px 0;
+    }
+
+    .bt-principles,
+    .bt-areas,
     .bt-cta {
-        padding: 90px 0;
+        padding: 90px 0 100px;
     }
 
-    .bt-fit {
-        padding: 85px 0;
-    }
-
-    .bt-intro-grid,
-    .bt-approach-grid,
-    .bt-outcomes-grid,
-    .bt-fit-inner {
+    .bt-intro-grid {
         gap: 60px;
     }
 
-    .bt-capability {
-        min-height: 250px;
-        padding: 30px;
+    .bt-framework-grid,
+    .bt-outcomes-grid {
+        gap: 65px;
+    }
+
+    .bt-areas-heading {
+        gap: 50px;
+    }
+
+    .bt-principle {
+        min-height: 285px;
     }
 }
 
 
 /* =========================================================
-   TABLETS / SMALL LAPTOPS
+   RESPONSIVE — TABLETS / IPAD
 ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 820px) {
+
+    .business-transformation-page .container,
+    .bt-hero-container {
+        width: min(100% - 40px, 700px);
+    }
+
+    .bt-hero {
+        min-height: 610px;
+    }
+
+    .bt-hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.90) 0%,
+                rgba(0, 0, 0, 0.66) 100%
+            );
+    }
 
     .bt-intro-grid,
-    .bt-approach-grid,
-    .bt-outcomes-grid,
-    .bt-fit-inner {
+    .bt-framework-grid,
+    .bt-outcomes-grid {
         grid-template-columns: 1fr;
         gap: 50px;
     }
 
-    .bt-capabilities-grid {
+    .bt-framework-intro {
+        position: static;
+    }
+
+    .bt-principles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .bt-areas-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .bt-areas-grid {
         grid-template-columns: 1fr;
     }
 
-    .bt-capability {
-        min-height: auto;
+    .bt-principle {
+        min-height: 270px;
     }
 
-    .bt-capability-number {
-        margin-bottom: 38px;
-    }
-
-    .bt-outcomes-list,
-    .bt-fit-list {
-        grid-template-columns: 1fr;
+    .bt-outcomes-intro h2,
+    .bt-outcomes-intro p {
+        max-width: 650px;
     }
 }
 
 
 /* =========================================================
-   MOBILE
+   RESPONSIVE — MOBILE
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -628,34 +723,40 @@
     }
 
     .bt-hero {
-        min-height: 620px;
+        min-height: 680px;
+        align-items: flex-end;
+    }
+
+    .bt-hero-background img {
+        object-position: 58% center;
     }
 
     .bt-hero-overlay {
         background:
             linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.88) 0%,
-                rgba(0, 0, 0, 0.68) 100%
+                180deg,
+                rgba(0, 0, 0, 0.40) 0%,
+                rgba(0, 0, 0, 0.92) 72%,
+                rgba(0, 0, 0, 0.98) 100%
             );
     }
 
-    .bt-hero-content {
-        padding: 90px 0 80px;
+    .bt-hero-container {
+        padding: 70px 0 55px;
     }
 
     .bt-hero-kicker {
-        margin-bottom: 22px;
+        margin-bottom: 20px;
         font-size: 10px;
     }
 
     .bt-hero h1 {
-        font-size: clamp(42px, 12vw, 58px);
+        font-size: clamp(43px, 13vw, 62px);
         line-height: 0.98;
     }
 
     .bt-hero-description {
-        margin-top: 24px;
+        margin-top: 25px;
         font-size: 16px;
         line-height: 1.6;
     }
@@ -666,21 +767,23 @@
         margin-top: 32px;
     }
 
-    .bt-primary-button,
-    .bt-secondary-button {
+    .business-transformation-page .primary-button,
+    .business-transformation-page .secondary-button,
+    .business-transformation-page .bt-primary-button,
+    .business-transformation-page .bt-secondary-button {
         width: 100%;
     }
 
     .bt-intro,
-    .bt-capabilities,
-    .bt-approach,
-    .bt-outcomes,
-    .bt-cta {
-        padding: 75px 0;
+    .bt-framework,
+    .bt-outcomes {
+        padding: 78px 0;
     }
 
-    .bt-fit {
-        padding: 70px 0;
+    .bt-principles,
+    .bt-areas,
+    .bt-cta {
+        padding: 76px 0 82px;
     }
 
     .bt-kicker {
@@ -690,89 +793,117 @@
 
     .bt-intro h2,
     .bt-section-heading h2,
-    .bt-approach h2,
-    .bt-outcomes h2,
-    .bt-fit h2 {
-        font-size: 36px;
-        line-height: 1.06;
+    .bt-framework-intro h2,
+    .bt-areas-heading h2,
+    .bt-outcomes-intro h2 {
+        font-size: 39px;
+        line-height: 1.05;
     }
 
     .bt-intro-copy p,
-    .bt-outcomes-copy > p {
-        font-size: 16px;
+    .bt-section-heading p,
+    .bt-framework-intro p,
+    .bt-areas-heading p,
+    .bt-outcomes-intro p {
+        font-size: 15px;
         line-height: 1.65;
     }
 
-    .bt-section-heading {
+    .bt-principles-grid {
+        display: block;
+        border-left: 0;
+    }
+
+    .bt-principle {
+        min-height: auto;
+        padding: 30px 24px;
+        border-left: 1px solid #d8d8d5;
+        border-right: 1px solid #d8d8d5;
+    }
+
+    .bt-principle-number {
+        margin-bottom: 40px;
+    }
+
+    .bt-principle h3 {
+        font-size: 21px;
+    }
+
+    .bt-principle p {
+        font-size: 14px;
+    }
+
+    .bt-framework-grid,
+    .bt-outcomes-grid {
+        gap: 42px;
+    }
+
+    .bt-framework-step {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 18px;
+        padding: 27px 0;
+    }
+
+    .bt-framework-step h3 {
+        font-size: 21px;
+    }
+
+    .bt-framework-step p {
+        font-size: 14px;
+    }
+
+    .bt-areas-heading {
         margin-bottom: 42px;
     }
 
-    .bt-section-heading p {
-        font-size: 15px;
-    }
-
-    .bt-capability {
+    .bt-area {
+        min-height: auto;
         padding: 28px 24px;
     }
 
-    .bt-capability-number {
-        margin-bottom: 34px;
+    .bt-area h3 {
+        font-size: 20px;
     }
 
-    .bt-capability h3 {
-        font-size: 22px;
-    }
-
-    .bt-capability p {
+    .bt-area p {
         font-size: 14px;
     }
 
-    .bt-approach-step {
-        grid-template-columns: 42px 1fr;
-        gap: 18px;
-        padding: 25px 0;
+    .bt-outcome {
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 16px;
+        padding: 27px 0;
     }
 
-    .bt-approach-step h3 {
+    .bt-outcome h3 {
         font-size: 19px;
     }
 
-    .bt-approach-step p {
+    .bt-outcome p {
         font-size: 14px;
     }
 
-    .bt-outcome,
-    .bt-fit-item {
-        padding: 22px 0;
+    .bt-cta-box h2 {
+        font-size: 42px;
     }
 
-    .bt-fit-list {
-        border-left: 0;
-        border-right: 0;
-    }
-
-    .bt-fit-item {
-        padding: 24px 0;
-    }
-
-    .bt-cta h2 {
-        font-size: 40px;
-    }
-
-    .bt-cta p {
-        font-size: 16px;
+    .bt-cta-box p {
+        font-size: 15px;
     }
 
     .bt-cta-actions {
-        align-items: flex-start;
         flex-direction: column;
-        gap: 22px;
+        gap: 20px;
+    }
+
+    .bt-cta-actions .primary-button {
+        width: 100%;
     }
 }
 
 
 /* =========================================================
-   VERY SMALL PHONES
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 380px) {
@@ -783,60 +914,49 @@
     }
 
     .bt-hero h1 {
-        font-size: 39px;
+        font-size: 40px;
     }
 
     .bt-intro h2,
     .bt-section-heading h2,
-    .bt-approach h2,
-    .bt-outcomes h2,
-    .bt-fit h2 {
-        font-size: 32px;
+    .bt-framework-intro h2,
+    .bt-areas-heading h2,
+    .bt-outcomes-intro h2 {
+        font-size: 35px;
     }
 
-    .bt-cta h2 {
-        font-size: 36px;
+    .bt-cta-box h2 {
+        font-size: 37px;
     }
 }
 
 
 /* =========================================================
-   REDUCED MOTION
+   ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .bt-primary-button,
-    .bt-secondary-button,
-    .bt-capability,
-    .bt-cta-email {
-        transition: none;
+    .business-transformation-page *,
+    .business-transformation-page *::before,
+    .business-transformation-page *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
     }
 }
 
 
 /* =========================================================
-   PRINT
+   TOUCH DEVICES
 ========================================================= */
 
-@media print {
+@media (hover: none) {
 
-    .bt-hero,
-    .bt-approach,
-    .bt-cta {
-        color: #000000;
-        background: #ffffff;
-    }
-
-    .bt-hero-background,
-    .bt-hero-overlay {
-        display: none;
-    }
-
-    .bt-primary-button,
-    .bt-secondary-button {
-        color: #000000;
-        background: transparent;
-        border: 1px solid #000000;
+    .business-transformation-page .primary-button:hover,
+    .business-transformation-page .secondary-button:hover,
+    .business-transformation-page .bt-primary-button:hover,
+    .business-transformation-page .bt-secondary-button:hover {
+        transform: none;
     }
 }
