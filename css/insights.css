@@ -1,1359 +1,702 @@
 /* =========================================================
    BSGA CONSULTING — INSIGHTS
-   HOME-MATCHED DESIGN SYSTEM
-   ========================================================= */
+   insights.css
+========================================================= */
 
 
 /* =========================================================
-   01. VARIABLES
-   ========================================================= */
-
-:root {
-
-    --insights-navy: #07182E;
-    --insights-navy-dark: #040E1B;
-    --insights-navy-soft: #0B2038;
-
-    --insights-yellow: #D4AF37;
-    --insights-yellow-light: #E2C45B;
-
-    --insights-white: #FFFFFF;
-    --insights-off-white: #F7F8FA;
-    --insights-light: #EEF1F4;
-
-    --insights-text: #182331;
-    --insights-muted: #667085;
-
-    --insights-border: #E5E7EB;
-
-    --insights-container: 1200px;
-
-    --insights-radius: 0;
-}
-
-
-/* =========================================================
-   02. RESET / BASE
-   ========================================================= */
-
-.insights-page {
-    margin: 0;
-    padding: 0;
-    background: var(--insights-white);
-    color: var(--insights-text);
-    font-family: "Inter", sans-serif;
-}
-
-.insights-page *,
-.insights-page *::before,
-.insights-page *::after {
-    box-sizing: border-box;
-}
-
-.insights-page img {
-    max-width: 100%;
-}
-
-.insights-page a {
-    text-decoration: none;
-}
-
-.insights-container {
-    width: min(
-        calc(100% - 48px),
-        var(--insights-container)
-    );
-
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   03. GLOBAL TYPOGRAPHY
-   ========================================================= */
-
-.insights-page h1,
-.insights-page h2,
-.insights-page h3,
-.insights-page h4,
-.insights-page p {
-    margin-top: 0;
-}
-
-.insights-page h1,
-.insights-page h2,
-.insights-page h3 {
-    letter-spacing: -0.035em;
-}
-
-.insights-page p {
-    line-height: 1.75;
-}
-
-
-/* =========================================================
-   04. HEADER
-   ---------------------------------------------------------
-   Header intentionally inherits the Home styles from
-   styles.css.
-
-   Only minor compatibility rules are included here.
-   ========================================================= */
-
-.insights-page .site-header {
-    z-index: 1000;
-}
-
-.insights-page .header-container {
-    position: relative;
-}
-
-
-/* =========================================================
-   05. HERO
-   ========================================================= */
+   HERO
+========================================================= */
 
 .insights-hero {
-
-    position: relative;
-
-    min-height: 680px;
+    background: #050505;
+    color: #ffffff;
+    min-height: 520px;
 
     display: flex;
     align-items: center;
 
-    overflow: hidden;
-
-    background:
-        var(--insights-navy);
+    padding: 150px 0 110px;
 }
-
-
-/* HERO IMAGE */
-
-.insights-hero-background {
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 0;
-
-    overflow: hidden;
-}
-
-.insights-hero-background img {
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-    object-position: center;
-
-    transform: scale(1.01);
-}
-
-
-/* HERO OVERLAY */
-
-.insights-hero-overlay {
-
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(4, 14, 27, 0.94) 0%,
-            rgba(4, 14, 27, 0.78) 38%,
-            rgba(4, 14, 27, 0.48) 68%,
-            rgba(4, 14, 27, 0.25) 100%
-        );
-}
-
-
-/* HERO CONTAINER */
-
-.insights-hero-container {
-
-    position: relative;
-
-    z-index: 2;
-
-    width: min(
-        calc(100% - 48px),
-        var(--insights-container)
-    );
-
-    margin: 0 auto;
-
-    padding-top: 90px;
-    padding-bottom: 90px;
-}
-
-
-/* HERO CONTENT */
 
 .insights-hero-content {
-
-    max-width: 720px;
-
-    color: var(--insights-white);
+    max-width: 900px;
 }
-
-
-/* HERO KICKER
-   Same visual role as .hero-tag on Home
-*/
-
-.insights-hero-kicker,
-.insights-kicker {
-
-    display: inline-block;
-
-    margin-bottom: 22px;
-
-    color: var(--insights-yellow);
-
-    font-size: 12px;
-    font-weight: 700;
-
-    letter-spacing: 0.18em;
-
-    line-height: 1.3;
-
-    text-transform: uppercase;
-}
-
-
-/* HERO TITLE */
 
 .insights-hero h1 {
+    margin: 22px 0 28px;
 
-    margin: 0 0 26px;
+    max-width: 850px;
 
-    max-width: 760px;
-
-    color: var(--insights-white);
-
-    font-size: clamp(
-        42px,
-        5vw,
-        68px
-    );
-
+    font-size: clamp(3rem, 6vw, 5.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
     font-weight: 700;
-
-    line-height: 1.06;
-
-    letter-spacing: -0.045em;
 }
 
+.insights-hero p {
+    max-width: 620px;
 
-/* HERO DESCRIPTION */
+    margin: 0;
 
-.insights-hero-content > p {
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    line-height: 1.65;
 
-    max-width: 650px;
-
-    margin: 0 0 34px;
-
-    color: rgba(255,255,255,0.82);
-
-    font-size: 17px;
-
-    font-weight: 400;
-
-    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.68);
 }
 
 
 /* =========================================================
-   06. HERO BUTTONS
-   ========================================================= */
+   FEATURED
+========================================================= */
 
-.insights-hero-actions {
+.insights-featured {
+    padding: 130px 0;
+}
 
+.insights-featured-grid {
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.8fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+.insights-featured-label {
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
 
-    flex-wrap: wrap;
+    gap: 50px;
+}
 
-    gap: 14px;
+.insights-featured-number {
+    font-size: 5rem;
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.06em;
+
+    color: #e5e5e5;
+}
+
+.insight-featured-card {
+    max-width: 850px;
+
+    border-top: 1px solid #111111;
+
+    padding-top: 30px;
+}
+
+.insight-featured-card h2 {
+    max-width: 780px;
+
+    margin: 18px 0 22px;
+
+    font-size: clamp(2.4rem, 4vw, 4.5rem);
+    line-height: 1.02;
+
+    letter-spacing: -0.045em;
+
+    font-weight: 700;
+}
+
+.insight-featured-card p {
+    max-width: 620px;
+
+    margin: 0 0 32px;
+
+    color: #666666;
+
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 
-/* PRIMARY */
+/* =========================================================
+   INSIGHT META
+========================================================= */
 
-.insights-hero-button-primary {
+.insight-category {
+    display: inline-block;
 
-    display: inline-flex;
+    font-size: 0.7rem;
+    line-height: 1.2;
 
-    align-items: center;
-    justify-content: center;
-
-    gap: 18px;
-
-    min-height: 52px;
-
-    padding: 0 25px;
-
-    background: var(--insights-yellow);
-
-    color: var(--insights-navy);
-
-    font-size: 14px;
     font-weight: 700;
 
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+
+    color: #777777;
+}
+
+
+/* =========================================================
+   LIBRARY
+========================================================= */
+
+.insights-library {
+    padding: 130px 0;
+}
+
+.insights-section-heading {
+    margin-bottom: 70px;
+}
+
+.insights-section-heading .section-title {
+    max-width: 700px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   INSIGHTS GRID
+========================================================= */
+
+.insights-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1px;
+
+    background: #dcdcdc;
+
+    border-top: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+}
+
+.insight-card {
+    min-height: 380px;
+
+    padding: 42px 38px;
+
+    background: #f7f7f7;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-right: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+
     transition:
-        background 0.25s ease,
+        background-color 0.25s ease,
         transform 0.25s ease;
 }
 
-.insights-hero-button-primary:hover {
-
-    background: var(--insights-yellow-light);
-
-    transform: translateY(-2px);
-}
-
-.insights-hero-button-primary span {
-
-    font-size: 18px;
-}
-
-
-/* SECONDARY */
-
-.insights-hero-button-secondary {
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 52px;
-
-    padding: 0 25px;
-
-    border: 1px solid rgba(255,255,255,0.45);
-
-    color: var(--insights-white);
-
-    font-size: 14px;
-    font-weight: 600;
-
-    transition:
-        background 0.25s ease,
-        border-color 0.25s ease;
-}
-
-.insights-hero-button-secondary:hover {
-
-    background: rgba(255,255,255,0.08);
-
-    border-color: rgba(255,255,255,0.8);
-}
-
-
-/* =========================================================
-   07. INTRO
-   ========================================================= */
-
-.insights-intro {
-
-    padding: 105px 0;
-
-    background: var(--insights-white);
-}
-
-
-.insights-intro-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.9fr)
-        minmax(0, 1.1fr);
-
-    gap: 100px;
-
-    align-items: start;
-}
-
-
-.insights-intro h2,
-.insights-section-heading h2,
-.insights-topics h2,
-.insights-value h2 {
-
-    margin: 0;
-
-    color: var(--insights-navy);
-
-    font-size: clamp(
-        34px,
-        4vw,
-        52px
-    );
-
-    font-weight: 700;
-
-    line-height: 1.12;
-}
-
-
-.insights-intro-copy {
-
-    max-width: 650px;
-}
-
-
-.insights-intro-copy p {
-
-    margin: 0 0 22px;
-
-    color: var(--insights-muted);
-
-    font-size: 16px;
-
-    line-height: 1.8;
-}
-
-.insights-intro-copy p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* =========================================================
-   08. INSIGHTS LIST
-   ========================================================= */
-
-.insights-list {
-
-    padding: 110px 0;
-
-    background: var(--insights-off-white);
-}
-
-
-/* SECTION HEADING */
-
-.insights-section-heading {
-
-    max-width: 760px;
-
-    margin-bottom: 55px;
-}
-
-
-.insights-section-heading h2 {
-
-    margin-bottom: 20px;
-}
-
-
-.insights-section-heading p {
-
-    max-width: 650px;
-
-    margin: 0;
-
-    color: var(--insights-muted);
-
-    font-size: 16px;
-
-    line-height: 1.75;
-}
-
-
-/* =========================================================
-   09. CARDS GRID
-   ========================================================= */
-
-.insights-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
-    gap: 28px;
-}
-
-
-/* =========================================================
-   10. INSIGHT CARD
-   ========================================================= */
-
-.insight-card {
-
-    display: flex;
-
-    flex-direction: column;
-
-    min-width: 0;
-
-    background: var(--insights-white);
-
-    border: 1px solid var(--insights-border);
-
-    overflow: hidden;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
-
-
 .insight-card:hover {
+    background: #ffffff;
 
-    transform: translateY(-5px);
-
-    border-color: #D9DEE5;
-
-    box-shadow:
-        0 18px 45px rgba(7,24,46,0.09);
+    transform: translateY(-3px);
 }
 
-
-/* =========================================================
-   11. CARD IMAGE
-   ========================================================= */
-
-.insight-card-image {
-
-    position: relative;
-
-    display: block;
-
-    width: 100%;
-
-    height: 245px;
-
-    overflow: hidden;
-
-    background: var(--insights-navy);
-}
-
-
-.insight-card-image img {
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    object-position: center;
-
-    transition:
-        transform 0.45s ease;
-}
-
-
-.insight-card:hover .insight-card-image img {
-
-    transform: scale(1.045);
-}
-
-
-/*
-   IMPORTANT:
-   Do NOT use a placeholder background here.
-   Strategy and Leadership must display their actual
-   images:
-   images/insights/strategy.jpg
-   images/insights/leadership.jpg
-*/
-
-
-.insight-card-image-placeholder {
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--insights-navy),
-            var(--insights-navy-soft)
-        );
-}
-
-
-/* =========================================================
-   12. CARD CONTENT
-   ========================================================= */
-
-.insight-card-content {
-
-    display: flex;
-
-    flex-direction: column;
-
-    flex: 1;
-
-    padding: 30px 30px 32px;
-}
-
-
-/* CARD META */
-
-.insight-card-meta {
-
+.insight-card-top {
     display: flex;
 
     align-items: center;
-    justify-content: space-between;
 
-    gap: 15px;
-
-    margin-bottom: 19px;
-
-    color: var(--insights-yellow);
-
-    font-size: 10px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.14em;
-
-    line-height: 1.4;
-
-    text-transform: uppercase;
-}
-
-
-/* CARD TITLE */
-
-.insight-card h3 {
-
-    margin: 0 0 17px;
-
-    color: var(--insights-navy);
-
-    font-size: 23px;
-
-    font-weight: 700;
-
-    line-height: 1.25;
-}
-
-
-/* CARD DESCRIPTION */
-
-.insight-card p {
-
-    margin: 0 0 27px;
-
-    color: var(--insights-muted);
-
-    font-size: 14px;
-
-    line-height: 1.75;
-}
-
-
-/* CARD LINK */
-
-.insight-card-link {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin-top: auto;
-
-    color: var(--insights-navy);
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    transition:
-        color 0.2s ease,
-        gap 0.2s ease;
-}
-
-
-.insight-card-link span {
-
-    color: var(--insights-yellow);
-
-    font-size: 17px;
-}
-
-
-.insight-card-link:hover {
-
-    color: var(--insights-yellow);
-
-    gap: 16px;
-}
-
-
-/* =========================================================
-   13. TOPICS
-   ========================================================= */
-
-.insights-topics {
-
-    padding: 105px 0;
-
-    background: var(--insights-white);
-}
-
-
-.insights-topics-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.9fr)
-        minmax(0, 1.1fr);
-
-    gap: 100px;
-
-    align-items: start;
-}
-
-
-.insights-topic-list {
-
-    border-top: 1px solid var(--insights-border);
-}
-
-
-.insights-topic {
-
-    display: flex;
-
-    align-items: center;
     justify-content: space-between;
 
     gap: 20px;
 
-    padding: 23px 0;
-
-    border-bottom: 1px solid var(--insights-border);
-
-    color: var(--insights-navy);
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    transition:
-        color 0.2s ease,
-        padding-left 0.2s ease;
+    margin-bottom: 70px;
 }
 
+.insight-number {
+    font-size: 0.8rem;
 
-.insights-topic span:last-child {
+    font-weight: 700;
 
-    color: var(--insights-yellow);
+    letter-spacing: 0.08em;
 
-    font-size: 20px;
+    color: #999999;
 }
 
+.insight-card h3 {
+    margin: 0 0 20px;
 
-.insights-topic:hover {
+    max-width: 420px;
 
-    padding-left: 8px;
+    font-size: clamp(1.7rem, 2.4vw, 2.35rem);
 
-    color: var(--insights-yellow);
+    line-height: 1.08;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 650;
+}
+
+.insight-card p {
+    margin: 0;
+
+    max-width: 420px;
+
+    color: #686868;
+
+    line-height: 1.65;
+
+    font-size: 0.98rem;
+}
+
+.insight-card .text-link {
+    margin-top: auto;
 }
 
 
 /* =========================================================
-   14. VALUE / OUR PERSPECTIVE
-   ========================================================= */
+   TOPICS
+========================================================= */
 
-.insights-value {
-
-    padding: 110px 0;
-
-    background: var(--insights-off-white);
+.insights-topics {
+    padding: 130px 0;
 }
 
-
-.insights-value-grid {
-
+.insights-topics-grid {
     display: grid;
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 1fr);
+    grid-template-columns: 1fr 1fr;
 
     gap: 100px;
 
-    align-items: center;
+    align-items: start;
 }
 
+.insights-topics-grid .section-title {
+    max-width: 550px;
 
-.insights-value-grid > div:last-child {
-
-    max-width: 620px;
+    margin-top: 18px;
 }
 
-
-.insights-value-grid p {
-
-    margin: 0 0 22px;
-
-    color: var(--insights-muted);
-
-    font-size: 16px;
-
-    line-height: 1.8;
+.topic-list {
+    border-top: 1px solid #111111;
 }
 
-
-/* =========================================================
-   15. GENERAL PRIMARY BUTTON
-   ========================================================= */
-
-.insights-primary-button {
-
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 16px;
-
-    min-height: 50px;
-
-    margin-top: 12px;
-
-    padding: 0 24px;
-
-    background: var(--insights-navy);
-
-    color: var(--insights-white);
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease;
-}
-
-
-.insights-primary-button:hover {
-
-    background: var(--insights-yellow);
-
-    color: var(--insights-navy);
-
-    transform: translateY(-2px);
-}
-
-
-.insights-primary-button span {
-
-    color: var(--insights-yellow);
-
-    font-size: 17px;
-}
-
-
-.insights-primary-button:hover span {
-
-    color: var(--insights-navy);
-}
-
-
-/* =========================================================
-   16. CTA
-   ========================================================= */
-
-.insights-cta {
-
-    padding: 100px 0;
-
-    background: var(--insights-navy);
-}
-
-
-.insights-cta-box {
-
-    max-width: 850px;
-
-    margin: 0 auto;
-
-    text-align: center;
-
-    color: var(--insights-white);
-}
-
-
-.insights-cta-box .insights-kicker {
-
-    margin-bottom: 20px;
-}
-
-
-.insights-cta h2 {
-
-    margin: 0 0 22px;
-
-    color: var(--insights-white);
-
-    font-size: clamp(
-        36px,
-        4vw,
-        54px
-    );
-
-    font-weight: 700;
-
-    line-height: 1.1;
-}
-
-
-.insights-cta-box > p {
-
-    max-width: 650px;
-
-    margin: 0 auto 34px;
-
-    color: rgba(255,255,255,0.75);
-
-    font-size: 16px;
-
-    line-height: 1.8;
-}
-
-
-.insights-cta-actions {
-
+.topic-list a {
     display: flex;
 
     align-items: center;
-    justify-content: center;
 
-    flex-wrap: wrap;
+    justify-content: space-between;
 
-    gap: 25px;
-}
+    gap: 30px;
 
+    padding: 25px 0;
 
-.insights-cta .insights-primary-button {
+    border-bottom: 1px solid #d8d8d8;
 
-    margin-top: 0;
+    color: #111111;
 
-    background: var(--insights-yellow);
+    text-decoration: none;
 
-    color: var(--insights-navy);
-}
-
-
-.insights-cta .insights-primary-button:hover {
-
-    background: var(--insights-yellow-light);
-}
-
-
-.insights-cta .insights-primary-button span {
-
-    color: var(--insights-navy);
-}
-
-
-.insights-email {
-
-    color: rgba(255,255,255,0.8);
-
-    font-size: 14px;
+    font-size: 1.05rem;
 
     font-weight: 600;
 
-    border-bottom: 1px solid rgba(255,255,255,0.35);
-
-    padding-bottom: 3px;
-
     transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
-}
-
-
-.insights-email:hover {
-
-    color: var(--insights-yellow);
-
-    border-color: var(--insights-yellow);
-}
-
-
-/* =========================================================
-   17. FOOTER
-   ========================================================= */
-
-.insights-footer {
-
-    padding: 70px 0 25px;
-
-    background: #030C18;
-
-    color: var(--insights-white);
-}
-
-
-.insights-footer-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1.5fr
-        0.8fr
-        1.2fr
-        0.8fr;
-
-    gap: 55px;
-
-    padding-bottom: 55px;
-}
-
-
-.insights-footer-brand img {
-
-    width: 175px;
-
-    height: auto;
-
-    margin-bottom: 25px;
-}
-
-
-.insights-footer-brand p {
-
-    max-width: 390px;
-
-    margin: 0;
-
-    color: rgba(255,255,255,0.58);
-
-    font-size: 13px;
-
-    line-height: 1.8;
-}
-
-
-.insights-footer h4 {
-
-    margin: 0 0 20px;
-
-    color: var(--insights-white);
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-}
-
-
-.insights-footer-grid > div:not(.insights-footer-brand) a {
-
-    display: block;
-
-    margin-bottom: 11px;
-
-    color: rgba(255,255,255,0.62);
-
-    font-size: 13px;
-
-    line-height: 1.55;
-
-    transition:
+        padding-left 0.2s ease,
         color 0.2s ease;
 }
 
+.topic-list a span {
+    font-size: 1.2rem;
 
-.insights-footer-grid > div:not(.insights-footer-brand) a:hover {
-
-    color: var(--insights-yellow);
+    transition: transform 0.2s ease;
 }
 
+.topic-list a:hover {
+    padding-left: 8px;
+}
 
-.insights-footer-bottom {
-
-    padding-top: 22px;
-
-    border-top: 1px solid rgba(255,255,255,0.1);
-
-    color: rgba(255,255,255,0.42);
-
-    font-size: 11px;
-
-    text-align: center;
+.topic-list a:hover span {
+    transform: translateX(5px);
 }
 
 
 /* =========================================================
-   18. ACCESSIBILITY
-   ========================================================= */
+   CTA
+========================================================= */
 
-.insights-page a:focus-visible,
-.insights-page button:focus-visible {
+.insights-cta {
+    padding: 140px 0;
+}
 
-    outline: 2px solid var(--insights-yellow);
+.insights-cta-content {
+    max-width: 900px;
+}
 
-    outline-offset: 4px;
+.insights-cta-content .section-title {
+    max-width: 850px;
+
+    margin: 22px 0 25px;
+}
+
+.insights-cta-content .dark-copy {
+    max-width: 550px;
+
+    margin-bottom: 40px;
+}
+
+.insights-cta-actions {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
 }
 
 
 /* =========================================================
-   19. TABLET
-   ========================================================= */
+   LINKS
+========================================================= */
 
-@media (max-width: 1000px) {
+.insights-page .text-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.01em;
+
+    transition: gap 0.2s ease;
+}
+
+.insights-page .text-link span {
+    font-size: 1.05rem;
+
+    transition: transform 0.2s ease;
+}
+
+.insights-page .text-link:hover {
+    gap: 14px;
+}
+
+.insights-page .text-link:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   DARK SECTION LINKS
+========================================================= */
+
+.insights-page .section-dark .text-link {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
 
     .insights-hero {
+        min-height: 480px;
 
-        min-height: 620px;
+        padding: 130px 0 100px;
+    }
+
+    .insights-featured {
+        padding: 100px 0;
+    }
+
+    .insights-featured-grid {
+        grid-template-columns: 0.55fr 1.45fr;
+
+        gap: 50px;
+    }
+
+    .insights-library {
+        padding: 100px 0;
+    }
+
+    .insights-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .insights-topics {
+        padding: 100px 0;
+    }
+
+    .insights-topics-grid {
+        gap: 60px;
+    }
+
+    .insights-cta {
+        padding: 110px 0;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / iPAD PORTRAIT
+========================================================= */
+
+@media (max-width: 820px) {
+
+    .insights-hero {
+        min-height: auto;
+
+        padding: 120px 0 90px;
+    }
+
+    .insights-hero h1 {
+        max-width: 680px;
+    }
+
+    .insights-featured {
+        padding: 90px 0;
+    }
+
+    .insights-featured-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .insights-featured-label {
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 20px;
+    }
+
+    .insights-featured-number {
+        font-size: 3.5rem;
+    }
+
+    .insights-library {
+        padding: 90px 0;
+    }
+
+    .insights-section-heading {
+        margin-bottom: 50px;
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .insight-card {
+        min-height: 350px;
+
+        padding: 35px 30px;
+    }
+
+    .insight-card-top {
+        margin-bottom: 55px;
+    }
+
+    .insights-topics {
+        padding: 90px 0;
+    }
+
+    .insights-topics-grid {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+    .insights-cta {
+        padding: 100px 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .insights-hero {
+        padding: 105px 0 75px;
+    }
+
+    .insights-hero h1 {
+        margin-top: 18px;
+        margin-bottom: 22px;
+
+        font-size: clamp(2.65rem, 12vw, 4rem);
+
+        line-height: 1;
+    }
+
+    .insights-hero p {
+        font-size: 1rem;
+
+        line-height: 1.6;
     }
 
 
-    .insights-intro-grid,
-    .insights-topics-grid,
-    .insights-value-grid {
+    /* FEATURED */
 
+    .insights-featured {
+        padding: 75px 0;
+    }
+
+    .insights-featured-grid {
+        gap: 25px;
+    }
+
+    .insights-featured-label {
+        align-items: flex-start;
+    }
+
+    .insights-featured-number {
+        font-size: 2.8rem;
+    }
+
+    .insight-featured-card {
+        padding-top: 24px;
+    }
+
+    .insight-featured-card h2 {
+        margin-top: 16px;
+
+        font-size: 2.45rem;
+
+        line-height: 1.03;
+    }
+
+    .insight-featured-card p {
+        font-size: 1rem;
+
+        line-height: 1.6;
+    }
+
+
+    /* LIBRARY */
+
+    .insights-library {
+        padding: 75px 0;
+    }
+
+    .insights-section-heading {
+        margin-bottom: 40px;
+    }
+
+    .insights-grid {
         grid-template-columns: 1fr;
+    }
 
+    .insight-card {
+        min-height: 330px;
+
+        padding: 32px 26px;
+    }
+
+    .insight-card-top {
+        margin-bottom: 55px;
+    }
+
+    .insight-card h3 {
+        font-size: 1.9rem;
+    }
+
+
+    /* TOPICS */
+
+    .insights-topics {
+        padding: 75px 0;
+    }
+
+    .insights-topics-grid {
         gap: 45px;
     }
 
+    .topic-list a {
+        padding: 21px 0;
 
-    .insights-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+        font-size: 0.98rem;
     }
 
 
-    .insights-footer-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-}
-
-
-/* =========================================================
-   20. MOBILE
-   ========================================================= */
-
-@media (max-width: 700px) {
-
-    .insights-container,
-    .insights-hero-container {
-
-        width: min(
-            calc(100% - 36px),
-            var(--insights-container)
-        );
-    }
-
-
-    .insights-hero {
-
-        min-height: 650px;
-    }
-
-
-    .insights-hero-overlay {
-
-        background:
-            linear-gradient(
-                90deg,
-                rgba(4,14,27,0.92),
-                rgba(4,14,27,0.68)
-            );
-    }
-
-
-    .insights-hero-container {
-
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
-
-
-    .insights-hero h1 {
-
-        font-size: 42px;
-
-        line-height: 1.08;
-    }
-
-
-    .insights-hero-content > p {
-
-        font-size: 15px;
-    }
-
-
-    .insights-hero-actions {
-
-        align-items: stretch;
-
-        flex-direction: column;
-    }
-
-
-    .insights-hero-button-primary,
-    .insights-hero-button-secondary {
-
-        width: 100%;
-    }
-
-
-    .insights-intro,
-    .insights-list,
-    .insights-topics,
-    .insights-value {
-
-        padding: 75px 0;
-    }
-
-
-    .insights-intro h2,
-    .insights-section-heading h2,
-    .insights-topics h2,
-    .insights-value h2 {
-
-        font-size: 35px;
-    }
-
-
-    .insights-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 22px;
-    }
-
-
-    .insight-card-image {
-
-        height: 225px;
-    }
-
-
-    .insight-card-content {
-
-        padding: 26px 24px 28px;
-    }
-
-
-    .insight-card h3 {
-
-        font-size: 21px;
-    }
-
+    /* CTA */
 
     .insights-cta {
-
-        padding: 75px 0;
+        padding: 85px 0;
     }
 
-
-    .insights-cta h2 {
-
-        font-size: 36px;
+    .insights-cta-content .section-title {
+        margin-top: 18px;
     }
-
 
     .insights-cta-actions {
+        align-items: flex-start;
 
         flex-direction: column;
-    }
 
-
-    .insights-cta .insights-primary-button {
-
-        width: 100%;
-    }
-
-
-    .insights-footer {
-
-        padding-top: 55px;
-    }
-
-
-    .insights-footer-grid {
-
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-
-        padding-bottom: 40px;
+        gap: 24px;
     }
 
 }
 
 
 /* =========================================================
-   21. SMALL MOBILE
-   ========================================================= */
+   SMALL MOBILE
+========================================================= */
 
-@media (max-width: 420px) {
+@media (max-width: 380px) {
+
+    .insights-hero {
+        padding-top: 95px;
+    }
 
     .insights-hero h1 {
-
-        font-size: 36px;
+        font-size: 2.45rem;
     }
 
-
-    .insights-intro h2,
-    .insights-section-heading h2,
-    .insights-topics h2,
-    .insights-value h2 {
-
-        font-size: 31px;
+    .insight-featured-card h2 {
+        font-size: 2.2rem;
     }
 
-
-    .insights-cta h2 {
-
-        font-size: 32px;
+    .insight-card {
+        padding: 28px 22px;
     }
 
 }
 
 
 /* =========================================================
-   22. REDUCED MOTION
-   ========================================================= */
+   REDUCED MOTION
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .insights-page *,
-    .insights-page *::before,
-    .insights-page *::after {
+    .insight-card,
+    .topic-list a,
+    .insights-page .text-link,
+    .insights-page .text-link span,
+    .topic-list a span {
+        transition: none;
+    }
 
-        scroll-behavior: auto !important;
-
-        transition: none !important;
-
-        animation: none !important;
+    .insight-card:hover {
+        transform: none;
     }
 
 }
