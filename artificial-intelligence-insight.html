@@ -1,615 +1,1202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Moving from AI Interest to Business Value | BSGA Consulting</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description" content="How organisations can move beyond AI experimentation and turn artificial intelligence into measurable business value through focused use cases, adoption and execution.">
+    <meta
+        name="description"
+        content="How organisations can move Artificial Intelligence from experimentation and hype to meaningful, measurable business value."
+    >
 
-    <link rel="canonical" href="https://bsgaconsulting.es/artificial-intelligence-insight.html">
+    <meta
+        name="keywords"
+        content="artificial intelligence, AI strategy, AI adoption, business value, digital transformation, AI governance, BSGA Consulting"
+    >
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/insights.css">
-    <link rel="stylesheet" href="css/insight-article.css">
+    <meta
+        name="author"
+        content="BSGA Consulting"
+    >
 
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Moving from AI Interest to Business Value",
-        "description": "How organisations can move beyond AI experimentation and turn artificial intelligence into measurable business value.",
-        "author": {
-            "@type": "Organization",
-            "name": "BSGA Consulting"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "BSGA Consulting",
-            "url": "https://bsgaconsulting.es/"
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://bsgaconsulting.es/artificial-intelligence-insight.html"
-        }
-    }
-    </script>
+    <title>
+        Artificial Intelligence: From Hype to Value | BSGA Consulting
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         MASTER STYLES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/styles.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/insight-article.css"
+    >
+
 </head>
 
-<body class="insight-page">
 
-    <a class="skip-link" href="#main-content">Skip to content</a>
+<body>
 
-    <!-- HEADER -->
-    <header class="site-header">
-        <div class="container header-container">
 
-            <a href="index.html" class="site-logo" aria-label="BSGA Consulting Home">
-                <img src="images/logos/logo-white.png" alt="BSGA Consulting">
+<!-- =========================================================
+     ACCESSIBILITY
+     ========================================================= -->
+
+<a
+    class="skip-link"
+    href="#main-content"
+>
+    Skip to content
+</a>
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="site-header">
+
+    <div class="header-container">
+
+
+        <!-- LOGO -->
+
+        <a
+            class="site-logo"
+            href="index.html"
+            aria-label="BSGA Consulting home"
+        >
+
+            <img
+                src="images/logos/logo-white.png"
+                alt="BSGA Consulting"
+            >
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav
+            class="main-navigation"
+            aria-label="Main navigation"
+        >
+
+            <a href="index.html">
+                Home
             </a>
 
-            <nav class="main-navigation" aria-label="Main navigation">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="about.html">About</a>
-                <a href="insights.html" class="active">Insights</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-
-            <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-               class="header-cta"
-               target="_blank"
-               rel="noopener">
-                Schedule a Consultation
+            <a href="services.html">
+                Services
             </a>
 
-            <button class="menu-toggle"
-                    aria-label="Open navigation"
-                    aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-        </div>
-
-        <div class="mobile-nav">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="insights.html">Insights</a>
-            <a href="contact.html">Contact</a>
-
-            <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-               class="primary-button"
-               target="_blank"
-               rel="noopener">
-                Schedule a Consultation
+            <a href="about.html">
+                About
             </a>
-        </div>
-    </header>
+
+            <a
+                href="insights.html"
+                class="active"
+                aria-current="page"
+            >
+                Insights
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
 
 
-    <main id="main-content">
+        <!-- DESKTOP CTA -->
 
-        <!-- ARTICLE HERO -->
-        <section class="insight-article-hero section-dark">
+        <a
+            class="header-cta"
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
-            <div class="container">
+            Schedule a Consultation
 
-                <a href="insights.html" class="insight-back-link">
-                    ← Back to Insights
+            <span
+                class="header-cta-arrow"
+                aria-hidden="true"
+            >
+                →
+            </span>
+
+        </a>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-navigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
+    <nav
+        id="mobile-navigation"
+        class="mobile-nav"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a
+            href="insights.html"
+            class="active"
+            aria-current="page"
+        >
+            Insights
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+        <a
+            class="mobile-nav-cta"
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Schedule a Consultation
+            <span aria-hidden="true"> →</span>
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main id="main-content">
+
+
+    <!-- =====================================================
+         ARTICLE HERO
+         ===================================================== -->
+
+    <section class="insight-article-hero">
+
+        <div class="container insight-article-hero-container">
+
+            <div class="insight-article-hero-content">
+
+
+                <!-- BACK TO INSIGHTS -->
+
+                <a
+                    href="insights.html"
+                    class="insight-article-back"
+                >
+
+                    <span aria-hidden="true">
+                        ←
+                    </span>
+
+                    Back to Insights
+
                 </a>
 
-                <div class="insight-article-meta">
-                    ARTIFICIAL INTELLIGENCE
-                </div>
+
+                <!-- CATEGORY -->
+
+                <span class="insight-article-category">
+                    Technology
+                </span>
+
+
+                <!-- TITLE -->
 
                 <h1>
-                    Moving from AI Interest<br>
-                    to Business Value
+
+                    Artificial Intelligence:
+
+                    <em>
+                        From Hype to Value
+                    </em>
+
                 </h1>
 
-                <p class="insight-article-lead">
-                    AI can create significant value, but only when it is connected
-                    to a real business problem. The opportunity is not simply to
-                    adopt AI. It is to use it where it can improve performance,
-                    productivity or decision-making.
+
+                <!-- INTRO -->
+
+                <p class="insight-article-hero-intro">
+
+                    The question for organisations is no longer
+                    whether AI matters, but where it can create
+                    meaningful and measurable business value.
+
                 </p>
 
             </div>
 
-        </section>
+        </div>
 
+    </section>
 
-        <!-- ARTICLE -->
-        <section class="insight-article-content section-light">
 
-            <div class="container">
+    <!-- =====================================================
+         ARTICLE META
+         ===================================================== -->
 
-                <div class="insight-article-layout">
+    <section class="insight-article-meta">
 
-                    <!-- MAIN CONTENT -->
-                    <article class="insight-article-main">
+        <div class="container insight-article-meta-container">
 
-                        <div class="article-opening">
-                            <p>
-                                Artificial intelligence has moved rapidly from
-                                experimentation into mainstream business discussions.
-                            </p>
 
-                            <p>
-                                Yet many organisations still struggle to translate
-                                AI interest into measurable results. The technology
-                                is available. The challenge is deciding where it
-                                should actually be applied.
-                            </p>
-                        </div>
+            <div class="insight-article-meta-left">
 
+                <span class="insight-article-meta-label">
+                    BSGA Insight
+                </span>
 
-                        <div class="article-highlight">
-                            <strong>The principle</strong>
+                <span
+                    class="insight-article-meta-divider"
+                    aria-hidden="true"
+                ></span>
 
-                            <p>
-                                Start with the business problem, not the technology.
-                                The strongest AI opportunities are usually found
-                                where repetitive work, large volumes of information
-                                or complex decisions create measurable friction.
-                            </p>
-                        </div>
-
-
-                        <h2>Where AI creates practical value</h2>
-
-                        <p>
-                            AI does not need to transform an entire organisation
-                            to generate value. Focused applications can produce
-                            meaningful improvements when they address a specific
-                            operational or commercial challenge.
-                        </p>
-
-
-                        <div class="article-points">
-
-                            <div class="article-point">
-                                <h3>Reduce repetitive work</h3>
-                                <p>
-                                    Automate activities that consume significant
-                                    amounts of time without creating equivalent
-                                    business value.
-                                </p>
-                            </div>
-
-                            <div class="article-point">
-                                <h3>Improve decision-making</h3>
-                                <p>
-                                    Use data and AI-supported analysis to help
-                                    teams identify patterns, risks and opportunities
-                                    more quickly.
-                                </p>
-                            </div>
-
-                            <div class="article-point">
-                                <h3>Improve customer experience</h3>
-                                <p>
-                                    Use AI to make interactions faster, more
-                                    relevant and easier to scale.
-                                </p>
-                            </div>
-
-                            <div class="article-point">
-                                <h3>Increase organisational capacity</h3>
-                                <p>
-                                    Give employees better tools to research,
-                                    analyse, create and execute without simply
-                                    adding more resources.
-                                </p>
-                            </div>
-
-                        </div>
-
-
-                        <h2>The real challenge is adoption</h2>
-
-                        <p>
-                            Selecting an AI tool is rarely the most difficult part.
-                            The harder question is how that tool becomes part of
-                            the way people actually work.
-                        </p>
-
-                        <p>
-                            Without clear ownership, appropriate processes and
-                            employee adoption, even technically strong solutions
-                            can deliver limited value.
-                        </p>
-
-                        <div class="article-highlight">
-                            <strong>Technology alone is not transformation.</strong>
-
-                            <p>
-                                The value appears when technology, processes and
-                                people work together around a clearly defined
-                                business outcome.
-                            </p>
-                        </div>
-
-
-                        <h2>A practical framework for AI adoption</h2>
-
-                        <p>
-                            Organisations can reduce the risk of AI initiatives
-                            by following a simple progression.
-                        </p>
-
-
-                        <div class="article-framework">
-
-                            <div class="article-framework-item">
-                                <span>01</span>
-                                <div>
-                                    <h3>Identify</h3>
-                                    <p>
-                                        Find business processes where AI could
-                                        realistically create measurable value.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="article-framework-item">
-                                <span>02</span>
-                                <div>
-                                    <h3>Prioritise</h3>
-                                    <p>
-                                        Select opportunities based on business
-                                        impact, feasibility and implementation risk.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="article-framework-item">
-                                <span>03</span>
-                                <div>
-                                    <h3>Test</h3>
-                                    <p>
-                                        Start with a focused use case rather than
-                                        attempting a large-scale transformation immediately.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="article-framework-item">
-                                <span>04</span>
-                                <div>
-                                    <h3>Measure</h3>
-                                    <p>
-                                        Define clear measures for productivity,
-                                        quality, cost, revenue or customer experience.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="article-framework-item">
-                                <span>05</span>
-                                <div>
-                                    <h3>Scale</h3>
-                                    <p>
-                                        Expand successful applications only when
-                                        the business case and operating model support it.
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <h2>Start small. Think strategically.</h2>
-
-                        <p>
-                            A successful AI programme does not need dozens of use
-                            cases. A small number of well-selected initiatives
-                            can create more value than a large portfolio of
-                            disconnected experiments.
-                        </p>
-
-                        <p>
-                            The objective should be to establish a repeatable
-                            approach for identifying, testing and scaling AI
-                            opportunities across the organisation.
-                        </p>
-
-
-                        <div class="article-questions">
-
-                            <h2>Questions worth asking</h2>
-
-                            <ul>
-                                <li>Where are teams spending significant time on repetitive work?</li>
-                                <li>Which decisions could benefit from better access to information?</li>
-                                <li>Where is customer or employee experience being constrained?</li>
-                                <li>Which AI opportunities could produce measurable value within months?</li>
-                                <li>What would need to change for employees to adopt the solution?</li>
-                            </ul>
-
-                        </div>
-
-
-                        <div class="article-conclusion">
-
-                            <h2>Key takeaway</h2>
-
-                            <p>
-                                The organisations that benefit most from AI will not
-                                necessarily be those that adopt the most technology.
-                            </p>
-
-                            <p>
-                                They will be the organisations that identify the
-                                right problems, connect AI to measurable outcomes
-                                and integrate it into the way work gets done.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- SIDEBAR -->
-                    <aside class="insight-article-sidebar">
-
-                        <div class="article-sidebar-block">
-
-                            <span class="kicker">
-                                BSGA Perspective
-                            </span>
-
-                            <p>
-                                AI should be approached as a business transformation
-                                opportunity, not simply as a technology project.
-                            </p>
-
-                        </div>
-
-
-                        <div class="article-sidebar-block">
-
-                            <span class="kicker">
-                                Focus
-                            </span>
-
-                            <ul>
-                                <li>Business value</li>
-                                <li>AI adoption</li>
-                                <li>Productivity</li>
-                                <li>Decision-making</li>
-                                <li>Execution</li>
-                            </ul>
-
-                        </div>
-
-
-                        <div class="article-sidebar-cta">
-
-                            <h3>
-                                Exploring AI opportunities?
-                            </h3>
-
-                            <p>
-                                Let’s identify where AI could create measurable
-                                value in your organisation.
-                            </p>
-
-                            <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                               class="primary-button"
-                               target="_blank"
-                               rel="noopener">
-                                Schedule a Consultation
-                            </a>
-
-                        </div>
-
-                    </aside>
-
-                </div>
+                <span class="insight-article-meta-value">
+                    Artificial Intelligence
+                </span>
 
             </div>
 
-        </section>
+
+            <div class="insight-article-meta-right">
+
+                <span class="insight-article-meta-value">
+                    Technology perspective
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-        <!-- RELATED INSIGHTS -->
-        <section class="insight-related section-soft">
+    <!-- =====================================================
+         ARTICLE BODY
+         ===================================================== -->
 
-            <div class="container">
+    <section class="insight-article-body">
 
-                <div class="section-heading">
+        <div class="container">
+
+            <div class="insight-article-layout">
+
+
+                <!-- SIDEBAR -->
+
+                <aside class="insight-article-sidebar">
+
+                    <span class="insight-article-sidebar-label">
+                        The BSGA View
+                    </span>
+
+                    <div
+                        class="insight-article-sidebar-line"
+                        aria-hidden="true"
+                    ></div>
+
+                </aside>
+
+
+                <!-- ARTICLE CONTENT -->
+
+                <article class="insight-article-content">
+
+
+                    <!-- LEAD -->
+
+                    <p class="article-lead">
+
+                        Artificial Intelligence is moving rapidly
+                        from experimentation into everyday business.
+
+                        The organisations that benefit most will be
+                        those that connect AI adoption to real
+                        business priorities.
+
+                    </p>
+
+
+                    <p>
+
+                        AI has moved quickly from a specialist
+                        technology discussion into a strategic
+                        business issue.
+
+                        Organisations are experimenting with
+                        generative AI, automation and intelligent
+                        tools across an increasingly broad range
+                        of activities.
+
+                    </p>
+
+
+                    <p>
+
+                        Yet experimentation does not automatically
+                        create value.
+
+                        The challenge is to identify where AI can
+                        improve performance, integrate it into real
+                        workflows and create the organisational
+                        conditions required for adoption.
+
+                    </p>
+
+
+                    <!-- =================================================
+                         SECTION
+                         ================================================= -->
+
+                    <h2>
+
+                        Start with the
+                        <em>
+                            business problem.
+                        </em>
+
+                    </h2>
+
+
+                    <p>
+
+                        One of the biggest risks of AI adoption is
+                        starting with the technology rather than
+                        the problem.
+
+                    </p>
+
+
+                    <p>
+
+                        New tools can be impressive, but their value
+                        depends on whether they address a meaningful
+                        business need.
+
+                        The strongest use cases typically connect
+                        AI directly to a measurable improvement in
+                        productivity, customer experience, decision
+                        quality or operational performance.
+
+                    </p>
+
+
+                    <p>
+
+                        This changes the conversation from
+                        "What can AI do?" to a more useful question:
+
+                        "Where could AI materially improve the way
+                        our organisation works?"
+
+                    </p>
+
+
+                    <!-- =================================================
+                         FOUR PRINCIPLES
+                         ================================================= -->
+
+                    <div class="insight-points">
+
+
+                        <!-- 01 -->
+
+                        <div class="insight-point">
+
+                            <span class="insight-point-number">
+                                01
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Prioritise
+                                </h3>
+
+                                <p>
+
+                                    Focus on use cases where potential
+                                    business impact, feasibility and
+                                    organisational readiness come
+                                    together.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- 02 -->
+
+                        <div class="insight-point">
+
+                            <span class="insight-point-number">
+                                02
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Experiment
+                                </h3>
+
+                                <p>
+
+                                    Test high-value opportunities
+                                    quickly and learn what works
+                                    before committing significant
+                                    resources.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- 03 -->
+
+                        <div class="insight-point">
+
+                            <span class="insight-point-number">
+                                03
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Adopt
+                                </h3>
+
+                                <p>
+
+                                    Move successful experiments into
+                                    real workflows, connecting AI
+                                    capabilities with the people and
+                                    processes that use them.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- 04 -->
+
+                        <div class="insight-point">
+
+                            <span class="insight-point-number">
+                                04
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Govern
+                                </h3>
+
+                                <p>
+
+                                    Establish appropriate controls
+                                    around data, risk, accountability
+                                    and responsible use as AI becomes
+                                    part of everyday operations.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         SECTION
+                         ================================================= -->
+
+                    <h2>
+
+                        AI needs
+                        <em>
+                            adoption.
+                        </em>
+
+                    </h2>
+
+
+                    <p>
+
+                        Technology alone does not transform an
+                        organisation.
+
+                        The value of an AI solution depends on whether
+                        people actually use it and whether it becomes
+                        part of the way work is performed.
+
+                    </p>
+
+
+                    <p>
+
+                        This makes adoption a critical part of any
+                        AI strategy.
+
+                        Employees need to understand what is changing,
+                        why it matters and how the new technology
+                        affects their responsibilities.
+
+                    </p>
+
+
+                    <p>
+
+                        Organisations also need to consider how
+                        processes, roles and management practices
+                        evolve as AI becomes embedded into the
+                        operating model.
+
+                    </p>
+
+
+                    <!-- =================================================
+                         SECTION
+                         ================================================= -->
+
+                    <h2>
+
+                        From experimentation
+                        to <em>business value.</em>
+
+                    </h2>
+
+
+                    <p>
+
+                        The next stage of AI adoption is not about
+                        pursuing more experiments.
+
+                        It is about becoming more selective about
+                        where AI is applied and more disciplined about
+                        measuring the value it creates.
+
+                    </p>
+
+
+                    <p>
+
+                        This requires a clear connection between
+                        technology decisions and business priorities.
+
+                        AI initiatives should have a defined purpose,
+                        an identifiable owner and a meaningful way of
+                        evaluating impact.
+
+                    </p>
+
+
+                    <p>
+
+                        Organisations that approach AI in this way
+                        are better positioned to move beyond isolated
+                        demonstrations and create capabilities that
+                        contribute to sustained business performance.
+
+                    </p>
+
+
+                    <!-- =================================================
+                         KEY TAKEAWAY
+                         ================================================= -->
+
+                    <div class="insight-takeaway">
+
+                        <span class="insight-takeaway-label">
+                            Key Takeaway
+                        </span>
+
+                        <p>
+
+                            AI creates value when technology,
+                            people and business priorities
+                            move together.
+
+                        </p>
+
+                    </div>
+
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RELATED INSIGHTS
+         ===================================================== -->
+
+    <section class="insight-related">
+
+        <div class="container">
+
+
+            <div class="insight-related-heading">
+
+                <div>
 
                     <span class="kicker">
-                        Continue Reading
+                        More Insights
                     </span>
 
                     <h2 class="section-title">
-                        More insights
+
+                        Continue the
+                        <em>
+                            conversation.
+                        </em>
+
                     </h2>
 
                 </div>
 
 
-                <div class="insight-related-grid">
+                <a
+                    class="text-link"
+                    href="insights.html"
+                >
 
-                    <a href="insight-project-management.html"
-                       class="insight-related-card">
+                    View all insights
 
-                        <span class="kicker">
-                            PROJECT MANAGEMENT
-                        </span>
+                    <span aria-hidden="true">
+                        →
+                    </span>
 
-                        <h3>
-                            Making Projects Deliverable
-                        </h3>
-
-                        <span class="text-link">
-                            Read Insight →
-                        </span>
-
-                    </a>
-
-
-                    <a href="strategy-to-execution.html"
-                       class="insight-related-card">
-
-                        <span class="kicker">
-                            BUSINESS TRANSFORMATION
-                        </span>
-
-                        <h3>
-                            From Strategy to Execution
-                        </h3>
-
-                        <span class="text-link">
-                            Read Insight →
-                        </span>
-
-                    </a>
-
-
-                    <a href="operational-excellence-insight.html"
-                       class="insight-related-card">
-
-                        <span class="kicker">
-                            OPERATIONAL EXCELLENCE
-                        </span>
-
-                        <h3>
-                            Operational Excellence Without Complexity
-                        </h3>
-
-                        <span class="text-link">
-                            Read Insight →
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FINAL CTA -->
-        <section class="insight-article-cta section-dark">
-
-            <div class="container">
-
-                <span class="kicker">
-                    BSGA CONSULTING
-                </span>
-
-                <h2>
-                    Turn AI potential<br>
-                    into business value.
-                </h2>
-
-                <p>
-                    Let’s explore where AI can create practical,
-                    measurable impact in your organisation.
-                </p>
-
-                <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                   class="primary-button"
-                   target="_blank"
-                   rel="noopener">
-                    Schedule a Consultation
                 </a>
 
             </div>
 
-        </section>
 
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-
-        <div class="container">
-
-            <div class="footer-main">
-
-                <div class="footer-brand">
-
-                    <a href="index.html">
-                        <img src="images/logos/logo-white.png"
-                             alt="BSGA Consulting">
-                    </a>
-
-                    <p>
-                        Turning strategy into measurable results.
-                    </p>
-
-                </div>
+            <div class="insight-related-grid">
 
 
-                <div class="footer-navigation">
+                <!-- STRATEGY -->
 
-                    <div>
-                        <span class="footer-heading">Explore</span>
+                <a
+                    href="strategy-to-execution.html"
+                    class="insight-related-card"
+                >
 
-                        <a href="index.html">Home</a>
-                        <a href="services.html">Services</a>
-                        <a href="about.html">About</a>
-                        <a href="insights.html">Insights</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
+                    <span class="insight-related-number">
+                        01
+                    </span>
 
+                    <span class="insight-related-category">
+                        Strategy
+                    </span>
 
-                    <div>
-                        <span class="footer-heading">Connect</span>
+                    <h3>
 
-                        <a href="mailto:info@bsgaconsulting.es">
-                            info@bsgaconsulting.es
-                        </a>
+                        Strategy to Execution:
 
-                        <a href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                           target="_blank"
-                           rel="noopener">
-                            Schedule a Consultation
-                        </a>
-                    </div>
+                        <em>
+                            Closing the Gap
+                        </em>
 
-                </div>
+                    </h3>
 
-            </div>
+                </a>
 
 
-            <div class="footer-bottom">
+                <!-- OPERATIONAL EXCELLENCE -->
 
-                <p>
-                    © 2026 BSGA Consulting. All rights reserved.
-                </p>
+                <a
+                    href="operational-excellence-insight.html"
+                    class="insight-related-card"
+                >
+
+                    <span class="insight-related-number">
+                        02
+                    </span>
+
+                    <span class="insight-related-category">
+                        Operations
+                    </span>
+
+                    <h3>
+
+                        Operational Excellence:
+
+                        <em>
+                            Beyond Efficiency
+                        </em>
+
+                    </h3>
+
+                </a>
+
+
+                <!-- PROJECT MANAGEMENT -->
+
+                <a
+                    href="insight-project-management.html"
+                    class="insight-related-card"
+                >
+
+                    <span class="insight-related-number">
+                        04
+                    </span>
+
+                    <span class="insight-related-category">
+                        Delivery
+                    </span>
+
+                    <h3>
+
+                        Project Management:
+
+                        <em>
+                            Making Strategy Happen
+                        </em>
+
+                    </h3>
+
+                </a>
 
             </div>
 
         </div>
 
-    </footer>
+    </section>
 
 
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileNav = document.querySelector('.mobile-nav');
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
 
-        if (menuToggle && mobileNav) {
-            menuToggle.addEventListener('click', function () {
-                const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    <section class="insight-article-cta">
 
-                menuToggle.setAttribute('aria-expanded', String(!isOpen));
-                mobileNav.classList.toggle('is-open');
-                document.body.classList.toggle('menu-open');
-            });
+        <div class="container">
+
+            <div class="insight-article-cta-inner">
+
+                <span class="kicker">
+                    LET'S TALK
+                </span>
+
+                <h2>
+                    Ready to turn
+                    strategy into results?
+                </h2>
+
+                <p>
+
+                    Let's discuss the priorities, challenges
+                    and decisions that matter most to your
+                    organisation.
+
+                </p>
+
+                <a
+                    class="primary-button"
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    Schedule a Consultation
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-container">
+
+        <div class="footer-grid">
+
+
+            <!-- BRAND -->
+
+            <div class="footer-brand">
+
+                <a
+                    class="site-logo"
+                    href="index.html"
+                    aria-label="BSGA Consulting home"
+                >
+
+                    <img
+                        src="images/logos/logo-white.png"
+                        alt="BSGA Consulting"
+                    >
+
+                </a>
+
+                <p>
+
+                    Strategic clarity.
+                    Measurable results.
+
+                    Consulting focused on strategy,
+                    transformation and operational excellence.
+
+                </p>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Navigation
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="insights.html">
+                    Insights
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <!-- SERVICES -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Services
+                </h4>
+
+                <a href="business-strategy.html">
+                    Business Strategy
+                </a>
+
+                <a href="business-transformation.html">
+                    Business Transformation
+                </a>
+
+                <a href="operational-excellence.html">
+                    Operational Excellence
+                </a>
+
+                <a href="project-management.html">
+                    Project Management
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h4>
+                    Contact
+                </h4>
+
+                <a href="mailto:info@bsgaconsulting.es">
+                    info@bsgaconsulting.es
+                </a>
+
+                <a
+                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Schedule a Consultation
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 BSGA Consulting.
+            All rights reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     MOBILE MENU JAVASCRIPT
+     ========================================================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const menuToggle =
+            document.querySelector(".menu-toggle");
+
+        const mobileNav =
+            document.querySelector(".mobile-nav");
+
+        const mobileLinks =
+            document.querySelectorAll(
+                ".mobile-nav a"
+            );
+
+
+        if (
+            !menuToggle ||
+            !mobileNav
+        ) {
+            return;
         }
-    </script>
+
+
+        function openMenu() {
+
+            mobileNav.classList.add(
+                "is-open"
+            );
+
+            menuToggle.classList.add(
+                "is-active"
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close navigation menu"
+            );
+
+            mobileNav.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            document.body.classList.add(
+                "mobile-menu-open"
+            );
+
+        }
+
+
+        function closeMenu() {
+
+            mobileNav.classList.remove(
+                "is-open"
+            );
+
+            menuToggle.classList.remove(
+                "is-active"
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+            mobileNav.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.classList.remove(
+                "mobile-menu-open"
+            );
+
+        }
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    menuToggle.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
+
+
+                if (isOpen) {
+
+                    closeMenu();
+
+                } else {
+
+                    openMenu();
+
+                }
+
+            }
+        );
+
+
+        mobileLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    closeMenu
+                );
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (
+                    window.innerWidth > 767
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
 
 </body>
 </html>
