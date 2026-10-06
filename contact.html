@@ -10,13 +10,14 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        Contact | BSGA Consulting
-    </title>
-
     <meta
         name="description"
-        content="Contact BSGA Consulting to discuss your business challenge, transformation, project, operational or AI initiative."
+        content="Get in touch with BSGA Consulting to discuss strategy, business transformation, operational excellence and project delivery."
+    >
+
+    <meta
+        name="keywords"
+        content="business consulting, strategy consulting, business transformation, operational excellence, project management, BSGA Consulting"
     >
 
     <meta
@@ -24,51 +25,16 @@
         content="BSGA Consulting"
     >
 
-    <meta
-        name="robots"
-        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-    >
+    <title>
+        Contact | BSGA Consulting
+    </title>
 
-    <meta
-        name="theme-color"
-        content="#050505"
-    >
-
-    <link
-        rel="canonical"
-        href="https://bsgaconsulting.es/contact.html"
-    >
 
     <!-- =====================================================
-         FAVICONS
-    ====================================================== -->
+         GOOGLE FONTS
+         ===================================================== -->
 
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="512x512"
-        href="images/logos/favicon.png"
-    >
-
-    <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="images/logos/apple-touch-icon.png"
-    >
-
-    <link
-        rel="manifest"
-        href="/manifest.webmanifest"
-    >
-
-    <!-- =====================================================
-         FONTS
-    ====================================================== -->
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link
         rel="preconnect"
@@ -77,13 +43,14 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
     >
 
+
     <!-- =====================================================
-         CSS
-    ====================================================== -->
+         MASTER STYLES
+         ===================================================== -->
 
     <link
         rel="stylesheet"
@@ -95,83 +62,50 @@
         href="css/contact.css"
     >
 
-    <!-- =====================================================
-         OPEN GRAPH
-    ====================================================== -->
-
-    <meta
-        property="og:type"
-        content="website"
-    >
-
-    <meta
-        property="og:url"
-        content="https://bsgaconsulting.es/contact.html"
-    >
-
-    <meta
-        property="og:title"
-        content="Contact | BSGA Consulting"
-    >
-
-    <meta
-        property="og:description"
-        content="Let's discuss your business challenge and explore how BSGA Consulting can help."
-    >
-
-    <meta
-        property="og:image"
-        content="https://bsgaconsulting.es/images/og-image.jpg"
-    >
-
-    <meta
-        property="og:site_name"
-        content="BSGA Consulting"
-    >
-
-    <meta
-        property="og:locale"
-        content="en_GB"
-    >
-
 </head>
 
 
-<body class="contact-page">
+<body>
 
+
+<!-- =========================================================
+     ACCESSIBILITY
+     ========================================================= -->
 
 <a
-    href="#main-content"
     class="skip-link"
+    href="#main-content"
 >
-    Skip to main content
+    Skip to content
 </a>
 
 
 <!-- =========================================================
      HEADER
-========================================================= -->
+     ========================================================= -->
 
 <header class="site-header">
 
     <div class="header-container">
 
 
+        <!-- LOGO -->
+
         <a
-            href="index.html"
             class="site-logo"
-            aria-label="BSGA Consulting Home"
+            href="index.html"
+            aria-label="BSGA Consulting home"
         >
 
             <img
                 src="images/logos/logo-white.png"
                 alt="BSGA Consulting"
-                width="148"
-                height="74"
             >
 
         </a>
 
+
+        <!-- DESKTOP NAVIGATION -->
 
         <nav
             class="main-navigation"
@@ -205,17 +139,16 @@
         </nav>
 
 
+        <!-- DESKTOP CTA -->
+
         <a
-            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="header-cta"
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Schedule a consultation with BSGA Consulting"
         >
 
-            <span class="header-cta-text">
-                Schedule a Consultation
-            </span>
+            Schedule a Consultation
 
             <span
                 class="header-cta-arrow"
@@ -227,13 +160,14 @@
         </a>
 
 
+        <!-- MOBILE MENU -->
+
         <button
-            id="menuToggle"
             class="menu-toggle"
             type="button"
             aria-label="Open navigation menu"
             aria-expanded="false"
-            aria-controls="mobileNav"
+            aria-controls="mobile-navigation"
         >
 
             <span></span>
@@ -245,10 +179,15 @@
     </div>
 
 
+    <!-- =====================================================
+         MOBILE NAVIGATION
+         ===================================================== -->
+
     <nav
-        id="mobileNav"
+        id="mobile-navigation"
         class="mobile-nav"
         aria-label="Mobile navigation"
+        aria-hidden="true"
     >
 
         <a href="index.html">
@@ -276,20 +215,13 @@
         </a>
 
         <a
-            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             class="mobile-nav-cta"
+            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
             target="_blank"
             rel="noopener noreferrer"
         >
-
-            <span>
-                Schedule a Consultation
-            </span>
-
-            <span aria-hidden="true">
-                →
-            </span>
-
+            Schedule a Consultation
+            <span aria-hidden="true"> →</span>
         </a>
 
     </nav>
@@ -299,378 +231,434 @@
 
 <!-- =========================================================
      MAIN
-========================================================= -->
+     ========================================================= -->
 
 <main id="main-content">
 
 
-<!-- =========================================================
-     HERO
-========================================================= -->
+    <!-- =====================================================
+         CONTACT HERO
+         ===================================================== -->
 
-<section class="contact-hero section-dark">
+    <section class="contact-hero">
 
-    <div class="container">
+        <div class="container contact-hero-container">
 
-        <div class="contact-hero-content">
-
-            <span class="kicker">
-                CONTACT
-            </span>
+            <div class="contact-hero-content">
 
 
-            <h1>
-                Let's discuss
-                what matters.
-            </h1>
+                <span class="contact-kicker">
+                    GET IN TOUCH
+                </span>
 
 
-            <p class="dark-copy">
-                Tell us what you are trying to achieve.
-                We will help you define the next step.
-            </p>
+                <h1>
+
+                    Let's discuss
+                    <em>
+                        what's next.
+                    </em>
+
+                </h1>
 
 
-            <div class="contact-hero-actions">
+                <p>
 
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="primary-button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Schedule a consultation with BSGA Consulting"
-                >
+                    Whether you are defining a new strategic
+                    direction, navigating transformation or
+                    looking to improve business performance,
+                    let's start with the challenge that matters.
 
-                    Schedule a Consultation
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="mailto:info@bsgaconsulting.es"
-                    class="text-link"
-                >
-
-                    info@bsgaconsulting.es
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
-                </a>
+                </p>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================================================
-     CONTACT OPTIONS
-========================================================= -->
+    <!-- =====================================================
+         CONTACT INTRO / DETAILS
+         ===================================================== -->
 
-<section class="contact-options section-light">
+    <section class="contact-main">
 
-    <div class="container">
+        <div class="container">
+
+            <div class="contact-grid">
 
 
-        <div class="contact-section-heading">
+                <!-- =================================================
+                     LEFT COLUMN
+                     ================================================= -->
 
-            <span class="kicker">
-                GET IN TOUCH
-            </span>
+                <div class="contact-information">
 
-            <h2 class="section-title">
-                Choose how you want to start.
-            </h2>
+
+                    <span class="kicker">
+                        START A CONVERSATION
+                    </span>
+
+
+                    <h2>
+
+                        Clear thinking.
+                        <br>
+                        Practical action.
+
+                    </h2>
+
+
+                    <p class="contact-lead">
+
+                        Every engagement starts with understanding
+                        the situation, the ambition and the decisions
+                        that need to be made.
+
+                    </p>
+
+
+                    <p>
+
+                        If you would like to discuss a business
+                        challenge, explore a potential engagement
+                        or simply have an initial conversation,
+                        get in touch.
+
+                    </p>
+
+
+                    <!-- EMAIL -->
+
+                    <div class="contact-detail">
+
+                        <span class="contact-detail-label">
+                            Email
+                        </span>
+
+                        <a
+                            href="mailto:info@bsgaconsulting.es"
+                            class="contact-detail-value"
+                        >
+                            info@bsgaconsulting.es
+                        </a>
+
+                    </div>
+
+
+                    <!-- CONSULTATION -->
+
+                    <div class="contact-detail">
+
+                        <span class="contact-detail-label">
+                            Consultation
+                        </span>
+
+                        <a
+                            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-detail-value"
+                        >
+                            Schedule a Consultation
+                            <span aria-hidden="true"> →</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     RIGHT COLUMN
+                     ================================================= -->
+
+                <div class="contact-action">
+
+
+                    <div class="contact-action-inner">
+
+
+                        <span class="contact-action-number">
+                            01
+                        </span>
+
+
+                        <h2>
+
+                            Schedule a
+                            <em>
+                                conversation.
+                            </em>
+
+                        </h2>
+
+
+                        <p>
+
+                            The easiest way to start is to book
+                            an initial conversation.
+
+                            We can discuss your priorities,
+                            challenges and what you are looking
+                            to achieve.
+
+                        </p>
+
+
+                        <a
+                            class="primary-button contact-button"
+                            href="https://calendly.com/angel-bajo-sanchez/discovery-call"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            Schedule a Consultation
+
+                            <span aria-hidden="true">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <span class="contact-action-note">
+                            Initial conversation · No obligation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
+    </section>
 
-        <div class="contact-options-grid">
+
+    <!-- =====================================================
+         WHAT WE CAN DISCUSS
+         ===================================================== -->
+
+    <section class="contact-topics">
+
+        <div class="container">
 
 
-            <!-- CONSULTATION -->
+            <div class="contact-topics-heading">
 
-            <article class="contact-option">
+                <div>
 
-                <span class="contact-option-number">
-                    01
-                </span>
-
-                <span class="kicker">
-                    DISCOVERY CALL
-                </span>
-
-                <h3>
-                    Talk it through.
-                </h3>
-
-                <p>
-                    A focused conversation about
-                    your challenge and objectives.
-                </p>
-
-                <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
-                    class="text-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Book a Call
-
-                    <span aria-hidden="true">
-                        →
+                    <span class="kicker">
+                        AREAS OF FOCUS
                     </span>
 
-                </a>
+                    <h2 class="section-title">
 
-            </article>
+                        What can we
+                        <em>
+                            work on?
+                        </em>
 
+                    </h2>
 
-            <!-- EMAIL -->
-
-            <article class="contact-option">
-
-                <span class="contact-option-number">
-                    02
-                </span>
-
-                <span class="kicker">
-                    EMAIL
-                </span>
-
-                <h3>
-                    Send us the details.
-                </h3>
+                </div>
 
                 <p>
-                    Share your objectives, challenge
-                    or requirements directly.
+
+                    From strategic direction to execution,
+                    engagements are shaped around the specific
+                    priorities and challenges of the organisation.
+
                 </p>
-
-                <a
-                    href="mailto:info@bsgaconsulting.es"
-                    class="text-link"
-                >
-
-                    Send an Email
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
-                </a>
-
-            </article>
-
-
-            <!-- SERVICES -->
-
-            <article class="contact-option">
-
-                <span class="contact-option-number">
-                    03
-                </span>
-
-                <span class="kicker">
-                    SERVICES
-                </span>
-
-                <h3>
-                    Explore our capabilities.
-                </h3>
-
-                <p>
-                    See where BSGA Consulting
-                    can support your organisation.
-                </p>
-
-                <a
-                    href="services.html"
-                    class="text-link"
-                >
-
-                    View Services
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
-                </a>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     WHAT HAPPENS NEXT
-========================================================= -->
-
-<section class="contact-process section-soft">
-
-    <div class="container">
-
-
-        <div class="contact-process-grid">
-
-
-            <div>
-
-                <span class="kicker">
-                    WHAT HAPPENS NEXT
-                </span>
-
-                <h2 class="section-title">
-                    Simple.
-                    Focused.
-                    Practical.
-                </h2>
 
             </div>
 
 
-            <div class="contact-steps">
+            <div class="contact-topics-grid">
 
 
-                <article class="contact-step">
+                <!-- 01 -->
 
-                    <span>
+                <a
+                    href="business-strategy.html"
+                    class="contact-topic"
+                >
+
+                    <span class="contact-topic-number">
                         01
                     </span>
 
                     <div>
 
                         <h3>
-                            Understand
+                            Business Strategy
                         </h3>
 
                         <p>
-                            We understand your challenge
-                            and desired outcome.
+                            Clarify priorities, choices and
+                            strategic direction.
                         </p>
 
                     </div>
 
-                </article>
+                    <span
+                        class="contact-topic-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
 
 
-                <article class="contact-step">
+                <!-- 02 -->
 
-                    <span>
+                <a
+                    href="business-transformation.html"
+                    class="contact-topic"
+                >
+
+                    <span class="contact-topic-number">
                         02
                     </span>
 
                     <div>
 
                         <h3>
-                            Explore
+                            Business Transformation
                         </h3>
 
                         <p>
-                            We identify where BSGA
-                            can create value.
+                            Turn strategic ambition into
+                            coordinated change.
                         </p>
 
                     </div>
 
-                </article>
+                    <span
+                        class="contact-topic-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
 
 
-                <article class="contact-step">
+                <!-- 03 -->
 
-                    <span>
+                <a
+                    href="operational-excellence.html"
+                    class="contact-topic"
+                >
+
+                    <span class="contact-topic-number">
                         03
                     </span>
 
                     <div>
 
                         <h3>
-                            Move forward
+                            Operational Excellence
                         </h3>
 
                         <p>
-                            We agree the most practical
-                            next step.
+                            Improve performance, processes
+                            and ways of working.
                         </p>
 
                     </div>
 
-                </article>
+                    <span
+                        class="contact-topic-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
 
+                </a>
+
+
+                <!-- 04 -->
+
+                <a
+                    href="project-management.html"
+                    class="contact-topic"
+                >
+
+                    <span class="contact-topic-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h3>
+                            Project Management
+                        </h3>
+
+                        <p>
+                            Create structure, governance
+                            and delivery momentum.
+                        </p>
+
+                    </div>
+
+                    <span
+                        class="contact-topic-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================================================
-     FINAL CTA
-========================================================= -->
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
 
-<section class="contact-cta section-dark">
+    <section class="contact-final">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="contact-cta-content">
+            <div class="contact-final-inner">
 
-            <span class="kicker">
-                READY?
-            </span>
+                <span class="kicker">
+                    BSGA CONSULTING
+                </span>
 
+                <h2>
 
-            <h2 class="section-title">
-                Bring us your challenge.
-            </h2>
+                    Strategic clarity.
+                    <br>
+                    <em>
+                        Measurable results.
+                    </em>
 
+                </h2>
 
-            <p class="dark-copy">
-                Let's explore what is possible.
-            </p>
+                <p>
 
+                    The right conversation can be the first step
+                    towards a clearer direction and better results.
 
-            <div class="contact-cta-actions">
+                </p>
 
                 <a
-                    href="https://calendly.com/angel-bajo-sanchez/discovery-call"
                     class="primary-button"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    Schedule a Consultation
-
-                    <span aria-hidden="true">
-                        →
-                    </span>
-
-                </a>
-
-
-                <a
                     href="mailto:info@bsgaconsulting.es"
-                    class="text-link"
                 >
 
-                    info@bsgaconsulting.es
+                    Send us an email
 
                     <span aria-hidden="true">
                         →
@@ -682,17 +670,14 @@
 
         </div>
 
-    </div>
-
-</section>
-
+    </section>
 
 </main>
 
 
 <!-- =========================================================
      FOOTER
-========================================================= -->
+     ========================================================= -->
 
 <footer class="site-footer">
 
@@ -701,23 +686,37 @@
         <div class="footer-grid">
 
 
+            <!-- BRAND -->
+
             <div class="footer-brand">
 
-                <img
-                    src="images/logos/logo-white.png"
-                    alt="BSGA Consulting"
-                    width="150"
-                    height="75"
-                    loading="lazy"
+                <a
+                    class="site-logo"
+                    href="index.html"
+                    aria-label="BSGA Consulting home"
                 >
 
+                    <img
+                        src="images/logos/logo-white.png"
+                        alt="BSGA Consulting"
+                    >
+
+                </a>
+
                 <p>
-                    BSGA Consulting helps organisations
-                    turn strategy into measurable results.
+
+                    Strategic clarity.
+                    Measurable results.
+
+                    Consulting focused on strategy,
+                    transformation and operational excellence.
+
                 </p>
 
             </div>
 
+
+            <!-- NAVIGATION -->
 
             <div class="footer-column">
 
@@ -741,15 +740,14 @@
                     Insights
                 </a>
 
-                <a
-                    href="contact.html"
-                    aria-current="page"
-                >
+                <a href="contact.html">
                     Contact
                 </a>
 
             </div>
 
+
+            <!-- SERVICES -->
 
             <div class="footer-column">
 
@@ -757,8 +755,8 @@
                     Services
                 </h4>
 
-                <a href="project-management.html">
-                    Project Management
+                <a href="business-strategy.html">
+                    Business Strategy
                 </a>
 
                 <a href="business-transformation.html">
@@ -769,12 +767,14 @@
                     Operational Excellence
                 </a>
 
-                <a href="artificial-intelligence.html">
-                    Artificial Intelligence
+                <a href="project-management.html">
+                    Project Management
                 </a>
 
             </div>
 
+
+            <!-- CONTACT -->
 
             <div class="footer-column">
 
@@ -791,11 +791,10 @@
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Book a Consultation
+                    Schedule a Consultation
                 </a>
 
             </div>
-
 
         </div>
 
@@ -803,7 +802,7 @@
         <div class="footer-bottom">
 
             © 2026 BSGA Consulting.
-            All Rights Reserved.
+            All rights reserved.
 
         </div>
 
@@ -813,11 +812,171 @@
 
 
 <!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
+     MOBILE MENU JAVASCRIPT
+     ========================================================= -->
 
-<script src="js/main.js"></script>
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const menuToggle =
+            document.querySelector(".menu-toggle");
+
+        const mobileNav =
+            document.querySelector(".mobile-nav");
+
+        const mobileLinks =
+            document.querySelectorAll(
+                ".mobile-nav a"
+            );
+
+
+        if (
+            !menuToggle ||
+            !mobileNav
+        ) {
+            return;
+        }
+
+
+        function openMenu() {
+
+            mobileNav.classList.add(
+                "is-open"
+            );
+
+            menuToggle.classList.add(
+                "is-active"
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Close navigation menu"
+            );
+
+            mobileNav.setAttribute(
+                "aria-hidden",
+                "false"
+            );
+
+            document.body.classList.add(
+                "mobile-menu-open"
+            );
+
+        }
+
+
+        function closeMenu() {
+
+            mobileNav.classList.remove(
+                "is-open"
+            );
+
+            menuToggle.classList.remove(
+                "is-active"
+            );
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+            mobileNav.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.classList.remove(
+                "mobile-menu-open"
+            );
+
+        }
+
+
+        menuToggle.addEventListener(
+            "click",
+            function () {
+
+                const isOpen =
+                    menuToggle.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
+
+
+                if (isOpen) {
+
+                    closeMenu();
+
+                } else {
+
+                    openMenu();
+
+                }
+
+            }
+        );
+
+
+        mobileLinks.forEach(
+            function (link) {
+
+                link.addEventListener(
+                    "click",
+                    closeMenu
+                );
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (
+                    window.innerWidth > 767
+                ) {
+
+                    closeMenu();
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
 
 </body>
-
 </html>
