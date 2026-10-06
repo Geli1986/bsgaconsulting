@@ -1,115 +1,89 @@
 /* =========================================================
    BSGA CONSULTING
-   INSIGHTS PAGE
-   ========================================================= */
+   INSIGHTS
+   PAGE-SPECIFIC STYLES
+========================================================= */
 
 
 /* =========================================================
-   PAGE
+   HERO
 ========================================================= */
 
-.insights-page {
+.insights-hero {
+    padding: 150px 0 115px;
     background: #ffffff;
 }
 
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.insights-intro {
-    padding: 150px 0 115px;
-}
-
-.insights-intro-grid {
+.insights-hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.75fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
     gap: 90px;
     align-items: end;
 }
 
-.insights-intro-grid > div {
-    min-width: 0;
+.insights-hero-content {
+    max-width: 850px;
 }
 
-.insights-intro .section-title {
-    max-width: 820px;
-    margin: 18px 0 0;
+.insights-hero-content .section-title {
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
-.insights-intro .section-intro {
-    max-width: 560px;
+.insights-hero-copy {
+    max-width: 600px;
+    padding-bottom: 8px;
+}
+
+.insights-hero-copy .section-intro {
     margin: 0;
 }
 
 
 /* =========================================================
-   INSIGHTS LIBRARY
+   LIBRARY
 ========================================================= */
 
 .insights-library {
-    padding: 120px 0 135px;
+    padding: 115px 0 125px;
+    background: #f5f5f3;
 }
 
-.insights-library-heading {
-    max-width: 760px;
+.insights-section-heading {
+    max-width: 720px;
     margin-bottom: 65px;
 }
 
-.insights-library-heading .section-title {
+.insights-section-heading .section-title {
     margin-top: 18px;
 }
 
 
 /* =========================================================
-   INSIGHTS GRID
+   INSIGHTS LIST
 ========================================================= */
 
-.insights-grid {
+.insights-list {
+    border-top: 1px solid #d6d6d3;
+}
+
+
+/* =========================================================
+   INSIGHT ITEM
+========================================================= */
+
+.insight-item {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1px;
-    background: #d9d9d6;
-    border-top: 1px solid #d9d9d6;
-    border-left: 1px solid #d9d9d6;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 45px;
+
+    padding: 48px 0;
+
+    border-bottom: 1px solid #d6d6d3;
 }
 
-
-/* =========================================================
-   INSIGHT CARD
-========================================================= */
-
-.insight-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    min-height: 430px;
-    padding: 38px 40px 35px;
-    background: #f5f5f3;
-    transition:
-        background-color 0.25s ease,
-        transform 0.25s ease;
-}
-
-.insight-card:hover {
-    background: #eeeeec;
-}
-
-
-/* =========================================================
-   CARD TOP
-========================================================= */
-
-.insight-card-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 25px;
-    margin-bottom: 60px;
-}
-
-.insight-number {
-    flex: 0 0 auto;
+.insight-item-number {
+    padding-top: 4px;
 
     font-family: "Cormorant Garamond", Georgia, serif;
     font-size: 1.45rem;
@@ -119,46 +93,41 @@
     color: #777777;
 }
 
-.insight-category {
-    max-width: 210px;
+.insight-item-content {
+    max-width: 850px;
+}
 
-    font-size: 0.66rem;
+.insight-item-category {
+    display: block;
+    margin-bottom: 15px;
+
+    font-size: 0.67rem;
     font-weight: 700;
-    line-height: 1.35;
-    letter-spacing: 0.15em;
-    text-align: right;
+    line-height: 1.3;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
 
     color: #777777;
 }
 
-
-/* =========================================================
-   CARD BODY
-========================================================= */
-
-.insight-card-body {
-    flex: 1;
-    max-width: 580px;
-}
-
-.insight-card-body h3 {
-    margin: 0 0 22px;
+.insight-item-content h3 {
+    max-width: 800px;
+    margin: 0 0 18px;
 
     font-family: "Cormorant Garamond", Georgia, serif;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2.25rem, 4vw, 3.6rem);
     font-weight: 500;
-    line-height: 1.04;
+    line-height: 1.02;
     letter-spacing: -0.025em;
 
-    color: #171717;
+    color: #151515;
 }
 
-.insight-card-body p {
-    max-width: 500px;
+.insight-item-content p {
+    max-width: 650px;
     margin: 0;
 
-    font-size: 0.98rem;
+    font-size: 1rem;
     line-height: 1.75;
 
     color: #606060;
@@ -166,39 +135,29 @@
 
 
 /* =========================================================
-   CARD LINK
+   INSIGHT LINK
 ========================================================= */
 
-.insight-card-link {
+.insight-item-link {
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 12px;
 
-    width: 100%;
-    max-width: 580px;
+    margin-top: 28px;
 
-    margin-top: 42px;
-    padding-top: 20px;
-
-    border-top: 1px solid #d0d0cc;
-
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.08em;
+    line-height: 1.2;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-
     text-decoration: none;
 
-    color: #222222;
+    color: #202020;
 
-    transition:
-        color 0.2s ease,
-        border-color 0.2s ease;
+    transition: color 0.2s ease;
 }
 
-.insight-card-link span:last-child {
+.insight-item-link span {
     font-size: 1.1rem;
     font-weight: 400;
     letter-spacing: 0;
@@ -206,35 +165,40 @@
     transition: transform 0.2s ease;
 }
 
-.insight-card-link:hover {
-    color: #000000;
-    border-color: #999999;
+.insight-item-link:hover {
+    color: #666666;
 }
 
-.insight-card-link:hover span:last-child {
+.insight-item-link:hover span {
     transform: translateX(5px);
 }
 
 
 /* =========================================================
-   BSGA PERSPECTIVE
+   PERSPECTIVE
 ========================================================= */
 
-.insights-page main > .section-light {
+.insights-perspective {
     padding: 125px 0;
+    background: #ffffff;
 }
 
-.insights-page main > .section-light .insights-intro-grid {
+.insights-perspective-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.75fr);
+    gap: 90px;
     align-items: start;
 }
 
-.insights-page main > .section-light .section-title {
-    max-width: 720px;
+.insights-perspective .section-title {
+    max-width: 760px;
     margin-top: 18px;
+    margin-bottom: 0;
 }
 
-.insights-page main > .section-light .section-intro {
-    max-width: 570px;
+.insights-perspective .section-intro {
+    max-width: 600px;
+    margin: 8px 0 0;
 }
 
 
@@ -252,11 +216,12 @@
 
 .insights-cta .section-title {
     max-width: 820px;
-    margin: 18px 0 25px;
+    margin-top: 18px;
+    margin-bottom: 25px;
 }
 
 .insights-cta .dark-copy {
-    max-width: 560px;
+    max-width: 600px;
     margin: 0;
 }
 
@@ -271,36 +236,17 @@
 
 
 /* =========================================================
-   CTA LINK
-========================================================= */
-
-.insights-cta .text-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.insights-cta .text-link span {
-    transition: transform 0.2s ease;
-}
-
-.insights-cta .text-link:hover span {
-    transform: translateX(5px);
-}
-
-
-/* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 1024px) {
 
-    .insights-intro {
+    .insights-hero {
         padding: 120px 0 90px;
     }
 
-    .insights-intro-grid {
-        grid-template-columns: minmax(0, 1fr) minmax(250px, 0.65fr);
+    .insights-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
         gap: 55px;
     }
 
@@ -308,30 +254,32 @@
         padding: 90px 0 100px;
     }
 
-    .insights-library-heading {
+    .insights-section-heading {
         margin-bottom: 50px;
     }
 
-    .insight-card {
-        min-height: 400px;
-        padding: 32px 30px 30px;
+    .insight-item {
+        grid-template-columns: 60px minmax(0, 1fr);
+        gap: 35px;
+        padding: 42px 0;
     }
 
-    .insight-card-top {
-        margin-bottom: 45px;
+    .insight-item-content h3 {
+        font-size: clamp(2.2rem, 4vw, 3rem);
     }
 
-    .insight-card-body h3 {
-        font-size: 2.35rem;
-    }
-
-    .insights-page main > .section-light {
+    .insights-perspective {
         padding: 95px 0;
+    }
+
+    .insights-perspective-grid {
+        gap: 55px;
     }
 
     .insights-cta {
         padding: 100px 0;
     }
+
 }
 
 
@@ -341,22 +289,22 @@
 
 @media (max-width: 767px) {
 
-    .insights-intro {
+    .insights-hero {
         padding: 95px 0 70px;
     }
 
-    .insights-intro-grid {
+    .insights-hero-grid {
         grid-template-columns: 1fr;
         gap: 30px;
         align-items: start;
     }
 
-    .insights-intro .section-title {
+    .insights-hero-content .section-title {
         margin-top: 15px;
     }
 
-    .insights-intro .section-intro {
-        max-width: 620px;
+    .insights-hero-copy {
+        padding: 0;
     }
 
 
@@ -366,59 +314,58 @@
         padding: 75px 0 80px;
     }
 
-    .insights-library-heading {
+    .insights-section-heading {
         margin-bottom: 40px;
     }
 
 
-    /* Cards */
+    /* Items */
 
-    .insights-grid {
-        grid-template-columns: 1fr;
+    .insight-item {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 18px;
+        padding: 35px 0;
     }
 
-    .insight-card {
-        min-height: 0;
-        padding: 30px 25px 28px;
+    .insight-item-number {
+        font-size: 1.2rem;
     }
 
-    .insight-card-top {
-        margin-bottom: 50px;
-    }
-
-    .insight-number {
-        font-size: 1.3rem;
-    }
-
-    .insight-category {
-        max-width: 180px;
+    .insight-item-category {
+        margin-bottom: 12px;
         font-size: 0.61rem;
+        letter-spacing: 0.13em;
     }
 
-    .insight-card-body h3 {
-        font-size: 2.2rem;
-        line-height: 1.05;
+    .insight-item-content h3 {
+        margin-bottom: 16px;
+        font-size: clamp(2rem, 9vw, 2.65rem);
+        line-height: 1.03;
     }
 
-    .insight-card-body p {
-        font-size: 0.94rem;
+    .insight-item-content p {
+        font-size: 0.95rem;
         line-height: 1.7;
     }
 
-    .insight-card-link {
-        margin-top: 35px;
-        padding-top: 17px;
+    .insight-item-link {
+        margin-top: 25px;
     }
 
 
     /* Perspective */
 
-    .insights-page main > .section-light {
+    .insights-perspective {
         padding: 80px 0;
     }
 
-    .insights-page main > .section-light .insights-intro-grid {
-        gap: 28px;
+    .insights-perspective-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .insights-perspective .section-title {
+        margin-top: 15px;
     }
 
 
@@ -435,7 +382,7 @@
     .insights-cta-actions {
         align-items: flex-start;
         flex-direction: column;
-        gap: 24px;
+        gap: 25px;
         margin-top: 32px;
     }
 
@@ -448,7 +395,7 @@
 
 @media (max-width: 420px) {
 
-    .insights-intro {
+    .insights-hero {
         padding: 80px 0 60px;
     }
 
@@ -456,26 +403,21 @@
         padding: 65px 0 70px;
     }
 
-    .insight-card {
-        padding: 27px 21px 25px;
+    .insight-item {
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 14px;
+        padding: 30px 0;
     }
 
-    .insight-card-top {
-        gap: 15px;
-        margin-bottom: 42px;
-    }
-
-    .insight-category {
-        max-width: 150px;
+    .insight-item-category {
         font-size: 0.57rem;
-        letter-spacing: 0.12em;
     }
 
-    .insight-card-body h3 {
-        font-size: 2rem;
+    .insight-item-content h3 {
+        font-size: 1.95rem;
     }
 
-    .insights-page main > .section-light {
+    .insights-perspective {
         padding: 70px 0;
     }
 
@@ -487,20 +429,18 @@
 
 
 /* =========================================================
-   ACCESSIBILITY
+   REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-    .insight-card,
-    .insight-card-link,
-    .insight-card-link span:last-child,
-    .insights-cta .text-link span {
+    .insight-item-link,
+    .insight-item-link span {
         transition: none;
     }
 
-    .insight-card-link:hover span:last-child,
-    .insights-cta .text-link:hover span {
+    .insight-item-link:hover span {
         transform: none;
     }
+
 }
